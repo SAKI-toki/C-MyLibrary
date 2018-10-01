@@ -3,15 +3,45 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_a0344e3bf75bdcb9067cbdf4b24a41530}{iota}} (Container \&con, typename Container\+::value\+\_\+type val=0, typename Container\+::value\+\_\+type separated=1)
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_a30486091f698dd3c783fe3f0317cb566}{iota}} (Container \&con, typename Container\+::value\+\_\+type val=0, typename Container\+::value\+\_\+type interval=1)
+\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespacesaki_af33684f78f7428a59b763a2bfe5f1c37}{iota}} (Iterator start, const Iterator \&end, typename Iterator\+::value\+\_\+type val=0, typename Iterator\+::value\+\_\+type interval=1)
 \end{DoxyCompactItemize}
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{namespacesaki_a0344e3bf75bdcb9067cbdf4b24a41530}\label{namespacesaki_a0344e3bf75bdcb9067cbdf4b24a41530}} 
+\mbox{\Hypertarget{namespacesaki_a30486091f698dd3c783fe3f0317cb566}\label{namespacesaki_a30486091f698dd3c783fe3f0317cb566}} 
 \index{saki@{saki}!iota@{iota}}
 \index{iota@{iota}!saki@{saki}}
-\subsubsection{\texorpdfstring{iota()}{iota()}}
+\subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Container $>$ \\
-void saki\+::iota (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{typename Container\+::value\+\_\+type}]{val = {\ttfamily 0},  }\item[{typename Container\+::value\+\_\+type}]{separated = {\ttfamily 1} }\end{DoxyParamCaption})}
+void saki\+::iota (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{typename Container\+::value\+\_\+type}]{val = {\ttfamily 0},  }\item[{typename Container\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{引数}
+{\em con} & コンテナクラス \\
+\hline
+{\em val} & 最初の値 \\
+\hline
+{\em interval} & いくつおきに値を格納させるか\\
+\hline
+\end{DoxyParams}
+全ての要素に対して行う場合はこっちを使う \mbox{\Hypertarget{namespacesaki_af33684f78f7428a59b763a2bfe5f1c37}\label{namespacesaki_af33684f78f7428a59b763a2bfe5f1c37}} 
+\index{saki@{saki}!iota@{iota}}
+\index{iota@{iota}!saki@{saki}}
+\subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Iterator $>$ \\
+void saki\+::iota (\begin{DoxyParamCaption}\item[{Iterator}]{start,  }\item[{const Iterator \&}]{end,  }\item[{typename Iterator\+::value\+\_\+type}]{val = {\ttfamily 0},  }\item[{typename Iterator\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{引数}
+{\em start} & スタートのイテレーター \\
+\hline
+{\em end} & 終わりのイテレーター \\
+\hline
+{\em val} & 最初の値 \\
+\hline
+{\em interval} & いくつおきに値を格納させるか\\
+\hline
+\end{DoxyParams}
+決められた範囲の要素に対して行う場合はこっちを使う 

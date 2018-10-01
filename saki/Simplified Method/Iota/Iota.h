@@ -1,4 +1,3 @@
-#pragma once
 /*!
 * @file Iota.h
 * @brief 既存のiota関数の簡略化＋拡張
@@ -15,19 +14,41 @@ vector,list,forward_list,array
 有効な型
 operator+とoperator=があるもの
 */
-
+#ifndef SAKI_SIMPLIFIED_METHOD_IOTA
+#define SAKI_SIMPLIFIED_METHOD_IOTA
 namespace saki
 {
+	/**
+	* @param con		コンテナクラス
+	* @param val		最初の値
+	* @param interval	いくつおきに値を格納させるか
+	* @details	全ての要素に対して行う場合はこっちを使う
+	*/
 	template<typename Container>
-	void iota(Container& con, typename Container::value_type val = 0, typename Container::value_type separated = 1)
+	void iota(Container& con, typename Container::value_type val = 0, typename Container::value_type interval = 1)
 	{
 		for (auto&& n : con)
 		{
 			n = val;
-			val = val + separated;
+			val = val + interval;
 		}
 	}
 
-	template<typename Container>
-
+	/**
+	* @param start		スタートのイテレーター
+	* @param end		終わりのイテレーター
+	* @param val		最初の値
+	* @param interval	いくつおきに値を格納させるか
+	* @details	決められた範囲の要素に対して行う場合はこっちを使う
+	*/
+	template<typename Iterator>
+	void iota(Iterator start, const Iterator& end, typename Iterator::value_type val = 0, typename Iterator::value_type interval = 1)
+	{
+		for (; start != end; ++start)
+		{
+			*start = val;
+			val = val + interval;
+		}
+	}
 }
+#endif //SAKI_SIMPLIFIED_METHOD_IOTA

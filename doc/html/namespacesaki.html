@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>saki: saki 名前空間</title>
+<title>SakiCppLibrary: saki 名前空間</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">saki
+   <div id="projectname">SakiCppLibrary
    </div>
   </td>
  </tr>
@@ -70,13 +70,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a0344e3bf75bdcb9067cbdf4b24a41530"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
-<tr class="memitem:a0344e3bf75bdcb9067cbdf4b24a41530"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0344e3bf75bdcb9067cbdf4b24a41530">iota</a> (Container &amp;con, typename Container::value_type val=0, typename Container::value_type separated=1)</td></tr>
-<tr class="separator:a0344e3bf75bdcb9067cbdf4b24a41530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30486091f698dd3c783fe3f0317cb566"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
+<tr class="memitem:a30486091f698dd3c783fe3f0317cb566"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a30486091f698dd3c783fe3f0317cb566">iota</a> (Container &amp;con, typename Container::value_type val=0, typename Container::value_type interval=1)</td></tr>
+<tr class="separator:a30486091f698dd3c783fe3f0317cb566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33684f78f7428a59b763a2bfe5f1c37"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:af33684f78f7428a59b763a2bfe5f1c37"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af33684f78f7428a59b763a2bfe5f1c37">iota</a> (Iterator start, const Iterator &amp;end, typename Iterator::value_type val=0, typename Iterator::value_type interval=1)</td></tr>
+<tr class="separator:af33684f78f7428a59b763a2bfe5f1c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a0344e3bf75bdcb9067cbdf4b24a41530"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0344e3bf75bdcb9067cbdf4b24a41530">&#9670;&nbsp;</a></span>iota()</h2>
+<a id="a30486091f698dd3c783fe3f0317cb566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30486091f698dd3c783fe3f0317cb566">&#9670;&nbsp;</a></span>iota() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -99,7 +102,7 @@ template&lt;typename Container &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename Container::value_type&#160;</td>
-          <td class="paramname"><em>separated</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>interval</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -108,6 +111,67 @@ template&lt;typename Container &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">con</td><td>コンテナクラス </td></tr>
+    <tr><td class="paramname">val</td><td>最初の値 </td></tr>
+    <tr><td class="paramname">interval</td><td>いくつおきに値を格納させるか</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>全ての要素に対して行う場合はこっちを使う </p>
+
+</div>
+</div>
+<a id="af33684f78f7428a59b763a2bfe5f1c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33684f78f7428a59b763a2bfe5f1c37">&#9670;&nbsp;</a></span>iota() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Iterator &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void saki::iota </td>
+          <td>(</td>
+          <td class="paramtype">Iterator&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Iterator &amp;&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Iterator::value_type&#160;</td>
+          <td class="paramname"><em>val</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Iterator::value_type&#160;</td>
+          <td class="paramname"><em>interval</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>スタートのイテレーター </td></tr>
+    <tr><td class="paramname">end</td><td>終わりのイテレーター </td></tr>
+    <tr><td class="paramname">val</td><td>最初の値 </td></tr>
+    <tr><td class="paramname">interval</td><td>いくつおきに値を格納させるか</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>決められた範囲の要素に対して行う場合はこっちを使う </p>
 
 </div>
 </div>
