@@ -3,35 +3,91 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_a30486091f698dd3c783fe3f0317cb566}{iota}} (Container \&con, typename Container\+::value\+\_\+type val=0, typename Container\+::value\+\_\+type interval=1)
-\item 
-{\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespacesaki_af33684f78f7428a59b763a2bfe5f1c37}{iota}} (Iterator start, const Iterator \&end, typename Iterator\+::value\+\_\+type val=0, typename Iterator\+::value\+\_\+type interval=1)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename Container , typename T $>$ }\\T \mbox{\hyperlink{namespacesaki_a0f9963378e1e25eb379f002fc2675544}{accumulate}} (const Container \&con, T init)
+\begin{DoxyCompactList}\small\item\em 全ての値の合計 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container , typename T , typename Binary\+Operation $>$ }\\T \mbox{\hyperlink{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}{accumulate}} (const Container \&con, T init, const Binary\+Operation \&binary\+\_\+op)
+\begin{DoxyCompactList}\small\item\em 引数が2つの関数を指定し、それをすべての要素で回す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}{iota}} (Container \&con, typename Container\+::value\+\_\+type init=0, typename Container\+::value\+\_\+type interval=1)
+\begin{DoxyCompactList}\small\item\em 全ての値に連番をつける \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespacesaki_a60fc6028a57a55dcc37d01458997f7e3}{iota}} (Iterator start, const Iterator \&end, typename Iterator\+::value\+\_\+type init=0, typename Iterator\+::value\+\_\+type interval=1)
+\begin{DoxyCompactList}\small\item\em 決まった範囲に連番をつける \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{namespacesaki_a30486091f698dd3c783fe3f0317cb566}\label{namespacesaki_a30486091f698dd3c783fe3f0317cb566}} 
-\index{saki@{saki}!iota@{iota}}
-\index{iota@{iota}!saki@{saki}}
-\subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename Container $>$ \\
-void saki\+::iota (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{typename Container\+::value\+\_\+type}]{val = {\ttfamily 0},  }\item[{typename Container\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespacesaki_a0f9963378e1e25eb379f002fc2675544}\label{namespacesaki_a0f9963378e1e25eb379f002fc2675544}} 
+\index{saki@{saki}!accumulate@{accumulate}}
+\index{accumulate@{accumulate}!saki@{saki}}
+\subsubsection{\texorpdfstring{accumulate()}{accumulate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Container , typename T $>$ \\
+T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  }\item[{T}]{init }\end{DoxyParamCaption})}
+
+
+
+全ての値の合計 
 
 
 \begin{DoxyParams}{引数}
 {\em con} & コンテナクラス \\
 \hline
-{\em val} & 最初の値 \\
-\hline
-{\em interval} & いくつおきに値を格納させるか\\
+{\em init} & 初期値 \\
 \hline
 \end{DoxyParams}
-全ての要素に対して行う場合はこっちを使う \mbox{\Hypertarget{namespacesaki_af33684f78f7428a59b763a2bfe5f1c37}\label{namespacesaki_af33684f78f7428a59b763a2bfe5f1c37}} 
+\begin{DoxyReturn}{戻り値}
+合計を返す 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}\label{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}} 
+\index{saki@{saki}!accumulate@{accumulate}}
+\index{accumulate@{accumulate}!saki@{saki}}
+\subsubsection{\texorpdfstring{accumulate()}{accumulate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Container , typename T , typename Binary\+Operation $>$ \\
+T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  }\item[{T}]{init,  }\item[{const Binary\+Operation \&}]{binary\+\_\+op }\end{DoxyParamCaption})}
+
+
+
+引数が2つの関数を指定し、それをすべての要素で回す 
+
+
+\begin{DoxyParams}{引数}
+{\em con} & コンテナクラス \\
+\hline
+{\em init} & 初期値 \\
+\hline
+{\em binary\+\_\+op} & 引数が2つの関数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+全ての要素を回した結果
+\end{DoxyReturn}
+注意：0除算に気を付けてください \mbox{\Hypertarget{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}\label{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}} 
+\index{saki@{saki}!iota@{iota}}
+\index{iota@{iota}!saki@{saki}}
+\subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Container $>$ \\
+void saki\+::iota (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{typename Container\+::value\+\_\+type}]{init = {\ttfamily 0},  }\item[{typename Container\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+全ての値に連番をつける 
+
+
+\begin{DoxyParams}{引数}
+{\em con} & コンテナクラス \\
+\hline
+{\em init} & 最初の値 \\
+\hline
+{\em interval} & いくつおきに値を格納させるか \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesaki_a60fc6028a57a55dcc37d01458997f7e3}\label{namespacesaki_a60fc6028a57a55dcc37d01458997f7e3}} 
 \index{saki@{saki}!iota@{iota}}
 \index{iota@{iota}!saki@{saki}}
 \subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Iterator $>$ \\
-void saki\+::iota (\begin{DoxyParamCaption}\item[{Iterator}]{start,  }\item[{const Iterator \&}]{end,  }\item[{typename Iterator\+::value\+\_\+type}]{val = {\ttfamily 0},  }\item[{typename Iterator\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+void saki\+::iota (\begin{DoxyParamCaption}\item[{Iterator}]{start,  }\item[{const Iterator \&}]{end,  }\item[{typename Iterator\+::value\+\_\+type}]{init = {\ttfamily 0},  }\item[{typename Iterator\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+決まった範囲に連番をつける 
 
 
 \begin{DoxyParams}{引数}
@@ -39,9 +95,8 @@ void saki\+::iota (\begin{DoxyParamCaption}\item[{Iterator}]{start,  }\item[{con
 \hline
 {\em end} & 終わりのイテレーター \\
 \hline
-{\em val} & 最初の値 \\
+{\em init} & 最初の値 \\
 \hline
-{\em interval} & いくつおきに値を格納させるか\\
+{\em interval} & いくつおきに値を格納させるか \\
 \hline
 \end{DoxyParams}
-決められた範囲の要素に対して行う場合はこっちを使う 

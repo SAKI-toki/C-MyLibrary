@@ -70,16 +70,114 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a30486091f698dd3c783fe3f0317cb566"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
-<tr class="memitem:a30486091f698dd3c783fe3f0317cb566"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a30486091f698dd3c783fe3f0317cb566">iota</a> (Container &amp;con, typename Container::value_type val=0, typename Container::value_type interval=1)</td></tr>
-<tr class="separator:a30486091f698dd3c783fe3f0317cb566"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af33684f78f7428a59b763a2bfe5f1c37"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:af33684f78f7428a59b763a2bfe5f1c37"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af33684f78f7428a59b763a2bfe5f1c37">iota</a> (Iterator start, const Iterator &amp;end, typename Iterator::value_type val=0, typename Iterator::value_type interval=1)</td></tr>
-<tr class="separator:af33684f78f7428a59b763a2bfe5f1c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9963378e1e25eb379f002fc2675544"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename T &gt; </td></tr>
+<tr class="memitem:a0f9963378e1e25eb379f002fc2675544"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0f9963378e1e25eb379f002fc2675544">accumulate</a> (const Container &amp;con, T init)</td></tr>
+<tr class="memdesc:a0f9963378e1e25eb379f002fc2675544"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての値の合計  <a href="#a0f9963378e1e25eb379f002fc2675544">[詳解]</a><br /></td></tr>
+<tr class="separator:a0f9963378e1e25eb379f002fc2675544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ecf606c3b0a7c7448938838e528de7b"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a8ecf606c3b0a7c7448938838e528de7b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8ecf606c3b0a7c7448938838e528de7b">accumulate</a> (const Container &amp;con, T init, const BinaryOperation &amp;binary_op)</td></tr>
+<tr class="memdesc:a8ecf606c3b0a7c7448938838e528de7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="#a8ecf606c3b0a7c7448938838e528de7b">[詳解]</a><br /></td></tr>
+<tr class="separator:a8ecf606c3b0a7c7448938838e528de7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09fe69a84525eaaec6ad1d377c23c027"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
+<tr class="memitem:a09fe69a84525eaaec6ad1d377c23c027"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a09fe69a84525eaaec6ad1d377c23c027">iota</a> (Container &amp;con, typename Container::value_type init=0, typename Container::value_type interval=1)</td></tr>
+<tr class="memdesc:a09fe69a84525eaaec6ad1d377c23c027"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての値に連番をつける  <a href="#a09fe69a84525eaaec6ad1d377c23c027">[詳解]</a><br /></td></tr>
+<tr class="separator:a09fe69a84525eaaec6ad1d377c23c027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fc6028a57a55dcc37d01458997f7e3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:a60fc6028a57a55dcc37d01458997f7e3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a60fc6028a57a55dcc37d01458997f7e3">iota</a> (Iterator start, const Iterator &amp;end, typename Iterator::value_type init=0, typename Iterator::value_type interval=1)</td></tr>
+<tr class="memdesc:a60fc6028a57a55dcc37d01458997f7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">決まった範囲に連番をつける  <a href="#a60fc6028a57a55dcc37d01458997f7e3">[詳解]</a><br /></td></tr>
+<tr class="separator:a60fc6028a57a55dcc37d01458997f7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a30486091f698dd3c783fe3f0317cb566"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30486091f698dd3c783fe3f0317cb566">&#9670;&nbsp;</a></span>iota() <span class="overload">[1/2]</span></h2>
+<a id="a0f9963378e1e25eb379f002fc2675544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9963378e1e25eb379f002fc2675544">&#9670;&nbsp;</a></span>accumulate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Container , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T saki::accumulate </td>
+          <td>(</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
+          <td class="paramname"><em>con</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>全ての値の合計 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">con</td><td>コンテナクラス </td></tr>
+    <tr><td class="paramname">init</td><td>初期値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>合計を返す </dd></dl>
+
+</div>
+</div>
+<a id="a8ecf606c3b0a7c7448938838e528de7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ecf606c3b0a7c7448938838e528de7b">&#9670;&nbsp;</a></span>accumulate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Container , typename T , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T saki::accumulate </td>
+          <td>(</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
+          <td class="paramname"><em>con</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BinaryOperation &amp;&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>引数が2つの関数を指定し、それをすべての要素で回す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">con</td><td>コンテナクラス </td></tr>
+    <tr><td class="paramname">init</td><td>初期値 </td></tr>
+    <tr><td class="paramname">binary_op</td><td>引数が2つの関数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>全ての要素を回した結果</dd></dl>
+<p>注意：0除算に気を付けてください </p>
+
+</div>
+</div>
+<a id="a09fe69a84525eaaec6ad1d377c23c027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09fe69a84525eaaec6ad1d377c23c027">&#9670;&nbsp;</a></span>iota() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -96,7 +194,7 @@ template&lt;typename Container &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename Container::value_type&#160;</td>
-          <td class="paramname"><em>val</em> = <code>0</code>, </td>
+          <td class="paramname"><em>init</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -111,20 +209,21 @@ template&lt;typename Container &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>全ての値に連番をつける </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">con</td><td>コンテナクラス </td></tr>
-    <tr><td class="paramname">val</td><td>最初の値 </td></tr>
-    <tr><td class="paramname">interval</td><td>いくつおきに値を格納させるか</td></tr>
+    <tr><td class="paramname">init</td><td>最初の値 </td></tr>
+    <tr><td class="paramname">interval</td><td>いくつおきに値を格納させるか </td></tr>
   </table>
   </dd>
 </dl>
-<p>全ての要素に対して行う場合はこっちを使う </p>
 
 </div>
 </div>
-<a id="af33684f78f7428a59b763a2bfe5f1c37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af33684f78f7428a59b763a2bfe5f1c37">&#9670;&nbsp;</a></span>iota() <span class="overload">[2/2]</span></h2>
+<a id="a60fc6028a57a55dcc37d01458997f7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fc6028a57a55dcc37d01458997f7e3">&#9670;&nbsp;</a></span>iota() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +246,7 @@ template&lt;typename Iterator &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename Iterator::value_type&#160;</td>
-          <td class="paramname"><em>val</em> = <code>0</code>, </td>
+          <td class="paramname"><em>init</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -162,16 +261,17 @@ template&lt;typename Iterator &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>決まった範囲に連番をつける </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">start</td><td>スタートのイテレーター </td></tr>
     <tr><td class="paramname">end</td><td>終わりのイテレーター </td></tr>
-    <tr><td class="paramname">val</td><td>最初の値 </td></tr>
-    <tr><td class="paramname">interval</td><td>いくつおきに値を格納させるか</td></tr>
+    <tr><td class="paramname">init</td><td>最初の値 </td></tr>
+    <tr><td class="paramname">interval</td><td>いくつおきに値を格納させるか </td></tr>
   </table>
   </dd>
 </dl>
-<p>決められた範囲の要素に対して行う場合はこっちを使う </p>
 
 </div>
 </div>
