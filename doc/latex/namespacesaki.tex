@@ -1,5 +1,12 @@
 \hypertarget{namespacesaki}{}\section{saki 名前空間}
 \label{namespacesaki}\index{saki@{saki}}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsaki_1_1immobile__ptr}{immobile\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em コピー・ムーブ禁止のスマートポインタ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsaki_1_1singleton}{singleton}}
+\begin{DoxyCompactList}\small\item\em 継承するとシングルトンクラスになる \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -7,6 +14,8 @@
 \begin{DoxyCompactList}\small\item\em 全ての値の合計 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Container , typename T , typename Binary\+Operation $>$ }\\T \mbox{\hyperlink{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}{accumulate}} (const Container \&con, T init, const Binary\+Operation \&binary\+\_\+op)
 \begin{DoxyCompactList}\small\item\em 引数が2つの関数を指定し、それをすべての要素で回す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container , typename Func , typename ... Args$>$ }\\void \mbox{\hyperlink{namespacesaki_a68b1b59736df091f8a987d35e5773d2a}{for\+\_\+each}} (Container \&con, Func \&f, const Args ...args)
+\begin{DoxyCompactList}\small\item\em 関数をすべての要素で実行する \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}{iota}} (Container \&con, typename Container\+::value\+\_\+type init=0, typename Container\+::value\+\_\+type interval=1)
 \begin{DoxyCompactList}\small\item\em 全ての値に連番をつける \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespacesaki_a60fc6028a57a55dcc37d01458997f7e3}{iota}} (Iterator start, const Iterator \&end, typename Iterator\+::value\+\_\+type init=0, typename Iterator\+::value\+\_\+type interval=1)
@@ -58,7 +67,27 @@ T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  
 \begin{DoxyReturn}{戻り値}
 全ての要素を回した結果
 \end{DoxyReturn}
-注意：0除算に気を付けてください \mbox{\Hypertarget{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}\label{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}} 
+注意：0除算に気を付けてください \mbox{\Hypertarget{namespacesaki_a68b1b59736df091f8a987d35e5773d2a}\label{namespacesaki_a68b1b59736df091f8a987d35e5773d2a}} 
+\index{saki@{saki}!for\+\_\+each@{for\+\_\+each}}
+\index{for\+\_\+each@{for\+\_\+each}!saki@{saki}}
+\subsubsection{\texorpdfstring{for\+\_\+each()}{for\_each()}}
+{\footnotesize\ttfamily template$<$typename Container , typename Func , typename ... Args$>$ \\
+void saki\+::for\+\_\+each (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{Func \&}]{f,  }\item[{const Args ...}]{args }\end{DoxyParamCaption})}
+
+
+
+関数をすべての要素で実行する 
+
+
+\begin{DoxyParams}{引数}
+{\em con} & コンテナクラス \\
+\hline
+{\em f} & 実行する関数 \\
+\hline
+{\em args} & 実行する関数の引数２以降に入れる値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}\label{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}} 
 \index{saki@{saki}!iota@{iota}}
 \index{iota@{iota}!saki@{saki}}
 \subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}

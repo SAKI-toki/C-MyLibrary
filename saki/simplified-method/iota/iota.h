@@ -1,15 +1,15 @@
 /**
 * @file iota.h
 * @brief 既存のiota関数の簡略化＋拡張
-* @author 石山　悠
+* @author 石山 悠
 * @date 2018/09/30
 */
 /*
 配列の中身全てに連番をつける場合はイテレーターを渡さず、コンテナクラスをそのまま渡すだけでよい
 さらに最初の値の設定や、いくつおきに値を格納するかを決めることができる
 */
-#ifndef SAKI_SIMPLIFIED_METHOD_IOTA
-#define SAKI_SIMPLIFIED_METHOD_IOTA
+#ifndef SAKI_IOTA_2018_09_30
+#define SAKI_IOTA_2018_09_30
 namespace saki
 {
 	/**
@@ -45,4 +45,4 @@ namespace saki
 		}
 	}
 }
-#endif //SAKI_SIMPLIFIED_METHOD_IOTA
+#endif //SAKI_IOTA_2018_09_30

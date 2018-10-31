@@ -1,15 +1,15 @@
 /**
 * @file accumulate.h
 * @brief 既存のaccumulate関数の簡略化
-* @author 石山　悠
+* @author 石山 悠
 * @date 2018/10/07
 */
 /*
-全ての値を合計（又は指定した演算子）をコンテナクラスと初期値を渡すだけで可能にした
-標準ライブラリではIteratorを渡すので、すべてならこっちを使ったほうが良い
+全ての要素を合計（又は指定した演算子）をコンテナクラスと初期値を渡すだけで可能にした
+標準ライブラリではIteratorを渡すので、全てならこっちを使ったほうが良い
 */
-#ifndef SAKI_SIMPLIFIED_METHOD_ACCUMULATE
-#define SAKI_SIMPLIFIED_METHOD_ACCUMULATE
+#ifndef SAKI_ACCUMULATE_2018_10_07
+#define SAKI_ACCUMULATE_2018_10_07
 namespace saki
 {
 	/**
@@ -46,4 +46,4 @@ namespace saki
 	}
 
 }
-#endif //SAKI_SIMPLIFIED_METHOD_ACCUMULATE
+#endif //SAKI_ACCUMULATE_2018_10_07

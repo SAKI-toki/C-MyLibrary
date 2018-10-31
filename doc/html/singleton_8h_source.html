@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/singleton/singleton.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_4cd765f7107ee9c6d335b1a5bd63bebf.html">singleton</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">singleton.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="singleton_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">クラスをシングルトンにするとき、このクラスを継承するだけでシングルトンになるクラス</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef SAKI_SINGLETON_2018_10_17</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define SAKI_SINGLETON_2018_10_17</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span> <span class="comment">//for unique_ptr</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki.html">saki</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsaki_1_1singleton.html">   20</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsaki_1_1singleton.html">singleton</a></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">using</span> type = std::unique_ptr&lt;T&gt;;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">static</span> type instance;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsaki_1_1singleton.html#a507fa8bc891caf1ea18b6dd25475430e">   29</a></span>&#160;        <span class="keyword">static</span> type&amp; <a class="code" href="classsaki_1_1singleton.html#a507fa8bc891caf1ea18b6dd25475430e">getinstance</a>()</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {           </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> instance;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classsaki_1_1singleton.html#a7e18a317dec7a4658f6d3376f2dd3ebd">   34</a></span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classsaki_1_1singleton.html#a7e18a317dec7a4658f6d3376f2dd3ebd">~singleton</a>() {}</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">protected</span>:</div><div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0">   37</a></span>&#160;        <a class="code" href="classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0">singleton</a>() {}</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0">singleton</a>(<span class="keyword">const</span> <a class="code" href="classsaki_1_1singleton.html">singleton</a>&amp;) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classsaki_1_1singleton.html">singleton</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classsaki_1_1singleton.html">singleton</a>&amp;) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0">singleton</a>(<a class="code" href="classsaki_1_1singleton.html">singleton</a>&amp;&amp;) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classsaki_1_1singleton.html">singleton</a>&amp; operator=(<a class="code" href="classsaki_1_1singleton.html">singleton</a>&amp;&amp;) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    };</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classsaki_1_1singleton_html_a7e18a317dec7a4658f6d3376f2dd3ebd"><div class="ttname"><a href="classsaki_1_1singleton.html#a7e18a317dec7a4658f6d3376f2dd3ebd">saki::singleton::~singleton</a></div><div class="ttdeci">virtual ~singleton()</div><div class="ttdef"><b>Definition:</b> singleton.h:34</div></div>
+<div class="ttc" id="classsaki_1_1singleton_html_a507fa8bc891caf1ea18b6dd25475430e"><div class="ttname"><a href="classsaki_1_1singleton.html#a507fa8bc891caf1ea18b6dd25475430e">saki::singleton::getinstance</a></div><div class="ttdeci">static type &amp; getinstance()</div><div class="ttdoc">インスタンスを取得 </div><div class="ttdef"><b>Definition:</b> singleton.h:29</div></div>
+<div class="ttc" id="namespacesaki_html"><div class="ttname"><a href="namespacesaki.html">saki</a></div><div class="ttdef"><b>Definition:</b> pi.h:14</div></div>
+<div class="ttc" id="classsaki_1_1singleton_html"><div class="ttname"><a href="classsaki_1_1singleton.html">saki::singleton</a></div><div class="ttdoc">継承するとシングルトンクラスになる </div><div class="ttdef"><b>Definition:</b> singleton.h:20</div></div>
+<div class="ttc" id="classsaki_1_1singleton_html_a511f5d5e51fdac173fa0dbea858f5ee0"><div class="ttname"><a href="classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0">saki::singleton::singleton</a></div><div class="ttdeci">singleton()</div><div class="ttdef"><b>Definition:</b> singleton.h:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>
