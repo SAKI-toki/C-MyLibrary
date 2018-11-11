@@ -5,7 +5,7 @@
 * @date 2018/10/17
 */
 /*
-クラスをシングルトンにするとき、このクラスを継承するだけでシングルトンになるクラス
+クラスをシングルトンにするとき、このクラスを継承するだけでシングルトンになる
 ※使い方
 class A:public saki::singleton<A>{}
 */
@@ -16,20 +16,18 @@ namespace saki
 {
 	/**
 	* @brief 継承するとシングルトンクラスになる
-	* @details 使い方：class A : public singleton<A>{}
 	*/
 	template<typename T>
 	class singleton
 	{
-		using type = std::unique_ptr<T>;
-		static type instance;
 	public:
 		/**
 		* @brief インスタンスを取得
 		* @return std::unique_ptr<T> インスタンスを返す
 		*/
-		static type& getinstance()
-		{			
+		static std::unique_ptr<T>& getinstance()
+		{
+			static auto instance = std::make_unique<T>();
 			return instance;
 		}
 
