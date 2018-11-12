@@ -56,5 +56,5 @@ bool operator>=(const name& other)const				\
 	return !(*this < other);						\
 }													\
 
-#endif
-#endif //SAKI_COMPARE_OPERATOR_DEFINE_2018_10_31
+#endif	//SAKI_COMPARE_OPERATOR_DEFINE
+#endif	//SAKI_COMPARE_OPERATOR_DEFINE_2018_10_31

@@ -12,6 +12,7 @@
 */
 #ifndef SAKI_IMMOBILE_PTR_2018_10_17
 #define SAKI_IMMOBILE_PTR_2018_10_17
+#include <assert.h>	//for assert
 namespace saki
 {
 	/**
@@ -70,6 +71,7 @@ namespace saki
 		*/
 		T* operator->()const
 		{
+			assert(ptr != nullptr);
 			return ptr;
 		}
 		//コピー・ムーブ禁止

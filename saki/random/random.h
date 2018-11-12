@@ -11,7 +11,7 @@
 #ifndef SAKI_RANDOM_2018_10_31
 #define SAKI_RANDOM_2018_10_31
 #include <random>
-
+#include <assert.h>	//for assert
 namespace saki
 {
 	/**
@@ -23,6 +23,7 @@ namespace saki
 	template<typename T>
 	T random(const T min, const T max)
 	{
+		assert(min <= max);
 		std::random_device rd;
 		std::mt19937 mt(rd());
 		if constexpr (std::is_integral_v<T>)
