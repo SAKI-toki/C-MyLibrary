@@ -6,18 +6,17 @@
 */
 #ifndef SAKI_TYPE_ALIAS_2018_11_12
 #define SAKI_TYPE_ALIAS_2018_11_12
-namespace saki
-{
-	using int8 = signed char;
-	using uint8 = unsigned char;
 
-	using int16 = signed short;
-	using uint16 = unsigned short;
+using saki_int8 = signed char;
+using saki_uint8 = unsigned char;
 
-	using int32 = signed int;
-	using uint32 = unsigned int;
+using saki_int16 = signed short;
+using saki_uint16 = unsigned short;
 
-	using int64 = signed long long;
-	using uint64 = unsigned long long;
-}
+using saki_int32 = signed int;
+using saki_uint32 = unsigned int;
+
+using saki_int64 = signed long long;
+using saki_uint64 = unsigned long long;
+
 #endif //SAKI_TYPE_ALIAS_2018_11_12
