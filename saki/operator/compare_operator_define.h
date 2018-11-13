@@ -24,7 +24,7 @@ public:
 #define SAKI_COMPARE_OPERATOR_DEFINE_2018_10_31
 
 /**
-* @brief operatorを自動定義するマクロ
+* @brief 比較系のoperatorを自動定義するマクロ
 * @param name 定義するクラスの名前
 * @details <が定義されていれば==と!=と>と<=と>=が自動定義される
 */
