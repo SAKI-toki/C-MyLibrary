@@ -8,6 +8,7 @@
 決められた範囲でランダムな値を取得する関数です
 イメージとしてはUnityのRandom.Range(0,10)のような感じです
 */
+#pragma once
 #ifndef SAKI_RANDOM_2018_10_31
 #define SAKI_RANDOM_2018_10_31
 #include <random>
@@ -18,7 +19,7 @@ namespace saki
 	* @brief 最小値と最大値を引数にとり、その間からランダムな値を返す
 	* @param min 最小値
 	* @param max 最大値
-	* @details 最大値を含むランダムな値を返す、C++17環境以降での使用のみ可
+	* @details 最大値を含むランダムな値を返す
 	*/
 	template<typename T>
 	T random(const T min, const T max)

@@ -8,15 +8,16 @@
 配列の中身全てに連番をつける場合はイテレーターを渡さず、コンテナクラスをそのまま渡すだけでよい
 さらに最初の値の設定や、いくつおきに値を格納するかを決めることができる
 */
+#pragma once
 #ifndef SAKI_IOTA_2018_09_30
 #define SAKI_IOTA_2018_09_30
 namespace saki
 {
 	/**
-	* @brief			全ての値に連番をつける
-	* @param con		コンテナクラス
-	* @param init		最初の値
-	* @param interval	いくつおきに値を格納させるか
+	* @brief 全ての値に連番をつける
+	* @param con コンテナクラス
+	* @param init 最初の値
+	* @param interval いくつおきに値を格納させるか
 	*/
 	template<typename Container>
 	void iota(Container& con, typename Container::value_type init = 0, typename Container::value_type interval = 1)
@@ -29,11 +30,11 @@ namespace saki
 	}
 
 	/**
-	* @brief			決まった範囲に連番をつける
-	* @param start		スタートのイテレーター
-	* @param end		終わりのイテレーター
-	* @param init		最初の値
-	* @param interval	いくつおきに値を格納させるか
+	* @brief 決まった範囲に連番をつける
+	* @param start スタートのイテレーター
+	* @param end 終わりのイテレーター
+	* @param init 最初の値
+	* @param interval いくつおきに値を格納させるか
 	*/
 	template<typename Iterator>
 	void iota(Iterator start, const Iterator& end, typename Iterator::value_type init = 0, typename Iterator::value_type interval = 1)

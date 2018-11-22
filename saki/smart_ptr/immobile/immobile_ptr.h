@@ -10,6 +10,7 @@
 不具合が起きるので、単体で使用してください。
 ※ムーブ禁止のため、std::make_uniqueのようなヘルパー関数を作成できない。
 */
+#pragma once
 #ifndef SAKI_IMMOBILE_PTR_2018_10_17
 #define SAKI_IMMOBILE_PTR_2018_10_17
 #include <assert.h>	//for assert

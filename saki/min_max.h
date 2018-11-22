@@ -4,6 +4,7 @@
 * @author ÎR —I
 * @date 2018/11/12
 */
+#pragma once
 #ifndef SAKI_MIN_MAX_2018_11_12
 #define SAKI_MIN_MAX_2018_11_12
 #include "type_alias.h"

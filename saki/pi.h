@@ -9,13 +9,13 @@
 使い方
 auto foo = saki::PI<float>;
 */
+#pragma once
 #ifndef SAKI_PI_2018_10_15
 #define SAKI_PI_2018_10_15
 namespace saki
 {
 	/**
 	* @brief 円周率のテンプレート変数
-	* @details C++14環境以降での使用のみ可
 	*/
 	template<typename T>
 	static constexpr auto PI = static_cast<T>(3.14159265358979323846264338327950288);

@@ -9,6 +9,7 @@
 さらに、拡張機能として、引数2以降に任意の値を入れて実行することができるようにした
 標準ライブラリではIteratorを渡すので、全てならこっちを使ったほうが良い
 */
+#pragma once
 #ifndef SAKI_FOR_EACH_2018_10_17
 #define SAKI_FOR_EACH_2018_10_17
 namespace saki

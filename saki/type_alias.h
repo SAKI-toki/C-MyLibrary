@@ -4,6 +4,7 @@
 * @author ÎR —I
 * @date 2018/11/12
 */
+#pragma once
 #ifndef SAKI_TYPE_ALIAS_2018_11_12
 #define SAKI_TYPE_ALIAS_2018_11_12
 

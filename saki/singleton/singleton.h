@@ -9,9 +9,10 @@
 ※使い方
 class A:public saki::singleton<A>{}
 */
+#pragma once
 #ifndef SAKI_SINGLETON_2018_10_17
 #define SAKI_SINGLETON_2018_10_17
-#include <memory> //for unique_ptr
+#include "../smart_ptr/immobile/immobile_ptr.h"
 namespace saki
 {
 	/**
@@ -25,9 +26,9 @@ namespace saki
 		* @brief インスタンスを取得
 		* @return std::unique_ptr<T> インスタンスを返す
 		*/
-		static std::unique_ptr<T>& getinstance()
+		static immobile_ptr<T>& getinstance()
 		{
-			static auto instance = std::make_unique<T>();
+			static auto instance = immobile_ptr<T>();
 			return instance;
 		}
 

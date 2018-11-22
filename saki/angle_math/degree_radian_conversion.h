@@ -4,6 +4,7 @@
 * @author êŒéR óI
 * @date 2018/11/13
 */
+#pragma once
 #ifndef SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13
 #define SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13
 #include "../pi.h"

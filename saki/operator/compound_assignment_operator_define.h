@@ -8,6 +8,7 @@
 operator+,-,*,/‚ð’è‹`‚µ‚Ä‚¢‚ê‚Î
 operator+=,-=,*=,/=‚ªã‚Ìoperator‚ð‚à‚Æ‚É’è‹`‚³‚ê‚é
 */
+#pragma once
 #ifndef SAKI_COMPOUND_ASSIGNMENT_OPERATOR_DEFINE_2018_11_13
 #define SAKI_COMPOUND_ASSIGNMENT_OPERATOR_DEFINE_2018_11_13
 
