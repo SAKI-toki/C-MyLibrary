@@ -2,17 +2,15 @@
 * @file immobile_ptr.h
 * @brief コピー・ムーブ禁止のスマートポインタ
 * @author 石山 悠
-* @date 2018/10/18
+* @date 2018/11/26
 */
 /*
 標準ライブラリのstd::unique_ptrのムーブも禁止したバージョンです。
-これ自体やこれを含むクラス等のvectorのようなムーブする可能性があるものを利用すると
-不具合が起きるので、単体で使用してください。
-※ムーブ禁止のため、std::make_uniqueのようなヘルパー関数を作成できない。
+boostのscoped_ptrと仕様はだいたい一緒ですが、swap等も削除しているのでより唯一なものになってます。
 */
 #pragma once
-#ifndef SAKI_IMMOBILE_PTR_2018_10_17
-#define SAKI_IMMOBILE_PTR_2018_10_17
+#ifndef SAKI_IMMOBILE_PTR_2018_11_26
+#define SAKI_IMMOBILE_PTR_2018_11_26
 #include <assert.h>	//for assert
 namespace saki
 {
@@ -51,6 +49,22 @@ namespace saki
 			}
 		}
 		/**
+		* @brief リソースの取得
+		*/
+		T* get()
+		{
+			check();
+			return ptr;
+		}
+		/**
+		* @brief リソースのアドレスを取得
+		*/
+		T** get_address()
+		{
+			check();
+			return &ptr;
+		}
+		/**
 		* @brief 明示的なメモリ解放と新たにメモリ確保する
 		* @param args Tのコンストラクタに必要な引数
 		*/
@@ -72,8 +86,15 @@ namespace saki
 		*/
 		T* operator->()const
 		{
-			assert(ptr != nullptr);
+			check();
 			return ptr;
+		}
+		/**
+		* @brief 参照演算子
+		*/
+		T operator*()const
+		{
+			return *ptr;
 		}
 		//コピー・ムーブ禁止
 		immobile_ptr(const immobile_ptr&) = delete;
@@ -83,6 +104,13 @@ namespace saki
 	private:
 		//ポインタ
 		T* ptr;
+		/**
+		* @brief リソースがあるかどうか判定する
+		*/
+		void check()
+		{
+			assert(ptr != nullptr);
+		}
 	};
 }
-#endif //SAKI_IMMOBILE_PTR_2018_10_17
+#endif //SAKI_IMMOBILE_PTR_2018_11_26
