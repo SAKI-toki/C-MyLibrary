@@ -20,7 +20,7 @@ namespace saki
 	* @param interval ‚¢‚­‚Â‚¨‚«‚É’l‚ðŠi”[‚³‚¹‚é‚©
 	*/
 	template<typename Container>
-	void iota(Container& con, typename Container::value_type init = 0, typename Container::value_type interval = 1)
+	void iota(Container&& con, typename Container::value_type init = 0, typename Container::value_type interval = 1)
 	{
 		for (auto&& n : con)
 		{

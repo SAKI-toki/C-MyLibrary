@@ -2,11 +2,11 @@
 * @file vector_2d.h
 * @brief 2ŸŒ³‚Å‚ÌƒxƒNƒgƒ‹
 * @author ÎR —I
-* @date 2018/11/18
+* @date 2018/12/02
 */
 #pragma once
-#ifndef SAKI_VECTOR_2D_2018_11_18
-#define SAKI_VECTOR_2D_2018_11_18
+#ifndef SAKI_VECTOR_2D_2018_12_02
+#define SAKI_VECTOR_2D_2018_12_02
 #include <type_traits> //for meta method
 #include "../constexpr/constexpr_sqrt.h"
 
@@ -148,7 +148,7 @@ namespace saki
 		* @brief +=‰‰Zq
 		*/
 		template<typename U>
-		constexpr auto operator+=(const Vector2<U>& other)
+		auto operator+=(const Vector2<U>& other)
 		{
 			*this = *this + other;
 			return *this;
@@ -166,7 +166,7 @@ namespace saki
 		* @brief -=‰‰Zq
 		*/
 		template<typename U>
-		constexpr auto operator-=(const Vector2<U>& other)
+		auto operator-=(const Vector2<U>& other)
 		{
 			*this = *this - other;
 			return *this;
@@ -184,7 +184,7 @@ namespace saki
 		* @brief *=‰‰Zq
 		*/
 		template<typename U>
-		constexpr auto operator*=(const U& other)
+		auto operator*=(const U& other)
 		{
 			*this = *this * other;
 			return *this;
@@ -202,7 +202,7 @@ namespace saki
 		* @brief /=‰‰Zq
 		*/
 		template<typename U>
-		constexpr auto operator/=(const U& other)
+		auto operator/=(const U& other)
 		{
 			*this = *this / other;
 			return *this;
@@ -222,11 +222,53 @@ namespace saki
 		{
 			return !(this == other);
 		}
+		/**
+		* @brief ³‹K‰»
+		* @return intŒ^‚Ìê‡‚Í•K‚¸0‚É‚È‚é‚Ì‚Å’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢
+		*/
+		void normalize()
+		{
+			//•ª•ê
+			auto den = saki::sqrt(this->x * this->x + this->y * this->y);
+			if (den == 0)
+			{
+				this->x = 0;
+				this->y = 0;
+			}
+			else
+			{
+				this->x /= den;
+				this->y /= den;
+			}
+		}
+		/**
+		* @brief ³‹K‰»
+		* @return ³‹K‰»‚µ‚½‚à‚Ì
+		* @details this‚Í³‹K‰»‚µ‚È‚¢
+		*/
+		template<typename U = double>
+		constexpr Vector2<U> return_normalize()const
+		{
+			//•ª•ê
+			auto den = saki::sqrt(this->x * this->x + this->y * this->y);
+			if (den == 0)
+			{
+				return Vector2<U>
+					(static_cast<U>(0),//x
+						static_cast<U>(0));//y
+			}
+			else
+			{
+				return Vector2<U>
+					(static_cast<U>(this->x / den),//x
+						static_cast<U>(this->y / den));//y
+			}
+		}
 	};
 
 	/**
 	* @brief “ñ“_ŠÔ‚Ì‹——£
-	* @details std::sqrt‚Æstd::pow‚ªconstexpr‚¶‚á‚È‚¢‚Ì‚ÅÀsˆ—‚Ì‚İ‚Å—LŒø
+	* @details C++17Œ»İAstd::sqrt‚ªconstexpr‚Å‚Í‚È‚¢‚Ì‚ÅA©ìsqrt‚ğ—˜—p‚µconstexpr‚É‘Î‰
 	*/
 	template<typename T1, typename T2>
 	constexpr auto distance(const Vector2<T1>& v1, const Vector2<T2>& v2)
@@ -236,6 +278,14 @@ namespace saki
 			(v1.x - v2.x) * (v1.x - v2.x) +
 				(v1.y - v2.y) * (v1.y - v2.y)));
 	}
+	/**
+	* @brief “àÏ
+	*/
+	template<typename U = double, typename T1, typename T2>
+	constexpr U dot(const Vector2<T1>& v1, const Vector2<T2>& v2)
+	{
+		return static_cast<U>(v1.x*v2.x + v1.y*v2.y);
+	}
 }
 
-#endif //SAKI_VECTOR_2D_2018_11_18
+#endif //SAKI_VECTOR_2D_2018_12_02

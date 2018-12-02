@@ -20,14 +20,16 @@ namespace saki
 	{
 		//0œZ‚ğ‚µ‚È‚¢‚æ‚¤‚É‚·‚é
 		if (n == 0)return 0;
-		T1 prev_x = n;
-		T1 next_x = (prev_x + n / prev_x) * 0.5;
-		while (prev_x != next_x)
+		//•‰‚Ìê‡
+		if (n < 0)return -nan("ind");
+		T1 prev = n / 2;
+		T1 next = (prev + n / prev) * 0.5;
+		while (prev != next)
 		{
-			prev_x = next_x;
-			next_x = (prev_x + n / prev_x) * 0.5;
+			prev = next;
+			next = (prev + n / prev) * 0.5;
 		}
-		return prev_x;
+		return prev;
 	}
 }
 #endif //SAKI_CONSTEXPR_SQRT_2018_11_21

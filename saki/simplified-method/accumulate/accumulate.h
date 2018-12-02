@@ -20,9 +20,9 @@ namespace saki
 	* @return ‡Œv‚ğ•Ô‚·
 	*/
 	template<typename Container, typename T>
-	T accumulate(const Container& con, T init)
+	T accumulate(Container&& con, T init)
 	{
-		for (const auto& n : con)
+		for (auto&& n : con)
 		{
 			init = init + n;
 		}
@@ -36,9 +36,9 @@ namespace saki
 	* @return ‘S‚Ä‚Ì—v‘f‚ğ‰ñ‚µ‚½Œ‹‰Ê
 	*/
 	template<typename Container, typename T, typename BinaryOperation>
-	T accumulate(const Container& con, T init, const  BinaryOperation& binary_op)
+	T accumulate(Container&& con, T init, BinaryOperation&& binary_op)
 	{
-		for (const auto& n : con)
+		for (auto&& n : con)
 		{
 			init = binary_op(init, n);
 		}

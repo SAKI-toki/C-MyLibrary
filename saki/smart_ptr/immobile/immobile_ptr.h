@@ -107,7 +107,7 @@ namespace saki
 		/**
 		* @brief ƒŠƒ\[ƒX‚ª‚ ‚é‚©‚Ç‚¤‚©”»’è‚·‚é
 		*/
-		void check()
+		void check()const
 		{
 			assert(ptr != nullptr);
 		}

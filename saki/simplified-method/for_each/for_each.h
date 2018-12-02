@@ -21,7 +21,7 @@ namespace saki
 	* @param args Às‚·‚éŠÖ”‚Ìˆø”‚QˆÈ~‚É“ü‚ê‚é’l
 	*/
 	template<typename Container, typename Func, typename ...Args>
-	void for_each(Container& con, Func& f, const Args ...args)
+	void for_each(Container&& con, Func& f, const Args ...args)
 	{
 		for (auto&& n : con)
 		{

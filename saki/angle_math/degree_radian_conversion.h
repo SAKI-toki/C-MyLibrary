@@ -15,7 +15,7 @@ namespace saki
 	* @param deg Radian‚É•ÏŠ·‚·‚éDegree
 	*/
 	template<typename Rad, typename Deg>
-	inline constexpr Rad to_radian(const Deg& deg)
+	constexpr Rad to_radian(Deg deg)
 	{
 		return static_cast<Rad>(deg * 0.0174532925199389);
 	}
@@ -24,7 +24,7 @@ namespace saki
 	* @param rad Degree‚É•ÏŠ·‚·‚éRadian
 	*/
 	template<typename Deg, typename Rad>
-	inline constexpr Deg to_degree(const Rad& rad)
+	constexpr Deg to_degree(Rad rad)
 	{
 		return static_cast<Deg>(rad * 57.29577951309679);
 	}
