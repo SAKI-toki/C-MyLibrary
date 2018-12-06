@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">名前空間</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
 <a href="#func-members">関数</a>  </div>
   <div class="headertitle">
 <div class="title">accumulate.h ファイル</div>  </div>
@@ -83,22 +84,42 @@ $(function() {
 <tr class="memitem:namespacesaki"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesaki.html">saki</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a708f1878c14cd1905991958776da57ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="accumulate_8h.html#a708f1878c14cd1905991958776da57ed">SAKI_ACCUMULATE_2018_10_07</a></td></tr>
+<tr class="separator:a708f1878c14cd1905991958776da57ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a0f9963378e1e25eb379f002fc2675544"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename T &gt; </td></tr>
-<tr class="memitem:a0f9963378e1e25eb379f002fc2675544"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0f9963378e1e25eb379f002fc2675544">saki::accumulate</a> (const Container &amp;con, T init)</td></tr>
-<tr class="memdesc:a0f9963378e1e25eb379f002fc2675544"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての値の合計  <a href="namespacesaki.html#a0f9963378e1e25eb379f002fc2675544">[詳解]</a><br /></td></tr>
-<tr class="separator:a0f9963378e1e25eb379f002fc2675544"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ecf606c3b0a7c7448938838e528de7b"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename T , typename BinaryOperation &gt; </td></tr>
-<tr class="memitem:a8ecf606c3b0a7c7448938838e528de7b"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8ecf606c3b0a7c7448938838e528de7b">saki::accumulate</a> (const Container &amp;con, T init, const BinaryOperation &amp;binary_op)</td></tr>
-<tr class="memdesc:a8ecf606c3b0a7c7448938838e528de7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="namespacesaki.html#a8ecf606c3b0a7c7448938838e528de7b">[詳解]</a><br /></td></tr>
-<tr class="separator:a8ecf606c3b0a7c7448938838e528de7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb1089e57771254bd2d09f6b3d73472"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename T &gt; </td></tr>
+<tr class="memitem:a8cb1089e57771254bd2d09f6b3d73472"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8cb1089e57771254bd2d09f6b3d73472">saki::accumulate</a> (Container &amp;&amp;con, T init)</td></tr>
+<tr class="memdesc:a8cb1089e57771254bd2d09f6b3d73472"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての値の合計  <a href="namespacesaki.html#a8cb1089e57771254bd2d09f6b3d73472">[詳解]</a><br /></td></tr>
+<tr class="separator:a8cb1089e57771254bd2d09f6b3d73472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff190807de56e50ef4416e313b591f3"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a6ff190807de56e50ef4416e313b591f3"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a6ff190807de56e50ef4416e313b591f3">saki::accumulate</a> (Container &amp;&amp;con, T init, BinaryOperation &amp;&amp;binary_op)</td></tr>
+<tr class="memdesc:a6ff190807de56e50ef4416e313b591f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="namespacesaki.html#a6ff190807de56e50ef4416e313b591f3">[詳解]</a><br /></td></tr>
+<tr class="separator:a6ff190807de56e50ef4416e313b591f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>既存のaccumulate関数の簡略化 </p>
-<dl class="section author"><dt>著者</dt><dd>石山　悠 </dd></dl>
+<dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2018/10/07 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a708f1878c14cd1905991958776da57ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708f1878c14cd1905991958776da57ed">&#9670;&nbsp;</a></span>SAKI_ACCUMULATE_2018_10_07</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAKI_ACCUMULATE_2018_10_07</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">

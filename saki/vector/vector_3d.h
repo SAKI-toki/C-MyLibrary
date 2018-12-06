@@ -7,8 +7,9 @@
 #pragma once
 #ifndef SAKI_VECTOR_3D_2018_12_02
 #define SAKI_VECTOR_3D_2018_12_02
-#include <type_traits>
-#include "../constexpr/constexpr_sqrt.h"
+#include <type_traits> //for meta method
+#include <limits> //for numeric_limits
+#include <saki/constexpr/constexpr_sqrt.h>
 
 namespace saki
 {
@@ -35,120 +36,15 @@ namespace saki
 		constexpr Vector3(const T& _x, const T& _y, const T& _z) :
 			x(_x), y(_y), z(_z)
 		{}
-		/**
-		* @brief 引数あり型変換コンストラクタ
-		* @param _x xの初期値
-		* @param _y yの初期値
-		* @param _z zの初期値
-		*/
-		template<typename U1, typename U2, typename U3>
-		constexpr Vector3(const U1& _x, const U2& _y, const U3& _z) :
-			x(static_cast<T>(_x)), y(static_cast<T>(_y)), z(static_cast<T>(_z))
-		{}
-		/**
-		* @brief コピーコンストラクタ
-		* @param other コピーする対象（型が一致）
-		*/
-		Vector3(const Vector3<T>& other)
-		{
-			this->x = other.x;
-			this->y = other.y;
-			this->z = other.z;
-		}
-		/**
-		* @brief 型変換コピーコンストラクタ
-		* @param other コピーする対象（型が不一致）
-		*/
-		template<typename U,
-			std::enable_if_t<std::is_convertible_v<U, T>, std::nullptr_t> = nullptr>
-			Vector3(const Vector3<U>& other)
-		{
-			this->x = static_cast<T>(other.x);
-			this->y = static_cast<T>(other.y);
-			this->z = static_cast<T>(other.z);
-		}
-		/**
-		* @brief コピー代入演算子
-		* @param other コピーする対象（型が一致）
-		*/
-		Vector3<T>& operator=(const Vector3<T>& other)
-		{
-			if (this != &other)
-			{
-				this->x = other.x;
-				this->y = other.y;
-				this->z = other.z;
-			}
-			return *this;
-		}
-		/**
-		* @brief 型変換コピー代入演算子
-		* @param other コピーする対象（型が不一致）
-		*/
-		template<typename U,
-			std::enable_if_t<std::is_convertible_v<U, T>, std::nullptr_t> = nullptr>
-			Vector3<T>& operator=(const Vector3<U>& other)
-		{
-			this->x = static_cast<T>(other.x);
-			this->y = static_cast<T>(other.y);
-			this->z = static_cast<T>(other.z);
-
-			return *this;
-		}
-		/**
-		* @brief ムーブコンストラクタ
-		* @param other ムーブする対象（型が一致）
-		*/
-		Vector3(Vector3<T>&& other)noexcept
-		{
-			this->x = std::move(other.x);
-			this->y = std::move(other.y);
-			this->z = std::move(other.z);
-		}
-		/**
-		* @brief 型変換ムーブコンストラクタ
-		* @param other ムーブする対象（型が不一致）
-		*/
-		template<typename U,
-			std::enable_if_t<std::is_convertible_v<U, T>, std::nullptr_t> = nullptr>
-			Vector3(Vector3<U>&& other)noexcept
-		{
-			this->x = std::move(static_cast<T>(other.x));
-			this->y = std::move(static_cast<T>(other.y));
-			this->z = std::move(static_cast<T>(other.z));
-		}
-		/**
-		* @brief ムーブ代入演算子
-		* @param other ムーブする対象（型が一致）
-		*/
-		Vector3<T>& operator=(Vector3<T>&& other)noexcept
-		{
-			if (this != &other)
-			{
-				this->x = std::move(other.x);
-				this->y = std::move(other.y);
-				this->z = std::move(other.z);
-			}
-			return *this;
-		}
-		/**
-		* @brief 型変換ムーブ代入演算子
-		* @param other ムーブする対象（型が不一致）
-		*/
-		template<typename U,
-			std::enable_if_t<std::is_convertible_v<U, T>, std::nullptr_t> = nullptr>
-			Vector3<T>& operator=(Vector3<U>&& other)noexcept
-		{
-			this->x = std::move(static_cast<T>(other.x));
-			this->y = std::move(static_cast<T>(other.y));
-			this->z = std::move(static_cast<T>(other.z));
-
-			return *this;
-		}
+		//デフォルトを使用
+		Vector3(const Vector3<T>&) = default;
+		Vector3<T>& operator=(const Vector3<T>&) = default;
+		Vector3(Vector3<T>&&) = default;
+		Vector3& operator=(Vector3<T>&&) = default;
 		/**
 		* @brief +演算子
 		*/
-		template<typename U>
+		template<typename U = T>
 		constexpr auto operator+(const Vector3<U>& other)const
 		{
 			return Vector3<decltype(std::declval<T>() + std::declval<U>())>
@@ -157,7 +53,7 @@ namespace saki
 		/**
 		* @brief +=演算子
 		*/
-		template<typename U>
+		template<typename U = T>
 		auto operator+=(const Vector3<U>& other)
 		{
 			*this = *this + other;
@@ -166,7 +62,7 @@ namespace saki
 		/**
 		* @brief -演算子
 		*/
-		template<typename U>
+		template<typename U = T>
 		constexpr auto operator-(const Vector3<U>& other)const
 		{
 			return Vector3<decltype(std::declval<T>() - std::declval<U>())>
@@ -175,44 +71,80 @@ namespace saki
 		/**
 		* @brief -=演算子
 		*/
-		template<typename U>
+		template<typename U = T>
 		auto operator-=(const Vector3<U>& other)
 		{
 			*this = *this - other;
 			return *this;
 		}
 		/**
-		* @brief *演算子
+		* @brief *演算子(スカラ)
 		*/
-		template<typename U>
+		template<typename U = T>
 		constexpr auto operator*(const U& scalar)const
 		{
 			return Vector3<decltype(std::declval<T>() * std::declval<U>())>
 			{ this->x * scalar, this->y * scalar, this->z * scalar };
 		}
 		/**
-		* @brief *=演算子
+		* @brief *=演算子(スカラ)
 		*/
-		template<typename U>
-		auto operator*=(const U& other)
+		template<typename U = T>
+		auto operator*=(const U& scalar)
+		{
+			*this = *this * scalar;
+			return *this;
+		}
+		/**
+		* @brief *演算子(ベクトル)
+		*/
+		template<typename U = T>
+		constexpr auto operator*(const Vector3<U>& other)const
+		{
+			return Vector3<decltype(std::declval<T>() * std::declval<U>())>
+			{ this->x * other.x, this->y * other.y, this->z * other.z };
+		}
+		/**
+		* @brief *=演算子(ベクトル)
+		*/
+		template<typename U = T>
+		auto operator*=(const Vector3<U>& other)
 		{
 			*this = *this * other;
 			return *this;
 		}
 		/**
-		* @brief /演算子
+		* @brief /演算子(スカラ)
 		*/
-		template<typename U>
-		constexpr auto operator/(const T& scalar)const
+		template<typename U = T>
+		constexpr auto operator/(const U& scalar)const
 		{
 			return Vector3<decltype(std::declval<T>() / std::declval<U>())>
 			{ this->x / scalar, this->y / scalar, this->z / scalar };
 		}
 		/**
-		* @brief /=演算子
+		* @brief /=演算子(スカラ)
 		*/
-		template<typename U>
-		auto operator/=(const U& other)
+		template<typename U = T>
+		auto operator/=(const U& scalar)
+		{
+			*this = *this / scalar;
+			return *this;
+		}
+		/**
+		* @brief /演算子(ベクトル)
+		*/
+		template<typename U = T>
+		constexpr auto operator/(const Vector3<U>& other)const
+		{
+			return Vector3<decltype(std::declval<T>() / std::declval<U>())>
+			{ this->x / other.x, this->y / other.y, this->z / other.x };
+		}
+		/**
+		* @brief /=演算子(ベクトル)
+		*/
+		template<typename U = T>
+		auto operator/=(const Vector3<U>& other)
 		{
 			*this = *this / other;
 			return *this;
@@ -238,7 +170,7 @@ namespace saki
 		void normalize()
 		{
 			//分母
-			auto den = saki::sqrt(this->x * this->x + this->y * this->y+this->z * this->z);
+			auto den = saki::sqrt(this->x * this->x + this->y * this->y + this->z * this->z);
 			if (den == 0)
 			{
 				this->x = 0;
@@ -283,14 +215,13 @@ namespace saki
 	* @brief 二点間の距離
 	* @details C++17現在、std::sqrtがconstexprではないので、自作sqrtを利用しconstexprに対応
 	*/
-	template<typename T1, typename T2>
-	constexpr auto distance(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	template<typename U = double, typename T1, typename T2>
+	constexpr U distance(const Vector3<T1>& v1, const Vector3<T2>& v2)
 	{
-		return static_cast<decltype(std::declval<T1>() - std::declval<T2>())>(
-			saki::sqrt(
+		return saki::sqrt<U>(
 			(v1.x - v2.x) * (v1.x - v2.x) +
-				(v1.y - v2.y) * (v1.y - v2.y) +
-				(v1.z - v2.z) * (v1.z - v2.z)));
+			(v1.y - v2.y) * (v1.y - v2.y) +
+			(v1.z - v2.z) * (v1.z - v2.z));
 	}
 	/**
 	* @brief 内積
@@ -299,6 +230,17 @@ namespace saki
 	constexpr U dot(const Vector3<T1>& v1, const Vector3<T2>& v2)
 	{
 		return static_cast<U>(v1.x*v2.x + v1.y*v2.y + v1.z*v2.z);
+	}
+	/**
+	* @brief 外積
+	*/
+	template<typename U = double, typename T1, typename T2>
+	constexpr Vector3<U> cross(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return Vector3<U>(
+			v1.y*v2.z - v1.z*v1.y, //x
+			v1.z*v2.x - v1.x*v1.z, //y
+			v1.x*v2.y - v1.y*v1.x);//z
 	}
 }
 

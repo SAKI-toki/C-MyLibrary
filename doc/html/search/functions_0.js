@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['accumulate',['accumulate',['../namespacesaki.html#a0f9963378e1e25eb379f002fc2675544',1,'saki::accumulate(const Container &amp;con, T init)'],['../namespacesaki.html#a8ecf606c3b0a7c7448938838e528de7b',1,'saki::accumulate(const Container &amp;con, T init, const BinaryOperation &amp;binary_op)']]]
+  ['abs',['abs',['../namespacesaki.html#a012046e05c5909bb34ca3e609ca74ff3',1,'saki']]],
+  ['accumulate',['accumulate',['../namespacesaki.html#a8cb1089e57771254bd2d09f6b3d73472',1,'saki::accumulate(Container &amp;&amp;con, T init)'],['../namespacesaki.html#a6ff190807de56e50ef4416e313b591f3',1,'saki::accumulate(Container &amp;&amp;con, T init, BinaryOperation &amp;&amp;binary_op)']]]
 ];

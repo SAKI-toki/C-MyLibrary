@@ -1,0 +1,77 @@
+\hypertarget{compare__operator__define_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/operator/compare\+\_\+operator\+\_\+define.h ファイル}
+\label{compare__operator__define_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/operator/compare\+\_\+operator\+\_\+define.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/operator/compare\+\_\+operator\+\_\+define.\+h}}
+
+
+比較系のoperatorを自動で定義するマクロ  
+
+
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{compare__operator__define_8h_ab917ecfd2b0dcede9e1b1e1f02ceaac2}{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31}}
+\item 
+\#define \mbox{\hyperlink{compare__operator__define_8h_a88dc87f823e08f55f3f4395afa589f50}{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE}}(name)
+\begin{DoxyCompactList}\small\item\em 比較系のoperatorを自動定義するマクロ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+比較系のoperatorを自動で定義するマクロ 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2018/10/31 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{compare__operator__define_8h_a88dc87f823e08f55f3f4395afa589f50}\label{compare__operator__define_8h_a88dc87f823e08f55f3f4395afa589f50}} 
+\index{compare\+\_\+operator\+\_\+define.\+h@{compare\+\_\+operator\+\_\+define.\+h}!S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE}}
+\index{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE}!compare\+\_\+operator\+\_\+define.\+h@{compare\+\_\+operator\+\_\+define.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE}{SAKI\_COMPARE\_OPERATOR\_DEFINE}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+NE(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{comment}{/*イコール                                          */}\(\backslash\)
+bool operator==(\textcolor{keyword}{const} name& other)\textcolor{keyword}{const}             \(\backslash\)
+\{                                                   \(\backslash\)
+    return !(*\textcolor{keyword}{this} < other) && !(other < *\textcolor{keyword}{this});    \(\backslash\)
+\}                                                   \(\backslash\)
+\textcolor{comment}{/*ノットイコール                                   */}\(\backslash\)
+bool operator!=(\textcolor{keyword}{const} name& other)\textcolor{keyword}{const}             \(\backslash\)
+\{                                                   \(\backslash\)
+    return (*\textcolor{keyword}{this} < other) || (other < *\textcolor{keyword}{this});      \(\backslash\)
+\}                                                   \(\backslash\)
+\textcolor{comment}{/*大なり                                           */}\(\backslash\)
+bool operator>(\textcolor{keyword}{const} name& other)\textcolor{keyword}{const}              \(\backslash\)
+\{                                                   \(\backslash\)
+    return other < *\textcolor{keyword}{this};                           \(\backslash\)
+\}                                                   \(\backslash\)
+\textcolor{comment}{/*小なりイコール                                   */}\(\backslash\)
+bool operator<=(\textcolor{keyword}{const} name& other)\textcolor{keyword}{const}             \(\backslash\)
+\{                                                   \(\backslash\)
+    return !(other < *\textcolor{keyword}{this});                        \(\backslash\)
+\}                                                   \(\backslash\)
+\textcolor{comment}{/*大なりイコール                                   */}\(\backslash\)
+bool operator>=(\textcolor{keyword}{const} name& other)\textcolor{keyword}{const}             \(\backslash\)
+\{                                                   \(\backslash\)
+    return !(*\textcolor{keyword}{this} < other);                        \(\backslash\)
+\}                                                   \(\backslash\)
+\end{DoxyCode}
+
+
+比較系のoperatorを自動定義するマクロ 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 定義するクラスの名前\\
+\hline
+\end{DoxyParams}
+$<$が定義されていれば==と!=と$>$と$<$=と$>$=が自動定義される \mbox{\Hypertarget{compare__operator__define_8h_ab917ecfd2b0dcede9e1b1e1f02ceaac2}\label{compare__operator__define_8h_ab917ecfd2b0dcede9e1b1e1f02ceaac2}} 
+\index{compare\+\_\+operator\+\_\+define.\+h@{compare\+\_\+operator\+\_\+define.\+h}!S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31}}
+\index{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31}!compare\+\_\+operator\+\_\+define.\+h@{compare\+\_\+operator\+\_\+define.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31}{SAKI\_COMPARE\_OPERATOR\_DEFINE\_2018\_10\_31}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+2018\+\_\+10\+\_\+31}
+

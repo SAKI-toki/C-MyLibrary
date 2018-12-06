@@ -10,12 +10,17 @@
 \item 
  \mbox{\hyperlink{namespacesaki}{saki}}
 \end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{accumulate_8h_a708f1878c14cd1905991958776da57ed}{S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07}}
+\end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Container , typename T $>$ }\\T \mbox{\hyperlink{namespacesaki_a0f9963378e1e25eb379f002fc2675544}{saki\+::accumulate}} (const Container \&con, T init)
+{\footnotesize template$<$typename Container , typename T $>$ }\\T \mbox{\hyperlink{namespacesaki_a8cb1089e57771254bd2d09f6b3d73472}{saki\+::accumulate}} (Container \&\&con, T init)
 \begin{DoxyCompactList}\small\item\em 全ての値の合計 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Container , typename T , typename Binary\+Operation $>$ }\\T \mbox{\hyperlink{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}{saki\+::accumulate}} (const Container \&con, T init, const Binary\+Operation \&binary\+\_\+op)
+{\footnotesize template$<$typename Container , typename T , typename Binary\+Operation $>$ }\\T \mbox{\hyperlink{namespacesaki_a6ff190807de56e50ef4416e313b591f3}{saki\+::accumulate}} (Container \&\&con, T init, Binary\+Operation \&\&binary\+\_\+op)
 \begin{DoxyCompactList}\small\item\em 引数が2つの関数を指定し、それをすべての要素で回す \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -23,8 +28,17 @@
 既存のaccumulate関数の簡略化 
 
 \begin{DoxyAuthor}{著者}
-石山　悠 
+石山 悠 
 \end{DoxyAuthor}
 \begin{DoxyDate}{日付}
 2018/10/07 
 \end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{accumulate_8h_a708f1878c14cd1905991958776da57ed}\label{accumulate_8h_a708f1878c14cd1905991958776da57ed}} 
+\index{accumulate.\+h@{accumulate.\+h}!S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07@{S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07}}
+\index{S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07@{S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07}!accumulate.\+h@{accumulate.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07}{SAKI\_ACCUMULATE\_2018\_10\_07}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+A\+C\+C\+U\+M\+U\+L\+A\+T\+E\+\_\+2018\+\_\+10\+\_\+07}
+

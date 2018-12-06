@@ -7,16 +7,15 @@
 #ifndef SAKI_2018_11_22
 #define SAKI_2018_11_22
 
-#include "angle_math/angle_math.h"
-#include "constexpr/constexpr.h"
-#include "operator/operator.h"
-#include "random/random.h"
-#include "simplified-method/simplified_method.h"
-#include "singleton/singleton.h"
-#include "smart_ptr/smart_ptr.h"
-#include "vector/vector.h"
-#include "min_max.h"
-#include "pi.h"
-#include "type_alias.h"
+#include <saki/angle_math/angle_math.h>
+#include <saki/constexpr/constexpr.h>
+#include <saki/operator/operator.h>
+#include <saki/random/random.h>
+#include <saki/simplified-method/simplified_method.h>
+#include <saki/singleton/singleton.h>
+#include <saki/smart_ptr/smart_ptr.h>
+#include <saki/vector/vector.h>
+#include <saki/pi.h>
+#include <saki/clock/clock.h>
 
 #endif //SAKI_2018_11_22

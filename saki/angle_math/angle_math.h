@@ -7,6 +7,6 @@
 #ifndef SAKI_ANGLE_MATH_2018_11_22
 #define SAKI_ANGLE_MATH_2018_11_22
 
-#include "degree_radian_conversion.h"
+#include <saki/angle_math/degree_radian_conversion.h>
 
 #endif //SAKI_ANGLE_MATH_2018_11_22

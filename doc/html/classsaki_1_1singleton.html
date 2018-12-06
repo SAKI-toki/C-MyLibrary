@@ -87,9 +87,15 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静的公開メンバ関数</h2></td></tr>
-<tr class="memitem:a507fa8bc891caf1ea18b6dd25475430e"><td class="memItemLeft" align="right" valign="top">static type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1singleton.html#a507fa8bc891caf1ea18b6dd25475430e">getinstance</a> ()</td></tr>
-<tr class="memdesc:a507fa8bc891caf1ea18b6dd25475430e"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得  <a href="#a507fa8bc891caf1ea18b6dd25475430e">[詳解]</a><br /></td></tr>
-<tr class="separator:a507fa8bc891caf1ea18b6dd25475430e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d7ffc1bb4b14c2878b1f21497fa655"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classsaki_1_1immobile__ptr.html">immobile_ptr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1singleton.html#a58d7ffc1bb4b14c2878b1f21497fa655">getinstance</a> ()</td></tr>
+<tr class="memdesc:a58d7ffc1bb4b14c2878b1f21497fa655"><td class="mdescLeft">&#160;</td><td class="mdescRight">インスタンスを取得  <a href="#a58d7ffc1bb4b14c2878b1f21497fa655">[詳解]</a><br /></td></tr>
+<tr class="separator:a58d7ffc1bb4b14c2878b1f21497fa655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d327725cba734d691da390a516ed29b"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1singleton.html#a0d327725cba734d691da390a516ed29b">get</a> ()</td></tr>
+<tr class="memdesc:a0d327725cba734d691da390a516ed29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースの取得  <a href="#a0d327725cba734d691da390a516ed29b">[詳解]</a><br /></td></tr>
+<tr class="separator:a0d327725cba734d691da390a516ed29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d7702a8dc2d60917f7098fee763865"><td class="memItemLeft" align="right" valign="top">static T **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1singleton.html#ab7d7702a8dc2d60917f7098fee763865">get_address</a> ()</td></tr>
+<tr class="memdesc:ab7d7702a8dc2d60917f7098fee763865"><td class="mdescLeft">&#160;</td><td class="mdescRight">リソースのアドレスの取得  <a href="#ab7d7702a8dc2d60917f7098fee763865">[詳解]</a><br /></td></tr>
+<tr class="separator:ab7d7702a8dc2d60917f7098fee763865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 限定公開メンバ関数</h2></td></tr>
@@ -101,7 +107,6 @@ $(function() {
 class saki::singleton&lt; T &gt;</h3>
 
 <p>継承するとシングルトンクラスになる </p>
-<p>使い方：class A : public singleton{} </p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="a7e18a317dec7a4658f6d3376f2dd3ebd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e18a317dec7a4658f6d3376f2dd3ebd">&#9670;&nbsp;</a></span>~singleton()</h2>
@@ -158,8 +163,8 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a507fa8bc891caf1ea18b6dd25475430e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a507fa8bc891caf1ea18b6dd25475430e">&#9670;&nbsp;</a></span>getinstance()</h2>
+<a id="a0d327725cba734d691da390a516ed29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d327725cba734d691da390a516ed29b">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +175,65 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static type&amp; <a class="el" href="classsaki_1_1singleton.html">saki::singleton</a>&lt; T &gt;::getinstance </td>
+          <td class="memname">static T* <a class="el" href="classsaki_1_1singleton.html">saki::singleton</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リソースの取得 </p>
+
+</div>
+</div>
+<a id="ab7d7702a8dc2d60917f7098fee763865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d7702a8dc2d60917f7098fee763865">&#9670;&nbsp;</a></span>get_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T** <a class="el" href="classsaki_1_1singleton.html">saki::singleton</a>&lt; T &gt;::get_address </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>リソースのアドレスの取得 </p>
+
+</div>
+</div>
+<a id="a58d7ffc1bb4b14c2878b1f21497fa655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d7ffc1bb4b14c2878b1f21497fa655">&#9670;&nbsp;</a></span>getinstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classsaki_1_1immobile__ptr.html">immobile_ptr</a>&lt;T&gt;&amp; <a class="el" href="classsaki_1_1singleton.html">saki::singleton</a>&lt; T &gt;::getinstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

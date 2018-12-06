@@ -2,7 +2,7 @@
 * @file for_each.h
 * @brief 既存のfor_each関数の簡略化＋拡張
 * @author 石山 悠
-* @date 2018/10/17
+* @date 2018/12/06
 */
 /*
 全ての要素に関数を適用するときにコンテナクラスと関数を渡すだけで可能にした
@@ -10,8 +10,8 @@
 標準ライブラリではIteratorを渡すので、全てならこっちを使ったほうが良い
 */
 #pragma once
-#ifndef SAKI_FOR_EACH_2018_10_17
-#define SAKI_FOR_EACH_2018_10_17
+#ifndef SAKI_FOR_EACH_2018_12_06
+#define SAKI_FOR_EACH_2018_12_06
 namespace saki
 {
 	/**
@@ -21,7 +21,7 @@ namespace saki
 	* @param args 実行する関数の引数２以降に入れる値
 	*/
 	template<typename Container, typename Func, typename ...Args>
-	void for_each(Container&& con, Func& f, const Args ...args)
+	void for_each(Container&& con, Func&& f, Args ...args)
 	{
 		for (auto&& n : con)
 		{
@@ -30,4 +30,4 @@ namespace saki
 	}
 }
 
-#endif //SAKI_FOR_EACH_2018_10_17
+#endif //SAKI_FOR_EACH_2018_12_06

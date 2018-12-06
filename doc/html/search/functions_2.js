@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getinstance',['getinstance',['../classsaki_1_1singleton.html#a507fa8bc891caf1ea18b6dd25475430e',1,'saki::singleton']]]
+  ['exchange',['exchange',['../namespacesaki.html#a41390f371e093d85f55a61f26277c185',1,'saki']]]
 ];

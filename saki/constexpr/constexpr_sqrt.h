@@ -16,12 +16,10 @@ namespace saki
 	* @details アルゴリズムはバビロニアの平方根を利用
 	*/
 	template<typename T1 = double, typename T2 = double>
-	constexpr T1 sqrt(T2 n)
+	constexpr T1 sqrt(const T2& n)
 	{
-		//0除算をしないようにする
-		if (n == 0)return 0;
-		//負の場合
-		if (n < 0)return -nan("ind");
+		//0除算や負数の計算をしないようにする
+		if (n <= 0)return 0;
 		T1 prev = n / 2;
 		T1 next = (prev + n / prev) * 0.5;
 		while (prev != next)

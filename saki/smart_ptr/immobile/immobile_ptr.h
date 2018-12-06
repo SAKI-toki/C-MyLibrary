@@ -11,7 +11,7 @@ boost‚Ìscoped_ptr‚Æd—l‚Í‚¾‚¢‚½‚¢ˆê‚Å‚·‚ªAswap“™‚àíœ‚µ‚Ä‚¢‚é‚Ì‚Å‚æ‚è—Bˆê‚È‚
 #pragma once
 #ifndef SAKI_IMMOBILE_PTR_2018_11_26
 #define SAKI_IMMOBILE_PTR_2018_11_26
-#include <assert.h>	//for assert
+#include <cassert>	//for assert
 namespace saki
 {
 	/**

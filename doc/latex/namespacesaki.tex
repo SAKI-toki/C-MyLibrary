@@ -6,29 +6,73 @@
 class \mbox{\hyperlink{classsaki_1_1immobile__ptr}{immobile\+\_\+ptr}}
 \begin{DoxyCompactList}\small\item\em コピー・ムーブ禁止のスマートポインタ \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classsaki_1_1singleton}{singleton}}
-\begin{DoxyCompactList}\small\item\em 継承するとシングルトンクラスになる \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 継承するとシングルトンクラスになる \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}
+\begin{DoxyCompactList}\small\item\em 2次元でのベクトル \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}
+\begin{DoxyCompactList}\small\item\em 3次元でのベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Container , typename T $>$ }\\T \mbox{\hyperlink{namespacesaki_a0f9963378e1e25eb379f002fc2675544}{accumulate}} (const Container \&con, T init)
+{\footnotesize template$<$typename Rad , typename Deg $>$ }\\constexpr Rad \mbox{\hyperlink{namespacesaki_aae246ec576e9e2da23c0c142e6fc4d6a}{to\+\_\+radian}} (Deg deg)
+\begin{DoxyCompactList}\small\item\em Degreeから\+Radianに変換 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Deg , typename Rad $>$ }\\constexpr Deg \mbox{\hyperlink{namespacesaki_aa28ebe642bd2c0e608e2a61c34b3d7a5}{to\+\_\+degree}} (Rad rad)
+\begin{DoxyCompactList}\small\item\em Radianから\+Degreeに変換 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a012046e05c5909bb34ca3e609ca74ff3}{abs}} (T n)
+\begin{DoxyCompactList}\small\item\em コンパイル時絶対値 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename U  = T$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a41390f371e093d85f55a61f26277c185}{exchange}} (T \&t, U \&\&next)
+\begin{DoxyCompactList}\small\item\em コンパイル時exchange \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = unsigned long long$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a59cd7e099937e5f8bcf5aa612745690c}{factorial}} (unsigned int N)
+\begin{DoxyCompactList}\small\item\em コンパイル時階乗 \end{DoxyCompactList}\item 
+{\footnotesize template$<$unsigned int N, typename T  = unsigned long long$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a9dead910b791cee99cf82d1bd2a5d90c}{factorial}} ()
+\begin{DoxyCompactList}\small\item\em コンパイル時階乗 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1  = double, typename T2  = double$>$ }\\constexpr T1 \mbox{\hyperlink{namespacesaki_a1dd39b17c9f89c99717d452d9318eb83}{sqrt}} (T2 n)
+\begin{DoxyCompactList}\small\item\em コンパイル時平方根 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{namespacesaki_a5c175260f48a0b3410568b9b555ac5b8}{random}} (const T min, const T max)
+\begin{DoxyCompactList}\small\item\em 最小値と最大値を引数にとり、その間からランダムな値を返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container , typename T $>$ }\\T \mbox{\hyperlink{namespacesaki_a8cb1089e57771254bd2d09f6b3d73472}{accumulate}} (Container \&\&con, T init)
 \begin{DoxyCompactList}\small\item\em 全ての値の合計 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Container , typename T , typename Binary\+Operation $>$ }\\T \mbox{\hyperlink{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}{accumulate}} (const Container \&con, T init, const Binary\+Operation \&binary\+\_\+op)
+{\footnotesize template$<$typename Container , typename T , typename Binary\+Operation $>$ }\\T \mbox{\hyperlink{namespacesaki_a6ff190807de56e50ef4416e313b591f3}{accumulate}} (Container \&\&con, T init, Binary\+Operation \&\&binary\+\_\+op)
 \begin{DoxyCompactList}\small\item\em 引数が2つの関数を指定し、それをすべての要素で回す \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Container , typename Func , typename ... Args$>$ }\\void \mbox{\hyperlink{namespacesaki_a68b1b59736df091f8a987d35e5773d2a}{for\+\_\+each}} (Container \&con, Func \&f, const Args ...args)
+{\footnotesize template$<$typename Container , typename Func , typename ... Args$>$ }\\void \mbox{\hyperlink{namespacesaki_a3d3a1b6e961ca64485c02c925ca51399}{for\+\_\+each}} (Container \&\&con, Func \&f, const Args ...args)
 \begin{DoxyCompactList}\small\item\em 関数をすべての要素で実行する \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}{iota}} (Container \&con, typename Container\+::value\+\_\+type init=0, typename Container\+::value\+\_\+type interval=1)
+{\footnotesize template$<$typename Container $>$ }\\void \mbox{\hyperlink{namespacesaki_acfc6500ad8c06a88e04dd287c03bdeea}{iota}} (Container \&\&con, typename Container\+::value\+\_\+type init=0, typename Container\+::value\+\_\+type interval=1)
 \begin{DoxyCompactList}\small\item\em 全ての値に連番をつける \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Iterator $>$ }\\void \mbox{\hyperlink{namespacesaki_a60fc6028a57a55dcc37d01458997f7e3}{iota}} (Iterator start, const Iterator \&end, typename Iterator\+::value\+\_\+type init=0, typename Iterator\+::value\+\_\+type interval=1)
-\begin{DoxyCompactList}\small\item\em 決まった範囲に連番をつける \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 決まった範囲に連番をつける \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a75839f5ae2204d75bde7465607366a3b}{distance}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 二点間の距離 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a724d6c36d761314950d3ec8be6a4f4ab}{dot}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a3e67ebd380889b661b2f72afc81ae005}{distance}} (const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 二点間の距離 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a4f2643c9bd618538a43cdad4a71398af}{dot}} (const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{namespacesaki_a0f9963378e1e25eb379f002fc2675544}\label{namespacesaki_a0f9963378e1e25eb379f002fc2675544}} 
+\mbox{\Hypertarget{namespacesaki_a012046e05c5909bb34ca3e609ca74ff3}\label{namespacesaki_a012046e05c5909bb34ca3e609ca74ff3}} 
+\index{saki@{saki}!abs@{abs}}
+\index{abs@{abs}!saki@{saki}}
+\subsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T saki\+::abs (\begin{DoxyParamCaption}\item[{T}]{n }\end{DoxyParamCaption})}
+
+
+
+コンパイル時絶対値 
+
+
+\begin{DoxyParams}{引数}
+{\em n} & 絶対値を求める値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesaki_a8cb1089e57771254bd2d09f6b3d73472}\label{namespacesaki_a8cb1089e57771254bd2d09f6b3d73472}} 
 \index{saki@{saki}!accumulate@{accumulate}}
 \index{accumulate@{accumulate}!saki@{saki}}
 \subsubsection{\texorpdfstring{accumulate()}{accumulate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Container , typename T $>$ \\
-T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  }\item[{T}]{init }\end{DoxyParamCaption})}
+T saki\+::accumulate (\begin{DoxyParamCaption}\item[{Container \&\&}]{con,  }\item[{T}]{init }\end{DoxyParamCaption})}
 
 
 
@@ -44,12 +88,12 @@ T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  
 \begin{DoxyReturn}{戻り値}
 合計を返す 
 \end{DoxyReturn}
-\mbox{\Hypertarget{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}\label{namespacesaki_a8ecf606c3b0a7c7448938838e528de7b}} 
+\mbox{\Hypertarget{namespacesaki_a6ff190807de56e50ef4416e313b591f3}\label{namespacesaki_a6ff190807de56e50ef4416e313b591f3}} 
 \index{saki@{saki}!accumulate@{accumulate}}
 \index{accumulate@{accumulate}!saki@{saki}}
 \subsubsection{\texorpdfstring{accumulate()}{accumulate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Container , typename T , typename Binary\+Operation $>$ \\
-T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  }\item[{T}]{init,  }\item[{const Binary\+Operation \&}]{binary\+\_\+op }\end{DoxyParamCaption})}
+T saki\+::accumulate (\begin{DoxyParamCaption}\item[{Container \&\&}]{con,  }\item[{T}]{init,  }\item[{Binary\+Operation \&\&}]{binary\+\_\+op }\end{DoxyParamCaption})}
 
 
 
@@ -65,14 +109,103 @@ T saki\+::accumulate (\begin{DoxyParamCaption}\item[{const Container \&}]{con,  
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{戻り値}
-全ての要素を回した結果
+全ての要素を回した結果 
 \end{DoxyReturn}
-注意：0除算に気を付けてください \mbox{\Hypertarget{namespacesaki_a68b1b59736df091f8a987d35e5773d2a}\label{namespacesaki_a68b1b59736df091f8a987d35e5773d2a}} 
+\mbox{\Hypertarget{namespacesaki_a75839f5ae2204d75bde7465607366a3b}\label{namespacesaki_a75839f5ae2204d75bde7465607366a3b}} 
+\index{saki@{saki}!distance@{distance}}
+\index{distance@{distance}!saki@{saki}}
+\subsubsection{\texorpdfstring{distance()}{distance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+constexpr auto saki\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T2 $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+二点間の距離 
+
+C++17現在、std\+::sqrtがconstexprではないので、自作sqrtを利用しconstexprに対応 \mbox{\Hypertarget{namespacesaki_a3e67ebd380889b661b2f72afc81ae005}\label{namespacesaki_a3e67ebd380889b661b2f72afc81ae005}} 
+\index{saki@{saki}!distance@{distance}}
+\index{distance@{distance}!saki@{saki}}
+\subsubsection{\texorpdfstring{distance()}{distance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+constexpr auto saki\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T2 $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+二点間の距離 
+
+C++17現在、std\+::sqrtがconstexprではないので、自作sqrtを利用しconstexprに対応 \mbox{\Hypertarget{namespacesaki_a724d6c36d761314950d3ec8be6a4f4ab}\label{namespacesaki_a724d6c36d761314950d3ec8be6a4f4ab}} 
+\index{saki@{saki}!dot@{dot}}
+\index{dot@{dot}!saki@{saki}}
+\subsubsection{\texorpdfstring{dot()}{dot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename U  = double, typename T1 , typename T2 $>$ \\
+constexpr U saki\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T2 $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+内積 
+
+\mbox{\Hypertarget{namespacesaki_a4f2643c9bd618538a43cdad4a71398af}\label{namespacesaki_a4f2643c9bd618538a43cdad4a71398af}} 
+\index{saki@{saki}!dot@{dot}}
+\index{dot@{dot}!saki@{saki}}
+\subsubsection{\texorpdfstring{dot()}{dot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename U  = double, typename T1 , typename T2 $>$ \\
+constexpr U saki\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T2 $>$ \&}]{v2 }\end{DoxyParamCaption})}
+
+
+
+内積 
+
+\mbox{\Hypertarget{namespacesaki_a41390f371e093d85f55a61f26277c185}\label{namespacesaki_a41390f371e093d85f55a61f26277c185}} 
+\index{saki@{saki}!exchange@{exchange}}
+\index{exchange@{exchange}!saki@{saki}}
+\subsubsection{\texorpdfstring{exchange()}{exchange()}}
+{\footnotesize\ttfamily template$<$typename T , typename U  = T$>$ \\
+constexpr T saki\+::exchange (\begin{DoxyParamCaption}\item[{T \&}]{t,  }\item[{U \&\&}]{next }\end{DoxyParamCaption})}
+
+
+
+コンパイル時exchange 
+
+
+\begin{DoxyParams}{引数}
+{\em t} & 値を入れられる値 \\
+\hline
+{\em next} & 値に入れる値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesaki_a59cd7e099937e5f8bcf5aa612745690c}\label{namespacesaki_a59cd7e099937e5f8bcf5aa612745690c}} 
+\index{saki@{saki}!factorial@{factorial}}
+\index{factorial@{factorial}!saki@{saki}}
+\subsubsection{\texorpdfstring{factorial()}{factorial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = unsigned long long$>$ \\
+constexpr T saki\+::factorial (\begin{DoxyParamCaption}\item[{unsigned int}]{N }\end{DoxyParamCaption})}
+
+
+
+コンパイル時階乗 
+
+
+\begin{DoxyParams}{引数}
+{\em N} & 1から\+Nまでの階乗を求める\\
+\hline
+\end{DoxyParams}
+引数に値を入れるため、実行時の値でも使用できる \mbox{\Hypertarget{namespacesaki_a9dead910b791cee99cf82d1bd2a5d90c}\label{namespacesaki_a9dead910b791cee99cf82d1bd2a5d90c}} 
+\index{saki@{saki}!factorial@{factorial}}
+\index{factorial@{factorial}!saki@{saki}}
+\subsubsection{\texorpdfstring{factorial()}{factorial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int N, typename T  = unsigned long long$>$ \\
+constexpr T saki\+::factorial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンパイル時階乗 
+
+仮引数に値を入れるため、実行時の値は使用できない \mbox{\Hypertarget{namespacesaki_a3d3a1b6e961ca64485c02c925ca51399}\label{namespacesaki_a3d3a1b6e961ca64485c02c925ca51399}} 
 \index{saki@{saki}!for\+\_\+each@{for\+\_\+each}}
 \index{for\+\_\+each@{for\+\_\+each}!saki@{saki}}
 \subsubsection{\texorpdfstring{for\+\_\+each()}{for\_each()}}
 {\footnotesize\ttfamily template$<$typename Container , typename Func , typename ... Args$>$ \\
-void saki\+::for\+\_\+each (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{Func \&}]{f,  }\item[{const Args ...}]{args }\end{DoxyParamCaption})}
+void saki\+::for\+\_\+each (\begin{DoxyParamCaption}\item[{Container \&\&}]{con,  }\item[{Func \&}]{f,  }\item[{const Args ...}]{args }\end{DoxyParamCaption})}
 
 
 
@@ -87,12 +220,12 @@ void saki\+::for\+\_\+each (\begin{DoxyParamCaption}\item[{Container \&}]{con,  
 {\em args} & 実行する関数の引数２以降に入れる値 \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}\label{namespacesaki_a09fe69a84525eaaec6ad1d377c23c027}} 
+\mbox{\Hypertarget{namespacesaki_acfc6500ad8c06a88e04dd287c03bdeea}\label{namespacesaki_acfc6500ad8c06a88e04dd287c03bdeea}} 
 \index{saki@{saki}!iota@{iota}}
 \index{iota@{iota}!saki@{saki}}
 \subsubsection{\texorpdfstring{iota()}{iota()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename Container $>$ \\
-void saki\+::iota (\begin{DoxyParamCaption}\item[{Container \&}]{con,  }\item[{typename Container\+::value\+\_\+type}]{init = {\ttfamily 0},  }\item[{typename Container\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+void saki\+::iota (\begin{DoxyParamCaption}\item[{Container \&\&}]{con,  }\item[{typename Container\+::value\+\_\+type}]{init = {\ttfamily 0},  }\item[{typename Container\+::value\+\_\+type}]{interval = {\ttfamily 1} }\end{DoxyParamCaption})}
 
 
 
@@ -127,5 +260,71 @@ void saki\+::iota (\begin{DoxyParamCaption}\item[{Iterator}]{start,  }\item[{con
 {\em init} & 最初の値 \\
 \hline
 {\em interval} & いくつおきに値を格納させるか \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesaki_a5c175260f48a0b3410568b9b555ac5b8}\label{namespacesaki_a5c175260f48a0b3410568b9b555ac5b8}} 
+\index{saki@{saki}!random@{random}}
+\index{random@{random}!saki@{saki}}
+\subsubsection{\texorpdfstring{random()}{random()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T saki\+::random (\begin{DoxyParamCaption}\item[{const T}]{min,  }\item[{const T}]{max }\end{DoxyParamCaption})}
+
+
+
+最小値と最大値を引数にとり、その間からランダムな値を返す 
+
+
+\begin{DoxyParams}{引数}
+{\em min} & 最小値 \\
+\hline
+{\em max} & 最大値\\
+\hline
+\end{DoxyParams}
+最大値を含むランダムな値を返す \mbox{\Hypertarget{namespacesaki_a1dd39b17c9f89c99717d452d9318eb83}\label{namespacesaki_a1dd39b17c9f89c99717d452d9318eb83}} 
+\index{saki@{saki}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!saki@{saki}}
+\subsubsection{\texorpdfstring{sqrt()}{sqrt()}}
+{\footnotesize\ttfamily template$<$typename T1  = double, typename T2  = double$>$ \\
+constexpr T1 saki\+::sqrt (\begin{DoxyParamCaption}\item[{T2}]{n }\end{DoxyParamCaption})}
+
+
+
+コンパイル時平方根 
+
+
+\begin{DoxyParams}{引数}
+{\em n} & 平方根を求める値\\
+\hline
+\end{DoxyParams}
+アルゴリズムはバビロニアの平方根を利用 \mbox{\Hypertarget{namespacesaki_aa28ebe642bd2c0e608e2a61c34b3d7a5}\label{namespacesaki_aa28ebe642bd2c0e608e2a61c34b3d7a5}} 
+\index{saki@{saki}!to\+\_\+degree@{to\+\_\+degree}}
+\index{to\+\_\+degree@{to\+\_\+degree}!saki@{saki}}
+\subsubsection{\texorpdfstring{to\+\_\+degree()}{to\_degree()}}
+{\footnotesize\ttfamily template$<$typename Deg , typename Rad $>$ \\
+constexpr Deg saki\+::to\+\_\+degree (\begin{DoxyParamCaption}\item[{Rad}]{rad }\end{DoxyParamCaption})}
+
+
+
+Radianから\+Degreeに変換 
+
+
+\begin{DoxyParams}{引数}
+{\em rad} & Degreeに変換する\+Radian \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacesaki_aae246ec576e9e2da23c0c142e6fc4d6a}\label{namespacesaki_aae246ec576e9e2da23c0c142e6fc4d6a}} 
+\index{saki@{saki}!to\+\_\+radian@{to\+\_\+radian}}
+\index{to\+\_\+radian@{to\+\_\+radian}!saki@{saki}}
+\subsubsection{\texorpdfstring{to\+\_\+radian()}{to\_radian()}}
+{\footnotesize\ttfamily template$<$typename Rad , typename Deg $>$ \\
+constexpr Rad saki\+::to\+\_\+radian (\begin{DoxyParamCaption}\item[{Deg}]{deg }\end{DoxyParamCaption})}
+
+
+
+Degreeから\+Radianに変換 
+
+
+\begin{DoxyParams}{引数}
+{\em deg} & Radianに変換する\+Degree \\
 \hline
 \end{DoxyParams}

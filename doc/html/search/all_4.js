@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['operator_20bool',['operator bool',['../classsaki_1_1immobile__ptr.html#a50dadf5f0d26f517543df590ede03acd',1,'saki::immobile_ptr']]],
-  ['operator_2d_3e',['operator-&gt;',['../classsaki_1_1immobile__ptr.html#af834ac0a7db7da5e88a88584e7d1e453',1,'saki::immobile_ptr']]],
-  ['operator_3d',['operator=',['../classsaki_1_1immobile__ptr.html#aeda073b50b1e44b9aacf91ac6ba3891b',1,'saki::immobile_ptr::operator=(const immobile_ptr &amp;)=delete'],['../classsaki_1_1immobile__ptr.html#a8b4e02a03c73cf8009248ebb0adfba7f',1,'saki::immobile_ptr::operator=(immobile_ptr &amp;&amp;)=delete']]]
+  ['factorial',['factorial',['../namespacesaki.html#a59cd7e099937e5f8bcf5aa612745690c',1,'saki::factorial(unsigned int N)'],['../namespacesaki.html#a9dead910b791cee99cf82d1bd2a5d90c',1,'saki::factorial()']]],
+  ['for_5feach',['for_each',['../namespacesaki.html#a3d3a1b6e961ca64485c02c925ca51399',1,'saki']]],
+  ['for_5feach_2eh',['for_each.h',['../for__each_8h.html',1,'']]]
 ];

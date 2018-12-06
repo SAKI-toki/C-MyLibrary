@@ -17,8 +17,12 @@ virtual \mbox{\hyperlink{classsaki_1_1singleton_a7e18a317dec7a4658f6d3376f2dd3eb
 \subsection*{静的公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-static type \& \mbox{\hyperlink{classsaki_1_1singleton_a507fa8bc891caf1ea18b6dd25475430e}{getinstance}} ()
-\begin{DoxyCompactList}\small\item\em インスタンスを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \mbox{\hyperlink{classsaki_1_1immobile__ptr}{immobile\+\_\+ptr}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1singleton_a58d7ffc1bb4b14c2878b1f21497fa655}{getinstance}} ()
+\begin{DoxyCompactList}\small\item\em インスタンスを取得 \end{DoxyCompactList}\item 
+static T $\ast$ \mbox{\hyperlink{classsaki_1_1singleton_a0d327725cba734d691da390a516ed29b}{get}} ()
+\begin{DoxyCompactList}\small\item\em リソースの取得 \end{DoxyCompactList}\item 
+static T $\ast$$\ast$ \mbox{\hyperlink{classsaki_1_1singleton_ab7d7702a8dc2d60917f7098fee763865}{get\+\_\+address}} ()
+\begin{DoxyCompactList}\small\item\em リソースのアドレスの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{限定公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,8 +35,6 @@ static type \& \mbox{\hyperlink{classsaki_1_1singleton_a507fa8bc891caf1ea18b6dd2
 class saki\+::singleton$<$ T $>$}
 
 継承するとシングルトンクラスになる 
-
-使い方：class A \+: public singleton\{\} 
 
 \subsection{構築子と解体子}
 \mbox{\Hypertarget{classsaki_1_1singleton_a7e18a317dec7a4658f6d3376f2dd3ebd}\label{classsaki_1_1singleton_a7e18a317dec7a4658f6d3376f2dd3ebd}} 
@@ -52,12 +54,34 @@ virtual \mbox{\hyperlink{classsaki_1_1singleton}{saki\+::singleton}}$<$ T $>$\+:
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{classsaki_1_1singleton_a507fa8bc891caf1ea18b6dd25475430e}\label{classsaki_1_1singleton_a507fa8bc891caf1ea18b6dd25475430e}} 
+\mbox{\Hypertarget{classsaki_1_1singleton_a0d327725cba734d691da390a516ed29b}\label{classsaki_1_1singleton_a0d327725cba734d691da390a516ed29b}} 
+\index{saki\+::singleton@{saki\+::singleton}!get@{get}}
+\index{get@{get}!saki\+::singleton@{saki\+::singleton}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T$\ast$ \mbox{\hyperlink{classsaki_1_1singleton}{saki\+::singleton}}$<$ T $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+リソースの取得 
+
+\mbox{\Hypertarget{classsaki_1_1singleton_ab7d7702a8dc2d60917f7098fee763865}\label{classsaki_1_1singleton_ab7d7702a8dc2d60917f7098fee763865}} 
+\index{saki\+::singleton@{saki\+::singleton}!get\+\_\+address@{get\+\_\+address}}
+\index{get\+\_\+address@{get\+\_\+address}!saki\+::singleton@{saki\+::singleton}}
+\subsubsection{\texorpdfstring{get\+\_\+address()}{get\_address()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T$\ast$$\ast$ \mbox{\hyperlink{classsaki_1_1singleton}{saki\+::singleton}}$<$ T $>$\+::get\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+リソースのアドレスの取得 
+
+\mbox{\Hypertarget{classsaki_1_1singleton_a58d7ffc1bb4b14c2878b1f21497fa655}\label{classsaki_1_1singleton_a58d7ffc1bb4b14c2878b1f21497fa655}} 
 \index{saki\+::singleton@{saki\+::singleton}!getinstance@{getinstance}}
 \index{getinstance@{getinstance}!saki\+::singleton@{saki\+::singleton}}
 \subsubsection{\texorpdfstring{getinstance()}{getinstance()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-static type\& \mbox{\hyperlink{classsaki_1_1singleton}{saki\+::singleton}}$<$ T $>$\+::getinstance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+static \mbox{\hyperlink{classsaki_1_1immobile__ptr}{immobile\+\_\+ptr}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1singleton}{saki\+::singleton}}$<$ T $>$\+::getinstance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 

@@ -7,6 +7,6 @@
 #ifndef SAKI_SMART_PTR_2018_11_22
 #define SAKI_SMART_PTR_2018_11_22
 
-#include "immobile/immobile_ptr.h"
+#include <saki/smart_ptr/immobile/immobile_ptr.h>
 
 #endif //SAKI_SMART_PTR_2018_11_22
