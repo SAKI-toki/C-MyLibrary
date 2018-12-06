@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['immobile_5fptr',['immobile_ptr',['../classsaki_1_1immobile__ptr.html#aa64c721ab505396e3b7b75bb6916b562',1,'saki::immobile_ptr::immobile_ptr(Args... args)'],['../classsaki_1_1immobile__ptr.html#ad0648153ed2d219d9cdf338a106de07c',1,'saki::immobile_ptr::immobile_ptr(const immobile_ptr &amp;)=delete'],['../classsaki_1_1immobile__ptr.html#a06b9308842f0179d5705caadd90718b0',1,'saki::immobile_ptr::immobile_ptr(immobile_ptr &amp;&amp;)=delete']]],
-  ['iota',['iota',['../namespacesaki.html#acfc6500ad8c06a88e04dd287c03bdeea',1,'saki::iota(Container &amp;&amp;con, typename Container::value_type init=0, typename Container::value_type interval=1)'],['../namespacesaki.html#a60fc6028a57a55dcc37d01458997f7e3',1,'saki::iota(Iterator start, const Iterator &amp;end, typename Iterator::value_type init=0, typename Iterator::value_type interval=1)']]]
+  ['get',['get',['../classsaki_1_1immobile__ptr.html#a41956c8a6ba8fd9fb3cb092d94da5ea8',1,'saki::immobile_ptr']]],
+  ['get_5faddress',['get_address',['../classsaki_1_1immobile__ptr.html#a2d4f142600717223e0855d8a977e7429',1,'saki::immobile_ptr']]],
+  ['getinstance',['getinstance',['../classsaki_1_1singleton.html#a17071f9daca33c8dd4287dffc49457ec',1,'saki::singleton']]]
 ];

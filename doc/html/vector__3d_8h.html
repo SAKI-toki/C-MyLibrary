@@ -78,7 +78,8 @@ $(function() {
 <p>3次元でのベクトル  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="constexpr__sqrt_8h_source.html">../constexpr/constexpr_sqrt.h</a>&quot;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;<a class="el" href="constexpr__sqrt_8h_source.html">saki/constexpr/constexpr_sqrt.h</a>&gt;</code><br />
 </div>
 <p><a href="vector__3d_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -100,14 +101,18 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a3e67ebd380889b661b2f72afc81ae005"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a3e67ebd380889b661b2f72afc81ae005"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3e67ebd380889b661b2f72afc81ae005">saki::distance</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
-<tr class="memdesc:a3e67ebd380889b661b2f72afc81ae005"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離  <a href="namespacesaki.html#a3e67ebd380889b661b2f72afc81ae005">[詳解]</a><br /></td></tr>
-<tr class="separator:a3e67ebd380889b661b2f72afc81ae005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3323489be4b8c440241c8c8dcd517210"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a3323489be4b8c440241c8c8dcd517210"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3323489be4b8c440241c8c8dcd517210">saki::distance</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a3323489be4b8c440241c8c8dcd517210"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離  <a href="namespacesaki.html#a3323489be4b8c440241c8c8dcd517210">[詳解]</a><br /></td></tr>
+<tr class="separator:a3323489be4b8c440241c8c8dcd517210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f2643c9bd618538a43cdad4a71398af"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a4f2643c9bd618538a43cdad4a71398af"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a4f2643c9bd618538a43cdad4a71398af">saki::dot</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
 <tr class="memdesc:a4f2643c9bd618538a43cdad4a71398af"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積  <a href="namespacesaki.html#a4f2643c9bd618538a43cdad4a71398af">[詳解]</a><br /></td></tr>
 <tr class="separator:a4f2643c9bd618538a43cdad4a71398af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0292208be2262a7ecbba114ebd10d5d6"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a0292208be2262a7ecbba114ebd10d5d6"><td class="memTemplItemLeft" align="right" valign="top">constexpr Vector3&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0292208be2262a7ecbba114ebd10d5d6">saki::cross</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a0292208be2262a7ecbba114ebd10d5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">外積  <a href="namespacesaki.html#a0292208be2262a7ecbba114ebd10d5d6">[詳解]</a><br /></td></tr>
+<tr class="separator:a0292208be2262a7ecbba114ebd10d5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>3次元でのベクトル </p>

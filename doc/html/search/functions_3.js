@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['factorial',['factorial',['../namespacesaki.html#a59cd7e099937e5f8bcf5aa612745690c',1,'saki::factorial(unsigned int N)'],['../namespacesaki.html#a9dead910b791cee99cf82d1bd2a5d90c',1,'saki::factorial()']]],
-  ['for_5feach',['for_each',['../namespacesaki.html#a3d3a1b6e961ca64485c02c925ca51399',1,'saki']]]
+  ['end',['end',['../classsaki_1_1saki__clock.html#aa255b4d6478090b4ef19a844dd824d06',1,'saki::saki_clock']]],
+  ['end_5fand_5fstart',['end_and_start',['../classsaki_1_1saki__clock.html#a6fc6b2cd9a93b18af5583527398842ff',1,'saki::saki_clock']]],
+  ['exchange',['exchange',['../namespacesaki.html#ad2deeae63db0667c034ff616bf6e3886',1,'saki']]]
 ];

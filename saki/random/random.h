@@ -16,8 +16,8 @@ namespace saki
 {
 	/**
 	* @brief 最小値と最大値を引数にとり、その間からランダムな値を返す
-	* @param min 最小値
-	* @param max 最大値
+	* @param random_min 最小値
+	* @param random_max 最大値
 	* @details 最大値を含むランダムな値を返す
 	*/
 	template<typename T>

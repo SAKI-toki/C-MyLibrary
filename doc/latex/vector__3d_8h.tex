@@ -6,7 +6,8 @@
 
 
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
-{\ttfamily \#include \char`\"{}../constexpr/constexpr\+\_\+sqrt.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$saki/constexpr/constexpr\+\_\+sqrt.\+h$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,10 +26,12 @@ class \mbox{\hyperlink{classsaki_1_1_vector3}{saki\+::\+Vector3$<$ T $>$}}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a3e67ebd380889b661b2f72afc81ae005}{saki\+::distance}} (const Vector3$<$ T1 $>$ \&v1, const Vector3$<$ T2 $>$ \&v2)
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a3323489be4b8c440241c8c8dcd517210}{saki\+::distance}} (const Vector3$<$ T1 $>$ \&v1, const Vector3$<$ T2 $>$ \&v2)
 \begin{DoxyCompactList}\small\item\em 二点間の距離 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a4f2643c9bd618538a43cdad4a71398af}{saki\+::dot}} (const Vector3$<$ T1 $>$ \&v1, const Vector3$<$ T2 $>$ \&v2)
-\begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr Vector3$<$ U $>$ \mbox{\hyperlink{namespacesaki_a0292208be2262a7ecbba114ebd10d5d6}{saki\+::cross}} (const Vector3$<$ T1 $>$ \&v1, const Vector3$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 外積 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}

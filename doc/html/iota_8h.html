@@ -76,7 +76,8 @@ $(function() {
 
 <p>既存のiota関数の簡略化＋拡張  
 <a href="#details">[詳解]</a></p>
-
+<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+</div>
 <p><a href="iota_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -86,33 +87,33 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a3394dcb1aada84e92b99198db1fb8fb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iota_8h.html#a3394dcb1aada84e92b99198db1fb8fb1">SAKI_IOTA_2018_09_30</a></td></tr>
-<tr class="separator:a3394dcb1aada84e92b99198db1fb8fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3ae1452ad1aa4148f426415a773a1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="iota_8h.html#a7a3ae1452ad1aa4148f426415a773a1b">SAKI_IOTA_2018_12_06</a></td></tr>
+<tr class="separator:a7a3ae1452ad1aa4148f426415a773a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:acfc6500ad8c06a88e04dd287c03bdeea"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
-<tr class="memitem:acfc6500ad8c06a88e04dd287c03bdeea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#acfc6500ad8c06a88e04dd287c03bdeea">saki::iota</a> (Container &amp;&amp;con, typename Container::value_type init=0, typename Container::value_type interval=1)</td></tr>
-<tr class="memdesc:acfc6500ad8c06a88e04dd287c03bdeea"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての値に連番をつける  <a href="namespacesaki.html#acfc6500ad8c06a88e04dd287c03bdeea">[詳解]</a><br /></td></tr>
-<tr class="separator:acfc6500ad8c06a88e04dd287c03bdeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60fc6028a57a55dcc37d01458997f7e3"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a60fc6028a57a55dcc37d01458997f7e3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a60fc6028a57a55dcc37d01458997f7e3">saki::iota</a> (Iterator start, const Iterator &amp;end, typename Iterator::value_type init=0, typename Iterator::value_type interval=1)</td></tr>
-<tr class="memdesc:a60fc6028a57a55dcc37d01458997f7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">決まった範囲に連番をつける  <a href="namespacesaki.html#a60fc6028a57a55dcc37d01458997f7e3">[詳解]</a><br /></td></tr>
-<tr class="separator:a60fc6028a57a55dcc37d01458997f7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2d32321776d936bd523e70b82f9236c"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
+<tr class="memitem:ae2d32321776d936bd523e70b82f9236c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae2d32321776d936bd523e70b82f9236c">saki::iota</a> (Container &amp;&amp;con, typename std::remove_reference_t&lt; Container &gt;::value_type init=0, typename std::remove_reference_t&lt; Container &gt;::value_type interval=1)</td></tr>
+<tr class="memdesc:ae2d32321776d936bd523e70b82f9236c"><td class="mdescLeft">&#160;</td><td class="mdescRight">全ての値に連番をつける  <a href="namespacesaki.html#ae2d32321776d936bd523e70b82f9236c">[詳解]</a><br /></td></tr>
+<tr class="separator:ae2d32321776d936bd523e70b82f9236c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45760a54288991b21995d0b2338ea134"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:a45760a54288991b21995d0b2338ea134"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a45760a54288991b21995d0b2338ea134">saki::iota</a> (Iterator start, const Iterator &amp;end, typename std::remove_reference_t&lt; Iterator &gt;::value_type init=0, typename std::remove_reference_t&lt; Iterator &gt;::value_type interval=1)</td></tr>
+<tr class="memdesc:a45760a54288991b21995d0b2338ea134"><td class="mdescLeft">&#160;</td><td class="mdescRight">決まった範囲に連番をつける  <a href="namespacesaki.html#a45760a54288991b21995d0b2338ea134">[詳解]</a><br /></td></tr>
+<tr class="separator:a45760a54288991b21995d0b2338ea134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>既存のiota関数の簡略化＋拡張 </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2018/09/30 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2018/12/06 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a3394dcb1aada84e92b99198db1fb8fb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3394dcb1aada84e92b99198db1fb8fb1">&#9670;&nbsp;</a></span>SAKI_IOTA_2018_09_30</h2>
+<a id="a7a3ae1452ad1aa4148f426415a773a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a3ae1452ad1aa4148f426415a773a1b">&#9670;&nbsp;</a></span>SAKI_IOTA_2018_12_06</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_IOTA_2018_09_30</td>
+          <td class="memname">#define SAKI_IOTA_2018_12_06</td>
         </tr>
       </table>
 </div><div class="memdoc">

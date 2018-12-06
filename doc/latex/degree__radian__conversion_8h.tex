@@ -5,7 +5,7 @@
 Degreeから\+Radian、\+Radianから\+Degreeへの変換  
 
 
-{\ttfamily \#include \char`\"{}../pi.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$saki/pi.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,9 +19,9 @@ Degreeから\+Radian、\+Radianから\+Degreeへの変換
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Rad , typename Deg $>$ }\\constexpr Rad \mbox{\hyperlink{namespacesaki_aae246ec576e9e2da23c0c142e6fc4d6a}{saki\+::to\+\_\+radian}} (Deg deg)
+{\footnotesize template$<$typename Rad  = double, typename Deg $>$ }\\constexpr Rad \mbox{\hyperlink{namespacesaki_aae246ec576e9e2da23c0c142e6fc4d6a}{saki\+::to\+\_\+radian}} (Deg deg)
 \begin{DoxyCompactList}\small\item\em Degreeから\+Radianに変換 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Deg , typename Rad $>$ }\\constexpr Deg \mbox{\hyperlink{namespacesaki_aa28ebe642bd2c0e608e2a61c34b3d7a5}{saki\+::to\+\_\+degree}} (Rad rad)
+{\footnotesize template$<$typename Deg  = double, typename Rad $>$ }\\constexpr Deg \mbox{\hyperlink{namespacesaki_aa28ebe642bd2c0e608e2a61c34b3d7a5}{saki\+::to\+\_\+degree}} (Rad rad)
 \begin{DoxyCompactList}\small\item\em Radianから\+Degreeに変換 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

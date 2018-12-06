@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="#pub-attribs">公開変数類</a> &#124;
 <a href="classsaki_1_1_vector2-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -87,70 +88,62 @@ $(function() {
 <tr class="memitem:ad0f3d0a05370f1ef4947520245f6e9a8"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#ad0f3d0a05370f1ef4947520245f6e9a8">Vector2</a> (const T &amp;_x, const T &amp;_y)</td></tr>
 <tr class="memdesc:ad0f3d0a05370f1ef4947520245f6e9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数ありコンストラクタ  <a href="#ad0f3d0a05370f1ef4947520245f6e9a8">[詳解]</a><br /></td></tr>
 <tr class="separator:ad0f3d0a05370f1ef4947520245f6e9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23ab3fe9095929f882fbdbb01aa4470"><td class="memTemplParams" colspan="2">template&lt;typename U1 , typename U2 &gt; </td></tr>
-<tr class="memitem:aa23ab3fe9095929f882fbdbb01aa4470"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#aa23ab3fe9095929f882fbdbb01aa4470">Vector2</a> (const U1 &amp;_x, const U2 &amp;_y)</td></tr>
-<tr class="memdesc:aa23ab3fe9095929f882fbdbb01aa4470"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数あり型変換コンストラクタ  <a href="#aa23ab3fe9095929f882fbdbb01aa4470">[詳解]</a><br /></td></tr>
-<tr class="separator:aa23ab3fe9095929f882fbdbb01aa4470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4d30b23ef121c4ebc6786885ac5c83f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#ad4d30b23ef121c4ebc6786885ac5c83f">Vector2</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;other)</td></tr>
-<tr class="memdesc:ad4d30b23ef121c4ebc6786885ac5c83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピーコンストラクタ  <a href="#ad4d30b23ef121c4ebc6786885ac5c83f">[詳解]</a><br /></td></tr>
-<tr class="separator:ad4d30b23ef121c4ebc6786885ac5c83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b53654af45a1ab8f5591c3168092a6"><td class="memTemplParams" colspan="2">template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:a42b53654af45a1ab8f5591c3168092a6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a42b53654af45a1ab8f5591c3168092a6">Vector2</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other)</td></tr>
-<tr class="memdesc:a42b53654af45a1ab8f5591c3168092a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">型変換コピーコンストラクタ  <a href="#a42b53654af45a1ab8f5591c3168092a6">[詳解]</a><br /></td></tr>
-<tr class="separator:a42b53654af45a1ab8f5591c3168092a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69d8d8afcbdd1a1ae8d290665ec187da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a69d8d8afcbdd1a1ae8d290665ec187da">operator=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;other)</td></tr>
-<tr class="memdesc:a69d8d8afcbdd1a1ae8d290665ec187da"><td class="mdescLeft">&#160;</td><td class="mdescRight">コピー代入演算子  <a href="#a69d8d8afcbdd1a1ae8d290665ec187da">[詳解]</a><br /></td></tr>
-<tr class="separator:a69d8d8afcbdd1a1ae8d290665ec187da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff69a4dc858a6a8b3d598db350d59dd0"><td class="memTemplParams" colspan="2">template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:aff69a4dc858a6a8b3d598db350d59dd0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#aff69a4dc858a6a8b3d598db350d59dd0">operator=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other)</td></tr>
-<tr class="memdesc:aff69a4dc858a6a8b3d598db350d59dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">型変換コピー代入演算子  <a href="#aff69a4dc858a6a8b3d598db350d59dd0">[詳解]</a><br /></td></tr>
-<tr class="separator:aff69a4dc858a6a8b3d598db350d59dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a770b0d8588ea98ac88a35ba46657cc6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a770b0d8588ea98ac88a35ba46657cc6d">Vector2</a> (<a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a770b0d8588ea98ac88a35ba46657cc6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブコンストラクタ  <a href="#a770b0d8588ea98ac88a35ba46657cc6d">[詳解]</a><br /></td></tr>
-<tr class="separator:a770b0d8588ea98ac88a35ba46657cc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2677ccc77f16ad41792ccc158f22fa6"><td class="memTemplParams" colspan="2">template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:ab2677ccc77f16ad41792ccc158f22fa6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#ab2677ccc77f16ad41792ccc158f22fa6">Vector2</a> (<a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:ab2677ccc77f16ad41792ccc158f22fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">型変換ムーブコンストラクタ  <a href="#ab2677ccc77f16ad41792ccc158f22fa6">[詳解]</a><br /></td></tr>
-<tr class="separator:ab2677ccc77f16ad41792ccc158f22fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a453d91aee14283e657be81258d62a6d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a453d91aee14283e657be81258d62a6d9">operator=</a> (<a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a453d91aee14283e657be81258d62a6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ムーブ代入演算子  <a href="#a453d91aee14283e657be81258d62a6d9">[詳解]</a><br /></td></tr>
-<tr class="separator:a453d91aee14283e657be81258d62a6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd72a6247e6c425fab7320457fb73e5e"><td class="memTemplParams" colspan="2">template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:acd72a6247e6c425fab7320457fb73e5e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#acd72a6247e6c425fab7320457fb73e5e">operator=</a> (<a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:acd72a6247e6c425fab7320457fb73e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">型変換ムーブ代入演算子  <a href="#acd72a6247e6c425fab7320457fb73e5e">[詳解]</a><br /></td></tr>
-<tr class="separator:acd72a6247e6c425fab7320457fb73e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a858afb6fe807d543ca5b266404226cd5"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:af3d61bb90047a8621cba0a17b265bfaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#af3d61bb90047a8621cba0a17b265bfaa">Vector2</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;)=default</td></tr>
+<tr class="separator:af3d61bb90047a8621cba0a17b265bfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ee2a6387bfe58bdd5bf74d388370a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#ae6ee2a6387bfe58bdd5bf74d388370a9">operator=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;)=default</td></tr>
+<tr class="separator:ae6ee2a6387bfe58bdd5bf74d388370a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8b6443d50d1008bf95569019414234"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#abb8b6443d50d1008bf95569019414234">Vector2</a> (<a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&amp;)=default</td></tr>
+<tr class="separator:abb8b6443d50d1008bf95569019414234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56cf093f36e7949a9c56df42a9660f38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a56cf093f36e7949a9c56df42a9660f38">operator=</a> (<a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&amp;)=default</td></tr>
+<tr class="separator:a56cf093f36e7949a9c56df42a9660f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858afb6fe807d543ca5b266404226cd5"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
 <tr class="memitem:a858afb6fe807d543ca5b266404226cd5"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a858afb6fe807d543ca5b266404226cd5">operator+</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a858afb6fe807d543ca5b266404226cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">+演算子  <a href="#a858afb6fe807d543ca5b266404226cd5">[詳解]</a><br /></td></tr>
 <tr class="separator:a858afb6fe807d543ca5b266404226cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa76ccb2d2228441d510dca7781f785d3"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:aa76ccb2d2228441d510dca7781f785d3"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
 <tr class="memitem:aa76ccb2d2228441d510dca7781f785d3"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#aa76ccb2d2228441d510dca7781f785d3">operator+=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:aa76ccb2d2228441d510dca7781f785d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">+=演算子  <a href="#aa76ccb2d2228441d510dca7781f785d3">[詳解]</a><br /></td></tr>
 <tr class="separator:aa76ccb2d2228441d510dca7781f785d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4be4c970957e552bdd98fa37ef4f14df"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a4be4c970957e552bdd98fa37ef4f14df"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
 <tr class="memitem:a4be4c970957e552bdd98fa37ef4f14df"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a4be4c970957e552bdd98fa37ef4f14df">operator-</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a4be4c970957e552bdd98fa37ef4f14df"><td class="mdescLeft">&#160;</td><td class="mdescRight">-演算子  <a href="#a4be4c970957e552bdd98fa37ef4f14df">[詳解]</a><br /></td></tr>
 <tr class="separator:a4be4c970957e552bdd98fa37ef4f14df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf222bfb3a2e02a1570ce2e90c41fdd0"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:aaf222bfb3a2e02a1570ce2e90c41fdd0"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
 <tr class="memitem:aaf222bfb3a2e02a1570ce2e90c41fdd0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#aaf222bfb3a2e02a1570ce2e90c41fdd0">operator-=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:aaf222bfb3a2e02a1570ce2e90c41fdd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">-=演算子  <a href="#aaf222bfb3a2e02a1570ce2e90c41fdd0">[詳解]</a><br /></td></tr>
 <tr class="separator:aaf222bfb3a2e02a1570ce2e90c41fdd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaac42e1c348c453fad5ac0f2b7029d7"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:aaaac42e1c348c453fad5ac0f2b7029d7"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
 <tr class="memitem:aaaac42e1c348c453fad5ac0f2b7029d7"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#aaaac42e1c348c453fad5ac0f2b7029d7">operator*</a> (const U &amp;scalar) const</td></tr>
-<tr class="memdesc:aaaac42e1c348c453fad5ac0f2b7029d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">*演算子  <a href="#aaaac42e1c348c453fad5ac0f2b7029d7">[詳解]</a><br /></td></tr>
+<tr class="memdesc:aaaac42e1c348c453fad5ac0f2b7029d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">*演算子(スカラ)  <a href="#aaaac42e1c348c453fad5ac0f2b7029d7">[詳解]</a><br /></td></tr>
 <tr class="separator:aaaac42e1c348c453fad5ac0f2b7029d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a768d67bdb12d0e2bcac53fbebaf946aa"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a768d67bdb12d0e2bcac53fbebaf946aa"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a768d67bdb12d0e2bcac53fbebaf946aa">operator*=</a> (const U &amp;other)</td></tr>
-<tr class="memdesc:a768d67bdb12d0e2bcac53fbebaf946aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">*=演算子  <a href="#a768d67bdb12d0e2bcac53fbebaf946aa">[詳解]</a><br /></td></tr>
-<tr class="separator:a768d67bdb12d0e2bcac53fbebaf946aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fb1f6ab6d21fcbc69624e99ab8ac5d2"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a1fb1f6ab6d21fcbc69624e99ab8ac5d2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a1fb1f6ab6d21fcbc69624e99ab8ac5d2">operator/</a> (const T &amp;scalar) const</td></tr>
-<tr class="memdesc:a1fb1f6ab6d21fcbc69624e99ab8ac5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">/演算子  <a href="#a1fb1f6ab6d21fcbc69624e99ab8ac5d2">[詳解]</a><br /></td></tr>
-<tr class="separator:a1fb1f6ab6d21fcbc69624e99ab8ac5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1851ed51c40f0411fe845645a0b87951"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a1851ed51c40f0411fe845645a0b87951"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a1851ed51c40f0411fe845645a0b87951">operator/=</a> (const U &amp;other)</td></tr>
-<tr class="memdesc:a1851ed51c40f0411fe845645a0b87951"><td class="mdescLeft">&#160;</td><td class="mdescRight">/=演算子  <a href="#a1851ed51c40f0411fe845645a0b87951">[詳解]</a><br /></td></tr>
-<tr class="separator:a1851ed51c40f0411fe845645a0b87951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab202f42563239dfb59d27295d6c7462"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:aab202f42563239dfb59d27295d6c7462"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#aab202f42563239dfb59d27295d6c7462">operator*=</a> (const U &amp;scalar)</td></tr>
+<tr class="memdesc:aab202f42563239dfb59d27295d6c7462"><td class="mdescLeft">&#160;</td><td class="mdescRight">*=演算子(スカラ)  <a href="#aab202f42563239dfb59d27295d6c7462">[詳解]</a><br /></td></tr>
+<tr class="separator:aab202f42563239dfb59d27295d6c7462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7e95b686af377470dd5514f2bb00f3"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:a8d7e95b686af377470dd5514f2bb00f3"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a8d7e95b686af377470dd5514f2bb00f3">operator*</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a8d7e95b686af377470dd5514f2bb00f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">*演算子(ベクトル)  <a href="#a8d7e95b686af377470dd5514f2bb00f3">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d7e95b686af377470dd5514f2bb00f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e1e9e5918b362e2559b453da787fbb"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:a31e1e9e5918b362e2559b453da787fbb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a31e1e9e5918b362e2559b453da787fbb">operator*=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="memdesc:a31e1e9e5918b362e2559b453da787fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">*=演算子(ベクトル)  <a href="#a31e1e9e5918b362e2559b453da787fbb">[詳解]</a><br /></td></tr>
+<tr class="separator:a31e1e9e5918b362e2559b453da787fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d518ed5e6fa2cf13570c6bb566d0b75"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:a6d518ed5e6fa2cf13570c6bb566d0b75"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a6d518ed5e6fa2cf13570c6bb566d0b75">operator/</a> (const U &amp;scalar) const</td></tr>
+<tr class="memdesc:a6d518ed5e6fa2cf13570c6bb566d0b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">/演算子(スカラ)  <a href="#a6d518ed5e6fa2cf13570c6bb566d0b75">[詳解]</a><br /></td></tr>
+<tr class="separator:a6d518ed5e6fa2cf13570c6bb566d0b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f6c9bcfeb9f830edf2883069894a30"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:a77f6c9bcfeb9f830edf2883069894a30"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a77f6c9bcfeb9f830edf2883069894a30">operator/=</a> (const U &amp;scalar)</td></tr>
+<tr class="memdesc:a77f6c9bcfeb9f830edf2883069894a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">/=演算子(スカラ)  <a href="#a77f6c9bcfeb9f830edf2883069894a30">[詳解]</a><br /></td></tr>
+<tr class="separator:a77f6c9bcfeb9f830edf2883069894a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7038cba7fcdefee0f23dcd18cf8a59"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:afa7038cba7fcdefee0f23dcd18cf8a59"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#afa7038cba7fcdefee0f23dcd18cf8a59">operator/</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other) const</td></tr>
+<tr class="memdesc:afa7038cba7fcdefee0f23dcd18cf8a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">/演算子(ベクトル)  <a href="#afa7038cba7fcdefee0f23dcd18cf8a59">[詳解]</a><br /></td></tr>
+<tr class="separator:afa7038cba7fcdefee0f23dcd18cf8a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d4c4c7a19f84fc4eac995bdf9f93a13"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:a8d4c4c7a19f84fc4eac995bdf9f93a13"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a8d4c4c7a19f84fc4eac995bdf9f93a13">operator/=</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;other)</td></tr>
+<tr class="memdesc:a8d4c4c7a19f84fc4eac995bdf9f93a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">/=演算子(ベクトル)  <a href="#a8d4c4c7a19f84fc4eac995bdf9f93a13">[詳解]</a><br /></td></tr>
+<tr class="separator:a8d4c4c7a19f84fc4eac995bdf9f93a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72b70031ffca3596e8df06cc4e84dc51"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a72b70031ffca3596e8df06cc4e84dc51">operator==</a> (const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a72b70031ffca3596e8df06cc4e84dc51"><td class="mdescLeft">&#160;</td><td class="mdescRight">==演算子  <a href="#a72b70031ffca3596e8df06cc4e84dc51">[詳解]</a><br /></td></tr>
 <tr class="separator:a72b70031ffca3596e8df06cc4e84dc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +157,15 @@ $(function() {
 <tr class="memitem:ad4fe2f7cb118bfad82333017c15c591a"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#ad4fe2f7cb118bfad82333017c15c591a">return_normalize</a> () const</td></tr>
 <tr class="memdesc:ad4fe2f7cb118bfad82333017c15c591a"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化  <a href="#ad4fe2f7cb118bfad82333017c15c591a">[詳解]</a><br /></td></tr>
 <tr class="separator:ad4fe2f7cb118bfad82333017c15c591a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a74ffa40e66a47ea296ba51dbb815be17"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a74ffa40e66a47ea296ba51dbb815be17">zero</a> ()</td></tr>
+<tr class="separator:a74ffa40e66a47ea296ba51dbb815be17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad62d4709258510a229f08ea7db14c8"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#a8ad62d4709258510a229f08ea7db14c8">min</a> ()</td></tr>
+<tr class="separator:a8ad62d4709258510a229f08ea7db14c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c75c5cf88476643a5cb31e522e065b"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector2.html#ad0c75c5cf88476643a5cb31e522e065b">max</a> ()</td></tr>
+<tr class="separator:ad0c75c5cf88476643a5cb31e522e065b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -179,7 +181,7 @@ class saki::Vector2&lt; T &gt;</h3>
 <p>2次元でのベクトル </p>
 </div><h2 class="groupheader">構築子と解体子</h2>
 <a id="af57b72f4255812a361bef1922a226f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af57b72f4255812a361bef1922a226f86">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af57b72f4255812a361bef1922a226f86">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +210,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="ad0f3d0a05370f1ef4947520245f6e9a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0f3d0a05370f1ef4947520245f6e9a8">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0f3d0a05370f1ef4947520245f6e9a8">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,57 +256,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aa23ab3fe9095929f882fbdbb01aa4470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa23ab3fe9095929f882fbdbb01aa4470">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[3/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename U1 , typename U2 &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::<a class="el" href="classsaki_1_1_vector2.html">Vector2</a> </td>
-          <td>(</td>
-          <td class="paramtype">const U1 &amp;&#160;</td>
-          <td class="paramname"><em>_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const U2 &amp;&#160;</td>
-          <td class="paramname"><em>_y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>引数あり型変換コンストラクタ </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">_x</td><td>xの初期値 </td></tr>
-    <tr><td class="paramname">_y</td><td>yの初期値 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ad4d30b23ef121c4ebc6786885ac5c83f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4d30b23ef121c4ebc6786885ac5c83f">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[4/7]</span></h2>
+<a id="af3d61bb90047a8621cba0a17b265bfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d61bb90047a8621cba0a17b265bfaa">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -318,67 +271,21 @@ template&lt;typename T&gt; </div>
           <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::<a class="el" href="classsaki_1_1_vector2.html">Vector2</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>コピーコンストラクタ </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>コピーする対象（型が一致） </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="a42b53654af45a1ab8f5591c3168092a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42b53654af45a1ab8f5591c3168092a6">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[5/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::<a class="el" href="classsaki_1_1_vector2.html">Vector2</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>型変換コピーコンストラクタ </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>コピーする対象（型が不一致） </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a770b0d8588ea98ac88a35ba46657cc6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a770b0d8588ea98ac88a35ba46657cc6d">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[6/7]</span></h2>
+<a id="abb8b6443d50d1008bf95569019414234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8b6443d50d1008bf95569019414234">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -392,66 +299,74 @@ template&lt;typename T&gt; </div>
           <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::<a class="el" href="classsaki_1_1_vector2.html">Vector2</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>ムーブコンストラクタ </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>ムーブする対象（型が一致） </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="ab2677ccc77f16ad41792ccc158f22fa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2677ccc77f16ad41792ccc158f22fa6">&#9670;&nbsp;</a></span>Vector2() <span class="overload">[7/7]</span></h2>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ad0c75c5cf88476643a5cb31e522e065b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0c75c5cf88476643a5cb31e522e065b">&#9670;&nbsp;</a></span>max()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::<a class="el" href="classsaki_1_1_vector2.html">Vector2</a> </td>
+          <td class="memname">static constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::max </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>型変換ムーブコンストラクタ </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>ムーブする対象（型が不一致） </td></tr>
-  </table>
-  </dd>
-</dl>
+</div>
+</div>
+<a id="a8ad62d4709258510a229f08ea7db14c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad62d4709258510a229f08ea7db14c8">&#9670;&nbsp;</a></span>min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
 <a id="a8267f8608ffad9796813856c05076d8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8267f8608ffad9796813856c05076d8c">&#9670;&nbsp;</a></span>normalize()</h2>
 
@@ -513,14 +428,14 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="aaaac42e1c348c453fad5ac0f2b7029d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaac42e1c348c453fad5ac0f2b7029d7">&#9670;&nbsp;</a></span>operator*()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaac42e1c348c453fad5ac0f2b7029d7">&#9670;&nbsp;</a></span>operator*() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -540,19 +455,51 @@ template&lt;typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>*演算子 </p>
+<p>*演算子(スカラ) </p>
 
 </div>
 </div>
-<a id="a768d67bdb12d0e2bcac53fbebaf946aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a768d67bdb12d0e2bcac53fbebaf946aa">&#9670;&nbsp;</a></span>operator*=()</h2>
+<a id="a8d7e95b686af377470dd5514f2bb00f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7e95b686af377470dd5514f2bb00f3">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>*演算子(ベクトル) </p>
+
+</div>
+</div>
+<a id="aab202f42563239dfb59d27295d6c7462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab202f42563239dfb59d27295d6c7462">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -561,6 +508,38 @@ template&lt;typename U &gt; </div>
           <td class="memname">auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator*= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>*=演算子(スカラ) </p>
+
+</div>
+</div>
+<a id="a31e1e9e5918b362e2559b453da787fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e1e9e5918b362e2559b453da787fbb">&#9670;&nbsp;</a></span>operator*=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U  = T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
           <td></td>
         </tr>
@@ -572,7 +551,7 @@ template&lt;typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>*=演算子 </p>
+<p>*=演算子(ベクトル) </p>
 
 </div>
 </div>
@@ -584,7 +563,7 @@ template&lt;typename U &gt; </div>
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -616,7 +595,7 @@ template&lt;typename U &gt; </div>
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -648,7 +627,7 @@ template&lt;typename U &gt; </div>
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -680,7 +659,7 @@ template&lt;typename U &gt; </div>
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -704,15 +683,15 @@ template&lt;typename U &gt; </div>
 
 </div>
 </div>
-<a id="a1fb1f6ab6d21fcbc69624e99ab8ac5d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fb1f6ab6d21fcbc69624e99ab8ac5d2">&#9670;&nbsp;</a></span>operator/()</h2>
+<a id="a6d518ed5e6fa2cf13570c6bb566d0b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d518ed5e6fa2cf13570c6bb566d0b75">&#9670;&nbsp;</a></span>operator/() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -720,7 +699,7 @@ template&lt;typename U &gt; </div>
         <tr>
           <td class="memname">constexpr auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator/ </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>scalar</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -732,19 +711,51 @@ template&lt;typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>/演算子 </p>
+<p>/演算子(スカラ) </p>
 
 </div>
 </div>
-<a id="a1851ed51c40f0411fe845645a0b87951"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1851ed51c40f0411fe845645a0b87951">&#9670;&nbsp;</a></span>operator/=()</h2>
+<a id="afa7038cba7fcdefee0f23dcd18cf8a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa7038cba7fcdefee0f23dcd18cf8a59">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U &gt; </div>
+template&lt;typename U  = T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>/演算子(ベクトル) </p>
+
+</div>
+</div>
+<a id="a77f6c9bcfeb9f830edf2883069894a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f6c9bcfeb9f830edf2883069894a30">&#9670;&nbsp;</a></span>operator/=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -753,7 +764,7 @@ template&lt;typename U &gt; </div>
           <td class="memname">auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator/= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -764,61 +775,25 @@ template&lt;typename U &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>/=演算子 </p>
+<p>/=演算子(スカラ) </p>
 
 </div>
 </div>
-<a id="a69d8d8afcbdd1a1ae8d290665ec187da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69d8d8afcbdd1a1ae8d290665ec187da">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt;&amp; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>コピー代入演算子 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>コピーする対象（型が一致） </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aff69a4dc858a6a8b3d598db350d59dd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff69a4dc858a6a8b3d598db350d59dd0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/4]</span></h2>
+<a id="a8d4c4c7a19f84fc4eac995bdf9f93a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4c4c7a19f84fc4eac995bdf9f93a13">&#9670;&nbsp;</a></span>operator/=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
 <div class="memtemplate">
-template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </div>
+template&lt;typename U  = T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt;&amp; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator= </td>
+          <td class="memname">auto <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator/= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
@@ -832,18 +807,12 @@ template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt
 </table>
 </div><div class="memdoc">
 
-<p>型変換コピー代入演算子 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>コピーする対象（型が不一致） </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>/=演算子(ベクトル) </p>
 
 </div>
 </div>
-<a id="a453d91aee14283e657be81258d62a6d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a453d91aee14283e657be81258d62a6d9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/4]</span></h2>
+<a id="ae6ee2a6387bfe58bdd5bf74d388370a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ee2a6387bfe58bdd5bf74d388370a9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -855,64 +824,46 @@ template&lt;typename T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt;&amp; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56cf093f36e7949a9c56df42a9660f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cf093f36e7949a9c56df42a9660f38">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&amp; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>ムーブ代入演算子 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>ムーブする対象（型が一致） </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="acd72a6247e6c425fab7320457fb73e5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd72a6247e6c425fab7320457fb73e5e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename U , std::enable_if_t&lt; std::is_convertible_v&lt; U, T &gt;, std::nullptr_t &gt;  = nullptr&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt;&amp; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt; U &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>型変換ムーブ代入演算子 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">other</td><td>ムーブする対象（型が不一致） </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -976,6 +927,33 @@ template&lt;typename U  = double&gt; </div>
 <p>正規化 </p>
 <dl class="section return"><dt>戻り値</dt><dd>正規化したもの</dd></dl>
 <p>thisは正規化しない </p>
+
+</div>
+</div>
+<a id="a74ffa40e66a47ea296ba51dbb815be17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ffa40e66a47ea296ba51dbb815be17">&#9670;&nbsp;</a></span>zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="classsaki_1_1_vector2.html">Vector2</a>&lt;T&gt; <a class="el" href="classsaki_1_1_vector2.html">saki::Vector2</a>&lt; T &gt;::zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

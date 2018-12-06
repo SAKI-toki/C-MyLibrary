@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/clock/clock.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_3868cefc9183805a0fc925d7ffb3302b.html">clock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">clock.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="clock_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef SAKI_CLOCK_2018_12_04</span></div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="clock_8h.html#ae39c26da560db55f32e90eb5449ca5d5">    9</a></span>&#160;<span class="preprocessor">#define SAKI_CLOCK_2018_12_04</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="singleton_8h.html">saki/singleton/singleton.h</a>&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki.html">saki</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classsaki_1_1saki__clock.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsaki_1_1saki__clock.html">saki_clock</a> :<span class="keyword">public</span> <a class="code" href="classsaki_1_1singleton.html">saki::singleton</a>&lt;saki_clock&gt;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        clock_t start_time;<span class="comment">//開始時間</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classsaki_1_1saki__clock.html#adbee591f08017ecdf70147070df6d778">   25</a></span>&#160;        <a class="code" href="classsaki_1_1saki__clock.html#adbee591f08017ecdf70147070df6d778">saki_clock</a>() :start_time(0) {}</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsaki_1_1saki__clock.html#a685752d05d2611be4a8d2d2e0eb925c5">   29</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classsaki_1_1saki__clock.html#a685752d05d2611be4a8d2d2e0eb925c5">start</a>()</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            start_time = clock();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T = <span class="keywordtype">double</span>&gt;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classsaki_1_1saki__clock.html#aa255b4d6478090b4ef19a844dd824d06">   39</a></span>&#160;        T <a class="code" href="classsaki_1_1saki__clock.html#aa255b4d6478090b4ef19a844dd824d06">end</a>(<span class="keywordtype">bool</span> ms = <span class="keyword">true</span>)</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            clock_t end_time = clock();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(end_time - start_time) / ((ms) ? 1 : (CLOCKS_PER_SEC)));</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T = <span class="keywordtype">double</span>&gt;</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classsaki_1_1saki__clock.html#a6fc6b2cd9a93b18af5583527398842ff">   50</a></span>&#160;        T <a class="code" href="classsaki_1_1saki__clock.html#a6fc6b2cd9a93b18af5583527398842ff">end_and_start</a>(<span class="keywordtype">bool</span> ms = <span class="keyword">true</span>)</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">auto</span> end_time = end&lt;T&gt;(ms);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="classsaki_1_1saki__clock.html#a685752d05d2611be4a8d2d2e0eb925c5">start</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">return</span> end_time;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    };</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif //SAKI_CLOCK_2018_12_04</span></div><div class="ttc" id="singleton_8h_html"><div class="ttname"><a href="singleton_8h.html">singleton.h</a></div><div class="ttdoc">シングルトンクラス </div></div>
+<div class="ttc" id="classsaki_1_1saki__clock_html"><div class="ttname"><a href="classsaki_1_1saki__clock.html">saki::saki_clock</a></div><div class="ttdoc">時間を測るクラス </div><div class="ttdef"><b>Definition:</b> clock.h:18</div></div>
+<div class="ttc" id="classsaki_1_1saki__clock_html_a685752d05d2611be4a8d2d2e0eb925c5"><div class="ttname"><a href="classsaki_1_1saki__clock.html#a685752d05d2611be4a8d2d2e0eb925c5">saki::saki_clock::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">開始時間のセット </div><div class="ttdef"><b>Definition:</b> clock.h:29</div></div>
+<div class="ttc" id="namespacesaki_html"><div class="ttname"><a href="namespacesaki.html">saki</a></div><div class="ttdef"><b>Definition:</b> degree_radian_conversion.h:11</div></div>
+<div class="ttc" id="classsaki_1_1saki__clock_html_adbee591f08017ecdf70147070df6d778"><div class="ttname"><a href="classsaki_1_1saki__clock.html#adbee591f08017ecdf70147070df6d778">saki::saki_clock::saki_clock</a></div><div class="ttdeci">saki_clock()</div><div class="ttdoc">コンストラクタ </div><div class="ttdef"><b>Definition:</b> clock.h:25</div></div>
+<div class="ttc" id="classsaki_1_1saki__clock_html_aa255b4d6478090b4ef19a844dd824d06"><div class="ttname"><a href="classsaki_1_1saki__clock.html#aa255b4d6478090b4ef19a844dd824d06">saki::saki_clock::end</a></div><div class="ttdeci">T end(bool ms=true)</div><div class="ttdoc">開始時間をセットしてからの時間を返す </div><div class="ttdef"><b>Definition:</b> clock.h:39</div></div>
+<div class="ttc" id="classsaki_1_1saki__clock_html_a6fc6b2cd9a93b18af5583527398842ff"><div class="ttname"><a href="classsaki_1_1saki__clock.html#a6fc6b2cd9a93b18af5583527398842ff">saki::saki_clock::end_and_start</a></div><div class="ttdeci">T end_and_start(bool ms=true)</div><div class="ttdoc">開始時間をセットしてからの時間を返し、そこからまた時間をスタートする </div><div class="ttdef"><b>Definition:</b> clock.h:50</div></div>
+<div class="ttc" id="classsaki_1_1singleton_html"><div class="ttname"><a href="classsaki_1_1singleton.html">saki::singleton</a></div><div class="ttdoc">継承するとシングルトンクラスになる </div><div class="ttdef"><b>Definition:</b> singleton.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

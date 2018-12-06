@@ -3,11 +3,10 @@ var indexSectionsWithContent =
   0: "acdefgimnoprstvxyz~",
   1: "isv",
   2: "s",
-  3: "acdfimoprstv",
-  4: "adefginorstv~",
-  5: "xyz",
-  6: "s",
-  7: "s"
+  3: "acdfioprsv",
+  4: "acdefgimnorstvz~",
+  5: "pxyz",
+  6: "s"
 };
 
 var indexSectionNames =
@@ -18,8 +17,7 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "typedefs",
-  7: "defines"
+  6: "defines"
 };
 
 var indexSectionLabels =
@@ -30,7 +28,6 @@ var indexSectionLabels =
   3: "ファイル",
   4: "関数",
   5: "変数",
-  6: "型定義",
-  7: "マクロ定義"
+  6: "マクロ定義"
 };
 

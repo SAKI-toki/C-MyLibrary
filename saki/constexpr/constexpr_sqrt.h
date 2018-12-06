@@ -1,5 +1,5 @@
 /**
-* @file constexpr_aqrt.h
+* @file constexpr_sqrt.h
 * @brief コンパイル時平方根
 * @author 石山 悠
 * @date 2018/11/21

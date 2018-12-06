@@ -1,0 +1,95 @@
+\hypertarget{classsaki_1_1saki__clock}{}\section{saki\+:\+:saki\+\_\+clock クラス}
+\label{classsaki_1_1saki__clock}\index{saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}}
+
+
+時間を測るクラス  
+
+
+
+
+{\ttfamily \#include $<$clock.\+h$>$}
+
+saki\+:\+:saki\+\_\+clock の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsaki_1_1saki__clock}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsaki_1_1saki__clock_adbee591f08017ecdf70147070df6d778}{saki\+\_\+clock}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsaki_1_1saki__clock_a685752d05d2611be4a8d2d2e0eb925c5}{start}} ()
+\begin{DoxyCompactList}\small\item\em 開始時間のセット \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = double$>$ }\\T \mbox{\hyperlink{classsaki_1_1saki__clock_aa255b4d6478090b4ef19a844dd824d06}{end}} (bool ms=true)
+\begin{DoxyCompactList}\small\item\em 開始時間をセットしてからの時間を返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T  = double$>$ }\\T \mbox{\hyperlink{classsaki_1_1saki__clock_a6fc6b2cd9a93b18af5583527398842ff}{end\+\_\+and\+\_\+start}} (bool ms=true)
+\begin{DoxyCompactList}\small\item\em 開始時間をセットしてからの時間を返し、そこからまた時間をスタートする \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+時間を測るクラス 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1saki__clock_adbee591f08017ecdf70147070df6d778}\label{classsaki_1_1saki__clock_adbee591f08017ecdf70147070df6d778}} 
+\index{saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}!saki\+\_\+clock@{saki\+\_\+clock}}
+\index{saki\+\_\+clock@{saki\+\_\+clock}!saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}}
+\subsubsection{\texorpdfstring{saki\+\_\+clock()}{saki\_clock()}}
+{\footnotesize\ttfamily saki\+::saki\+\_\+clock\+::saki\+\_\+clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタ 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1saki__clock_aa255b4d6478090b4ef19a844dd824d06}\label{classsaki_1_1saki__clock_aa255b4d6478090b4ef19a844dd824d06}} 
+\index{saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}!end@{end}}
+\index{end@{end}!saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T  = double$>$ \\
+T saki\+::saki\+\_\+clock\+::end (\begin{DoxyParamCaption}\item[{bool}]{ms = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+開始時間をセットしてからの時間を返す 
+
+
+\begin{DoxyParams}{引数}
+{\em ms} & trueならミリ秒,falseなら秒で返す return 時間 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1saki__clock_a6fc6b2cd9a93b18af5583527398842ff}\label{classsaki_1_1saki__clock_a6fc6b2cd9a93b18af5583527398842ff}} 
+\index{saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}!end\+\_\+and\+\_\+start@{end\+\_\+and\+\_\+start}}
+\index{end\+\_\+and\+\_\+start@{end\+\_\+and\+\_\+start}!saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}}
+\subsubsection{\texorpdfstring{end\+\_\+and\+\_\+start()}{end\_and\_start()}}
+{\footnotesize\ttfamily template$<$typename T  = double$>$ \\
+T saki\+::saki\+\_\+clock\+::end\+\_\+and\+\_\+start (\begin{DoxyParamCaption}\item[{bool}]{ms = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+開始時間をセットしてからの時間を返し、そこからまた時間をスタートする 
+
+
+\begin{DoxyParams}{引数}
+{\em ms} & trueならミリ秒,falseなら秒で返す return 時間 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1saki__clock_a685752d05d2611be4a8d2d2e0eb925c5}\label{classsaki_1_1saki__clock_a685752d05d2611be4a8d2d2e0eb925c5}} 
+\index{saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}!start@{start}}
+\index{start@{start}!saki\+::saki\+\_\+clock@{saki\+::saki\+\_\+clock}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void saki\+::saki\+\_\+clock\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+開始時間のセット 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/clock/\mbox{\hyperlink{clock_8h}{clock.\+h}}\end{DoxyCompactItemize}

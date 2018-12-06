@@ -213,7 +213,7 @@ namespace saki
 	};
 	/**
 	* @brief 二点間の距離
-	* @details C++17現在、std::sqrtがconstexprではないので、自作sqrtを利用しconstexprに対応
+	* @details C++17現在、標準ライブラリのsqrtがconstexprではないので、自作sqrtを利用しconstexprに対応
 	*/
 	template<typename U = double, typename T1, typename T2>
 	constexpr U distance(const Vector3<T1>& v1, const Vector3<T2>& v2)
