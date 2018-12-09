@@ -18,7 +18,7 @@ namespace saki
 	* @brief 継承するとシングルトンクラスになる
 	*/
 	template<typename T>
-	class singleton
+	class Singleton
 	{
 	public:
 		/**
@@ -31,15 +31,15 @@ namespace saki
 			return instance;
 		}
 
-		virtual ~singleton() {}
+		virtual ~Singleton() {}
 
 	protected:
-		singleton() {}
+		Singleton() {}
 	private:
-		singleton(const singleton&) = delete;
-		singleton& operator=(const singleton&) = delete;
-		singleton(singleton&&) = delete;
-		singleton& operator=(singleton&&) = delete;
+		Singleton(const Singleton&) = delete;
+		Singleton& operator=(const Singleton&) = delete;
+		Singleton(Singleton&&) = delete;
+		Singleton& operator=(Singleton&&) = delete;
 	};
 }
 #endif //SAKI_SINGLETON_2018_10_17

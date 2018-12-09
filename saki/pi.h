@@ -4,11 +4,6 @@
 * @author 石山 悠
 * @date 2018/10/15
 */
-/*
-円周率のテンプレート変数です。
-使い方
-auto foo = saki::PI<float>;
-*/
 #pragma once
 #ifndef SAKI_PI_2018_10_15
 #define SAKI_PI_2018_10_15

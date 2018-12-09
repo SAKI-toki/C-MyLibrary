@@ -3,7 +3,8 @@
 * @brief 簡易インクルード(angle_math)
 * @author 石山 悠
 * @date 2018/11/22
-*/#pragma once
+*/
+#pragma once
 #ifndef SAKI_ANGLE_MATH_2018_11_22
 #define SAKI_ANGLE_MATH_2018_11_22
 

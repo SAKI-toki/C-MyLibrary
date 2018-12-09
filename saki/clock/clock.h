@@ -15,14 +15,14 @@ namespace saki
 	/**
 	* @brief 時間を測るクラス
 	*/
-	class saki_clock :public saki::singleton<saki_clock>
+	class Clock :public saki::Singleton<Clock>
 	{
 		clock_t start_time;//開始時間
 	public:
 		/**
 		* @brief コンストラクタ
 		*/
-		saki_clock() :start_time(0) {}
+		Clock() :start_time(0) {}
 		/**
 		* @brief 開始時間のセット
 		*/

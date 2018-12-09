@@ -11,5 +11,6 @@
 #include <saki/constexpr/constexpr_exchange.h>
 #include <saki/constexpr/constexpr_factorial.h>
 #include <saki/constexpr/constexpr_sqrt.h>
+#include <saki/constexpr/constexpr_distance.h>
 
 #endif //SAKI_CONSTEXPR_2018_11_22

@@ -18,7 +18,7 @@ namespace saki
 	* @brief コピー・ムーブ禁止のスマートポインタ
 	*/
 	template<typename T>
-	class immobile_ptr
+	class ImmobilePtr
 	{
 	public:
 		/**
@@ -26,14 +26,14 @@ namespace saki
 		* @param args Tのコンストラクタに必要な引数
 		*/
 		template<typename ...Args>
-		explicit immobile_ptr(Args... args)
+		explicit ImmobilePtr(Args... args)
 		{
 			ptr = new T(args...);
 		}
 		/**
 		* @brief デストラクタ時にメモリ解放
 		*/
-		~immobile_ptr()noexcept
+		~ImmobilePtr()noexcept
 		{
 			release();
 		}
@@ -97,10 +97,10 @@ namespace saki
 			return *ptr;
 		}
 		//コピー・ムーブ禁止
-		immobile_ptr(const immobile_ptr&) = delete;
-		immobile_ptr(immobile_ptr&&) = delete;
-		immobile_ptr& operator=(const immobile_ptr&) = delete;
-		immobile_ptr& operator=(immobile_ptr&&) = delete;
+		ImmobilePtr(const ImmobilePtr&) = delete;
+		ImmobilePtr(ImmobilePtr&&) = delete;
+		ImmobilePtr& operator=(const ImmobilePtr&) = delete;
+		ImmobilePtr& operator=(ImmobilePtr&&) = delete;
 	private:
 		//ポインタ
 		T* ptr;

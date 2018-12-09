@@ -9,7 +9,6 @@
 
 #include <saki/angle_math/angle_math.h>
 #include <saki/constexpr/constexpr.h>
-#include <saki/operator/operator.h>
 #include <saki/random/random.h>
 #include <saki/simplified-method/simplified_method.h>
 #include <saki/singleton/singleton.h>
@@ -17,5 +16,6 @@
 #include <saki/vector/vector.h>
 #include <saki/pi.h>
 #include <saki/clock/clock.h>
+#include <saki/matrix/matrix.h>
 
 #endif //SAKI_2018_11_22

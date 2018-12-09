@@ -7,7 +7,7 @@
 #pragma once
 #ifndef SAKI_CONSTEXPR_SQRT_2018_11_21
 #define SAKI_CONSTEXPR_SQRT_2018_11_21
-
+#include <cmath> //for nan
 namespace saki
 {
 	/**
@@ -19,7 +19,8 @@ namespace saki
 	constexpr T1 sqrt(const T2& n)
 	{
 		//0œZ‚â•‰”‚ÌŒvZ‚ğ‚µ‚È‚¢‚æ‚¤‚É‚·‚é
-		if (n <= 0)return 0;
+		if (n == 0)return 0;
+		if (n < 0)return -nan("ind");
 		T1 prev = n / 2;
 		T1 next = (prev + n / prev) * 0.5;
 		while (prev != next)

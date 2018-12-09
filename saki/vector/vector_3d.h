@@ -2,14 +2,13 @@
 * @file vector_3d.h
 * @brief 3次元でのベクトル
 * @author 石山 悠
-* @date 2018/12/02
+* @date 2018/12/06
 */
 #pragma once
-#ifndef SAKI_VECTOR_3D_2018_12_02
-#define SAKI_VECTOR_3D_2018_12_02
+#ifndef SAKI_VECTOR_3D_2018_12_06
+#define SAKI_VECTOR_3D_2018_12_06
 #include <type_traits> //for meta method
 #include <limits> //for numeric_limits
-#include <saki/constexpr/constexpr_sqrt.h>
 
 namespace saki
 {
@@ -23,6 +22,7 @@ namespace saki
 		T x, y, z;
 		/**
 		* @brief 引数なしコンストラクタ
+		* @details 全て0で初期化
 		*/
 		constexpr Vector3() :
 			x(T()), y(T()), z(T())
@@ -36,20 +36,29 @@ namespace saki
 		constexpr Vector3(const T& _x, const T& _y, const T& _z) :
 			x(_x), y(_y), z(_z)
 		{}
+		/**
+		* @brief 生配列からの初期化
+		* @param pointer 配列のポインタ
+		*/
+		constexpr Vector3(const T* const pointer) :
+			x(*pointer), y(*(pointer + 1)), z(*(pointer + 2))
+		{}
+		/**
+		* @brief イテレーターからの初期化
+		* @param start_itr イテレーター
+		* @details c++17の時点ではこのコンストラクタが定数式評価されることはないが、
+		将来を見据えてconstexprをつけている
+		*/
+		template<typename Iterator>
+		constexpr Vector3(const Iterator start_itr) :
+			x(*(start_itr)), y(*(start_itr + 1)), z(*(start_itr + 2))
+		{}
 		//デフォルトを使用
+		//デフォルトではメンバ変数のコピー、ムーブを行う
 		Vector3(const Vector3<T>&) = default;
 		Vector3<T>& operator=(const Vector3<T>&) = default;
-		Vector3(Vector3<T>&&) = default;
-		Vector3& operator=(Vector3<T>&&) = default;
-		/**
-		* @brief +演算子
-		*/
-		template<typename U = T>
-		constexpr auto operator+(const Vector3<U>& other)const
-		{
-			return Vector3<decltype(std::declval<T>() + std::declval<U>())>
-			{ this->x + other.x, this->y + other.y, this->z + other.z };
-		}
+		Vector3(Vector3<T>&&)noexcept = default;
+		Vector3& operator=(Vector3<T>&&)noexcept = default;
 		/**
 		* @brief +=演算子
 		*/
@@ -58,15 +67,6 @@ namespace saki
 		{
 			*this = *this + other;
 			return *this;
-		}
-		/**
-		* @brief -演算子
-		*/
-		template<typename U = T>
-		constexpr auto operator-(const Vector3<U>& other)const
-		{
-			return Vector3<decltype(std::declval<T>() - std::declval<U>())>
-			{ this->x - other.x, this->y - other.y, this->z - other.z };
 		}
 		/**
 		* @brief -=演算子
@@ -78,15 +78,6 @@ namespace saki
 			return *this;
 		}
 		/**
-		* @brief *演算子(スカラ)
-		*/
-		template<typename U = T>
-		constexpr auto operator*(const U& scalar)const
-		{
-			return Vector3<decltype(std::declval<T>() * std::declval<U>())>
-			{ this->x * scalar, this->y * scalar, this->z * scalar };
-		}
-		/**
 		* @brief *=演算子(スカラ)
 		*/
 		template<typename U = T>
@@ -94,15 +85,6 @@ namespace saki
 		{
 			*this = *this * scalar;
 			return *this;
-		}
-		/**
-		* @brief *演算子(ベクトル)
-		*/
-		template<typename U = T>
-		constexpr auto operator*(const Vector3<U>& other)const
-		{
-			return Vector3<decltype(std::declval<T>() * std::declval<U>())>
-			{ this->x * other.x, this->y * other.y, this->z * other.z };
 		}
 		/**
 		* @brief *=演算子(ベクトル)
@@ -114,15 +96,6 @@ namespace saki
 			return *this;
 		}
 		/**
-		* @brief /演算子(スカラ)
-		*/
-		template<typename U = T>
-		constexpr auto operator/(const U& scalar)const
-		{
-			return Vector3<decltype(std::declval<T>() / std::declval<U>())>
-			{ this->x / scalar, this->y / scalar, this->z / scalar };
-		}
-		/**
 		* @brief /=演算子(スカラ)
 		*/
 		template<typename U = T>
@@ -130,15 +103,6 @@ namespace saki
 		{
 			*this = *this / scalar;
 			return *this;
-		}
-		/**
-		* @brief /演算子(ベクトル)
-		*/
-		template<typename U = T>
-		constexpr auto operator/(const Vector3<U>& other)const
-		{
-			return Vector3<decltype(std::declval<T>() / std::declval<U>())>
-			{ this->x / other.x, this->y / other.y, this->z / other.x };
 		}
 		/**
 		* @brief /=演算子(ベクトル)
@@ -150,22 +114,70 @@ namespace saki
 			return *this;
 		}
 		/**
-		* @brief ==演算子
+		* @brief 単項+演算子
 		*/
-		constexpr bool operator==(const Vector3<T>& other)const
+		constexpr Vector3<T> operator+()const
 		{
-			return this->x == other.x && this->y == other.y && this->z == other.z;
+			return *this;
 		}
 		/**
-		* @brief !=演算子
+		* @brief 単項-演算子
 		*/
-		constexpr bool operator!=(const Vector3<T>& other)const
+		constexpr Vector3<T> operator-()const
 		{
-			return !(this == other);
+			return Vector3<T>(this->x * (-1), this->y * (-1), this->z * (-1));
+		}
+		/**
+		* @brief []演算子
+		*/
+		T& operator[](const unsigned int index)
+		{
+			return (index == 0) ? this->x : (index == 1) ? this->y : this->z;
+		}
+		/**
+		* @brief []演算子(constexpr)
+		*/
+		constexpr T operator[](const unsigned int index)const
+		{
+			return (index == 0) ? this->x : (index == 1) ? this->y : this->z;
+		}
+		/**
+		* @brief ++演算子(前置)
+		*/
+		Vector3<T>& operator++()
+		{
+			this->x += 1; this->y += 1; this->z += 1;
+			return *this;
+		}
+		/**
+		* @brief ++演算子(後置)
+		*/
+		Vector3<T> operator++(int)
+		{
+			Vector3<T> temp = *this;
+			this->x += 1; this->y += 1; this->z += 1;
+			return temp;
+		}
+		/**
+		* @brief --演算子(前置)
+		*/
+		Vector3<T>& operator--()
+		{
+			this->x -= 1; this->y -= 1; this->z -= 1;
+			return *this;
+		}
+		/**
+		* @brief --演算子(後置)
+		*/
+		Vector3<T> operator--(int)
+		{
+			Vector3<T> temp = *this;
+			this->x -= 1; this->y -= 1; this->z -= 1;
+			return temp;
 		}
 		/**
 		* @brief 正規化
-		* @return int型の場合は必ず0になるので注意してください
+		* @details int型の場合、すべての要素が0で返ります
 		*/
 		void normalize()
 		{
@@ -187,7 +199,7 @@ namespace saki
 		/**
 		* @brief 正規化
 		* @return 正規化したもの
-		* @details thisは正規化しない
+		* @details thisは正規化しない、int型の場合、すべての要素が0で帰ります
 		*/
 		template<typename U = double>
 		constexpr Vector2<U> return_normalize()const
@@ -209,27 +221,34 @@ namespace saki
 						static_cast<U>(this->z / den));//z
 			}
 		}
-
 	};
 	/**
-	* @brief 二点間の距離
-	* @details C++17現在、標準ライブラリのsqrtがconstexprではないので、自作sqrtを利用しconstexprに対応
+	* @brief Vector3のオールゼロ
 	*/
-	template<typename U = double, typename T1, typename T2>
-	constexpr U distance(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return saki::sqrt<U>(
-			(v1.x - v2.x) * (v1.x - v2.x) +
-			(v1.y - v2.y) * (v1.y - v2.y) +
-			(v1.z - v2.z) * (v1.z - v2.z));
-	}
+	template<typename T>
+	static constexpr Vector3<T> vector3_zero{ static_cast<T>(0), static_cast<T>(0), static_cast<T>(0) };
+	/**
+	* @brief Vector3のオールワン
+	*/
+	template<typename T>
+	static constexpr Vector2<T> vector3_one{ static_cast<T>(1), static_cast<T>(1), static_cast<T>(1) };
+	/**
+	* @brief Vector3の最小値
+	*/
+	template<typename T>
+	static constexpr Vector3<T> vector3_min{ std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min() };
+	/**
+	* @brief Vector3の最大値
+	*/
+	template<typename T>
+	static constexpr Vector3<T> vector3_max{ std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max() };
 	/**
 	* @brief 内積
 	*/
 	template<typename U = double, typename T1, typename T2>
 	constexpr U dot(const Vector3<T1>& v1, const Vector3<T2>& v2)
 	{
-		return static_cast<U>(v1.x*v2.x + v1.y*v2.y + v1.z*v2.z);
+		return static_cast<U>(v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
 	}
 	/**
 	* @brief 外積
@@ -238,10 +257,109 @@ namespace saki
 	constexpr Vector3<U> cross(const Vector3<T1>& v1, const Vector3<T2>& v2)
 	{
 		return Vector3<U>(
-			v1.y*v2.z - v1.z*v1.y, //x
-			v1.z*v2.x - v1.x*v1.z, //y
-			v1.x*v2.y - v1.y*v1.x);//z
+			v1.y * v2.z - v1.z * v1.y, //x
+			v1.z * v2.x - v1.x * v1.z, //y
+			v1.x * v2.y - v1.y * v1.x);//z
+	}
+	/**
+	* @brief 線形補間
+	*/
+	template<typename U = double, typename T1, typename T2, typename T = double>
+	constexpr Vector3<U> lerp(const Vector3<T1>& v1, const Vector3<T2>& v2, const T& t, const T& base = 1)
+	{
+		return Vector3<U>(
+			v1.x + (v2.x - v1.x) * t / base,
+			v1.y + (v2.y - v1.y) * t / base,
+			v1.z + (v2.z - v1.z) * t / base);
+	}
+	/**
+	* @brief +演算子
+	*/
+	template<typename T1, typename T2>
+	constexpr auto operator+(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return Vector3<decltype(std::declval<T1>() + std::declval<T2>())>
+		{ v1.x + v2.x, v1.y + v2.y, v1.z + v2.z };
+	}
+	/**
+	* @brief -演算子
+	*/
+	template<typename T1, typename T2>
+	constexpr auto operator-(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return Vector3<decltype(std::declval<T1>() - std::declval<T2>())>
+		{ v1.x - v2.x, v1.y - v2.y, v1.z - v2.z };
+	}
+	/**
+	* @brief *演算子(スカラ)
+	*/
+	template<typename T1, typename T2>
+	constexpr auto operator*(const Vector3<T1>& v, const T2& scalar)
+	{
+		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
+		{ v.x * scalar, v.y * scalar, v.z * scalar };
+	}
+	/**
+	* @brief *演算子(ベクトル)
+	*/
+	template<typename T1, typename T2>
+	constexpr auto operator*(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
+		{ v1.x * v2.x, v1.y * v2.y, v1.z * v2.z };
+	}
+	/**
+	* @brief /演算子(スカラ)
+	*/
+	template<typename T1, typename T2>
+	constexpr auto operator/(const Vector3<T1>& v, const T2& scalar)
+	{
+		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
+		{ v.x / scalar, v.y / scalar, v.z / scalar };
+	}
+	/**
+	* @brief /演算子(ベクトル)
+	*/
+	template<typename T1, typename T2>
+	constexpr auto operator/(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
+		{ v1.x / v2.x, v1.y / v2.y, v1.z / v2.z };
+	}
+	/**
+	* @brief ==演算子
+	*/
+	template<typename T>
+	constexpr bool operator==(const Vector3<T>& v1, const Vector3<T>& v2)
+	{
+		return v1.x == v2.x && v1.y == v2.y && v1.z == v2.z;
+	}
+	/**
+	* @brief !=演算子
+	*/
+	template<typename T>
+	constexpr bool operator!=(const Vector3<T>& v1, const Vector3<T>& v2)
+	{
+		return !(v1 == v2);
+	}
+	/**
+	* @brief ==演算子(型不一致)
+	* @details この関数の使用は推奨しない
+	*/
+	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
+		constexpr bool operator==(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return v1.x == v2.x && v1.y == v2.y && v1.z == v2.z;
+	}
+	/**
+	* @brief !=演算子(型不一致)
+	* @details この関数の使用は推奨しない
+	*/
+	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
+		constexpr bool operator!=(const Vector3<T1>& v1, const Vector3<T2>& v2)
+	{
+		return !(v1 == v2);
 	}
 }
 
-#endif //SAKI_VECTOR_3D_2018_12_02
+#endif //SAKI_VECTOR_3D_2018_12_06
