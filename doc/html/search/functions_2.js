@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['distance',['distance',['../namespacesaki.html#a37a9f74395755bc30cad0d612369e322',1,'saki::distance(const Vector2&lt; T1 &gt; &amp;v1, const Vector2&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a3323489be4b8c440241c8c8dcd517210',1,'saki::distance(const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)']]],
+  ['distancexy',['distanceXY',['../namespacesaki.html#ac7860b024b9f60e5d2426448504cdfa5',1,'saki']]],
+  ['distancexyz',['distanceXYZ',['../namespacesaki.html#aca24fd78c511e7ccd8f14a9c04eff7e9',1,'saki']]],
+  ['distancexz',['distanceXZ',['../namespacesaki.html#aa160b674649d86e048ff2676e20b0d25',1,'saki']]],
+  ['distanceyz',['distanceYZ',['../namespacesaki.html#a430390838f23403a3efc4182aed002b1',1,'saki']]],
   ['dot',['dot',['../namespacesaki.html#a724d6c36d761314950d3ec8be6a4f4ab',1,'saki::dot(const Vector2&lt; T1 &gt; &amp;v1, const Vector2&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a4f2643c9bd618538a43cdad4a71398af',1,'saki::dot(const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)']]]
 ];

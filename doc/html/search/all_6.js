@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['immobile_5fptr',['immobile_ptr',['../classsaki_1_1immobile__ptr.html',1,'saki::immobile_ptr&lt; T &gt;'],['../classsaki_1_1immobile__ptr.html#aa64c721ab505396e3b7b75bb6916b562',1,'saki::immobile_ptr::immobile_ptr(Args... args)'],['../classsaki_1_1immobile__ptr.html#ad0648153ed2d219d9cdf338a106de07c',1,'saki::immobile_ptr::immobile_ptr(const immobile_ptr &amp;)=delete'],['../classsaki_1_1immobile__ptr.html#a06b9308842f0179d5705caadd90718b0',1,'saki::immobile_ptr::immobile_ptr(immobile_ptr &amp;&amp;)=delete']]],
-  ['immobile_5fptr_2eh',['immobile_ptr.h',['../immobile__ptr_8h.html',1,'']]],
-  ['iota',['iota',['../namespacesaki.html#ae2d32321776d936bd523e70b82f9236c',1,'saki::iota(Container &amp;&amp;con, typename std::remove_reference_t&lt; Container &gt;::value_type init=0, typename std::remove_reference_t&lt; Container &gt;::value_type interval=1)'],['../namespacesaki.html#a45760a54288991b21995d0b2338ea134',1,'saki::iota(Iterator start, const Iterator &amp;end, typename std::remove_reference_t&lt; Iterator &gt;::value_type init=0, typename std::remove_reference_t&lt; Iterator &gt;::value_type interval=1)']]],
-  ['iota_2eh',['iota.h',['../iota_8h.html',1,'']]]
+  ['get',['get',['../classsaki_1_1_immobile_ptr.html#afdaa7016460af66e4e375f064e232720',1,'saki::ImmobilePtr']]],
+  ['get_5faddress',['get_address',['../classsaki_1_1_immobile_ptr.html#a8c0dc38fed7ef4e56321909f42f9ed5f',1,'saki::ImmobilePtr']]],
+  ['getinstance',['getinstance',['../classsaki_1_1_singleton.html#a198911b1e5a72914511ffd6f50e4da2f',1,'saki::Singleton']]]
 ];

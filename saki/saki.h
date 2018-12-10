@@ -7,15 +7,21 @@
 #ifndef SAKI_2018_11_22
 #define SAKI_2018_11_22
 
+#include <saki/accumulate/accumulate.h>
 #include <saki/angle_math/angle_math.h>
+#include <saki/binary_operator/binary_operator.h>
+#include <saki/clock/clock.h>
 #include <saki/constexpr/constexpr.h>
+#include <saki/copy/copy.h>
+#include <saki/for_each/for_each.h>
+#include <saki/iota/iota.h>
+#include <saki/matrix/matrix.h>
+#include <saki/meta/can_begin_method.h>
 #include <saki/random/random.h>
-#include <saki/simplified-method/simplified_method.h>
+#include <saki/sigma/sigma.h>
 #include <saki/singleton/singleton.h>
 #include <saki/smart_ptr/smart_ptr.h>
 #include <saki/vector/vector.h>
 #include <saki/pi.h>
-#include <saki/clock/clock.h>
-#include <saki/matrix/matrix.h>
 
 #endif //SAKI_2018_11_22

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalize',['normalize',['../classsaki_1_1_vector2.html#a8267f8608ffad9796813856c05076d8c',1,'saki::Vector2::normalize()'],['../classsaki_1_1_vector3.html#a7b9496274bab6ea6147e6a09e1493110',1,'saki::Vector3::normalize()']]]
+  ['matrix',['Matrix',['../classsaki_1_1_matrix.html#a820035e9bafc0fa4269c4b94b1ec4f4f',1,'saki::Matrix::Matrix()'],['../classsaki_1_1_matrix.html#ad4f497bd4ba2b7de464afea4436d9a51',1,'saki::Matrix::Matrix(const T &amp;m00, const T &amp;m01, const T &amp;m02, const T &amp;m03, const T &amp;m10, const T &amp;m11, const T &amp;m12, const T &amp;m13, const T &amp;m20, const T &amp;m21, const T &amp;m22, const T &amp;m23, const T &amp;m30, const T &amp;m31, const T &amp;m32, const T &amp;m33)'],['../classsaki_1_1_matrix.html#a945fec9cbcb1b175ac993db6a5c0cbd8',1,'saki::Matrix::Matrix(const T arr[4][4])'],['../classsaki_1_1_matrix.html#a08d28bd14af9be6650325574a20101d7',1,'saki::Matrix::Matrix(const Matrix&lt; T &gt; &amp;)=default'],['../classsaki_1_1_matrix.html#aced6f31e05917c2c41305dd0be082f8b',1,'saki::Matrix::Matrix(Matrix&lt; T &gt; &amp;&amp;) noexcept=default']]]
 ];

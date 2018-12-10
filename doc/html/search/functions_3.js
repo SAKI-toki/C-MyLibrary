@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['end',['end',['../classsaki_1_1saki__clock.html#aa255b4d6478090b4ef19a844dd824d06',1,'saki::saki_clock']]],
-  ['end_5fand_5fstart',['end_and_start',['../classsaki_1_1saki__clock.html#a6fc6b2cd9a93b18af5583527398842ff',1,'saki::saki_clock']]],
+  ['end',['end',['../classsaki_1_1_clock.html#afb3a41ac314bb58c010283bea60069f9',1,'saki::Clock']]],
+  ['end_5fand_5fstart',['end_and_start',['../classsaki_1_1_clock.html#a6df6705089065ac8f9f3cdb718d7284f',1,'saki::Clock']]],
   ['exchange',['exchange',['../namespacesaki.html#ad2deeae63db0667c034ff616bf6e3886',1,'saki']]]
 ];

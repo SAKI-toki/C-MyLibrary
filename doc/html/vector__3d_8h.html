@@ -96,15 +96,11 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:acda6de8ba172f8c9bd5f2569150be66e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__3d_8h.html#acda6de8ba172f8c9bd5f2569150be66e">SAKI_VECTOR_3D_2018_12_02</a></td></tr>
-<tr class="separator:acda6de8ba172f8c9bd5f2569150be66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938e75286fb3165b32fdd886cc234e05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__3d_8h.html#a938e75286fb3165b32fdd886cc234e05">SAKI_VECTOR_3D_2018_12_06</a></td></tr>
+<tr class="separator:a938e75286fb3165b32fdd886cc234e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a3323489be4b8c440241c8c8dcd517210"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a3323489be4b8c440241c8c8dcd517210"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3323489be4b8c440241c8c8dcd517210">saki::distance</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
-<tr class="memdesc:a3323489be4b8c440241c8c8dcd517210"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離  <a href="namespacesaki.html#a3323489be4b8c440241c8c8dcd517210">[詳解]</a><br /></td></tr>
-<tr class="separator:a3323489be4b8c440241c8c8dcd517210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f2643c9bd618538a43cdad4a71398af"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
 <tr class="memitem:a4f2643c9bd618538a43cdad4a71398af"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a4f2643c9bd618538a43cdad4a71398af">saki::dot</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
 <tr class="memdesc:a4f2643c9bd618538a43cdad4a71398af"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積  <a href="namespacesaki.html#a4f2643c9bd618538a43cdad4a71398af">[詳解]</a><br /></td></tr>
@@ -113,20 +109,64 @@ $(function() {
 <tr class="memitem:a0292208be2262a7ecbba114ebd10d5d6"><td class="memTemplItemLeft" align="right" valign="top">constexpr Vector3&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0292208be2262a7ecbba114ebd10d5d6">saki::cross</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
 <tr class="memdesc:a0292208be2262a7ecbba114ebd10d5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">外積  <a href="namespacesaki.html#a0292208be2262a7ecbba114ebd10d5d6">[詳解]</a><br /></td></tr>
 <tr class="separator:a0292208be2262a7ecbba114ebd10d5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3530d2e9468376228a3836112bd423c1"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 , typename T  = double&gt; </td></tr>
+<tr class="memitem:a3530d2e9468376228a3836112bd423c1"><td class="memTemplItemLeft" align="right" valign="top">constexpr Vector3&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3530d2e9468376228a3836112bd423c1">saki::lerp</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)</td></tr>
+<tr class="memdesc:a3530d2e9468376228a3836112bd423c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">線形補間  <a href="namespacesaki.html#a3530d2e9468376228a3836112bd423c1">[詳解]</a><br /></td></tr>
+<tr class="separator:a3530d2e9468376228a3836112bd423c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482be906f8ccfd7fa303391e28e44f05"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a482be906f8ccfd7fa303391e28e44f05"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a482be906f8ccfd7fa303391e28e44f05">saki::operator+</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a482be906f8ccfd7fa303391e28e44f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">+演算子  <a href="namespacesaki.html#a482be906f8ccfd7fa303391e28e44f05">[詳解]</a><br /></td></tr>
+<tr class="separator:a482be906f8ccfd7fa303391e28e44f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e324d1879fdeb0737196f18a3b42e2"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:ab4e324d1879fdeb0737196f18a3b42e2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ab4e324d1879fdeb0737196f18a3b42e2">saki::operator-</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:ab4e324d1879fdeb0737196f18a3b42e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">-演算子  <a href="namespacesaki.html#ab4e324d1879fdeb0737196f18a3b42e2">[詳解]</a><br /></td></tr>
+<tr class="separator:ab4e324d1879fdeb0737196f18a3b42e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8da947afb09174d52b0e4aaa185d71"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a7e8da947afb09174d52b0e4aaa185d71"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7e8da947afb09174d52b0e4aaa185d71">saki::operator*</a> (const Vector3&lt; T1 &gt; &amp;v, const T2 &amp;scalar)</td></tr>
+<tr class="memdesc:a7e8da947afb09174d52b0e4aaa185d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">*演算子(スカラ)  <a href="namespacesaki.html#a7e8da947afb09174d52b0e4aaa185d71">[詳解]</a><br /></td></tr>
+<tr class="separator:a7e8da947afb09174d52b0e4aaa185d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44134827291df1234e04cbd1837a05ac"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a44134827291df1234e04cbd1837a05ac"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a44134827291df1234e04cbd1837a05ac">saki::operator*</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a44134827291df1234e04cbd1837a05ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">*演算子(ベクトル)  <a href="namespacesaki.html#a44134827291df1234e04cbd1837a05ac">[詳解]</a><br /></td></tr>
+<tr class="separator:a44134827291df1234e04cbd1837a05ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbafb6bb5e04aa715db728862e079a8"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:abbbafb6bb5e04aa715db728862e079a8"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#abbbafb6bb5e04aa715db728862e079a8">saki::operator/</a> (const Vector3&lt; T1 &gt; &amp;v, const T2 &amp;scalar)</td></tr>
+<tr class="memdesc:abbbafb6bb5e04aa715db728862e079a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">/演算子(スカラ)  <a href="namespacesaki.html#abbbafb6bb5e04aa715db728862e079a8">[詳解]</a><br /></td></tr>
+<tr class="separator:abbbafb6bb5e04aa715db728862e079a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af3750f8a88499eca7784ad18753111"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a7af3750f8a88499eca7784ad18753111"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7af3750f8a88499eca7784ad18753111">saki::operator/</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a7af3750f8a88499eca7784ad18753111"><td class="mdescLeft">&#160;</td><td class="mdescRight">/演算子(ベクトル)  <a href="namespacesaki.html#a7af3750f8a88499eca7784ad18753111">[詳解]</a><br /></td></tr>
+<tr class="separator:a7af3750f8a88499eca7784ad18753111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29747cf04c5a821834f7a1fea39e4050"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a29747cf04c5a821834f7a1fea39e4050"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a29747cf04c5a821834f7a1fea39e4050">saki::operator==</a> (const Vector3&lt; T &gt; &amp;v1, const Vector3&lt; T &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a29747cf04c5a821834f7a1fea39e4050"><td class="mdescLeft">&#160;</td><td class="mdescRight">==演算子  <a href="namespacesaki.html#a29747cf04c5a821834f7a1fea39e4050">[詳解]</a><br /></td></tr>
+<tr class="separator:a29747cf04c5a821834f7a1fea39e4050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b3805c2b97e135606939b8d64eca20"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a49b3805c2b97e135606939b8d64eca20"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a49b3805c2b97e135606939b8d64eca20">saki::operator!=</a> (const Vector3&lt; T &gt; &amp;v1, const Vector3&lt; T &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a49b3805c2b97e135606939b8d64eca20"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子  <a href="namespacesaki.html#a49b3805c2b97e135606939b8d64eca20">[詳解]</a><br /></td></tr>
+<tr class="separator:a49b3805c2b97e135606939b8d64eca20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a487f0b513be6d4a0aecafeec28b6fc69"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a487f0b513be6d4a0aecafeec28b6fc69"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a487f0b513be6d4a0aecafeec28b6fc69">saki::operator==</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a487f0b513be6d4a0aecafeec28b6fc69"><td class="mdescLeft">&#160;</td><td class="mdescRight">==演算子(型不一致)  <a href="namespacesaki.html#a487f0b513be6d4a0aecafeec28b6fc69">[詳解]</a><br /></td></tr>
+<tr class="separator:a487f0b513be6d4a0aecafeec28b6fc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26df5bd85b044f8556c4e258479b54f7"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a26df5bd85b044f8556c4e258479b54f7"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a26df5bd85b044f8556c4e258479b54f7">saki::operator!=</a> (const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a26df5bd85b044f8556c4e258479b54f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子(型不一致)  <a href="namespacesaki.html#a26df5bd85b044f8556c4e258479b54f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a26df5bd85b044f8556c4e258479b54f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>3次元でのベクトル </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2018/12/02 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2018/12/06 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="acda6de8ba172f8c9bd5f2569150be66e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acda6de8ba172f8c9bd5f2569150be66e">&#9670;&nbsp;</a></span>SAKI_VECTOR_3D_2018_12_02</h2>
+<a id="a938e75286fb3165b32fdd886cc234e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938e75286fb3165b32fdd886cc234e05">&#9670;&nbsp;</a></span>SAKI_VECTOR_3D_2018_12_06</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_VECTOR_3D_2018_12_02</td>
+          <td class="memname">#define SAKI_VECTOR_3D_2018_12_06</td>
         </tr>
       </table>
 </div><div class="memdoc">

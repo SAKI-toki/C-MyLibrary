@@ -8,7 +8,6 @@
 #ifndef SAKI_CLOCK_2018_12_04
 #define SAKI_CLOCK_2018_12_04
 #include <saki/singleton/singleton.h>
-#include <iostream>
 #include <ctime>
 namespace saki
 {

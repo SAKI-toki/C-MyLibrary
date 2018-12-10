@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x',['x',['../classsaki_1_1_vector2.html#a69df7df6da198f35ef8ed269eb095c27',1,'saki::Vector2::x()'],['../classsaki_1_1_vector3.html#a1fa58e9e75dbeb650afb3db740f3131c',1,'saki::Vector3::x()']]]
+  ['to_5fdegree',['to_degree',['../namespacesaki.html#aa28ebe642bd2c0e608e2a61c34b3d7a5',1,'saki']]],
+  ['to_5fradian',['to_radian',['../namespacesaki.html#aae246ec576e9e2da23c0c142e6fc4d6a',1,'saki']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pi_2eh',['pi.h',['../pi_8h.html',1,'']]]
+  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]],
+  ['multiplication_2eh',['multiplication.h',['../multiplication_8h.html',1,'']]]
 ];

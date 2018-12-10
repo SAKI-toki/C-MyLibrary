@@ -9,6 +9,7 @@
 #define SAKI_VECTOR_3D_2018_12_06
 #include <type_traits> //for meta method
 #include <limits> //for numeric_limits
+#include <saki/constexpr/constexpr_sqrt.h> //for constexpr_sqrt
 
 namespace saki
 {
@@ -42,16 +43,6 @@ namespace saki
 		*/
 		constexpr Vector3(const T* const pointer) :
 			x(*pointer), y(*(pointer + 1)), z(*(pointer + 2))
-		{}
-		/**
-		* @brief イテレーターからの初期化
-		* @param start_itr イテレーター
-		* @details c++17の時点ではこのコンストラクタが定数式評価されることはないが、
-		将来を見据えてconstexprをつけている
-		*/
-		template<typename Iterator>
-		constexpr Vector3(const Iterator start_itr) :
-			x(*(start_itr)), y(*(start_itr + 1)), z(*(start_itr + 2))
 		{}
 		//デフォルトを使用
 		//デフォルトではメンバ変数のコピー、ムーブを行う

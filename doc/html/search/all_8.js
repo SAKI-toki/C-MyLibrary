@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalize',['normalize',['../classsaki_1_1_vector2.html#a8267f8608ffad9796813856c05076d8c',1,'saki::Vector2::normalize()'],['../classsaki_1_1_vector3.html#a7b9496274bab6ea6147e6a09e1493110',1,'saki::Vector3::normalize()']]]
+  ['lerp',['lerp',['../namespacesaki.html#a5fab9c2e4cffc4270b42004c4334c52a',1,'saki::lerp(const Vector2&lt; T1 &gt; &amp;v1, const Vector2&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)'],['../namespacesaki.html#a3530d2e9468376228a3836112bd423c1',1,'saki::lerp(const Vector3&lt; T1 &gt; &amp;v1, const Vector3&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)']]]
 ];

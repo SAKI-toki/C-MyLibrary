@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['saki_5fclock',['saki_clock',['../classsaki_1_1saki__clock.html#adbee591f08017ecdf70147070df6d778',1,'saki::saki_clock']]],
-  ['singleton',['singleton',['../classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0',1,'saki::singleton']]],
-  ['sqrt',['sqrt',['../namespacesaki.html#a1059e80b300067041c754c1686b04dbd',1,'saki']]],
-  ['start',['start',['../classsaki_1_1saki__clock.html#a685752d05d2611be4a8d2d2e0eb925c5',1,'saki::saki_clock']]]
+  ['random',['random',['../namespacesaki.html#a636caf16f2f00cb734cc867646ac233f',1,'saki']]],
+  ['release',['release',['../classsaki_1_1_immobile_ptr.html#a669b89e9c884f703f9dafc1257d694bf',1,'saki::ImmobilePtr']]],
+  ['reset',['reset',['../classsaki_1_1_immobile_ptr.html#abc92fb9bf2200ecc6304164ae6c00e09',1,'saki::ImmobilePtr']]],
+  ['return_5fnormalize',['return_normalize',['../classsaki_1_1_vector2.html#ad4fe2f7cb118bfad82333017c15c591a',1,'saki::Vector2::return_normalize()'],['../classsaki_1_1_vector3.html#ab4bbc1a8a3cbf860996a5136b3c1536f',1,'saki::Vector3::return_normalize()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['y',['../classsaki_1_1_vector2.html#a54e83290254fb653eff9b8dcf6a10878',1,'saki::Vector2::y()'],['../classsaki_1_1_vector3.html#aba41be4543769bd023387691acf654dd',1,'saki::Vector3::y()']]]
+  ['x',['x',['../classsaki_1_1_vector2.html#a69df7df6da198f35ef8ed269eb095c27',1,'saki::Vector2::x()'],['../classsaki_1_1_vector3.html#a1fa58e9e75dbeb650afb3db740f3131c',1,'saki::Vector3::x()']]]
 ];
