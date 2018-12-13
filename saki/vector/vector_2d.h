@@ -2,14 +2,16 @@
 * @file vector_2d.h
 * @brief 2次元でのベクトル
 * @author 石山 悠
-* @date 2018/12/06
+* @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_VECTOR_2D_2018_12_06
-#define SAKI_VECTOR_2D_2018_12_06
-#include <type_traits> //for meta method
+#ifndef SAKI_VECTOR_2D_2018_12_13
+#define SAKI_VECTOR_2D_2018_12_13
 #include <limits> //for numeric_limits
-#include <saki/constexpr/constexpr_sqrt.h> //for constexpr_sqrt
+#include <saki/constexpr_std/sqrt.h> //for constexpr_sqrt
+#include <saki/vector/details/2d/vector_2d_operator.h>
+#include <saki/macro/type_macro.h>
+
 
 namespace saki
 {
@@ -20,6 +22,7 @@ namespace saki
 	class Vector2
 	{
 	public:
+		SAKI_TYPE_MACRO(T)
 		T x, y;
 		/**
 		* @brief 引数なしコンストラクタ
@@ -208,7 +211,6 @@ namespace saki
 			}
 		}
 	};
-
 	/**
 	* @brief Vector2のオールゼロ
 	*/
@@ -249,6 +251,7 @@ namespace saki
 
 	/**
 	* @brief 線形補間
+	* @details Quaternionは使用していません
 	*/
 	template<typename U = double, typename T1, typename T2, typename T = double>
 	constexpr Vector2<U> lerp(const Vector2<T1>& v1, const Vector2<T2>& v2, const T& t, const T& base = 1)
@@ -257,94 +260,5 @@ namespace saki
 			v1.x + (v2.x - v1.x) * t / base,
 			v1.y + (v2.y - v1.y) * t / base);
 	}
-
-	/**
-	* @brief +演算子
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator+(const Vector2<T1>& v1, const Vector2<T2>& v2)
-	{
-		return Vector2<decltype(std::declval<T1>() + std::declval<T2>())>
-		{ v1.x + v2.x, v1.y + v2.y };
-	}
-	/**
-	* @brief -演算子
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator-(const Vector2<T1>& v1, const Vector2<T2>& v2)
-	{
-		return Vector2<decltype(std::declval<T1>() - std::declval<T2>())>
-		{ v1.x - v2.x, v1.y - v2.y };
-	}
-	/**
-	* @brief *演算子(スカラ)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator*(const Vector2<T1>& v, const T2& scalar)
-	{
-		return Vector2<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v.x * scalar, v.y * scalar };
-	}
-	/**
-	* @brief *演算子(ベクトル)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator*(const Vector2<T1>& v1, const Vector2<T2>& v2)
-	{
-		return Vector2<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v1.x * v2.x, v1.y * v2.y};
-	}
-	/**
-	* @brief /演算子(スカラ)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator/(const Vector2<T1>& v, const T2& scalar)
-	{
-		return Vector2<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v.x / scalar, v.y / scalar };
-	}
-	/**
-	* @brief /演算子(ベクトル)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator/(const Vector2<T1>& v1, const Vector2<T2>& v2)
-	{
-		return Vector2<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v1.x / v2.x, v1.y / v2.y};
-	}
-	/**
-	* @brief ==演算子
-	*/
-	template<typename T>
-	constexpr bool operator==(const Vector2<T>& v1, const Vector2<T>& v2)
-	{
-		return v1.x == v2.x && v1.y == v2.y;
-	}
-	/**
-	* @brief !=演算子
-	*/
-	template<typename T>
-	constexpr bool operator!=(const Vector2<T>& v1, const Vector2<T>& v2)
-	{
-		return !(v1 == v2);
-	}
-	/**
-	* @brief ==演算子(型不一致)
-	* @details この関数の使用は推奨しない
-	*/
-	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator==(const Vector2<T1>& v1, const Vector2<T2>& v2)
-	{
-		return v1.x == v2.x && v1.y == v2.y;
-	}
-	/**
-	* @brief !=演算子(型不一致)
-	* @details この関数の使用は推奨しない
-	*/
-	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator!=(const Vector2<T1>& v1, const Vector2<T2>& v2)
-	{
-		return !(v1 == v2);
-	}
 }
-#endif //SAKI_VECTOR_2D_2018_12_06
+#endif //SAKI_VECTOR_2D_2018_12_13

@@ -5,7 +5,7 @@
 既存のcopy関数の簡略化  
 
 
-{\ttfamily \#include $<$xutility$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
 {\ttfamily \#include $<$saki/meta/can\+\_\+begin\+\_\+method.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
@@ -20,9 +20,9 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Container1 , typename Container2 $>$ }\\auto \mbox{\hyperlink{namespacesaki_aab5bc42749f8856797942222a6fa8d09}{saki\+::copy}} (Container1 \&\&con1, Container2 \&\&con2) -\/$>$ decltype(std\+::declval$<$ std\+::enable\+\_\+if\+\_\+t$<$ Can\+Begin\+::value$<$ Container2 $>$$>$$>$(), std\+::begin(con2))
+{\footnotesize template$<$typename Container1 , typename Container2 , typename std\+::enable\+\_\+if\+\_\+t$<$ can\+\_\+begin\+\_\+v$<$ Container2 $>$, std\+::nullptr\+\_\+t $>$  = nullptr$>$ }\\auto \mbox{\hyperlink{namespacesaki_a469bffdeaee5edab8000f7174b9de5f2}{saki\+::copy}} (Container1 \&\&con1, Container2 \&\&con2)
 \begin{DoxyCompactList}\small\item\em コンテナとコンテナを渡すcopy \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Container , typename Out\+Itr $>$ }\\auto \mbox{\hyperlink{namespacesaki_ac0e54eca8b5a57e75bad41d199756ce2}{saki\+::copy}} (Container \&\&con, Out\+Itr outitr) -\/$>$ decltype(std\+::declval$<$ std\+::enable\+\_\+if\+\_\+t$<$!Can\+Begin\+::value$<$ Out\+Itr $>$$>$$>$(), std\+::declval$<$ Out\+Itr $>$())
+{\footnotesize template$<$typename Container , typename Out\+Itr , typename std\+::enable\+\_\+if\+\_\+t$<$!can\+\_\+begin\+\_\+v$<$ Out\+Itr $>$, std\+::nullptr\+\_\+t $>$  = nullptr$>$ }\\auto \mbox{\hyperlink{namespacesaki_a810f851279b6d10acc3892433f7036fd}{saki\+::copy}} (Container \&\&con, Out\+Itr outitr)
 \begin{DoxyCompactList}\small\item\em コンテナとコンテナを渡すcopy \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

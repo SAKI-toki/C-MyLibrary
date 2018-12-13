@@ -16,7 +16,7 @@ namespace saki
 	struct ReturnParam
 	{
 		template<typename T>
-		constexpr T operator()(const T& t)
+		constexpr T operator()(const T& t)const
 		{
 			return t;
 		}

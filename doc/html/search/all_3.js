@@ -1,6 +1,7 @@
 var searchData=
 [
   ['degree_5fradian_5fconversion_2eh',['degree_radian_conversion.h',['../degree__radian__conversion_8h.html',1,'']]],
+  ['distance_2eh',['distance.h',['../distance_8h.html',1,'']]],
   ['distancexy',['distanceXY',['../namespacesaki.html#ac7860b024b9f60e5d2426448504cdfa5',1,'saki']]],
   ['distancexyz',['distanceXYZ',['../namespacesaki.html#aca24fd78c511e7ccd8f14a9c04eff7e9',1,'saki']]],
   ['distancexz',['distanceXZ',['../namespacesaki.html#aa160b674649d86e048ff2676e20b0d25',1,'saki']]],

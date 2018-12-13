@@ -7,9 +7,10 @@
 #pragma once
 #ifndef SAKI_VECTOR_3D_2018_12_06
 #define SAKI_VECTOR_3D_2018_12_06
-#include <type_traits> //for meta method
 #include <limits> //for numeric_limits
-#include <saki/constexpr/constexpr_sqrt.h> //for constexpr_sqrt
+#include <saki/constexpr_std/sqrt.h> //for constexpr_sqrt
+#include <saki/vector/details/3d/vector_3d_operator.h>
+#include <saki/macro/type_macro.h>
 
 namespace saki
 {
@@ -20,6 +21,7 @@ namespace saki
 	class Vector3
 	{
 	public:
+		SAKI_TYPE_MACRO(T)
 		T x, y, z;
 		/**
 		* @brief 引数なしコンストラクタ
@@ -193,26 +195,27 @@ namespace saki
 		* @details thisは正規化しない、int型の場合、すべての要素が0で帰ります
 		*/
 		template<typename U = double>
-		constexpr Vector2<U> return_normalize()const
+		constexpr Vector3<U> return_normalize()const
 		{
 			//分母
 			auto den = saki::sqrt(this->x * this->x + this->y * this->y + this->z * this->z);
 			if (den == 0)
 			{
-				return Vector2<U>
+				return Vector3<U>
 					(static_cast<U>(0),//x
 						static_cast<U>(0),//y
 						static_cast<U>(0));//z
 			}
 			else
 			{
-				return Vector2<U>
+				return Vector3<U>
 					(static_cast<U>(this->x / den),//x
 						static_cast<U>(this->y / den),//y
 						static_cast<U>(this->z / den));//z
 			}
 		}
 	};
+
 	/**
 	* @brief Vector3のオールゼロ
 	*/
@@ -222,7 +225,7 @@ namespace saki
 	* @brief Vector3のオールワン
 	*/
 	template<typename T>
-	static constexpr Vector2<T> vector3_one{ static_cast<T>(1), static_cast<T>(1), static_cast<T>(1) };
+	static constexpr Vector3<T> vector3_one{ static_cast<T>(1), static_cast<T>(1), static_cast<T>(1) };
 	/**
 	* @brief Vector3の最小値
 	*/
@@ -254,6 +257,7 @@ namespace saki
 	}
 	/**
 	* @brief 線形補間
+	* @details Quaternionは使用していません
 	*/
 	template<typename U = double, typename T1, typename T2, typename T = double>
 	constexpr Vector3<U> lerp(const Vector3<T1>& v1, const Vector3<T2>& v2, const T& t, const T& base = 1)
@@ -262,94 +266,6 @@ namespace saki
 			v1.x + (v2.x - v1.x) * t / base,
 			v1.y + (v2.y - v1.y) * t / base,
 			v1.z + (v2.z - v1.z) * t / base);
-	}
-	/**
-	* @brief +演算子
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator+(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return Vector3<decltype(std::declval<T1>() + std::declval<T2>())>
-		{ v1.x + v2.x, v1.y + v2.y, v1.z + v2.z };
-	}
-	/**
-	* @brief -演算子
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator-(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return Vector3<decltype(std::declval<T1>() - std::declval<T2>())>
-		{ v1.x - v2.x, v1.y - v2.y, v1.z - v2.z };
-	}
-	/**
-	* @brief *演算子(スカラ)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator*(const Vector3<T1>& v, const T2& scalar)
-	{
-		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v.x * scalar, v.y * scalar, v.z * scalar };
-	}
-	/**
-	* @brief *演算子(ベクトル)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator*(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v1.x * v2.x, v1.y * v2.y, v1.z * v2.z };
-	}
-	/**
-	* @brief /演算子(スカラ)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator/(const Vector3<T1>& v, const T2& scalar)
-	{
-		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v.x / scalar, v.y / scalar, v.z / scalar };
-	}
-	/**
-	* @brief /演算子(ベクトル)
-	*/
-	template<typename T1, typename T2>
-	constexpr auto operator/(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return Vector3<decltype(std::declval<T1>() * std::declval<T2>())>
-		{ v1.x / v2.x, v1.y / v2.y, v1.z / v2.z };
-	}
-	/**
-	* @brief ==演算子
-	*/
-	template<typename T>
-	constexpr bool operator==(const Vector3<T>& v1, const Vector3<T>& v2)
-	{
-		return v1.x == v2.x && v1.y == v2.y && v1.z == v2.z;
-	}
-	/**
-	* @brief !=演算子
-	*/
-	template<typename T>
-	constexpr bool operator!=(const Vector3<T>& v1, const Vector3<T>& v2)
-	{
-		return !(v1 == v2);
-	}
-	/**
-	* @brief ==演算子(型不一致)
-	* @details この関数の使用は推奨しない
-	*/
-	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator==(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return v1.x == v2.x && v1.y == v2.y && v1.z == v2.z;
-	}
-	/**
-	* @brief !=演算子(型不一致)
-	* @details この関数の使用は推奨しない
-	*/
-	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator!=(const Vector3<T1>& v1, const Vector3<T2>& v2)
-	{
-		return !(v1 == v2);
 	}
 }
 

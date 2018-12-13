@@ -7,7 +7,7 @@
 #pragma once
 #ifndef SAKI_COPY_2018_12_09
 #define SAKI_COPY_2018_12_09
-#include <xutility>
+#include <iterator>
 #include <saki/meta/can_begin_method.h>
 
 namespace saki
@@ -17,9 +17,8 @@ namespace saki
 	* @param con1 コピーするコンテナクラス
 	* @param con2 ペーストするコンテナクラス
 	*/
-	template <typename Container1, typename Container2>
+	template <typename Container1, typename Container2, typename std::enable_if_t<can_begin_v<Container2>, std::nullptr_t> = nullptr>
 	auto copy(Container1&& con1, Container2&& con2)
-		->decltype(std::declval<std::enable_if_t<CanBegin::value<Container2>>>(), std::begin(con2))
 	{
 		auto con1itr = std::begin(con1);
 		auto con1end = std::end(con1);
@@ -35,9 +34,8 @@ namespace saki
 	* @param con コピーするコンテナクラス
 	* @param outitr ペーストするコンテナクラスの最初のイテレーター
 	*/
-	template <typename Container, typename OutItr>
+	template <typename Container, typename OutItr, typename std::enable_if_t<!can_begin_v<OutItr>, std::nullptr_t> = nullptr>
 	auto copy(Container&& con, OutItr outitr)
-		->decltype(std::declval<std::enable_if_t<!CanBegin::value<OutItr>>>(), std::declval<OutItr>())
 	{
 		auto conitr = std::begin(con);
 		auto conend = std::end(con);

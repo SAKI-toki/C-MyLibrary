@@ -2,12 +2,13 @@
 * @file matrix.h
 * @brief 行列
 * @author 石山 悠
-* @date 2018/12/07
+* @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_MATRIX_2018_12_07
-#define SAKI_MATRIX_2018_12_07
-#include <saki/binary_operator/binary_operator.h>
+#ifndef SAKI_MATRIX_2018_12_13
+#define SAKI_MATRIX_2018_12_13
+#include <saki/matrix/details/matrix_operator.h>
+#include <saki/macro/type_macro.h>
 
 namespace saki
 {
@@ -19,6 +20,7 @@ namespace saki
 	{
 		T m[4][4];
 	public:
+		SAKI_TYPE_MACRO(T)
 		/**
 		* @brief 引数なしコンストラクタ
 		* @details 全て0で初期化
@@ -55,7 +57,51 @@ namespace saki
 		Matrix<T>& operator=(const Matrix<T>&) = default;
 		Matrix(Matrix<T>&&)noexcept = default;
 		Matrix& operator=(Matrix<T>&&)noexcept = default;
-
+		/**
+		* @brief +=演算子
+		*/
+		template<typename U = T>
+		auto operator+=(const Matrix<U>& other)
+		{
+			*this = *this + other;
+			return *this;
+		}
+		/**
+		* @brief -=演算子
+		*/
+		template<typename U = T>
+		auto operator-=(const Matrix<U>& other)
+		{
+			*this = *this - other;
+			return *this;
+		}
+		/**
+		* @brief *=演算子(スカラ)
+		*/
+		template<typename U = T>
+		auto operator*=(const U& scalar)
+		{
+			*this = *this * scalar;
+			return *this;
+		}
+		/**
+		* @brief *=演算子(行列)
+		*/
+		template<typename U = T>
+		auto operator*=(const Matrix<U>& other)
+		{
+			*this = *this * other;
+			return *this;
+		}
+		/**
+		* @brief /=演算子(スカラ)
+		*/
+		template<typename U = T>
+		auto operator/=(const U& scalar)
+		{
+			*this = *this / scalar;
+			return *this;
+		}
 		/**
 		* @brief []演算子
 		*/
@@ -66,6 +112,7 @@ namespace saki
 		/**
 		* @brief []演算子では表現できないため、普通の関数にした
 		* @param row,col 行、列
+		* @details 自作arrayクラスを作成すればできるが、とりあえず今はこのままで
 		*/
 		constexpr T at_constexpr(const unsigned int row, const unsigned int col)const
 		{
@@ -73,7 +120,7 @@ namespace saki
 		}
 
 		/**
-		* @brief 単位行列に変換 
+		* @brief 単位行列に変換
 		*/
 		void identity()
 		{
@@ -98,4 +145,4 @@ namespace saki
 		static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1)
 	};
 }
-#endif //SAKI_MATRIX_2018_12_07
+#endif //SAKI_MATRIX_2018_12_13

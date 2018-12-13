@@ -21,7 +21,7 @@ namespace saki
 		/**
 		* @brief コンストラクタ
 		*/
-		Clock() :start_time(0) {}
+		Clock() :start_time(clock()) {}
 		/**
 		* @brief 開始時間のセット
 		*/
