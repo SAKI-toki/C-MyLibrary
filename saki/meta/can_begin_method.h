@@ -27,7 +27,7 @@ namespace saki
 		static constexpr auto value = decltype(begin_check<T>(nullptr))::value;
 	};
 	/**
-	* @brief Canbeginを簡単に呼び出せる変数
+	* @brief can_beginを簡単に呼び出せる変数
 	*/
 	template<typename T>
 	static constexpr auto can_begin_v = can_begin<T>::value;

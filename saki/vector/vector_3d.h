@@ -22,6 +22,7 @@ namespace saki
 	{
 	public:
 		SAKI_TYPE_MACRO(T)
+	public:
 		T x, y, z;
 		/**
 		* @brief 引数なしコンストラクタ
@@ -43,7 +44,7 @@ namespace saki
 		* @brief 生配列からの初期化
 		* @param pointer 配列のポインタ
 		*/
-		constexpr Vector3(const T* const pointer) :
+		explicit constexpr Vector3(const T* const pointer) :
 			x(*pointer), y(*(pointer + 1)), z(*(pointer + 2))
 		{}
 		//デフォルトを使用
@@ -262,10 +263,11 @@ namespace saki
 	template<typename U = double, typename T1, typename T2, typename T = double>
 	constexpr Vector3<U> lerp(const Vector3<T1>& v1, const Vector3<T2>& v2, const T& t, const T& base = 1)
 	{
+		auto ratio = t / base;
 		return Vector3<U>(
-			v1.x + (v2.x - v1.x) * t / base,
-			v1.y + (v2.y - v1.y) * t / base,
-			v1.z + (v2.z - v1.z) * t / base);
+			v1.x + (v2.x - v1.x) * ratio,
+			v1.y + (v2.y - v1.y) * ratio,
+			v1.z + (v2.z - v1.z) * ratio);
 	}
 }
 
