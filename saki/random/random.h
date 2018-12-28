@@ -26,7 +26,7 @@ namespace saki
 		assert(random_min <= random_max);
 		static std::random_device rd;
 		static std::mt19937 mt(rd());
-		if constexpr (std::is_integral_v<T>)
+		if constexpr(std::is_integral_v<T>)
 		{
 			std::uniform_int_distribution<int> rnd(random_min, random_max);
 			return rnd(mt);

@@ -74,7 +74,7 @@ $(function() {
 
 <p>element_type,value_type,pointer,referenceを自動定義  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
 </div>
 <p><a href="type__macro_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -105,7 +105,7 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<b>値:</b><div class="fragment"><div class="line"><span class="keyword">using</span> element_type = T;                 \</div><div class="line">using value_type = std::remove_cv_t&lt;T&gt;; \</div><div class="line">using pointer = T*;                     \</div><div class="line">using reference = T&amp;;                   \</div></div><!-- fragment -->
+<b>値:</b><div class="fragment"><div class="line"><span class="keyword">using</span> value_type = T;                   \</div><div class="line">using size_type = size_t;               \</div><div class="line">using difference_type = ptrdiff_t;      \</div><div class="line">using pointer = T*;                     \</div><div class="line">using const_pointer = <span class="keyword">const</span> T*;         \</div><div class="line">using reference = T&amp;;                   \</div><div class="line">using const_reference = <span class="keyword">const</span> T&amp;;       \</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aa9a5d41ca730514ed05a89e6354af783"></a>

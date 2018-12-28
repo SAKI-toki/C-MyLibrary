@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['value',['value',['../structsaki_1_1can__begin.html#a6d16b8cbacbf7d9be197d09c517d503d',1,'saki::can_begin']]],
-  ['vector_2eh',['vector.h',['../vector_8h.html',1,'']]],
-  ['vector2',['Vector2',['../classsaki_1_1_vector2.html',1,'saki::Vector2&lt; T &gt;'],['../classsaki_1_1_vector2.html#af57b72f4255812a361bef1922a226f86',1,'saki::Vector2::Vector2()'],['../classsaki_1_1_vector2.html#ad0f3d0a05370f1ef4947520245f6e9a8',1,'saki::Vector2::Vector2(const T &amp;_x, const T &amp;_y)'],['../classsaki_1_1_vector2.html#ad2c0fd66544f68066179490647244b14',1,'saki::Vector2::Vector2(const T *const pointer)'],['../classsaki_1_1_vector2.html#af3d61bb90047a8621cba0a17b265bfaa',1,'saki::Vector2::Vector2(const Vector2&lt; T &gt; &amp;)=default'],['../classsaki_1_1_vector2.html#ade059efe536b29346642aacbd973d062',1,'saki::Vector2::Vector2(Vector2&lt; T &gt; &amp;&amp;) noexcept=default']]],
-  ['vector2_5fscalar_5fsome_5foperator',['vector2_scalar_some_operator',['../namespacesaki_1_1details.html#a8767a64d897787a3b0561939412abb28',1,'saki::details']]],
-  ['vector2_5fvector2_5fsome_5foperator',['vector2_vector2_some_operator',['../namespacesaki_1_1details.html#a1e3ab5ffafb707dc8d8b3cf054f3b2e3',1,'saki::details']]],
-  ['vector3',['Vector3',['../classsaki_1_1_vector3.html',1,'saki::Vector3&lt; T &gt;'],['../classsaki_1_1_vector3.html#a8617fe1a8d279c9673628728a0c5e5c6',1,'saki::Vector3::Vector3()'],['../classsaki_1_1_vector3.html#abaf9038ebdc4895d7df1319b6234d790',1,'saki::Vector3::Vector3(const T &amp;_x, const T &amp;_y, const T &amp;_z)'],['../classsaki_1_1_vector3.html#a486cbaea59124a022d52b4dcfc4bfdab',1,'saki::Vector3::Vector3(const T *const pointer)'],['../classsaki_1_1_vector3.html#ae996c120efb16029f71c26e24dfaa144',1,'saki::Vector3::Vector3(const Vector3&lt; T &gt; &amp;)=default'],['../classsaki_1_1_vector3.html#add1b3e26d1c54b75f1903c6303eb08a6',1,'saki::Vector3::Vector3(Vector3&lt; T &gt; &amp;&amp;) noexcept=default']]],
-  ['vector3_5fscalar_5fsome_5foperator',['vector3_scalar_some_operator',['../namespacesaki_1_1details.html#a65a656e3fd6cb4f45afc9137f5e6383a',1,'saki::details']]],
-  ['vector3_5fvector3_5fsome_5foperator',['vector3_vector3_some_operator',['../namespacesaki_1_1details.html#a9d9fd5673ab6516752ecf05845e7f9b9',1,'saki::details']]],
-  ['vector_5f2d_2eh',['vector_2d.h',['../vector__2d_8h.html',1,'']]],
-  ['vector_5f2d_5foperator_2eh',['vector_2d_operator.h',['../vector__2d__operator_8h.html',1,'']]],
-  ['vector_5f3d_2eh',['vector_3d.h',['../vector__3d_8h.html',1,'']]],
-  ['vector_5f3d_5foperator_2eh',['vector_3d_operator.h',['../vector__3d__operator_8h.html',1,'']]]
+  ['to_5fdegree',['to_degree',['../namespacesaki.html#aa28ebe642bd2c0e608e2a61c34b3d7a5',1,'saki']]],
+  ['to_5fradian',['to_radian',['../namespacesaki.html#aae246ec576e9e2da23c0c142e6fc4d6a',1,'saki']]],
+  ['transform',['Transform',['../classsaki_1_1_transform.html',1,'saki::Transform&lt; T &gt;'],['../classsaki_1_1_transform.html#abdd7b5f310bccc56b804a2cf21890a35',1,'saki::Transform::Transform()'],['../classsaki_1_1_transform.html#a63e2a4e0fe65040566c13897255af67e',1,'saki::Transform::Transform(const saki::Vector3&lt; T &gt; &amp;pos, const saki::Vector3&lt; T &gt; rot, const saki::Vector3&lt; T &gt;sca)'],['../classsaki_1_1_transform.html#a86e4e6b8c8a3387f5659e71b377a9995',1,'saki::Transform::Transform(const Transform&lt; T &gt; &amp;)=default'],['../classsaki_1_1_transform.html#a065323d290c8c4edd76855e7b9634ab8',1,'saki::Transform::Transform(Transform&lt; T &gt; &amp;&amp;)=default']]],
+  ['transform_2eh',['transform.h',['../transform_8h.html',1,'']]],
+  ['transform_5foperator_2eh',['transform_operator.h',['../transform__operator_8h.html',1,'']]],
+  ['transform_5fscalar_5fsome_5foperator',['transform_scalar_some_operator',['../namespacesaki_1_1details.html#a2f5694f4bcf7f45e946384285562521e',1,'saki::details']]],
+  ['transform_5ftransform_5fsome_5foperator',['transform_transform_some_operator',['../namespacesaki_1_1details.html#ac8ab9fdbf09089a0272297c3be7c51d4',1,'saki::details']]],
+  ['transpose',['transpose',['../classsaki_1_1_matrix.html#a78f7166af66941378ae5903bd266d309',1,'saki::Matrix']]],
+  ['tree',['Tree',['../classsaki_1_1_tree.html',1,'saki::Tree&lt; T &gt;'],['../classsaki_1_1_tree.html#a3b755ca793a3e3c9dd6e0aee77bf7bd6',1,'saki::Tree::Tree(const std::string &amp;name, T t)'],['../classsaki_1_1_tree.html#a3716d7484b92161bbb38c362280358c0',1,'saki::Tree::Tree(const Tree &amp;other)'],['../classsaki_1_1_tree.html#ad26ec9d86d0ed3f360c88ea4342b726f',1,'saki::Tree::Tree(Tree &amp;&amp;other) noexcept']]],
+  ['tree_2eh',['tree.h',['../tree_8h.html',1,'']]],
+  ['tree_3c_20t_20_3e',['Tree&lt; T &gt;',['../classsaki_1_1_node.html#a151ca71f2c751d8a163f3f99ccf6cec9',1,'saki::Node']]],
+  ['type_5fmacro_2eh',['type_macro.h',['../type__macro_8h.html',1,'']]]
 ];

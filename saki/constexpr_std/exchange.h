@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_EXCHANGE_2018_11_21
 #define SAKI_EXCHANGE_2018_11_21
+#include <type_traits>
 
 namespace saki
 {
@@ -16,10 +17,10 @@ namespace saki
 	* @param next ’l‚É“ü‚ê‚é’l
 	*/
 	template<typename T, typename U = T>
-	constexpr T exchange(T& t, U next)
+	constexpr T exchange(T& t, U&& next)
 	{
-		T t1 = t;
-		t = static_cast<T>(next);
+		T t1 = std::move(t);
+		t = std::forward<U>(next);
 		return t1;
 	}
 }

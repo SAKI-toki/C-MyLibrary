@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefgilmnoprstvxyz~",
-  1: "acdimrsv",
+  0: "abcdefghilmnoprstvwxyz~",
+  1: "acdhimnrstv",
   2: "s",
-  3: "abcdefimprstv",
+  3: "abcdefhimnprstv",
   4: "acdefgilmnorstv~",
-  5: "pvxyz",
-  6: "s"
+  5: "pvwxyz",
+  6: "t",
+  7: "s"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "defines"
+  6: "related",
+  7: "defines"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "ファイル",
   4: "関数",
   5: "変数",
-  6: "マクロ定義"
+  6: "フレンド",
+  7: "マクロ定義"
 };
 

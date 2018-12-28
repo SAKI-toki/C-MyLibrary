@@ -11,12 +11,14 @@
 
 #include <saki/accumulate/accumulate.h>
 #include <saki/angle_math/angle_math.h>
+#include <saki/array/array.h>
 #include <saki/binary_operator/binary_operator.h>
 #include <saki/clock/clock.h>
 #include <saki/constexpr_std/constexpr_std.h>
 #include <saki/copy/copy.h>
 #include <saki/distance/distance.h>
 #include <saki/factorial/factorial.h>
+#include <saki/fibonacci/fibonacci.h>
 #include <saki/for_each/for_each.h>
 #include <saki/iota/iota.h>
 #include <saki/matrix/matrix.h>

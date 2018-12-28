@@ -7,14 +7,17 @@
 #pragma once
 #ifndef SAKI_TYPE_MACRO_2018_12_13
 #define SAKI_TYPE_MACRO_2018_12_13
-#include <type_traits> //for remove_cv_t
+#include <cstddef>
 
 #ifndef SAKI_TYPE_MACRO
 #define SAKI_TYPE_MACRO(T)				\
-using element_type = T;					\
-using value_type = std::remove_cv_t<T>;	\
+using value_type = T;					\
+using size_type = size_t;				\
+using difference_type = ptrdiff_t;		\
 using pointer = T*;						\
+using const_pointer = const T*;			\
 using reference = T&;					\
+using const_reference = const T&;		\
 
 #endif //SAKI_TYPE_MACRO
 

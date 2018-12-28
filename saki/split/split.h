@@ -11,6 +11,7 @@
 #include <vector>
 #include <type_traits>
 #include <saki/split/details/multiple_separation.h>
+#include <saki/split/details/not_equal_separation.h>
 #include <saki/meta/has_check_method.h>
 
 namespace saki
@@ -22,25 +23,36 @@ namespace saki
 	* @return ‹æØ‚Á‚½•¶š—ñ‚ğŠi”[‚·‚évectorƒNƒ‰ƒX
 	* @details bool check(char)‚ÌŠÖ”‚ğ‚Á‚Ä‚¢‚éƒNƒ‰ƒX‚È‚ç‚È‚ñ‚Å‚àó‚¯æ‚êAfalse‚ÌŠÔ•¶š‚ğŠi”[‚µ‘±‚¯‚Ü‚·
 	*/
-	template<typename T, typename std::enable_if_t<has_check_v<T>, std::nullptr_t> = nullptr>
-	std::vector<std::string> split(std::string str, T&& split_separation)
+	template<template<typename, typename> typename Container = std::vector, typename T,
+		typename std::enable_if_t<saki::has_check_v<T>, std::nullptr_t> = nullptr>
+		Container<std::string, std::allocator<std::string>> split(const std::string& str, T&& split_separation)
 	{
 		//‹æØ‚Á‚½•¶š—ñ‚ğ’Ç‰Á
 		std::vector<std::string> str_list;
-
 		size_t index = 0;
+		auto begin = std::begin(str);
 		while (index < str.size())
 		{
-			std::string buffer = "";
+			size_t start_index = index;
 			while (index < str.size() && !split_separation.check(str[index]))
 			{
-				buffer += str[index++];
+				++index;
 			}
-			str_list.push_back(buffer);
+			str_list.push_back(std::string(begin + start_index, begin + index));
 			++index;
 		}
-
-		return str_list;
+		//Œ^‚ªstd::vector‚È‚ç‚»‚Ì‚Ü‚Üstr_list‚ğ•Ô‚·
+		if constexpr (std::is_same_v<Container<std::string, std::allocator<std::string>>,
+			std::vector<std::string, std::allocator<std::string>>>)
+		{
+			return str_list;
+		}
+		//Œ^‚ªstd::list‚Ì‚æ‚¤‚É•Ê‚ÌŒ^‚È‚ç‚»‚ê‚É•ÏŠ·‚µ‚Ä‚©‚ç•Ô‚·
+		else
+		{
+			Container<std::string, std::allocator<std::string>> return_str_list(std::begin(str_list), std::end(str_list));
+			return return_str_list;
+		}
 	}
 
 	/**
@@ -50,26 +62,11 @@ namespace saki
 	* @param t 2‚Â–ÚˆÈ~‚Ì‹æØ‚è•¶š
 	* @return ‹æØ‚Á‚½•¶š—ñ‚ğŠi”[‚·‚évectorƒNƒ‰ƒX
 	*/
-	template<typename First,typename ...T>
-	std::vector<std::string> split(std::string str, First first_separation, T ...t)
+	template<template<typename, typename> typename Container = std::vector,
+		typename First, typename ...T>
+		Container<std::string, std::allocator<std::string>> split(const std::string& str, First first_separation, T ...t)
 	{
-		//‹æØ‚Á‚½•¶š—ñ‚ğ’Ç‰Á
-		std::vector<std::string> str_list;
-		//•¡”‹æØ‚è•¶š‚Ì¶¬
-		MultipleSeparation separation(first_separation, t...);
-		size_t index = 0;
-		while (index < str.size())
-		{
-			std::string buffer = "";
-			while (index < str.size() && !separation.check(str[index]))
-			{
-				buffer += str[index++];
-			}
-			str_list.push_back(buffer);
-			++index;
-		}
-
-		return str_list;
+		return split<Container>(str, saki::MultipleSeparation(first_separation, t...));
 	}
 }
 #endif //SAKI_SPLIT_2018_12_23

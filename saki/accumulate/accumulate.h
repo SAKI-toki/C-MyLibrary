@@ -37,7 +37,8 @@ namespace saki
 	* @return ‘S‚Ä‚Ì—v‘f‚ð‰ñ‚µ‚½Œ‹‰Ê
 	*/
 	template<typename Container, typename BinaryOperation>
-	auto accumulate(Container&& con, BinaryOperation&& binary_op, typename std::remove_reference_t<Container>::value_type init = 0)
+	auto accumulate(Container&& con, BinaryOperation&& binary_op, 
+		typename std::remove_reference_t<Container>::value_type init = 0)
 	{
 		for (auto&& n : con)
 		{

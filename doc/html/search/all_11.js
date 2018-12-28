@@ -1,4 +1,20 @@
 var searchData=
 [
-  ['x',['x',['../classsaki_1_1_vector2.html#a69df7df6da198f35ef8ed269eb095c27',1,'saki::Vector2::x()'],['../classsaki_1_1_vector3.html#a1fa58e9e75dbeb650afb3db740f3131c',1,'saki::Vector3::x()']]]
+  ['value',['value',['../structsaki_1_1can__begin.html#a6d16b8cbacbf7d9be197d09c517d503d',1,'saki::can_begin::value()'],['../structsaki_1_1has__check.html#aaf5325bde7c74e8afe2a69f8d657d62b',1,'saki::has_check::value()']]],
+  ['vector_2eh',['vector.h',['../vector_8h.html',1,'']]],
+  ['vector2',['Vector2',['../classsaki_1_1_vector2.html',1,'saki::Vector2&lt; T &gt;'],['../classsaki_1_1_vector2.html#af57b72f4255812a361bef1922a226f86',1,'saki::Vector2::Vector2()'],['../classsaki_1_1_vector2.html#abb15c5d7f0a663f4c6b179012bd942b4',1,'saki::Vector2::Vector2(const_reference _x, const_reference _y)'],['../classsaki_1_1_vector2.html#ac15263f1583a51e451b5089058fca60e',1,'saki::Vector2::Vector2(const_pointer const pointer)'],['../classsaki_1_1_vector2.html#a4b18314464e9f80aa053af5309fe4d6b',1,'saki::Vector2::Vector2(const Vector2&lt; value_type &gt; &amp;)=default'],['../classsaki_1_1_vector2.html#abaf03250171e9f2b18aa02aae22b6491',1,'saki::Vector2::Vector2(Vector2&lt; value_type &gt; &amp;&amp;) noexcept=default']]],
+  ['vector2_5fscalar_5fsome_5foperator',['vector2_scalar_some_operator',['../namespacesaki_1_1details.html#a8767a64d897787a3b0561939412abb28',1,'saki::details']]],
+  ['vector2_5fvector2_5fsome_5foperator',['vector2_vector2_some_operator',['../namespacesaki_1_1details.html#a1e3ab5ffafb707dc8d8b3cf054f3b2e3',1,'saki::details']]],
+  ['vector3',['Vector3',['../classsaki_1_1_vector3.html',1,'saki::Vector3&lt; T &gt;'],['../classsaki_1_1_vector3.html#a8617fe1a8d279c9673628728a0c5e5c6',1,'saki::Vector3::Vector3()'],['../classsaki_1_1_vector3.html#a02ad4760c906e6844a815be0dbf9aa55',1,'saki::Vector3::Vector3(const_reference _x, const_reference _y, const_reference _z)'],['../classsaki_1_1_vector3.html#a5771046eb72964a7022c411eddc543c2',1,'saki::Vector3::Vector3(const_pointer const pointer)'],['../classsaki_1_1_vector3.html#aa77d37d18ad52e9233a47ecc099c813c',1,'saki::Vector3::Vector3(const Vector3&lt; value_type &gt; &amp;)=default'],['../classsaki_1_1_vector3.html#adc58d81fc6c31626460d9f02e6c768c2',1,'saki::Vector3::Vector3(Vector3&lt; value_type &gt; &amp;&amp;) noexcept=default']]],
+  ['vector3_5fscalar_5fsome_5foperator',['vector3_scalar_some_operator',['../namespacesaki_1_1details.html#a65a656e3fd6cb4f45afc9137f5e6383a',1,'saki::details']]],
+  ['vector3_5fvector3_5fsome_5foperator',['vector3_vector3_some_operator',['../namespacesaki_1_1details.html#a9d9fd5673ab6516752ecf05845e7f9b9',1,'saki::details']]],
+  ['vector4',['Vector4',['../classsaki_1_1_vector4.html',1,'saki::Vector4&lt; T &gt;'],['../classsaki_1_1_vector4.html#a9e8579274314ee2639d60c501c8ecf61',1,'saki::Vector4::Vector4()'],['../classsaki_1_1_vector4.html#a0f448af7e8a95317faaeb2eddc34f953',1,'saki::Vector4::Vector4(const_reference _x, const_reference _y, const_reference _z, const_reference _w)'],['../classsaki_1_1_vector4.html#a2da5c000afd44b896e50096396ddab0c',1,'saki::Vector4::Vector4(const_pointer const pointer)'],['../classsaki_1_1_vector4.html#ad76d113b35be67e9ee27f1482900d8e2',1,'saki::Vector4::Vector4(const Vector4&lt; value_type &gt; &amp;)=default'],['../classsaki_1_1_vector4.html#a52a0d7f95e04f19c6e9f00116e4af550',1,'saki::Vector4::Vector4(Vector4&lt; value_type &gt; &amp;&amp;) noexcept=default']]],
+  ['vector4_5fscalar_5fsome_5foperator',['vector4_scalar_some_operator',['../namespacesaki_1_1details.html#a1786beb40b0c29d0e6ea19ce2aad110c',1,'saki::details']]],
+  ['vector4_5fvector4_5fsome_5foperator',['vector4_vector4_some_operator',['../namespacesaki_1_1details.html#a7faa5e95c73949e48acc6840c357990f',1,'saki::details']]],
+  ['vector_5f2d_2eh',['vector_2d.h',['../vector__2d_8h.html',1,'']]],
+  ['vector_5f2d_5foperator_2eh',['vector_2d_operator.h',['../vector__2d__operator_8h.html',1,'']]],
+  ['vector_5f3d_2eh',['vector_3d.h',['../vector__3d_8h.html',1,'']]],
+  ['vector_5f3d_5foperator_2eh',['vector_3d_operator.h',['../vector__3d__operator_8h.html',1,'']]],
+  ['vector_5f4d_2eh',['vector_4d.h',['../vector__4d_8h.html',1,'']]],
+  ['vector_5f4d_5foperator_2eh',['vector_4d_operator.h',['../vector__4d__operator_8h.html',1,'']]]
 ];

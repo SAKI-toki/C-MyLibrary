@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['macro_2eh',['macro.h',['../macro_8h.html',1,'']]],
-  ['matrix',['Matrix',['../classsaki_1_1_matrix.html',1,'saki::Matrix&lt; T &gt;'],['../classsaki_1_1_matrix.html#a820035e9bafc0fa4269c4b94b1ec4f4f',1,'saki::Matrix::Matrix()'],['../classsaki_1_1_matrix.html#ad4f497bd4ba2b7de464afea4436d9a51',1,'saki::Matrix::Matrix(const T &amp;m00, const T &amp;m01, const T &amp;m02, const T &amp;m03, const T &amp;m10, const T &amp;m11, const T &amp;m12, const T &amp;m13, const T &amp;m20, const T &amp;m21, const T &amp;m22, const T &amp;m23, const T &amp;m30, const T &amp;m31, const T &amp;m32, const T &amp;m33)'],['../classsaki_1_1_matrix.html#a945fec9cbcb1b175ac993db6a5c0cbd8',1,'saki::Matrix::Matrix(const T arr[4][4])'],['../classsaki_1_1_matrix.html#a08d28bd14af9be6650325574a20101d7',1,'saki::Matrix::Matrix(const Matrix&lt; T &gt; &amp;)=default'],['../classsaki_1_1_matrix.html#aced6f31e05917c2c41305dd0be082f8b',1,'saki::Matrix::Matrix(Matrix&lt; T &gt; &amp;&amp;) noexcept=default']]],
-  ['matrix_2eh',['matrix.h',['../matrix_8h.html',1,'']]],
-  ['matrix_5fmatrix_5fsome_5foperator',['matrix_matrix_some_operator',['../namespacesaki_1_1details.html#ab331ad2e5330aa422492d228d522aeea',1,'saki::details']]],
-  ['matrix_5foperator_2eh',['matrix_operator.h',['../matrix__operator_8h.html',1,'']]],
-  ['matrix_5fscalar_5fsome_5foperator',['matrix_scalar_some_operator',['../namespacesaki_1_1details.html#a3b467138701d036240cfbf728d3a7a2d',1,'saki::details']]],
-  ['meta_2eh',['meta.h',['../meta_8h.html',1,'']]],
-  ['multiplication',['multiplication',['../structsaki_1_1multiplication.html',1,'saki']]],
-  ['multiplication_2eh',['multiplication.h',['../multiplication_8h.html',1,'']]]
+  ['lerp',['lerp',['../namespacesaki.html#a5e45e40b08ddcb3cde0da9131078a9f7',1,'saki::lerp(const saki::Vector2&lt; T1 &gt; &amp;v1, const saki::Vector2&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)'],['../namespacesaki.html#a869e38d6d36699cc305e7bd15d6d3123',1,'saki::lerp(const saki::Vector3&lt; T1 &gt; &amp;v1, const saki::Vector3&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)'],['../namespacesaki.html#a2e19b53c0e5aea77a9ba2cf5142f2b5e',1,'saki::lerp(const saki::Vector4&lt; T1 &gt; &amp;v1, const saki::Vector4&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)']]]
 ];

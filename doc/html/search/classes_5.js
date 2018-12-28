@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['returnparam',['ReturnParam',['../structsaki_1_1_return_param.html',1,'saki']]]
+  ['matrix',['Matrix',['../classsaki_1_1_matrix.html',1,'saki']]],
+  ['multipleseparation',['MultipleSeparation',['../classsaki_1_1_multiple_separation.html',1,'saki']]],
+  ['multiplication',['multiplication',['../structsaki_1_1multiplication.html',1,'saki']]]
 ];

@@ -8,5 +8,6 @@
 #define SAKI_META_2018_12_13
 
 #include <saki/meta/can_begin_method.h>
+#include <saki/meta/has_check_method.h>
 
 #endif //SAKI_META_2018_12_13

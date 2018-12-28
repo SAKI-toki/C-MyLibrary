@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['immobileptr',['ImmobilePtr',['../classsaki_1_1_immobile_ptr.html',1,'saki']]]
+  ['has_5fcheck',['has_check',['../structsaki_1_1has__check.html',1,'saki']]]
 ];

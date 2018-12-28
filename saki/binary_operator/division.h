@@ -7,7 +7,6 @@
 #pragma once
 #ifndef SAKI_DIVISION_2018_12_08
 #define SAKI_DIVISION_2018_12_08
-
 namespace saki
 {
 	/**

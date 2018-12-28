@@ -17,7 +17,7 @@ namespace saki
 	* @param con1 コピーするコンテナクラス
 	* @param con2 ペーストするコンテナクラス
 	*/
-	template <typename Container1, typename Container2, typename std::enable_if_t<can_begin_v<Container2>, std::nullptr_t> = nullptr>
+	template <typename Container1, typename Container2, typename std::enable_if_t<saki::can_begin_v<Container2>, std::nullptr_t> = nullptr>
 	auto copy(Container1&& con1, Container2&& con2)
 	{
 		auto con1itr = std::begin(con1);
@@ -34,7 +34,7 @@ namespace saki
 	* @param con コピーするコンテナクラス
 	* @param outitr ペーストするコンテナクラスの最初のイテレーター
 	*/
-	template <typename Container, typename OutItr, typename std::enable_if_t<!can_begin_v<OutItr>, std::nullptr_t> = nullptr>
+	template <typename Container, typename OutItr, typename std::enable_if_t<!saki::can_begin_v<OutItr>, std::nullptr_t> = nullptr>
 	auto copy(Container&& con, OutItr outitr)
 	{
 		auto conitr = std::begin(con);

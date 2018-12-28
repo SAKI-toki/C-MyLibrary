@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/array/array.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ea0677f6bd09c5e013a964e4a8df9003.html">array</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">array.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="array_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef SAKI_ARRAY_2018_12_24</span></div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="array_8h.html#ae57f91c98698a93d72bd4e27a033ba44">    9</a></span>&#160;<span class="preprocessor">#define SAKI_ARRAY_2018_12_24</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="type__macro_8h.html">saki/macro/type_macro.h</a>&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="array__operator_8h.html">saki/array/details/array_operator.h</a>&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki.html">saki</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keywordtype">size_t</span> Size&gt;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsaki_1_1_array.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsaki_1_1_array.html">Array</a></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="type__macro_8h.html#a887a945f39183a6c615ed78abe5ab967">SAKI_TYPE_MACRO</a>(T)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        value_type arr[Size];</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">   30</a></span>&#160;        constexpr <a class="code" href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">Array</a>() :</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            arr{}</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {}</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ...U&gt;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classsaki_1_1_array.html#a74ecc29a94531923c38471eec411d652">   38</a></span>&#160;        constexpr <a class="code" href="classsaki_1_1_array.html#a74ecc29a94531923c38471eec411d652">Array</a>(<span class="keyword">const</span> U&amp; ...u) :</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            arr{ u... }</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {}</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">//デフォルトを使用</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">//デフォルトではメンバ変数のコピー、ムーブを行う</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">Array</a>(<span class="keyword">const</span> Array&lt;T, Size&gt;&amp;) = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Array&lt;T, Size&gt;&amp; <a class="code" href="classsaki_1_1_array.html#ab021e652e537713152ca89cc8f2b68c5">operator=</a>(<span class="keyword">const</span> Array&lt;T, Size&gt;&amp;) = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">Array</a>(Array&lt;T, Size&gt;&amp;&amp;)noexcept = default;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">Array</a>&lt;T, Size&gt;&amp; operator=(<a class="code" href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">Array</a>&lt;T, Size&gt;&amp;&amp;)noexcept = default;</div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classsaki_1_1_array.html#a58ffdb4c5484609ccdf0af3fb788fbfe">   50</a></span>&#160;        reference operator[](<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index)</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> arr[index];</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classsaki_1_1_array.html#a7ce9f5d7c63be78fb398d0e3afa804ea">   57</a></span>&#160;        constexpr const_reference <a class="code" href="classsaki_1_1_array.html#a7ce9f5d7c63be78fb398d0e3afa804ea">operator[]</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> index)<span class="keyword">const</span></div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">        </span>{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> arr[index];</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div><div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classsaki_1_1_array.html#a40cb0e5c23bc649a9e3cb7eaf5fd00ed">   65</a></span>&#160;        constexpr size_type <a class="code" href="classsaki_1_1_array.html#a40cb0e5c23bc649a9e3cb7eaf5fd00ed">size</a>()<span class="keyword">const</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">        </span>{</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> Size;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    };</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif //SAKI_ARRAY_2018_12_24</span></div><div class="ttc" id="classsaki_1_1_array_html_a74ecc29a94531923c38471eec411d652"><div class="ttname"><a href="classsaki_1_1_array.html#a74ecc29a94531923c38471eec411d652">saki::Array::Array</a></div><div class="ttdeci">constexpr Array(const U &amp;...u)</div><div class="ttdoc">引数ありコンストラクタ </div><div class="ttdef"><b>Definition:</b> array.h:38</div></div>
+<div class="ttc" id="classsaki_1_1_array_html_ab021e652e537713152ca89cc8f2b68c5"><div class="ttname"><a href="classsaki_1_1_array.html#ab021e652e537713152ca89cc8f2b68c5">saki::Array::operator=</a></div><div class="ttdeci">Array&lt; T, Size &gt; &amp; operator=(const Array&lt; T, Size &gt; &amp;)=default</div></div>
+<div class="ttc" id="classsaki_1_1_array_html_ab5e2245491b5c663807732f3c1d0aae7"><div class="ttname"><a href="classsaki_1_1_array.html#ab5e2245491b5c663807732f3c1d0aae7">saki::Array::Array</a></div><div class="ttdeci">constexpr Array()</div><div class="ttdoc">引数なしコンストラクタ </div><div class="ttdef"><b>Definition:</b> array.h:30</div></div>
+<div class="ttc" id="classsaki_1_1_array_html_a7ce9f5d7c63be78fb398d0e3afa804ea"><div class="ttname"><a href="classsaki_1_1_array.html#a7ce9f5d7c63be78fb398d0e3afa804ea">saki::Array::operator[]</a></div><div class="ttdeci">constexpr const_reference operator[](unsigned int index) const</div><div class="ttdoc">[]演算子(constexpr) </div><div class="ttdef"><b>Definition:</b> array.h:57</div></div>
+<div class="ttc" id="namespacesaki_html"><div class="ttname"><a href="namespacesaki.html">saki</a></div><div class="ttdef"><b>Definition:</b> accumulate.h:15</div></div>
+<div class="ttc" id="classsaki_1_1_array_html_a40cb0e5c23bc649a9e3cb7eaf5fd00ed"><div class="ttname"><a href="classsaki_1_1_array.html#a40cb0e5c23bc649a9e3cb7eaf5fd00ed">saki::Array::size</a></div><div class="ttdeci">constexpr size_type size() const</div><div class="ttdoc">配列の大きさを取得 </div><div class="ttdef"><b>Definition:</b> array.h:65</div></div>
+<div class="ttc" id="type__macro_8h_html"><div class="ttname"><a href="type__macro_8h.html">type_macro.h</a></div><div class="ttdoc">element_type,value_type,pointer,referenceを自動定義 </div></div>
+<div class="ttc" id="array__operator_8h_html"><div class="ttname"><a href="array__operator_8h.html">array_operator.h</a></div><div class="ttdoc">配列クラスの演算子 </div></div>
+<div class="ttc" id="type__macro_8h_html_a887a945f39183a6c615ed78abe5ab967"><div class="ttname"><a href="type__macro_8h.html#a887a945f39183a6c615ed78abe5ab967">SAKI_TYPE_MACRO</a></div><div class="ttdeci">#define SAKI_TYPE_MACRO(T)</div><div class="ttdef"><b>Definition:</b> type_macro.h:13</div></div>
+<div class="ttc" id="classsaki_1_1_array_html"><div class="ttname"><a href="classsaki_1_1_array.html">saki::Array</a></div><div class="ttdoc">コンパイル時固定長配列クラス </div><div class="ttdef"><b>Definition:</b> array.h:19</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

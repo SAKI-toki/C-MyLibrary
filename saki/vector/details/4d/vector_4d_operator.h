@@ -41,7 +41,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator+(const Vector4<T1>& v1, const Vector4<T2>& v2)
 	{
-		return details::vector4_vector4_some_operator(v1, v2, addition());
+		return details::vector4_vector4_some_operator(v1, v2, saki::addition());
 	}
 	/**
 	* @brief -演算子
@@ -49,7 +49,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator-(const Vector4<T1>& v1, const Vector4<T2>& v2)
 	{
-		return details::vector4_vector4_some_operator(v1, v2, subtraction());
+		return details::vector4_vector4_some_operator(v1, v2, saki::subtraction());
 	}
 	/**
 	* @brief *演算子(ベクトル*スカラ)
@@ -57,7 +57,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator*(const Vector4<T1>& v, const T2& scalar)
 	{
-		return details::vector4_scalar_some_operator(v, scalar, multiplication());
+		return details::vector4_scalar_some_operator(v, scalar, saki::multiplication());
 	}
 	/**
 	* @brief *演算子(スカラ*ベクトル)
@@ -73,7 +73,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator*(const Vector4<T1>& v1, const Vector4<T2>& v2)
 	{
-		return details::vector4_vector4_some_operator(v1, v2, multiplication());
+		return details::vector4_vector4_some_operator(v1, v2, saki::multiplication());
 	}
 	/**
 	* @brief /演算子(スカラ)
@@ -81,7 +81,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator/(const Vector4<T1>& v, const T2& scalar)
 	{
-		return details::vector4_scalar_some_operator(v, scalar, division());
+		return details::vector4_scalar_some_operator(v, scalar, saki::division());
 	}
 	/**
 	* @brief /演算子(ベクトル)
@@ -89,7 +89,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator/(const Vector4<T1>& v1, const Vector4<T2>& v2)
 	{
-		return details::vector4_vector4_some_operator(v1, v2, division());
+		return details::vector4_vector4_some_operator(v1, v2, saki::division());
 	}
 	/**
 	* @brief ==演算子

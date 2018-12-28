@@ -5,9 +5,8 @@
 * @date 2018/12/18
 */
 #pragma once
-#ifndef SAKI_TRANSFORM_2D_2018_12_18
-#define SAKI_TRANSFORM_2D_2018_12_18
-
+#ifndef SAKI_TRANSFORM_2018_12_18
+#define SAKI_TRANSFORM_2018_12_18
 #include <saki/vector/vector_3d.h>
 #include <saki/transform/details/transform_operator.h>
 
@@ -21,11 +20,11 @@ namespace saki
 	class Transform
 	{
 		//位置
-		Vector3<T> position;
+		saki::Vector3<T> position;
 		//回転
-		Vector3<T> rotation;
+		saki::Vector3<T> rotation;
 		//拡縮
-		Vector3<T> scale;
+		saki::Vector3<T> scale;
 	public:
 		/**
 		* @brief 引数なしコンストラクタ
@@ -39,7 +38,7 @@ namespace saki
 		* @param rot 回転
 		* @param sca 拡縮
 		*/
-		constexpr Transform(const Vector3<T>& pos, const Vector3<T> rot, const Vector3<T>sca) :
+		constexpr Transform(const saki::Vector3<T>& pos, const saki::Vector3<T> rot, const saki::Vector3<T>sca) :
 			position(pos), rotation(rot), scale(sca)
 		{}
 		//コピームーブはデフォルトを使用
@@ -52,7 +51,7 @@ namespace saki
 		* @brief 移動
 		* @param pos 移動量
 		*/
-		void move(const Vector3<T>& pos)
+		void move(const saki::Vector3<T>& pos)
 		{
 			position += pos;
 		}
@@ -64,13 +63,13 @@ namespace saki
 		*/
 		void move(const T& x, const T& y, const T& z)
 		{
-			position += Vector3<T>(x, y, z);
+			position += saki::Vector3<T>(x, y, z);
 		}
 		/**
 		* @brief 回転
 		* @param rot 回転量
 		*/
-		void rotate(const Vector3<T>& rot)
+		void rotate(const saki::Vector3<T>& rot)
 		{
 			rotation += rot;
 		}
@@ -82,13 +81,13 @@ namespace saki
 		*/
 		void rotate(const T& x, const T& y, const T& z)
 		{
-			rotation += Vector3<T>(x, y, z);
+			rotation += saki::Vector3<T>(x, y, z);
 		}
 		/**
 		* @brief 拡大
 		* @param sca 拡大量
 		*/
-		void expantion(const Vector3<T>& sca)
+		void expantion(const saki::Vector3<T>& sca)
 		{
 			scale += sca;
 		}
@@ -100,7 +99,7 @@ namespace saki
 		*/
 		void expantion(const T& x, const T& y, const T& z)
 		{
-			scale += Vector3<T>(x, y, z);
+			scale += saki::Vector3<T>(x, y, z);
 		}
 		/**
 		* @brief 位置のゲッタ
@@ -114,7 +113,7 @@ namespace saki
 		* @brief 位置のセッタ
 		* @param pos 位置
 		*/
-		void set_pos(const Vector3<T>& pos)
+		void set_pos(const saki::Vector3<T>& pos)
 		{
 			position = pos;
 		}
@@ -130,7 +129,7 @@ namespace saki
 		* @brief 回転のセッタ
 		* @param rot 回転
 		*/
-		void set_rot(const Vector3<T>& rot)
+		void set_rot(const saki::Vector3<T>& rot)
 		{
 			rotation = rot;
 		}
@@ -146,7 +145,7 @@ namespace saki
 		* @brief 拡縮のセッタ
 		* @param sca 拡縮
 		*/
-		void set_scale(const Vector3<T>& sca)
+		void set_scale(const saki::Vector3<T>& sca)
 		{
 			scale = sca;
 		}
@@ -154,7 +153,7 @@ namespace saki
 		* @brief +=演算子
 		*/
 		template<typename U = T>
-		auto operator+=(const Transform<U>& other)
+		auto operator+=(const saki::Transform<U>& other)
 		{
 			*this = *this + other;
 			return *this;
@@ -163,7 +162,7 @@ namespace saki
 		* @brief -=演算子
 		*/
 		template<typename U = T>
-		auto operator-=(const Transform<U>& other)
+		auto operator-=(const saki::Transform<U>& other)
 		{
 			*this = *this - other;
 			return *this;
@@ -189,18 +188,18 @@ namespace saki
 		/**
 		* @brief 単項+演算子
 		*/
-		constexpr Transform<T> operator+()const
+		constexpr saki::Transform<T> operator+()const
 		{
 			return *this;
 		}
 		/**
 		* @brief 単項-演算子
 		*/
-		constexpr Transform<T> operator-()const
+		constexpr saki::Transform<T> operator-()const
 		{
-			return Transform<T>(this->position * (-1), this->rotation * (-1), this->scale * (-1));
+			return saki::Transform<T>(this->position * (-1), this->rotation * (-1), this->scale * (-1));
 		}
 	};
 }
 
-#endif //SAKI_TRANSFORM_2D_2018_12_18
+#endif //SAKI_TRANSFORM_2018_12_18

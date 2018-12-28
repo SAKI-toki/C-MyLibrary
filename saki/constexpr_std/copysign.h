@@ -20,7 +20,7 @@ namespace saki
 	constexpr T copysign(const T& t, const SignType& st)
 	{
 		T abs = saki::abs(t);
-		return (st > 0) ? abs : -abs;
+		return (st >= 0) ? abs : -abs;
 	}
 }
 #endif //SAKI_COPYSIGN_2018_12_09

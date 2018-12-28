@@ -11,6 +11,7 @@
 #include <saki/constexpr_std/sqrt.h> //for constexpr_sqrt
 #include <saki/vector/details/4d/vector_4d_operator.h>
 #include <saki/macro/type_macro.h>
+#include <cmath>
 
 namespace saki
 {
@@ -23,13 +24,13 @@ namespace saki
 	public:
 		SAKI_TYPE_MACRO(T)
 	public:
-		T x, y, z, w;
+		value_type x, y, z, w;
 		/**
 		* @brief 引数なしコンストラクタ
 		* @details 全て0で初期化
 		*/
 		constexpr Vector4() :
-			x(T()), y(T()), z(T()), w(T())
+			x(value_type()), y(value_type()), z(value_type()), w(value_type())
 		{}
 		/**
 		* @brief 引数ありコンストラクタ
@@ -38,27 +39,27 @@ namespace saki
 		* @param _z zの初期値
 		* @param _w wの初期値
 		*/
-		constexpr Vector4(const T& _x, const T& _y, const T& _z, const T& _w) :
+		constexpr Vector4(const_reference _x, const_reference _y, const_reference _z, const_reference _w) :
 			x(_x), y(_y), z(_z), w(_w)
 		{}
 		/**
 		* @brief 生配列からの初期化
 		* @param pointer 配列のポインタ
 		*/
-		explicit constexpr Vector4(const T* const pointer) :
+		explicit constexpr Vector4(const_pointer const pointer) :
 			x(*pointer), y(*(pointer + 1)), z(*(pointer + 2)), w(*(pointer + 3))
 		{}
 		//デフォルトを使用
 		//デフォルトではメンバ変数のコピー、ムーブを行う
-		Vector4(const Vector4<T>&) = default;
-		Vector4<T>& operator=(const Vector4<T>&) = default;
-		Vector4(Vector4<T>&&)noexcept = default;
-		Vector4& operator=(Vector4<T>&&)noexcept = default;
+		Vector4(const Vector4<value_type>&) = default;
+		Vector4<value_type>& operator=(const Vector4<value_type>&) = default;
+		Vector4(Vector4<value_type>&&)noexcept = default;
+		Vector4<value_type>& operator=(Vector4<value_type>&&)noexcept = default;
 		/**
 		* @brief +=演算子
 		*/
-		template<typename U = T>
-		auto operator+=(const Vector4<U>& other)
+		template<typename U = value_type>
+		auto operator+=(const saki::Vector4<U>& other)
 		{
 			*this = *this + other;
 			return *this;
@@ -66,8 +67,8 @@ namespace saki
 		/**
 		* @brief -=演算子
 		*/
-		template<typename U = T>
-		auto operator-=(const Vector4<U>& other)
+		template<typename U = value_type>
+		auto operator-=(const saki::Vector4<U>& other)
 		{
 			*this = *this - other;
 			return *this;
@@ -75,7 +76,7 @@ namespace saki
 		/**
 		* @brief *=演算子(スカラ)
 		*/
-		template<typename U = T>
+		template<typename U = value_type>
 		auto operator*=(const U& scalar)
 		{
 			*this = *this * scalar;
@@ -84,8 +85,8 @@ namespace saki
 		/**
 		* @brief *=演算子(ベクトル)
 		*/
-		template<typename U = T>
-		auto operator*=(const Vector4<U>& other)
+		template<typename U = value_type>
+		auto operator*=(const saki::Vector4<U>& other)
 		{
 			*this = *this * other;
 			return *this;
@@ -93,7 +94,7 @@ namespace saki
 		/**
 		* @brief /=演算子(スカラ)
 		*/
-		template<typename U = T>
+		template<typename U = value_type>
 		auto operator/=(const U& scalar)
 		{
 			*this = *this / scalar;
@@ -102,8 +103,8 @@ namespace saki
 		/**
 		* @brief /=演算子(ベクトル)
 		*/
-		template<typename U = T>
-		auto operator/=(const Vector4<U>& other)
+		template<typename U = value_type>
+		auto operator/=(const saki::Vector4<U>& other)
 		{
 			*this = *this / other;
 			return *this;
@@ -111,35 +112,35 @@ namespace saki
 		/**
 		* @brief 単項+演算子
 		*/
-		constexpr Vector4<T> operator+()const
+		constexpr saki::Vector4<value_type> operator+()const
 		{
 			return *this;
 		}
 		/**
 		* @brief 単項-演算子
 		*/
-		constexpr Vector4<T> operator-()const
+		constexpr saki::Vector4<value_type> operator-()const
 		{
-			return Vector4<T>(this->x * (-1), this->y * (-1), this->z * (-1), this->w * (-1));
+			return saki::Vector4<value_type>(this->x * (-1), this->y * (-1), this->z * (-1), this->w * (-1));
 		}
 		/**
 		* @brief []演算子
 		*/
-		T& operator[](const unsigned int index)
+		reference operator[](const unsigned int index)
 		{
 			return (index == 0) ? this->x : (index == 1) ? this->y : (index == 2) ? this->z : this->w;
 		}
 		/**
 		* @brief []演算子(constexpr)
 		*/
-		constexpr T operator[](const unsigned int index)const
+		constexpr const_reference operator[](const unsigned int index)const
 		{
 			return (index == 0) ? this->x : (index == 1) ? this->y : (index == 2) ? this->z : this->w;
 		}
 		/**
 		* @brief ++演算子(前置)
 		*/
-		Vector4<T>& operator++()
+		saki::Vector4<value_type>& operator++()
 		{
 			this->x += 1; this->y += 1; this->z += 1; this->w += 1;
 			return *this;
@@ -147,16 +148,16 @@ namespace saki
 		/**
 		* @brief ++演算子(後置)
 		*/
-		Vector4<T> operator++(int)
+		saki::Vector4<value_type> operator++(int)
 		{
-			Vector4<T> temp = *this;
+			saki::Vector4<value_type> temp = *this;
 			this->x += 1; this->y += 1; this->z += 1; this->w += 1;
 			return temp;
 		}
 		/**
 		* @brief --演算子(前置)
 		*/
-		Vector4<T>& operator--()
+		saki::Vector4<value_type>& operator--()
 		{
 			this->x -= 1; this->y -= 1; this->z -= 1; this->w -= 1;
 			return *this;
@@ -164,9 +165,9 @@ namespace saki
 		/**
 		* @brief --演算子(後置)
 		*/
-		Vector4<T> operator--(int)
+		saki::Vector4<value_type> operator--(int)
 		{
-			Vector4<T> temp = *this;
+			saki::Vector4<value_type> temp = *this;
 			this->x -= 1; this->y -= 1; this->z -= 1; this->w -= 1;
 			return temp;
 		}
@@ -177,7 +178,7 @@ namespace saki
 		void normalize()
 		{
 			//分母
-			auto den = saki::sqrt(this->x * this->x + this->y * this->y + this->z * this->z + this->w * this->w);
+			auto den = std::sqrt(this->x * this->x + this->y * this->y + this->z * this->z + this->w * this->w);
 			if (den == 0)
 			{
 				this->x = 0;
@@ -193,60 +194,60 @@ namespace saki
 				this->w /= den;
 			}
 		}
-		/**
-		* @brief 正規化
-		* @return 正規化したもの
-		* @details thisは正規化しない、int型の場合、すべての要素が0で帰ります
-		*/
-		template<typename U = double>
-		constexpr Vector4<U> return_normalize()const
-		{
-			//分母
-			auto den = saki::sqrt(this->x * this->x + this->y * this->y + this->z * this->z + this->w * this->w);
-			if (den == 0)
-			{
-				return Vector4<U>
-					(static_cast<U>(0),//x
-						static_cast<U>(0),//y
-						static_cast<U>(0),//z
-						static_cast<U>(0));//w
-			}
-			else
-			{
-				return Vector4<U>
-					(static_cast<U>(this->x / den),//x
-						static_cast<U>(this->y / den),//y
-						static_cast<U>(this->z / den),//z
-						static_cast<U>(this->w / den));//w
-			}
-		}
 	};
 
 	/**
 	* @brief Vector4のオールゼロ
 	*/
 	template<typename T>
-	static constexpr Vector4<T> vector4_zero{ static_cast<T>(0), static_cast<T>(0), static_cast<T>(0),static_cast<T>(0) };
+	static constexpr saki::Vector4<T> vector4_zero{ static_cast<T>(0), static_cast<T>(0), static_cast<T>(0),static_cast<T>(0) };
 	/**
 	* @brief Vector4のオールワン
 	*/
 	template<typename T>
-	static constexpr Vector4<T> vector4_one{ static_cast<T>(1), static_cast<T>(1), static_cast<T>(1),static_cast<T>(1) };
+	static constexpr saki::Vector4<T> vector4_one{ static_cast<T>(1), static_cast<T>(1), static_cast<T>(1),static_cast<T>(1) };
 	/**
 	* @brief Vector4の最小値
 	*/
 	template<typename T>
-	static constexpr Vector4<T> vector4_min{ std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min() };
+	static constexpr saki::Vector4<T> vector4_min{ std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min() };
 	/**
 	* @brief Vector4の最大値
 	*/
 	template<typename T>
-	static constexpr Vector4<T> vector4_max{ std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max() };
+	static constexpr saki::Vector4<T> vector4_max{ std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max() };
+
+	/**
+	* @brief 正規化
+	* @return 正規化したもの
+	*/
+	template<typename U = double,typename T>
+	constexpr saki::Vector4<U> normalize(const saki::Vector4<T>& v)
+	{
+		//分母
+		auto den = saki::sqrt(v.x * v.x + v.y * v.y + v.z * v.z + v.w * v.w);
+		if (den == 0)
+		{
+			return saki::Vector4<U>
+				(static_cast<U>(0),//x
+					static_cast<U>(0),//y
+					static_cast<U>(0),//z
+					static_cast<U>(0));//w
+		}
+		else
+		{
+			return saki::Vector4<U>
+				(static_cast<U>(v.x / den),//x
+					static_cast<U>(v.y / den),//y
+					static_cast<U>(v.z / den),//z
+					static_cast<U>(v.w / den));//w
+		}
+	}
 	/**
 	* @brief 内積
 	*/
 	template<typename U = double, typename T1, typename T2>
-	constexpr U dot(const Vector4<T1>& v1, const Vector4<T2>& v2)
+	constexpr U dot(const saki::Vector4<T1>& v1, const saki::Vector4<T2>& v2)
 	{
 		return static_cast<U>(v1.x * v2.x + v1.y * v2.y + v1.z * v2.z + v1.w * v2.w);
 	}
@@ -255,10 +256,10 @@ namespace saki
 	* @details Quaternionは使用していません
 	*/
 	template<typename U = double, typename T1, typename T2, typename T = double>
-	constexpr Vector4<U> lerp(const Vector4<T1>& v1, const Vector4<T2>& v2, const T& t, const T& base = 1)
+	constexpr saki::Vector4<U> lerp(const saki::Vector4<T1>& v1, const saki::Vector4<T2>& v2, const T& t, const T& base = 1)
 	{
 		auto ratio = t / base;
-		return Vector4<U>(
+		return saki::Vector4<U>(
 			v1.x + (v2.x - v1.x) * ratio,
 			v1.y + (v2.y - v1.y) * ratio,
 			v1.z + (v2.z - v1.z) * ratio,

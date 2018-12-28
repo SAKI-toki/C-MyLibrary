@@ -3,5 +3,5 @@ var searchData=
   ['random',['random',['../namespacesaki.html#a636caf16f2f00cb734cc867646ac233f',1,'saki']]],
   ['release',['release',['../classsaki_1_1_immobile_ptr.html#a669b89e9c884f703f9dafc1257d694bf',1,'saki::ImmobilePtr']]],
   ['reset',['reset',['../classsaki_1_1_immobile_ptr.html#abc92fb9bf2200ecc6304164ae6c00e09',1,'saki::ImmobilePtr']]],
-  ['return_5fnormalize',['return_normalize',['../classsaki_1_1_vector2.html#ad4fe2f7cb118bfad82333017c15c591a',1,'saki::Vector2::return_normalize()'],['../classsaki_1_1_vector3.html#aba9ad0892e1219ced218a194afa18d14',1,'saki::Vector3::return_normalize()']]]
+  ['rotate',['rotate',['../classsaki_1_1_transform.html#adf6071b145056f24ca2a456bb4331999',1,'saki::Transform::rotate(const saki::Vector3&lt; T &gt; &amp;rot)'],['../classsaki_1_1_transform.html#a32092ef9a74c34b01b68068f7a6319e1',1,'saki::Transform::rotate(const T &amp;x, const T &amp;y, const T &amp;z)']]]
 ];

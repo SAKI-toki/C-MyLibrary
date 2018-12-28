@@ -21,7 +21,8 @@ namespace saki
 	* @param interval ‚¢‚­‚Â‚¨‚«‚É’l‚ðŠi”[‚³‚¹‚é‚©
 	*/
 	template<typename Container>
-	void iota(Container&& con, typename std::remove_reference_t<Container>::value_type init = 0, typename std::remove_reference_t<Container>::value_type interval = 1)
+	void iota(Container&& con, typename std::remove_reference_t<Container>::value_type init = 0, 
+		typename std::remove_reference_t<Container>::value_type interval = 1)
 	{
 		for (auto&& n : con)
 		{
@@ -38,7 +39,8 @@ namespace saki
 	* @param interval ‚¢‚­‚Â‚¨‚«‚É’l‚ðŠi”[‚³‚¹‚é‚©
 	*/
 	template<typename Iterator>
-	void iota(Iterator start, const Iterator& end, typename std::remove_reference_t<Iterator>::value_type init = 0, typename std::remove_reference_t<Iterator>::value_type interval = 1)
+	void iota(Iterator start, const Iterator& end, typename std::remove_reference_t<Iterator>::value_type init = 0, 
+		typename std::remove_reference_t<Iterator>::value_type interval = 1)
 	{
 		for (; start != end; ++start)
 		{

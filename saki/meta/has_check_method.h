@@ -1,14 +1,13 @@
 /**
-* @file has_separation_check_method.h
+* @file has_check_method.h
 * @brief 指定した型がcheck関数を持っているかどうか判定するメタ関数
 * @author 石山 悠
 * @date 2018/12/23
 */
 #pragma once
-#ifndef SAKI_HAS_SEPARATION_CHECK_METHOD_2018_12_23
-#define SAKI_HAS_SEPARATION_CHECK_METHOD_2018_12_23
+#ifndef SAKI_HAS_CHECK_METHOD_2018_12_23
+#define SAKI_HAS_CHECK_METHOD_2018_12_23
 #include <type_traits>
-#include <string>
 
 namespace saki
 {
@@ -30,6 +29,6 @@ namespace saki
 	* @brief has_checkを簡単に呼び出せる変数
 	*/
 	template<typename T>
-	static constexpr auto has_check_v = has_check<T>::value;
+	static constexpr auto has_check_v = saki::has_check<T>::value;
 }
-#endif //SAKI_HAS_SEPARATION_CHECK_METHOD_2018_12_23
+#endif //SAKI_HAS_CHECK_METHOD_2018_12_23

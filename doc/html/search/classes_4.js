@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../classsaki_1_1_matrix.html',1,'saki']]],
-  ['multiplication',['multiplication',['../structsaki_1_1multiplication.html',1,'saki']]]
+  ['immobileptr',['ImmobilePtr',['../classsaki_1_1_immobile_ptr.html',1,'saki']]]
 ];

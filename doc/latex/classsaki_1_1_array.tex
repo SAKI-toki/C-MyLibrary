@@ -1,0 +1,141 @@
+\hypertarget{classsaki_1_1_array}{}\section{saki\+:\+:Array$<$ T, Size $>$ クラステンプレート}
+\label{classsaki_1_1_array}\index{saki\+::\+Array$<$ T, Size $>$@{saki\+::\+Array$<$ T, Size $>$}}
+
+
+コンパイル時固定長配列クラス  
+
+
+
+
+{\ttfamily \#include $<$array.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classsaki_1_1_array_ab5e2245491b5c663807732f3c1d0aae7}{Array}} ()
+\begin{DoxyCompactList}\small\item\em 引数なしコンストラクタ \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename ... U$>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1_array_a74ecc29a94531923c38471eec411d652}{Array}} (const U \&...u)
+\begin{DoxyCompactList}\small\item\em 引数ありコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsaki_1_1_array_ad556a6929d862c01d46ea34c7b7f148a}{Array}} (const \mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&)=default
+\item 
+\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \& \mbox{\hyperlink{classsaki_1_1_array_ab021e652e537713152ca89cc8f2b68c5}{operator=}} (const \mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&)=default
+\item 
+\mbox{\hyperlink{classsaki_1_1_array_a686fcaee74acba32d3b539c9f9583548}{Array}} (\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \& \mbox{\hyperlink{classsaki_1_1_array_ac84bee02284ec576151f067e4de117db}{operator=}} (\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&\&) noexcept=default
+\item 
+reference \mbox{\hyperlink{classsaki_1_1_array_a58ffdb4c5484609ccdf0af3fb788fbfe}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]}演算子 \end{DoxyCompactList}\item 
+constexpr const\+\_\+reference \mbox{\hyperlink{classsaki_1_1_array_a7ce9f5d7c63be78fb398d0e3afa804ea}{operator\mbox{[}$\,$\mbox{]}}} (unsigned int index) const
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]}演算子(constexpr) \end{DoxyCompactList}\item 
+constexpr size\+\_\+type \mbox{\hyperlink{classsaki_1_1_array_a40cb0e5c23bc649a9e3cb7eaf5fd00ed}{size}} () const
+\begin{DoxyCompactList}\small\item\em 配列の大きさを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T, size\+\_\+t Size$>$\newline
+class saki\+::\+Array$<$ T, Size $>$}
+
+コンパイル時固定長配列クラス 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1_array_ab5e2245491b5c663807732f3c1d0aae7}\label{classsaki_1_1_array_ab5e2245491b5c663807732f3c1d0aae7}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1_array}{Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+引数なしコンストラクタ 
+
+全て0で初期化 \mbox{\Hypertarget{classsaki_1_1_array_a74ecc29a94531923c38471eec411d652}\label{classsaki_1_1_array_a74ecc29a94531923c38471eec411d652}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+template$<$typename ... U$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{const U \&...}]{u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+引数ありコンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em u} & 配列の初期化値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1_array_ad556a6929d862c01d46ea34c7b7f148a}\label{classsaki_1_1_array_ad556a6929d862c01d46ea34c7b7f148a}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classsaki_1_1_array_a686fcaee74acba32d3b539c9f9583548}\label{classsaki_1_1_array_a686fcaee74acba32d3b539c9f9583548}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!Array@{Array}}
+\index{Array@{Array}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{Array()}{Array()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1_array}{Array}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1_array_ab021e652e537713152ca89cc8f2b68c5}\label{classsaki_1_1_array_ab021e652e537713152ca89cc8f2b68c5}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$T, Size$>$\& \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classsaki_1_1_array_ac84bee02284ec576151f067e4de117db}\label{classsaki_1_1_array_ac84bee02284ec576151f067e4de117db}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$T, Size$>$\& \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1_array}{Array}}$<$ T, Size $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classsaki_1_1_array_a58ffdb4c5484609ccdf0af3fb788fbfe}\label{classsaki_1_1_array_a58ffdb4c5484609ccdf0af3fb788fbfe}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+reference \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{[}\mbox{]}演算子 
+
+\mbox{\Hypertarget{classsaki_1_1_array_a7ce9f5d7c63be78fb398d0e3afa804ea}\label{classsaki_1_1_array_a7ce9f5d7c63be78fb398d0e3afa804ea}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr const\+\_\+reference \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{[}\mbox{]}演算子(constexpr) 
+
+\mbox{\Hypertarget{classsaki_1_1_array_a40cb0e5c23bc649a9e3cb7eaf5fd00ed}\label{classsaki_1_1_array_a40cb0e5c23bc649a9e3cb7eaf5fd00ed}} 
+\index{saki\+::\+Array@{saki\+::\+Array}!size@{size}}
+\index{size@{size}!saki\+::\+Array@{saki\+::\+Array}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr size\+\_\+type \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array}}$<$ T, Size $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+配列の大きさを取得 
+
+\begin{DoxyReturn}{戻り値}
+配列の大きさ 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/array/\mbox{\hyperlink{array_8h}{array.\+h}}\end{DoxyCompactItemize}

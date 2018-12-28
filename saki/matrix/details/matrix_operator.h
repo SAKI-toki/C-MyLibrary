@@ -20,36 +20,36 @@ namespace saki
 		* @brief 行列同士の演算(+と-)
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto matrix_matrix_some_operator(const Matrix<T1>& m1, const Matrix<T2>& m2, Func&& f)
+		constexpr auto matrix_matrix_some_operator(const Matrix<T1>& m1, const Matrix<T2>& m2, const Func& f)
 		{
 			return Matrix<decltype(std::declval<T1>() * std::declval<T2>())>
 			{
-				f(m1.at_constexpr(0, 0), m2.at_constexpr(0, 0)), f(m1.at_constexpr(0, 1), m2.at_constexpr(0, 1)),
-					f(m1.at_constexpr(0, 2), m2.at_constexpr(0, 2)), f(m1.at_constexpr(0, 3), m2.at_constexpr(0, 3)),
-					f(m1.at_constexpr(1, 0), m2.at_constexpr(1, 0)), f(m1.at_constexpr(1, 1), m2.at_constexpr(1, 1)),
-					f(m1.at_constexpr(1, 2), m2.at_constexpr(1, 2)), f(m1.at_constexpr(1, 3), m2.at_constexpr(1, 3)),
-					f(m1.at_constexpr(2, 0), m2.at_constexpr(2, 0)), f(m1.at_constexpr(2, 1), m2.at_constexpr(2, 1)),
-					f(m1.at_constexpr(2, 2), m2.at_constexpr(2, 2)), f(m1.at_constexpr(2, 3), m2.at_constexpr(2, 3)),
-					f(m1.at_constexpr(3, 0), m2.at_constexpr(3, 0)), f(m1.at_constexpr(3, 1), m2.at_constexpr(3, 1)),
-					f(m1.at_constexpr(3, 2), m2.at_constexpr(3, 2)), f(m1.at_constexpr(3, 3), m2.at_constexpr(3, 3))
+				f(m1[0][0], m2[0][0]), f(m1[0][1], m2[0][1]),
+					f(m1[0][2], m2[0][2]), f(m1[0][3], m2[0][3]),
+					f(m1[1][0], m2[1][0]), f(m1[1][1], m2[1][1]),
+					f(m1[1][2], m2[1][2]), f(m1[1][3], m2[1][3]),
+					f(m1[2][0], m2[2][0]), f(m1[2][1], m2[2][1]),
+					f(m1[2][2], m2[2][2]), f(m1[2][3], m2[2][3]),
+					f(m1[3][0], m2[3][0]), f(m1[3][1], m2[3][1]),
+					f(m1[3][2], m2[3][2]), f(m1[3][3], m2[3][3])
 			};
 		}
 		/**
 		* @brief 行列とスカラの演算
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto matrix_scalar_some_operator(const Matrix<T1>& m, const T2& scalar, Func&& f)
+		constexpr auto matrix_scalar_some_operator(const Matrix<T1>& m, const T2& scalar, const Func& f)
 		{
 			return Matrix<decltype(std::declval<T1>() * std::declval<T2>())>
 			{
-				f(m.at_constexpr(0, 0), scalar), f(m.at_constexpr(0, 1), scalar),
-					f(m.at_constexpr(0, 2), scalar), f(m.at_constexpr(0, 3), scalar),
-					f(m.at_constexpr(1, 0), scalar), f(m.at_constexpr(1, 1), scalar),
-					f(m.at_constexpr(1, 2), scalar), f(m.at_constexpr(1, 3), scalar),
-					f(m.at_constexpr(2, 0), scalar), f(m.at_constexpr(2, 1), scalar),
-					f(m.at_constexpr(2, 2), scalar), f(m.at_constexpr(2, 3), scalar),
-					f(m.at_constexpr(3, 0), scalar), f(m.at_constexpr(3, 1), scalar),
-					f(m.at_constexpr(3, 2), scalar), f(m.at_constexpr(3, 3), scalar)
+				f(m[0][0], scalar), f(m[0][1], scalar),
+					f(m[0][2], scalar), f(m[0][3], scalar),
+					f(m[1][0], scalar), f(m[1][1], scalar),
+					f(m[1][2], scalar), f(m[1][3], scalar),
+					f(m[2][0], scalar), f(m[2][1], scalar),
+					f(m[2][2], scalar), f(m[2][3], scalar),
+					f(m[3][0], scalar), f(m[3][1], scalar),
+					f(m[3][2], scalar), f(m[3][3], scalar)
 			};
 		}
 	}
@@ -59,7 +59,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator+(const Matrix<T1>& m1, const Matrix<T2>& m2)
 	{
-		return details::matrix_matrix_some_operator(m1, m2, addition());
+		return details::matrix_matrix_some_operator(m1, m2, saki::addition());
 	}
 	/**
 	* @brief -演算子
@@ -67,7 +67,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator-(const Matrix<T1>& m1, const Matrix<T2>& m2)
 	{
-		return details::matrix_matrix_some_operator(m1, m2, subtraction());
+		return details::matrix_matrix_some_operator(m1, m2, saki::subtraction());
 	}
 	/**
 	* @brief *演算子(行列*スカラ)
@@ -75,7 +75,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator*(const Matrix<T1>& m, const T2& scalar)
 	{
-		return details::matrix_scalar_some_operator(m, scalar, multiplication());
+		return details::matrix_scalar_some_operator(m, scalar, saki::multiplication());
 	}
 	/**
 	* @brief *演算子(スカラ*行列)
@@ -100,7 +100,7 @@ namespace saki
 				m_type sum = 0;
 				for (int k = 0; k < 4; ++k)
 				{
-					sum += m1.at_constexpr(i, k)*m2.at_constexpr(k, j);
+					sum += m1[i][k] * m2[k][j];
 				}
 				arr[i][j] = sum;
 			}
@@ -113,7 +113,7 @@ namespace saki
 	template<typename T1, typename T2>
 	constexpr auto operator/(const Matrix<T1>& m, const T2& scalar)
 	{
-		return details::matrix_scalar_some_operator(m, scalar, division());
+		return details::matrix_scalar_some_operator(m, scalar, saki::division());
 	}
 	/**
 	* @brief ==演算子
@@ -125,7 +125,7 @@ namespace saki
 		{
 			for (int j = 0; j < 4; ++j)
 			{
-				if (m1.at_constexpr(i, j) != m2.at_constexpr(i, j)) { return false; }
+				if (m1[i][j] != m2[i][j]) { return false; }
 			}
 		}
 		return true;
@@ -149,7 +149,7 @@ namespace saki
 		{
 			for (int j = 0; j < 4; ++j)
 			{
-				if (m1.at_constexpr(i, j) != m2.at_constexpr(i, j)) { return false; }
+				if (m1[i][j] != m2[i][j]) { return false; }
 			}
 		}
 		return true;

@@ -9,7 +9,6 @@
 #define SAKI_CAN_BEGIN_METHOD_2018_12_13
 #include <type_traits>
 #include <iterator>
-
 namespace saki
 {
 	/**
@@ -30,6 +29,6 @@ namespace saki
 	* @brief can_begin‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 	template<typename T>
-	static constexpr auto can_begin_v = can_begin<T>::value;
+	static constexpr auto can_begin_v = saki::can_begin<T>::value;
 }
 #endif //SAKI_CAN_BEGIN_METHOD_2018_12_13

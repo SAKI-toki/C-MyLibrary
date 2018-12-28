@@ -9,6 +9,7 @@
 {\ttfamily \#include $<$saki/constexpr\+\_\+std/sqrt.\+h$>$}\newline
 {\ttfamily \#include $<$saki/vector/details/2d/vector\+\_\+2d\+\_\+operator.\+h$>$}\newline
 {\ttfamily \#include $<$saki/macro/type\+\_\+macro.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,11 +28,13 @@ class \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2$<$ T $>$}}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a724d6c36d761314950d3ec8be6a4f4ab}{saki\+::dot}} (const Vector2$<$ T1 $>$ \&v1, const Vector2$<$ T2 $>$ \&v2)
+{\footnotesize template$<$typename U  = double, typename T $>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ U $>$ \mbox{\hyperlink{namespacesaki_a333cfdbbc10458e1e2d59dbba448b19c}{saki\+::normalize}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T $>$ \&v)
+\begin{DoxyCompactList}\small\item\em 正規化 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_ab82e30fbfefb8153e8488bd78a163258}{saki\+::dot}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T2 $>$ \&v2)
 \begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_ab3e7c6abdd4377486e393407283a492b}{saki\+::cross}} (const Vector2$<$ T1 $>$ \&v1, const Vector2$<$ T2 $>$ \&v2)
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_afafc06ccc85183ee8b08a2cbeded09c8}{saki\+::cross}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T2 $>$ \&v2)
 \begin{DoxyCompactList}\small\item\em 外積 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename U  = double, typename T1 , typename T2 , typename T  = double$>$ }\\constexpr Vector2$<$ U $>$ \mbox{\hyperlink{namespacesaki_a5fab9c2e4cffc4270b42004c4334c52a}{saki\+::lerp}} (const Vector2$<$ T1 $>$ \&v1, const Vector2$<$ T2 $>$ \&v2, const T \&t, const T \&base=1)
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 , typename T  = double$>$ }\\constexpr Vector2$<$ U $>$ \mbox{\hyperlink{namespacesaki_a5e45e40b08ddcb3cde0da9131078a9f7}{saki\+::lerp}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T2 $>$ \&v2, const T \&t, const T \&base=1)
 \begin{DoxyCompactList}\small\item\em 線形補間 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

@@ -7,7 +7,9 @@
 #pragma once
 #ifndef SAKI_SQRT_2018_11_21
 #define SAKI_SQRT_2018_11_21
-#include <cmath> //for nan
+#include <cmath>
+#include <limits>
+
 namespace saki
 {
 	/**
@@ -18,10 +20,14 @@ namespace saki
 	template<typename T1 = double, typename T2 = double>
 	constexpr T1 sqrt(const T2& n)
 	{
-		//0œZ‚â•‰”‚ÌŒvZ‚ğ‚µ‚È‚¢‚æ‚¤‚É‚·‚é
-		if (n == 0)return 0;
-		if (n < 0)return -nan("ind");
-		T1 prev = n / 2;
+		//NaN‚©infinity‚©0‚È‚ç‚»‚Ì‚Ü‚Ü•Ô‚·
+		if (!(n == n) ||
+			n == std::numeric_limits<T2>::infinity() ||
+			n == 0)return n;
+		//0ˆÈ‰º‚È‚ç-NaN‚ğ•Ô‚·
+		if (n < 0)return -std::numeric_limits<T2>::quiet_NaN();
+
+		T1 prev = n / 2.0;
 		T1 next = (prev + n / prev) * 0.5;
 		while (prev != next)
 		{
