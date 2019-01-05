@@ -13,14 +13,14 @@ namespace saki
 {
 	/**
 	* @brief コンパイル時exchange
-	* @param t 値を入れられる値
-	* @param next 値に入れる値
+	* @param obj 値を入れられる値
+	* @param new_val 値に入れる値
 	*/
 	template<typename T, typename U = T>
-	constexpr T exchange(T& t, U&& next)
+	constexpr T exchange(T& obj, U&& new_val)
 	{
-		T t1 = std::move(t);
-		t = std::forward<U>(next);
+		T t1 = std::move(obj);
+		obj = std::forward<U>(new_val);
 		return t1;
 	}
 }

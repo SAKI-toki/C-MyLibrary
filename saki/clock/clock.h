@@ -8,7 +8,7 @@
 #ifndef SAKI_CLOCK_2018_12_04
 #define SAKI_CLOCK_2018_12_04
 #include <saki/singleton/singleton.h>
-#include <ctime>
+#include <chrono>
 namespace saki
 {
 	/**
@@ -16,43 +16,70 @@ namespace saki
 	*/
 	class Clock :public saki::Singleton<Clock>
 	{
-		clock_t start_time;//開始時間
+		std::chrono::system_clock::time_point start_time;//開始時間
 	public:
 		/**
 		* @brief コンストラクタ
 		*/
-		Clock() :start_time(clock()) {}
+		Clock() :start_time(std::chrono::system_clock::now()) {}
 	public:
-		
+		enum class DURATION { HOUR, MINUTE, SECOND, MILLISECOND, MICROSECOND, NANOSECOND, NONE };
 		/**
 		* @brief 開始時間のセット
 		*/
 		void start()
 		{
-			start_time = clock();
+			start_time = std::chrono::system_clock::now();
 		}
 		/**
 		* @brief 開始時間をセットしてからの時間を返す
-		* @param ms trueならミリ秒,falseなら秒で返す
+		* @param duration どの単位で返すか
 		* return 時間
 		*/
 		template<typename T = double>
-		T end(bool ms = true)
+		T end(DURATION duration = DURATION::MILLISECOND)
 		{
-			clock_t end_time = clock();
-			return static_cast<T>(static_cast<double>(end_time - start_time) / ((ms) ? 1 : (CLOCKS_PER_SEC)));
+			auto elapsed_time = std::chrono::duration_cast<std::chrono::nanoseconds>
+				(std::chrono::system_clock::now() - start_time).count();
+			switch (duration)
+			{
+			case DURATION::MICROSECOND: //マイクロ秒
+			{
+				return static_cast<T>(elapsed_time * 0.001);
+			}
+			case DURATION::MILLISECOND: //ミリ秒
+			{
+				return static_cast<T>(elapsed_time * 0.001 * 0.001);
+			}
+			case DURATION::SECOND: //秒
+			{
+				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001);
+			}
+			case DURATION::MINUTE: //分
+			{
+				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001 * 60);
+			}
+			case DURATION::HOUR: //時間
+			{
+				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001 * 60 * 60);
+			}
+			default: //ナノ秒
+			{
+				return static_cast<T>(elapsed_time);
+			}
+			}
 		}
 		/**
 		* @brief 開始時間をセットしてからの時間を返し、そこからまた時間をスタートする
-		* @param ms trueならミリ秒,falseなら秒で返す
+		* @param duration どの単位で返すか
 		* return 時間
 		*/
 		template<typename T = double>
-		T end_and_start(bool ms = true)
+		T end_and_start(DURATION duration = DURATION::MILLISECOND)
 		{
-			auto end_time = end<T>(ms);
+			auto t = end<T>(duration);
 			start();
-			return end_time;
+			return t;
 		}
 	};
 }

@@ -7,7 +7,7 @@
 #pragma once
 #ifndef SAKI_DISTANCE_2018_12_06
 #define SAKI_DISTANCE_2018_12_06
-#include <saki/constexpr_std/sqrt.h>
+#include <saki/math/sqrt.h>
 
 namespace saki
 {

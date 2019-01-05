@@ -8,6 +8,7 @@
 #ifndef SAKI_MATRIX_2018_12_13
 #define SAKI_MATRIX_2018_12_13
 #include <saki/matrix/details/matrix_operator.h>
+#include <saki/matrix/details/matrix_math.h>
 #include <saki/macro/type_macro.h>
 #include <saki/vector/vector_4d.h>
 #include <saki/array/array.h>
@@ -60,16 +61,16 @@ namespace saki
 		explicit constexpr Matrix(const U arr[4][4]) :
 			m(
 				saki::Array<value_type, 4>
-				(static_cast<value_type>(arr[0][0]), static_cast<value_type>(arr[0][1]), 
+				(static_cast<value_type>(arr[0][0]), static_cast<value_type>(arr[0][1]),
 					static_cast<value_type>(arr[0][2]), static_cast<value_type>(arr[0][3])),
 				saki::Array<value_type, 4>(
-					static_cast<value_type>(arr[1][0]), static_cast<value_type>(arr[1][1]), 
+					static_cast<value_type>(arr[1][0]), static_cast<value_type>(arr[1][1]),
 					static_cast<value_type>(arr[1][2]), static_cast<value_type>(arr[1][3])),
 				saki::Array<value_type, 4>(
-					static_cast<value_type>(arr[2][0]), static_cast<value_type>(arr[2][1]), 
+					static_cast<value_type>(arr[2][0]), static_cast<value_type>(arr[2][1]),
 					static_cast<value_type>(arr[2][2]), static_cast<value_type>(arr[2][3])),
 				saki::Array<value_type, 4>(
-					static_cast<value_type>(arr[3][0]), static_cast<value_type>(arr[3][1]), 
+					static_cast<value_type>(arr[3][0]), static_cast<value_type>(arr[3][1]),
 					static_cast<value_type>(arr[3][2]), static_cast<value_type>(arr[3][3]))
 			)
 		{}
@@ -81,17 +82,17 @@ namespace saki
 		* @param v4 4çsñ⁄
 		*/
 		template<typename U1, typename U2, typename U3, typename U4>
-		constexpr Matrix(const saki::Vector4<U1>& v1, const saki::Vector4<U2>& v2, 
+		constexpr Matrix(const saki::Vector4<U1>& v1, const saki::Vector4<U2>& v2,
 			const saki::Vector4<U3>& v3, const saki::Vector4<U4>& v4) :
 			m(
 				saki::Array<value_type, 4>(
-					static_cast<value_type>(v1.x), static_cast<value_type>(v1.y), 
+					static_cast<value_type>(v1.x), static_cast<value_type>(v1.y),
 					static_cast<value_type>(v1.z), static_cast<value_type>(v1.w)),
 				saki::Array<value_type, 4>(
-					static_cast<value_type>(v2.x), static_cast<value_type>(v2.y), 
+					static_cast<value_type>(v2.x), static_cast<value_type>(v2.y),
 					static_cast<value_type>(v2.z), static_cast<value_type>(v2.w)),
 				saki::Array<value_type, 4>(
-					static_cast<value_type>(v3.x), static_cast<value_type>(v3.y), 
+					static_cast<value_type>(v3.x), static_cast<value_type>(v3.y),
 					static_cast<value_type>(v3.z), static_cast<value_type>(v3.w)),
 				saki::Array<value_type, 4>(
 					static_cast<value_type>(v4.x), static_cast<value_type>(v4.y),
@@ -161,21 +162,21 @@ namespace saki
 		*/
 		constexpr saki::Matrix<value_type> operator-()const
 		{
-			return saki::Matrix<value_type>(
+			return saki::Matrix<value_type>{
 				m[0][0] * -1, m[0][1] * -1,
-				m[0][2] * -1, m[0][3] * -1,
-				m[1][0] * -1, m[1][1] * -1,
-				m[1][2] * -1, m[1][3] * -1,
-				m[2][0] * -1, m[2][1] * -1,
-				m[2][2] * -1, m[2][3] * -1,
-				m[3][0] * -1, m[3][1] * -1,
-				m[3][2] * -1, m[3][3] * -1,
-				);
+					m[0][2] * -1, m[0][3] * -1,
+					m[1][0] * -1, m[1][1] * -1,
+					m[1][2] * -1, m[1][3] * -1,
+					m[2][0] * -1, m[2][1] * -1,
+					m[2][2] * -1, m[2][3] * -1,
+					m[3][0] * -1, m[3][1] * -1,
+					m[3][2] * -1, m[3][3] * -1,
+			};
 		}
 		/**
 		* @brief []ââéZéq
 		*/
-		saki::Array<value_type, 4>& operator[](const unsigned int index)
+		constexpr saki::Array<value_type, 4>& operator[](const unsigned int index)
 		{
 			return m[index];
 		}

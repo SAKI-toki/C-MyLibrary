@@ -7,20 +7,20 @@
 #pragma once
 #ifndef SAKI_COPYSIGN_2018_12_09
 #define SAKI_COPYSIGN_2018_12_09
-#include <saki/constexpr_std/abs.h>
+#include <saki/math/abs.h>
 
 namespace saki
 {
 	/**
 	* @brief コンパイル時符号コピー
-	* @param t 絶対値
-	* @param st 符号
+	* @param x 絶対値
+	* @param y 符号
 	*/
 	template<typename T,typename SignType>
-	constexpr T copysign(const T& t, const SignType& st)
+	constexpr T copysign(const T& x, const SignType& y)
 	{
-		T abs = saki::abs(t);
-		return (st >= 0) ? abs : -abs;
+		T abs_n = saki::abs(x);
+		return (y >= 0) ? abs_n : -abs_n;
 	}
 }
 #endif //SAKI_COPYSIGN_2018_12_09

@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_ARRAY_2018_12_24
 #define SAKI_ARRAY_2018_12_24
+#include <cstddef>
 #include <saki/macro/type_macro.h>
 #include <saki/array/details/array_operator.h>
 
@@ -35,7 +36,7 @@ namespace saki
 		* @param u 配列の初期化値
 		*/
 		template<typename ...U>
-		constexpr Array(const U& ...u) :
+		explicit constexpr Array(const U& ...u) :
 			arr{ u... }
 		{}
 		//デフォルトを使用
@@ -47,14 +48,14 @@ namespace saki
 		/**
 		* @brief []演算子
 		*/
-		reference operator[](unsigned int index)
+		constexpr reference operator[](size_t index)
 		{
 			return arr[index];
 		}
 		/**
 		* @brief []演算子(constexpr)
 		*/
-		constexpr const_reference operator[](unsigned int index)const
+		constexpr const_reference operator[](size_t index)const
 		{
 			return arr[index];
 		}
@@ -67,5 +68,26 @@ namespace saki
 			return Size;
 		}
 	};
+
+	/**
+	* @brief 配列の連結
+	* @param arr1,arr2 連結する配列
+	* @return 連結した配列
+	*/
+	template<typename T,size_t Size1,size_t Size2>
+	constexpr auto arraycat(const saki::Array<T, Size1>& arr1, const saki::Array<T, Size2>& arr2)
+	{
+		saki::Array<T, Size1 + Size2> arr{};
+		size_t index = 0;
+		for (size_t i = 0; i < arr1.size(); ++i)
+		{
+			arr[index++] = arr1[i];
+		}
+		for (size_t i = 0; i < arr2.size(); ++i)
+		{
+			arr[index++] = arr2[i];
+		}
+		return arr;
+	}
 }
 #endif //SAKI_ARRAY_2018_12_24

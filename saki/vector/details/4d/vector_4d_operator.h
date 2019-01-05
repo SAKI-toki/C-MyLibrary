@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_VECTOR_4D_OPERATOR_2018_12_13
 #define SAKI_VECTOR_4D_OPERATOR_2018_12_13
+#include <utility>
 #include <saki/binary_operator/binary_operator.h>
 #include <type_traits>
 

@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_MATRIX_OPERATOR_2018_12_13
 #define SAKI_MATRIX_OPERATOR_2018_12_13
+#include <utility>
 #include <saki/binary_operator/binary_operator.h>
 
 namespace saki

@@ -24,11 +24,11 @@ namespace saki
 	T random(const T random_min, const T random_max)
 	{
 		assert(random_min <= random_max);
-		static std::random_device rd;
-		static std::mt19937 mt(rd());
+		std::random_device rd;
+		std::mt19937 mt(rd());
 		if constexpr(std::is_integral_v<T>)
 		{
-			std::uniform_int_distribution<int> rnd(random_min, random_max);
+			std::uniform_int_distribution<T> rnd(random_min, random_max);
 			return rnd(mt);
 		}
 		else

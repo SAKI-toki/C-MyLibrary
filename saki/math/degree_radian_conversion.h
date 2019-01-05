@@ -7,7 +7,7 @@
 #pragma once
 #ifndef SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13
 #define SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13
-#include <saki/pi.h>
+#include <saki/math/pi.h>
 namespace saki
 {
 	/**

@@ -8,7 +8,7 @@
 #ifndef SAKI_VECTOR_2D_2018_12_13
 #define SAKI_VECTOR_2D_2018_12_13
 #include <limits> //for numeric_limits
-#include <saki/constexpr_std/sqrt.h> //for constexpr_sqrt
+#include <saki/math/sqrt.h> //for constexpr_sqrt
 #include <saki/vector/details/2d/vector_2d_operator.h>
 #include <saki/macro/type_macro.h>
 #include <cmath>
@@ -125,7 +125,7 @@ namespace saki
 		/**
 		* @brief []‰‰ŽZŽq
 		*/
-		reference operator[](const size_type index)
+		constexpr reference operator[](const size_type index)
 		{
 			return (index == 0) ? this->x : this->y;
 		}
