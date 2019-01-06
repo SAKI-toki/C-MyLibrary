@@ -13,7 +13,7 @@
 namespace saki
 {
 	/**
-	* @brief フィボナッチ数列をコンパイル時に求める関数
+	* @brief フィボナッチ数列を求める関数
 	* @details 仮引数に求めたい番号を入れる(94以降は計算できません)
 	*/
 	template<size_t N, typename T = uint64_t>
@@ -30,12 +30,12 @@ namespace saki
 	}
 
 	/**
-	* @brief フィボナッチ数列をじっこう時に求める関数
+	* @brief フィボナッチ数列求める関数
 	* @param N 求めたい番号
 	* @details 94以降は計算できません
 	*/
 	template<typename T = uint64_t>
-	T fibonacci(size_t N)
+	constexpr T fibonacci(size_t N)
 	{
 		return N > 2 ? fibonacci<T>(N - 1) + fibonacci<T>(N - 2) : 1;
 	}

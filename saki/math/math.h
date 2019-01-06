@@ -9,6 +9,10 @@
 #define SAKI_MATH_2019_01_02
 
 #include <saki/math/abs.h>
+#include <saki/math/acos.h>
+#include <saki/math/asin.h>
+#include <saki/math/atan.h>
+#include <saki/math/atan2.h>
 #include <saki/math/copysign.h>
 #include <saki/math/cos.h>
 #include <saki/math/degree_radian_conversion.h>

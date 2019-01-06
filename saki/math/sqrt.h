@@ -23,16 +23,16 @@ namespace saki
 		//NaN‚©infinity‚©0‚È‚ç‚»‚Ì‚Ü‚Ü•Ô‚·
 		if (saki::isnan(x) ||
 			x == std::numeric_limits<T2>::infinity() ||
-			x == 0)return x;
+			x == 0)return static_cast<T1>(x);
 		//0ˆÈ‰º‚È‚ç-NaN‚ð•Ô‚·
-		if (x < 0)return -std::numeric_limits<T2>::quiet_NaN();
+		if (x < 0)return -std::numeric_limits<T1>::quiet_NaN();
 
-		T1 prev = x / 2.0;
-		T1 next = (prev + x / prev) * 0.5;
+		T1 prev = static_cast<T1>(x / 2.0);
+		T1 next = static_cast<T1>((prev + x / prev) * 0.5);
 		while (prev != next)
 		{
 			prev = next;
-			next = (prev + x / prev) * 0.5;
+			next = static_cast<T1>((prev + x / prev) * 0.5);
 		}
 		return prev;
 	}

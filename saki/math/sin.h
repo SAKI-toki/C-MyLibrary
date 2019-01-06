@@ -50,14 +50,14 @@ namespace saki
 	/**
 	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
 	*/
-	float sinf(float x)
+	constexpr float sinf(float x)
 	{
 		return saki::sin(x);
 	}
 	/**
 	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
 	*/
-	long double sinl(long double x)
+	constexpr long double sinl(long double x)
 	{
 		return saki::sin(x);
 	}

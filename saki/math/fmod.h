@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_FMOD_2019_01_02
 #define SAKI_FMOD_2019_01_02
+#include <type_traits>
 #include <limits>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
@@ -19,8 +20,8 @@ namespace saki
 	* @param y Š„‚é”
 	* @return è—]
 	*/
-	template<typename T = double, typename T1, typename T2>
-	constexpr T fmod(T1 x, T2 y)
+	template<typename T = double, typename T1>
+	constexpr T fmod(T1 x, T1 y)
 	{
 		if (saki::isnan(x))
 		{
@@ -32,19 +33,43 @@ namespace saki
 			}
 		}
 		if (saki::isnan(y))return static_cast<T>(y);
-		if (x == std::numeric_limits<T>::infinity() ||
-			x == -std::numeric_limits<T>::infinity() ||
+		if (x == std::numeric_limits<T1>::infinity() ||
+			x == -std::numeric_limits<T1>::infinity() ||
 			y == 0)
 		{
 			return -std::numeric_limits<T>::quiet_NaN();
 		}
 		if (x == 0)return static_cast<T>(x);
-		if (y == std::numeric_limits<T>::infinity() ||
-			y == -std::numeric_limits<T>::infinity())
+		if (y == std::numeric_limits<T1>::infinity() ||
+			y == -std::numeric_limits<T1>::infinity())
 		{
 			return static_cast<T>(x);
 		}
-		return static_cast<T>(x - static_cast<int>(x / y)*y);
+
+		//ˆ—
+		return static_cast<T>(x - static_cast<int>(x / y) * y);
+	}
+	/**
+	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
+	*/
+	template<typename T=double,typename T1,typename T2>
+	constexpr T fmod(T1 x, T2 y)
+	{
+		return saki::fmod(static_cast<T>(x), static_cast<T>(y));
+	}
+	/**
+	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
+	*/
+	float fmodf(float x, float y)
+	{
+		return saki::fmod<float>(x, y);
+	}
+	/**
+	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
+	*/
+	long double l(long double x, long double y)
+	{
+		return saki::fmod<long double>(x, y);
 	}
 }
 #endif //SAKI_FMOD_2019_01_02

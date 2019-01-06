@@ -2,11 +2,11 @@
 * @file factorial.h
 * @brief ŠKæ
 * @author ÎR —I
-* @date 2018/11/22
+* @date 2019/01/06
 */
 #pragma once
-#ifndef SAKI_FACTORIAL_2018_11_22
-#define SAKI_FACTORIAL_2018_11_22
+#ifndef SAKI_FACTORIAL_2019_01_06
+#define SAKI_FACTORIAL_2019_01_06
 #include <cstdint>
 #include <cstddef>
 
@@ -36,7 +36,9 @@ namespace saki
 	}
 
 
-
+	/**
+	* @brief Œ^‚²‚Æ‚ÌÅ‘åŠKæ”
+	*/
 	template<typename T>
 	struct factorial_limits
 	{
@@ -122,10 +124,5 @@ namespace saki
 	{
 		static constexpr size_t limit = 22;
 	};
-	/*template<>
-	struct factorial_limits<>
-	{
-		static constexpr size_t limit = 49;
-	};*/
 }
-#endif //SAKI_FACTORIAL_2018_11_22
+#endif //SAKI_FACTORIAL_2019_01_06

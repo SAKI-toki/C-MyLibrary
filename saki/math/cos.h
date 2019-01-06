@@ -38,9 +38,9 @@ namespace saki
 
 		T sum = 0;
 		int n = 0;
-		while (n < saki::factorial_limits<T>::limit)
+		while (n <= saki::factorial_limits<T>::limit / 2)
 		{
-			sum += saki::pow<T>(-1, n) *
+			sum += ((n % 2 == 0) ? 1 : -1) *
 				saki::pow<T>(x, 2 * n) /
 				saki::factorial<T>(2 * n);
 			++n;
@@ -61,14 +61,14 @@ namespace saki
 	/**
 	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
 	*/
-	float cosf(float x)
+	constexpr float cosf(float x)
 	{
 		return saki::cos(x);
 	}
 	/**
 	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
 	*/
-	long double cosl(long double x)
+	constexpr long double cosl(long double x)
 	{
 		return saki::cos(x);
 	}

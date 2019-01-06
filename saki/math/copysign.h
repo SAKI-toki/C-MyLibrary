@@ -7,7 +7,9 @@
 #pragma once
 #ifndef SAKI_COPYSIGN_2018_12_09
 #define SAKI_COPYSIGN_2018_12_09
+#include <limits>
 #include <saki/math/abs.h>
+#include <saki/math/isnan.h>
 
 namespace saki
 {
@@ -16,10 +18,10 @@ namespace saki
 	* @param x ê‚ëŒíl
 	* @param y ïÑçÜ
 	*/
-	template<typename T,typename SignType>
+	template<typename T, typename SignType>
 	constexpr T copysign(const T& x, const SignType& y)
 	{
-		T abs_n = saki::abs(x);
+		T abs_n = (saki::isnan(x)) ? std::numeric_limits<T>::quiet_NaN() : saki::abs(x);
 		return (y >= 0) ? abs_n : -abs_n;
 	}
 }
