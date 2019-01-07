@@ -66,7 +66,7 @@ namespace saki
 		typename First, typename ...T>
 		Container<std::string, std::allocator<std::string>> split(const std::string& str, First first_separation, T ...t)
 	{
-		return split<Container>(str, saki::MultipleSeparation(first_separation, t...));
+		return saki::split<Container>(str, saki::MultipleSeparation(first_separation, t...));
 	}
 }
 #endif //SAKI_SPLIT_2018_12_23

@@ -31,6 +31,10 @@ namespace saki
 					-std::numeric_limits<T>::quiet_NaN() :
 					std::numeric_limits<T>::quiet_NaN();
 			}
+			else
+			{
+				return x;
+			}
 		}
 		if (saki::isnan(y))return static_cast<T>(y);
 		if (x == std::numeric_limits<T1>::infinity() ||
@@ -52,7 +56,7 @@ namespace saki
 	/**
 	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
 	*/
-	template<typename T=double,typename T1,typename T2>
+	template<typename T = double, typename T1, typename T2>
 	constexpr T fmod(T1 x, T2 y)
 	{
 		return saki::fmod(static_cast<T>(x), static_cast<T>(y));

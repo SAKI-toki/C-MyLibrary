@@ -33,6 +33,10 @@ namespace saki
 					-std::numeric_limits<T>::quiet_NaN() :
 					std::numeric_limits<T>::quiet_NaN();
 			}
+			else
+			{
+				return x;
+			}
 		}
 		if (saki::isnan(y))return static_cast<T>(y);
 		if (y == 0)
@@ -89,13 +93,10 @@ namespace saki
 	/**
 	* @brief Œ^‚ğ‚»‚ë‚¦‚é
 	*/
-	template<typename T1, typename T2,
-		typename std::enable_if_t<std::is_arithmetic_v<T1>, std::nullptr_t> = nullptr,
-		typename std::enable_if_t<std::is_arithmetic_v<T2>, std::nullptr_t> = nullptr>
-		constexpr auto atan2(T1 y, T2 x)
+	template<typename T = double, typename T1, typename T2>
+		constexpr T atan2(T1 y, T2 x)
 	{
-		using type = decltype(std::declval<T1>()*std::declval<T2>());
-		return atan2(static_cast<type>(y), static_cast<type>(x));
+		return atan2(static_cast<T>(y), static_cast<T>(x));
 	}
 	/**
 	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•

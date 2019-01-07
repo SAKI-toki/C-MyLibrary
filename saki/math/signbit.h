@@ -8,6 +8,7 @@
 #ifndef SAKI_SIGNBIT_2019_01_03
 #define SAKI_SIGNBIT_2019_01_03
 #include <saki/math/copysign.h>
+#include <saki/math/isnan.h>
 
 namespace saki
 {

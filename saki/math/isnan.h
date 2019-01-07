@@ -2,11 +2,11 @@
 * @file isnan.h
 * @brief Not a Number‚©‚Ç‚¤‚©”»’è‚·‚éŠÖ”
 * @author ÎR —I
-* @date 2018/01/02
+* @date 2019/01/02
 */
 #pragma once
-#ifndef SAKI_ISNAN_2018_01_02
-#define SAKI_ISNAN_2018_01_02
+#ifndef SAKI_ISNAN_2019_01_02
+#define SAKI_ISNAN_2019_01_02
 
 namespace saki
 {
@@ -21,4 +21,4 @@ namespace saki
 		return !(x == x);
 	}
 }
-#endif //SAKI_ISNAN_2018_01_02
+#endif //SAKI_ISNAN_2019_01_02
