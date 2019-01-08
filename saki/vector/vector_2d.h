@@ -255,7 +255,7 @@ namespace saki
 	* @details Quaternion‚ÍŽg—p‚µ‚Ä‚¢‚Ü‚¹‚ñ
 	*/
 	template<typename U = double, typename T1, typename T2, typename T = double>
-	constexpr Vector2<U> lerp(const saki::Vector2<T1>& v1, const saki::Vector2<T2>& v2, const T& t, const T& base = 1)
+	constexpr saki::Vector2<U> lerp(const saki::Vector2<T1>& v1, const saki::Vector2<T2>& v2, const T& t, const T& base = 1)
 	{
 		auto ratio = t / base;
 		return saki::Vector2<U>(

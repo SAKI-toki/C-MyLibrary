@@ -31,7 +31,7 @@ namespace saki
 			ad = -1;
 			x = 1 / x;
 		}
-		while (x > saki::sqrt<T>(2))
+		while (x > saki::details::sqrt_v<2, T>)
 		{
 			ad *= 2;
 			x = saki::sqrt<T>(x);

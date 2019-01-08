@@ -38,9 +38,9 @@ namespace saki
 			while (sum != _sum)
 			{
 				_sum = sum;
-				sum += ((n % 2 == 0) ? 1 : -1)*
-					saki::pow<T>(x, 2 * n + 1) /
-					(2 * n + 1);
+				sum += static_cast<T>(((n % 2 == 0) ? 1 : -1)*
+					saki::pow(x, 2 * n + 1) /
+					(2 * n + 1));
 				++n;
 			}
 			return sum;

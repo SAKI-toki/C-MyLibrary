@@ -11,6 +11,7 @@
 #include <limits>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
+#include <saki/math/isinf.h>
 
 namespace saki
 {
@@ -37,15 +38,12 @@ namespace saki
 			}
 		}
 		if (saki::isnan(y))return static_cast<T>(y);
-		if (x == std::numeric_limits<T1>::infinity() ||
-			x == -std::numeric_limits<T1>::infinity() ||
-			y == 0)
+		if (saki::isinf(x) || y == 0)
 		{
 			return -std::numeric_limits<T>::quiet_NaN();
 		}
 		if (x == 0)return static_cast<T>(x);
-		if (y == std::numeric_limits<T1>::infinity() ||
-			y == -std::numeric_limits<T1>::infinity())
+		if (saki::isinf(y))
 		{
 			return static_cast<T>(x);
 		}

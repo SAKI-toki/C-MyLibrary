@@ -14,22 +14,21 @@
 #include <saki/math/pow.h>
 #include <saki/math/isnan.h>
 #include <saki/math/cos.h>
+#include <saki/math/isinf.h>
 
 namespace saki
 {
 	/**
 	* @brief コンパイル時sin
-	* @param x ラジアン角
 	*/
 	template<typename T,
 		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
 		constexpr T sin(T x)
 	{
 		//NaN
-		if (saki::isnan(x))return x;
+		if (saki::isnan(x) || x == 0)return x;
 		//inf
-		if (x == std::numeric_limits<T>::infinity() ||
-			x == -std::numeric_limits<T>::infinity())
+		if (saki::isinf(x))
 		{
 			return -std::numeric_limits<T>::quiet_NaN();
 		}
@@ -38,7 +37,6 @@ namespace saki
 	}
 	/**
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	* @param x int型のラジアン角
 	*/
 	template<typename T,
 		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>

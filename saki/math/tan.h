@@ -12,6 +12,7 @@
 #include <saki/math/isnan.h>
 #include <saki/math/sin.h>
 #include <saki/math/cos.h>
+#include <saki/math/isinf.h>
 
 namespace saki
 {
@@ -26,8 +27,7 @@ namespace saki
 		//NaN
 		if (saki::isnan(x))return x;
 		//inf
-		if (x == std::numeric_limits<T>::infinity() ||
-			x == -std::numeric_limits<T>::infinity())
+		if (saki::isinf(x))
 		{
 			return -std::numeric_limits<T>::quiet_NaN();
 		}

@@ -16,6 +16,7 @@
 #include <saki/math/fmod.h>
 #include <saki/math/abs.h>
 #include <saki/math/is_odd_even.h>
+#include <saki/math/isinf.h>
 
 namespace saki
 {
@@ -67,8 +68,7 @@ namespace saki
 			}
 		}
 		if (x == -1 &&
-			(y == std::numeric_limits<T>::infinity() ||
-				y == -std::numeric_limits<T>::infinity()))return static_cast<T>(1);
+			(saki::isinf(y)))return static_cast<T>(1);
 		if (y == -std::numeric_limits<T>::infinity())
 		{
 			if (saki::abs(x) < 1)return std::numeric_limits<T>::infinity();
@@ -96,6 +96,11 @@ namespace saki
 		}
 		if (x < 0 && saki::fmod(y, 1) != 0)return -std::numeric_limits<T>::quiet_NaN();
 
+		if (saki::fmod(y, 1) == 0)
+		{
+			return saki::details::pow_n(x, static_cast<int>(y));
+		}
+
 		if (x < 0)
 		{
 			if (saki::is_odd(y))
@@ -115,10 +120,10 @@ namespace saki
 	/**
 	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
 	*/
-	template<typename T = double, typename T1, typename T2>
-	constexpr T pow(T1 x, T2 y)
+	template<typename T1, typename T2>
+	constexpr double pow(T1 x, T2 y)
 	{
-		return pow(static_cast<T>(x), static_cast<T>(y));
+		return pow(static_cast<double>(x), static_cast<double>(y));
 	}
 	/**
 	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•

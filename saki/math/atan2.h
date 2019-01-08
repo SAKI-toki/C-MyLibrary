@@ -14,6 +14,7 @@
 #include <saki/math/copysign.h>
 #include <saki/math/atan.h>
 #include <saki/math/pi.h>
+#include <saki/math/isinf.h>
 
 namespace saki
 {
@@ -47,8 +48,7 @@ namespace saki
 		{
 			return saki::copysign(saki::PI_HALF<T>, y);
 		}
-		if (y == std::numeric_limits<T>::infinity() ||
-			y == -std::numeric_limits<T>::infinity())
+		if (saki::isinf(y))
 		{
 			return (x == std::numeric_limits<T>::infinity()) ?
 				saki::copysign(saki::PI_QUARTER<T>, y) :

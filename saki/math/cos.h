@@ -13,6 +13,7 @@
 #include <saki/math/pi.h>
 #include <saki/math/pow.h>
 #include <saki/math/isnan.h>
+#include <saki/math/isinf.h>
 
 namespace saki
 {
@@ -27,8 +28,7 @@ namespace saki
 		//NaN
 		if (saki::isnan(x))return x;
 		//inf
-		if (x == std::numeric_limits<T>::infinity() ||
-			x == -std::numeric_limits<T>::infinity())
+		if (saki::isinf(x))
 		{
 			return -std::numeric_limits<T>::quiet_NaN();
 		}
@@ -40,9 +40,9 @@ namespace saki
 		int n = 0;
 		while (n <= saki::factorial_limits<T>::limit / 2)
 		{
-			sum += ((n % 2 == 0) ? 1 : -1) *
+			sum += static_cast<T>(((n % 2 == 0) ? 1 : -1) *
 				saki::pow<T>(x, 2 * n) /
-				saki::factorial<T>(2 * n);
+				saki::factorial<T>(2 * n));
 			++n;
 		}
 		return sum;

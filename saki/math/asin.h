@@ -38,11 +38,11 @@ namespace saki
 			int n = 0;
 			while (n <= saki::factorial_limits<T>::limit / 2)
 			{
-				sum += saki::factorial<T>(2 * n)*
-					saki::pow<T>(x, 2 * n + 1) /
-					(saki::pow<T>(4, n)*
-						saki::pow<T>(saki::factorial<T>(n), 2) *
-						(2 * n + 1));
+				sum += static_cast<T>(saki::factorial<T>(2 * n)*
+					saki::pow(x, 2 * n + 1) /
+					(saki::pow(4, n)*
+						saki::pow(saki::factorial<T>(n), 2) *
+						(2 * n + 1)));
 
 				++n;
 			}
