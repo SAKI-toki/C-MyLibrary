@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_SINH_2019_01_08
 #define SAKI_SINH_2019_01_08
+#include <cstddef>
 #include <type_traits>
 #include <limits>
 #include <saki/math/factorial.h>
@@ -26,7 +27,7 @@ namespace saki
 		if (saki::isnan(x) ||saki::isinf(x)|| x == 0)return x;
 
 		T sum = 0;
-		int n = 0;
+		size_t n = 0;
 		while (2 * n + 1 <= saki::factorial_limits<T>::limit)
 		{
 			sum += static_cast<T>(saki::pow(x, 2 * n + 1) / saki::factorial<T>(2 * n + 1));
@@ -42,21 +43,6 @@ namespace saki
 		constexpr double sinh(T x)
 	{
 		return saki::sinh(static_cast<double>(x));
-	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float sinhf(float x)
-	{
-		return saki::sinh(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double sinhl(long double x)
-	{
-		return saki::sinh(x);
 	}
 }
 #endif //SAKI_SINH_2019_01_08

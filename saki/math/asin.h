@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_ASIN_2019_01_06
 #define SAKI_ASIN_2019_01_06
+#include <cstddef>
 #include <limits>
 #include <type_traits>
 #include <saki/math/abs.h>
@@ -25,18 +26,18 @@ namespace saki
 	*/
 	template<typename T,
 		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
-	constexpr T asin(T x)
+		constexpr T asin(T x)
 	{
 		if (saki::isnan(x) || x == 0)return x;
-		if (saki::abs(x) > 1)return std::numeric_limits<T>::quiet_NaN();
+		if (saki::abs(x) > 1)return -std::numeric_limits<T>::quiet_NaN();
 
 		//精度向上のため値によって処理を分ける
 		//0≦|x|≦1/√2
 		if (saki::abs(x) <= (1.0 / saki::sqrt<T>(2)))
 		{
 			T sum = 0;
-			int n = 0;
-			while (n <= saki::factorial_limits<T>::limit / 2)
+			size_t n = 0;
+			while (n * 2 + 1 <= saki::factorial_limits<T>::limit)
 			{
 				sum += static_cast<T>(saki::factorial<T>(2 * n)*
 					saki::pow(x, 2 * n + 1) /
@@ -63,20 +64,6 @@ namespace saki
 		constexpr double asin(T x)
 	{
 		return saki::asin(static_cast<double>(x));
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	constexpr float asinf(float x)
-	{
-		return saki::asin(x);
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	constexpr long double asinl(long double x)
-	{
-		return saki::asin(x);
 	}
 }
 #endif //SAKI_ASIN_2019_01_06

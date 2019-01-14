@@ -44,20 +44,5 @@ namespace saki
 	{
 		return saki::tan(static_cast<double>(x));
 	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float tanf(float x)
-	{
-		return saki::tan(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double tanl(long double x)
-	{
-		return saki::tan(x);
-	}
 }
 #endif //SAKI_TAN_2019_01_05

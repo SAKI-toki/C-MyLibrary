@@ -7,9 +7,12 @@
 #pragma once
 #ifndef SAKI_LOG_2019_01_06
 #define SAKI_LOG_2019_01_06
+#include <cstddef>
 #include <limits>
 #include <type_traits>
 #include <saki/math/isnan.h>
+#include <saki/math/sqrt.h>
+#include <saki/math/details/pow_n.h>
 
 namespace saki
 {
@@ -25,7 +28,7 @@ namespace saki
 		if (x == 0)return -std::numeric_limits<T>::infinity();
 		if (x == 1)return 0;
 
-		int ad = 1;
+		T ad = 1;
 		if (x < 1)
 		{
 			ad = -1;
@@ -34,17 +37,17 @@ namespace saki
 		while (x > saki::details::sqrt_v<2, T>)
 		{
 			ad *= 2;
-			x = saki::sqrt<T>(x);
+			x = saki::sqrt(x);
 		}
 		--x;
 		T sum = 0;
-		int n = 1;
+		size_t n = 1;
 		T _sum = -1;
-		while (sum != _sum)
+		while (!saki::isnan(sum) && !saki::isinf(sum) && sum != _sum)
 		{
 			_sum = sum;
 			sum += (((n + 1) % 2 == 0) ? 1 : -1) *
-				saki::details::pow_n<T>(x, n) /
+				saki::details::pow_n(x, n) /
 				n;
 			++n;
 		}
@@ -58,20 +61,6 @@ namespace saki
 		constexpr double log(T x)
 	{
 		return saki::log(static_cast<double>(x));
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float logf(float x)
-	{
-		return saki::log(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double logl(long double x)
-	{
-		return saki::log(x);
 	}
 }
 #endif //SAKI_LOG_2019_01_06

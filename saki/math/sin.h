@@ -44,20 +44,5 @@ namespace saki
 	{
 		return saki::sin(static_cast<double>(x));
 	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float sinf(float x)
-	{
-		return saki::sin(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double sinl(long double x)
-	{
-		return saki::sin(x);
-	}
 }
 #endif //SAKI_SIN_2019_01_03

@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_POW_2019_01_07
 #define SAKI_POW_2019_01_07
+#include <cstddef>
 #include <limits>
 #include <type_traits>
 #include <saki/math/isnan.h>
@@ -17,6 +18,7 @@
 #include <saki/math/abs.h>
 #include <saki/math/is_odd_even.h>
 #include <saki/math/isinf.h>
+#include <saki/math/details/pow_n.h>
 
 namespace saki
 {
@@ -120,45 +122,10 @@ namespace saki
 	/**
 	* @brief 型が違う場合はそろえる
 	*/
-	template<typename T1, typename T2>
-	constexpr double pow(T1 x, T2 y)
+	template<typename T = double, typename T1, typename T2>
+	constexpr T pow(T1 x, T2 y)
 	{
-		return pow(static_cast<double>(x), static_cast<double>(y));
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	float powf(float x, float y)
-	{
-		return saki::pow<float>(x, y);
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	long double powl(long double x, long double y)
-	{
-		return saki::pow<long double>(x, y);
-	}
-
-	namespace details
-	{
-		/**
-		* @brief expやlogの時に上のものを利用するとstackoverflowになるため、用意した
-		*/
-		template<typename T>
-		constexpr T pow_n(T x, int y)
-		{
-			T sum = static_cast<T>(1);
-			for (int i = 0; i < y; ++i)
-			{
-				sum *= x;
-			}
-			for (int i = 0; i > y; --i)
-			{
-				sum /= x;
-			}
-			return sum;
-		}
+		return pow(static_cast<T>(x), static_cast<T>(y));
 	}
 }
 #endif //SAKI_POW_2019_01_07

@@ -7,7 +7,7 @@
 /*
 クラスをシングルトンにするとき、このクラスを継承するだけでシングルトンになる
 ※使い方
-class A:public saki::singleton<A>{}
+class A:public saki::Singleton<A>{}
 */
 #ifndef SAKI_SINGLETON_2018_10_17
 #define SAKI_SINGLETON_2018_10_17

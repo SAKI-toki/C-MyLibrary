@@ -25,13 +25,14 @@ namespace saki
 	public:
 		SAKI_TYPE_MACRO(T)
 	public:
-		value_type x, y;
+		value_type 
+			x = static_cast<value_type>(0),
+			y = static_cast<value_type>(0);
 		/**
 		* @brief 引数なしコンストラクタ
 		* @details 全て0で初期化
 		*/
-		constexpr Vector2() :
-			x(static_cast<value_type>(0)), y(static_cast<value_type>(0))
+		constexpr Vector2()
 		{}
 		/**
 		* @brief 引数ありコンストラクタ
@@ -58,7 +59,7 @@ namespace saki
 		* @brief +=演算子
 		*/
 		template<typename U = value_type>
-		auto operator+=(const saki::Vector2<U>& other)
+		constexpr auto operator+=(const saki::Vector2<U>& other)
 		{
 			*this = *this + other;
 			return *this;
@@ -67,7 +68,7 @@ namespace saki
 		* @brief -=演算子
 		*/
 		template<typename U = value_type>
-		auto operator-=(const saki::Vector2<U>& other)
+		constexpr auto operator-=(const saki::Vector2<U>& other)
 		{
 			*this = *this - other;
 			return *this;
@@ -76,7 +77,7 @@ namespace saki
 		* @brief *=演算子(スカラ)
 		*/
 		template<typename U = value_type>
-		auto operator*=(const U& scalar)
+		constexpr auto operator*=(const U& scalar)
 		{
 			*this = *this * scalar;
 			return *this;
@@ -85,7 +86,7 @@ namespace saki
 		* @brief *=演算子(ベクトル)
 		*/
 		template<typename U = value_type>
-		auto operator*=(const saki::Vector2<U>& other)
+		constexpr auto operator*=(const saki::Vector2<U>& other)
 		{
 			*this = *this * other;
 			return *this;
@@ -94,7 +95,7 @@ namespace saki
 		* @brief /=演算子(スカラ)
 		*/
 		template<typename U = value_type>
-		auto operator/=(const U& scalar)
+		constexpr auto operator/=(const U& scalar)
 		{
 			*this = *this / scalar;
 			return *this;
@@ -103,7 +104,7 @@ namespace saki
 		* @brief /=演算子(ベクトル)
 		*/
 		template<typename U = value_type>
-		auto operator/=(const saki::Vector2<U>& other)
+		constexpr auto operator/=(const saki::Vector2<U>& other)
 		{
 			*this = *this / other;
 			return *this;
@@ -139,7 +140,7 @@ namespace saki
 		/**
 		* @brief ++演算子(前置)
 		*/
-		saki::Vector2<value_type>& operator++()
+		constexpr saki::Vector2<value_type>& operator++()
 		{
 			this->x += 1; this->y += 1;
 			return *this;
@@ -147,7 +148,7 @@ namespace saki
 		/**
 		* @brief ++演算子(後置)
 		*/
-		saki::Vector2<value_type> operator++(int)
+		constexpr saki::Vector2<value_type> operator++(int)
 		{
 			saki::Vector2<value_type> temp = *this;
 			this->x += 1; this->y += 1;
@@ -156,7 +157,7 @@ namespace saki
 		/**
 		* @brief --演算子(前置)
 		*/
-		saki::Vector2<value_type>& operator--()
+		constexpr saki::Vector2<value_type>& operator--()
 		{
 			this->x -= 1; this->y -= 1;
 			return *this;
@@ -164,7 +165,7 @@ namespace saki
 		/**
 		* @brief --演算子(後置)
 		*/
-		saki::Vector2<value_type> operator--(int)
+		constexpr saki::Vector2<value_type> operator--(int)
 		{
 			saki::Vector2<value_type> temp = *this;
 			this->x -= 1; this->y -= 1;
@@ -174,7 +175,7 @@ namespace saki
 		* @brief 正規化
 		* @details int型の場合、すべての要素が0で帰ります
 		*/
-		void normalize()
+		constexpr void normalize()
 		{
 			//分母
 			auto den = std::sqrt(this->x * this->x + this->y * this->y);

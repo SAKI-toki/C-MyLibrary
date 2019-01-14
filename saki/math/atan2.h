@@ -76,10 +76,7 @@ namespace saki
 			return saki::atan(y / x) + saki::PI<T>;
 		}
 		//x<0,y<0
-		else
-		{
-			return saki::atan(y / x) - saki::PI<T>;
-		}
+		return saki::atan(y / x) - saki::PI<T>;
 	}
 	/**
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
@@ -93,24 +90,11 @@ namespace saki
 	/**
 	* @brief Œ^‚ğ‚»‚ë‚¦‚é
 	*/
-	template<typename T = double, typename T1, typename T2>
-		constexpr T atan2(T1 y, T2 x)
+	template<typename T1, typename T2>
+	constexpr auto atan2(T1 y, T2 x)
+		->decltype(y * x)
 	{
-		return atan2(static_cast<T>(y), static_cast<T>(x));
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float atan2f(float y, float x)
-	{
-		return saki::atan2(y, x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double atan2l(long double y, long double x)
-	{
-		return saki::atan2(y, x);
+		return atan2(static_cast<decltype(y * x)>(y), static_cast<decltype(y * x)>(x));
 	}
 }
 #endif //SAKI_ATAN2_2019_01_06

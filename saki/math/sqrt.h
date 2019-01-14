@@ -30,7 +30,7 @@ namespace saki
 
 		T prev = static_cast<T>(x / 2.0);
 		T next = static_cast<T>((prev + x / prev) * 0.5);
-		while (prev != next)
+		while (!saki::isnan(prev) && !saki::isinf(prev) && prev != next)
 		{
 			prev = next;
 			next = static_cast<T>((prev + x / prev) * 0.5);
@@ -39,28 +39,12 @@ namespace saki
 	}
 	/**
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
-	* @param x intŒ^‚Ìƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
 		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
 		constexpr double sqrt(T x)
 	{
 		return saki::sqrt(static_cast<double>(x));
-	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float sqrtf(float x)
-	{
-		return saki::sqrt(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double sqrtl(long double x)
-	{
-		return saki::sqrt(x);
 	}
 
 	namespace details

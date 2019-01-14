@@ -21,8 +21,8 @@ namespace saki
 	* @param y Š„‚é”
 	* @return è—]
 	*/
-	template<typename T = double, typename T1>
-	constexpr T fmod(T1 x, T1 y)
+	template<typename T>
+	constexpr T fmod(T x, T y)
 	{
 		if (saki::isnan(x))
 		{
@@ -54,24 +54,11 @@ namespace saki
 	/**
 	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
 	*/
-	template<typename T = double, typename T1, typename T2>
-	constexpr T fmod(T1 x, T2 y)
+	template<typename T1, typename T2>
+	constexpr auto fmod(T1 x, T2 y)
+		->decltype(x * y)
 	{
-		return saki::fmod(static_cast<T>(x), static_cast<T>(y));
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	float fmodf(float x, float y)
-	{
-		return saki::fmod<float>(x, y);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	long double l(long double x, long double y)
-	{
-		return saki::fmod<long double>(x, y);
+		return saki::fmod(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
 	}
 }
 #endif //SAKI_FMOD_2019_01_02

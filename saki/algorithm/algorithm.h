@@ -10,7 +10,5 @@
 
 #include <saki/algorithm/accumulate.h>
 #include <saki/algorithm/copy.h>
-#include <saki/algorithm/for_each.h>
-#include <saki/algorithm/iota.h>
 
 #endif //SAKI_ALGORITHM_2019_01_02

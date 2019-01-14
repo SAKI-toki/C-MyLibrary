@@ -35,7 +35,7 @@ namespace saki
 			T sum = 0;
 			T _sum = -1;
 			int n = 0;
-			while (sum != _sum)
+			while (!saki::isnan(sum) && sum != _sum)
 			{
 				_sum = sum;
 				sum += static_cast<T>(((n % 2 == 0) ? 1 : -1)*
@@ -69,20 +69,6 @@ namespace saki
 		constexpr double atan(T x)
 	{
 		return saki::atan(static_cast<double>(x));
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float atanf(float x)
-	{
-		return saki::atan(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double atanl(long double x)
-	{
-		return saki::atan(x);
 	}
 }
 #endif //SAKI_ATAN_2019_01_06

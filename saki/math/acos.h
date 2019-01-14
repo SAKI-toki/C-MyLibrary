@@ -25,7 +25,7 @@ namespace saki
 		constexpr T acos(T x)
 	{
 		if (saki::isnan(x))return x;
-		if (saki::abs(x) > 1)return std::numeric_limits<T>::quiet_NaN();
+		if (saki::abs(x) > 1)return -std::numeric_limits<T>::quiet_NaN();
 
 		return saki::PI_HALF<T> -saki::asin(x);
 	}
@@ -38,20 +38,6 @@ namespace saki
 		constexpr double acos(T x)
 	{
 		return saki::acos(static_cast<double>(x));
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float acosf(float x)
-	{
-		return saki::acos(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double acosl(long double x)
-	{
-		return saki::acos(x);
 	}
 }
 #endif //SAKI_ACOS_2019_01_06

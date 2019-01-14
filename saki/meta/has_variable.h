@@ -5,8 +5,8 @@
 * @date 2018/12/29
 */
 #pragma once
-#ifndef SAKI_HAS_CHECK_METHOD_2018_12_23
-#define SAKI_HAS_CHECK_METHOD_2018_12_23
+#ifndef SAKI_HAS_VARIABLE_2018_12_23
+#define SAKI_HAS_VARIABLE_2018_12_23
 #include <type_traits>
 
 namespace saki
@@ -19,7 +19,7 @@ namespace saki
 	{
 	private:
 		template<typename U>
-		static constexpr std::true_type check_check(decltype(std::declval<U>().x))* u);
+		static constexpr std::true_type check_check(decltype(std::declval<U>().x)* u);
 		template<typename U>
 		static constexpr std::false_type check_check(...);
 	public:
@@ -31,4 +31,4 @@ namespace saki
 	template<typename T>
 	static constexpr auto has_x_v = saki::has_check<T>::value;
 }
-#endif //SAKI_HAS_CHECK_METHOD_2018_12_23
+#endif //SAKI_HAS_VARIABLE_2018_12_23

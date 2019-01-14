@@ -29,8 +29,7 @@ namespace saki
 		/**
 		* @brief 引数なしコンストラクタ
 		*/
-		constexpr Transform() :
-			position(vector3_zero<T>), rotation(vector3_zero<T>), scale(vector3_one<T>)
+		constexpr Transform()
 		{}
 		/**
 		* @brief 各値を引数にとるコンストラクタ
@@ -51,7 +50,7 @@ namespace saki
 		* @brief 移動
 		* @param pos 移動量
 		*/
-		void move(const saki::Vector3<T>& pos)
+		constexpr void move(const saki::Vector3<T>& pos)
 		{
 			position += pos;
 		}
@@ -61,7 +60,7 @@ namespace saki
 		* @param y 移動量(y)
 		* @param z 移動量(z)
 		*/
-		void move(const T& x, const T& y, const T& z)
+		constexpr void move(const T& x, const T& y, const T& z)
 		{
 			position += saki::Vector3<T>(x, y, z);
 		}
@@ -69,7 +68,7 @@ namespace saki
 		* @brief 回転
 		* @param rot 回転量
 		*/
-		void rotate(const saki::Vector3<T>& rot)
+		constexpr void rotate(const saki::Vector3<T>& rot)
 		{
 			rotation += rot;
 		}
@@ -79,7 +78,7 @@ namespace saki
 		* @param y 回転量(y)
 		* @param z 回転量(z)
 		*/
-		void rotate(const T& x, const T& y, const T& z)
+		constexpr void rotate(const T& x, const T& y, const T& z)
 		{
 			rotation += saki::Vector3<T>(x, y, z);
 		}
@@ -87,7 +86,7 @@ namespace saki
 		* @brief 拡大
 		* @param sca 拡大量
 		*/
-		void expantion(const saki::Vector3<T>& sca)
+		constexpr void expantion(const saki::Vector3<T>& sca)
 		{
 			scale += sca;
 		}
@@ -97,7 +96,7 @@ namespace saki
 		* @param y 拡大量(y)
 		* @param z 拡大量(z)
 		*/
-		void expantion(const T& x, const T& y, const T& z)
+		constexpr void expantion(const T& x, const T& y, const T& z)
 		{
 			scale += saki::Vector3<T>(x, y, z);
 		}
@@ -113,7 +112,7 @@ namespace saki
 		* @brief 位置のセッタ
 		* @param pos 位置
 		*/
-		void set_pos(const saki::Vector3<T>& pos)
+		constexpr void set_pos(const saki::Vector3<T>& pos)
 		{
 			position = pos;
 		}
@@ -129,7 +128,7 @@ namespace saki
 		* @brief 回転のセッタ
 		* @param rot 回転
 		*/
-		void set_rot(const saki::Vector3<T>& rot)
+		constexpr void set_rot(const saki::Vector3<T>& rot)
 		{
 			rotation = rot;
 		}
@@ -145,7 +144,7 @@ namespace saki
 		* @brief 拡縮のセッタ
 		* @param sca 拡縮
 		*/
-		void set_scale(const saki::Vector3<T>& sca)
+		constexpr void set_scale(const saki::Vector3<T>& sca)
 		{
 			scale = sca;
 		}
@@ -153,7 +152,7 @@ namespace saki
 		* @brief +=演算子
 		*/
 		template<typename U = T>
-		auto operator+=(const saki::Transform<U>& other)
+		constexpr auto operator+=(const saki::Transform<U>& other)
 		{
 			*this = *this + other;
 			return *this;
@@ -162,7 +161,7 @@ namespace saki
 		* @brief -=演算子
 		*/
 		template<typename U = T>
-		auto operator-=(const saki::Transform<U>& other)
+		constexpr auto operator-=(const saki::Transform<U>& other)
 		{
 			*this = *this - other;
 			return *this;
@@ -171,7 +170,7 @@ namespace saki
 		* @brief *=演算子(スカラ)
 		*/
 		template<typename U = T>
-		auto operator*=(const U& scalar)
+		constexpr auto operator*=(const U& scalar)
 		{
 			*this = *this * scalar;
 			return *this;
@@ -180,7 +179,7 @@ namespace saki
 		* @brief /= 演算子(スカラ)
 		*/
 		template<typename U = T>
-		auto operator/=(const U& scalar)
+		constexpr auto operator/=(const U& scalar)
 		{
 			*this = *this / scalar;
 			return *this;

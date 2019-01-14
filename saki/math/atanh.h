@@ -27,7 +27,7 @@ namespace saki
 	{
 		if (saki::isnan(x) || saki::abs(x) == 0)return x;
 		if (saki::abs(x) > 1)return std::numeric_limits<T>::quiet_NaN();
-		if (std::abs(x) == 1)return saki::copysign(std::numeric_limits<T>::infinity(), x);
+		if (saki::abs(x) == 1)return saki::copysign(std::numeric_limits<T>::infinity(), x);
 
 		return static_cast<T>(0.5 * saki::log((1 + x) / (1 - x)));
 	}
@@ -39,21 +39,6 @@ namespace saki
 		constexpr double atanh(T x)
 	{
 		return saki::atanh(static_cast<double>(x));
-	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float atanhf(float x)
-	{
-		return saki::atanh(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double atanhl(long double x)
-	{
-		return saki::atanh(x);
 	}
 }
 #endif //SAKI_ATANH_2019_01_08

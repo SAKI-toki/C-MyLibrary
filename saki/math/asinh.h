@@ -36,20 +36,5 @@ namespace saki
 	{
 		return saki::asinh(static_cast<double>(x));
 	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float asinhf(float x)
-	{
-		return saki::asinh(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double asinhl(long double x)
-	{
-		return saki::asinh(x);
-	}
 }
 #endif //SAKI_ASINH_2019_01_08

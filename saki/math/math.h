@@ -24,6 +24,8 @@
 #include <saki/math/distance.h>
 #include <saki/math/exchange.h>
 #include <saki/math/exp.h>
+#include <saki/math/exp2.h>
+#include <saki/math/expm1.h>
 #include <saki/math/factorial.h>
 #include <saki/math/fibonacci.h>
 #include <saki/math/fmod.h>
@@ -32,6 +34,9 @@
 #include <saki/math/isinf.h>
 #include <saki/math/isnan.h>
 #include <saki/math/log.h>
+#include <saki/math/log1p.h>
+#include <saki/math/log2.h>
+#include <saki/math/log10.h>
 #include <saki/math/pi.h>
 #include <saki/math/pow.h>
 #include <saki/math/sigma.h>

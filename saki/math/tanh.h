@@ -38,20 +38,5 @@ namespace saki
 	{
 		return saki::tanh(static_cast<double>(x));
 	}
-
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr float tanhf(float x)
-	{
-		return saki::tanh(x);
-	}
-	/**
-	* @brief •W€‚ÉŠñ‚¹‚é‚½‚ßÀ‘•
-	*/
-	constexpr long double tanhl(long double x)
-	{
-		return saki::tanh(x);
-	}
 }
 #endif //SAKI_TANH_2019_01_08

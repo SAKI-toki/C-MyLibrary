@@ -7,11 +7,14 @@
 #pragma once
 #ifndef SAKI_EXP_2019_01_06
 #define SAKI_EXP_2019_01_06
+#include <cstddef>
 #include <limits>
 #include <type_traits>
+#include <saki/math/abs.h>
 #include <saki/math/factorial.h>
 #include <saki/math/isnan.h>
-#include <saki/math/pow.h>
+#include <saki/math/details/pow_n.h>
+#include <saki/math/is_odd_even.h>
 
 namespace saki
 {
@@ -26,14 +29,28 @@ namespace saki
 		if (x == -std::numeric_limits<T>::infinity())return 0;
 		if (x == 0)return static_cast<T>(1);
 
-		T sum = 0;
-		int n = 0;
+		bool minus = false;
+		if (x <= -1)
+		{
+			minus = true;
+			x *= -1;
+		}
+		size_t ad = 1;
+		while (x > 2)
+		{
+			ad *= 2;
+			x /= 2;
+		}
+		T sum = 1;
+		size_t n = 1;
 		while (n <= saki::factorial_limits<T>::limit)
 		{
-			sum += saki::details::pow_n<T>(x, n) / saki::factorial<T>(n);
+			sum += saki::details::pow_n(x, n) / saki::factorial<T>(n);
 			++n;
 		}
-		return sum;
+		return saki::details::pow_n(
+			((minus) ? (1 / sum) : (sum)), 
+			ad);
 	}
 	/**
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
@@ -43,20 +60,6 @@ namespace saki
 		constexpr double exp(T x)
 	{
 		return saki::exp(static_cast<double>(x));
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	constexpr float expf(float x)
-	{
-		return saki::exp(x);
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	constexpr long double expl(long double x)
-	{
-		return saki::exp(x);
 	}
 }
 #endif //SAKI_EXP_2019_01_06

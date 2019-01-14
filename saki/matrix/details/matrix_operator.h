@@ -93,7 +93,7 @@ namespace saki
 	constexpr auto operator*(const Matrix<T1>& m1, const Matrix<T2>& m2)
 	{
 		using m_type = decltype(std::declval<T1>() * std::declval<T2>());
-		m_type arr[4][4]{};
+		Matrix<m_type> mat;
 		for (int i = 0; i < 4; ++i)
 		{
 			for (int j = 0; j < 4; ++j)
@@ -103,10 +103,10 @@ namespace saki
 				{
 					sum += m1[i][k] * m2[k][j];
 				}
-				arr[i][j] = sum;
+				mat[i][j] = sum;
 			}
 		}
-		return Matrix<m_type>{arr};
+		return mat;
 	}
 	/**
 	* @brief /‰‰ŽZŽq(ƒXƒJƒ‰)

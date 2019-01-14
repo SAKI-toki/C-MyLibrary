@@ -24,7 +24,7 @@ namespace saki
 	{
 		if (saki::isnan(x) || saki::isinf(x) || x == 0)return x;
 
-		return static_cast<T>(saki::pow(x, 1.0 / 3.0));
+		return static_cast<T>((x < 0) ? -saki::pow(-x, 1.0 / 3.0) : saki::pow(x, 1.0 / 3.0));
 	}
 	/**
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
@@ -34,21 +34,6 @@ namespace saki
 		constexpr double cbrt(T x)
 	{
 		return saki::cbrt(static_cast<double>(x));
-	}
-
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	constexpr float cbrtf(float x)
-	{
-		return saki::cbrt(x);
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	constexpr long double cbrtl(long double x)
-	{
-		return saki::cbrt(x);
 	}
 }
 #endif //SAKI_CBRT_2019_01_08

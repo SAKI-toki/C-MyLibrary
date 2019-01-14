@@ -11,6 +11,9 @@
 #include <saki/macro/type_macro.h>
 #include <saki/array/details/array_operator.h>
 
+#include <saki/iterator/iterator.h>
+#include <saki/iterator/reverse/reverse_iterator.h>
+
 namespace saki
 {
 	/**
@@ -22,17 +25,16 @@ namespace saki
 	public:
 		SAKI_TYPE_MACRO(T)
 	private:
-		value_type arr[Size];
+		value_type arr[Size]{};
 	public:
 		/**
 		* @brief 引数なしコンストラクタ
 		* @details 全て0で初期化
 		*/
-		constexpr Array() :
-			arr{}
+		constexpr Array()
 		{}
 		/**
-		* @brief 引数ありコンストラクタ
+		* @brief 配列の要素だけ値を受け取るコンストラクタ
 		* @param u 配列の初期化値
 		*/
 		template<typename ...U>
@@ -67,14 +69,78 @@ namespace saki
 		{
 			return Size;
 		}
+
+		constexpr saki::iterator<T> begin()
+		{
+			return saki::iterator<T>(arr);
+		}
+		constexpr saki::iterator<T> end()
+		{
+			return saki::iterator<T>(arr + Size);
+		}
+
+		constexpr saki::const_iterator<T> begin()const
+		{
+			return saki::const_iterator<T>(arr);
+		}
+		constexpr saki::const_iterator<T> end()const
+		{
+			return saki::const_iterator<T>(arr + Size);
+		}
+		constexpr saki::const_iterator<T> cbegin()const
+		{
+			return saki::const_iterator<T>(arr);
+		}
+		constexpr saki::const_iterator<T> cend()const
+		{
+			return saki::const_iterator<T>(arr + Size);
+		}
+
+		constexpr saki::reverse_iterator<saki::iterator<T>> rbegin()
+		{
+			return saki::reverse_iterator<saki::iterator<T>>(saki::iterator<T>(arr + Size - 1));
+		}
+		constexpr saki::reverse_iterator<saki::iterator<T>> rend()
+		{
+			return saki::reverse_iterator<saki::iterator<T>>(saki::iterator<T>(arr - 1));
+		}
+
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> rbegin()const
+		{
+			return saki::reverse_iterator<saki::const_iterator<T>>(saki::const_iterator<T>(arr + Size - 1));
+		}
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> rend()const
+		{
+			return saki::reverse_iterator<saki::const_iterator<T>>(saki::const_iterator<T>(arr - 1));
+		}
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> rcbegin()const
+		{
+			return saki::reverse_iterator<saki::const_iterator<T>>(saki::const_iterator<T>(arr + Size - 1));
+		}
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> rcend()const
+		{
+			return saki::reverse_iterator<saki::const_iterator<T>>(saki::const_iterator<T>(arr - 1));
+		}
 	};
 
+	template<typename T>
+	class Array<T, 0>
+	{
+	public:
+		SAKI_TYPE_MACRO(T)
+	public:
+		/**
+		* @brief 引数なしコンストラクタ
+		*/
+		constexpr Array()
+		{}
+	};
 	/**
 	* @brief 配列の連結
 	* @param arr1,arr2 連結する配列
 	* @return 連結した配列
 	*/
-	template<typename T,size_t Size1,size_t Size2>
+	template<typename T, size_t Size1, size_t Size2>
 	constexpr auto arraycat(const saki::Array<T, Size1>& arr1, const saki::Array<T, Size2>& arr2)
 	{
 		saki::Array<T, Size1 + Size2> arr{};

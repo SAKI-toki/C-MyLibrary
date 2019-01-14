@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_COSH_2019_01_08
 #define SAKI_COSH_2019_01_08
+#include <cstddef>
 #include <type_traits>
 #include <limits>
 #include <saki/math/factorial.h>
@@ -26,7 +27,7 @@ namespace saki
 		if (saki::isnan(x) || saki::isinf(x))return x;
 		if (x == 0)return static_cast<T>(1);
 		T sum = 0;
-		int n = 0;
+		size_t n = 0;
 		while (2 * n <= saki::factorial_limits<T>::limit)
 		{
 			sum += static_cast<T>(saki::pow(x, 2 * n) / saki::factorial<T>(2 * n));
@@ -42,21 +43,6 @@ namespace saki
 		constexpr double cosh(T x)
 	{
 		return saki::cosh(static_cast<double>(x));
-	}
-
-	/**
-	* @brief ïWèÄÇ…äÒÇπÇÈÇΩÇﬂé¿ëï
-	*/
-	constexpr float coshf(float x)
-	{
-		return saki::cosh(x);
-	}
-	/**
-	* @brief ïWèÄÇ…äÒÇπÇÈÇΩÇﬂé¿ëï
-	*/
-	constexpr long double coshl(long double x)
-	{
-		return saki::cosh(x);
 	}
 }
 #endif //SAKI_COSH_2019_01_08

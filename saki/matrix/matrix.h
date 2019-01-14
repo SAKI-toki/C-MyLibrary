@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_MATRIX_2018_12_13
 #define SAKI_MATRIX_2018_12_13
+#include <type_traits>
 #include <saki/matrix/details/matrix_operator.h>
 #include <saki/matrix/details/matrix_math.h>
 #include <saki/macro/type_macro.h>

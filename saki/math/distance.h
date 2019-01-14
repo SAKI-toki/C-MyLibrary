@@ -7,7 +7,7 @@
 #pragma once
 #ifndef SAKI_DISTANCE_2018_12_06
 #define SAKI_DISTANCE_2018_12_06
-#include <saki/math/sqrt.h>
+#include <saki/math/hypot.h>
 
 namespace saki
 {
@@ -18,9 +18,9 @@ namespace saki
 	template<typename U = double, typename T1, typename T2>
 	constexpr U distanceXY(const T1& v1, const T2& v2)
 	{
-		return saki::sqrt<U>(
-			(v1.x - v2.x) * (v1.x - v2.x) +
-			(v1.y - v2.y) * (v1.y - v2.y));
+		return static_cast<U>(saki::hypot(
+			(v1.x - v2.x),
+			(v1.y - v2.y)));
 	}
 	/**
 	* @brief “ñ“_ŠÔ‚Ì‹——£(XZ)
@@ -28,9 +28,9 @@ namespace saki
 	template<typename U = double, typename T1, typename T2>
 	constexpr U distanceXZ(const T1& v1, const T2& v2)
 	{
-		return saki::sqrt<U>(
-			(v1.x - v2.x) * (v1.x - v2.x) +
-			(v1.z - v2.z) * (v1.z - v2.z));
+		return static_cast<U>(saki::hypot(
+			(v1.x - v2.x),
+			(v1.z - v2.z)));
 	}
 	/**
 	* @brief “ñ“_ŠÔ‚Ì‹——£(YZ)
@@ -38,9 +38,9 @@ namespace saki
 	template<typename U = double, typename T1, typename T2>
 	constexpr U distanceYZ(const T1& v1, const T2& v2)
 	{
-		return saki::sqrt<U>(
-			(v1.y - v2.y) * (v1.y - v2.y) +
-			(v1.z - v2.z) * (v1.z - v2.z));
+		return static_cast<U>(saki::hypot(
+			(v1.y - v2.y),
+			(v1.z - v2.z)));
 	}
 	/**
 	* @brief “ñ“_ŠÔ‚Ì‹——£(XYZ)
@@ -48,10 +48,10 @@ namespace saki
 	template<typename U = double, typename T1, typename T2>
 	constexpr U distanceXYZ(const T1& v1, const T2& v2)
 	{
-		return saki::sqrt<U>(
-			(v1.x - v2.x) * (v1.x - v2.x) +
-			(v1.y - v2.y) * (v1.y - v2.y) +
-			(v1.z - v2.z) * (v1.z - v2.z));
+		return static_cast<U>(saki::hypot(
+			(v1.x - v2.x),
+			(v1.y - v2.y),
+			(v1.z - v2.z)));
 	}
 }
 #endif //SAKI_DISTANCE_2018_12_06

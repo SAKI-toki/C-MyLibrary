@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_COS_2019_01_05
 #define SAKI_COS_2019_01_05
+#include <cstddef>
 #include <type_traits>
 #include <limits>
 #include <saki/math/factorial.h>
@@ -37,7 +38,7 @@ namespace saki
 		while (x < -saki::PI<T>)x += saki::PI<T> * 2;
 
 		T sum = 0;
-		int n = 0;
+		size_t n = 0;
 		while (n <= saki::factorial_limits<T>::limit / 2)
 		{
 			sum += static_cast<T>(((n % 2 == 0) ? 1 : -1) *
@@ -56,21 +57,6 @@ namespace saki
 		constexpr double cos(T x)
 	{
 		return saki::cos(static_cast<double>(x));
-	}
-
-	/**
-	* @brief ïWèÄÇ…äÒÇπÇÈÇΩÇﬂé¿ëï
-	*/
-	constexpr float cosf(float x)
-	{
-		return saki::cos(x);
-	}
-	/**
-	* @brief ïWèÄÇ…äÒÇπÇÈÇΩÇﬂé¿ëï
-	*/
-	constexpr long double cosl(long double x)
-	{
-		return saki::cos(x);
 	}
 }
 #endif //SAKI_COS_2019_01_05

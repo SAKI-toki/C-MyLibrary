@@ -16,11 +16,11 @@ namespace saki
 	* @brief 階乗(引数バージョン)
 	* @param N 1からNまでの階乗を求める
 	*/
-	template<typename T = uint64_t>
-	constexpr T factorial(int N)
+	template<typename T = double>
+	constexpr T factorial(size_t N)
 	{
 		T sum = 1;
-		for (int i = 2; i <= N; ++i)
+		for (size_t i = 2; i <= N; ++i)
 		{
 			sum *= static_cast<T>(i);
 		}
@@ -29,7 +29,7 @@ namespace saki
 	/**
 	* @brief 階乗(仮引数バージョン)
 	*/
-	template<int N, typename T = uint64_t>
+	template<size_t N, typename T = double>
 	constexpr T factorial()
 	{
 		return factorial<T>(N);
@@ -52,12 +52,12 @@ namespace saki
 	template<>
 	struct factorial_limits<double>
 	{
-		static constexpr size_t limit = 49;
+		static constexpr size_t limit = 170;
 	};
 	template<>
 	struct factorial_limits<long double>
 	{
-		static constexpr size_t limit = 49;
+		static constexpr size_t limit = 170;
 	};
 	template<>
 	struct factorial_limits<char>

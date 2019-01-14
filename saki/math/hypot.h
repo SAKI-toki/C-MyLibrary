@@ -52,22 +52,10 @@ namespace saki
 	* @brief 型が違う場合はそろえる
 	*/
 	template<typename T1, typename T2>
-	constexpr double hypot(T1 x, T2 y)
+	constexpr auto hypot(T1 x, T2 y)
+		->decltype(x * y)
 	{
-		return saki::hypot(static_cast<double>(x), static_cast<double>(y));
-	}/**
-	* @brief 標準に寄せるため実装
-	*/
-	float hypotf(float x, float y)
-	{
-		return saki::hypot<float>(x, y);
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	long double hypotl(long double x, long double y)
-	{
-		return saki::hypot<long double>(x, y);
+		return saki::hypot(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
 	}
 
 	///------3引数--------
@@ -130,22 +118,12 @@ namespace saki
 	*@brief 型が違う場合はそろえる
 	*/
 	template<typename T1, typename T2, typename T3>
-	constexpr double hypot(T1 x, T2 y, T3 z)
+	constexpr auto hypot(T1 x, T2 y, T3 z)
+		->decltype(x * y * z)
 	{
-		return saki::hypot(static_cast<double>(x), static_cast<double>(y), static_cast<double>(z));
-	}/**
-	* @brief 標準に寄せるため実装
-	*/
-	float hypotf(float x, float y, float z)
-	{
-		return saki::hypot<float>(x, y, z);
-	}
-	/**
-	* @brief 標準に寄せるため実装
-	*/
-	long double hypotl(long double x, long double y, long double z)
-	{
-		return saki::hypot<long double>(x, y, z);
+		return saki::hypot(static_cast<decltype(x * y * z)>(x), 
+			static_cast<decltype(x * y * z)>(y), 
+			static_cast<decltype(x * y * z)>(z));
 	}
 }
 #endif //SAKI_HYPOT_2019_01_08
