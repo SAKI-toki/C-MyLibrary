@@ -13,12 +13,12 @@ namespace saki
 {
 	//プロトタイプ宣言
 	template<typename T, size_t Size>
-	class Array;
+	class array;
 	/**
 	* @brief ==演算子
 	*/
 	template<typename T, size_t Size>
-	constexpr bool operator==(const Array<T, Size>& arr1, const Array<T, Size>& arr2)
+	constexpr bool operator==(const array<T, Size>& arr1, const array<T, Size>& arr2)
 	{
 		for (unsigned int i = 0; i < Size; ++i)
 		{
@@ -30,7 +30,7 @@ namespace saki
 	* @brief !=演算子
 	*/
 	template<typename T, size_t Size>
-	constexpr bool operator!=(const Array<T, Size>& arr1, const Array<T, Size>& arr2)
+	constexpr bool operator!=(const array<T, Size>& arr1, const array<T, Size>& arr2)
 	{
 		return !(arr1 == arr2);
 	}

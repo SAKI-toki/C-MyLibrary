@@ -20,11 +20,11 @@ namespace saki
 	class Transform
 	{
 		//位置
-		saki::Vector3<T> position;
+		saki::vector3<T> position;
 		//回転
-		saki::Vector3<T> rotation;
+		saki::vector3<T> rotation;
 		//拡縮
-		saki::Vector3<T> scale;
+		saki::vector3<T> scale;
 	public:
 		/**
 		* @brief 引数なしコンストラクタ
@@ -37,7 +37,7 @@ namespace saki
 		* @param rot 回転
 		* @param sca 拡縮
 		*/
-		constexpr Transform(const saki::Vector3<T>& pos, const saki::Vector3<T> rot, const saki::Vector3<T>sca) :
+		constexpr Transform(const saki::vector3<T>& pos, const saki::vector3<T> rot, const saki::vector3<T>sca) :
 			position(pos), rotation(rot), scale(sca)
 		{}
 		//コピームーブはデフォルトを使用
@@ -50,7 +50,7 @@ namespace saki
 		* @brief 移動
 		* @param pos 移動量
 		*/
-		constexpr void move(const saki::Vector3<T>& pos)
+		constexpr void move(const saki::vector3<T>& pos)
 		{
 			position += pos;
 		}
@@ -62,13 +62,13 @@ namespace saki
 		*/
 		constexpr void move(const T& x, const T& y, const T& z)
 		{
-			position += saki::Vector3<T>(x, y, z);
+			position += saki::vector3<T>(x, y, z);
 		}
 		/**
 		* @brief 回転
 		* @param rot 回転量
 		*/
-		constexpr void rotate(const saki::Vector3<T>& rot)
+		constexpr void rotate(const saki::vector3<T>& rot)
 		{
 			rotation += rot;
 		}
@@ -80,13 +80,13 @@ namespace saki
 		*/
 		constexpr void rotate(const T& x, const T& y, const T& z)
 		{
-			rotation += saki::Vector3<T>(x, y, z);
+			rotation += saki::vector3<T>(x, y, z);
 		}
 		/**
 		* @brief 拡大
 		* @param sca 拡大量
 		*/
-		constexpr void expantion(const saki::Vector3<T>& sca)
+		constexpr void expantion(const saki::vector3<T>& sca)
 		{
 			scale += sca;
 		}
@@ -98,7 +98,7 @@ namespace saki
 		*/
 		constexpr void expantion(const T& x, const T& y, const T& z)
 		{
-			scale += saki::Vector3<T>(x, y, z);
+			scale += saki::vector3<T>(x, y, z);
 		}
 		/**
 		* @brief 位置のゲッタ
@@ -112,7 +112,7 @@ namespace saki
 		* @brief 位置のセッタ
 		* @param pos 位置
 		*/
-		constexpr void set_pos(const saki::Vector3<T>& pos)
+		constexpr void set_pos(const saki::vector3<T>& pos)
 		{
 			position = pos;
 		}
@@ -128,7 +128,7 @@ namespace saki
 		* @brief 回転のセッタ
 		* @param rot 回転
 		*/
-		constexpr void set_rot(const saki::Vector3<T>& rot)
+		constexpr void set_rot(const saki::vector3<T>& rot)
 		{
 			rotation = rot;
 		}
@@ -144,7 +144,7 @@ namespace saki
 		* @brief 拡縮のセッタ
 		* @param sca 拡縮
 		*/
-		constexpr void set_scale(const saki::Vector3<T>& sca)
+		constexpr void set_scale(const saki::vector3<T>& sca)
 		{
 			scale = sca;
 		}

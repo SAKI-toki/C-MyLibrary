@@ -92,9 +92,8 @@ namespace saki
 	*/
 	template<typename T1, typename T2>
 	constexpr auto atan2(T1 y, T2 x)
-		->decltype(y * x)
 	{
-		return atan2(static_cast<decltype(y * x)>(y), static_cast<decltype(y * x)>(x));
+		return saki::atan2(static_cast<decltype(y * x)>(y), static_cast<decltype(y * x)>(x));
 	}
 }
 #endif //SAKI_ATAN2_2019_01_06

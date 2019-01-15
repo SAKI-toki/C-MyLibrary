@@ -98,34 +98,45 @@ namespace saki
 		}
 		if (x < 0 && saki::fmod(y, 1) != 0)return -std::numeric_limits<T>::quiet_NaN();
 
+		//¬”“_‚È‚µ‚Ìê‡
 		if (saki::fmod(y, 1) == 0)
 		{
 			return saki::details::pow_n(x, static_cast<int>(y));
 		}
 
+		//ˆ—
 		if (x < 0)
 		{
 			if (saki::is_odd(y))
 			{
-				return -saki::exp(y*saki::log(-x));
+				return -saki::exp(y * saki::log(-x));
 			}
 			else
 			{
-				return saki::exp(y*saki::log(-x));
+				return saki::exp(y * saki::log(-x));
 			}
 		}
 		else
 		{
-			return saki::exp(y*saki::log(x));
+			return saki::exp(y * saki::log(x));
 		}
 	}
 	/**
-	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
+	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
-	template<typename T = double, typename T1, typename T2>
-	constexpr T pow(T1 x, T2 y)
+	template<typename T,
+		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		constexpr double pow(T x, T y)
 	{
-		return pow(static_cast<T>(x), static_cast<T>(y));
+		return saki::pow(static_cast<double>(x), static_cast<double>(y));
+	}
+	/**
+	* @brief Œ^‚ğ‚»‚ë‚¦‚é
+	*/
+	template<typename T1,typename T2>
+	constexpr auto pow(T1 x, T2 y)
+	{
+		return saki::pow(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
 	}
 }
 #endif //SAKI_POW_2019_01_07

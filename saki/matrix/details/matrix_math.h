@@ -16,15 +16,15 @@
 namespace saki
 {
 	template<typename T>
-	class Matrix;
+	class matrix;
 	/**
 	* @brief •½sˆÚ“®
-	* @param vec ˆÚ“®—Ê(Vector2)
+	* @param vec ˆÚ“®—Ê(vector2)
 	*/
 	template<typename T>
-	constexpr Matrix<T> translate(const saki::Vector2<T>& vec)
+	constexpr matrix<T> translate(const saki::vector2<T>& vec)
 	{
-		return Matrix<T>
+		return matrix<T>
 		{
 			1, 0, 0, vec.x,
 				0, 1, 0, vec.y,
@@ -34,12 +34,12 @@ namespace saki
 	}
 	/**
 	* @brief •½sˆÚ“®
-	* @param vec ˆÚ“®—Ê(Vector3)
+	* @param vec ˆÚ“®—Ê(vector3)
 	*/
 	template<typename T>
-	constexpr Matrix<T> translate(const saki::Vector3<T>& vec)
+	constexpr matrix<T> translate(const saki::vector3<T>& vec)
 	{
-		return Matrix<T>
+		return matrix<T>
 		{
 			1, 0, 0, vec.x,
 				0, 1, 0, vec.y,
@@ -49,12 +49,12 @@ namespace saki
 	}
 	/**
 	* @brief •½sˆÚ“®
-	* @param vec ˆÚ“®—Ê(Vector4)
+	* @param vec ˆÚ“®—Ê(vector4)
 	*/
 	template<typename T>
-	constexpr Matrix<T> translate(const saki::Vector4<T>& vec)
+	constexpr matrix<T> translate(const saki::vector4<T>& vec)
 	{
-		return Matrix<T>
+		return matrix<T>
 		{
 			1, 0, 0, vec.x,
 				0, 1, 0, vec.y,
@@ -65,12 +65,12 @@ namespace saki
 
 	/**
 	* @brief Šgk
-	* @param vec Šgk—Ê(Vector2)
+	* @param vec Šgk—Ê(vector2)
 	*/
 	template<typename T>
-	constexpr Matrix<T> scaling(const saki::Vector2<T>& vec)
+	constexpr matrix<T> scaling(const saki::vector2<T>& vec)
 	{
-		return Matrix<T>
+		return matrix<T>
 		{
 			vec.x, 0, 0, 0,
 				0, vec.y, 0, 0,
@@ -80,12 +80,12 @@ namespace saki
 	}
 	/**
 	* @brief Šgk
-	* @param vec Šgk—Ê(Vector3)
+	* @param vec Šgk—Ê(vector3)
 	*/
 	template<typename T>
-	constexpr Matrix<T> scaling(const saki::Vector3<T>& vec)
+	constexpr matrix<T> scaling(const saki::vector3<T>& vec)
 	{
-		return Matrix<T>
+		return matrix<T>
 		{
 			vec.x, 0, 0, 0,
 				0, vec.y, 0, 0,
@@ -95,12 +95,12 @@ namespace saki
 	}
 	/**
 	* @brief Šgk
-	* @param vec Šgk—Ê(Vector4)
+	* @param vec Šgk—Ê(vector4)
 	*/
 	template<typename T>
-	constexpr Matrix<T> scaling(const saki::Vector4<T>& vec)
+	constexpr matrix<T> scaling(const saki::vector4<T>& vec)
 	{
-		return Matrix<T>
+		return matrix<T>
 		{
 			vec.x, 0, 0, 0,
 				0, vec.y, 0, 0,

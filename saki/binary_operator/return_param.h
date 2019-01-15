@@ -13,7 +13,7 @@ namespace saki
 	/**
 	* @brief そのまま引数を返す関数オブジェクト
 	*/
-	struct ReturnParam
+	struct return_param
 	{
 		template<typename T>
 		constexpr T operator()(const T& t)const

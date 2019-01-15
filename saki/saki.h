@@ -18,8 +18,8 @@
 #include <saki/meta/meta.h>
 #include <saki/random/random.h>
 #include <saki/singleton/singleton.h>
-#include <saki/smart_ptr/smart_ptr.h>
 #include <saki/split/split.h>
+#include <saki/string/string.h>
 #include <saki/transform/transform.h>
 #include <saki/tree/tree.h>
 #include <saki/vector/vector.h>

@@ -19,7 +19,7 @@ namespace saki
 	* @return ŒvZŒ‹‰Ê
 	* @details start>end‚Ìê‡A0‚ª•Ô‚é
 	*/
-	template<typename T = int, typename Func = saki::ReturnParam>
+	template<typename T = int, typename Func = saki::return_param>
 	constexpr T sigma(T start, const T& end, Func&& f = Func())
 	{
 		T sum = 0;

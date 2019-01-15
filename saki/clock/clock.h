@@ -7,21 +7,20 @@
 #pragma once
 #ifndef SAKI_CLOCK_2018_12_04
 #define SAKI_CLOCK_2018_12_04
-#include <saki/singleton/singleton.h>
 #include <chrono>
 namespace saki
 {
 	/**
 	* @brief 時間を測るクラス
 	*/
-	class Clock :public saki::Singleton<Clock>
+	class clock
 	{
 		std::chrono::system_clock::time_point start_time;//開始時間
 	public:
 		/**
 		* @brief コンストラクタ
 		*/
-		Clock() :start_time(std::chrono::system_clock::now()) {}
+		clock() :start_time(std::chrono::system_clock::now()) {}
 	public:
 		enum class DURATION { HOUR, MINUTE, SECOND, MILLISECOND, MICROSECOND, NANOSECOND, NONE };
 		/**

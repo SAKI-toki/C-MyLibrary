@@ -1,6 +1,6 @@
 /**
 * @file matrix_operator.h
-* @brief Matrixクラスの演算子
+* @brief matrixクラスの演算子
 * @author 石山 悠
 * @date 2018/12/13
 */
@@ -14,16 +14,16 @@ namespace saki
 {
 	//プロトタイプ宣言
 	template<typename T>
-	class Matrix;
+	class matrix;
 	namespace details
 	{
 		/**
 		* @brief 行列同士の演算(+と-)
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto matrix_matrix_some_operator(const Matrix<T1>& m1, const Matrix<T2>& m2, const Func& f)
+		constexpr auto matrix_matrix_some_operator(const matrix<T1>& m1, const matrix<T2>& m2, const Func& f)
 		{
-			return Matrix<decltype(std::declval<T1>() * std::declval<T2>())>
+			return matrix<decltype(std::declval<T1>() * std::declval<T2>())>
 			{
 				f(m1[0][0], m2[0][0]), f(m1[0][1], m2[0][1]),
 					f(m1[0][2], m2[0][2]), f(m1[0][3], m2[0][3]),
@@ -39,9 +39,9 @@ namespace saki
 		* @brief 行列とスカラの演算
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto matrix_scalar_some_operator(const Matrix<T1>& m, const T2& scalar, const Func& f)
+		constexpr auto matrix_scalar_some_operator(const matrix<T1>& m, const T2& scalar, const Func& f)
 		{
-			return Matrix<decltype(std::declval<T1>() * std::declval<T2>())>
+			return matrix<decltype(std::declval<T1>() * std::declval<T2>())>
 			{
 				f(m[0][0], scalar), f(m[0][1], scalar),
 					f(m[0][2], scalar), f(m[0][3], scalar),
@@ -58,7 +58,7 @@ namespace saki
 	* @brief +演算子
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator+(const Matrix<T1>& m1, const Matrix<T2>& m2)
+	constexpr auto operator+(const matrix<T1>& m1, const matrix<T2>& m2)
 	{
 		return details::matrix_matrix_some_operator(m1, m2, saki::addition());
 	}
@@ -66,7 +66,7 @@ namespace saki
 	* @brief -演算子
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator-(const Matrix<T1>& m1, const Matrix<T2>& m2)
+	constexpr auto operator-(const matrix<T1>& m1, const matrix<T2>& m2)
 	{
 		return details::matrix_matrix_some_operator(m1, m2, saki::subtraction());
 	}
@@ -74,7 +74,7 @@ namespace saki
 	* @brief *演算子(行列*スカラ)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const Matrix<T1>& m, const T2& scalar)
+	constexpr auto operator*(const matrix<T1>& m, const T2& scalar)
 	{
 		return details::matrix_scalar_some_operator(m, scalar, saki::multiplication());
 	}
@@ -82,7 +82,7 @@ namespace saki
 	* @brief *演算子(スカラ*行列)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const T1& scalar, const Matrix<T2>& m)
+	constexpr auto operator*(const T1& scalar, const matrix<T2>& m)
 	{
 		return m * scalar;
 	}
@@ -90,10 +90,10 @@ namespace saki
 	* @brief *演算子(行列*行列)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const Matrix<T1>& m1, const Matrix<T2>& m2)
+	constexpr auto operator*(const matrix<T1>& m1, const matrix<T2>& m2)
 	{
 		using m_type = decltype(std::declval<T1>() * std::declval<T2>());
-		Matrix<m_type> mat;
+		matrix<m_type> mat;
 		for (int i = 0; i < 4; ++i)
 		{
 			for (int j = 0; j < 4; ++j)
@@ -112,7 +112,7 @@ namespace saki
 	* @brief /演算子(スカラ)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator/(const Matrix<T1>& m, const T2& scalar)
+	constexpr auto operator/(const matrix<T1>& m, const T2& scalar)
 	{
 		return details::matrix_scalar_some_operator(m, scalar, saki::division());
 	}
@@ -120,7 +120,7 @@ namespace saki
 	* @brief ==演算子
 	*/
 	template<typename T>
-	constexpr bool operator==(const Matrix<T>& m1, const Matrix<T>& m2)
+	constexpr bool operator==(const matrix<T>& m1, const matrix<T>& m2)
 	{
 		for (int i = 0; i < 4; ++i)
 		{
@@ -135,7 +135,7 @@ namespace saki
 	* @brief !=演算子
 	*/
 	template<typename T>
-	constexpr bool operator!=(const Matrix<T>& m1, const Matrix<T>& m2)
+	constexpr bool operator!=(const matrix<T>& m1, const matrix<T>& m2)
 	{
 		return !(m1 == m2);
 	}
@@ -144,7 +144,7 @@ namespace saki
 	* @details この関数の使用は推奨しない
 	*/
 	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator==(const Matrix<T1>& m1, const Matrix<T2>& m2)
+		constexpr bool operator==(const matrix<T1>& m1, const matrix<T2>& m2)
 	{
 		for (int i = 0; i < 4; ++i)
 		{
@@ -160,7 +160,7 @@ namespace saki
 	* @details この関数の使用は推奨しない
 	*/
 	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator!=(const Matrix<T1>& m1, const Matrix<T2>& m2)
+		constexpr bool operator!=(const matrix<T1>& m1, const matrix<T2>& m2)
 	{
 		return !(m1 == m2);
 	}

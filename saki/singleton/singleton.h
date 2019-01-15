@@ -7,7 +7,7 @@
 /*
 クラスをシングルトンにするとき、このクラスを継承するだけでシングルトンになる
 ※使い方
-class A:public saki::Singleton<A>{}
+class A:public saki::singleton<A>{}
 */
 #ifndef SAKI_SINGLETON_2018_10_17
 #define SAKI_SINGLETON_2018_10_17
@@ -18,7 +18,7 @@ namespace saki
 	* @brief 継承するとシングルトンクラスになる
 	*/
 	template<typename T>
-	class Singleton
+	class singleton
 	{
 	public:
 		/**
@@ -31,15 +31,15 @@ namespace saki
 			return instance;
 		}
 
-		virtual ~Singleton() {}
+		virtual ~singleton() {}
 
 	protected:
-		Singleton() {}
+		singleton() {}
 	private:
-		Singleton(const Singleton&) = delete;
-		Singleton& operator=(const Singleton&) = delete;
-		Singleton(Singleton&&) = delete;
-		Singleton& operator=(Singleton&&) = delete;
+		singleton(const singleton&) = delete;
+		singleton& operator=(const singleton&) = delete;
+		singleton(singleton&&) = delete;
+		singleton& operator=(singleton&&) = delete;
 	};
 }
 #endif //SAKI_SINGLETON_2018_10_17

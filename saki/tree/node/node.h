@@ -21,7 +21,7 @@ namespace saki
 	template<typename T>
 	class Tree;
 	template<typename T>
-	class Node :public std::enable_shared_from_this<Node<T>>
+	class node :public std::enable_shared_from_this<node<T>>
 	{
 	public:
 		SAKI_TYPE_MACRO(T)
@@ -36,9 +36,9 @@ namespace saki
 		//深度
 		int depth;
 		//親
-		std::shared_ptr<saki::Node<T>> parent_ptr;
+		std::shared_ptr<saki::node<T>> parent_ptr;
 		//子
-		std::list<std::shared_ptr<saki::Node<T>>> child_list;
+		std::list<std::shared_ptr<saki::node<T>>> child_list;
 		/**
 		* @brief 子を探す
 		* @param node_name ノード名
@@ -59,7 +59,7 @@ namespace saki
 		* @param node_name ノード名
 		* @details 失敗すると自分自身を返す
 		*/
-		std::shared_ptr<saki::Node<T>> get_child(const std::string& node_name)
+		std::shared_ptr<saki::node<T>> get_child(const std::string& node_name)
 		{
 			auto itr = std::begin(child_list);
 			while (itr != std::end(child_list))
@@ -141,14 +141,14 @@ namespace saki
 		* @param node_name 子の名前
 		* @param t 初期値
 		*/
-		std::shared_ptr<saki::Node<T>> add_child(const std::string& node_name, T t)
+		std::shared_ptr<saki::node<T>> add_child(const std::string& node_name, T t)
 		{
 			//同じ名前があったら何もしない
 			if (find_child(node_name))
 			{
 				return shared_from_this();
 			}
-			child_list.push_back(std::make_shared<saki::Node<T>>(shared_from_this(), node_name, path, depth, t));
+			child_list.push_back(std::make_shared<saki::node<T>>(shared_from_this(), node_name, path, depth, t));
 			return get_child(node_name);
 		}
 		/**
@@ -159,7 +159,7 @@ namespace saki
 		* @param _depth 親ノードの深さ
 		* @param t 初期値
 		*/
-		Node(std::shared_ptr<saki::Node<T>>& p_ptr, const std::string& node_name, const std::string& current_path, const int _depth, T t) :
+		node(std::shared_ptr<saki::node<T>>& p_ptr, const std::string& node_name, const std::string& current_path, const int _depth, T t) :
 			parent_ptr(p_ptr), name(node_name), path(current_path + "/" + node_name), depth(_depth + 1), value(t)
 		{}
 		/**
@@ -168,14 +168,14 @@ namespace saki
 		* @param node_name ノード名
 		* @param t 初期値
 		*/
-		Node(std::shared_ptr<saki::Node<T>>& p_ptr, const std::string& node_name, T t) :
+		node(std::shared_ptr<saki::node<T>>& p_ptr, const std::string& node_name, T t) :
 			parent_ptr(p_ptr), name(node_name), path(node_name), depth(0), value(t)
 		{}
 		/**
 		* @brief 自分自身をカレントディレクトリとしてノードをめぐり、たどり着いたノードを返す
 		* @details 失敗すると自分自身を返す
 		*/
-		std::shared_ptr<saki::Node<T>> get_node(const std::string& node_path = "")const
+		std::shared_ptr<saki::node<T>> get_node(const std::string& node_path = "")const
 		{
 			if (node_path == "")
 			{
@@ -189,7 +189,7 @@ namespace saki
 			auto str_itr = std::begin(str_list);
 			if (*str_itr == ".")++str_itr;
 			//カレントからスタートする
-			std::shared_ptr<saki::Node<T>> node = shared_from_this();
+			std::shared_ptr<saki::node<T>> node = shared_from_this();
 			//ノードをめぐる
 			while (str_itr != std::end(str_list))
 			{
@@ -261,7 +261,7 @@ namespace saki
 		* @brief ノードのコピー
 		* @param other_node コピーするノード
 		*/
-		void copy_node(const std::shared_ptr<saki::Node<T>>& other_node)
+		void copy_node(const std::shared_ptr<saki::node<T>>& other_node)
 		{
 			for (const auto& other : other_node->child_list)
 			{
@@ -273,7 +273,7 @@ namespace saki
 		* @brief ノードのムーブ
 		* @param other_node ムーブするノード
 		*/
-		void move_node(std::shared_ptr<saki::Node<T>>&& other_node)noexcept
+		void move_node(std::shared_ptr<saki::node<T>>&& other_node)noexcept
 		{
 			for (auto&& other : other_node->child_list)
 			{

@@ -2,7 +2,7 @@
 * @file can_end_method.h
 * @brief w’è‚µ‚½Œ^‚ªstd::end‚Å‚«‚é‚©‚Ç‚¤‚©”»’è‚·‚éƒƒ^ŠÖ”
 * @author ÎR —I
-* @date 2010/01/12
+* @date 2019/01/12
 */
 #pragma once
 #ifndef SAKI_CAN_END_METHOD_2019_01_12

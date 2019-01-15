@@ -1,6 +1,6 @@
 /**
 * @file vector_4d_operator.h
-* @brief Vector4クラスの演算子
+* @brief vector4クラスの演算子
 * @author 石山 悠
 * @date 2018/12/13
 */
@@ -14,25 +14,25 @@
 namespace saki
 {
 	template<typename T>
-	class Vector4;
+	class vector4;
 	namespace details
 	{
 		/**
 		* @brief ベクトル同士の演算
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto vector4_vector4_some_operator(const Vector4<T1>& v1, const Vector4<T2>& v2, Func&& f)
+		constexpr auto vector4_vector4_some_operator(const vector4<T1>& v1, const vector4<T2>& v2, Func&& f)
 		{
-			return Vector4<decltype(std::declval<T1>() + std::declval<T2>())>
+			return vector4<decltype(std::declval<T1>() + std::declval<T2>())>
 			{ f(v1.x, v2.x), f(v1.y, v2.y), f(v1.z, v2.z), f(v1.w, v2.w) };
 		}
 		/**
 		* @brief ベクトルとスカラの演算
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto vector4_scalar_some_operator(const Vector4<T1>& v, const T2& scalar, Func&& f)
+		constexpr auto vector4_scalar_some_operator(const vector4<T1>& v, const T2& scalar, Func&& f)
 		{
-			return Vector4<decltype(std::declval<T1>() * std::declval<T2>())>
+			return vector4<decltype(std::declval<T1>() * std::declval<T2>())>
 			{  f(v.x, scalar), f(v.y, scalar), f(v.z, scalar), f(v.w, scalar)  };
 		}
 	}
@@ -40,7 +40,7 @@ namespace saki
 	* @brief +演算子
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator+(const Vector4<T1>& v1, const Vector4<T2>& v2)
+	constexpr auto operator+(const vector4<T1>& v1, const vector4<T2>& v2)
 	{
 		return details::vector4_vector4_some_operator(v1, v2, saki::addition());
 	}
@@ -48,7 +48,7 @@ namespace saki
 	* @brief -演算子
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator-(const Vector4<T1>& v1, const Vector4<T2>& v2)
+	constexpr auto operator-(const vector4<T1>& v1, const vector4<T2>& v2)
 	{
 		return details::vector4_vector4_some_operator(v1, v2, saki::subtraction());
 	}
@@ -56,7 +56,7 @@ namespace saki
 	* @brief *演算子(ベクトル*スカラ)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const Vector4<T1>& v, const T2& scalar)
+	constexpr auto operator*(const vector4<T1>& v, const T2& scalar)
 	{
 		return details::vector4_scalar_some_operator(v, scalar, saki::multiplication());
 	}
@@ -64,7 +64,7 @@ namespace saki
 	* @brief *演算子(スカラ*ベクトル)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const T1& scalar, const Vector4<T2>& v)
+	constexpr auto operator*(const T1& scalar, const vector4<T2>& v)
 	{
 		return v + scalar;
 	}
@@ -72,7 +72,7 @@ namespace saki
 	* @brief *演算子(ベクトル)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const Vector4<T1>& v1, const Vector4<T2>& v2)
+	constexpr auto operator*(const vector4<T1>& v1, const vector4<T2>& v2)
 	{
 		return details::vector4_vector4_some_operator(v1, v2, saki::multiplication());
 	}
@@ -80,7 +80,7 @@ namespace saki
 	* @brief /演算子(スカラ)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator/(const Vector4<T1>& v, const T2& scalar)
+	constexpr auto operator/(const vector4<T1>& v, const T2& scalar)
 	{
 		return details::vector4_scalar_some_operator(v, scalar, saki::division());
 	}
@@ -88,7 +88,7 @@ namespace saki
 	* @brief /演算子(ベクトル)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator/(const Vector4<T1>& v1, const Vector4<T2>& v2)
+	constexpr auto operator/(const vector4<T1>& v1, const vector4<T2>& v2)
 	{
 		return details::vector4_vector4_some_operator(v1, v2, saki::division());
 	}
@@ -96,7 +96,7 @@ namespace saki
 	* @brief ==演算子
 	*/
 	template<typename T>
-	constexpr bool operator==(const Vector4<T>& v1, const Vector4<T>& v2)
+	constexpr bool operator==(const vector4<T>& v1, const vector4<T>& v2)
 	{
 		return v1.x == v2.x && v1.y == v2.y && v1.z == v2.z && v1.w == v2.w;
 	}
@@ -104,7 +104,7 @@ namespace saki
 	* @brief !=演算子
 	*/
 	template<typename T>
-	constexpr bool operator!=(const Vector4<T>& v1, const Vector4<T>& v2)
+	constexpr bool operator!=(const vector4<T>& v1, const vector4<T>& v2)
 	{
 		return !(v1 == v2);
 	}
@@ -113,7 +113,7 @@ namespace saki
 	* @details この関数の使用は推奨しない
 	*/
 	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator==(const Vector4<T1>& v1, const Vector4<T2>& v2)
+		constexpr bool operator==(const vector4<T1>& v1, const vector4<T2>& v2)
 	{
 		return v1.x == v2.x && v1.y == v2.y && v1.z == v2.z && v1.w == v2.w;
 	}
@@ -122,7 +122,7 @@ namespace saki
 	* @details この関数の使用は推奨しない
 	*/
 	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator!=(const Vector4<T1>& v1, const Vector4<T2>& v2)
+		constexpr bool operator!=(const vector4<T1>& v1, const vector4<T2>& v2)
 	{
 		return !(v1 == v2);
 	}
