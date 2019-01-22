@@ -1,9 +1,17 @@
 var searchData=
 [
-  ['delete_5fnode',['delete_node',['../classsaki_1_1_node.html#a57d63d7ba5c2f3bba02a042bbad12dc4',1,'saki::Node']]],
-  ['distancexy',['distanceXY',['../namespacesaki.html#ac7860b024b9f60e5d2426448504cdfa5',1,'saki']]],
-  ['distancexyz',['distanceXYZ',['../namespacesaki.html#aca24fd78c511e7ccd8f14a9c04eff7e9',1,'saki']]],
-  ['distancexz',['distanceXZ',['../namespacesaki.html#aa160b674649d86e048ff2676e20b0d25',1,'saki']]],
-  ['distanceyz',['distanceYZ',['../namespacesaki.html#a430390838f23403a3efc4182aed002b1',1,'saki']]],
-  ['dot',['dot',['../namespacesaki.html#ab82e30fbfefb8153e8488bd78a163258',1,'saki::dot(const saki::Vector2&lt; T1 &gt; &amp;v1, const saki::Vector2&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a6c6b476a4701cfe673da8e930895c297',1,'saki::dot(const saki::Vector3&lt; T1 &gt; &amp;v1, const saki::Vector3&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a6ed2a14726e1df49115a45e829f2d9a2',1,'saki::dot(const saki::Vector4&lt; T1 &gt; &amp;v1, const saki::Vector4&lt; T2 &gt; &amp;v2)']]]
+  ['cbegin',['cbegin',['../classsaki_1_1array.html#a0423222730174b0538e70c9c7d552e26',1,'saki::array']]],
+  ['cbrt',['cbrt',['../namespacesaki.html#a8836c929b71a61cf0151d3b76eb7af15',1,'saki::cbrt(T x)'],['../namespacesaki.html#a5a3d1ab0508dcff1fb2e17a4ef8a855d',1,'saki::cbrt(T x)']]],
+  ['cend',['cend',['../classsaki_1_1array.html#a80d8f941a4045ac5b2af32c73548cb57',1,'saki::array']]],
+  ['check',['check',['../classsaki_1_1_multiple_separation.html#a27725149daca02b021edf69c58bbe140',1,'saki::MultipleSeparation::check()'],['../classsaki_1_1_not_equal_separation.html#ae0f0b0efa166ce1edcec289a8c04e549',1,'saki::NotEqualSeparation::check()']]],
+  ['clock',['clock',['../classsaki_1_1clock.html#aec6aa6ad43fcc8f992f7ee9a25e25354',1,'saki::clock']]],
+  ['const_5fiterator',['const_iterator',['../classsaki_1_1const__iterator.html#a67dcc4ecf451800f4fa59a536d672ef5',1,'saki::const_iterator']]],
+  ['const_5freverse_5fiterator',['const_reverse_iterator',['../classsaki_1_1const__reverse__iterator.html#ae696e711d884b66fb36c20262446cfae',1,'saki::const_reverse_iterator']]],
+  ['copy',['copy',['../namespacesaki.html#a3a9c67bf73207dfb61db4cd53ee35863',1,'saki']]],
+  ['copysign',['copysign',['../namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e',1,'saki']]],
+  ['cos',['cos',['../namespacesaki.html#a82551963a8cab889ca6f76ed346d6f4f',1,'saki::cos(T x)'],['../namespacesaki.html#ab1f49aa2d1182883ae8b4c01b346cc88',1,'saki::cos(T x)']]],
+  ['cosh',['cosh',['../namespacesaki.html#a0f8167af6da5c9eb510d33dadae13708',1,'saki::cosh(T x)'],['../namespacesaki.html#afe248729248030bd5858469409e902d2',1,'saki::cosh(T x)']]],
+  ['crbegin',['crbegin',['../classsaki_1_1array.html#a16bc4c34eaa4c1f1e526636f0e37da27',1,'saki::array']]],
+  ['crend',['crend',['../classsaki_1_1array.html#ad56a6f2dbbf83c04c97108b11402d50d',1,'saki::array']]],
+  ['cross',['cross',['../namespacesaki.html#a457d78ffe360e1d8a78d14ec5dab38f2',1,'saki::cross(const saki::vector2&lt; T1 &gt; &amp;v1, const saki::vector2&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a980242869d69e47ff8b10335e86ccf6f',1,'saki::cross(const saki::vector3&lt; T1 &gt; &amp;v1, const saki::vector3&lt; T2 &gt; &amp;v2)']]]
 ];

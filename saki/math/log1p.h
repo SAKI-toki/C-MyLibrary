@@ -5,10 +5,11 @@
 * @date 2019/01/13
 */
 #pragma once
-#ifndef SAKI_LOG1P_2019_01_13
-#define SAKI_LOG1P_2019_01_13
+#ifndef SAKI_MATH_LOG1P_2019_01_13
+#define SAKI_MATH_LOG1P_2019_01_13
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/log.h>
 
@@ -18,7 +19,7 @@ namespace saki
 	* @brief コンパイル時log1p
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T log1p(T x)
 	{
 		if (saki::isnan(x) || x == std::numeric_limits<T>::infinity() || x == 0)return x;
@@ -32,10 +33,10 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double log1p(T x)
 	{
 		return saki::log1p(static_cast<double>(x));
 	}
 }
-#endif //SAKI_LOG1P_2019_01_13
+#endif //SAKI_MATH_LOG1P_2019_01_13

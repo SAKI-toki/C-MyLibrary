@@ -78,7 +78,7 @@ $(function() {
 <p>3次元でのベクトル  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;limits&gt;</code><br />
-<code>#include &lt;<a class="el" href="sqrt_8h_source.html">saki/constexpr_std/sqrt.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="sqrt_8h_source.html">saki/math/sqrt.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="vector__3d__operator_8h_source.html">saki/vector/details/3d/vector_3d_operator.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="type__macro_8h_source.html">saki/macro/type_macro.h</a>&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
@@ -87,8 +87,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_vector3.html">saki::Vector3&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3次元でのベクトル  <a href="classsaki_1_1_vector3.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1vector3.html">saki::vector3&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3次元でのベクトル  <a href="classsaki_1_1vector3.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -98,41 +98,41 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a938e75286fb3165b32fdd886cc234e05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__3d_8h.html#a938e75286fb3165b32fdd886cc234e05">SAKI_VECTOR_3D_2018_12_06</a></td></tr>
-<tr class="separator:a938e75286fb3165b32fdd886cc234e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a36564932f48db94869df087f32ba3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector__3d_8h.html#af6a36564932f48db94869df087f32ba3">SAKI_VECTOR_VECTOR_3D_2018_12_06</a></td></tr>
+<tr class="separator:af6a36564932f48db94869df087f32ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a9d2c1a56c676217c90344612186cf3bb"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T &gt; </td></tr>
-<tr class="memitem:a9d2c1a56c676217c90344612186cf3bb"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9d2c1a56c676217c90344612186cf3bb">saki::normalize</a> (const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T &gt; &amp;v)</td></tr>
-<tr class="memdesc:a9d2c1a56c676217c90344612186cf3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化  <a href="namespacesaki.html#a9d2c1a56c676217c90344612186cf3bb">[詳解]</a><br /></td></tr>
-<tr class="separator:a9d2c1a56c676217c90344612186cf3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c6b476a4701cfe673da8e930895c297"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a6c6b476a4701cfe673da8e930895c297"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a6c6b476a4701cfe673da8e930895c297">saki::dot</a> (const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T1 &gt; &amp;v1, const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T2 &gt; &amp;v2)</td></tr>
-<tr class="memdesc:a6c6b476a4701cfe673da8e930895c297"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積  <a href="namespacesaki.html#a6c6b476a4701cfe673da8e930895c297">[詳解]</a><br /></td></tr>
-<tr class="separator:a6c6b476a4701cfe673da8e930895c297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5abe501bb1b1b0f15b56409f59a6b319"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a5abe501bb1b1b0f15b56409f59a6b319"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5abe501bb1b1b0f15b56409f59a6b319">saki::cross</a> (const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T1 &gt; &amp;v1, const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T2 &gt; &amp;v2)</td></tr>
-<tr class="memdesc:a5abe501bb1b1b0f15b56409f59a6b319"><td class="mdescLeft">&#160;</td><td class="mdescRight">外積  <a href="namespacesaki.html#a5abe501bb1b1b0f15b56409f59a6b319">[詳解]</a><br /></td></tr>
-<tr class="separator:a5abe501bb1b1b0f15b56409f59a6b319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a869e38d6d36699cc305e7bd15d6d3123"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 , typename T  = double&gt; </td></tr>
-<tr class="memitem:a869e38d6d36699cc305e7bd15d6d3123"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a869e38d6d36699cc305e7bd15d6d3123">saki::lerp</a> (const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T1 &gt; &amp;v1, const <a class="el" href="classsaki_1_1_vector3.html">saki::Vector3</a>&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)</td></tr>
-<tr class="memdesc:a869e38d6d36699cc305e7bd15d6d3123"><td class="mdescLeft">&#160;</td><td class="mdescRight">線形補間  <a href="namespacesaki.html#a869e38d6d36699cc305e7bd15d6d3123">[詳解]</a><br /></td></tr>
-<tr class="separator:a869e38d6d36699cc305e7bd15d6d3123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38ed490dc1e7d5df7241eefd1c9453b"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T &gt; </td></tr>
+<tr class="memitem:aa38ed490dc1e7d5df7241eefd1c9453b"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa38ed490dc1e7d5df7241eefd1c9453b">saki::normalize</a> (const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T &gt; &amp;v)</td></tr>
+<tr class="memdesc:aa38ed490dc1e7d5df7241eefd1c9453b"><td class="mdescLeft">&#160;</td><td class="mdescRight">正規化  <a href="namespacesaki.html#aa38ed490dc1e7d5df7241eefd1c9453b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa38ed490dc1e7d5df7241eefd1c9453b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be905d72bf8dc80abc703fe69fa6fec"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a5be905d72bf8dc80abc703fe69fa6fec"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5be905d72bf8dc80abc703fe69fa6fec">saki::dot</a> (const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T1 &gt; &amp;v1, const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a5be905d72bf8dc80abc703fe69fa6fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">内積  <a href="namespacesaki.html#a5be905d72bf8dc80abc703fe69fa6fec">[詳解]</a><br /></td></tr>
+<tr class="separator:a5be905d72bf8dc80abc703fe69fa6fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980242869d69e47ff8b10335e86ccf6f"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a980242869d69e47ff8b10335e86ccf6f"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a980242869d69e47ff8b10335e86ccf6f">saki::cross</a> (const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T1 &gt; &amp;v1, const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T2 &gt; &amp;v2)</td></tr>
+<tr class="memdesc:a980242869d69e47ff8b10335e86ccf6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">外積  <a href="namespacesaki.html#a980242869d69e47ff8b10335e86ccf6f">[詳解]</a><br /></td></tr>
+<tr class="separator:a980242869d69e47ff8b10335e86ccf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc5233651ca71b38ed5a53ef304e480"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 , typename T  = double&gt; </td></tr>
+<tr class="memitem:a1dc5233651ca71b38ed5a53ef304e480"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; U &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a1dc5233651ca71b38ed5a53ef304e480">saki::lerp</a> (const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T1 &gt; &amp;v1, const <a class="el" href="classsaki_1_1vector3.html">saki::vector3</a>&lt; T2 &gt; &amp;v2, const T &amp;t, const T &amp;base=1)</td></tr>
+<tr class="memdesc:a1dc5233651ca71b38ed5a53ef304e480"><td class="mdescLeft">&#160;</td><td class="mdescRight">線形補間  <a href="namespacesaki.html#a1dc5233651ca71b38ed5a53ef304e480">[詳解]</a><br /></td></tr>
+<tr class="separator:a1dc5233651ca71b38ed5a53ef304e480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>3次元でのベクトル </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2018/12/06 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a938e75286fb3165b32fdd886cc234e05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a938e75286fb3165b32fdd886cc234e05">&#9670;&nbsp;</a></span>SAKI_VECTOR_3D_2018_12_06</h2>
+<a id="af6a36564932f48db94869df087f32ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a36564932f48db94869df087f32ba3">&#9670;&nbsp;</a></span>SAKI_VECTOR_VECTOR_3D_2018_12_06</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_VECTOR_3D_2018_12_06</td>
+          <td class="memname">#define SAKI_VECTOR_VECTOR_3D_2018_12_06</td>
         </tr>
       </table>
 </div><div class="memdoc">

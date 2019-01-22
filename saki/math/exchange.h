@@ -5,9 +5,10 @@
 * @date 2018/11/21
 */
 #pragma once
-#ifndef SAKI_EXCHANGE_2018_11_21
-#define SAKI_EXCHANGE_2018_11_21
+#ifndef SAKI_MATH_EXCHANGE_2018_11_21
+#define SAKI_MATH_EXCHANGE_2018_11_21
 #include <type_traits>
+#include <utility>
 
 namespace saki
 {
@@ -24,4 +25,4 @@ namespace saki
 		return t1;
 	}
 }
-#endif //SAKI_EXCHANGE_2018_11_21
+#endif //SAKI_MATH_EXCHANGE_2018_11_21

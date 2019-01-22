@@ -1,0 +1,165 @@
+\hypertarget{classsaki_1_1details_1_1reverse__iterator__base}{}\section{saki\+:\+:details\+:\+:reverse\+\_\+iterator\+\_\+base$<$ T $>$ クラステンプレート}
+\label{classsaki_1_1details_1_1reverse__iterator__base}\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base$<$ T $>$@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base$<$ T $>$}}
+
+
+リバースイテレーターのベースクラス  
+
+
+
+
+{\ttfamily \#include $<$reverse\+\_\+iterator\+\_\+base.\+h$>$}
+
+saki\+:\+:details\+:\+:reverse\+\_\+iterator\+\_\+base$<$ T $>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsaki_1_1details_1_1reverse__iterator__base}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_accf1bbae68adfab1bf6e88927e3bc453}{reverse\+\_\+iterator\+\_\+base}} (T \+\_\+itr)
+\item 
+constexpr T\+::reference \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a7f5228433a205d730e987452ff6e8800}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em 間接参照演算子 \end{DoxyCompactList}\item 
+constexpr T\+::pointer \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a15f86c8e2c5830b9b3eaf92cee6fb578}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em アロー演算子 \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a6e8e3c069dea1df9a848c95ffe60acbb}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em ++演算子(前置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a7cd2bc5d74938f93c2b07e059068f830}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em ++演算子(後置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_aea4bcf44b41d1d5cdb37a630ed9a2e4e}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em --演算子(前置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a244654b13c3e164f5382b1216fc5be1f}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em --演算子(後置) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a02df09641bd727c19566dca6c219f279}{itr}}
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TT $>$ }\\constexpr bool \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_ad8dd5df90aef93e3b60ea87f584a6acf}{operator==}} (const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&itr2)
+\item 
+{\footnotesize template$<$typename TT $>$ }\\constexpr bool \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base_a4f19034a62d0d61440f64e39642e2cc6}{operator!=}} (const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&itr2)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+class saki\+::details\+::reverse\+\_\+iterator\+\_\+base$<$ T $>$}
+
+リバースイテレーターのベースクラス 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_accf1bbae68adfab1bf6e88927e3bc453}\label{classsaki_1_1details_1_1reverse__iterator__base_accf1bbae68adfab1bf6e88927e3bc453}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!reverse\+\_\+iterator\+\_\+base@{reverse\+\_\+iterator\+\_\+base}}
+\index{reverse\+\_\+iterator\+\_\+base@{reverse\+\_\+iterator\+\_\+base}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{reverse\+\_\+iterator\+\_\+base()}{reverse\_iterator\_base()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}} (\begin{DoxyParamCaption}\item[{T}]{\+\_\+itr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a7f5228433a205d730e987452ff6e8800}\label{classsaki_1_1details_1_1reverse__iterator__base_a7f5228433a205d730e987452ff6e8800}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T\+::reference \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+間接参照演算子 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a6e8e3c069dea1df9a848c95ffe60acbb}\label{classsaki_1_1details_1_1reverse__iterator__base_a6e8e3c069dea1df9a848c95ffe60acbb}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator++@{operator++}}
+\index{operator++@{operator++}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++演算子(前置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a7cd2bc5d74938f93c2b07e059068f830}\label{classsaki_1_1details_1_1reverse__iterator__base_a7cd2bc5d74938f93c2b07e059068f830}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator++@{operator++}}
+\index{operator++@{operator++}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$T$>$ \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++演算子(後置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_aea4bcf44b41d1d5cdb37a630ed9a2e4e}\label{classsaki_1_1details_1_1reverse__iterator__base_aea4bcf44b41d1d5cdb37a630ed9a2e4e}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+--演算子(前置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a244654b13c3e164f5382b1216fc5be1f}\label{classsaki_1_1details_1_1reverse__iterator__base_a244654b13c3e164f5382b1216fc5be1f}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$T$>$ \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+--演算子(後置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a15f86c8e2c5830b9b3eaf92cee6fb578}\label{classsaki_1_1details_1_1reverse__iterator__base_a15f86c8e2c5830b9b3eaf92cee6fb578}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T\+::pointer \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アロー演算子 
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a4f19034a62d0d61440f64e39642e2cc6}\label{classsaki_1_1details_1_1reverse__iterator__base_a4f19034a62d0d61440f64e39642e2cc6}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename TT $>$ \\
+constexpr bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&}]{itr2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_ad8dd5df90aef93e3b60ea87f584a6acf}\label{classsaki_1_1details_1_1reverse__iterator__base_ad8dd5df90aef93e3b60ea87f584a6acf}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!operator==@{operator==}}
+\index{operator==@{operator==}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename TT $>$ \\
+constexpr bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ TT $>$ \&}]{itr2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{classsaki_1_1details_1_1reverse__iterator__base_a02df09641bd727c19566dca6c219f279}\label{classsaki_1_1details_1_1reverse__iterator__base_a02df09641bd727c19566dca6c219f279}} 
+\index{saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}!itr@{itr}}
+\index{itr@{itr}!saki\+::details\+::reverse\+\_\+iterator\+\_\+base@{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{itr}{itr}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{saki\+::details\+::reverse\+\_\+iterator\+\_\+base}}$<$ T $>$\+::itr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/iterator/reverse/details/\mbox{\hyperlink{reverse__iterator__base_8h}{reverse\+\_\+iterator\+\_\+base.\+h}}\end{DoxyCompactItemize}

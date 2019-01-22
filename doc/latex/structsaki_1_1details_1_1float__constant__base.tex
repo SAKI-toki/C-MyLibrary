@@ -1,0 +1,69 @@
+\hypertarget{structsaki_1_1details_1_1float__constant__base}{}\section{saki\+:\+:details\+:\+:float\+\_\+constant\+\_\+base$<$ T, Integer, Dec, Zero\+Num $>$ 構造体テンプレート}
+\label{structsaki_1_1details_1_1float__constant__base}\index{saki\+::details\+::float\+\_\+constant\+\_\+base$<$ T, Integer, Dec, Zero\+Num $>$@{saki\+::details\+::float\+\_\+constant\+\_\+base$<$ T, Integer, Dec, Zero\+Num $>$}}
+
+
+浮動小数点型の定数を表すベースクラス  
+
+
+
+
+{\ttfamily \#include $<$float\+\_\+constant.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base_a35b0e1f79344dc7f1dff6ed2b6209c7d}{operator T}} () const
+\item 
+constexpr T \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base_a914139c26ddf5f9664b381a51e6423d4}{operator()}} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr T \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base_a7c1fcb103a7419a7812cf095f1ffff61}{value}}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T, int Integer, size\+\_\+t Dec, size\+\_\+t Zero\+Num = 0$>$\newline
+struct saki\+::details\+::float\+\_\+constant\+\_\+base$<$ T, Integer, Dec, Zero\+Num $>$}
+
+浮動小数点型の定数を表すベースクラス 
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{structsaki_1_1details_1_1float__constant__base_a35b0e1f79344dc7f1dff6ed2b6209c7d}\label{structsaki_1_1details_1_1float__constant__base_a35b0e1f79344dc7f1dff6ed2b6209c7d}} 
+\index{saki\+::details\+::float\+\_\+constant\+\_\+base@{saki\+::details\+::float\+\_\+constant\+\_\+base}!operator T@{operator T}}
+\index{operator T@{operator T}!saki\+::details\+::float\+\_\+constant\+\_\+base@{saki\+::details\+::float\+\_\+constant\+\_\+base}}
+\subsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$typename T, int Integer, size\+\_\+t Dec, size\+\_\+t Zero\+Num = 0$>$ \\
+constexpr \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base}{saki\+::details\+::float\+\_\+constant\+\_\+base}}$<$ T, Integer, Dec, Zero\+Num $>$\+::operator T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsaki_1_1details_1_1float__constant__base_a914139c26ddf5f9664b381a51e6423d4}\label{structsaki_1_1details_1_1float__constant__base_a914139c26ddf5f9664b381a51e6423d4}} 
+\index{saki\+::details\+::float\+\_\+constant\+\_\+base@{saki\+::details\+::float\+\_\+constant\+\_\+base}!operator()@{operator()}}
+\index{operator()@{operator()}!saki\+::details\+::float\+\_\+constant\+\_\+base@{saki\+::details\+::float\+\_\+constant\+\_\+base}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename T, int Integer, size\+\_\+t Dec, size\+\_\+t Zero\+Num = 0$>$ \\
+constexpr T \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base}{saki\+::details\+::float\+\_\+constant\+\_\+base}}$<$ T, Integer, Dec, Zero\+Num $>$\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{structsaki_1_1details_1_1float__constant__base_a7c1fcb103a7419a7812cf095f1ffff61}\label{structsaki_1_1details_1_1float__constant__base_a7c1fcb103a7419a7812cf095f1ffff61}} 
+\index{saki\+::details\+::float\+\_\+constant\+\_\+base@{saki\+::details\+::float\+\_\+constant\+\_\+base}!value@{value}}
+\index{value@{value}!saki\+::details\+::float\+\_\+constant\+\_\+base@{saki\+::details\+::float\+\_\+constant\+\_\+base}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T, int Integer, size\+\_\+t Dec, size\+\_\+t Zero\+Num = 0$>$ \\
+constexpr T \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base}{saki\+::details\+::float\+\_\+constant\+\_\+base}}$<$ T, Integer, Dec, Zero\+Num $>$\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+= Integer +
+                \mbox{\hyperlink{namespacesaki_a8bab6303ac2144b883080f04ebe26a0e}{saki::copysign}}(static\_cast<T>(Dec) / 
+                    \mbox{\hyperlink{namespacesaki_1_1details_a30b4cd78c970618ee2886123c28e4041}{saki::details::pow\_n}}(static\_cast<T>(10), ZeroNum + 
+      \mbox{\hyperlink{namespacesaki_a467dee57b7bbe101146713a82acfe95e}{saki::digit\_count}}(Dec)),
+                    Integer)
+\end{DoxyCode}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/\mbox{\hyperlink{float__constant_8h}{float\+\_\+constant.\+h}}\end{DoxyCompactItemize}

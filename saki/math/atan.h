@@ -5,10 +5,11 @@
 * @date 2019/01/06
 */
 #pragma once
-#ifndef SAKI_ATAN_2019_01_06
-#define SAKI_ATAN_2019_01_06
+#ifndef SAKI_MATH_ATAN_2019_01_06
+#define SAKI_MATH_ATAN_2019_01_06
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/sqrt.h>
 #include <saki/math/pow.h>
@@ -22,7 +23,7 @@ namespace saki
 	* @param x •Ó‚Ì”ä
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T atan(T x)
 	{
 		if (saki::isnan(x) || x == 0)return x;
@@ -65,10 +66,10 @@ namespace saki
 	* @param x intŒ^‚Ì”ä
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double atan(T x)
 	{
 		return saki::atan(static_cast<double>(x));
 	}
 }
-#endif //SAKI_ATAN_2019_01_06
+#endif //SAKI_MATH_ATAN_2019_01_06

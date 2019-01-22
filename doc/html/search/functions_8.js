@@ -1,9 +1,16 @@
 var searchData=
 [
-  ['matrix',['Matrix',['../classsaki_1_1_matrix.html#a820035e9bafc0fa4269c4b94b1ec4f4f',1,'saki::Matrix::Matrix()'],['../classsaki_1_1_matrix.html#adaebd9a3c078f5c10eaf225d70faaa66',1,'saki::Matrix::Matrix(const_reference m00, const_reference m01, const_reference m02, const_reference m03, const_reference m10, const_reference m11, const_reference m12, const_reference m13, const_reference m20, const_reference m21, const_reference m22, const_reference m23, const_reference m30, const_reference m31, const_reference m32, const_reference m33)'],['../classsaki_1_1_matrix.html#a3d877c3e3581397370561be931972cb9',1,'saki::Matrix::Matrix(const U arr[4][4])'],['../classsaki_1_1_matrix.html#a80d205d0ee14a41465f56f6ecc8a8c4c',1,'saki::Matrix::Matrix(const saki::Vector4&lt; U1 &gt; &amp;v1, const saki::Vector4&lt; U2 &gt; &amp;v2, const saki::Vector4&lt; U3 &gt; &amp;v3, const saki::Vector4&lt; U4 &gt; &amp;v4)'],['../classsaki_1_1_matrix.html#a6ab873007903b2d999fbe112b64e2536',1,'saki::Matrix::Matrix(const Matrix&lt; value_type &gt; &amp;)=default'],['../classsaki_1_1_matrix.html#ac9348cfbd23fc23bdb2e00cabbff6c66',1,'saki::Matrix::Matrix(Matrix&lt; value_type &gt; &amp;&amp;) noexcept=default']]],
-  ['matrix_5fmatrix_5fsome_5foperator',['matrix_matrix_some_operator',['../namespacesaki_1_1details.html#a7aec6dfaff24ce512bf938a30e01339a',1,'saki::details']]],
-  ['matrix_5fscalar_5fsome_5foperator',['matrix_scalar_some_operator',['../namespacesaki_1_1details.html#a5d1039c410e252de4fd16095e5e6beea',1,'saki::details']]],
-  ['move',['move',['../classsaki_1_1_transform.html#a997aaa3a40a960383e690b6c70665331',1,'saki::Transform::move(const saki::Vector3&lt; T &gt; &amp;pos)'],['../classsaki_1_1_transform.html#ad82b8e7ab975ebbce54f7d0db2489ac7',1,'saki::Transform::move(const T &amp;x, const T &amp;y, const T &amp;z)']]],
-  ['move_5fnode',['move_node',['../classsaki_1_1_node.html#a520f9d300a014a99afd058fe0093d06f',1,'saki::Node']]],
-  ['multipleseparation',['MultipleSeparation',['../classsaki_1_1_multiple_separation.html#a5dd228278057afbf2f1779891de59c63',1,'saki::MultipleSeparation']]]
+  ['identity',['identity',['../classsaki_1_1matrix.html#a9f7f8909ee94f44e91faca871f57b936',1,'saki::matrix']]],
+  ['ilogb',['ilogb',['../namespacesaki.html#a582e9de82aa8572287c01530ae2626a8',1,'saki']]],
+  ['is_5feven',['is_even',['../namespacesaki.html#a7fa7e4ec89e948874e42926e91d6dd4e',1,'saki']]],
+  ['is_5ffit',['is_fit',['../namespacesaki.html#a419ec46a4eaf271747846aaa8e7df594',1,'saki::is_fit(T x, T min_n, T max_n)'],['../namespacesaki.html#aa8702191f3514794558097f7928dd57d',1,'saki::is_fit(T1 x, T2 min_n, T3 max_n)']]],
+  ['is_5fmax',['is_max',['../namespacesaki.html#ae6b9ce1ba404eba8dd9035f99e8666c4',1,'saki']]],
+  ['is_5fmax_5fimpl',['is_max_impl',['../namespacesaki_1_1impl.html#a43f254e0ea1de8b5cdfef3e108eff117',1,'saki::impl::is_max_impl(T)'],['../namespacesaki_1_1impl.html#a3987211cbe7532fd94555a26554acba2',1,'saki::impl::is_max_impl(First first, Second second, Args ...args)']]],
+  ['is_5fmin',['is_min',['../namespacesaki.html#a76f6dc2cbe6bb83e0235b9635eb33ad2',1,'saki']]],
+  ['is_5fmin_5fimpl',['is_min_impl',['../namespacesaki_1_1impl.html#ae9830acbba1cfee8006bd7c0c59cd6df',1,'saki::impl::is_min_impl(T)'],['../namespacesaki_1_1impl.html#a48cbdb55a841933db26e4857720738bb',1,'saki::impl::is_min_impl(First first, Second second, Args ...args)']]],
+  ['is_5fodd',['is_odd',['../namespacesaki.html#a03cf21b9e2231e956f8da966f1e09d70',1,'saki']]],
+  ['isinf',['isinf',['../namespacesaki.html#a2168418bb30a857d2d018d0d05c7ace0',1,'saki']]],
+  ['isnan',['isnan',['../namespacesaki.html#a56ac7ef1477743d3bb044e2cf8f6d612',1,'saki']]],
+  ['iterator',['iterator',['../classsaki_1_1iterator.html#aaf66a5b986033d29630294dd2646bec3',1,'saki::iterator']]],
+  ['iterator_5fbase',['iterator_base',['../classsaki_1_1details_1_1iterator__base.html#a8fc711c3742cad39433fc3de560900f8',1,'saki::details::iterator_base']]]
 ];

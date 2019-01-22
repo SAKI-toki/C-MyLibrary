@@ -1,0 +1,62 @@
+\hypertarget{matrix__math_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+math.h ファイル}
+\label{matrix__math_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+math.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+math.\+h}}
+
+
+行列関係の計算関数  
+
+
+{\ttfamily \#include $<$saki/vector/vector\+\_\+2d.\+h$>$}\newline
+{\ttfamily \#include $<$saki/vector/vector\+\_\+3d.\+h$>$}\newline
+{\ttfamily \#include $<$saki/vector/vector\+\_\+4d.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/sin.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/cos.\+h$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{matrix__math_8h_a2fc01e81687c1eb95b37b371bd76a26d}{S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a2311e77a2bed9d914a6b3e8056d6023a}{saki\+::translate}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 平行移動 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a492418470fa4dedb2065e7916460f0e0}{saki\+::translate}} (const \mbox{\hyperlink{classsaki_1_1vector3}{saki\+::vector3}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 平行移動 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_abdd23c2e56d1500ae2e8b662c5ddcf7c}{saki\+::translate}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 平行移動 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_abda5ab30bf4dc9240857d62d56e590f9}{saki\+::scaling}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_affcd920fe27abc17e5fa50f04bfabe05}{saki\+::scaling}} (const \mbox{\hyperlink{classsaki_1_1vector3}{saki\+::vector3}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_aededd0f357c48d1e96af77b06cb3e786}{saki\+::scaling}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+行列関係の計算関数 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2018/12/29 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{matrix__math_8h_a2fc01e81687c1eb95b37b371bd76a26d}\label{matrix__math_8h_a2fc01e81687c1eb95b37b371bd76a26d}} 
+\index{matrix\+\_\+math.\+h@{matrix\+\_\+math.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29@{S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29@{S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29}!matrix\+\_\+math.\+h@{matrix\+\_\+math.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29}{SAKI\_MATRIX\_DETAILS\_MATRIX\_MATH\_2018\_12\_29}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+M\+A\+T\+H\+\_\+2018\+\_\+12\+\_\+29}
+

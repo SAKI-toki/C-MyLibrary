@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['degree_5fradian_5fconversion_2eh',['degree_radian_conversion.h',['../degree__radian__conversion_8h.html',1,'']]],
-  ['distance_2eh',['distance.h',['../distance_8h.html',1,'']]],
-  ['division_2eh',['division.h',['../division_8h.html',1,'']]]
+  ['enabled_5fif_5fnullptr_2eh',['enabled_if_nullptr.h',['../enabled__if__nullptr_8h.html',1,'']]],
+  ['exchange_2eh',['exchange.h',['../exchange_8h.html',1,'']]],
+  ['exp_2eh',['exp.h',['../exp_8h.html',1,'']]],
+  ['exp2_2eh',['exp2.h',['../exp2_8h.html',1,'']]],
+  ['expm1_2eh',['expm1.h',['../expm1_8h.html',1,'']]]
 ];

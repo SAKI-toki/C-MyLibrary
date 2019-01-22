@@ -6,14 +6,14 @@
 
 
 {\ttfamily \#include $<$limits$>$}\newline
-{\ttfamily \#include $<$saki/constexpr\+\_\+std/sqrt.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/sqrt.\+h$>$}\newline
 {\ttfamily \#include $<$saki/vector/details/2d/vector\+\_\+2d\+\_\+operator.\+h$>$}\newline
 {\ttfamily \#include $<$saki/macro/type\+\_\+macro.\+h$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2$<$ T $>$}}
+class \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2$<$ T $>$}}
 \begin{DoxyCompactList}\small\item\em 2次元でのベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
@@ -23,18 +23,18 @@ class \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2$<$ T $>$}}
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{vector__2d_8h_a201dab80568129da1d033e033e13fd8c}{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}}
+\#define \mbox{\hyperlink{vector__2d_8h_a79bd6fd20ae882a7996f179cf8c2b0b9}{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}}
 \end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename U  = double, typename T $>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ U $>$ \mbox{\hyperlink{namespacesaki_a333cfdbbc10458e1e2d59dbba448b19c}{saki\+::normalize}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T $>$ \&v)
+{\footnotesize template$<$typename U  = double, typename T $>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ U $>$ \mbox{\hyperlink{namespacesaki_a0ca208fb45c585d9cd23276fb91e40ee}{saki\+::normalize}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T $>$ \&v)
 \begin{DoxyCompactList}\small\item\em 正規化 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_ab82e30fbfefb8153e8488bd78a163258}{saki\+::dot}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T2 $>$ \&v2)
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a820a45ae402c8447bce4fee36a1f7d62}{saki\+::dot}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T2 $>$ \&v2)
 \begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_afafc06ccc85183ee8b08a2cbeded09c8}{saki\+::cross}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T2 $>$ \&v2)
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a457d78ffe360e1d8a78d14ec5dab38f2}{saki\+::cross}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T2 $>$ \&v2)
 \begin{DoxyCompactList}\small\item\em 外積 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename U  = double, typename T1 , typename T2 , typename T  = double$>$ }\\constexpr Vector2$<$ U $>$ \mbox{\hyperlink{namespacesaki_a5e45e40b08ddcb3cde0da9131078a9f7}{saki\+::lerp}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2}}$<$ T2 $>$ \&v2, const T \&t, const T \&base=1)
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 , typename T  = double$>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ U $>$ \mbox{\hyperlink{namespacesaki_aca2e4449261f40ee6f47abc49844e66c}{saki\+::lerp}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T2 $>$ \&v2, const T \&t, const T \&base=1)
 \begin{DoxyCompactList}\small\item\em 線形補間 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -50,9 +50,9 @@ class \mbox{\hyperlink{classsaki_1_1_vector2}{saki\+::\+Vector2$<$ T $>$}}
 
 
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{vector__2d_8h_a201dab80568129da1d033e033e13fd8c}\label{vector__2d_8h_a201dab80568129da1d033e033e13fd8c}} 
-\index{vector\+\_\+2d.\+h@{vector\+\_\+2d.\+h}!S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13@{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}}
-\index{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13@{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}!vector\+\_\+2d.\+h@{vector\+\_\+2d.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}{SAKI\_VECTOR\_2D\_2018\_12\_13}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}
+\mbox{\Hypertarget{vector__2d_8h_a79bd6fd20ae882a7996f179cf8c2b0b9}\label{vector__2d_8h_a79bd6fd20ae882a7996f179cf8c2b0b9}} 
+\index{vector\+\_\+2d.\+h@{vector\+\_\+2d.\+h}!S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13@{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}}
+\index{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13@{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}!vector\+\_\+2d.\+h@{vector\+\_\+2d.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}{SAKI\_VECTOR\_VECTOR\_2D\_2018\_12\_13}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+\+V\+E\+C\+T\+O\+R\+\_\+2\+D\+\_\+2018\+\_\+12\+\_\+13}
 

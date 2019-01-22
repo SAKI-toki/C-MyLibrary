@@ -1,0 +1,366 @@
+\hypertarget{classsaki_1_1vector4}{}\section{saki\+:\+:vector4$<$ T $>$ クラステンプレート}
+\label{classsaki_1_1vector4}\index{saki\+::vector4$<$ T $>$@{saki\+::vector4$<$ T $>$}}
+
+
+4次元でのベクトル  
+
+
+
+
+{\ttfamily \#include $<$vector\+\_\+4d\+\_\+operator.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4_a79dd4b2f31976d739dd7c6a3a799cd5b}{vector4}} ()
+\begin{DoxyCompactList}\small\item\em 引数なしコンストラクタ \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4_a49fe2f8b17fc93ffb433fcceec620ae0}{vector4}} (const\+\_\+reference \+\_\+x, const\+\_\+reference \+\_\+y, const\+\_\+reference \+\_\+z, const\+\_\+reference \+\_\+w)
+\begin{DoxyCompactList}\small\item\em 引数ありコンストラクタ \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa13}{vector4}} (const\+\_\+pointer const pointer)
+\begin{DoxyCompactList}\small\item\em 生配列からの初期化 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsaki_1_1vector4_a48d6b2d19c4bdf4a909d5017e7fb9aaa}{vector4}} (const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&)=default
+\item 
+\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1vector4_a0fba7bd5e55de03aca8c11a952e7217f}{operator=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&)=default
+\item 
+\mbox{\hyperlink{classsaki_1_1vector4_ab122c461e9e6e775f981d6c197c43fe1}{vector4}} (\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1vector4_a6e841a2c8d0467586902a4fc0fa6b9a4}{operator=}} (\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&) noexcept=default
+\item 
+{\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_a2109bee349eec6cba816718ecae33070}{operator+=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&other)
+\begin{DoxyCompactList}\small\item\em +=演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_ab7b3e11c18b1a5bb5f3d8a029c6d8ccf}{operator-\/=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&other)
+\begin{DoxyCompactList}\small\item\em -\/=演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_a49e953fdbce76c145389e6f2f7b09da0}{operator$\ast$=}} (const U \&scalar)
+\begin{DoxyCompactList}\small\item\em $\ast$=演算子(スカラ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_acf5408d6463791999ce594ef19c438a4}{operator$\ast$=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&other)
+\begin{DoxyCompactList}\small\item\em $\ast$=演算子(ベクトル) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_af16bb700b952faa321775357a7926d8b}{operator/=}} (const U \&scalar)
+\begin{DoxyCompactList}\small\item\em /=演算子(スカラ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_a4801bb02c1dcbbdde6be286699085628}{operator/=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&other)
+\begin{DoxyCompactList}\small\item\em /=演算子(ベクトル) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ value\+\_\+type $>$ \mbox{\hyperlink{classsaki_1_1vector4_a05af0dc450cd074cdf247beb8a4ceedd}{operator+}} () const
+\begin{DoxyCompactList}\small\item\em 単項+演算子 \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ value\+\_\+type $>$ \mbox{\hyperlink{classsaki_1_1vector4_a24f601d217a8ad649cb0109a20baec2b}{operator-\/}} () const
+\begin{DoxyCompactList}\small\item\em 単項-\/演算子 \end{DoxyCompactList}\item 
+constexpr reference \mbox{\hyperlink{classsaki_1_1vector4_a6f1d99c42ab1163a09614eed8062c9b5}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned int index)
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]}演算子 \end{DoxyCompactList}\item 
+constexpr const\+\_\+reference \mbox{\hyperlink{classsaki_1_1vector4_a545d7cafc89c0267507e5c42f0963c18}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned int index) const
+\begin{DoxyCompactList}\small\item\em \mbox{[}\mbox{]}演算子(constexpr) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1vector4_a8e271ede1ff3ffddcaa89a8b3e04fee7}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em ++演算子(前置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ value\+\_\+type $>$ \mbox{\hyperlink{classsaki_1_1vector4_ab0ac68c756d4435af9255a9635dc33ed}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em ++演算子(後置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1vector4_a602623df1870e123f03b8948f3f0f5df}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em --演算子(前置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ value\+\_\+type $>$ \mbox{\hyperlink{classsaki_1_1vector4_af0937fd1074b0ab42f0c95ba1229817b}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em --演算子(後置) \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{classsaki_1_1vector4_a559bf8b322a0949cfe985ec82e32b2f4}{normalize}} ()
+\begin{DoxyCompactList}\small\item\em 正規化 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4_a8b2ff4254dd0ba142490c77927bfbf8e}{x}} = static\+\_\+cast$<$value\+\_\+type$>$(0)
+\item 
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4_a827cd630cd250d5fe85290f6671dbe0b}{y}} = static\+\_\+cast$<$value\+\_\+type$>$(0)
+\item 
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4_a42ece0235847ec6ee945516d4dc3ab48}{z}} = static\+\_\+cast$<$value\+\_\+type$>$(0)
+\item 
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4_a4db38b2a56279d65d701b14c21f7b073}{w}} = static\+\_\+cast$<$value\+\_\+type$>$(0)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+class saki\+::vector4$<$ T $>$}
+
+4次元でのベクトル 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1vector4_a79dd4b2f31976d739dd7c6a3a799cd5b}\label{classsaki_1_1vector4_a79dd4b2f31976d739dd7c6a3a799cd5b}} 
+\index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
+\index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+引数なしコンストラクタ 
+
+全て0で初期化 \mbox{\Hypertarget{classsaki_1_1vector4_a49fe2f8b17fc93ffb433fcceec620ae0}\label{classsaki_1_1vector4_a49fe2f8b17fc93ffb433fcceec620ae0}} 
+\index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
+\index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{const\+\_\+reference}]{\+\_\+x,  }\item[{const\+\_\+reference}]{\+\_\+y,  }\item[{const\+\_\+reference}]{\+\_\+z,  }\item[{const\+\_\+reference}]{\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+引数ありコンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em \+\_\+x} & xの初期値 \\
+\hline
+{\em \+\_\+y} & yの初期値 \\
+\hline
+{\em \+\_\+z} & zの初期値 \\
+\hline
+{\em \+\_\+w} & wの初期値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa13}\label{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa13}} 
+\index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
+\index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{const\+\_\+pointer const}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+生配列からの初期化 
+
+
+\begin{DoxyParams}{引数}
+{\em pointer} & 配列のポインタ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1vector4_a48d6b2d19c4bdf4a909d5017e7fb9aaa}\label{classsaki_1_1vector4_a48d6b2d19c4bdf4a909d5017e7fb9aaa}} 
+\index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
+\index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_ab122c461e9e6e775f981d6c197c43fe1}\label{classsaki_1_1vector4_ab122c461e9e6e775f981d6c197c43fe1}} 
+\index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
+\index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1vector4_a559bf8b322a0949cfe985ec82e32b2f4}\label{classsaki_1_1vector4_a559bf8b322a0949cfe985ec82e32b2f4}} 
+\index{saki\+::vector4@{saki\+::vector4}!normalize@{normalize}}
+\index{normalize@{normalize}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+正規化 
+
+int型の場合、すべての要素が0で返ります \mbox{\Hypertarget{classsaki_1_1vector4_a49e953fdbce76c145389e6f2f7b09da0}\label{classsaki_1_1vector4_a49e953fdbce76c145389e6f2f7b09da0}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U  = value\+\_\+type$>$ \\
+constexpr auto \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const U \&}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+$\ast$=演算子(スカラ) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_acf5408d6463791999ce594ef19c438a4}\label{classsaki_1_1vector4_acf5408d6463791999ce594ef19c438a4}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U  = value\+\_\+type$>$ \\
+constexpr auto \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+$\ast$=演算子(ベクトル) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a05af0dc450cd074cdf247beb8a4ceedd}\label{classsaki_1_1vector4_a05af0dc450cd074cdf247beb8a4ceedd}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator+@{operator+}}
+\index{operator+@{operator+}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$value\+\_\+type$>$ \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+単項+演算子 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a8e271ede1ff3ffddcaa89a8b3e04fee7}\label{classsaki_1_1vector4_a8e271ede1ff3ffddcaa89a8b3e04fee7}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator++@{operator++}}
+\index{operator++@{operator++}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$value\+\_\+type$>$\& \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++演算子(前置) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_ab0ac68c756d4435af9255a9635dc33ed}\label{classsaki_1_1vector4_ab0ac68c756d4435af9255a9635dc33ed}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator++@{operator++}}
+\index{operator++@{operator++}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$value\+\_\+type$>$ \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++演算子(後置) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a2109bee349eec6cba816718ecae33070}\label{classsaki_1_1vector4_a2109bee349eec6cba816718ecae33070}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U  = value\+\_\+type$>$ \\
+constexpr auto \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
++=演算子 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a24f601d217a8ad649cb0109a20baec2b}\label{classsaki_1_1vector4_a24f601d217a8ad649cb0109a20baec2b}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$value\+\_\+type$>$ \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+単項-\/演算子 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a602623df1870e123f03b8948f3f0f5df}\label{classsaki_1_1vector4_a602623df1870e123f03b8948f3f0f5df}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$value\+\_\+type$>$\& \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+--演算子(前置) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_af0937fd1074b0ab42f0c95ba1229817b}\label{classsaki_1_1vector4_af0937fd1074b0ab42f0c95ba1229817b}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$value\+\_\+type$>$ \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+--演算子(後置) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_ab7b3e11c18b1a5bb5f3d8a029c6d8ccf}\label{classsaki_1_1vector4_ab7b3e11c18b1a5bb5f3d8a029c6d8ccf}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U  = value\+\_\+type$>$ \\
+constexpr auto \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+-\/=演算子 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_af16bb700b952faa321775357a7926d8b}\label{classsaki_1_1vector4_af16bb700b952faa321775357a7926d8b}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U  = value\+\_\+type$>$ \\
+constexpr auto \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const U \&}]{scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+/=演算子(スカラ) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a4801bb02c1dcbbdde6be286699085628}\label{classsaki_1_1vector4_a4801bb02c1dcbbdde6be286699085628}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U  = value\+\_\+type$>$ \\
+constexpr auto \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+/=演算子(ベクトル) 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a0fba7bd5e55de03aca8c11a952e7217f}\label{classsaki_1_1vector4_a0fba7bd5e55de03aca8c11a952e7217f}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$value\+\_\+type$>$\& \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a6e841a2c8d0467586902a4fc0fa6b9a4}\label{classsaki_1_1vector4_a6e841a2c8d0467586902a4fc0fa6b9a4}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$value\+\_\+type$>$\& \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a6f1d99c42ab1163a09614eed8062c9b5}\label{classsaki_1_1vector4_a6f1d99c42ab1163a09614eed8062c9b5}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr reference \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const unsigned int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{[}\mbox{]}演算子 
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a545d7cafc89c0267507e5c42f0963c18}\label{classsaki_1_1vector4_a545d7cafc89c0267507e5c42f0963c18}} 
+\index{saki\+::vector4@{saki\+::vector4}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr const\+\_\+reference \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const unsigned int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{[}\mbox{]}演算子(constexpr) 
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{classsaki_1_1vector4_a4db38b2a56279d65d701b14c21f7b073}\label{classsaki_1_1vector4_a4db38b2a56279d65d701b14c21f7b073}} 
+\index{saki\+::vector4@{saki\+::vector4}!w@{w}}
+\index{w@{w}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::w = static\+\_\+cast$<$value\+\_\+type$>$(0)}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a8b2ff4254dd0ba142490c77927bfbf8e}\label{classsaki_1_1vector4_a8b2ff4254dd0ba142490c77927bfbf8e}} 
+\index{saki\+::vector4@{saki\+::vector4}!x@{x}}
+\index{x@{x}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::x = static\+\_\+cast$<$value\+\_\+type$>$(0)}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a827cd630cd250d5fe85290f6671dbe0b}\label{classsaki_1_1vector4_a827cd630cd250d5fe85290f6671dbe0b}} 
+\index{saki\+::vector4@{saki\+::vector4}!y@{y}}
+\index{y@{y}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::y = static\+\_\+cast$<$value\+\_\+type$>$(0)}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_a42ece0235847ec6ee945516d4dc3ab48}\label{classsaki_1_1vector4_a42ece0235847ec6ee945516d4dc3ab48}} 
+\index{saki\+::vector4@{saki\+::vector4}!z@{z}}
+\index{z@{z}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::z = static\+\_\+cast$<$value\+\_\+type$>$(0)}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/details/4d/\mbox{\hyperlink{vector__4d__operator_8h}{vector\+\_\+4d\+\_\+operator.\+h}}\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/\mbox{\hyperlink{vector__4d_8h}{vector\+\_\+4d.\+h}}\end{DoxyCompactItemize}

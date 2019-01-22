@@ -5,8 +5,8 @@
 * @date 2019/01/13
 */
 #pragma once
-#ifndef SAKI_REVERSE_ITERATOR_2019_01_13
-#define SAKI_REVERSE_ITERATOR_2019_01_13
+#ifndef SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_2019_01_13
+#define SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_2019_01_13
 #include <saki/iterator/reverse/details/reverse_iterator_base.h>
 
 namespace saki
@@ -30,4 +30,4 @@ namespace saki
 		explicit constexpr const_reverse_iterator(const T pointer) :saki::details::reverse_iterator_base<const T>(pointer) {}
 	};
 }
-#endif //SAKI_REVERSE_ITERATOR_2019_01_13
+#endif //SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_2019_01_13

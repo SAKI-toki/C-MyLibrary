@@ -5,8 +5,8 @@
 * @date 2019/01/02
 */
 #pragma once
-#ifndef SAKI_ISNAN_2019_01_02
-#define SAKI_ISNAN_2019_01_02
+#ifndef SAKI_MATH_ISNAN_2019_01_02
+#define SAKI_MATH_ISNAN_2019_01_02
 
 namespace saki
 {
@@ -21,4 +21,4 @@ namespace saki
 		return !(x == x);
 	}
 }
-#endif //SAKI_ISNAN_2019_01_02
+#endif //SAKI_MATH_ISNAN_2019_01_02

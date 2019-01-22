@@ -5,14 +5,15 @@
 * @date 2018/12/23
 */
 #pragma once
-#ifndef SAKI_SPLIT_2018_12_23
-#define SAKI_SPLIT_2018_12_23
+#ifndef SAKI_SPLIT_SPLIT_2018_12_23
+#define SAKI_SPLIT_SPLIT_2018_12_23
 #include <string>
 #include <vector>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/split/details/multiple_separation.h>
 #include <saki/split/details/not_equal_separation.h>
-#include <saki/meta/has_check_method.h>
+#include <saki/type_traits/has_check_method.h>
 
 namespace saki
 {
@@ -24,7 +25,7 @@ namespace saki
 	* @details bool check(char)‚ÌŠÖ”‚ğ‚Á‚Ä‚¢‚éƒNƒ‰ƒX‚È‚ç‚È‚ñ‚Å‚àó‚¯æ‚êAfalse‚ÌŠÔ•¶š‚ğŠi”[‚µ‘±‚¯‚Ü‚·
 	*/
 	template<template<typename, typename> typename Container = std::vector, typename T,
-		typename std::enable_if_t<saki::has_check_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<saki::has_check_v<T>> = nullptr>
 		Container<std::string, std::allocator<std::string>> split(const std::string& str, T&& split_separation)
 	{
 		//‹æØ‚Á‚½•¶š—ñ‚ğ’Ç‰Á
@@ -69,4 +70,4 @@ namespace saki
 		return saki::split<Container>(str, saki::MultipleSeparation(first_separation, t...));
 	}
 }
-#endif //SAKI_SPLIT_2018_12_23
+#endif //SAKI_SPLIT_SPLIT_2018_12_23

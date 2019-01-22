@@ -5,10 +5,11 @@
 * @date 2019/01/08
 */
 #pragma once
-#ifndef SAKI_ACOSH_2019_01_08
-#define SAKI_ACOSH_2019_01_08
+#ifndef SAKI_MATH_ACOSH_2019_01_08
+#define SAKI_MATH_ACOSH_2019_01_08
 #include <type_traits>
 #include <limits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
 #include <saki/math/log.h>
@@ -20,7 +21,7 @@ namespace saki
 	* @brief コンパイル時sinh
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T acosh(T x)
 	{
 		if (saki::isnan(x) || x == std::numeric_limits<T>::infinity())return x;
@@ -33,10 +34,10 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double acosh(T x)
 	{
 		return saki::acosh(static_cast<double>(x));
 	}
 }
-#endif //SAKI_ACOSH_2019_01_08
+#endif //SAKI_MATH_ACOSH_2019_01_08

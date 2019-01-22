@@ -5,10 +5,11 @@
 * @date 2019/01/08
 */
 #pragma once
-#ifndef SAKI_ISINF_2019_01_08
-#define SAKI_ISINF_2019_01_08
+#ifndef SAKI_MATH_ISINF_2019_01_08
+#define SAKI_MATH_ISINF_2019_01_08
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 
 namespace saki
 {
@@ -16,7 +17,7 @@ namespace saki
 	* @brief コンパイル時isinf
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr bool isinf(T x)
 	{
 		return x == std::numeric_limits<T>::infinity() ||
@@ -27,10 +28,10 @@ namespace saki
 	* @details integralの場合は必ずfalse
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
-		constexpr bool isinf(T x)
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		constexpr bool isinf(T)
 	{
 		return false;
 	}
 }
-#endif //SAKI_ISINF_2019_01_08
+#endif //SAKI_MATH_ISINF_2019_01_08

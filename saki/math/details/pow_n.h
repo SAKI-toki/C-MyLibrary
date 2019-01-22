@@ -2,12 +2,14 @@
 * @file pow_n.h
 * @brief 第二引数がint型のpow
 * @author 石山 悠
-* @date 2019/01/09
+* @date 2019/01/19
 */
 #pragma once
-#ifndef SAKI_POW_N_2019_01_09
-#define SAKI_POW_N_2019_01_09
+#ifndef SAKI_MATH_DETAILS_POW_N_2019_01_19
+#define SAKI_MATH_DETAILS_POW_N_2019_01_19
 #include <cstddef>
+#include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 
 namespace saki
 {
@@ -16,30 +18,25 @@ namespace saki
 		/**
 		* @brief powから派生
 		*/
-		template<typename T>
-		constexpr T pow_n(T x, int y)
+		template<typename T1, typename T2,
+			typename saki::enabled_if_nullptr_t<std::is_integral_v<T2>> = nullptr>
+		constexpr T1 pow_n(T1 x, T2 y)
 		{
-			T sum = static_cast<T>(1);
-			for (int i = 0; i < y; ++i)
+			T1 sum = static_cast<T1>(1);
+			for (T2 i = 0; i < y; ++i)
 			{
 				sum *= x;
 			}
-			for (int i = 0; i > y; --i)
+			//符号付きの場合のみマイナスを考慮する
+			if constexpr (std::is_signed_v<T2>)
 			{
-				sum /= x;
-			}
-			return sum;
-		}
-		template<typename T>
-		constexpr T pow_n(T x, size_t y)
-		{
-			T sum = static_cast<T>(1);
-			for (size_t i = 0; i < y; ++i)
-			{
-				sum *= x;
+				for (T2 i = 0; i > y; --i)
+				{
+					sum /= x;
+				}
 			}
 			return sum;
 		}
 	}
 }
-#endif //SAKI_POW_N_2019_01_09
+#endif //SAKI_MATH_DETAILS_POW_N_2019_01_19

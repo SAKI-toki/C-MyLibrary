@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: saki::clock クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacesaki.html">saki</a></li><li class="navelem"><a class="el" href="classsaki_1_1clock.html">clock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="classsaki_1_1clock-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">saki::clock クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>時間を測るクラス  
+ <a href="classsaki_1_1clock.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="clock_2clock_8h_source.html">clock.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a33900ca0b3320bafb061928ad6827bdf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdf">DURATION</a> { <br />
+&#160;&#160;<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfadd3f965174e8bb2f64523981626ced1a">DURATION::HOUR</a>, 
+<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa46bda4cde2f10bdb9e51e3bbefa4a2bf">DURATION::MINUTE</a>, 
+<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa2200becb80f0019c4a2ccecec350d0db">DURATION::SECOND</a>, 
+<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671">DURATION::MILLISECOND</a>, 
+<br />
+&#160;&#160;<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa52a3ae8e5d772e28d4e2105fefd2eed1">DURATION::MICROSECOND</a>, 
+<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfaeb8c6d69310ffef899148b680e672652">DURATION::NANOSECOND</a>, 
+<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfab50339a10e1de285ac99d4c3990b8693">DURATION::NONE</a>
+<br />
+ }</td></tr>
+<tr class="separator:a33900ca0b3320bafb061928ad6827bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aec6aa6ad43fcc8f992f7ee9a25e25354"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1clock.html#aec6aa6ad43fcc8f992f7ee9a25e25354">clock</a> ()</td></tr>
+<tr class="memdesc:aec6aa6ad43fcc8f992f7ee9a25e25354"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="#aec6aa6ad43fcc8f992f7ee9a25e25354">[詳解]</a><br /></td></tr>
+<tr class="separator:aec6aa6ad43fcc8f992f7ee9a25e25354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c77a4865ba0a3840c640014887a0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1clock.html#ad8c77a4865ba0a3840c640014887a0e3">start</a> ()</td></tr>
+<tr class="memdesc:ad8c77a4865ba0a3840c640014887a0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始時間のセット  <a href="#ad8c77a4865ba0a3840c640014887a0e3">[詳解]</a><br /></td></tr>
+<tr class="separator:ad8c77a4865ba0a3840c640014887a0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef6cf0641f5a3c0649574afd70def14"><td class="memTemplParams" colspan="2">template&lt;typename T  = double&gt; </td></tr>
+<tr class="memitem:a0ef6cf0641f5a3c0649574afd70def14"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1clock.html#a0ef6cf0641f5a3c0649574afd70def14">end</a> (<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdf">DURATION</a> duration=<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671">DURATION::MILLISECOND</a>)</td></tr>
+<tr class="memdesc:a0ef6cf0641f5a3c0649574afd70def14"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始時間をセットしてからの時間を返す  <a href="#a0ef6cf0641f5a3c0649574afd70def14">[詳解]</a><br /></td></tr>
+<tr class="separator:a0ef6cf0641f5a3c0649574afd70def14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef0a0c3d42f803192a815a4b8f6f391"><td class="memTemplParams" colspan="2">template&lt;typename T  = double&gt; </td></tr>
+<tr class="memitem:acef0a0c3d42f803192a815a4b8f6f391"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1clock.html#acef0a0c3d42f803192a815a4b8f6f391">end_and_start</a> (<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdf">DURATION</a> duration=<a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671">DURATION::MILLISECOND</a>)</td></tr>
+<tr class="memdesc:acef0a0c3d42f803192a815a4b8f6f391"><td class="mdescLeft">&#160;</td><td class="mdescRight">開始時間をセットしてからの時間を返し、そこからまた時間をスタートする  <a href="#acef0a0c3d42f803192a815a4b8f6f391">[詳解]</a><br /></td></tr>
+<tr class="separator:acef0a0c3d42f803192a815a4b8f6f391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>時間を測るクラス </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a33900ca0b3320bafb061928ad6827bdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33900ca0b3320bafb061928ad6827bdf">&#9670;&nbsp;</a></span>DURATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdf">saki::clock::DURATION</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfadd3f965174e8bb2f64523981626ced1a"></a>HOUR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfa46bda4cde2f10bdb9e51e3bbefa4a2bf"></a>MINUTE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfa2200becb80f0019c4a2ccecec350d0db"></a>SECOND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671"></a>MILLISECOND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfa52a3ae8e5d772e28d4e2105fefd2eed1"></a>MICROSECOND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfaeb8c6d69310ffef899148b680e672652"></a>NANOSECOND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a33900ca0b3320bafb061928ad6827bdfab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="aec6aa6ad43fcc8f992f7ee9a25e25354"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6aa6ad43fcc8f992f7ee9a25e25354">&#9670;&nbsp;</a></span>clock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">saki::clock::clock </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a0ef6cf0641f5a3c0649574afd70def14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef6cf0641f5a3c0649574afd70def14">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T saki::clock::end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdf">DURATION</a>&#160;</td>
+          <td class="paramname"><em>duration</em> = <code><a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671">DURATION::MILLISECOND</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>開始時間をセットしてからの時間を返す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>どの単位で返すか return 時間 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acef0a0c3d42f803192a815a4b8f6f391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef0a0c3d42f803192a815a4b8f6f391">&#9670;&nbsp;</a></span>end_and_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T  = double&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T saki::clock::end_and_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdf">DURATION</a>&#160;</td>
+          <td class="paramname"><em>duration</em> = <code><a class="el" href="classsaki_1_1clock.html#a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671">DURATION::MILLISECOND</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>開始時間をセットしてからの時間を返し、そこからまた時間をスタートする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duration</td><td>どの単位で返すか return 時間 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8c77a4865ba0a3840c640014887a0e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8c77a4865ba0a3840c640014887a0e3">&#9670;&nbsp;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saki::clock::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>開始時間のセット </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/clock/<a class="el" href="clock_2clock_8h_source.html">clock.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

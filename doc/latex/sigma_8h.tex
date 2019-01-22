@@ -1,11 +1,13 @@
-\hypertarget{sigma_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/sigma/sigma.h ファイル}
-\label{sigma_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/sigma/sigma.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/sigma/sigma.\+h}}
+\hypertarget{sigma_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/sigma.h ファイル}
+\label{sigma_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/sigma.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/sigma.\+h}}
 
 
 数学のシグマ(Σ)  
 
 
-{\ttfamily \#include $<$saki/binary\+\_\+operator/return\+\_\+param.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enabled\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/function\+\_\+object/return\+\_\+param.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,12 +16,12 @@
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{sigma_8h_acf62bb524e8d3edf6408cfcab72093e1}{S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10}}
+\#define \mbox{\hyperlink{sigma_8h_a397bf634cebab03c2bd005ebf2d20df2}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18}}
 \end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T  = int, typename Func  = saki\+::\+Return\+Param$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_aa5a82a930469f18d700db4d93b59a7e5}{saki\+::sigma}} (T start, const T \&end, Func \&\&f=Func())
+{\footnotesize template$<$typename T  = int, typename Func  = saki\+::return\+\_\+param, typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr, typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+invocable\+\_\+v$<$ Func, T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_ae518b81f2ab4bba826a913a430a0716f}{saki\+::sigma}} (T start, const T \&end, Func \&\&f=Func())
 \begin{DoxyCompactList}\small\item\em 数学のシグマを簡単に実装 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -30,14 +32,14 @@
 石山 悠 
 \end{DoxyAuthor}
 \begin{DoxyDate}{日付}
-2018/12/10 
+2019/01/18 
 \end{DoxyDate}
 
 
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{sigma_8h_acf62bb524e8d3edf6408cfcab72093e1}\label{sigma_8h_acf62bb524e8d3edf6408cfcab72093e1}} 
-\index{sigma.\+h@{sigma.\+h}!S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10@{S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10}}
-\index{S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10@{S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10}!sigma.\+h@{sigma.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10}{SAKI\_SIGMA\_2018\_12\_10}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+S\+I\+G\+M\+A\+\_\+2018\+\_\+12\+\_\+10}
+\mbox{\Hypertarget{sigma_8h_a397bf634cebab03c2bd005ebf2d20df2}\label{sigma_8h_a397bf634cebab03c2bd005ebf2d20df2}} 
+\index{sigma.\+h@{sigma.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18}!sigma.\+h@{sigma.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18}{SAKI\_MATH\_SIGMA\_2019\_01\_18}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+I\+G\+M\+A\+\_\+2019\+\_\+01\+\_\+18}
 

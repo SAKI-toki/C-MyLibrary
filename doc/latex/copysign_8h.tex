@@ -1,11 +1,13 @@
-\hypertarget{copysign_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/constexpr\+\_\+std/copysign.h ファイル}
-\label{copysign_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/constexpr\+\_\+std/copysign.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/constexpr\+\_\+std/copysign.\+h}}
+\hypertarget{copysign_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/copysign.h ファイル}
+\label{copysign_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/copysign.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/copysign.\+h}}
 
 
 コンパイル時符号コピー  
 
 
-{\ttfamily \#include $<$saki/constexpr\+\_\+std/abs.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$saki/math/abs.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,12 +16,12 @@
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{copysign_8h_af9d84ef6d11a6d161bea5c473dc3b8d8}{S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}}
+\#define \mbox{\hyperlink{copysign_8h_a6d03b79f9c4d1903d434a37b96e79ed9}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}}
 \end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename Sign\+Type $>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a1791113a346dea4c2d7fd8e120016038}{saki\+::copysign}} (const T \&t, const Sign\+Type \&st)
+{\footnotesize template$<$typename T , typename Sign\+Type $>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a8bab6303ac2144b883080f04ebe26a0e}{saki\+::copysign}} (const T \&x, const Sign\+Type \&y)
 \begin{DoxyCompactList}\small\item\em コンパイル時符号コピー \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -35,9 +37,9 @@
 
 
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{copysign_8h_af9d84ef6d11a6d161bea5c473dc3b8d8}\label{copysign_8h_af9d84ef6d11a6d161bea5c473dc3b8d8}} 
-\index{copysign.\+h@{copysign.\+h}!S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09@{S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}}
-\index{S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09@{S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}!copysign.\+h@{copysign.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}{SAKI\_COPYSIGN\_2018\_12\_09}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}
+\mbox{\Hypertarget{copysign_8h_a6d03b79f9c4d1903d434a37b96e79ed9}\label{copysign_8h_a6d03b79f9c4d1903d434a37b96e79ed9}} 
+\index{copysign.\+h@{copysign.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}!copysign.\+h@{copysign.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}{SAKI\_MATH\_COPYSIGN\_2018\_12\_09}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+C\+O\+P\+Y\+S\+I\+G\+N\+\_\+2018\+\_\+12\+\_\+09}
 

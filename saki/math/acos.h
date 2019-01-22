@@ -5,10 +5,11 @@
 * @date 2019/01/06
 */
 #pragma once
-#ifndef SAKI_ACOS_2019_01_06
-#define SAKI_ACOS_2019_01_06
+#ifndef SAKI_MATH_ACOS_2019_01_06
+#define SAKI_MATH_ACOS_2019_01_06
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/isnan.h>
 #include <saki/math/pi.h>
@@ -21,7 +22,7 @@ namespace saki
 	* @param x •Ó‚Ì”ä
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T acos(T x)
 	{
 		if (saki::isnan(x))return x;
@@ -34,10 +35,10 @@ namespace saki
 	* @param x intŒ^‚Ì”ä
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double acos(T x)
 	{
 		return saki::acos(static_cast<double>(x));
 	}
 }
-#endif //SAKI_ACOS_2019_01_06
+#endif //SAKI_MATH_ACOS_2019_01_06

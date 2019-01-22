@@ -5,8 +5,8 @@
 * @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_VECTOR_4D_2018_12_13
-#define SAKI_VECTOR_4D_2018_12_13
+#ifndef SAKI_VECTOR_VECTOR_4D_2018_12_13
+#define SAKI_VECTOR_VECTOR_4D_2018_12_13
 #include <limits> //for numeric_limits
 #include <saki/math/sqrt.h> //for constexpr_sqrt
 #include <saki/vector/details/4d/vector_4d_operator.h>
@@ -270,4 +270,4 @@ namespace saki
 	}
 }
 
-#endif //SAKI_VECTOR_4D_2018_12_13
+#endif //SAKI_VECTOR_VECTOR_4D_2018_12_13

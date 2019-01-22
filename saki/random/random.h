@@ -8,8 +8,8 @@
 Œˆ‚ß‚ç‚ê‚½”ÍˆÍ‚Åƒ‰ƒ“ƒ_ƒ€‚È’l‚ğæ“¾‚·‚éŠÖ”‚Å‚·
 */
 #pragma once
-#ifndef SAKI_RANDOM_2018_11_26
-#define SAKI_RANDOM_2018_11_26
+#ifndef SAKI_RANDOM_RANDOM_2018_11_26
+#define SAKI_RANDOM_RANDOM_2018_11_26
 #include <random>
 #include <cassert> //for assert
 namespace saki
@@ -38,4 +38,4 @@ namespace saki
 		}
 	}
 }
-#endif //SAKI_RANDOM_2018_11_26
+#endif //SAKI_RANDOM_RANDOM_2018_11_26

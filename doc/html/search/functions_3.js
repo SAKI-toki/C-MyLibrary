@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['end',['end',['../classsaki_1_1_clock.html#afb3a41ac314bb58c010283bea60069f9',1,'saki::Clock']]],
-  ['end_5fand_5fstart',['end_and_start',['../classsaki_1_1_clock.html#a6df6705089065ac8f9f3cdb718d7284f',1,'saki::Clock']]],
-  ['exchange',['exchange',['../namespacesaki.html#a41390f371e093d85f55a61f26277c185',1,'saki']]],
-  ['expantion',['expantion',['../classsaki_1_1_transform.html#ae5fccba53037829b434269fe2c60b13d',1,'saki::Transform::expantion(const saki::Vector3&lt; T &gt; &amp;sca)'],['../classsaki_1_1_transform.html#adbb630c8fbb0cc2c03c60ee8f9433a49',1,'saki::Transform::expantion(const T &amp;x, const T &amp;y, const T &amp;z)']]]
+  ['digit_5fcount',['digit_count',['../namespacesaki.html#a467dee57b7bbe101146713a82acfe95e',1,'saki']]],
+  ['distancexy',['distanceXY',['../namespacesaki.html#a3fc5f53a2ad96fd68998eb3cc69b7b14',1,'saki']]],
+  ['distancexyz',['distanceXYZ',['../namespacesaki.html#a456ead1dd3345def8268b21794ffde19',1,'saki']]],
+  ['distancexz',['distanceXZ',['../namespacesaki.html#a00cde91612dbac84d9720bf92a8ab9c6',1,'saki']]],
+  ['distanceyz',['distanceYZ',['../namespacesaki.html#a59a95407d1eab774038224739436170d',1,'saki']]],
+  ['dot',['dot',['../namespacesaki.html#a820a45ae402c8447bce4fee36a1f7d62',1,'saki::dot(const saki::vector2&lt; T1 &gt; &amp;v1, const saki::vector2&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a5be905d72bf8dc80abc703fe69fa6fec',1,'saki::dot(const saki::vector3&lt; T1 &gt; &amp;v1, const saki::vector3&lt; T2 &gt; &amp;v2)'],['../namespacesaki.html#a990ff61a01d4cf819df3fe2774842acf',1,'saki::dot(const saki::vector4&lt; T1 &gt; &amp;v1, const saki::vector4&lt; T2 &gt; &amp;v2)']]]
 ];

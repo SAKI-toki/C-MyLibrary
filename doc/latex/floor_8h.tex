@@ -1,0 +1,55 @@
+\hypertarget{floor_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/floor.h ファイル}
+\label{floor_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/floor.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/floor.\+h}}
+
+
+コンパイル時floor  
+
+
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enabled\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/abs.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/fmod.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/log.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/copysign.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/details/pow\+\_\+n.\+h$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{floor_8h_a9fa26f5518190e1f2d6a59558ea45757}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a0718c031975604811084b62bbba93f7f}{saki\+::floor}} (T x)
+\begin{DoxyCompactList}\small\item\em コンパイル時floor \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_a327cd6800fef212948644f69cb31d4ff}{saki\+::floor}} (T x)
+\begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+コンパイル時floor 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/15 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{floor_8h_a9fa26f5518190e1f2d6a59558ea45757}\label{floor_8h_a9fa26f5518190e1f2d6a59558ea45757}} 
+\index{floor.\+h@{floor.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15}!floor.\+h@{floor.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15}{SAKI\_MATH\_FLOOR\_2019\_01\_15}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+F\+L\+O\+O\+R\+\_\+2019\+\_\+01\+\_\+15}
+

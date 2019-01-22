@@ -9,8 +9,8 @@
 Å¶égÇ¢ï˚
 class A:public saki::singleton<A>{}
 */
-#ifndef SAKI_SINGLETON_2018_10_17
-#define SAKI_SINGLETON_2018_10_17
+#ifndef SAKI_SINGLETON_SINGLETON_2018_10_17
+#define SAKI_SINGLETON_SINGLETON_2018_10_17
 #include <memory> //for unique_ptr
 namespace saki
 {
@@ -42,4 +42,4 @@ namespace saki
 		singleton& operator=(singleton&&) = delete;
 	};
 }
-#endif //SAKI_SINGLETON_2018_10_17
+#endif //SAKI_SINGLETON_SINGLETON_2018_10_17

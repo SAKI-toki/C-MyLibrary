@@ -5,8 +5,8 @@
 * @date 2019/01/06
 */
 #pragma once
-#ifndef SAKI_FACTORIAL_2019_01_06
-#define SAKI_FACTORIAL_2019_01_06
+#ifndef SAKI_MATH_FACTORIAL_2019_01_06
+#define SAKI_MATH_FACTORIAL_2019_01_06
 #include <cstdint>
 #include <cstddef>
 
@@ -125,4 +125,4 @@ namespace saki
 		static constexpr size_t limit = 22;
 	};
 }
-#endif //SAKI_FACTORIAL_2019_01_06
+#endif //SAKI_MATH_FACTORIAL_2019_01_06

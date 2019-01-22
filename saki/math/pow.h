@@ -5,11 +5,12 @@
 * @date 2019/01/07
 */
 #pragma once
-#ifndef SAKI_POW_2019_01_07
-#define SAKI_POW_2019_01_07
+#ifndef SAKI_MATH_POW_2019_01_07
+#define SAKI_MATH_POW_2019_01_07
 #include <cstddef>
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
 #include <saki/math/log.h>
@@ -26,7 +27,7 @@ namespace saki
 	* @brief コンパイル時累乗
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T pow(T x, T y)
 	{
 		if (x == 1 || y == 0)return static_cast<T>(1);
@@ -125,7 +126,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double pow(T x, T y)
 	{
 		return saki::pow(static_cast<double>(x), static_cast<double>(y));
@@ -139,4 +140,4 @@ namespace saki
 		return saki::pow(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
 	}
 }
-#endif //SAKI_POW_2019_01_07
+#endif //SAKI_MATH_POW_2019_01_07

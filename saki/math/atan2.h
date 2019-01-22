@@ -5,10 +5,11 @@
 * @date 2019/01/06
 */
 #pragma once
-#ifndef SAKI_ATAN2_2019_01_06
-#define SAKI_ATAN2_2019_01_06
+#ifndef SAKI_MATH_ATAN2_2019_01_06
+#define SAKI_MATH_ATAN2_2019_01_06
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
 #include <saki/math/copysign.h>
@@ -23,7 +24,7 @@ namespace saki
 	* @param y,x •Ó‚Ì’·‚³
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T atan2(T y, T x)
 	{
 		if (saki::isnan(x))
@@ -82,7 +83,7 @@ namespace saki
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double atan2(T y, T x)
 	{
 		return saki::atan2(static_cast<double>(y), static_cast<double>(x));
@@ -96,4 +97,4 @@ namespace saki
 		return saki::atan2(static_cast<decltype(y * x)>(y), static_cast<decltype(y * x)>(x));
 	}
 }
-#endif //SAKI_ATAN2_2019_01_06
+#endif //SAKI_MATH_ATAN2_2019_01_06

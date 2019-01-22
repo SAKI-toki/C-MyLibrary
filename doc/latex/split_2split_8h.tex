@@ -1,0 +1,35 @@
+\hypertarget{split_2split_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/split/split.h ファイル}
+\label{split_2split_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/split/split.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/split/split.\+h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enabled\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/split/details/multiple\+\_\+separation.\+h$>$}\newline
+{\ttfamily \#include $<$saki/split/details/not\+\_\+equal\+\_\+separation.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/has\+\_\+check\+\_\+method.\+h$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{split_2split_8h_a35985386daf8c3067216bbee6c692575}{S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename, typename $>$ typename Container = std\+::vector, typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ saki\+::has\+\_\+check\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\Container$<$ std\+::string, std\+::allocator$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacesaki_ad15185db28f6e77d65411ca83f64f5bb}{saki\+::split}} (const std\+::string \&str, T \&\&split\+\_\+separation)
+\begin{DoxyCompactList}\small\item\em string型を指定された文字で区切ったものをvectorで返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename $>$ typename Container = std\+::vector, typename First , typename ... T$>$ }\\Container$<$ std\+::string, std\+::allocator$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacesaki_ac1464436ac78ade2ba14371e2efe1fd2}{saki\+::split}} (const std\+::string \&str, First first\+\_\+separation, T ...t)
+\begin{DoxyCompactList}\small\item\em string型を指定された文字で区切ったものをvectorで返す \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{split_2split_8h_a35985386daf8c3067216bbee6c692575}\label{split_2split_8h_a35985386daf8c3067216bbee6c692575}} 
+\index{split/split.\+h@{split/split.\+h}!S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23@{S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23}}
+\index{S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23@{S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23}!split/split.\+h@{split/split.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23}{SAKI\_SPLIT\_SPLIT\_2018\_12\_23}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+S\+P\+L\+I\+T\+\_\+\+S\+P\+L\+I\+T\+\_\+2018\+\_\+12\+\_\+23}
+

@@ -5,8 +5,8 @@
 * @date 2018/12/04
 */
 #pragma once
-#ifndef SAKI_CLOCK_2018_12_04
-#define SAKI_CLOCK_2018_12_04
+#ifndef SAKI_CLOCK_CLOCK_2018_12_04
+#define SAKI_CLOCK_CLOCK_2018_12_04
 #include <chrono>
 namespace saki
 {
@@ -56,11 +56,11 @@ namespace saki
 			}
 			case DURATION::MINUTE: //•ª
 			{
-				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001 * 60);
+				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001 / 60);
 			}
 			case DURATION::HOUR: //ŽžŠÔ
 			{
-				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001 * 60 * 60);
+				return static_cast<T>(elapsed_time * 0.001 * 0.001 * 0.001 / 60 / 60);
 			}
 			default: //ƒiƒm•b
 			{
@@ -82,4 +82,4 @@ namespace saki
 		}
 	};
 }
-#endif //SAKI_CLOCK_2018_12_04
+#endif //SAKI_CLOCK_CLOCK_2018_12_04

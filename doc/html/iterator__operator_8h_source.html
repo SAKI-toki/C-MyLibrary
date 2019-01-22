@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/iterator/details/iterator_operator.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_e73a7dbaa2a9dbf7e876af5c85427847.html">iterator</a></li><li class="navelem"><a class="el" href="dir_00251d0072987163de6cadc4cd6b13c9.html">details</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">iterator_operator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="iterator__operator_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef SAKI_ITERATOR_DETAILS_ITERATOR_OPERATOR_2019_01_09</span></div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="iterator__operator_8h.html#a80e9e683e42420203caba6f59f80af61">    9</a></span>&#160;<span class="preprocessor">#define SAKI_ITERATOR_DETAILS_ITERATOR_OPERATOR_2019_01_09</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki_1_1details.html">saki::details</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//プロトタイプ宣言</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">class </span>iterator_base;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacesaki_1_1details.html#ac09d938c2d3cea1119bb4a46a2c2a1b1">   20</a></span>&#160;    constexpr <span class="keywordtype">bool</span> <a class="code" href="namespacesaki_1_1details.html#ac09d938c2d3cea1119bb4a46a2c2a1b1">operator==</a>(<span class="keyword">const</span> <a class="code" href="classsaki_1_1details_1_1iterator__base.html">iterator_base&lt;T&gt;</a>&amp; itr1, <span class="keyword">const</span> <a class="code" href="classsaki_1_1details_1_1iterator__base.html">iterator_base&lt;T&gt;</a>&amp; itr2)</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> itr1.<a class="code" href="classsaki_1_1details_1_1iterator__base.html#a26c42413a1c967669da4a52b1fe65f13">itr</a> == itr2.<a class="code" href="classsaki_1_1details_1_1iterator__base.html#a26c42413a1c967669da4a52b1fe65f13">itr</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacesaki_1_1details.html#ab425131a223957045b2744e15c53d36f">   28</a></span>&#160;    constexpr <span class="keywordtype">bool</span> <a class="code" href="namespacesaki_1_1details.html#ab425131a223957045b2744e15c53d36f">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classsaki_1_1details_1_1iterator__base.html">iterator_base&lt;T&gt;</a>&amp; itr1, <span class="keyword">const</span> <a class="code" href="classsaki_1_1details_1_1iterator__base.html">iterator_base&lt;T&gt;</a>&amp; itr2)</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> !(itr1 == itr2);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif //SAKI_ITERATOR_DETAILS_ITERATOR_OPERATOR_2019_01_09</span></div><div class="ttc" id="classsaki_1_1details_1_1iterator__base_html_a26c42413a1c967669da4a52b1fe65f13"><div class="ttname"><a href="classsaki_1_1details_1_1iterator__base.html#a26c42413a1c967669da4a52b1fe65f13">saki::details::iterator_base::itr</a></div><div class="ttdeci">T * itr</div><div class="ttdef"><b>Definition:</b> iterator_base.h:28</div></div>
+<div class="ttc" id="namespacesaki_1_1details_html"><div class="ttname"><a href="namespacesaki_1_1details.html">saki::details</a></div><div class="ttdef"><b>Definition:</b> iterator_base.h:12</div></div>
+<div class="ttc" id="namespacesaki_1_1details_html_ac09d938c2d3cea1119bb4a46a2c2a1b1"><div class="ttname"><a href="namespacesaki_1_1details.html#ac09d938c2d3cea1119bb4a46a2c2a1b1">saki::details::operator==</a></div><div class="ttdeci">constexpr bool operator==(const iterator_base&lt; T &gt; &amp;itr1, const iterator_base&lt; T &gt; &amp;itr2)</div><div class="ttdoc">==演算子 </div><div class="ttdef"><b>Definition:</b> iterator_operator.h:20</div></div>
+<div class="ttc" id="classsaki_1_1details_1_1iterator__base_html"><div class="ttname"><a href="classsaki_1_1details_1_1iterator__base.html">saki::details::iterator_base</a></div><div class="ttdoc">イテレーターのベースクラス </div><div class="ttdef"><b>Definition:</b> iterator_base.h:18</div></div>
+<div class="ttc" id="namespacesaki_1_1details_html_ab425131a223957045b2744e15c53d36f"><div class="ttname"><a href="namespacesaki_1_1details.html#ab425131a223957045b2744e15c53d36f">saki::details::operator!=</a></div><div class="ttdeci">constexpr bool operator!=(const iterator_base&lt; T &gt; &amp;itr1, const iterator_base&lt; T &gt; &amp;itr2)</div><div class="ttdoc">!=演算子 </div><div class="ttdef"><b>Definition:</b> iterator_operator.h:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

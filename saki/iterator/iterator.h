@@ -5,8 +5,8 @@
 * @date 2019/01/09
 */
 #pragma once
-#ifndef SAKI_ITERATOR_2019_01_09
-#define SAKI_ITERATOR_2019_01_09
+#ifndef SAKI_ITERATOR_ITERATOR_2019_01_09
+#define SAKI_ITERATOR_ITERATOR_2019_01_09
 #include <saki/macro/type_macro.h>
 #include <saki/iterator/details/iterator_base.h>
 
@@ -32,4 +32,4 @@ namespace saki
 		explicit constexpr const_iterator(const T* pointer) :saki::details::iterator_base<const T>(pointer) {}
 	};
 }
-#endif //SAKI_ITERATOR_2019_01_09
+#endif //SAKI_ITERATOR_ITERATOR_2019_01_09

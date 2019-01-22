@@ -1,0 +1,87 @@
+\hypertarget{namespacesaki_1_1impl}{}\section{saki\+:\+:impl 名前空間}
+\label{namespacesaki_1_1impl}\index{saki\+::impl@{saki\+::impl}}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a43f254e0ea1de8b5cdfef3e108eff117}{is\+\_\+max\+\_\+impl}} (T)
+\begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、trueを返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a3987211cbe7532fd94555a26554acba2}{is\+\_\+max\+\_\+impl}} (First first, Second second, Args ...args)
+\begin{DoxyCompactList}\small\item\em is\+\_\+maxの実装部 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_ae9830acbba1cfee8006bd7c0c59cd6df}{is\+\_\+min\+\_\+impl}} (T)
+\begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、trueを返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a48cbdb55a841933db26e4857720738bb}{is\+\_\+min\+\_\+impl}} (First first, Second second, Args ...args)
+\begin{DoxyCompactList}\small\item\em is\+\_\+minの実装部 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_ac271639854025a923addee4879780f96}{multi\+\_\+equal\+\_\+impl}} (const T \&)
+\begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、falseを返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_afd0543c20cbd7373bceba87c2af5b3de}{multi\+\_\+equal\+\_\+impl}} (const First \&first, const Second \&second, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em multi\+\_\+equalの実装部 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{namespacesaki_1_1impl_a43f254e0ea1de8b5cdfef3e108eff117}\label{namespacesaki_1_1impl_a43f254e0ea1de8b5cdfef3e108eff117}} 
+\index{saki\+::impl@{saki\+::impl}!is\+\_\+max\+\_\+impl@{is\+\_\+max\+\_\+impl}}
+\index{is\+\_\+max\+\_\+impl@{is\+\_\+max\+\_\+impl}!saki\+::impl@{saki\+::impl}}
+\subsubsection{\texorpdfstring{is\+\_\+max\+\_\+impl()}{is\_max\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::impl\+::is\+\_\+max\+\_\+impl (\begin{DoxyParamCaption}\item[{T}]{ }\end{DoxyParamCaption})}
+
+
+
+比較するものがない(なくなった)場合、trueを返す 
+
+\mbox{\Hypertarget{namespacesaki_1_1impl_a3987211cbe7532fd94555a26554acba2}\label{namespacesaki_1_1impl_a3987211cbe7532fd94555a26554acba2}} 
+\index{saki\+::impl@{saki\+::impl}!is\+\_\+max\+\_\+impl@{is\+\_\+max\+\_\+impl}}
+\index{is\+\_\+max\+\_\+impl@{is\+\_\+max\+\_\+impl}!saki\+::impl@{saki\+::impl}}
+\subsubsection{\texorpdfstring{is\+\_\+max\+\_\+impl()}{is\_max\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename First , typename Second , typename ... Args$>$ \\
+constexpr bool saki\+::impl\+::is\+\_\+max\+\_\+impl (\begin{DoxyParamCaption}\item[{First}]{first,  }\item[{Second}]{second,  }\item[{Args ...}]{args }\end{DoxyParamCaption})}
+
+
+
+is\+\_\+maxの実装部 
+
+毎回isnanを判定する必要がないため、実装部を分けた \mbox{\Hypertarget{namespacesaki_1_1impl_ae9830acbba1cfee8006bd7c0c59cd6df}\label{namespacesaki_1_1impl_ae9830acbba1cfee8006bd7c0c59cd6df}} 
+\index{saki\+::impl@{saki\+::impl}!is\+\_\+min\+\_\+impl@{is\+\_\+min\+\_\+impl}}
+\index{is\+\_\+min\+\_\+impl@{is\+\_\+min\+\_\+impl}!saki\+::impl@{saki\+::impl}}
+\subsubsection{\texorpdfstring{is\+\_\+min\+\_\+impl()}{is\_min\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::impl\+::is\+\_\+min\+\_\+impl (\begin{DoxyParamCaption}\item[{T}]{ }\end{DoxyParamCaption})}
+
+
+
+比較するものがない(なくなった)場合、trueを返す 
+
+\mbox{\Hypertarget{namespacesaki_1_1impl_a48cbdb55a841933db26e4857720738bb}\label{namespacesaki_1_1impl_a48cbdb55a841933db26e4857720738bb}} 
+\index{saki\+::impl@{saki\+::impl}!is\+\_\+min\+\_\+impl@{is\+\_\+min\+\_\+impl}}
+\index{is\+\_\+min\+\_\+impl@{is\+\_\+min\+\_\+impl}!saki\+::impl@{saki\+::impl}}
+\subsubsection{\texorpdfstring{is\+\_\+min\+\_\+impl()}{is\_min\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename First , typename Second , typename ... Args$>$ \\
+constexpr bool saki\+::impl\+::is\+\_\+min\+\_\+impl (\begin{DoxyParamCaption}\item[{First}]{first,  }\item[{Second}]{second,  }\item[{Args ...}]{args }\end{DoxyParamCaption})}
+
+
+
+is\+\_\+minの実装部 
+
+毎回isnanを判定する必要がないため、実装部を分けた \mbox{\Hypertarget{namespacesaki_1_1impl_ac271639854025a923addee4879780f96}\label{namespacesaki_1_1impl_ac271639854025a923addee4879780f96}} 
+\index{saki\+::impl@{saki\+::impl}!multi\+\_\+equal\+\_\+impl@{multi\+\_\+equal\+\_\+impl}}
+\index{multi\+\_\+equal\+\_\+impl@{multi\+\_\+equal\+\_\+impl}!saki\+::impl@{saki\+::impl}}
+\subsubsection{\texorpdfstring{multi\+\_\+equal\+\_\+impl()}{multi\_equal\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::impl\+::multi\+\_\+equal\+\_\+impl (\begin{DoxyParamCaption}\item[{const T \&}]{ }\end{DoxyParamCaption})}
+
+
+
+比較するものがない(なくなった)場合、falseを返す 
+
+\mbox{\Hypertarget{namespacesaki_1_1impl_afd0543c20cbd7373bceba87c2af5b3de}\label{namespacesaki_1_1impl_afd0543c20cbd7373bceba87c2af5b3de}} 
+\index{saki\+::impl@{saki\+::impl}!multi\+\_\+equal\+\_\+impl@{multi\+\_\+equal\+\_\+impl}}
+\index{multi\+\_\+equal\+\_\+impl@{multi\+\_\+equal\+\_\+impl}!saki\+::impl@{saki\+::impl}}
+\subsubsection{\texorpdfstring{multi\+\_\+equal\+\_\+impl()}{multi\_equal\_impl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename First , typename Second , typename ... Args$>$ \\
+constexpr bool saki\+::impl\+::multi\+\_\+equal\+\_\+impl (\begin{DoxyParamCaption}\item[{const First \&}]{first,  }\item[{const Second \&}]{second,  }\item[{const Args \&...}]{args }\end{DoxyParamCaption})}
+
+
+
+multi\+\_\+equalの実装部 
+
+毎回isnanを判定する必要がないため、実装部を分けた 

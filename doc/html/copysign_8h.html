@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/constexpr_std/copysign.h ファイル</title>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/math/copysign.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_eae2d1136d7c1a3a2b59529e5d011a14.html">constexpr_std</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ae4a5735452271545d05003c488c30f4.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,7 +76,9 @@ $(function() {
 
 <p>コンパイル時符号コピー  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="abs_8h_source.html">saki/constexpr_std/abs.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;<a class="el" href="abs_8h_source.html">saki/math/abs.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="isnan_8h_source.html">saki/math/isnan.h</a>&gt;</code><br />
 </div>
 <p><a href="copysign_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -87,29 +89,29 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:af9d84ef6d11a6d161bea5c473dc3b8d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="copysign_8h.html#af9d84ef6d11a6d161bea5c473dc3b8d8">SAKI_COPYSIGN_2018_12_09</a></td></tr>
-<tr class="separator:af9d84ef6d11a6d161bea5c473dc3b8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d03b79f9c4d1903d434a37b96e79ed9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="copysign_8h.html#a6d03b79f9c4d1903d434a37b96e79ed9">SAKI_MATH_COPYSIGN_2018_12_09</a></td></tr>
+<tr class="separator:a6d03b79f9c4d1903d434a37b96e79ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a1791113a346dea4c2d7fd8e120016038"><td class="memTemplParams" colspan="2">template&lt;typename T , typename SignType &gt; </td></tr>
-<tr class="memitem:a1791113a346dea4c2d7fd8e120016038"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a1791113a346dea4c2d7fd8e120016038">saki::copysign</a> (const T &amp;t, const SignType &amp;st)</td></tr>
-<tr class="memdesc:a1791113a346dea4c2d7fd8e120016038"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時符号コピー  <a href="namespacesaki.html#a1791113a346dea4c2d7fd8e120016038">[詳解]</a><br /></td></tr>
-<tr class="separator:a1791113a346dea4c2d7fd8e120016038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bab6303ac2144b883080f04ebe26a0e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename SignType &gt; </td></tr>
+<tr class="memitem:a8bab6303ac2144b883080f04ebe26a0e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">saki::copysign</a> (const T &amp;x, const SignType &amp;y)</td></tr>
+<tr class="memdesc:a8bab6303ac2144b883080f04ebe26a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時符号コピー  <a href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">[詳解]</a><br /></td></tr>
+<tr class="separator:a8bab6303ac2144b883080f04ebe26a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コンパイル時符号コピー </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2018/12/09 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="af9d84ef6d11a6d161bea5c473dc3b8d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9d84ef6d11a6d161bea5c473dc3b8d8">&#9670;&nbsp;</a></span>SAKI_COPYSIGN_2018_12_09</h2>
+<a id="a6d03b79f9c4d1903d434a37b96e79ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d03b79f9c4d1903d434a37b96e79ed9">&#9670;&nbsp;</a></span>SAKI_MATH_COPYSIGN_2018_12_09</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_COPYSIGN_2018_12_09</td>
+          <td class="memname">#define SAKI_MATH_COPYSIGN_2018_12_09</td>
         </tr>
       </table>
 </div><div class="memdoc">

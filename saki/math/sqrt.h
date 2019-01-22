@@ -5,10 +5,11 @@
 * @date 2018/11/21
 */
 #pragma once
-#ifndef SAKI_SQRT_2018_11_21
-#define SAKI_SQRT_2018_11_21
+#ifndef SAKI_MATH_SQRT_2018_11_21
+#define SAKI_MATH_SQRT_2018_11_21
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
 
@@ -20,7 +21,7 @@ namespace saki
 	* @details アルゴリズムはバビロニアの平方根を利用
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr T sqrt(T x)
 	{
 		if (saki::isnan(x) ||
@@ -41,7 +42,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double sqrt(T x)
 	{
 		return saki::sqrt(static_cast<double>(x));
@@ -49,8 +50,8 @@ namespace saki
 
 	namespace details
 	{
-		template<int N,typename T>
-		static constexpr T sqrt_v = saki::sqrt<T>(N);
+		template<int N, typename T = double>
+		static constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
 	}
 }
-#endif //SAKI_SQRT_2018_11_21
+#endif //SAKI_MATH_SQRT_2018_11_21

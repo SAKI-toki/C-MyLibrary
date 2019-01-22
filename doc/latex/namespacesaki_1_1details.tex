@@ -1,52 +1,139 @@
 \hypertarget{namespacesaki_1_1details}{}\section{saki\+:\+:details 名前空間}
 \label{namespacesaki_1_1details}\index{saki\+::details@{saki\+::details}}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsaki_1_1details_1_1float__constant__base}{float\+\_\+constant\+\_\+base}}
+\begin{DoxyCompactList}\small\item\em 浮動小数点型の定数を表すベースクラス \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}
+\begin{DoxyCompactList}\small\item\em イテレーターのベースクラス \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}
+\begin{DoxyCompactList}\small\item\em リバースイテレーターのベースクラス \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a7aec6dfaff24ce512bf938a30e01339a}{matrix\+\_\+matrix\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_matrix}{Matrix}}$<$ T1 $>$ \&m1, const \mbox{\hyperlink{classsaki_1_1_matrix}{Matrix}}$<$ T2 $>$ \&m2, const Func \&f)
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1details_ac09d938c2d3cea1119bb4a46a2c2a1b1}{operator==}} (const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&itr2)
+\begin{DoxyCompactList}\small\item\em ==演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1details_ab425131a223957045b2744e15c53d36f}{operator!=}} (const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&itr2)
+\begin{DoxyCompactList}\small\item\em !=演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\decltype(auto) constexpr \mbox{\hyperlink{namespacesaki_1_1details_adc4632dd965cb0131ddadd1bacbe4971}{operator\+\_\+arrow}} (Iterator \&\&itr)
+\begin{DoxyCompactList}\small\item\em アロー演算子を呼ぶ関数 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1details_ac39a55e205a0ce7eca13df0569358fe2}{operator==}} (const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&itr2)
+\begin{DoxyCompactList}\small\item\em ==演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1details_a67a43f1e216aa1da9934815a21bfe2ee}{operator!=}} (const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&itr2)
+\begin{DoxyCompactList}\small\item\em !=演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ }\\constexpr T1 \mbox{\hyperlink{namespacesaki_1_1details_a30b4cd78c970618ee2886123c28e4041}{pow\+\_\+n}} (T1 x, T2 y)
+\begin{DoxyCompactList}\small\item\em powから派生 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a95cd387e134b1b940cde0b171926e01e}{matrix\+\_\+matrix\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T1 $>$ \&m1, const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T2 $>$ \&m2, const Func \&f)
 \begin{DoxyCompactList}\small\item\em 行列同士の演算(+と-\/) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a5d1039c410e252de4fd16095e5e6beea}{matrix\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_matrix}{Matrix}}$<$ T1 $>$ \&m, const T2 \&scalar, const Func \&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_aa3d3214e16ce99b6f4aca7d61d41077f}{matrix\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T1 $>$ \&m, const T2 \&scalar, const Func \&f)
 \begin{DoxyCompactList}\small\item\em 行列とスカラの演算 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_ac8ab9fdbf09089a0272297c3be7c51d4}{transform\+\_\+transform\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T2 $>$ \&v2, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em Transform同士の演算 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a2f5694f4bcf7f45e946384285562521e}{transform\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em Transformとスカラの演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a1e3ab5ffafb707dc8d8b3cf054f3b2e3}{vector2\+\_\+vector2\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T2 $>$ \&v2, Func \&\&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a83d5020a51b57f3b8f8166e785861cc5}{vector2\+\_\+vector2\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T2 $>$ \&v2, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトル同士の演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a8767a64d897787a3b0561939412abb28}{vector2\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a02e93149670af3f28e74fcb7dbcf4fa9}{vector2\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトルとスカラの演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a9d9fd5673ab6516752ecf05845e7f9b9}{vector3\+\_\+vector3\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T2 $>$ \&v2, Func \&\&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a2febe2ef2ca8b6222cd2edd5c82863ad}{vector3\+\_\+vector3\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector3}{vector3}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector3}{vector3}}$<$ T2 $>$ \&v2, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトル同士の演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a65a656e3fd6cb4f45afc9137f5e6383a}{vector3\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a66b715797dcf04fae99e5cd60ea82cb3}{vector3\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector3}{vector3}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトルとスカラの演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a7faa5e95c73949e48acc6840c357990f}{vector4\+\_\+vector4\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_vector4}{Vector4}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_vector4}{Vector4}}$<$ T2 $>$ \&v2, Func \&\&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a059dd5f75d9b1f557f4125e09c15d16c}{vector4\+\_\+vector4\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ T2 $>$ \&v2, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトル同士の演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a1786beb40b0c29d0e6ea19ce2aad110c}{vector4\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_vector4}{Vector4}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_abda7a9b7cd977b6a1e866891e695a60a}{vector4\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトルとスカラの演算 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{namespacesaki_1_1details_a7aec6dfaff24ce512bf938a30e01339a}\label{namespacesaki_1_1details_a7aec6dfaff24ce512bf938a30e01339a}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a95cd387e134b1b940cde0b171926e01e}\label{namespacesaki_1_1details_a95cd387e134b1b940cde0b171926e01e}} 
 \index{saki\+::details@{saki\+::details}!matrix\+\_\+matrix\+\_\+some\+\_\+operator@{matrix\+\_\+matrix\+\_\+some\+\_\+operator}}
 \index{matrix\+\_\+matrix\+\_\+some\+\_\+operator@{matrix\+\_\+matrix\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{matrix\+\_\+matrix\+\_\+some\+\_\+operator()}{matrix\_matrix\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::matrix\+\_\+matrix\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_matrix}{Matrix}}$<$ T1 $>$ \&}]{m1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_matrix}{Matrix}}$<$ T2 $>$ \&}]{m2,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::matrix\+\_\+matrix\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T1 $>$ \&}]{m1,  }\item[{const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T2 $>$ \&}]{m2,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
 
 
 
 行列同士の演算(+と-\/) 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a5d1039c410e252de4fd16095e5e6beea}\label{namespacesaki_1_1details_a5d1039c410e252de4fd16095e5e6beea}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_aa3d3214e16ce99b6f4aca7d61d41077f}\label{namespacesaki_1_1details_aa3d3214e16ce99b6f4aca7d61d41077f}} 
 \index{saki\+::details@{saki\+::details}!matrix\+\_\+scalar\+\_\+some\+\_\+operator@{matrix\+\_\+scalar\+\_\+some\+\_\+operator}}
 \index{matrix\+\_\+scalar\+\_\+some\+\_\+operator@{matrix\+\_\+scalar\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{matrix\+\_\+scalar\+\_\+some\+\_\+operator()}{matrix\_scalar\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::matrix\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_matrix}{Matrix}}$<$ T1 $>$ \&}]{m,  }\item[{const T2 \&}]{scalar,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::matrix\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T1 $>$ \&}]{m,  }\item[{const T2 \&}]{scalar,  }\item[{const Func \&}]{f }\end{DoxyParamCaption})}
 
 
 
 行列とスカラの演算 
+
+\mbox{\Hypertarget{namespacesaki_1_1details_a67a43f1e216aa1da9934815a21bfe2ee}\label{namespacesaki_1_1details_a67a43f1e216aa1da9934815a21bfe2ee}} 
+\index{saki\+::details@{saki\+::details}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!saki\+::details@{saki\+::details}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::details\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&}]{itr2 }\end{DoxyParamCaption})}
+
+
+
+!=演算子 
+
+\mbox{\Hypertarget{namespacesaki_1_1details_ab425131a223957045b2744e15c53d36f}\label{namespacesaki_1_1details_ab425131a223957045b2744e15c53d36f}} 
+\index{saki\+::details@{saki\+::details}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!saki\+::details@{saki\+::details}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::details\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&}]{itr2 }\end{DoxyParamCaption})}
+
+
+
+!=演算子 
+
+\mbox{\Hypertarget{namespacesaki_1_1details_ac39a55e205a0ce7eca13df0569358fe2}\label{namespacesaki_1_1details_ac39a55e205a0ce7eca13df0569358fe2}} 
+\index{saki\+::details@{saki\+::details}!operator==@{operator==}}
+\index{operator==@{operator==}!saki\+::details@{saki\+::details}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::details\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&}]{itr2 }\end{DoxyParamCaption})}
+
+
+
+==演算子 
+
+\mbox{\Hypertarget{namespacesaki_1_1details_ac09d938c2d3cea1119bb4a46a2c2a1b1}\label{namespacesaki_1_1details_ac09d938c2d3cea1119bb4a46a2c2a1b1}} 
+\index{saki\+::details@{saki\+::details}!operator==@{operator==}}
+\index{operator==@{operator==}!saki\+::details@{saki\+::details}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool saki\+::details\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ T $>$ \&}]{itr2 }\end{DoxyParamCaption})}
+
+
+
+==演算子 
+
+\mbox{\Hypertarget{namespacesaki_1_1details_adc4632dd965cb0131ddadd1bacbe4971}\label{namespacesaki_1_1details_adc4632dd965cb0131ddadd1bacbe4971}} 
+\index{saki\+::details@{saki\+::details}!operator\+\_\+arrow@{operator\+\_\+arrow}}
+\index{operator\+\_\+arrow@{operator\+\_\+arrow}!saki\+::details@{saki\+::details}}
+\subsubsection{\texorpdfstring{operator\+\_\+arrow()}{operator\_arrow()}}
+{\footnotesize\ttfamily template$<$typename Iterator $>$ \\
+decltype(auto) constexpr saki\+::details\+::operator\+\_\+arrow (\begin{DoxyParamCaption}\item[{Iterator \&\&}]{itr }\end{DoxyParamCaption})}
+
+
+
+アロー演算子を呼ぶ関数 
+
+\mbox{\Hypertarget{namespacesaki_1_1details_a30b4cd78c970618ee2886123c28e4041}\label{namespacesaki_1_1details_a30b4cd78c970618ee2886123c28e4041}} 
+\index{saki\+::details@{saki\+::details}!pow\+\_\+n@{pow\+\_\+n}}
+\index{pow\+\_\+n@{pow\+\_\+n}!saki\+::details@{saki\+::details}}
+\subsubsection{\texorpdfstring{pow\+\_\+n()}{pow\_n()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ \\
+constexpr T1 saki\+::details\+::pow\+\_\+n (\begin{DoxyParamCaption}\item[{T1}]{x,  }\item[{T2}]{y }\end{DoxyParamCaption})}
+
+
+
+powから派生 
 
 \mbox{\Hypertarget{namespacesaki_1_1details_a2f5694f4bcf7f45e946384285562521e}\label{namespacesaki_1_1details_a2f5694f4bcf7f45e946384285562521e}} 
 \index{saki\+::details@{saki\+::details}!transform\+\_\+scalar\+\_\+some\+\_\+operator@{transform\+\_\+scalar\+\_\+some\+\_\+operator}}
@@ -70,67 +157,67 @@ constexpr auto saki\+::details\+::transform\+\_\+transform\+\_\+some\+\_\+operat
 
 Transform同士の演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a8767a64d897787a3b0561939412abb28}\label{namespacesaki_1_1details_a8767a64d897787a3b0561939412abb28}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a02e93149670af3f28e74fcb7dbcf4fa9}\label{namespacesaki_1_1details_a02e93149670af3f28e74fcb7dbcf4fa9}} 
 \index{saki\+::details@{saki\+::details}!vector2\+\_\+scalar\+\_\+some\+\_\+operator@{vector2\+\_\+scalar\+\_\+some\+\_\+operator}}
 \index{vector2\+\_\+scalar\+\_\+some\+\_\+operator@{vector2\+\_\+scalar\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{vector2\+\_\+scalar\+\_\+some\+\_\+operator()}{vector2\_scalar\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::vector2\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::vector2\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
 ベクトルとスカラの演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a1e3ab5ffafb707dc8d8b3cf054f3b2e3}\label{namespacesaki_1_1details_a1e3ab5ffafb707dc8d8b3cf054f3b2e3}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a83d5020a51b57f3b8f8166e785861cc5}\label{namespacesaki_1_1details_a83d5020a51b57f3b8f8166e785861cc5}} 
 \index{saki\+::details@{saki\+::details}!vector2\+\_\+vector2\+\_\+some\+\_\+operator@{vector2\+\_\+vector2\+\_\+some\+\_\+operator}}
 \index{vector2\+\_\+vector2\+\_\+some\+\_\+operator@{vector2\+\_\+vector2\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{vector2\+\_\+vector2\+\_\+some\+\_\+operator()}{vector2\_vector2\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::vector2\+\_\+vector2\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector2}{Vector2}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::vector2\+\_\+vector2\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
 ベクトル同士の演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a65a656e3fd6cb4f45afc9137f5e6383a}\label{namespacesaki_1_1details_a65a656e3fd6cb4f45afc9137f5e6383a}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a66b715797dcf04fae99e5cd60ea82cb3}\label{namespacesaki_1_1details_a66b715797dcf04fae99e5cd60ea82cb3}} 
 \index{saki\+::details@{saki\+::details}!vector3\+\_\+scalar\+\_\+some\+\_\+operator@{vector3\+\_\+scalar\+\_\+some\+\_\+operator}}
 \index{vector3\+\_\+scalar\+\_\+some\+\_\+operator@{vector3\+\_\+scalar\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{vector3\+\_\+scalar\+\_\+some\+\_\+operator()}{vector3\_scalar\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::vector3\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::vector3\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector3}{vector3}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
 ベクトルとスカラの演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a9d9fd5673ab6516752ecf05845e7f9b9}\label{namespacesaki_1_1details_a9d9fd5673ab6516752ecf05845e7f9b9}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a2febe2ef2ca8b6222cd2edd5c82863ad}\label{namespacesaki_1_1details_a2febe2ef2ca8b6222cd2edd5c82863ad}} 
 \index{saki\+::details@{saki\+::details}!vector3\+\_\+vector3\+\_\+some\+\_\+operator@{vector3\+\_\+vector3\+\_\+some\+\_\+operator}}
 \index{vector3\+\_\+vector3\+\_\+some\+\_\+operator@{vector3\+\_\+vector3\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{vector3\+\_\+vector3\+\_\+some\+\_\+operator()}{vector3\_vector3\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::vector3\+\_\+vector3\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector3}{Vector3}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::vector3\+\_\+vector3\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector3}{vector3}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1vector3}{vector3}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
 ベクトル同士の演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a1786beb40b0c29d0e6ea19ce2aad110c}\label{namespacesaki_1_1details_a1786beb40b0c29d0e6ea19ce2aad110c}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_abda7a9b7cd977b6a1e866891e695a60a}\label{namespacesaki_1_1details_abda7a9b7cd977b6a1e866891e695a60a}} 
 \index{saki\+::details@{saki\+::details}!vector4\+\_\+scalar\+\_\+some\+\_\+operator@{vector4\+\_\+scalar\+\_\+some\+\_\+operator}}
 \index{vector4\+\_\+scalar\+\_\+some\+\_\+operator@{vector4\+\_\+scalar\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{vector4\+\_\+scalar\+\_\+some\+\_\+operator()}{vector4\_scalar\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::vector4\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector4}{Vector4}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::vector4\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
 ベクトルとスカラの演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a7faa5e95c73949e48acc6840c357990f}\label{namespacesaki_1_1details_a7faa5e95c73949e48acc6840c357990f}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a059dd5f75d9b1f557f4125e09c15d16c}\label{namespacesaki_1_1details_a059dd5f75d9b1f557f4125e09c15d16c}} 
 \index{saki\+::details@{saki\+::details}!vector4\+\_\+vector4\+\_\+some\+\_\+operator@{vector4\+\_\+vector4\+\_\+some\+\_\+operator}}
 \index{vector4\+\_\+vector4\+\_\+some\+\_\+operator@{vector4\+\_\+vector4\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{vector4\+\_\+vector4\+\_\+some\+\_\+operator()}{vector4\_vector4\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::vector4\+\_\+vector4\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_vector4}{Vector4}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_vector4}{Vector4}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::vector4\+\_\+vector4\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 

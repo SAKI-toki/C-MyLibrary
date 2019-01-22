@@ -1,0 +1,145 @@
+\hypertarget{classsaki_1_1tree}{}\section{saki\+:\+:tree$<$ T $>$ クラステンプレート}
+\label{classsaki_1_1tree}\index{saki\+::tree$<$ T $>$@{saki\+::tree$<$ T $>$}}
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsaki_1_1tree_a43b93f5855c1def3b61018344d14e809}{tree}} (const std\+::string \&name, T t)
+\begin{DoxyCompactList}\small\item\em 引数ありコンストラクタ \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$ $>$ \mbox{\hyperlink{classsaki_1_1tree_a075bd07afce11ff91ffa6d200dbf6282}{add\+\_\+child}} (const std\+::string \&node\+\_\+name, T t)
+\begin{DoxyCompactList}\small\item\em ノードの追加 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$ $>$ \mbox{\hyperlink{classsaki_1_1tree_a796564f1228f24be4bda5f1f82ba44c3}{get\+\_\+node}} (const std\+::string \&node\+\_\+path=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em ルートディレクトリからノードをめぐり、たどり着いたノードを返す \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$ $>$ \mbox{\hyperlink{classsaki_1_1tree_a6e1fd64555848330aa28f3273953abbb}{get\+\_\+root}} () const
+\begin{DoxyCompactList}\small\item\em rootの取得 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsaki_1_1tree_ade3fa86e8bd2b2d22b3ec7da24f915b6}{tree}} (const \mbox{\hyperlink{classsaki_1_1tree}{tree}} \&other)
+\begin{DoxyCompactList}\small\item\em コピーコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1tree_aaeea7b41a15310740f23776e50c77554}{operator=}} (const \mbox{\hyperlink{classsaki_1_1tree}{tree}} \&)=default
+\item 
+\mbox{\hyperlink{classsaki_1_1tree_a4f1e3143448f197379d7d369270a386a}{tree}} (\mbox{\hyperlink{classsaki_1_1tree}{tree}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1tree_ac5212002d014e676b9c43f4dbbef595f}{operator=}} (\mbox{\hyperlink{classsaki_1_1tree}{tree}} \&\&) noexcept=default
+\item 
+void \mbox{\hyperlink{classsaki_1_1tree_a1ae83219f556f066db0ab5307c1a46d6}{all\+\_\+node\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em デバッグ用の出力関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1tree_a43b93f5855c1def3b61018344d14e809}\label{classsaki_1_1tree_a43b93f5855c1def3b61018344d14e809}} 
+\index{saki\+::tree@{saki\+::tree}!tree@{tree}}
+\index{tree@{tree}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{tree()}{tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1tree}{tree}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{T}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+引数ありコンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & ルートノード名 \\
+\hline
+{\em t} & 初期値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1tree_ade3fa86e8bd2b2d22b3ec7da24f915b6}\label{classsaki_1_1tree_ade3fa86e8bd2b2d22b3ec7da24f915b6}} 
+\index{saki\+::tree@{saki\+::tree}!tree@{tree}}
+\index{tree@{tree}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{tree()}{tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1tree}{tree}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コピーコンストラクタ 
+
+shared\+\_\+ptrを使用しているため、デフォルトコピーコンストラクタではエラーが起きる \mbox{\Hypertarget{classsaki_1_1tree_a4f1e3143448f197379d7d369270a386a}\label{classsaki_1_1tree_a4f1e3143448f197379d7d369270a386a}} 
+\index{saki\+::tree@{saki\+::tree}!tree@{tree}}
+\index{tree@{tree}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{tree()}{tree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1tree}{tree}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$ T $>$ \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1tree_a075bd07afce11ff91ffa6d200dbf6282}\label{classsaki_1_1tree_a075bd07afce11ff91ffa6d200dbf6282}} 
+\index{saki\+::tree@{saki\+::tree}!add\+\_\+child@{add\+\_\+child}}
+\index{add\+\_\+child@{add\+\_\+child}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{add\+\_\+child()}{add\_child()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$T$>$ $>$ \mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::add\+\_\+child (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{node\+\_\+name,  }\item[{T}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ノードの追加 
+
+
+\begin{DoxyParams}{引数}
+{\em node\+\_\+name} & ノード名 \\
+\hline
+{\em t} & 初期値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ノードの追加に成功したかどうか
+\end{DoxyReturn}
+パスに空白を入れないでください \mbox{\Hypertarget{classsaki_1_1tree_a1ae83219f556f066db0ab5307c1a46d6}\label{classsaki_1_1tree_a1ae83219f556f066db0ab5307c1a46d6}} 
+\index{saki\+::tree@{saki\+::tree}!all\+\_\+node\+\_\+name@{all\+\_\+node\+\_\+name}}
+\index{all\+\_\+node\+\_\+name@{all\+\_\+node\+\_\+name}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{all\+\_\+node\+\_\+name()}{all\_node\_name()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::all\+\_\+node\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+デバッグ用の出力関数 
+
+\mbox{\Hypertarget{classsaki_1_1tree_a796564f1228f24be4bda5f1f82ba44c3}\label{classsaki_1_1tree_a796564f1228f24be4bda5f1f82ba44c3}} 
+\index{saki\+::tree@{saki\+::tree}!get\+\_\+node@{get\+\_\+node}}
+\index{get\+\_\+node@{get\+\_\+node}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{get\+\_\+node()}{get\_node()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$T$>$ $>$ \mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::get\+\_\+node (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{node\+\_\+path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ルートディレクトリからノードをめぐり、たどり着いたノードを返す 
+
+失敗するとrootを返す \mbox{\Hypertarget{classsaki_1_1tree_a6e1fd64555848330aa28f3273953abbb}\label{classsaki_1_1tree_a6e1fd64555848330aa28f3273953abbb}} 
+\index{saki\+::tree@{saki\+::tree}!get\+\_\+root@{get\+\_\+root}}
+\index{get\+\_\+root@{get\+\_\+root}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{get\+\_\+root()}{get\_root()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$T$>$ $>$ \mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::get\+\_\+root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rootの取得 
+
+\begin{DoxyReturn}{戻り値}
+root 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaki_1_1tree_aaeea7b41a15310740f23776e50c77554}\label{classsaki_1_1tree_aaeea7b41a15310740f23776e50c77554}} 
+\index{saki\+::tree@{saki\+::tree}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classsaki_1_1tree_ac5212002d014e676b9c43f4dbbef595f}\label{classsaki_1_1tree_ac5212002d014e676b9c43f4dbbef595f}} 
+\index{saki\+::tree@{saki\+::tree}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::tree@{saki\+::tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1tree}{saki\+::tree}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1tree}{tree}}$<$ T $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/tree/\mbox{\hyperlink{tree_2tree_8h}{tree.\+h}}\end{DoxyCompactItemize}

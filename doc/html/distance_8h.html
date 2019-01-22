@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/distance/distance.h ファイル</title>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/math/distance.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_d3f057c7224c59c80aca5a8a477b5487.html">distance</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ae4a5735452271545d05003c488c30f4.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,7 +76,7 @@ $(function() {
 
 <p>2点間の距離を測る  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="sqrt_8h_source.html">saki/constexpr_std/sqrt.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="hypot_8h_source.html">saki/math/hypot.h</a>&gt;</code><br />
 </div>
 <p><a href="distance_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -87,41 +87,41 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:ae5e5a4a9abfebaf218e991304d642abe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="distance_8h.html#ae5e5a4a9abfebaf218e991304d642abe">SAKI_DISTANCE_2018_12_06</a></td></tr>
-<tr class="separator:ae5e5a4a9abfebaf218e991304d642abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f053abbd9522f75171c29303deda803"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="distance_8h.html#a4f053abbd9522f75171c29303deda803">SAKI_MATH_DISTANCE_2018_12_06</a></td></tr>
+<tr class="separator:a4f053abbd9522f75171c29303deda803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ac7860b024b9f60e5d2426448504cdfa5"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:ac7860b024b9f60e5d2426448504cdfa5"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ac7860b024b9f60e5d2426448504cdfa5">saki::distanceXY</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
-<tr class="memdesc:ac7860b024b9f60e5d2426448504cdfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XY)  <a href="namespacesaki.html#ac7860b024b9f60e5d2426448504cdfa5">[詳解]</a><br /></td></tr>
-<tr class="separator:ac7860b024b9f60e5d2426448504cdfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa160b674649d86e048ff2676e20b0d25"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:aa160b674649d86e048ff2676e20b0d25"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa160b674649d86e048ff2676e20b0d25">saki::distanceXZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
-<tr class="memdesc:aa160b674649d86e048ff2676e20b0d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XZ)  <a href="namespacesaki.html#aa160b674649d86e048ff2676e20b0d25">[詳解]</a><br /></td></tr>
-<tr class="separator:aa160b674649d86e048ff2676e20b0d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430390838f23403a3efc4182aed002b1"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a430390838f23403a3efc4182aed002b1"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a430390838f23403a3efc4182aed002b1">saki::distanceYZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
-<tr class="memdesc:a430390838f23403a3efc4182aed002b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(YZ)  <a href="namespacesaki.html#a430390838f23403a3efc4182aed002b1">[詳解]</a><br /></td></tr>
-<tr class="separator:a430390838f23403a3efc4182aed002b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca24fd78c511e7ccd8f14a9c04eff7e9"><td class="memTemplParams" colspan="2">template&lt;typename U  = double, typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:aca24fd78c511e7ccd8f14a9c04eff7e9"><td class="memTemplItemLeft" align="right" valign="top">constexpr U&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aca24fd78c511e7ccd8f14a9c04eff7e9">saki::distanceXYZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
-<tr class="memdesc:aca24fd78c511e7ccd8f14a9c04eff7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XYZ)  <a href="namespacesaki.html#aca24fd78c511e7ccd8f14a9c04eff7e9">[詳解]</a><br /></td></tr>
-<tr class="separator:aca24fd78c511e7ccd8f14a9c04eff7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc5f53a2ad96fd68998eb3cc69b7b14"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a3fc5f53a2ad96fd68998eb3cc69b7b14"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3fc5f53a2ad96fd68998eb3cc69b7b14">saki::distanceXY</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
+<tr class="memdesc:a3fc5f53a2ad96fd68998eb3cc69b7b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XY)  <a href="namespacesaki.html#a3fc5f53a2ad96fd68998eb3cc69b7b14">[詳解]</a><br /></td></tr>
+<tr class="separator:a3fc5f53a2ad96fd68998eb3cc69b7b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00cde91612dbac84d9720bf92a8ab9c6"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a00cde91612dbac84d9720bf92a8ab9c6"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a00cde91612dbac84d9720bf92a8ab9c6">saki::distanceXZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
+<tr class="memdesc:a00cde91612dbac84d9720bf92a8ab9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XZ)  <a href="namespacesaki.html#a00cde91612dbac84d9720bf92a8ab9c6">[詳解]</a><br /></td></tr>
+<tr class="separator:a00cde91612dbac84d9720bf92a8ab9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a95407d1eab774038224739436170d"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a59a95407d1eab774038224739436170d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a59a95407d1eab774038224739436170d">saki::distanceYZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
+<tr class="memdesc:a59a95407d1eab774038224739436170d"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(YZ)  <a href="namespacesaki.html#a59a95407d1eab774038224739436170d">[詳解]</a><br /></td></tr>
+<tr class="separator:a59a95407d1eab774038224739436170d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456ead1dd3345def8268b21794ffde19"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a456ead1dd3345def8268b21794ffde19"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a456ead1dd3345def8268b21794ffde19">saki::distanceXYZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
+<tr class="memdesc:a456ead1dd3345def8268b21794ffde19"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XYZ)  <a href="namespacesaki.html#a456ead1dd3345def8268b21794ffde19">[詳解]</a><br /></td></tr>
+<tr class="separator:a456ead1dd3345def8268b21794ffde19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>2点間の距離を測る </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2018/12/06 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="ae5e5a4a9abfebaf218e991304d642abe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5e5a4a9abfebaf218e991304d642abe">&#9670;&nbsp;</a></span>SAKI_DISTANCE_2018_12_06</h2>
+<a id="a4f053abbd9522f75171c29303deda803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f053abbd9522f75171c29303deda803">&#9670;&nbsp;</a></span>SAKI_MATH_DISTANCE_2018_12_06</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_DISTANCE_2018_12_06</td>
+          <td class="memname">#define SAKI_MATH_DISTANCE_2018_12_06</td>
         </tr>
       </table>
 </div><div class="memdoc">

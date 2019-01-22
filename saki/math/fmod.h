@@ -5,10 +5,12 @@
 * @date 2019/01/02
 */
 #pragma once
-#ifndef SAKI_FMOD_2019_01_02
-#define SAKI_FMOD_2019_01_02
+#ifndef SAKI_MATH_FMOD_2019_01_02
+#define SAKI_MATH_FMOD_2019_01_02
+#include <cstddef>
 #include <type_traits>
 #include <limits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
 #include <saki/math/isinf.h>
@@ -21,7 +23,8 @@ namespace saki
 	* @param y Š„‚é”
 	* @return è—]
 	*/
-	template<typename T>
+	template<typename T,
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr T fmod(T x, T y)
 	{
 		if (saki::isnan(x))
@@ -49,7 +52,13 @@ namespace saki
 		}
 
 		//ˆ—
-		return static_cast<T>(x - static_cast<int>(x / y) * y);
+		return static_cast<T>(x - static_cast<int64_t>(x / y) * y);
+	}
+	template<typename T,
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		constexpr T fmod(T x, T y)
+	{
+		return (x % y);
 	}
 	/**
 	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
@@ -61,4 +70,4 @@ namespace saki
 		return saki::fmod(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
 	}
 }
-#endif //SAKI_FMOD_2019_01_02
+#endif //SAKI_MATH_FMOD_2019_01_02

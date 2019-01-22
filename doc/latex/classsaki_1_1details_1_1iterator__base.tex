@@ -1,0 +1,169 @@
+\hypertarget{classsaki_1_1details_1_1iterator__base}{}\section{saki\+:\+:details\+:\+:iterator\+\_\+base$<$ T $>$ クラステンプレート}
+\label{classsaki_1_1details_1_1iterator__base}\index{saki\+::details\+::iterator\+\_\+base$<$ T $>$@{saki\+::details\+::iterator\+\_\+base$<$ T $>$}}
+
+
+イテレーターのベースクラス  
+
+
+
+
+{\ttfamily \#include $<$iterator\+\_\+base.\+h$>$}
+
+saki\+:\+:details\+:\+:iterator\+\_\+base$<$ T $>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsaki_1_1details_1_1iterator__base}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a8fc711c3742cad39433fc3de560900f8}{iterator\+\_\+base}} (T $\ast$pointer)
+\begin{DoxyCompactList}\small\item\em ポインタで初期化するコンストラクタ \end{DoxyCompactList}\item 
+constexpr T \& \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a621d7cd415fd0be31f666b54fadaf039}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em 間接参照演算子 \end{DoxyCompactList}\item 
+constexpr T $\ast$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a34d98882fa35d0c48ffe5a29c1a1f4cf}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em アロー演算子 \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a1539e90e42dd7208401df3ad5f6385b1}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em ++演算子(前置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a47eb0dcb7d0467879a64eb252079d617}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em ++演算子(後置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$ \& \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_abd955d1a288f42f0231f22c8a1e73040}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em --演算子(前置) \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a916d333d66267d52916eb442b092ed68}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em --演算子(後置) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a26c42413a1c967669da4a52b1fe65f13}{itr}}
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TT $>$ }\\constexpr bool \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a6ac6c0419a9e263f0f89741137499a83}{operator==}} (const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&itr2)
+\item 
+{\footnotesize template$<$typename TT $>$ }\\constexpr bool \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base_a347d4c8755f8c350aa9c0151165549f2}{operator!=}} (const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&itr2)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+class saki\+::details\+::iterator\+\_\+base$<$ T $>$}
+
+イテレーターのベースクラス 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a8fc711c3742cad39433fc3de560900f8}\label{classsaki_1_1details_1_1iterator__base_a8fc711c3742cad39433fc3de560900f8}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!iterator\+\_\+base@{iterator\+\_\+base}}
+\index{iterator\+\_\+base@{iterator\+\_\+base}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{iterator\+\_\+base()}{iterator\_base()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}} (\begin{DoxyParamCaption}\item[{T $\ast$}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+ポインタで初期化するコンストラクタ 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a621d7cd415fd0be31f666b54fadaf039}\label{classsaki_1_1details_1_1iterator__base_a621d7cd415fd0be31f666b54fadaf039}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T\& \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+間接参照演算子 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a1539e90e42dd7208401df3ad5f6385b1}\label{classsaki_1_1details_1_1iterator__base_a1539e90e42dd7208401df3ad5f6385b1}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator++@{operator++}}
+\index{operator++@{operator++}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++演算子(前置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a47eb0dcb7d0467879a64eb252079d617}\label{classsaki_1_1details_1_1iterator__base_a47eb0dcb7d0467879a64eb252079d617}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator++@{operator++}}
+\index{operator++@{operator++}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$T$>$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++演算子(後置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_abd955d1a288f42f0231f22c8a1e73040}\label{classsaki_1_1details_1_1iterator__base_abd955d1a288f42f0231f22c8a1e73040}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$T$>$\& \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+--演算子(前置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a916d333d66267d52916eb442b092ed68}\label{classsaki_1_1details_1_1iterator__base_a916d333d66267d52916eb442b092ed68}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$T$>$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+--演算子(後置) 
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a34d98882fa35d0c48ffe5a29c1a1f4cf}\label{classsaki_1_1details_1_1iterator__base_a34d98882fa35d0c48ffe5a29c1a1f4cf}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T$\ast$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アロー演算子 
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a347d4c8755f8c350aa9c0151165549f2}\label{classsaki_1_1details_1_1iterator__base_a347d4c8755f8c350aa9c0151165549f2}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename TT $>$ \\
+constexpr bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&}]{itr2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a6ac6c0419a9e263f0f89741137499a83}\label{classsaki_1_1details_1_1iterator__base_a6ac6c0419a9e263f0f89741137499a83}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!operator==@{operator==}}
+\index{operator==@{operator==}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename TT $>$ \\
+constexpr bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&}]{itr1,  }\item[{const \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{iterator\+\_\+base}}$<$ TT $>$ \&}]{itr2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{classsaki_1_1details_1_1iterator__base_a26c42413a1c967669da4a52b1fe65f13}\label{classsaki_1_1details_1_1iterator__base_a26c42413a1c967669da4a52b1fe65f13}} 
+\index{saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}!itr@{itr}}
+\index{itr@{itr}!saki\+::details\+::iterator\+\_\+base@{saki\+::details\+::iterator\+\_\+base}}
+\subsubsection{\texorpdfstring{itr}{itr}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T$\ast$ \mbox{\hyperlink{classsaki_1_1details_1_1iterator__base}{saki\+::details\+::iterator\+\_\+base}}$<$ T $>$\+::itr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/iterator/details/\mbox{\hyperlink{iterator__base_8h}{iterator\+\_\+base.\+h}}\end{DoxyCompactItemize}

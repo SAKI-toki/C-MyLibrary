@@ -1,27 +1,34 @@
-\hypertarget{sqrt_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/constexpr\+\_\+std/sqrt.h ファイル}
-\label{sqrt_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/constexpr\+\_\+std/sqrt.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/constexpr\+\_\+std/sqrt.\+h}}
+\hypertarget{sqrt_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/sqrt.h ファイル}
+\label{sqrt_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/sqrt.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/sqrt.\+h}}
 
 
 コンパイル時平方根  
 
 
-{\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enabled\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespacesaki}{saki}}
+\item 
+ \mbox{\hyperlink{namespacesaki_1_1details}{saki\+::details}}
 \end{DoxyCompactItemize}
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{sqrt_8h_a5c9f9d2b61099f6a747d0b31ee560db5}{S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}}
+\#define \mbox{\hyperlink{sqrt_8h_affada2d27a67616a9d9c826632617eb7}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}}
 \end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T1  = double, typename T2  = double$>$ }\\constexpr T1 \mbox{\hyperlink{namespacesaki_a1059e80b300067041c754c1686b04dbd}{saki\+::sqrt}} (const T2 \&n)
-\begin{DoxyCompactList}\small\item\em コンパイル時平方根 \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a5c2f6c98a144d6ba6683c86c865fd595}{saki\+::sqrt}} (T x)
+\begin{DoxyCompactList}\small\item\em コンパイル時平方根 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_a66fac13294984ad19b8b7fec3b5466b5}{saki\+::sqrt}} (T x)
+\begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}
@@ -36,9 +43,9 @@
 
 
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{sqrt_8h_a5c9f9d2b61099f6a747d0b31ee560db5}\label{sqrt_8h_a5c9f9d2b61099f6a747d0b31ee560db5}} 
-\index{sqrt.\+h@{sqrt.\+h}!S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21@{S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}}
-\index{S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21@{S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}!sqrt.\+h@{sqrt.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}{SAKI\_SQRT\_2018\_11\_21}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}
+\mbox{\Hypertarget{sqrt_8h_affada2d27a67616a9d9c826632617eb7}\label{sqrt_8h_affada2d27a67616a9d9c826632617eb7}} 
+\index{sqrt.\+h@{sqrt.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}!sqrt.\+h@{sqrt.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}{SAKI\_MATH\_SQRT\_2018\_11\_21}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+S\+Q\+R\+T\+\_\+2018\+\_\+11\+\_\+21}
 

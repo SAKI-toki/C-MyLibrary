@@ -1,0 +1,48 @@
+\hypertarget{remove__reference__const_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/remove\+\_\+reference\+\_\+const.h ファイル}
+\label{remove__reference__const_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/remove\+\_\+reference\+\_\+const.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/remove\+\_\+reference\+\_\+const.\+h}}
+
+
+参照とconst修飾を削除した型を返す  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsaki_1_1remove__reference__const}{saki\+::remove\+\_\+reference\+\_\+const$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 参照とconst修飾を削除 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{remove__reference__const_8h_abb16224c0ddaf27132aabe70f51a1297}{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12}}
+\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacesaki_aff6964622fdfcdf489dab4b87727a8e4}{saki\+::remove\+\_\+reference\+\_\+const\+\_\+t}} = typename \mbox{\hyperlink{structsaki_1_1remove__reference__const}{saki\+::remove\+\_\+reference\+\_\+const}}$<$ T $>$\+::type
+\begin{DoxyCompactList}\small\item\em remove\+\_\+reference\+\_\+constを簡単に呼び出せるようにした \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+参照とconst修飾を削除した型を返す 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/12 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{remove__reference__const_8h_abb16224c0ddaf27132aabe70f51a1297}\label{remove__reference__const_8h_abb16224c0ddaf27132aabe70f51a1297}} 
+\index{remove\+\_\+reference\+\_\+const.\+h@{remove\+\_\+reference\+\_\+const.\+h}!S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12}}
+\index{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12}!remove\+\_\+reference\+\_\+const.\+h@{remove\+\_\+reference\+\_\+const.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12}{SAKI\_TYPE\_TRAITS\_REMOVE\_REFERENCE\_CONST\_2019\_01\_12}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+C\+O\+N\+S\+T\+\_\+2019\+\_\+01\+\_\+12}
+

@@ -1,0 +1,49 @@
+\hypertarget{is__fit_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/is\+\_\+fit.h ファイル}
+\label{is__fit_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/is\+\_\+fit.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/is\+\_\+fit.\+h}}
+
+
+範囲内かどうかの判定を行う  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enabled\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+h$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{is__fit_8h_a1a99ae3d760b825db69265ec3588e55a}{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a419ec46a4eaf271747846aaa8e7df594}{saki\+::is\+\_\+fit}} (T x, T min\+\_\+n, T max\+\_\+n)
+\begin{DoxyCompactList}\small\item\em 範囲内かどうかの判定を行う \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T1 $>$ \&\&std\+::is\+\_\+arithmetic\+\_\+v$<$ T2 $>$ \&\&std\+::is\+\_\+arithmetic\+\_\+v$<$ T3 $>$ $>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_aa8702191f3514794558097f7928dd57d}{saki\+::is\+\_\+fit}} (T1 x, T2 min\+\_\+n, T3 max\+\_\+n)
+\begin{DoxyCompactList}\small\item\em 型をそろえる \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+範囲内かどうかの判定を行う 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/21 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{is__fit_8h_a1a99ae3d760b825db69265ec3588e55a}\label{is__fit_8h_a1a99ae3d760b825db69265ec3588e55a}} 
+\index{is\+\_\+fit.\+h@{is\+\_\+fit.\+h}!S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21}}
+\index{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21}!is\+\_\+fit.\+h@{is\+\_\+fit.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21}{SAKI\_COMPARE\_IS\_FIT\_2019\_01\_21}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+F\+I\+T\+\_\+2019\+\_\+01\+\_\+21}
+

@@ -5,8 +5,8 @@
 * @date 2019/01/14
 */
 #pragma once
-#ifndef SAKI_REVERSE_ITERATOR_BASE_2019_01_14
-#define SAKI_REVERSE_ITERATOR_BASE_2019_01_14
+#ifndef SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_2019_01_14
+#define SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_2019_01_14
 #include <saki/iterator/reverse/details/reverse_iterator_operator.h>
 
 namespace saki::details
@@ -86,4 +86,4 @@ namespace saki::details
 		}
 	};
 }
-#endif //SAKI_REVERSE_ITERATOR_BASE_2019_01_14
+#endif //SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_2019_01_14

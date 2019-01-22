@@ -5,10 +5,11 @@
 配列クラスの演算子  
 
 
+{\ttfamily \#include $<$cstddef$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array$<$ T, Size $>$}}
+class \mbox{\hyperlink{classsaki_1_1array}{saki\+::array$<$ T, Size $>$}}
 \begin{DoxyCompactList}\small\item\em コンパイル時固定長配列クラス \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
@@ -18,14 +19,14 @@ class \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array$<$ T, Size $>$}}
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{array__operator_8h_a2bbd6a3646fd9a3c94ffed8549a55ec0}{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}}
+\#define \mbox{\hyperlink{array__operator_8h_aa580ee3fee05bc454b988f06bdb058cc}{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}}
 \end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , unsigned int Size$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a2e9a71ad1df5a0fcf7c0b191ef90c1c4}{saki\+::operator==}} (const Array$<$ T, Size $>$ \&arr1, const Array$<$ T, Size $>$ \&arr2)
+{\footnotesize template$<$typename T , size\+\_\+t Size$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a5ce8a66ed6ece15fa9ddeaec2746374d}{saki\+::operator==}} (const array$<$ T, Size $>$ \&arr1, const array$<$ T, Size $>$ \&arr2)
 \begin{DoxyCompactList}\small\item\em ==演算子 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , unsigned int Size$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a08cb75d91d73dcb809caa1e06507ce37}{saki\+::operator!=}} (const Array$<$ T, Size $>$ \&arr1, const Array$<$ T, Size $>$ \&arr2)
+{\footnotesize template$<$typename T , size\+\_\+t Size$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_aed742cc915a830fea9f4993c0a031c45}{saki\+::operator!=}} (const array$<$ T, Size $>$ \&arr1, const array$<$ T, Size $>$ \&arr2)
 \begin{DoxyCompactList}\small\item\em !=演算子 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -41,9 +42,9 @@ class \mbox{\hyperlink{classsaki_1_1_array}{saki\+::\+Array$<$ T, Size $>$}}
 
 
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{array__operator_8h_a2bbd6a3646fd9a3c94ffed8549a55ec0}\label{array__operator_8h_a2bbd6a3646fd9a3c94ffed8549a55ec0}} 
-\index{array\+\_\+operator.\+h@{array\+\_\+operator.\+h}!S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24@{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}}
-\index{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24@{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}!array\+\_\+operator.\+h@{array\+\_\+operator.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}{SAKI\_ARRAY\_OPERATOR\_2018\_12\_24}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}
+\mbox{\Hypertarget{array__operator_8h_aa580ee3fee05bc454b988f06bdb058cc}\label{array__operator_8h_aa580ee3fee05bc454b988f06bdb058cc}} 
+\index{array\+\_\+operator.\+h@{array\+\_\+operator.\+h}!S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24@{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}}
+\index{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24@{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}!array\+\_\+operator.\+h@{array\+\_\+operator.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}{SAKI\_ARRAY\_DETAILS\_ARRAY\_OPERATOR\_2018\_12\_24}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+D\+E\+T\+A\+I\+L\+S\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+2018\+\_\+12\+\_\+24}
 

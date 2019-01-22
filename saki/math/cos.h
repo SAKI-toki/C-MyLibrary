@@ -5,11 +5,12 @@
 * @date 2019/01/05
 */
 #pragma once
-#ifndef SAKI_COS_2019_01_05
-#define SAKI_COS_2019_01_05
+#ifndef SAKI_MATH_COS_2019_01_05
+#define SAKI_MATH_COS_2019_01_05
 #include <cstddef>
 #include <type_traits>
 #include <limits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/factorial.h>
 #include <saki/math/pi.h>
 #include <saki/math/pow.h>
@@ -23,7 +24,7 @@ namespace saki
 	* @param x ƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T cos(T x)
 	{
 		//NaN
@@ -53,10 +54,10 @@ namespace saki
 	* @param x intŒ^‚Ìƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double cos(T x)
 	{
 		return saki::cos(static_cast<double>(x));
 	}
 }
-#endif //SAKI_COS_2019_01_05
+#endif //SAKI_MATH_COS_2019_01_05

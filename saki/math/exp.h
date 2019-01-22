@@ -5,11 +5,12 @@
 * @date 2019/01/06
 */
 #pragma once
-#ifndef SAKI_EXP_2019_01_06
-#define SAKI_EXP_2019_01_06
+#ifndef SAKI_MATH_EXP_2019_01_06
+#define SAKI_MATH_EXP_2019_01_06
 #include <cstddef>
 #include <limits>
 #include <type_traits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/factorial.h>
 #include <saki/math/isnan.h>
@@ -22,7 +23,7 @@ namespace saki
 	* @brief コンパイル時exp
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T exp(T x)
 	{
 		if (saki::isnan(x) || x == std::numeric_limits<T>::infinity())return x;
@@ -56,10 +57,10 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double exp(T x)
 	{
 		return saki::exp(static_cast<double>(x));
 	}
 }
-#endif //SAKI_EXP_2019_01_06
+#endif //SAKI_MATH_EXP_2019_01_06

@@ -5,8 +5,8 @@
 * @date 2019/01/13
 */
 #pragma once
-#ifndef SAKI_ITERATOR_BASE_2019_01_13
-#define SAKI_ITERATOR_BASE_2019_01_13
+#ifndef SAKI_ITERATOR_DETAILS_ITERATOR_BASE_2019_01_13
+#define SAKI_ITERATOR_DETAILS_ITERATOR_BASE_2019_01_13
 #include <saki/iterator/details/iterator_operator.h>
 
 namespace saki::details
@@ -81,4 +81,4 @@ namespace saki::details
 		}
 	};
 }
-#endif //SAKI_ITERATOR_BASE_2019_01_13
+#endif //SAKI_ITERATOR_DETAILS_ITERATOR_BASE_2019_01_13

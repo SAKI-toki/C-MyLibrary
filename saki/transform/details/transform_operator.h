@@ -5,8 +5,9 @@
 * @date 2018/12/16
 */
 #pragma once
-#ifndef SAKI_TRANSFORM_OPERATOR_2018_12_16
-#define SAKI_TRANSFORM_OPERATOR_2018_12_16
+#ifndef SAKI_TRANSFORM_DETAILS_TRANSFORM_OPERATOR_2018_12_16
+#define SAKI_TRANSFORM_DETAILS_TRANSFORM_OPERATOR_2018_12_16
+#include <utility>
 
 namespace saki
 {
@@ -31,7 +32,7 @@ namespace saki
 		constexpr auto transform_scalar_some_operator(const saki::Transform<T1>& v, const T2& scalar, Func&& f)
 		{
 			return saki::Transform<decltype(std::declval<T1>() * std::declval<T2>())>
-			{  f(v.get_pos(), scalar), f(v.get_rot(), scalar)  f(v.get_scale(), scalar) };
+			{  f(v.get_pos(), scalar), f(v.get_rot(), scalar), f(v.get_scale(), scalar) };
 		}
 	}
 	/**
@@ -109,4 +110,4 @@ namespace saki
 		return !(v1 == v2);
 	}
 }
-#endif //SAKI_TRANSFORM_OPERATOR_2018_12_16
+#endif //SAKI_TRANSFORM_DETAILS_TRANSFORM_OPERATOR_2018_12_16

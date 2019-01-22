@@ -5,10 +5,10 @@
 * @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_VECTOR_3D_OPERATOR_2018_12_13
-#define SAKI_VECTOR_3D_OPERATOR_2018_12_13
+#ifndef SAKI_VECTOR_DETAILS_3D_VECTOR_3D_OPERATOR_2018_12_13
+#define SAKI_VECTOR_DETAILS_3D_VECTOR_3D_OPERATOR_2018_12_13
 #include <utility>
-#include <saki/binary_operator/binary_operator.h>
+#include <saki/function_object.h>
 #include <type_traits>
 
 namespace saki
@@ -127,4 +127,4 @@ namespace saki
 		return !(v1 == v2);
 	}
 }
-#endif //SAKI_VECTOR_3D_OPERATOR_2018_12_13
+#endif //SAKI_VECTOR_DETAILS_3D_VECTOR_3D_OPERATOR_2018_12_13

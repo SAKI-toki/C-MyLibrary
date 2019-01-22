@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/math/log1p.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ae4a5735452271545d05003c488c30f4.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">log1p.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>コンパイル時log1p  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="isnan_8h_source.html">saki/math/isnan.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="log_8h_source.html">saki/math/log.h</a>&gt;</code><br />
+</div>
+<p><a href="log1p_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:namespacesaki"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesaki.html">saki</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a093e093a0003ef4a3737661ac246a83f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log1p_8h.html#a093e093a0003ef4a3737661ac246a83f">SAKI_MATH_LOG1P_2019_01_13</a></td></tr>
+<tr class="separator:a093e093a0003ef4a3737661ac246a83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae0b2550b674acc69fa1fbe407917fdc7">saki::log1p</a> (T x)</td></tr>
+<tr class="memdesc:ae0b2550b674acc69fa1fbe407917fdc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時log1p  <a href="namespacesaki.html#ae0b2550b674acc69fa1fbe407917fdc7">[詳解]</a><br /></td></tr>
+<tr class="separator:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aec755aa143bd9a0d03c5ebb2dc5dd3de">saki::log1p</a> (T x)</td></tr>
+<tr class="memdesc:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="namespacesaki.html#aec755aa143bd9a0d03c5ebb2dc5dd3de">[詳解]</a><br /></td></tr>
+<tr class="separator:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>コンパイル時log1p </p>
+<dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2019/01/13 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a093e093a0003ef4a3737661ac246a83f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093e093a0003ef4a3737661ac246a83f">&#9670;&nbsp;</a></span>SAKI_MATH_LOG1P_2019_01_13</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAKI_MATH_LOG1P_2019_01_13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

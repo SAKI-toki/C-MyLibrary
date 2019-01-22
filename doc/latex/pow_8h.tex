@@ -1,0 +1,59 @@
+\hypertarget{pow_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/pow.h ファイル}
+\label{pow_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/pow.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/pow.\+h}}
+
+
+累乗を求める関数  
+
+
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enabled\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/signbit.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/log.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/exp.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/fmod.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/abs.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/is\+\_\+odd\+\_\+even.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/details/pow\+\_\+n.\+h$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pow_8h_a282af522001a1f208744e8edd334d16a}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_aa5b66f18d7c8c94b4c50731449ed3240}{saki\+::pow}} (T x, T y)
+\begin{DoxyCompactList}\small\item\em コンパイル時累乗 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_a53b0e93733e85d7c6ab17aea25072536}{saki\+::pow}} (T x, T y)
+\begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_aede1168d9c20adf475c0a27670925c34}{saki\+::pow}} (T1 x, T2 y)
+\begin{DoxyCompactList}\small\item\em 型をそろえる \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+累乗を求める関数 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/07 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{pow_8h_a282af522001a1f208744e8edd334d16a}\label{pow_8h_a282af522001a1f208744e8edd334d16a}} 
+\index{pow.\+h@{pow.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07}!pow.\+h@{pow.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07}{SAKI\_MATH\_POW\_2019\_01\_07}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+P\+O\+W\+\_\+2019\+\_\+01\+\_\+07}
+

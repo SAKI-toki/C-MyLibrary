@@ -1,0 +1,49 @@
+\hypertarget{multi__equal_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/multi\+\_\+equal.h ファイル}
+\label{multi__equal_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/multi\+\_\+equal.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/multi\+\_\+equal.\+h}}
+
+
+複数の比較を一度に行う(==)  
+
+
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\item 
+ \mbox{\hyperlink{namespacesaki_1_1impl}{saki\+::impl}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{multi__equal_8h_a66a81b2e851c1a56fcdf294f59f10765}{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_ac271639854025a923addee4879780f96}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const T \&)
+\begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、falseを返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_afd0543c20cbd7373bceba87c2af5b3de}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const First \&first, const Second \&second, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em multi\+\_\+equalの実装部 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a08e1e3f9c27a1f59e6f096bcd22c8749}{saki\+::multi\+\_\+equal}} (const First \&first, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+複数の比較を一度に行う(==) 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/18 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{multi__equal_8h_a66a81b2e851c1a56fcdf294f59f10765}\label{multi__equal_8h_a66a81b2e851c1a56fcdf294f59f10765}} 
+\index{multi\+\_\+equal.\+h@{multi\+\_\+equal.\+h}!S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18}}
+\index{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18}!multi\+\_\+equal.\+h@{multi\+\_\+equal.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18}{SAKI\_COMPARE\_MULTI\_EQUAL\_2019\_01\_18}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+M\+U\+L\+T\+I\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+18}
+

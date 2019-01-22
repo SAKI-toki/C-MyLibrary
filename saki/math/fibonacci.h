@@ -5,8 +5,8 @@
 * @date 2018/12/28
 */
 #pragma once
-#ifndef SAKI_FIBONACCI_2018_12_28
-#define SAKI_FIBONACCI_2018_12_28
+#ifndef SAKI_MATH_FIBONACCI_2018_12_28
+#define SAKI_MATH_FIBONACCI_2018_12_28
 #include <cstdint>
 #include <cstddef>
 #include <saki/math/exchange.h>
@@ -128,4 +128,4 @@ namespace saki
 		static constexpr size_t limit = 93;
 	};
 }
-#endif //SAKI_FIBONACCI_2018_12_28
+#endif //SAKI_MATH_FIBONACCI_2018_12_28

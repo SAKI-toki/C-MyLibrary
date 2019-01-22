@@ -1,12 +1,12 @@
 /**
 * @file type_macro.h
-* @brief element_type,value_type,pointer,reference‚ğ©“®’è‹`
+* @brief value_type,pointer,reference“™‚ğ©“®’è‹`
 * @author ÎR —I
 * @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_TYPE_MACRO_2018_12_13
-#define SAKI_TYPE_MACRO_2018_12_13
+#ifndef SAKI_MACRO_TYPE_MACRO_2018_12_13
+#define SAKI_MACRO_TYPE_MACRO_2018_12_13
 #include <cstddef>
 
 #ifndef SAKI_TYPE_MACRO
@@ -21,4 +21,4 @@ using const_reference = const T&;		\
 
 #endif //SAKI_TYPE_MACRO
 
-#endif //SAKI_TYPE_MACRO_2018_12_13
+#endif //SAKI_MACRO_TYPE_MACRO_2018_12_13

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/sigma/sigma.h ファイル</title>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/math/sigma.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_9280a2a48b30f0955a01d3da2b30e6f2.html">sigma</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ae4a5735452271545d05003c488c30f4.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,7 +76,9 @@ $(function() {
 
 <p>数学のシグマ(Σ)  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="return__param_8h_source.html">saki/binary_operator/return_param.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="return__param_8h_source.html">saki/function_object/return_param.h</a>&gt;</code><br />
 </div>
 <p><a href="sigma_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -87,29 +89,29 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:acf62bb524e8d3edf6408cfcab72093e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sigma_8h.html#acf62bb524e8d3edf6408cfcab72093e1">SAKI_SIGMA_2018_12_10</a></td></tr>
-<tr class="separator:acf62bb524e8d3edf6408cfcab72093e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397bf634cebab03c2bd005ebf2d20df2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sigma_8h.html#a397bf634cebab03c2bd005ebf2d20df2">SAKI_MATH_SIGMA_2019_01_18</a></td></tr>
+<tr class="separator:a397bf634cebab03c2bd005ebf2d20df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aa5a82a930469f18d700db4d93b59a7e5"><td class="memTemplParams" colspan="2">template&lt;typename T  = int, typename Func  = saki::ReturnParam&gt; </td></tr>
-<tr class="memitem:aa5a82a930469f18d700db4d93b59a7e5"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa5a82a930469f18d700db4d93b59a7e5">saki::sigma</a> (T start, const T &amp;end, Func &amp;&amp;f=Func())</td></tr>
-<tr class="memdesc:aa5a82a930469f18d700db4d93b59a7e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">数学のシグマを簡単に実装  <a href="namespacesaki.html#aa5a82a930469f18d700db4d93b59a7e5">[詳解]</a><br /></td></tr>
-<tr class="separator:aa5a82a930469f18d700db4d93b59a7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae518b81f2ab4bba826a913a430a0716f"><td class="memTemplParams" colspan="2">template&lt;typename T  = int, typename Func  = saki::return_param, typename saki::enabled_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr, typename saki::enabled_if_nullptr_t&lt; std::is_invocable_v&lt; Func, T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae518b81f2ab4bba826a913a430a0716f"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae518b81f2ab4bba826a913a430a0716f">saki::sigma</a> (T start, const T &amp;end, Func &amp;&amp;f=Func())</td></tr>
+<tr class="memdesc:ae518b81f2ab4bba826a913a430a0716f"><td class="mdescLeft">&#160;</td><td class="mdescRight">数学のシグマを簡単に実装  <a href="namespacesaki.html#ae518b81f2ab4bba826a913a430a0716f">[詳解]</a><br /></td></tr>
+<tr class="separator:ae518b81f2ab4bba826a913a430a0716f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>数学のシグマ(Σ) </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2018/12/10 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2019/01/18 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="acf62bb524e8d3edf6408cfcab72093e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf62bb524e8d3edf6408cfcab72093e1">&#9670;&nbsp;</a></span>SAKI_SIGMA_2018_12_10</h2>
+<a id="a397bf634cebab03c2bd005ebf2d20df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397bf634cebab03c2bd005ebf2d20df2">&#9670;&nbsp;</a></span>SAKI_MATH_SIGMA_2019_01_18</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_SIGMA_2018_12_10</td>
+          <td class="memname">#define SAKI_MATH_SIGMA_2019_01_18</td>
         </tr>
       </table>
 </div><div class="memdoc">

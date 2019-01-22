@@ -1,0 +1,285 @@
+\hypertarget{classsaki_1_1node}{}\section{saki\+:\+:node$<$ T $>$ クラステンプレート}
+\label{classsaki_1_1node}\index{saki\+::node$<$ T $>$@{saki\+::node$<$ T $>$}}
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+saki\+:\+:node$<$ T $>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsaki_1_1node}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classsaki_1_1node_ac04bef91932299fe08f488de21f703b3}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em ノード名の取得 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classsaki_1_1node_a9066f322842144c7d8acc3165c3130a7}{get\+\_\+path}} () const
+\begin{DoxyCompactList}\small\item\em パスの取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classsaki_1_1node_a9ca34dd5d8d628bc814ee5dbfbafc75b}{get\+\_\+depth}} () const
+\begin{DoxyCompactList}\small\item\em 深度の取得 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$ $>$ \mbox{\hyperlink{classsaki_1_1node_a5036d5107227cf9355a2576918e7fdbd}{add\+\_\+child}} (const std\+::string \&node\+\_\+name, T t)
+\begin{DoxyCompactList}\small\item\em 子の追加 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsaki_1_1node_aa974c19a3a8e927d926772320029629d}{node}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&p\+\_\+ptr, const std\+::string \&node\+\_\+name, const std\+::string \&current\+\_\+path, const int \+\_\+depth, T t)
+\begin{DoxyCompactList}\small\item\em コンストラクタと同時に親とノード名を決定する \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsaki_1_1node_aedc85c7bcb5c34ba99093683614cd661}{node}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&p\+\_\+ptr, const std\+::string \&node\+\_\+name, T t)
+\begin{DoxyCompactList}\small\item\em コンストラクタ(ルート限定) \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$ $>$ \mbox{\hyperlink{classsaki_1_1node_a7a485b3342124b691167a83caeacdb7c}{get\+\_\+node}} (const std\+::string \&node\+\_\+path=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em 自分自身をカレントディレクトリとしてノードをめぐり、たどり着いたノードを返す \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsaki_1_1node_aa850971614e4ee17f3a3c88a430d4cde}{delete\+\_\+node}} ()
+\begin{DoxyCompactList}\small\item\em ノードの削除 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Func , typename ... T$>$ }\\void \mbox{\hyperlink{classsaki_1_1node_afff3ae61d8ebf51c352db29b8089ba41}{all\+\_\+child\+\_\+func}} (Func \&\&func, T ...t)
+\begin{DoxyCompactList}\small\item\em 自分自身と自分以下の子ノードすべてに関数を実行する \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classsaki_1_1node_a1c72cbf0e9180d7573ec664b011784e3}{get\+\_\+value}} () const
+\begin{DoxyCompactList}\small\item\em 値の取得 \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classsaki_1_1node_a2d1c317236e961030482f7d64d0d7905}{get\+\_\+reference}} () const
+\begin{DoxyCompactList}\small\item\em 値の参照の取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsaki_1_1node_a2edd5dac118d844a8ddf79a8c1ab98fe}{copy\+\_\+node}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&other\+\_\+node)
+\begin{DoxyCompactList}\small\item\em ノードのコピー \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsaki_1_1node_a56ab805f343c184a938ceb189cd8f1a8}{move\+\_\+node}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&\&other\+\_\+node) noexcept
+\begin{DoxyCompactList}\small\item\em ノードのムーブ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsaki_1_1node_acb9989adf40b835001b33f7c190e96bd}{node\+\_\+print}} ()
+\begin{DoxyCompactList}\small\item\em デバッグ用の出力関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsaki_1_1node_a151ca71f2c751d8a163f3f99ccf6cec9}{Tree$<$ T $>$}}
+\end{DoxyCompactItemize}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classsaki_1_1node_aa974c19a3a8e927d926772320029629d}\label{classsaki_1_1node_aa974c19a3a8e927d926772320029629d}} 
+\index{saki\+::node@{saki\+::node}!node@{node}}
+\index{node@{node}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1node}{node}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&}]{p\+\_\+ptr,  }\item[{const std\+::string \&}]{node\+\_\+name,  }\item[{const std\+::string \&}]{current\+\_\+path,  }\item[{const int}]{\+\_\+depth,  }\item[{T}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタと同時に親とノード名を決定する 
+
+
+\begin{DoxyParams}{引数}
+{\em p\+\_\+ptr} & 親 \\
+\hline
+{\em node\+\_\+name} & ノード名 \\
+\hline
+{\em current\+\_\+path} & 現在のパス \\
+\hline
+{\em \+\_\+depth} & 親ノードの深さ \\
+\hline
+{\em t} & 初期値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1node_aedc85c7bcb5c34ba99093683614cd661}\label{classsaki_1_1node_aedc85c7bcb5c34ba99093683614cd661}} 
+\index{saki\+::node@{saki\+::node}!node@{node}}
+\index{node@{node}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{node()}{node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1node}{node}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&}]{p\+\_\+ptr,  }\item[{const std\+::string \&}]{node\+\_\+name,  }\item[{T}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンストラクタ(ルート限定) 
+
+
+\begin{DoxyParams}{引数}
+{\em p\+\_\+ptr} & 親 \\
+\hline
+{\em node\+\_\+name} & ノード名 \\
+\hline
+{\em t} & 初期値 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classsaki_1_1node_a5036d5107227cf9355a2576918e7fdbd}\label{classsaki_1_1node_a5036d5107227cf9355a2576918e7fdbd}} 
+\index{saki\+::node@{saki\+::node}!add\+\_\+child@{add\+\_\+child}}
+\index{add\+\_\+child@{add\+\_\+child}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{add\+\_\+child()}{add\_child()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$T$>$ $>$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::add\+\_\+child (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{node\+\_\+name,  }\item[{T}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+子の追加 
+
+
+\begin{DoxyParams}{引数}
+{\em node\+\_\+name} & 子の名前 \\
+\hline
+{\em t} & 初期値 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1node_afff3ae61d8ebf51c352db29b8089ba41}\label{classsaki_1_1node_afff3ae61d8ebf51c352db29b8089ba41}} 
+\index{saki\+::node@{saki\+::node}!all\+\_\+child\+\_\+func@{all\+\_\+child\+\_\+func}}
+\index{all\+\_\+child\+\_\+func@{all\+\_\+child\+\_\+func}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{all\+\_\+child\+\_\+func()}{all\_child\_func()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename Func , typename ... T$>$ \\
+void \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::all\+\_\+child\+\_\+func (\begin{DoxyParamCaption}\item[{Func \&\&}]{func,  }\item[{T ...}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+自分自身と自分以下の子ノードすべてに関数を実行する 
+
+
+\begin{DoxyParams}{引数}
+{\em func} & 関数 \\
+\hline
+{\em t} & 第二引数以降の引数 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1node_a2edd5dac118d844a8ddf79a8c1ab98fe}\label{classsaki_1_1node_a2edd5dac118d844a8ddf79a8c1ab98fe}} 
+\index{saki\+::node@{saki\+::node}!copy\+\_\+node@{copy\+\_\+node}}
+\index{copy\+\_\+node@{copy\+\_\+node}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{copy\+\_\+node()}{copy\_node()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::copy\+\_\+node (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&}]{other\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ノードのコピー 
+
+
+\begin{DoxyParams}{引数}
+{\em other\+\_\+node} & コピーするノード \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1node_aa850971614e4ee17f3a3c88a430d4cde}\label{classsaki_1_1node_aa850971614e4ee17f3a3c88a430d4cde}} 
+\index{saki\+::node@{saki\+::node}!delete\+\_\+node@{delete\+\_\+node}}
+\index{delete\+\_\+node@{delete\+\_\+node}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{delete\+\_\+node()}{delete\_node()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::delete\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ノードの削除 
+
+\mbox{\Hypertarget{classsaki_1_1node_a9ca34dd5d8d628bc814ee5dbfbafc75b}\label{classsaki_1_1node_a9ca34dd5d8d628bc814ee5dbfbafc75b}} 
+\index{saki\+::node@{saki\+::node}!get\+\_\+depth@{get\+\_\+depth}}
+\index{get\+\_\+depth@{get\+\_\+depth}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{get\+\_\+depth()}{get\_depth()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::get\+\_\+depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+深度の取得 
+
+\begin{DoxyReturn}{戻り値}
+深度 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaki_1_1node_ac04bef91932299fe08f488de21f703b3}\label{classsaki_1_1node_ac04bef91932299fe08f488de21f703b3}} 
+\index{saki\+::node@{saki\+::node}!get\+\_\+name@{get\+\_\+name}}
+\index{get\+\_\+name@{get\+\_\+name}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{get\+\_\+name()}{get\_name()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ノード名の取得 
+
+\begin{DoxyReturn}{戻り値}
+ノード名 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaki_1_1node_a7a485b3342124b691167a83caeacdb7c}\label{classsaki_1_1node_a7a485b3342124b691167a83caeacdb7c}} 
+\index{saki\+::node@{saki\+::node}!get\+\_\+node@{get\+\_\+node}}
+\index{get\+\_\+node@{get\+\_\+node}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{get\+\_\+node()}{get\_node()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$T$>$ $>$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::get\+\_\+node (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{node\+\_\+path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+自分自身をカレントディレクトリとしてノードをめぐり、たどり着いたノードを返す 
+
+失敗すると自分自身を返す \mbox{\Hypertarget{classsaki_1_1node_a9066f322842144c7d8acc3165c3130a7}\label{classsaki_1_1node_a9066f322842144c7d8acc3165c3130a7}} 
+\index{saki\+::node@{saki\+::node}!get\+\_\+path@{get\+\_\+path}}
+\index{get\+\_\+path@{get\+\_\+path}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{get\+\_\+path()}{get\_path()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::get\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+パスの取得 
+
+\begin{DoxyReturn}{戻り値}
+パス 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaki_1_1node_a2d1c317236e961030482f7d64d0d7905}\label{classsaki_1_1node_a2d1c317236e961030482f7d64d0d7905}} 
+\index{saki\+::node@{saki\+::node}!get\+\_\+reference@{get\+\_\+reference}}
+\index{get\+\_\+reference@{get\+\_\+reference}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{get\+\_\+reference()}{get\_reference()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::get\+\_\+reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+値の参照の取得 
+
+\begin{DoxyReturn}{戻り値}
+値の参照 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaki_1_1node_a1c72cbf0e9180d7573ec664b011784e3}\label{classsaki_1_1node_a1c72cbf0e9180d7573ec664b011784e3}} 
+\index{saki\+::node@{saki\+::node}!get\+\_\+value@{get\+\_\+value}}
+\index{get\+\_\+value@{get\+\_\+value}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{get\+\_\+value()}{get\_value()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+値の取得 
+
+\begin{DoxyReturn}{戻り値}
+値 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsaki_1_1node_a56ab805f343c184a938ceb189cd8f1a8}\label{classsaki_1_1node_a56ab805f343c184a938ceb189cd8f1a8}} 
+\index{saki\+::node@{saki\+::node}!move\+\_\+node@{move\+\_\+node}}
+\index{move\+\_\+node@{move\+\_\+node}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{move\+\_\+node()}{move\_node()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::move\+\_\+node (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$$>$ \&\&}]{other\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+ノードのムーブ 
+
+
+\begin{DoxyParams}{引数}
+{\em other\+\_\+node} & ムーブするノード \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classsaki_1_1node_acb9989adf40b835001b33f7c190e96bd}\label{classsaki_1_1node_acb9989adf40b835001b33f7c190e96bd}} 
+\index{saki\+::node@{saki\+::node}!node\+\_\+print@{node\+\_\+print}}
+\index{node\+\_\+print@{node\+\_\+print}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{node\+\_\+print()}{node\_print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsaki_1_1node}{saki\+::node}}$<$ T $>$\+::node\+\_\+print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+デバッグ用の出力関数 
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{classsaki_1_1node_a151ca71f2c751d8a163f3f99ccf6cec9}\label{classsaki_1_1node_a151ca71f2c751d8a163f3f99ccf6cec9}} 
+\index{saki\+::node@{saki\+::node}!Tree$<$ T $>$@{Tree$<$ T $>$}}
+\index{Tree$<$ T $>$@{Tree$<$ T $>$}!saki\+::node@{saki\+::node}}
+\subsubsection{\texorpdfstring{Tree$<$ T $>$}{Tree< T >}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend class \mbox{\hyperlink{classsaki_1_1_tree}{Tree}}$<$ T $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/tree/node/\mbox{\hyperlink{node_8h}{node.\+h}}\end{DoxyCompactItemize}

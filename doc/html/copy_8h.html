@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/copy/copy.h ファイル</title>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/algorithm/copy.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_6b1c27d384d16e3a99107c0ee93881cf.html">copy</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_c5bb8d941cb28828a05ad44760bb3e68.html">algorithm</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,7 +77,8 @@ $(function() {
 <p>既存のcopy関数の簡略化  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;iterator&gt;</code><br />
-<code>#include &lt;<a class="el" href="can__begin__method_8h_source.html">saki/meta/can_begin_method.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="can__range__based__for_8h_source.html">saki/type_traits/can_range_based_for.h</a>&gt;</code><br />
 </div>
 <p><a href="copy_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -88,33 +89,29 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:af8b82ec4eee610c558bd646b7e63e09c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="copy_8h.html#af8b82ec4eee610c558bd646b7e63e09c">SAKI_COPY_2018_12_09</a></td></tr>
-<tr class="separator:af8b82ec4eee610c558bd646b7e63e09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53409e108c2485ce822937d390057f81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="copy_8h.html#a53409e108c2485ce822937d390057f81">SAKI_ALGORITHM_COPY_2018_12_09</a></td></tr>
+<tr class="separator:a53409e108c2485ce822937d390057f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a469bffdeaee5edab8000f7174b9de5f2"><td class="memTemplParams" colspan="2">template&lt;typename Container1 , typename Container2 , typename std::enable_if_t&lt; saki::can_begin_v&lt; Container2 &gt;, std::nullptr_t &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:a469bffdeaee5edab8000f7174b9de5f2"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a469bffdeaee5edab8000f7174b9de5f2">saki::copy</a> (Container1 &amp;&amp;con1, Container2 &amp;&amp;con2)</td></tr>
-<tr class="memdesc:a469bffdeaee5edab8000f7174b9de5f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナとコンテナを渡すcopy  <a href="namespacesaki.html#a469bffdeaee5edab8000f7174b9de5f2">[詳解]</a><br /></td></tr>
-<tr class="separator:a469bffdeaee5edab8000f7174b9de5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a810f851279b6d10acc3892433f7036fd"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename OutItr , typename std::enable_if_t&lt;!saki::can_begin_v&lt; OutItr &gt;, std::nullptr_t &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:a810f851279b6d10acc3892433f7036fd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a810f851279b6d10acc3892433f7036fd">saki::copy</a> (Container &amp;&amp;con, OutItr outitr)</td></tr>
-<tr class="memdesc:a810f851279b6d10acc3892433f7036fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナとコンテナを渡すcopy  <a href="namespacesaki.html#a810f851279b6d10acc3892433f7036fd">[詳解]</a><br /></td></tr>
-<tr class="separator:a810f851279b6d10acc3892433f7036fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memTemplParams" colspan="2">template&lt;typename Container1 , typename Container2 , typename saki::enabled_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3a9c67bf73207dfb61db4cd53ee35863">saki::copy</a> (const Container1 &amp;con1, Container2 &amp;con2) -&gt; decltype(std::begin(con2))</td></tr>
+<tr class="memdesc:a3a9c67bf73207dfb61db4cd53ee35863"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナとコンテナを渡すcopy  <a href="namespacesaki.html#a3a9c67bf73207dfb61db4cd53ee35863">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>既存のcopy関数の簡略化 </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2018/12/09 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="af8b82ec4eee610c558bd646b7e63e09c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8b82ec4eee610c558bd646b7e63e09c">&#9670;&nbsp;</a></span>SAKI_COPY_2018_12_09</h2>
+<a id="a53409e108c2485ce822937d390057f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53409e108c2485ce822937d390057f81">&#9670;&nbsp;</a></span>SAKI_ALGORITHM_COPY_2018_12_09</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_COPY_2018_12_09</td>
+          <td class="memname">#define SAKI_ALGORITHM_COPY_2018_12_09</td>
         </tr>
       </table>
 </div><div class="memdoc">

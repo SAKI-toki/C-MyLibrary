@@ -77,13 +77,14 @@ $(function() {
 
 <p>配列クラスの演算子  
 <a href="#details">[詳解]</a></p>
-
+<div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+</div>
 <p><a href="array__operator_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1_array.html">saki::Array&lt; T, Size &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時固定長配列クラス  <a href="classsaki_1_1_array.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1array.html">saki::array&lt; T, Size &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時固定長配列クラス  <a href="classsaki_1_1array.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -93,33 +94,33 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a2bbd6a3646fd9a3c94ffed8549a55ec0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array__operator_8h.html#a2bbd6a3646fd9a3c94ffed8549a55ec0">SAKI_ARRAY_OPERATOR_2018_12_24</a></td></tr>
-<tr class="separator:a2bbd6a3646fd9a3c94ffed8549a55ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa580ee3fee05bc454b988f06bdb058cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array__operator_8h.html#aa580ee3fee05bc454b988f06bdb058cc">SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_2018_12_24</a></td></tr>
+<tr class="separator:aa580ee3fee05bc454b988f06bdb058cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a2e9a71ad1df5a0fcf7c0b191ef90c1c4"><td class="memTemplParams" colspan="2">template&lt;typename T , unsigned int Size&gt; </td></tr>
-<tr class="memitem:a2e9a71ad1df5a0fcf7c0b191ef90c1c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2e9a71ad1df5a0fcf7c0b191ef90c1c4">saki::operator==</a> (const Array&lt; T, Size &gt; &amp;arr1, const Array&lt; T, Size &gt; &amp;arr2)</td></tr>
-<tr class="memdesc:a2e9a71ad1df5a0fcf7c0b191ef90c1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">==演算子  <a href="namespacesaki.html#a2e9a71ad1df5a0fcf7c0b191ef90c1c4">[詳解]</a><br /></td></tr>
-<tr class="separator:a2e9a71ad1df5a0fcf7c0b191ef90c1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08cb75d91d73dcb809caa1e06507ce37"><td class="memTemplParams" colspan="2">template&lt;typename T , unsigned int Size&gt; </td></tr>
-<tr class="memitem:a08cb75d91d73dcb809caa1e06507ce37"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a08cb75d91d73dcb809caa1e06507ce37">saki::operator!=</a> (const Array&lt; T, Size &gt; &amp;arr1, const Array&lt; T, Size &gt; &amp;arr2)</td></tr>
-<tr class="memdesc:a08cb75d91d73dcb809caa1e06507ce37"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子  <a href="namespacesaki.html#a08cb75d91d73dcb809caa1e06507ce37">[詳解]</a><br /></td></tr>
-<tr class="separator:a08cb75d91d73dcb809caa1e06507ce37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ce8a66ed6ece15fa9ddeaec2746374d"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t Size&gt; </td></tr>
+<tr class="memitem:a5ce8a66ed6ece15fa9ddeaec2746374d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5ce8a66ed6ece15fa9ddeaec2746374d">saki::operator==</a> (const array&lt; T, Size &gt; &amp;arr1, const array&lt; T, Size &gt; &amp;arr2)</td></tr>
+<tr class="memdesc:a5ce8a66ed6ece15fa9ddeaec2746374d"><td class="mdescLeft">&#160;</td><td class="mdescRight">==演算子  <a href="namespacesaki.html#a5ce8a66ed6ece15fa9ddeaec2746374d">[詳解]</a><br /></td></tr>
+<tr class="separator:a5ce8a66ed6ece15fa9ddeaec2746374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed742cc915a830fea9f4993c0a031c45"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t Size&gt; </td></tr>
+<tr class="memitem:aed742cc915a830fea9f4993c0a031c45"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aed742cc915a830fea9f4993c0a031c45">saki::operator!=</a> (const array&lt; T, Size &gt; &amp;arr1, const array&lt; T, Size &gt; &amp;arr2)</td></tr>
+<tr class="memdesc:aed742cc915a830fea9f4993c0a031c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子  <a href="namespacesaki.html#aed742cc915a830fea9f4993c0a031c45">[詳解]</a><br /></td></tr>
+<tr class="separator:aed742cc915a830fea9f4993c0a031c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>配列クラスの演算子 </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
 <dl class="section date"><dt>日付</dt><dd>2018/12/24 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a2bbd6a3646fd9a3c94ffed8549a55ec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bbd6a3646fd9a3c94ffed8549a55ec0">&#9670;&nbsp;</a></span>SAKI_ARRAY_OPERATOR_2018_12_24</h2>
+<a id="aa580ee3fee05bc454b988f06bdb058cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa580ee3fee05bc454b988f06bdb058cc">&#9670;&nbsp;</a></span>SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_2018_12_24</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_ARRAY_OPERATOR_2018_12_24</td>
+          <td class="memname">#define SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_2018_12_24</td>
         </tr>
       </table>
 </div><div class="memdoc">

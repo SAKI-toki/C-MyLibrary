@@ -5,8 +5,9 @@
 * @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_MATRIX_2018_12_13
-#define SAKI_MATRIX_2018_12_13
+#ifndef SAKI_MATRIX_MATRIX_2018_12_13
+#define SAKI_MATRIX_MATRIX_2018_12_13
+#include <cstddef>
 #include <type_traits>
 #include <saki/matrix/details/matrix_operator.h>
 #include <saki/matrix/details/matrix_math.h>
@@ -177,14 +178,14 @@ namespace saki
 		/**
 		* @brief []‰‰ŽZŽq
 		*/
-		constexpr saki::array<value_type, 4>& operator[](const unsigned int index)
+		constexpr saki::array<value_type, 4>& operator[](const size_t index)
 		{
 			return m[index];
 		}
 		/**
 		* @brief []‰‰ŽZŽq(constexpr)
 		*/
-		constexpr const saki::array<value_type, 4>& operator[](const unsigned int index)const
+		constexpr const saki::array<value_type, 4>& operator[](const size_t index)const
 		{
 			return m[index];
 		}
@@ -229,4 +230,4 @@ namespace saki
 		static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1)
 	};
 }
-#endif //SAKI_MATRIX_2018_12_13
+#endif //SAKI_MATRIX_MATRIX_2018_12_13

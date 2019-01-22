@@ -5,10 +5,11 @@
 * @date 2019/01/05
 */
 #pragma once
-#ifndef SAKI_TAN_2019_01_05
-#define SAKI_TAN_2019_01_05
+#ifndef SAKI_MATH_TAN_2019_01_05
+#define SAKI_MATH_TAN_2019_01_05
 #include <type_traits>
 #include <limits>
+#include <saki/type_traits/enabled_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/sin.h>
 #include <saki/math/cos.h>
@@ -21,7 +22,7 @@ namespace saki
 	* @param x ƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_floating_point_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T tan(T x)
 	{
 		//NaN
@@ -39,10 +40,10 @@ namespace saki
 	* @param x intŒ^‚Ìƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename std::enable_if_t<std::is_integral_v<T>, std::nullptr_t> = nullptr>
+		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double tan(T x)
 	{
 		return saki::tan(static_cast<double>(x));
 	}
 }
-#endif //SAKI_TAN_2019_01_05
+#endif //SAKI_MATH_TAN_2019_01_05

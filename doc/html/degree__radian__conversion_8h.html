@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/angle_math/degree_radian_conversion.h ファイル</title>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/math/degree_radian_conversion.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_67c5d6d408d903a95425307546010b14.html">angle_math</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ae4a5735452271545d05003c488c30f4.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,7 +76,11 @@ $(function() {
 
 <p>DegreeからRadian、RadianからDegreeへの変換  
 <a href="#details">[詳解]</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="pi_8h_source.html">saki/pi.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="isnan_8h_source.html">saki/math/isnan.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="isinf_8h_source.html">saki/math/isinf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="pi_8h_source.html">saki/math/pi.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
 </div>
 <p><a href="degree__radian__conversion_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -87,33 +91,41 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a9884d65768d5e43d3d1db831c2079bbb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="degree__radian__conversion_8h.html#a9884d65768d5e43d3d1db831c2079bbb">SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13</a></td></tr>
-<tr class="separator:a9884d65768d5e43d3d1db831c2079bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8aa11260e657f709f3fe2f474e8b40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="degree__radian__conversion_8h.html#a4d8aa11260e657f709f3fe2f474e8b40">SAKI_MATH_DEGREE_RADIAN_CONVERSION_2019_01_19</a></td></tr>
+<tr class="separator:a4d8aa11260e657f709f3fe2f474e8b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aae246ec576e9e2da23c0c142e6fc4d6a"><td class="memTemplParams" colspan="2">template&lt;typename Rad  = double, typename Deg &gt; </td></tr>
-<tr class="memitem:aae246ec576e9e2da23c0c142e6fc4d6a"><td class="memTemplItemLeft" align="right" valign="top">constexpr Rad&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aae246ec576e9e2da23c0c142e6fc4d6a">saki::to_radian</a> (Deg deg)</td></tr>
-<tr class="memdesc:aae246ec576e9e2da23c0c142e6fc4d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DegreeからRadianに変換  <a href="namespacesaki.html#aae246ec576e9e2da23c0c142e6fc4d6a">[詳解]</a><br /></td></tr>
-<tr class="separator:aae246ec576e9e2da23c0c142e6fc4d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa28ebe642bd2c0e608e2a61c34b3d7a5"><td class="memTemplParams" colspan="2">template&lt;typename Deg  = double, typename Rad &gt; </td></tr>
-<tr class="memitem:aa28ebe642bd2c0e608e2a61c34b3d7a5"><td class="memTemplItemLeft" align="right" valign="top">constexpr Deg&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa28ebe642bd2c0e608e2a61c34b3d7a5">saki::to_degree</a> (Rad rad)</td></tr>
-<tr class="memdesc:aa28ebe642bd2c0e608e2a61c34b3d7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">RadianからDegreeに変換  <a href="namespacesaki.html#aa28ebe642bd2c0e608e2a61c34b3d7a5">[詳解]</a><br /></td></tr>
-<tr class="separator:aa28ebe642bd2c0e608e2a61c34b3d7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27595b1e53058ce792db7f8d29e2e9af"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a27595b1e53058ce792db7f8d29e2e9af"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a27595b1e53058ce792db7f8d29e2e9af">saki::to_radian</a> (T deg)</td></tr>
+<tr class="memdesc:a27595b1e53058ce792db7f8d29e2e9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">DegreeからRadianに変換  <a href="namespacesaki.html#a27595b1e53058ce792db7f8d29e2e9af">[詳解]</a><br /></td></tr>
+<tr class="separator:a27595b1e53058ce792db7f8d29e2e9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa671d122197cf10439eee0d271f51fe6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa671d122197cf10439eee0d271f51fe6"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa671d122197cf10439eee0d271f51fe6">saki::to_radian</a> (T deg)</td></tr>
+<tr class="memdesc:aa671d122197cf10439eee0d271f51fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="namespacesaki.html#aa671d122197cf10439eee0d271f51fe6">[詳解]</a><br /></td></tr>
+<tr class="separator:aa671d122197cf10439eee0d271f51fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af9f6d8f2c0663a0452c7edd17bf5daf0">saki::to_degree</a> (T rad)</td></tr>
+<tr class="memdesc:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">RadianからDegreeに変換  <a href="namespacesaki.html#af9f6d8f2c0663a0452c7edd17bf5daf0">[詳解]</a><br /></td></tr>
+<tr class="separator:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cb33956f8d7354b485aee878d7805d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa7cb33956f8d7354b485aee878d7805d"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa7cb33956f8d7354b485aee878d7805d">saki::to_degree</a> (T rad)</td></tr>
+<tr class="memdesc:aa7cb33956f8d7354b485aee878d7805d"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="namespacesaki.html#aa7cb33956f8d7354b485aee878d7805d">[詳解]</a><br /></td></tr>
+<tr class="separator:aa7cb33956f8d7354b485aee878d7805d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>DegreeからRadian、RadianからDegreeへの変換 </p>
 <dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2018/11/13 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2019/01/19 </dd></dl>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a9884d65768d5e43d3d1db831c2079bbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9884d65768d5e43d3d1db831c2079bbb">&#9670;&nbsp;</a></span>SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13</h2>
+<a id="a4d8aa11260e657f709f3fe2f474e8b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8aa11260e657f709f3fe2f474e8b40">&#9670;&nbsp;</a></span>SAKI_MATH_DEGREE_RADIAN_CONVERSION_2019_01_19</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_DEGREE_RADIAN_CONVERSION_2018_11_13</td>
+          <td class="memname">#define SAKI_MATH_DEGREE_RADIAN_CONVERSION_2019_01_19</td>
         </tr>
       </table>
 </div><div class="memdoc">

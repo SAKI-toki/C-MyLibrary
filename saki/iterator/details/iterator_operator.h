@@ -5,8 +5,8 @@
 * @date 2019/01/09
 */
 #pragma once
-#ifndef SAKI_ITERATOR_OPERATOR_2019_01_09
-#define SAKI_ITERATOR_OPERATOR_2019_01_09
+#ifndef SAKI_ITERATOR_DETAILS_ITERATOR_OPERATOR_2019_01_09
+#define SAKI_ITERATOR_DETAILS_ITERATOR_OPERATOR_2019_01_09
 
 namespace saki::details
 {
@@ -30,4 +30,4 @@ namespace saki::details
 		return !(itr1 == itr2);
 	}
 }
-#endif //SAKI_ITERATOR_OPERATOR_2019_01_09
+#endif //SAKI_ITERATOR_DETAILS_ITERATOR_OPERATOR_2019_01_09

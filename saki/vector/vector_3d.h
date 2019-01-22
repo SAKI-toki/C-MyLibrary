@@ -5,8 +5,8 @@
 * @date 2018/12/06
 */
 #pragma once
-#ifndef SAKI_VECTOR_3D_2018_12_06
-#define SAKI_VECTOR_3D_2018_12_06
+#ifndef SAKI_VECTOR_VECTOR_3D_2018_12_06
+#define SAKI_VECTOR_VECTOR_3D_2018_12_06
 #include <limits> //for numeric_limits
 #include <saki/math/sqrt.h> //for constexpr_sqrt
 #include <saki/vector/details/3d/vector_3d_operator.h>
@@ -274,4 +274,4 @@ namespace saki
 	}
 }
 
-#endif //SAKI_VECTOR_3D_2018_12_06
+#endif //SAKI_VECTOR_VECTOR_3D_2018_12_06

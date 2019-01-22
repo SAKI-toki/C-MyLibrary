@@ -5,8 +5,8 @@
 * @date 2018/12/29
 */
 #pragma once
-#ifndef SAKI_MATRIX_MATH_2018_12_29
-#define SAKI_MATRIX_MATH_2018_12_29
+#ifndef SAKI_MATRIX_DETAILS_MATRIX_MATH_2018_12_29
+#define SAKI_MATRIX_DETAILS_MATRIX_MATH_2018_12_29
 #include <saki/vector/vector_2d.h>
 #include <saki/vector/vector_3d.h>
 #include <saki/vector/vector_4d.h>
@@ -195,4 +195,4 @@ namespace saki
 	//	};
 	//}
 }
-#endif //SAKI_MATRIX_MATH_2018_12_29
+#endif //SAKI_MATRIX_DETAILS_MATRIX_MATH_2018_12_29

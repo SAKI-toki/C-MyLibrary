@@ -1,0 +1,51 @@
+\hypertarget{is__max_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/is\+\_\+max.h ファイル}
+\label{is__max_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/is\+\_\+max.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/is\+\_\+max.\+h}}
+
+
+複数の比較を一度に行う($>$=)  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+h$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\item 
+ \mbox{\hyperlink{namespacesaki_1_1impl}{saki\+::impl}}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{is__max_8h_adfbe9fe8c614291925996f8ea2b27513}{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a43f254e0ea1de8b5cdfef3e108eff117}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (T)
+\begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、trueを返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a3987211cbe7532fd94555a26554acba2}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (First first, Second second, Args ...args)
+\begin{DoxyCompactList}\small\item\em is\+\_\+maxの実装部 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae6b9ce1ba404eba8dd9035f99e8666c4}{saki\+::is\+\_\+max}} (First first, Args ...args) -\/$>$ decltype(std\+::enable\+\_\+if\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$$>$(), bool())
+\begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える($>$=) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+複数の比較を一度に行う($>$=) 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/21 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{is__max_8h_adfbe9fe8c614291925996f8ea2b27513}\label{is__max_8h_adfbe9fe8c614291925996f8ea2b27513}} 
+\index{is\+\_\+max.\+h@{is\+\_\+max.\+h}!S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21}}
+\index{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21@{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21}!is\+\_\+max.\+h@{is\+\_\+max.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21}{SAKI\_COMPARE\_IS\_MAX\_2019\_01\_21}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+I\+S\+\_\+\+M\+A\+X\+\_\+2019\+\_\+01\+\_\+21}
+

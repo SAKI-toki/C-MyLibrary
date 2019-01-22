@@ -5,8 +5,8 @@
 * @date 2019/01/15
 */
 #pragma once
-#ifndef SAKI_ARRAY_2019_01_15
-#define SAKI_ARRAY_2019_01_15
+#ifndef SAKI_ARRAY_ARRAY_2019_01_15
+#define SAKI_ARRAY_ARRAY_2019_01_15
 #include <cstddef>
 #include <saki/macro/type_macro.h>
 #include <saki/array/details/array_operator.h>
@@ -79,21 +79,22 @@ namespace saki
 		{
 			return saki::iterator<T>(arr + Size);
 		}
-		constexpr saki::const_iterator<T> cbegin()const
+		constexpr saki::const_iterator<T> begin()const
 		{
 			return saki::const_iterator<T>(arr);
 		}
-		constexpr saki::const_iterator<T> cend()const
+		constexpr saki::const_iterator<T> end()const
 		{
 			return saki::const_iterator<T>(arr + Size);
 		}
-		constexpr saki::const_iterator<T> begin()const
+
+		constexpr saki::const_iterator<T> cbegin()const
 		{
-			return this->cbegin();
+			return this->begin();
 		}
-		constexpr saki::const_iterator<T> end()const
+		constexpr saki::const_iterator<T> cend()const
 		{
-			return this->cend();
+			return this->end();
 		}
 		//リバースイテレーター
 		constexpr saki::reverse_iterator<saki::iterator<T>> rbegin()
@@ -104,21 +105,22 @@ namespace saki
 		{
 			return saki::reverse_iterator<saki::iterator<T>>(saki::iterator<T>(arr - 1));
 		}
-		constexpr saki::reverse_iterator<saki::const_iterator<T>> rcbegin()const
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> rbegin()const
 		{
 			return saki::reverse_iterator<saki::const_iterator<T>>(saki::const_iterator<T>(arr + Size - 1));
 		}
-		constexpr saki::reverse_iterator<saki::const_iterator<T>> rcend()const
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> rend()const
 		{
 			return saki::reverse_iterator<saki::const_iterator<T>>(saki::const_iterator<T>(arr - 1));
 		}
-		constexpr saki::reverse_iterator<saki::const_iterator<T>> rbegin()const
+
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> crbegin()const
 		{
-			return this->rcbegin();
+			return this->rbegin();
 		}
-		constexpr saki::reverse_iterator<saki::const_iterator<T>> rend()const
+		constexpr saki::reverse_iterator<saki::const_iterator<T>> crend()const
 		{
-			return this->rcend();
+			return this->rend();
 		}
 	};
 
@@ -135,4 +137,4 @@ namespace saki
 		{}
 	};
 }
-#endif //SAKI_ARRAY_2019_01_15
+#endif //SAKI_ARRAY_ARRAY_2019_01_15

@@ -5,10 +5,10 @@
 * @date 2018/12/13
 */
 #pragma once
-#ifndef SAKI_MATRIX_OPERATOR_2018_12_13
-#define SAKI_MATRIX_OPERATOR_2018_12_13
+#ifndef SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_2018_12_13
+#define SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_2018_12_13
 #include <utility>
-#include <saki/binary_operator/binary_operator.h>
+#include <saki/function_object.h>
 
 namespace saki
 {
@@ -165,4 +165,4 @@ namespace saki
 		return !(m1 == m2);
 	}
 }
-#endif //SAKI_MATRIX_OPERATOR_2018_12_13
+#endif //SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_2018_12_13

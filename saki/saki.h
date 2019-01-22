@@ -2,26 +2,28 @@
 * @file saki.h
 * @brief 簡易インクルード(saki)
 * @author 石山 悠
-* @date 2018/11/22
-*/#pragma once
-#ifndef SAKI_2018_11_22
-#define SAKI_2018_11_22
+* @date 2019/01/21
+*/
+#pragma once
+#ifndef SAKI_SAKI_2019_01_21
+#define SAKI_SAKI_2019_01_21
 
-#include <saki/macro/macro.h>
+#include <saki/algorithm.h>
+#include <saki/array.h>
+#include <saki/clock.h>
+#include <saki/compare.h>
+#include <saki/function_object.h>
+#include <saki/iterator.h>
+#include <saki/macro.h>
+#include <saki/math.h>
+#include <saki/matrix.h>
+#include <saki/numeric.h>
+#include <saki/random.h>
+#include <saki/singleton.h>
+#include <saki/split.h>
+#include <saki/string.h>
+#include <saki/transform.h>
+#include <saki/type_traits.h>
+#include <saki/vector.h>
 
-#include <saki/algorithm/algorithm.h>
-#include <saki/array/array.h>
-#include <saki/binary_operator/binary_operator.h>
-#include <saki/clock/clock.h>
-#include <saki/math/math.h>
-#include <saki/matrix/matrix.h>
-#include <saki/meta/meta.h>
-#include <saki/random/random.h>
-#include <saki/singleton/singleton.h>
-#include <saki/split/split.h>
-#include <saki/string/string.h>
-#include <saki/transform/transform.h>
-#include <saki/tree/tree.h>
-#include <saki/vector/vector.h>
-
-#endif //SAKI_2018_11_22
+#endif //SAKI_SAKI_2019_01_21

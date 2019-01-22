@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['can_5fbegin_5fmethod_2eh',['can_begin_method.h',['../can__begin__method_8h.html',1,'']]],
-  ['clock_2eh',['clock.h',['../clock_8h.html',1,'']]],
-  ['constexpr_5fstd_2eh',['constexpr_std.h',['../constexpr__std_8h.html',1,'']]],
-  ['copy_2eh',['copy.h',['../copy_8h.html',1,'']]],
-  ['copysign_2eh',['copysign.h',['../copysign_8h.html',1,'']]]
+  ['degree_5fradian_5fconversion_2eh',['degree_radian_conversion.h',['../degree__radian__conversion_8h.html',1,'']]],
+  ['digit_5fcount_2eh',['digit_count.h',['../digit__count_8h.html',1,'']]],
+  ['distance_2eh',['distance.h',['../distance_8h.html',1,'']]],
+  ['division_2eh',['division.h',['../division_8h.html',1,'']]]
 ];
