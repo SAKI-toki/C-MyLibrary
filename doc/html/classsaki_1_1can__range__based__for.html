@@ -73,6 +73,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>範囲ベースfor文に利用できる型かどうか判定する  
+ <a href="classsaki_1_1can__range__based__for.html#details">[詳解]</a></p>
+
 <p><code>#include &lt;<a class="el" href="can__range__based__for_8h_source.html">can_range_based_for.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -80,7 +83,13 @@ $(function() {
 <tr class="memitem:ad9b48de9333c69be9b613f1ccb6b4f13"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1can__range__based__for.html#ad9b48de9333c69be9b613f1ccb6b4f13">value</a> = decltype(check_range_based_for&lt;T&gt;(nullptr))::value</td></tr>
 <tr class="separator:ad9b48de9333c69be9b613f1ccb6b4f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">メンバ詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class saki::can_range_based_for&lt; T &gt;</h3>
+
+<p>範囲ベースfor文に利用できる型かどうか判定する </p>
+<p>std::beginとstd::endを利用できればtrueという判定になる </p>
+</div><h2 class="groupheader">メンバ詳解</h2>
 <a id="ad9b48de9333c69be9b613f1ccb6b4f13"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9b48de9333c69be9b613f1ccb6b4f13">&#9670;&nbsp;</a></span>value</h2>
 

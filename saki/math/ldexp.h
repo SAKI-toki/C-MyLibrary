@@ -8,7 +8,7 @@
 #ifndef SAKI_MATH_LDEXP_2019_01_15
 #define SAKI_MATH_LDEXP_2019_01_15
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
 #include <saki/math/details/pow_n.h>
@@ -19,7 +19,7 @@ namespace saki
 	* @brief コンパイル時ldexp
 	*/
 	template<typename T, typename IntegerT,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<IntegerT>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<IntegerT>> = nullptr>
 		constexpr T ldexp(T x, IntegerT exp)
 	{
 		if (saki::isnan(x) || saki::isinf(x) || x == 0 || exp == 0)return x;
@@ -30,7 +30,7 @@ namespace saki
 	* @brief 第二引数がint型じゃない場合に、int型にするためのもの
 	*/
 	template<typename T, typename IntegerT,
-		typename saki::enabled_if_nullptr_t<!std::is_integral_v<IntegerT>> = nullptr>
+		typename saki::enable_if_nullptr_t<!std::is_integral_v<IntegerT>> = nullptr>
 		constexpr T ldexp(T x, IntegerT exp)
 	{
 		return saki::ldexp(x, static_cast<int>(exp));

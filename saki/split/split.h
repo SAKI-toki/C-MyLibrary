@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/split/details/multiple_separation.h>
 #include <saki/split/details/not_equal_separation.h>
 #include <saki/type_traits/has_check_method.h>
@@ -25,7 +25,7 @@ namespace saki
 	* @details bool check(char)‚ÌŠÖ”‚ğ‚Á‚Ä‚¢‚éƒNƒ‰ƒX‚È‚ç‚È‚ñ‚Å‚àó‚¯æ‚êAfalse‚ÌŠÔ•¶š‚ğŠi”[‚µ‘±‚¯‚Ü‚·
 	*/
 	template<template<typename, typename> typename Container = std::vector, typename T,
-		typename saki::enabled_if_nullptr_t<saki::has_check_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<saki::has_check_v<T>> = nullptr>
 		Container<std::string, std::allocator<std::string>> split(const std::string& str, T&& split_separation)
 	{
 		//‹æØ‚Á‚½•¶š—ñ‚ğ’Ç‰Á

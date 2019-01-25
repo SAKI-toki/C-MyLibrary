@@ -76,7 +76,9 @@ $(function() {
 
 <p>Not a Numberかどうか判定する関数  
 <a href="#details">[詳解]</a></p>
-
+<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8h_source.html">saki/type_traits/enable_if_nullptr.h</a>&gt;</code><br />
+</div>
 <p><a href="isnan_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -91,10 +93,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a56ac7ef1477743d3bb044e2cf8f6d612"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a56ac7ef1477743d3bb044e2cf8f6d612"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a56ac7ef1477743d3bb044e2cf8f6d612">saki::isnan</a> (T x)</td></tr>
-<tr class="memdesc:a56ac7ef1477743d3bb044e2cf8f6d612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not a Numberかどうか判定  <a href="namespacesaki.html#a56ac7ef1477743d3bb044e2cf8f6d612">[詳解]</a><br /></td></tr>
-<tr class="separator:a56ac7ef1477743d3bb044e2cf8f6d612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a446ca3f39e4dc8e57db4aafa03a4e232">saki::isnan</a> (T x)</td></tr>
+<tr class="memdesc:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not a Numberかどうか判定  <a href="namespacesaki.html#a446ca3f39e4dc8e57db4aafa03a4e232">[詳解]</a><br /></td></tr>
+<tr class="separator:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>Not a Numberかどうか判定する関数 </p>

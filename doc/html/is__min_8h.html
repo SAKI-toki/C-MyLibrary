@@ -77,8 +77,7 @@ $(function() {
 <p>複数の比較を一度に行う(&lt;=)  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;<a class="el" href="isnan_8h_source.html">saki/math/isnan.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="isinf_8h_source.html">saki/math/isinf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="can__greater_8h_source.html">saki/type_traits/can_compare/can_greater.h</a>&gt;</code><br />
 </div>
 <p><a href="is__min_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -96,18 +95,18 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ae9830acbba1cfee8006bd7c0c59cd6df"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae9830acbba1cfee8006bd7c0c59cd6df"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#ae9830acbba1cfee8006bd7c0c59cd6df">saki::impl::is_min_impl</a> (T)</td></tr>
-<tr class="memdesc:ae9830acbba1cfee8006bd7c0c59cd6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較するものがない(なくなった)場合、trueを返す  <a href="namespacesaki_1_1impl.html#ae9830acbba1cfee8006bd7c0c59cd6df">[詳解]</a><br /></td></tr>
-<tr class="separator:ae9830acbba1cfee8006bd7c0c59cd6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48cbdb55a841933db26e4857720738bb"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename ... Args&gt; </td></tr>
-<tr class="memitem:a48cbdb55a841933db26e4857720738bb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#a48cbdb55a841933db26e4857720738bb">saki::impl::is_min_impl</a> (First first, Second second, Args ...args)</td></tr>
-<tr class="memdesc:a48cbdb55a841933db26e4857720738bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_minの実装部  <a href="namespacesaki_1_1impl.html#a48cbdb55a841933db26e4857720738bb">[詳解]</a><br /></td></tr>
-<tr class="separator:a48cbdb55a841933db26e4857720738bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76f6dc2cbe6bb83e0235b9635eb33ad2"><td class="memTemplParams" colspan="2">template&lt;typename First , typename ... Args&gt; </td></tr>
-<tr class="memitem:a76f6dc2cbe6bb83e0235b9635eb33ad2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a76f6dc2cbe6bb83e0235b9635eb33ad2">saki::is_min</a> (First first, Args ...args) -&gt; decltype(std::enable_if_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt;&gt;(), bool())</td></tr>
-<tr class="memdesc:a76f6dc2cbe6bb83e0235b9635eb33ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える(&lt;=)  <a href="namespacesaki.html#a76f6dc2cbe6bb83e0235b9635eb33ad2">[詳解]</a><br /></td></tr>
-<tr class="separator:a76f6dc2cbe6bb83e0235b9635eb33ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84f4d7f2170d7090fc5e9fb79c21b7f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac84f4d7f2170d7090fc5e9fb79c21b7f"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#ac84f4d7f2170d7090fc5e9fb79c21b7f">saki::impl::is_min_impl</a> (const T &amp;)</td></tr>
+<tr class="memdesc:ac84f4d7f2170d7090fc5e9fb79c21b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較するものがない(なくなった)場合、trueを返す  <a href="namespacesaki_1_1impl.html#ac84f4d7f2170d7090fc5e9fb79c21b7f">[詳解]</a><br /></td></tr>
+<tr class="separator:ac84f4d7f2170d7090fc5e9fb79c21b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97640b18d57a2a6ea4746acc3cd62bbb"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename ... Args&gt; </td></tr>
+<tr class="memitem:a97640b18d57a2a6ea4746acc3cd62bbb"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#a97640b18d57a2a6ea4746acc3cd62bbb">saki::impl::is_min_impl</a> (const First &amp;first, Second second, const Args &amp;...args)</td></tr>
+<tr class="memdesc:a97640b18d57a2a6ea4746acc3cd62bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_minの実装部  <a href="namespacesaki_1_1impl.html#a97640b18d57a2a6ea4746acc3cd62bbb">[詳解]</a><br /></td></tr>
+<tr class="separator:a97640b18d57a2a6ea4746acc3cd62bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223be67dabf8c1215122d80d0cc811c4"><td class="memTemplParams" colspan="2">template&lt;typename First , typename ... Args&gt; </td></tr>
+<tr class="memitem:a223be67dabf8c1215122d80d0cc811c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a223be67dabf8c1215122d80d0cc811c4">saki::is_min</a> (const First &amp;first, const Args &amp;...args) -&gt; decltype(std::enable_if_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; <a class="el" href="structsaki_1_1can__greater.html">saki::can_greater</a>&lt; First &gt;&gt;, bool &gt;())</td></tr>
+<tr class="memdesc:a223be67dabf8c1215122d80d0cc811c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える(&lt;=)  <a href="namespacesaki.html#a223be67dabf8c1215122d80d0cc811c4">[詳解]</a><br /></td></tr>
+<tr class="separator:a223be67dabf8c1215122d80d0cc811c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>複数の比較を一度に行う(&lt;=) </p>

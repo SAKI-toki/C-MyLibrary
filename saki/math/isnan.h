@@ -7,6 +7,8 @@
 #pragma once
 #ifndef SAKI_MATH_ISNAN_2019_01_02
 #define SAKI_MATH_ISNAN_2019_01_02
+#include <type_traits>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -15,10 +17,22 @@ namespace saki
 	* @param x ”»’è‚·‚é’l
 	* @return NaN‚©‚Ç‚¤‚©
 	*/
-	template<typename T>
+	template<typename T,
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr bool isnan(T x)
 	{
 		return !(x == x);
+	}
+	/**
+	* @brief Not a Number‚©‚Ç‚¤‚©”»’è
+	* @param x ”»’è‚·‚é’l
+	* @details floating_pointˆÈŠO‚Ífalse
+	*/
+	template<typename T,
+		typename saki::enable_if_nullptr_t<!std::is_floating_point_v<T>> = nullptr>
+		constexpr bool isnan(T)
+	{
+		return false;
 	}
 }
 #endif //SAKI_MATH_ISNAN_2019_01_02

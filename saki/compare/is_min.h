@@ -8,8 +8,7 @@
 #ifndef SAKI_COMPARE_IS_MIN_2019_01_21
 #define SAKI_COMPARE_IS_MIN_2019_01_21
 #include <type_traits>
-#include <saki/math/isnan.h>
-#include <saki/math/isinf.h>
+#include <saki/type_traits/can_compare/can_greater.h>
 
 namespace saki
 {
@@ -28,7 +27,7 @@ namespace saki
 		* @details –ˆ‰ñisnan‚ğ”»’è‚·‚é•K—v‚ª‚È‚¢‚½‚ßAÀ‘••”‚ğ•ª‚¯‚½
 		*/
 		template<typename First, typename Second, typename ...Args>
-		constexpr bool is_min_impl(const First& first, const Second& second, const Args& ...args)
+		constexpr bool is_min_impl(const First& first, Second second, const Args& ...args)
 		{
 			return (first > static_cast<First>(second)) ? false : saki::impl::is_min_impl(first, (args)...);
 		}
@@ -39,10 +38,11 @@ namespace saki
 	*/
 	template<typename First, typename ...Args>
 	constexpr auto is_min(const First& first, const Args& ...args)
-		->decltype(std::enable_if_t<std::conjunction_v<std::is_convertible<First, Args>...>>(), bool())
+		->decltype(std::enable_if_t<
+			std::conjunction_v<std::is_convertible<First, Args>...>&&
+			std::conjunction_v<saki::can_greater<First>>
+			, bool>())
 	{
-		if (saki::isnan(first))return false;
-		if (saki::isinf(first))return false;
 		return saki::impl::is_min_impl(first, (args)...);
 	}
 }

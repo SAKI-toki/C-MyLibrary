@@ -9,7 +9,7 @@
 #define SAKI_MATH_SIN_2019_01_03
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/factorial.h>
 #include <saki/math/pi.h>
 #include <saki/math/pow.h>
@@ -23,7 +23,7 @@ namespace saki
 	* @brief コンパイル時sin
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T sin(T x)
 	{
 		//NaN
@@ -40,7 +40,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double sin(T x)
 	{
 		return saki::sin(static_cast<double>(x));

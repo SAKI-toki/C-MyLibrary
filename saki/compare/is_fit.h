@@ -8,10 +8,8 @@
 #ifndef SAKI_COMPARE_IS_FIT_2019_01_21
 #define SAKI_COMPARE_IS_FIT_2019_01_21
 #include <type_traits>
-#include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
-#include <saki/math/isnan.h>
-#include <saki/math/isinf.h>
+#include <saki/type_traits/can_compare/can_less_or_equal.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -20,26 +18,22 @@ namespace saki
 	* @details if(a <= x && x <= b)‚ðis_fit(x,a,b)‚Æ‘‚¯‚é
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<saki::can_less_or_equal_v<T>> = nullptr>
 	constexpr bool is_fit(const T& x, const T& min_n, const T& max_n)
 	{
-		if (saki::isnan(x) ||
-			saki::isnan(min_n) ||
-			saki::isnan(max_n) ||
-			min_n > max_n)return false;
 		return (min_n <= x && x <= max_n);
 	}
 	/**
 	* @brief Œ^‚ð‚»‚ë‚¦‚é
 	*/
-	template<typename T1,typename T2,typename T3,
-		typename saki::enabled_if_nullptr_t<
-		std::is_arithmetic_v<T1> && std::is_arithmetic_v<T2> && std::is_arithmetic_v<T3>
+	template<typename First, typename MinType, typename MaxType,
+		typename saki::enable_if_nullptr_t <
+		std::is_convertible_v<MinType, First>&&std::is_convertible_v<MaxType, First>&&
+		saki::can_less_or_equal_v<First>
 	> = nullptr>
-	constexpr bool is_fit(const T1& x, const T2& min_n, const T3& max_n)
+	constexpr bool is_fit(First x, MinType min_n, MaxType max_n)
 	{
-		using type = decltype(x * min_n * max_n);
-		return is_fit(static_cast<type>(x), static_cast<type>(min_n), static_cast<type>(max_n));
+		return is_fit(x, static_cast<First>(min_n), static_cast<First>(max_n));
 	}
 }
 #endif //SAKI_COMPARE_IS_MAX_2019_01_21

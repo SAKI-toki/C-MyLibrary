@@ -10,7 +10,7 @@
 #include <cstddef>
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/factorial.h>
 #include <saki/math/pow.h>
 #include <saki/math/isnan.h>
@@ -22,7 +22,7 @@ namespace saki
 	* @brief コンパイル時cosh
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T cosh(T x)
 	{
 		if (saki::isnan(x) || saki::isinf(x))return x;
@@ -40,7 +40,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double cosh(T x)
 	{
 		return saki::cosh(static_cast<double>(x));

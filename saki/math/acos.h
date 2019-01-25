@@ -9,7 +9,7 @@
 #define SAKI_MATH_ACOS_2019_01_06
 #include <limits>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/isnan.h>
 #include <saki/math/pi.h>
@@ -22,7 +22,7 @@ namespace saki
 	* @param x •Ó‚Ì”ä
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T acos(T x)
 	{
 		if (saki::isnan(x))return x;
@@ -35,7 +35,7 @@ namespace saki
 	* @param x intŒ^‚Ì”ä
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double acos(T x)
 	{
 		return saki::acos(static_cast<double>(x));

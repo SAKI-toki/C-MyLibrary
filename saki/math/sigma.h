@@ -8,7 +8,7 @@
 #ifndef SAKI_MATH_SIGMA_2019_01_18
 #define SAKI_MATH_SIGMA_2019_01_18
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/function_object/return_param.h>
 
 namespace saki
@@ -22,8 +22,8 @@ namespace saki
 	* @details start>end‚Ìê‡A0‚ª•Ô‚éAZpŒ^‚Ì‚İ‘Î‰
 	*/
 	template<typename T = int, typename Func = saki::return_param,
-		typename saki::enabled_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr,
-		typename saki::enabled_if_nullptr_t<std::is_invocable_v<Func, T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr,
+		typename saki::enable_if_nullptr_t<std::is_invocable_v<Func, T>> = nullptr>
 	constexpr T sigma(T start, const T& end, Func&& f = Func())
 	{
 		T sum = 0;

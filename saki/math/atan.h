@@ -9,7 +9,7 @@
 #define SAKI_MATH_ATAN_2019_01_06
 #include <limits>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/sqrt.h>
 #include <saki/math/pow.h>
@@ -23,7 +23,7 @@ namespace saki
 	* @param x •Ó‚Ì”ä
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T atan(T x)
 	{
 		if (saki::isnan(x) || x == 0)return x;
@@ -66,7 +66,7 @@ namespace saki
 	* @param x intŒ^‚Ì”ä
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double atan(T x)
 	{
 		return saki::atan(static_cast<double>(x));

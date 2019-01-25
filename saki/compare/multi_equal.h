@@ -7,7 +7,8 @@
 #pragma once
 #ifndef SAKI_COMPARE_MULTI_EQUAL_2019_01_18
 #define SAKI_COMPARE_MULTI_EQUAL_2019_01_18
-#include <saki/math/isnan.h>
+#include <type_traits>
+#include <saki/type_traits/can_compare/can_equal.h>
 
 namespace saki
 {
@@ -36,9 +37,12 @@ namespace saki
 	* @details if(x == 1 || x == 2 || x == 3)Çmulti_equal(x,1,2,3)Ç∆èëÇØÇÈ
 	*/
 	template<typename First, typename ...Args>
-	constexpr bool multi_equal(const First& first, const Args& ...args)
+	constexpr auto multi_equal(const First& first, const Args& ...args)
+		->decltype(std::enable_if_t <
+			std::conjunction_v<std::is_convertible<First, Args>...>&&
+			std::conjunction_v<saki::can_equal<First>>
+			, bool>())
 	{
-		if (saki::isnan(first))return false;
 		return saki::impl::multi_equal_impl(first, (args)...);
 	}
 }

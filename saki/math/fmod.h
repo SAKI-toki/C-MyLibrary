@@ -10,7 +10,7 @@
 #include <cstddef>
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
 #include <saki/math/isinf.h>
@@ -24,7 +24,7 @@ namespace saki
 	* @return èËó]
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr T fmod(T x, T y)
 	{
 		if (saki::isnan(x))
@@ -55,7 +55,7 @@ namespace saki
 		return static_cast<T>(x - static_cast<int64_t>(x / y) * y);
 	}
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr T fmod(T x, T y)
 	{
 		return (x % y);

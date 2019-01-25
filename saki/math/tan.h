@@ -9,7 +9,7 @@
 #define SAKI_MATH_TAN_2019_01_05
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/sin.h>
 #include <saki/math/cos.h>
@@ -22,7 +22,7 @@ namespace saki
 	* @param x ƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T tan(T x)
 	{
 		//NaN
@@ -40,7 +40,7 @@ namespace saki
 	* @param x intŒ^‚Ìƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double tan(T x)
 	{
 		return saki::tan(static_cast<double>(x));

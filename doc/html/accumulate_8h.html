@@ -77,7 +77,7 @@ $(function() {
 <p>既存のaccumulate関数の簡略化  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8h_source.html">saki/type_traits/enable_if_nullptr.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="can__range__based__for_8h_source.html">saki/type_traits/can_range_based_for.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="remove__reference__const_8h_source.html">saki/type_traits/remove_reference_const.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="addition_8h_source.html">saki/function_object/addition.h</a>&gt;</code><br />
@@ -96,7 +96,7 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aeb83577f2e85117be5645c0cb499a1fc"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename BinaryOperation  = saki::addition, typename saki::enabled_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt;&gt;  = nullptr, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, typename saki::enabled_if_nullptr_t&lt; std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aeb83577f2e85117be5645c0cb499a1fc"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename BinaryOperation  = saki::addition, typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt;&gt;  = nullptr, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, typename saki::enable_if_nullptr_t&lt; std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aeb83577f2e85117be5645c0cb499a1fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aeb83577f2e85117be5645c0cb499a1fc">saki::accumulate</a> (const Container &amp;con, T init=0, BinaryOperation &amp;&amp;binary_op=<a class="el" href="structsaki_1_1addition.html">saki::addition</a>())</td></tr>
 <tr class="memdesc:aeb83577f2e85117be5645c0cb499a1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="namespacesaki.html#aeb83577f2e85117be5645c0cb499a1fc">[詳解]</a><br /></td></tr>
 <tr class="separator:aeb83577f2e85117be5645c0cb499a1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>

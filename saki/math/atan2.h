@@ -9,7 +9,7 @@
 #define SAKI_MATH_ATAN2_2019_01_06
 #include <limits>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/signbit.h>
 #include <saki/math/copysign.h>
@@ -24,7 +24,7 @@ namespace saki
 	* @param y,x •Ó‚Ì’·‚³
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T atan2(T y, T x)
 	{
 		if (saki::isnan(x))
@@ -83,7 +83,7 @@ namespace saki
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double atan2(T y, T x)
 	{
 		return saki::atan2(static_cast<double>(y), static_cast<double>(x));

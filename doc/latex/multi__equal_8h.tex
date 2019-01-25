@@ -5,7 +5,8 @@
 複数の比較を一度に行う(==)  
 
 
-{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,7 +26,7 @@
 \begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、falseを返す \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_afd0543c20cbd7373bceba87c2af5b3de}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const First \&first, const Second \&second, const Args \&...args)
 \begin{DoxyCompactList}\small\item\em multi\+\_\+equalの実装部 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a08e1e3f9c27a1f59e6f096bcd22c8749}{saki\+::multi\+\_\+equal}} (const First \&first, const Args \&...args)
+{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a9f7f1252e3ed939885a3b4c4b09943b8}{saki\+::multi\+\_\+equal}} (const First \&first, const Args \&...args) -\/$>$ decltype(std\+::enable\+\_\+if\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ \mbox{\hyperlink{structsaki_1_1can__equal}{saki\+::can\+\_\+equal}}$<$ First $>$$>$, bool $>$())
 \begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

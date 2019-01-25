@@ -10,7 +10,7 @@
 #include <cstddef>
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/factorial.h>
 #include <saki/math/pi.h>
 #include <saki/math/pow.h>
@@ -24,7 +24,7 @@ namespace saki
 	* @param x ƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T cos(T x)
 	{
 		//NaN
@@ -54,7 +54,7 @@ namespace saki
 	* @param x intŒ^‚Ìƒ‰ƒWƒAƒ“Šp
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double cos(T x)
 	{
 		return saki::cos(static_cast<double>(x));

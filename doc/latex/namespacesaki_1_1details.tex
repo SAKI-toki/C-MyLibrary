@@ -22,7 +22,7 @@ class \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\
 \begin{DoxyCompactList}\small\item\em ==演算子 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1details_a67a43f1e216aa1da9934815a21bfe2ee}{operator!=}} (const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&itr1, const \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\+\_\+iterator\+\_\+base}}$<$ T $>$ \&itr2)
 \begin{DoxyCompactList}\small\item\em !=演算子 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ }\\constexpr T1 \mbox{\hyperlink{namespacesaki_1_1details_a30b4cd78c970618ee2886123c28e4041}{pow\+\_\+n}} (T1 x, T2 y)
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ }\\constexpr T1 \mbox{\hyperlink{namespacesaki_1_1details_a30b4cd78c970618ee2886123c28e4041}{pow\+\_\+n}} (T1 x, T2 y)
 \begin{DoxyCompactList}\small\item\em powから派生 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a95cd387e134b1b940cde0b171926e01e}{matrix\+\_\+matrix\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T1 $>$ \&m1, const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T2 $>$ \&m2, const Func \&f)
 \begin{DoxyCompactList}\small\item\em 行列同士の演算(+と-\/) \end{DoxyCompactList}\item 
@@ -128,7 +128,7 @@ decltype(auto) constexpr saki\+::details\+::operator\+\_\+arrow (\begin{DoxyPara
 \index{saki\+::details@{saki\+::details}!pow\+\_\+n@{pow\+\_\+n}}
 \index{pow\+\_\+n@{pow\+\_\+n}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{pow\+\_\+n()}{pow\_n()}}
-{\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename saki\+::enabled\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ \\
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ \\
 constexpr T1 saki\+::details\+::pow\+\_\+n (\begin{DoxyParamCaption}\item[{T1}]{x,  }\item[{T2}]{y }\end{DoxyParamCaption})}
 
 

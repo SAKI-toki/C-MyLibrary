@@ -10,7 +10,7 @@
 #include <cstddef>
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
@@ -26,7 +26,7 @@ namespace saki
 	* @details |x|>uint64_t_max‚Ìê‡‚Í‰½‚àˆ—‚¹‚¸•Ô‚·
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T floor(T x)
 	{
 		if (saki::isnan(x) || saki::isinf(x) || x == 0)return x;
@@ -42,7 +42,7 @@ namespace saki
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double floor(T x)
 	{
 		return saki::floor(static_cast<double>(x));

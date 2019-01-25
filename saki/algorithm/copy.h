@@ -8,7 +8,7 @@
 #ifndef SAKI_ALGORITHM_COPY_2018_12_09
 #define SAKI_ALGORITHM_COPY_2018_12_09
 #include <iterator>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/type_traits/can_range_based_for.h>
 
 namespace saki
@@ -19,7 +19,7 @@ namespace saki
 	* @param con2 ペーストするコンテナクラス
 	*/
 	template <typename Container1, typename Container2,
-		typename saki::enabled_if_nullptr_t<
+		typename saki::enable_if_nullptr_t<
 		saki::can_range_based_for_v<Container1>&&saki::can_range_based_for_v<Container2>> = nullptr>
 		constexpr auto copy(const Container1& con1, Container2& con2)
 		->decltype(std::begin(con2))

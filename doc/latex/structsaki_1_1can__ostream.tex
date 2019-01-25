@@ -1,0 +1,37 @@
+\hypertarget{structsaki_1_1can__ostream}{}\section{saki\+:\+:can\+\_\+ostream$<$ T $>$ 構造体テンプレート}
+\label{structsaki_1_1can__ostream}\index{saki\+::can\+\_\+ostream$<$ T $>$@{saki\+::can\+\_\+ostream$<$ T $>$}}
+
+
+ostream演算子をオーバーロードしているかどうか判定する構造体(cout)  
+
+
+
+
+{\ttfamily \#include $<$can\+\_\+ostream.\+h$>$}
+
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structsaki_1_1can__ostream_a949a7959b4856ff60149c82f2b1f56fd}{value}} = decltype(ostream\+\_\+check$<$T$>$(nullptr))\+::value
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+struct saki\+::can\+\_\+ostream$<$ T $>$}
+
+ostream演算子をオーバーロードしているかどうか判定する構造体(cout) 
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{structsaki_1_1can__ostream_a949a7959b4856ff60149c82f2b1f56fd}\label{structsaki_1_1can__ostream_a949a7959b4856ff60149c82f2b1f56fd}} 
+\index{saki\+::can\+\_\+ostream@{saki\+::can\+\_\+ostream}!value@{value}}
+\index{value@{value}!saki\+::can\+\_\+ostream@{saki\+::can\+\_\+ostream}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr auto \mbox{\hyperlink{structsaki_1_1can__ostream}{saki\+::can\+\_\+ostream}}$<$ T $>$\+::value = decltype(ostream\+\_\+check$<$T$>$(nullptr))\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/\mbox{\hyperlink{can__ostream_8h}{can\+\_\+ostream.\+h}}\end{DoxyCompactItemize}

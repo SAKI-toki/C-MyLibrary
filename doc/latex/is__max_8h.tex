@@ -6,8 +6,7 @@
 
 
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
-{\ttfamily \#include $<$saki/math/isnan.\+h$>$}\newline
-{\ttfamily \#include $<$saki/math/isinf.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+less.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,11 +22,11 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a43f254e0ea1de8b5cdfef3e108eff117}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (T)
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a1eb562842d6a5bcde39a463f04755157}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (const T \&)
 \begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、trueを返す \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a3987211cbe7532fd94555a26554acba2}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (First first, Second second, Args ...args)
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_ad5f6398b5affbb107eb4e49c35e36e6a}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (const First \&first, Second second, const Args \&...args)
 \begin{DoxyCompactList}\small\item\em is\+\_\+maxの実装部 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae6b9ce1ba404eba8dd9035f99e8666c4}{saki\+::is\+\_\+max}} (First first, Args ...args) -\/$>$ decltype(std\+::enable\+\_\+if\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$$>$(), bool())
+{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a0fe50c96fb27e8f05d202e4635b582a2}{saki\+::is\+\_\+max}} (const First \&first, const Args \&...args) -\/$>$ decltype(std\+::enable\+\_\+if\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ Args, First $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ \mbox{\hyperlink{structsaki_1_1can__less}{saki\+::can\+\_\+less}}$<$ First $>$$>$, bool $>$())
 \begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える($>$=) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

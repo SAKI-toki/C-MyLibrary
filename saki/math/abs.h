@@ -8,7 +8,7 @@
 #ifndef SAKI_MATH_ABS_2019_01_19
 #define SAKI_MATH_ABS_2019_01_19
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 
 namespace saki
@@ -19,7 +19,7 @@ namespace saki
 	* @details •„†‚ ‚è
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<!std::is_unsigned_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<!std::is_unsigned_v<T>> = nullptr>
 	constexpr T abs(T x)
 	{
 		if (saki::isnan(x))return x;
@@ -31,7 +31,7 @@ namespace saki
 	* @details •„†‚È‚µ
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_unsigned_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_unsigned_v<T>> = nullptr>
 	constexpr T abs(T x)
 	{
 		return x;

@@ -9,7 +9,7 @@
 #define SAKI_MATH_SQRT_2018_11_21
 #include <limits>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
 
@@ -21,7 +21,7 @@ namespace saki
 	* @details アルゴリズムはバビロニアの平方根を利用
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr T sqrt(T x)
 	{
 		if (saki::isnan(x) ||
@@ -42,7 +42,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double sqrt(T x)
 	{
 		return saki::sqrt(static_cast<double>(x));

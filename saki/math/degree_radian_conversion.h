@@ -11,7 +11,7 @@
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
 #include <saki/math/pi.h>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -20,7 +20,7 @@ namespace saki
 	* @param deg Radian‚É•ÏŠ·‚·‚éDegree
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr T to_radian(T deg)
 	{
 		if (saki::isnan(deg) || saki::isinf(deg) || deg == 0)return deg;
@@ -30,7 +30,7 @@ namespace saki
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double to_radian(T deg)
 	{
 		return saki::to_radian(static_cast<double>(deg));
@@ -40,7 +40,7 @@ namespace saki
 	* @param rad Degree‚É•ÏŠ·‚·‚éRadian
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 	constexpr T to_degree(T rad)
 	{
 		if (saki::isnan(rad) || saki::isinf(rad) || rad == 0)return rad;
@@ -50,7 +50,7 @@ namespace saki
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double to_degree(T rad)
 	{
 		return saki::to_degree(static_cast<double>(rad));

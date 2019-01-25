@@ -77,7 +77,7 @@ $(function() {
 <p>既存のcopy関数の簡略化  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;iterator&gt;</code><br />
-<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8h_source.html">saki/type_traits/enable_if_nullptr.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="can__range__based__for_8h_source.html">saki/type_traits/can_range_based_for.h</a>&gt;</code><br />
 </div>
 <p><a href="copy_8h_source.html">[ソースコード]</a></p>
@@ -94,7 +94,7 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memTemplParams" colspan="2">template&lt;typename Container1 , typename Container2 , typename saki::enabled_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memTemplParams" colspan="2">template&lt;typename Container1 , typename Container2 , typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3a9c67bf73207dfb61db4cd53ee35863">saki::copy</a> (const Container1 &amp;con1, Container2 &amp;con2) -&gt; decltype(std::begin(con2))</td></tr>
 <tr class="memdesc:a3a9c67bf73207dfb61db4cd53ee35863"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナとコンテナを渡すcopy  <a href="namespacesaki.html#a3a9c67bf73207dfb61db4cd53ee35863">[詳解]</a><br /></td></tr>
 <tr class="separator:a3a9c67bf73207dfb61db4cd53ee35863"><td class="memSeparator" colspan="2">&#160;</td></tr>

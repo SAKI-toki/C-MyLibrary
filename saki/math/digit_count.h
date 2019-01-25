@@ -10,7 +10,7 @@
 #include <cstddef>
 #include <type_traits>
 #include <limits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/abs.h>
 #include <saki/math/isnan.h>
 #include <saki/math/isinf.h>
@@ -22,13 +22,13 @@ namespace saki
 	* @details log10‚Å‚à‰Â”\‚¾‚ªA®”•”‚¾‚¯‚È‚ç‚±‚¿‚ç‚ğg‚Á‚½‚Ù‚¤‚ª—Ç‚¢
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 		constexpr size_t digit_count(T x)
 	{
 		if (saki::isnan(x) || saki::isinf(x))return 0;
-		if (saki::abs(x) < 1)return 1;
-		size_t count = 0;
 		x = saki::abs(x);
+		if (x < 1)return 1;
+		size_t count = 0;
 		while (x >= 1)
 		{
 			++count;

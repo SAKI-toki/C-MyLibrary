@@ -77,10 +77,8 @@ $(function() {
 <p>範囲内かどうかの判定を行う  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;limits&gt;</code><br />
-<code>#include &lt;<a class="el" href="enabled__if__nullptr_8h_source.html">saki/type_traits/enabled_if_nullptr.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="isnan_8h_source.html">saki/math/isnan.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="isinf_8h_source.html">saki/math/isinf.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="can__less__or__equal_8h_source.html">saki/type_traits/can_compare/can_less_or_equal.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8h_source.html">saki/type_traits/enable_if_nullptr.h</a>&gt;</code><br />
 </div>
 <p><a href="is__fit_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -96,14 +94,14 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a419ec46a4eaf271747846aaa8e7df594"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enabled_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:a419ec46a4eaf271747846aaa8e7df594"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a419ec46a4eaf271747846aaa8e7df594">saki::is_fit</a> (T x, T min_n, T max_n)</td></tr>
-<tr class="memdesc:a419ec46a4eaf271747846aaa8e7df594"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲内かどうかの判定を行う  <a href="namespacesaki.html#a419ec46a4eaf271747846aaa8e7df594">[詳解]</a><br /></td></tr>
-<tr class="separator:a419ec46a4eaf271747846aaa8e7df594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8702191f3514794558097f7928dd57d"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , typename saki::enabled_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt; &amp;&amp;std::is_arithmetic_v&lt; T3 &gt; &gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:aa8702191f3514794558097f7928dd57d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa8702191f3514794558097f7928dd57d">saki::is_fit</a> (T1 x, T2 min_n, T3 max_n)</td></tr>
-<tr class="memdesc:aa8702191f3514794558097f7928dd57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="namespacesaki.html#aa8702191f3514794558097f7928dd57d">[詳解]</a><br /></td></tr>
-<tr class="separator:aa8702191f3514794558097f7928dd57d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45597d7382905409bada2316f78502fc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; saki::can_less_or_equal_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a45597d7382905409bada2316f78502fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a45597d7382905409bada2316f78502fc">saki::is_fit</a> (const T &amp;x, const T &amp;min_n, const T &amp;max_n)</td></tr>
+<tr class="memdesc:a45597d7382905409bada2316f78502fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲内かどうかの判定を行う  <a href="namespacesaki.html#a45597d7382905409bada2316f78502fc">[詳解]</a><br /></td></tr>
+<tr class="separator:a45597d7382905409bada2316f78502fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09478d8cb01d75e93d34f884d7133dc9"><td class="memTemplParams" colspan="2">template&lt;typename First , typename MinType , typename MaxType , typename saki::enable_if_nullptr_t&lt; std::is_convertible_v&lt; MinType, First &gt; &amp;&amp;std::is_convertible_v&lt; MaxType, First &gt; &amp;&amp;saki::can_less_or_equal_v&lt; First &gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a09478d8cb01d75e93d34f884d7133dc9"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a09478d8cb01d75e93d34f884d7133dc9">saki::is_fit</a> (First x, MinType min_n, MaxType max_n)</td></tr>
+<tr class="memdesc:a09478d8cb01d75e93d34f884d7133dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="namespacesaki.html#a09478d8cb01d75e93d34f884d7133dc9">[詳解]</a><br /></td></tr>
+<tr class="separator:a09478d8cb01d75e93d34f884d7133dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>範囲内かどうかの判定を行う </p>

@@ -13,7 +13,7 @@ var searchData=
   ['transform_5ftransform_5fsome_5foperator',['transform_transform_some_operator',['../namespacesaki_1_1details.html#ac8ab9fdbf09089a0272297c3be7c51d4',1,'saki::details']]],
   ['translate',['translate',['../namespacesaki.html#a2311e77a2bed9d914a6b3e8056d6023a',1,'saki::translate(const saki::vector2&lt; T &gt; &amp;vec)'],['../namespacesaki.html#a492418470fa4dedb2065e7916460f0e0',1,'saki::translate(const saki::vector3&lt; T &gt; &amp;vec)'],['../namespacesaki.html#abdd23c2e56d1500ae2e8b662c5ddcf7c',1,'saki::translate(const saki::vector4&lt; T &gt; &amp;vec)']]],
   ['transpose',['transpose',['../classsaki_1_1matrix.html#a95e01e24e45757c1e45b5af25273a8fa',1,'saki::matrix']]],
-  ['type',['type',['../structsaki_1_1enabled__if__nullptr_3_01true_01_4.html#a2d6e660ea416615611921be376c6d624',1,'saki::enabled_if_nullptr&lt; true &gt;::type()'],['../structsaki_1_1remove__reference__const.html#ac1734aa19be1e083bd9bd22c05f930e3',1,'saki::remove_reference_const::type()']]],
+  ['type',['type',['../structsaki_1_1enable__if__nullptr_3_01true_01_4.html#a8f1b04372e036f2c7a60c7df41a02e50',1,'saki::enable_if_nullptr&lt; true &gt;::type()'],['../structsaki_1_1remove__reference__const.html#ac1734aa19be1e083bd9bd22c05f930e3',1,'saki::remove_reference_const::type()']]],
   ['type_5fmacro_2eh',['type_macro.h',['../type__macro_8h.html',1,'']]],
   ['type_5ftraits_2eh',['type_traits.h',['../type__traits_8h.html',1,'']]]
 ];

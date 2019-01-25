@@ -12,7 +12,7 @@
 #ifndef SAKI_NUMERIC_ACCUMULATE_2019_01_15
 #define SAKI_NUMERIC_ACCUMULATE_2019_01_15
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/type_traits/can_range_based_for.h>
 #include <saki/type_traits/remove_reference_const.h>
 #include <saki/function_object/addition.h>
@@ -26,9 +26,9 @@ namespace saki
 	* @return ‘S‚Ä‚Ì—v‘f‚ð‰ñ‚µ‚½Œ‹‰Ê
 	*/
 	template<typename Container, typename BinaryOperation = saki::addition,
-		typename saki::enabled_if_nullptr_t<saki::can_range_based_for_v<Container>> = nullptr,
+		typename saki::enable_if_nullptr_t<saki::can_range_based_for_v<Container>> = nullptr,
 		typename T = saki::remove_reference_const_t<typename Container::value_type>,
-		typename saki::enabled_if_nullptr_t<std::is_invocable_r_v<T, BinaryOperation, T, T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_invocable_r_v<T, BinaryOperation, T, T>> = nullptr>
 		constexpr T accumulate(const Container& con, T init = 0, BinaryOperation&& binary_op = saki::addition())
 	{
 		for (const auto& n : con)

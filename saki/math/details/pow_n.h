@@ -9,7 +9,7 @@
 #define SAKI_MATH_DETAILS_POW_N_2019_01_19
 #include <cstddef>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -19,7 +19,7 @@ namespace saki
 		* @brief powÇ©ÇÁîhê∂
 		*/
 		template<typename T1, typename T2,
-			typename saki::enabled_if_nullptr_t<std::is_integral_v<T2>> = nullptr>
+			typename saki::enable_if_nullptr_t<std::is_integral_v<T2>> = nullptr>
 		constexpr T1 pow_n(T1 x, T2 y)
 		{
 			T1 sum = static_cast<T1>(1);

@@ -9,7 +9,7 @@
 #define SAKI_MATH_HYPOT_2019_01_08
 #include <limits>
 #include <type_traits>
-#include <saki/type_traits/enabled_if_nullptr.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 #include <saki/math/isnan.h>
 #include <saki/math/sqrt.h>
 #include <saki/math/abs.h>
@@ -22,7 +22,7 @@ namespace saki
 	* @brief コンパイル時累乗
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T hypot(T x, T y)
 	{
 		if (saki::isinf(x) || saki::isinf(y))return std::numeric_limits<T>::infinity();
@@ -53,7 +53,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double hypot(T x, T y)
 	{
 		return saki::hypot(static_cast<double>(x), static_cast<double>(y));
@@ -73,7 +73,7 @@ namespace saki
 	* @brief コンパイル時累乗
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 		constexpr T hypot(T x, T y, T z)
 	{
 		if (saki::isinf(x) || saki::isinf(y) || saki::isinf(z))return std::numeric_limits<T>::infinity();
@@ -127,7 +127,7 @@ namespace saki
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 	template<typename T,
-		typename saki::enabled_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 		constexpr double hypot(T x, T y, T z)
 	{
 		return saki::hypot(static_cast<double>(x), static_cast<double>(y), static_cast<double>(z));

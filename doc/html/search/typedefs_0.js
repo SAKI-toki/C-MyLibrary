@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enabled_5fif_5fnullptr_5ft',['enabled_if_nullptr_t',['../namespacesaki.html#aa1258d80ed2c906b1e48aee518368d43',1,'saki']]]
+  ['enable_5fif_5fnullptr_5ft',['enable_if_nullptr_t',['../namespacesaki.html#a4c362f5119aac94085eab0bf794facf7',1,'saki']]]
 ];
