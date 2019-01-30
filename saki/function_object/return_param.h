@@ -1,6 +1,6 @@
 /**
 * @file return_param.h
-* @brief そのまま引数の値を返す
+* @brief そのまま引数の値を返す関数オブジェクト
 * @author 石山 悠
 * @date 2018/12/10
 */

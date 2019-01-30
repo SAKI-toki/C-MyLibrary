@@ -9,5 +9,7 @@
 #define SAKI_TYPE_TRAITS_HAS_VARIABLE_2018_12_23
 
 #include <saki/type_traits/has_variable/has_x.h>
+#include <saki/type_traits/has_variable/has_y.h>
+#include <saki/type_traits/has_variable/has_z.h>
 
 #endif //SAKI_TYPE_TRAITS_HAS_VARIABLE_2018_12_23

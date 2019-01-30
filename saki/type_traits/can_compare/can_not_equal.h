@@ -8,6 +8,7 @@
 #ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_2019_01_22
 #define SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_2019_01_22
 #include <type_traits>
+#include <utility>
 #include <saki/type_traits/remove_reference_const.h>
 
 namespace saki

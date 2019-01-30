@@ -9,6 +9,7 @@
 #define SAKI_COMPARE_IS_MAX_2019_01_21
 #include <type_traits>
 #include <saki/type_traits/can_compare/can_less.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -36,12 +37,12 @@ namespace saki
 	* @brief 複数の比較を一度に行える(>=)
 	* @details if(x >= a && x >= b && x >= c)をis_max(x,a,b,c)と書ける
 	*/
-	template<typename First, typename ...Args>
-	constexpr auto is_max(const First& first, const Args& ...args)
-		->decltype(std::enable_if_t <
-			std::conjunction_v<std::is_convertible<Args, First>...>&&
-			std::conjunction_v<saki::can_less<First>>
-			, bool>())
+	template<typename First, typename ...Args,
+		typename saki::enable_if_nullptr_t <
+		std::conjunction_v<std::is_convertible<Args, First>...>&&	//最初以外の型がFirstに変換可能か
+		std::conjunction_v<saki::can_less<First>>					//Firstが<演算子が有効かどうか
+	> = nullptr>
+		constexpr bool is_max(const First& first, const Args& ...args)
 	{
 		return saki::impl::is_max_impl(first, (args)...);
 	}

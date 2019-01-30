@@ -18,7 +18,9 @@ namespace saki
 	* @details if(a <= x && x <= b)をis_fit(x,a,b)と書ける
 	*/
 	template<typename T,
-		typename saki::enable_if_nullptr_t<saki::can_less_or_equal_v<T>> = nullptr>
+		typename saki::enable_if_nullptr_t<
+		saki::can_less_or_equal_v<T>		//<=演算子が有効かどうか
+	> = nullptr>
 	constexpr bool is_fit(const T& x, const T& min_n, const T& max_n)
 	{
 		return (min_n <= x && x <= max_n);
@@ -28,8 +30,9 @@ namespace saki
 	*/
 	template<typename First, typename MinType, typename MaxType,
 		typename saki::enable_if_nullptr_t <
-		std::is_convertible_v<MinType, First>&&std::is_convertible_v<MaxType, First>&&
-		saki::can_less_or_equal_v<First>
+		std::is_convertible_v<MinType, First>&&		//MinTypeからFirstに変換可能か
+		std::is_convertible_v<MaxType, First>&&		//MaxTypeからFirstに変換可能か
+		saki::can_less_or_equal_v<First>			//<=演算子が有効かどうか
 	> = nullptr>
 	constexpr bool is_fit(First x, MinType min_n, MaxType max_n)
 	{

@@ -13,25 +13,25 @@ namespace saki
 {
 	//プロトタイプ宣言
 	template<typename T>
-	class Transform;
+	class transform;
 	namespace details
 	{
 		/**
-		* @brief Transform同士の演算
+		* @brief transform同士の演算
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto transform_transform_some_operator(const saki::Transform<T1>& v1, const saki::Transform<T2>& v2, Func&& f)
+		constexpr auto transform_transform_some_operator(const saki::transform<T1>& v1, const saki::transform<T2>& v2, Func&& f)
 		{
-			return saki::Transform<decltype(std::declval<T1>() + std::declval<T2>())>
+			return saki::transform<decltype(std::declval<T1>() + std::declval<T2>())>
 			{ f(v1.get_pos(), v2.get_pos()), f(v1.get_rot(), v2.get_rot()), f(v1.get_scale(), v2.get_scale()) };
 		}
 		/**
-		* @brief Transformとスカラの演算
+		* @brief transformとスカラの演算
 		*/
 		template<typename T1, typename T2, typename Func>
-		constexpr auto transform_scalar_some_operator(const saki::Transform<T1>& v, const T2& scalar, Func&& f)
+		constexpr auto transform_scalar_some_operator(const saki::transform<T1>& v, const T2& scalar, Func&& f)
 		{
-			return saki::Transform<decltype(std::declval<T1>() * std::declval<T2>())>
+			return saki::transform<decltype(std::declval<T1>() * std::declval<T2>())>
 			{  f(v.get_pos(), scalar), f(v.get_rot(), scalar), f(v.get_scale(), scalar) };
 		}
 	}
@@ -39,7 +39,7 @@ namespace saki
 	* @brief +演算子
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator+(const saki::Transform<T1>& v1, const saki::Transform<T2>& v2)
+	constexpr auto operator+(const saki::transform<T1>& v1, const saki::transform<T2>& v2)
 	{
 		return details::transform_transform_some_operator(v1, v2, saki::addition());
 	}
@@ -47,23 +47,23 @@ namespace saki
 	* @brief -演算子
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator-(const saki::Transform<T1>& v1, const saki::Transform<T2>& v2)
+	constexpr auto operator-(const saki::transform<T1>& v1, const saki::transform<T2>& v2)
 	{
 		return details::transform_transform_some_operator(v1, v2, saki::subtraction());
 	}
 	/**
-	* @brief *演算子(Transform*スカラ)
+	* @brief *演算子(transform*スカラ)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const saki::Transform<T1>& v, const T2& scalar)
+	constexpr auto operator*(const saki::transform<T1>& v, const T2& scalar)
 	{
 		return details::transform_scalar_some_operator(v, scalar, saki::multiplication());
 	}
 	/**
-	* @brief *演算子(スカラ*Transform)
+	* @brief *演算子(スカラ*transform)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator*(const T1& scalar, const saki::Transform<T2>& v)
+	constexpr auto operator*(const T1& scalar, const saki::transform<T2>& v)
 	{
 		return v * scalar;
 	}
@@ -71,7 +71,7 @@ namespace saki
 	* @brief /演算子(スカラ)
 	*/
 	template<typename T1, typename T2>
-	constexpr auto operator/(const saki::Transform<T1>& v, const T2& scalar)
+	constexpr auto operator/(const saki::transform<T1>& v, const T2& scalar)
 	{
 		return details::transform_scalar_some_operator(v, scalar, saki::division());
 	}
@@ -79,7 +79,7 @@ namespace saki
 	* @brief ==演算子
 	*/
 	template<typename T>
-	constexpr bool operator==(const saki::Transform<T>& v1, const saki::Transform<T>& v2)
+	constexpr bool operator==(const saki::transform<T>& v1, const saki::transform<T>& v2)
 	{
 		return v1.get_pos() == v2.get_pos() && v1.get_rot() == v2.get_rot() && v1.get_scale() == v2.get_scale();
 	}
@@ -87,7 +87,7 @@ namespace saki
 	* @brief !=演算子
 	*/
 	template<typename T>
-	constexpr bool operator!=(const saki::Transform<T>& v1, const saki::Transform<T>& v2)
+	constexpr bool operator!=(const saki::transform<T>& v1, const saki::transform<T>& v2)
 	{
 		return !(v1 == v2);
 	}
@@ -96,7 +96,7 @@ namespace saki
 	* @details この関数の使用は推奨しない
 	*/
 	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator==(const saki::Transform<T1>& v1, const saki::Transform<T2>& v2)
+		constexpr bool operator==(const saki::transform<T1>& v1, const saki::transform<T2>& v2)
 	{
 		return v1.get_pos() == v2.get_pos() && v1.get_rot() == v2.get_rot() && v1.get_scale() == v2.get_scale();
 	}
@@ -105,7 +105,7 @@ namespace saki
 	* @details この関数の使用は推奨しない
 	*/
 	template<typename T1, typename T2>[[deprecated("type_mismatch")]]
-		constexpr bool operator!=(const saki::Transform<T1>& v1, const saki::Transform<T2>& v2)
+		constexpr bool operator!=(const saki::transform<T1>& v1, const saki::transform<T2>& v2)
 	{
 		return !(v1 == v2);
 	}

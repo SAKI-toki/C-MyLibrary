@@ -8,6 +8,7 @@
 #ifndef SAKI_TYPE_TRAITS_BEGIN_METHOD_2018_12_13
 #define SAKI_TYPE_TRAITS_BEGIN_METHOD_2018_12_13
 #include <type_traits>
+#include <utility>
 #include <iterator>
 namespace saki
 {

@@ -8,8 +8,10 @@
 #ifndef SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_2019_01_12
 #define SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_2019_01_12
 #include <type_traits>
+#include <utility>
 #include <saki/type_traits/can_begin_method.h>
 #include <saki/type_traits/can_end_method.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -21,11 +23,10 @@ namespace saki
 	class can_range_based_for
 	{
 		template<typename U,
-			typename std::enable_if_t<saki::can_begin_v<U> && saki::can_end_v<U>, std::nullptr_t> = nullptr>
+			typename saki::enable_if_nullptr_t<saki::can_begin_v<U> && saki::can_end_v<U>> = nullptr>
 			static constexpr std::true_type check_range_based_for(std::nullptr_t* u);
-		template<typename U,
-			typename std::enable_if_t<!saki::can_begin_v<U> || !saki::can_end_v<U>, std::nullptr_t> = nullptr>
-			static constexpr std::false_type check_range_based_for(std::nullptr_t* u);
+		template<typename U>
+			static constexpr std::false_type check_range_based_for(...);
 	public:
 		static constexpr auto value = decltype(check_range_based_for<T>(nullptr))::value;
 	};

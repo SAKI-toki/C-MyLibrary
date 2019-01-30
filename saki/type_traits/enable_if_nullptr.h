@@ -7,6 +7,7 @@
 #pragma once
 #ifndef SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_2019_01_19
 #define SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_2019_01_19
+#include <cstddef>
 
 namespace saki
 {

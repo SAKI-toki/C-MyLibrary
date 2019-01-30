@@ -8,6 +8,7 @@
 #ifndef SAKI_TYPE_TRAITS_CAN_OSTREAM_2019_01_22
 #define SAKI_TYPE_TRAITS_CAN_OSTREAM_2019_01_22
 #include <type_traits>
+#include <utility>
 #include <ostream>
 #include <saki/type_traits/remove_reference_const.h>
 namespace saki
@@ -20,7 +21,8 @@ namespace saki
 	{
 	private:
 		template<typename U>
-		static constexpr std::true_type ostream_check(saki::remove_reference_const_t<decltype(std::cout << (std::declval<U>()))>* u);
+		static constexpr std::true_type ostream_check(
+			saki::remove_reference_const_t<decltype(std::cout << (std::declval<U>()))>* u);
 		template<typename U>
 		static constexpr std::false_type ostream_check(...);
 	public:

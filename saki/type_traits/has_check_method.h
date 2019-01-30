@@ -8,6 +8,7 @@
 #ifndef SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_2018_12_23
 #define SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_2018_12_23
 #include <type_traits>
+#include <utility>
 
 namespace saki
 {

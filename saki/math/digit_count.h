@@ -25,7 +25,10 @@ namespace saki
 		typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 		constexpr size_t digit_count(T x)
 	{
-		if (saki::isnan(x) || saki::isinf(x))return 0;
+		if constexpr (std::is_floating_point_v<T>)
+		{
+			if (saki::isnan(x) || saki::isinf(x))return 0;
+		}
 		x = saki::abs(x);
 		if (x < 1)return 1;
 		size_t count = 0;

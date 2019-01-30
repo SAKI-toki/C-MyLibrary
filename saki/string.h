@@ -8,6 +8,7 @@
 #ifndef SAKI_STRING_2019_01_16
 #define SAKI_STRING_2019_01_16
 
-#include <saki/string/string.h>
+#include <saki/string/alias.h>
+#include <saki/string/to_string.h>
 
 #endif //SAKI_STRING_2019_01_16

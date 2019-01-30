@@ -8,6 +8,7 @@
 #define SAKI_TYPE_TRAITS_2019_01_15
 
 #include <saki/type_traits/can_begin_method.h>
+#include <saki/type_traits/can_binary_operator.h>
 #include <saki/type_traits/can_compare.h>
 #include <saki/type_traits/can_end_method.h>
 #include <saki/type_traits/can_ostream.h>

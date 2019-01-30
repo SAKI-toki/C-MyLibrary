@@ -9,6 +9,7 @@
 #define SAKI_COMPARE_IS_MIN_2019_01_21
 #include <type_traits>
 #include <saki/type_traits/can_compare/can_greater.h>
+#include <saki/type_traits/enable_if_nullptr.h>
 
 namespace saki
 {
@@ -36,12 +37,12 @@ namespace saki
 	* @brief 複数の比較を一度に行える(<=)
 	* @details if(x <= a && x <= b && x <= c)をis_min(x,a,b,c)と書ける
 	*/
-	template<typename First, typename ...Args>
-	constexpr auto is_min(const First& first, const Args& ...args)
-		->decltype(std::enable_if_t<
-			std::conjunction_v<std::is_convertible<First, Args>...>&&
-			std::conjunction_v<saki::can_greater<First>>
-			, bool>())
+	template<typename First, typename ...Args,
+		typename saki::enable_if_nullptr_t<
+		std::conjunction_v<std::is_convertible<First, Args>...>&&	//最初以外の型がFirstに変換可能か
+		std::conjunction_v<saki::can_greater<First>>				//Firstが>演算子が有効かどうか
+	> = nullptr>
+	constexpr bool is_min(const First& first, const Args& ...args)
 	{
 		return saki::impl::is_min_impl(first, (args)...);
 	}

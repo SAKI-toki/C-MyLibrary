@@ -22,8 +22,8 @@ namespace saki
 	* @details start>end‚Ìê‡A0‚ª•Ô‚éAZpŒ^‚Ì‚İ‘Î‰
 	*/
 	template<typename T = int, typename Func = saki::return_param,
-		typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr,
-		typename saki::enable_if_nullptr_t<std::is_invocable_v<Func, T>> = nullptr>
+		typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>&&
+		std::is_invocable_v<Func, T>> = nullptr>
 	constexpr T sigma(T start, const T& end, Func&& f = Func())
 	{
 		T sum = 0;

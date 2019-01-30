@@ -17,19 +17,19 @@ namespace saki
 	* @details クォータニオンは使用していません
 	*/
 	template<typename T>
-	class Transform
+	class transform
 	{
 		//位置
 		saki::vector3<T> position;
 		//回転
 		saki::vector3<T> rotation;
 		//拡縮
-		saki::vector3<T> scale;
+		saki::vector3<T> scale = saki::vector3<T>{ static_cast<T>(1),static_cast<T>(1),static_cast<T>(1) };
 	public:
 		/**
 		* @brief 引数なしコンストラクタ
 		*/
-		constexpr Transform()
+		constexpr transform()
 		{}
 		/**
 		* @brief 各値を引数にとるコンストラクタ
@@ -37,14 +37,14 @@ namespace saki
 		* @param rot 回転
 		* @param sca 拡縮
 		*/
-		constexpr Transform(const saki::vector3<T>& pos, const saki::vector3<T> rot, const saki::vector3<T>sca) :
+		constexpr transform(const saki::vector3<T>& pos, const saki::vector3<T> rot, const saki::vector3<T>sca) :
 			position(pos), rotation(rot), scale(sca)
 		{}
 		//コピームーブはデフォルトを使用
-		Transform(const Transform<T>&) = default;
-		Transform<T>& operator=(const Transform<T>&) = default;
-		Transform(Transform<T>&&) = default;
-		Transform<T>& operator=(Transform<T>&&) = default;
+		transform(const transform<T>&) = default;
+		transform<T>& operator=(const transform<T>&) = default;
+		transform(transform<T>&&) = default;
+		transform<T>& operator=(transform<T>&&) = default;
 
 		/**
 		* @brief 移動
@@ -152,7 +152,7 @@ namespace saki
 		* @brief +=演算子
 		*/
 		template<typename U = T>
-		constexpr auto operator+=(const saki::Transform<U>& other)
+		constexpr auto operator+=(const saki::transform<U>& other)
 		{
 			*this = *this + other;
 			return *this;
@@ -161,7 +161,7 @@ namespace saki
 		* @brief -=演算子
 		*/
 		template<typename U = T>
-		constexpr auto operator-=(const saki::Transform<U>& other)
+		constexpr auto operator-=(const saki::transform<U>& other)
 		{
 			*this = *this - other;
 			return *this;
@@ -187,16 +187,16 @@ namespace saki
 		/**
 		* @brief 単項+演算子
 		*/
-		constexpr saki::Transform<T> operator+()const
+		constexpr saki::transform<T> operator+()const
 		{
 			return *this;
 		}
 		/**
 		* @brief 単項-演算子
 		*/
-		constexpr saki::Transform<T> operator-()const
+		constexpr saki::transform<T> operator-()const
 		{
-			return saki::Transform<T>(this->position * (-1), this->rotation * (-1), this->scale * (-1));
+			return saki::transform<T>(this->position * (-1), this->rotation * (-1), this->scale * (-1));
 		}
 	};
 }

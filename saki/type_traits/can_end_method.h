@@ -8,6 +8,7 @@
 #ifndef SAKI_TYPE_TRAITS_CAN_END_METHOD_2019_01_12
 #define SAKI_TYPE_TRAITS_CAN_END_METHOD_2019_01_12
 #include <type_traits>
+#include <utility>
 #include <iterator>
 namespace saki
 {

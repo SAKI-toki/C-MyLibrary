@@ -17,6 +17,7 @@ namespace saki
 	{
 		template<typename T1, typename T2>
 		constexpr auto operator()(const T1& t1, const T2& t2)const
+			->decltype(t1 * t2)
 		{
 			return t1 * t2;
 		}

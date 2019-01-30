@@ -8,6 +8,7 @@
 #ifndef SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_2018_12_23
 #define SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_2018_12_23
 #include <type_traits>
+#include <utility>
 #include <saki/type_traits/remove_reference_const.h>
 
 namespace saki
