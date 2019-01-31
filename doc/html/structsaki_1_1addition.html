@@ -80,15 +80,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a8bdb3c15f72b4d0f48967fdaa1472049"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a8bdb3c15f72b4d0f48967fdaa1472049"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsaki_1_1addition.html#a8bdb3c15f72b4d0f48967fdaa1472049">operator()</a> (const T1 &amp;t1, const T2 &amp;t2) const</td></tr>
-<tr class="separator:a8bdb3c15f72b4d0f48967fdaa1472049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff50aceb91ac6f0e821ee8d408a1e58"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a9ff50aceb91ac6f0e821ee8d408a1e58"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structsaki_1_1addition.html#a9ff50aceb91ac6f0e821ee8d408a1e58">operator()</a> (const T1 &amp;t1, const T2 &amp;t2) const -&gt; decltype(t1+t2)</td></tr>
+<tr class="separator:a9ff50aceb91ac6f0e821ee8d408a1e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>足し算のconstexpr対応した関数オブジェクト </p>
 </div><h2 class="groupheader">関数詳解</h2>
-<a id="a8bdb3c15f72b4d0f48967fdaa1472049"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bdb3c15f72b4d0f48967fdaa1472049">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a9ff50aceb91ac6f0e821ee8d408a1e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff50aceb91ac6f0e821ee8d408a1e58">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,7 +113,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td> const -&gt; decltype(t1 + t2)
+		</td>
         </tr>
       </table>
   </td>

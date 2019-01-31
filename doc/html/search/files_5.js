@@ -3,5 +3,7 @@ var searchData=
   ['has_5fcheck_5fmethod_2eh',['has_check_method.h',['../has__check__method_8h.html',1,'']]],
   ['has_5fvariable_2eh',['has_variable.h',['../has__variable_8h.html',1,'']]],
   ['has_5fx_2eh',['has_x.h',['../has__x_8h.html',1,'']]],
+  ['has_5fy_2eh',['has_y.h',['../has__y_8h.html',1,'']]],
+  ['has_5fz_2eh',['has_z.h',['../has__z_8h.html',1,'']]],
   ['hypot_2eh',['hypot.h',['../hypot_8h.html',1,'']]]
 ];

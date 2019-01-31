@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/type_traits/can_compare/can_equal.h ファイル</title>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/type_traits/can_binary_operator/can_equal.h ファイル</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_cdc616a137ff300f702e182e9583e723.html">type_traits</a></li><li class="navelem"><a class="el" href="dir_7c3a8f4f33e4adf2805a27aad8700727.html">can_compare</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_cdc616a137ff300f702e182e9583e723.html">type_traits</a></li><li class="navelem"><a class="el" href="dir_6b25376b0b9eff73aa745833a0e2a690.html">can_binary_operator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,18 +73,21 @@ $(function() {
 <div class="title">can_equal.h ファイル</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>指定した型が(==)演算子を使用できるかどうか判定するメタ関数  
-<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;<a class="el" href="remove__reference__const_8h_source.html">saki/type_traits/remove_reference_const.h</a>&gt;</code><br />
 </div>
 <p><a href="can__equal_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsaki_1_1can__equal.html">saki::can_equal&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">イコール比較できるかどうかを判定する構造体(==)  <a href="structsaki_1_1can__equal.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsaki_1_1can__same__equal.html">saki::can_same_equal&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入演算子を定義しているかどうかを判定する構造体(同じ型同士)  <a href="structsaki_1_1can__same__equal.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsaki_1_1can__different__equal.html">saki::can_different_equal&lt; T1, T2 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入演算子を定義しているかどうかを判定する構造体(違う型同士)  <a href="structsaki_1_1can__different__equal.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsaki_1_1can__different__equal_3_01_t_00_01_t_01_4.html">saki::can_different_equal&lt; T, T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -94,22 +97,18 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a8774324274bced3d112c20dbec5cf8d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="can__equal_8h.html#a8774324274bced3d112c20dbec5cf8d5">SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_EQUAL_2019_01_22</a></td></tr>
-<tr class="separator:a8774324274bced3d112c20dbec5cf8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835c6940f8c7ef46dc16de74d7544246"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="can__equal_8h.html#a835c6940f8c7ef46dc16de74d7544246">SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_2019_01_24</a></td></tr>
+<tr class="separator:a835c6940f8c7ef46dc16de74d7544246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>指定した型が(==)演算子を使用できるかどうか判定するメタ関数 </p>
-<dl class="section author"><dt>著者</dt><dd>石山 悠 </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2019/01/22 </dd></dl>
-</div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a8774324274bced3d112c20dbec5cf8d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8774324274bced3d112c20dbec5cf8d5">&#9670;&nbsp;</a></span>SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_EQUAL_2019_01_22</h2>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a835c6940f8c7ef46dc16de74d7544246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835c6940f8c7ef46dc16de74d7544246">&#9670;&nbsp;</a></span>SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_2019_01_24</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_EQUAL_2019_01_22</td>
+          <td class="memname">#define SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_2019_01_24</td>
         </tr>
       </table>
 </div><div class="memdoc">

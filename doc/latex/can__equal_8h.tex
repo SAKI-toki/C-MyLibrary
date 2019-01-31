@@ -1,17 +1,17 @@
-\hypertarget{can__equal_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal.h ファイル}
-\label{can__equal_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal.\+h}}
-
-
-指定した型が(==)演算子を使用できるかどうか判定するメタ関数  
-
-
+\hypertarget{can__equal_8h}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+binary\+\_\+operator/can\+\_\+equal.h ファイル}
+\label{can__equal_8h}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+binary\+\_\+operator/can\+\_\+equal.\+h@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+binary\+\_\+operator/can\+\_\+equal.\+h}}
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include $<$saki/type\+\_\+traits/remove\+\_\+reference\+\_\+const.\+h$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structsaki_1_1can__equal}{saki\+::can\+\_\+equal$<$ T $>$}}
-\begin{DoxyCompactList}\small\item\em イコール比較できるかどうかを判定する構造体(==) \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{structsaki_1_1can__same__equal}{saki\+::can\+\_\+same\+\_\+equal$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 代入演算子を定義しているかどうかを判定する構造体(同じ型同士) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsaki_1_1can__different__equal}{saki\+::can\+\_\+different\+\_\+equal$<$ T1, T2 $>$}}
+\begin{DoxyCompactList}\small\item\em 代入演算子を定義しているかどうかを判定する構造体(違う型同士) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsaki_1_1can__different__equal_3_01_t_00_01_t_01_4}{saki\+::can\+\_\+different\+\_\+equal$<$ T, T $>$}}
+\end{DoxyCompactItemize}
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,25 +20,14 @@ struct \mbox{\hyperlink{structsaki_1_1can__equal}{saki\+::can\+\_\+equal$<$ T $>
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{can__equal_8h_a8774324274bced3d112c20dbec5cf8d5}{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22}}
+\#define \mbox{\hyperlink{can__equal_8h_a835c6940f8c7ef46dc16de74d7544246}{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24}}
 \end{DoxyCompactItemize}
 
 
-\subsection{詳解}
-指定した型が(==)演算子を使用できるかどうか判定するメタ関数 
-
-\begin{DoxyAuthor}{著者}
-石山 悠 
-\end{DoxyAuthor}
-\begin{DoxyDate}{日付}
-2019/01/22 
-\end{DoxyDate}
-
-
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{can__equal_8h_a8774324274bced3d112c20dbec5cf8d5}\label{can__equal_8h_a8774324274bced3d112c20dbec5cf8d5}} 
-\index{can\+\_\+equal.\+h@{can\+\_\+equal.\+h}!S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22}}
-\index{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22}!can\+\_\+equal.\+h@{can\+\_\+equal.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22}{SAKI\_TYPE\_TRAITS\_CAN\_COMPARE\_CAN\_EQUAL\_2019\_01\_22}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+22}
+\mbox{\Hypertarget{can__equal_8h_a835c6940f8c7ef46dc16de74d7544246}\label{can__equal_8h_a835c6940f8c7ef46dc16de74d7544246}} 
+\index{can\+\_\+equal.\+h@{can\+\_\+equal.\+h}!S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24}}
+\index{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24}!can\+\_\+equal.\+h@{can\+\_\+equal.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24}{SAKI\_TYPE\_TRAITS\_CAN\_BINARY\_OPERATOR\_CAN\_EQUAL\_2019\_01\_24}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+A\+I\+T\+S\+\_\+\+C\+A\+N\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+O\+R\+\_\+\+C\+A\+N\+\_\+\+E\+Q\+U\+A\+L\+\_\+2019\+\_\+01\+\_\+24}
 

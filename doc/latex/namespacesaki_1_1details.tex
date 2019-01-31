@@ -28,10 +28,10 @@ class \mbox{\hyperlink{classsaki_1_1details_1_1reverse__iterator__base}{reverse\
 \begin{DoxyCompactList}\small\item\em 行列同士の演算(+と-\/) \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_aa3d3214e16ce99b6f4aca7d61d41077f}{matrix\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ T1 $>$ \&m, const T2 \&scalar, const Func \&f)
 \begin{DoxyCompactList}\small\item\em 行列とスカラの演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_ac8ab9fdbf09089a0272297c3be7c51d4}{transform\+\_\+transform\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T2 $>$ \&v2, Func \&\&f)
-\begin{DoxyCompactList}\small\item\em Transform同士の演算 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a2f5694f4bcf7f45e946384285562521e}{transform\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
-\begin{DoxyCompactList}\small\item\em Transformとスカラの演算 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a9cc45efebcefc4c153ed6ddd63de93f7}{transform\+\_\+transform\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1transform}{saki\+::transform}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1transform}{saki\+::transform}}$<$ T2 $>$ \&v2, Func \&\&f)
+\begin{DoxyCompactList}\small\item\em transform同士の演算 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a28e351f8fafd551dda6ba3cb32e6d0af}{transform\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1transform}{saki\+::transform}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
+\begin{DoxyCompactList}\small\item\em transformとスカラの演算 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a83d5020a51b57f3b8f8166e785861cc5}{vector2\+\_\+vector2\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T2 $>$ \&v2, Func \&\&f)
 \begin{DoxyCompactList}\small\item\em ベクトル同士の演算 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a02e93149670af3f28e74fcb7dbcf4fa9}{vector2\+\_\+scalar\+\_\+some\+\_\+operator}} (const \mbox{\hyperlink{classsaki_1_1vector2}{vector2}}$<$ T1 $>$ \&v, const T2 \&scalar, Func \&\&f)
@@ -135,27 +135,27 @@ constexpr T1 saki\+::details\+::pow\+\_\+n (\begin{DoxyParamCaption}\item[{T1}]{
 
 powから派生 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_a2f5694f4bcf7f45e946384285562521e}\label{namespacesaki_1_1details_a2f5694f4bcf7f45e946384285562521e}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a28e351f8fafd551dda6ba3cb32e6d0af}\label{namespacesaki_1_1details_a28e351f8fafd551dda6ba3cb32e6d0af}} 
 \index{saki\+::details@{saki\+::details}!transform\+\_\+scalar\+\_\+some\+\_\+operator@{transform\+\_\+scalar\+\_\+some\+\_\+operator}}
 \index{transform\+\_\+scalar\+\_\+some\+\_\+operator@{transform\+\_\+scalar\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{transform\+\_\+scalar\+\_\+some\+\_\+operator()}{transform\_scalar\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::transform\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::transform\+\_\+scalar\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1transform}{saki\+::transform}}$<$ T1 $>$ \&}]{v,  }\item[{const T2 \&}]{scalar,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
-Transformとスカラの演算 
+transformとスカラの演算 
 
-\mbox{\Hypertarget{namespacesaki_1_1details_ac8ab9fdbf09089a0272297c3be7c51d4}\label{namespacesaki_1_1details_ac8ab9fdbf09089a0272297c3be7c51d4}} 
+\mbox{\Hypertarget{namespacesaki_1_1details_a9cc45efebcefc4c153ed6ddd63de93f7}\label{namespacesaki_1_1details_a9cc45efebcefc4c153ed6ddd63de93f7}} 
 \index{saki\+::details@{saki\+::details}!transform\+\_\+transform\+\_\+some\+\_\+operator@{transform\+\_\+transform\+\_\+some\+\_\+operator}}
 \index{transform\+\_\+transform\+\_\+some\+\_\+operator@{transform\+\_\+transform\+\_\+some\+\_\+operator}!saki\+::details@{saki\+::details}}
 \subsubsection{\texorpdfstring{transform\+\_\+transform\+\_\+some\+\_\+operator()}{transform\_transform\_some\_operator()}}
 {\footnotesize\ttfamily template$<$typename T1 , typename T2 , typename Func $>$ \\
-constexpr auto saki\+::details\+::transform\+\_\+transform\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1_transform}{saki\+::\+Transform}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
+constexpr auto saki\+::details\+::transform\+\_\+transform\+\_\+some\+\_\+operator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1transform}{saki\+::transform}}$<$ T1 $>$ \&}]{v1,  }\item[{const \mbox{\hyperlink{classsaki_1_1transform}{saki\+::transform}}$<$ T2 $>$ \&}]{v2,  }\item[{Func \&\&}]{f }\end{DoxyParamCaption})}
 
 
 
-Transform同士の演算 
+transform同士の演算 
 
 \mbox{\Hypertarget{namespacesaki_1_1details_a02e93149670af3f28e74fcb7dbcf4fa9}\label{namespacesaki_1_1details_a02e93149670af3f28e74fcb7dbcf4fa9}} 
 \index{saki\+::details@{saki\+::details}!vector2\+\_\+scalar\+\_\+some\+\_\+operator@{vector2\+\_\+scalar\+\_\+some\+\_\+operator}}

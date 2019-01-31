@@ -12,7 +12,7 @@ var searchData=
   ['exp_2eh',['exp.h',['../exp_8h.html',1,'']]],
   ['exp2',['exp2',['../namespacesaki.html#a2e2d4ba08357bbab05c97ae261c80343',1,'saki::exp2(T x)'],['../namespacesaki.html#a35e9ce74a5f65c8d38a4901bf513ac1e',1,'saki::exp2(T x)']]],
   ['exp2_2eh',['exp2.h',['../exp2_8h.html',1,'']]],
-  ['expantion',['expantion',['../classsaki_1_1_transform.html#a8327df1cfe852938414010ead1806ce5',1,'saki::Transform::expantion(const saki::vector3&lt; T &gt; &amp;sca)'],['../classsaki_1_1_transform.html#a33696821bc9d53d221aaeb6927fe6f64',1,'saki::Transform::expantion(const T &amp;x, const T &amp;y, const T &amp;z)']]],
+  ['expantion',['expantion',['../classsaki_1_1transform.html#acb1e4cc039b689a97ed4098f566c7907',1,'saki::transform::expantion(const saki::vector3&lt; T &gt; &amp;sca)'],['../classsaki_1_1transform.html#ab6c97d4f30cc45b1dc1d200ce7a0c483',1,'saki::transform::expantion(const T &amp;x, const T &amp;y, const T &amp;z)']]],
   ['expm1',['expm1',['../namespacesaki.html#aabb63a6251c75f6f1e76a58f5438de69',1,'saki::expm1(T x)'],['../namespacesaki.html#ae4490f448ed3d82712306c54d6821788',1,'saki::expm1(T x)']]],
   ['expm1_2eh',['expm1.h',['../expm1_8h.html',1,'']]]
 ];

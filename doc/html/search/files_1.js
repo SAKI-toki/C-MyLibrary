@@ -1,9 +1,11 @@
 var searchData=
 [
   ['can_5fbegin_5fmethod_2eh',['can_begin_method.h',['../can__begin__method_8h.html',1,'']]],
+  ['can_5fbinary_5foperator_2eh',['can_binary_operator.h',['../can__binary__operator_8h.html',1,'']]],
   ['can_5fcompare_2eh',['can_compare.h',['../can__compare_8h.html',1,'']]],
   ['can_5fend_5fmethod_2eh',['can_end_method.h',['../can__end__method_8h.html',1,'']]],
   ['can_5fequal_2eh',['can_equal.h',['../can__equal_8h.html',1,'']]],
+  ['can_5fequal_5fequal_2eh',['can_equal_equal.h',['../can__equal__equal_8h.html',1,'']]],
   ['can_5fgreater_2eh',['can_greater.h',['../can__greater_8h.html',1,'']]],
   ['can_5fgreater_5for_5fequal_2eh',['can_greater_or_equal.h',['../can__greater__or__equal_8h.html',1,'']]],
   ['can_5fless_2eh',['can_less.h',['../can__less_8h.html',1,'']]],

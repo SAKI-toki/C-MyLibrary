@@ -8,6 +8,7 @@ var searchData=
   ['sinh_2eh',['sinh.h',['../sinh_8h.html',1,'']]],
   ['split_2eh',['split.h',['../split_2split_8h.html',1,'(大域名前空間)'],['../split_8h.html',1,'(大域名前空間)']]],
   ['sqrt_2eh',['sqrt.h',['../sqrt_8h.html',1,'']]],
-  ['string_2eh',['string.h',['../string_2string_8h.html',1,'(大域名前空間)'],['../string_8h.html',1,'(大域名前空間)']]],
+  ['string_2eh',['string.h',['../string_8h.html',1,'']]],
+  ['string_5fbase_2eh',['string_base.h',['../string__base_8h.html',1,'']]],
   ['subtraction_2eh',['subtraction.h',['../subtraction_8h.html',1,'']]]
 ];

@@ -78,6 +78,7 @@ $(function() {
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;<a class="el" href="can__less_8h_source.html">saki/type_traits/can_compare/can_less.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8h_source.html">saki/type_traits/enable_if_nullptr.h</a>&gt;</code><br />
 </div>
 <p><a href="is__max_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -103,10 +104,10 @@ $(function() {
 <tr class="memitem:ad5f6398b5affbb107eb4e49c35e36e6a"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#ad5f6398b5affbb107eb4e49c35e36e6a">saki::impl::is_max_impl</a> (const First &amp;first, Second second, const Args &amp;...args)</td></tr>
 <tr class="memdesc:ad5f6398b5affbb107eb4e49c35e36e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_maxの実装部  <a href="namespacesaki_1_1impl.html#ad5f6398b5affbb107eb4e49c35e36e6a">[詳解]</a><br /></td></tr>
 <tr class="separator:ad5f6398b5affbb107eb4e49c35e36e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fe50c96fb27e8f05d202e4635b582a2"><td class="memTemplParams" colspan="2">template&lt;typename First , typename ... Args&gt; </td></tr>
-<tr class="memitem:a0fe50c96fb27e8f05d202e4635b582a2"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0fe50c96fb27e8f05d202e4635b582a2">saki::is_max</a> (const First &amp;first, const Args &amp;...args) -&gt; decltype(std::enable_if_t&lt; std::conjunction_v&lt; std::is_convertible&lt; Args, First &gt;... &gt; &amp;&amp;std::conjunction_v&lt; <a class="el" href="structsaki_1_1can__less.html">saki::can_less</a>&lt; First &gt;&gt;, bool &gt;())</td></tr>
-<tr class="memdesc:a0fe50c96fb27e8f05d202e4635b582a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える(&gt;=)  <a href="namespacesaki.html#a0fe50c96fb27e8f05d202e4635b582a2">[詳解]</a><br /></td></tr>
-<tr class="separator:a0fe50c96fb27e8f05d202e4635b582a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b234a435a0e21df1507c4786b975b8"><td class="memTemplParams" colspan="2">template&lt;typename First , typename ... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; Args, First &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_less&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a48b234a435a0e21df1507c4786b975b8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a48b234a435a0e21df1507c4786b975b8">saki::is_max</a> (const First &amp;first, const Args &amp;...args)</td></tr>
+<tr class="memdesc:a48b234a435a0e21df1507c4786b975b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える(&gt;=)  <a href="namespacesaki.html#a48b234a435a0e21df1507c4786b975b8">[詳解]</a><br /></td></tr>
+<tr class="separator:a48b234a435a0e21df1507c4786b975b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>複数の比較を一度に行う(&gt;=) </p>

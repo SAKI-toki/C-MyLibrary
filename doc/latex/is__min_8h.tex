@@ -7,6 +7,7 @@
 
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
 {\ttfamily \#include $<$saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+greater.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,7 +27,7 @@
 \begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、trueを返す \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a97640b18d57a2a6ea4746acc3cd62bbb}{saki\+::impl\+::is\+\_\+min\+\_\+impl}} (const First \&first, Second second, const Args \&...args)
 \begin{DoxyCompactList}\small\item\em is\+\_\+minの実装部 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a223be67dabf8c1215122d80d0cc811c4}{saki\+::is\+\_\+min}} (const First \&first, const Args \&...args) -\/$>$ decltype(std\+::enable\+\_\+if\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ \mbox{\hyperlink{structsaki_1_1can__greater}{saki\+::can\+\_\+greater}}$<$ First $>$$>$, bool $>$())
+{\footnotesize template$<$typename First , typename ... Args, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ saki\+::can\+\_\+greater$<$ First $>$$>$ $>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a7780d542366428c85bfc48fdf43f54ee}{saki\+::is\+\_\+min}} (const First \&first, const Args \&...args)
 \begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える($<$=) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

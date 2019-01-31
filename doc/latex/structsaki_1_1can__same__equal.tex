@@ -1,0 +1,43 @@
+\hypertarget{structsaki_1_1can__same__equal}{}\section{saki\+:\+:can\+\_\+same\+\_\+equal$<$ T $>$ 構造体テンプレート}
+\label{structsaki_1_1can__same__equal}\index{saki\+::can\+\_\+same\+\_\+equal$<$ T $>$@{saki\+::can\+\_\+same\+\_\+equal$<$ T $>$}}
+
+
+代入演算子を定義しているかどうかを判定する構造体(同じ型同士)  
+
+
+
+
+{\ttfamily \#include $<$can\+\_\+equal.\+h$>$}
+
+saki\+:\+:can\+\_\+same\+\_\+equal$<$ T $>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structsaki_1_1can__same__equal}
+\end{center}
+\end{figure}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{structsaki_1_1can__same__equal_a7a0e40058e8b1b27113f7fee26fec91f}{value}} = decltype(same\+\_\+equal\+\_\+check$<$T$>$(nullptr))\+::value
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+struct saki\+::can\+\_\+same\+\_\+equal$<$ T $>$}
+
+代入演算子を定義しているかどうかを判定する構造体(同じ型同士) 
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{structsaki_1_1can__same__equal_a7a0e40058e8b1b27113f7fee26fec91f}\label{structsaki_1_1can__same__equal_a7a0e40058e8b1b27113f7fee26fec91f}} 
+\index{saki\+::can\+\_\+same\+\_\+equal@{saki\+::can\+\_\+same\+\_\+equal}!value@{value}}
+\index{value@{value}!saki\+::can\+\_\+same\+\_\+equal@{saki\+::can\+\_\+same\+\_\+equal}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr auto \mbox{\hyperlink{structsaki_1_1can__same__equal}{saki\+::can\+\_\+same\+\_\+equal}}$<$ T $>$\+::value = decltype(same\+\_\+equal\+\_\+check$<$T$>$(nullptr))\+::value\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/type\+\_\+traits/can\+\_\+binary\+\_\+operator/\mbox{\hyperlink{can__equal_8h}{can\+\_\+equal.\+h}}\end{DoxyCompactItemize}

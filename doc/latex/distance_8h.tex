@@ -5,7 +5,12 @@
 2点間の距離を測る  
 
 
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
 {\ttfamily \#include $<$saki/math/hypot.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/has\+\_\+variable/has\+\_\+x.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/has\+\_\+variable/has\+\_\+y.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/has\+\_\+variable/has\+\_\+z.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,18 +19,18 @@
 \subsection*{マクロ定義}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{distance_8h_a4f053abbd9522f75171c29303deda803}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06}}
+\#define \mbox{\hyperlink{distance_8h_a9f104f4d7c7c872b8f121fc6389c230a}{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22}}
 \end{DoxyCompactItemize}
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a3fc5f53a2ad96fd68998eb3cc69b7b14}{saki\+::distance\+XY}} (const T1 \&v1, const T2 \&v2)
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ saki\+::has\+\_\+x\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+x\+\_\+v$<$ T2 $>$ \&\&saki\+::has\+\_\+y\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+y\+\_\+v$<$ T2 $>$ $>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae6eddecfb6a747238185b21c8ee1cd60}{saki\+::distance\+XY}} (const T1 \&v1, const T2 \&v2)
 \begin{DoxyCompactList}\small\item\em 二点間の距離(\+X\+Y) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a00cde91612dbac84d9720bf92a8ab9c6}{saki\+::distance\+XZ}} (const T1 \&v1, const T2 \&v2)
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ saki\+::has\+\_\+x\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+x\+\_\+v$<$ T2 $>$ \&\&saki\+::has\+\_\+z\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+z\+\_\+v$<$ T2 $>$ $>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a6bd1999d77d0ba6f6101747d82593c66}{saki\+::distance\+XZ}} (const T1 \&v1, const T2 \&v2)
 \begin{DoxyCompactList}\small\item\em 二点間の距離(\+X\+Z) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a59a95407d1eab774038224739436170d}{saki\+::distance\+YZ}} (const T1 \&v1, const T2 \&v2)
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ saki\+::has\+\_\+y\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+y\+\_\+v$<$ T2 $>$ \&\&saki\+::has\+\_\+z\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+z\+\_\+v$<$ T2 $>$ $>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a708a45bd2134a3a276e7acb2566eb8c1}{saki\+::distance\+YZ}} (const T1 \&v1, const T2 \&v2)
 \begin{DoxyCompactList}\small\item\em 二点間の距離(\+Y\+Z) \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a456ead1dd3345def8268b21794ffde19}{saki\+::distance\+X\+YZ}} (const T1 \&v1, const T2 \&v2)
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ saki\+::has\+\_\+x\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+x\+\_\+v$<$ T2 $>$ \&\&saki\+::has\+\_\+y\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+y\+\_\+v$<$ T2 $>$ \&\&saki\+::has\+\_\+z\+\_\+v$<$ T1 $>$ \&\&saki\+::has\+\_\+z\+\_\+v$<$ T2 $>$ $>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_af202425b916b22c2b3a26731689d5c21}{saki\+::distance\+X\+YZ}} (const T1 \&v1, const T2 \&v2)
 \begin{DoxyCompactList}\small\item\em 二点間の距離(\+X\+Y\+Z) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -36,14 +41,14 @@
 石山 悠 
 \end{DoxyAuthor}
 \begin{DoxyDate}{日付}
-2018/12/06 
+2019/01/22 
 \end{DoxyDate}
 
 
 \subsection{マクロ定義詳解}
-\mbox{\Hypertarget{distance_8h_a4f053abbd9522f75171c29303deda803}\label{distance_8h_a4f053abbd9522f75171c29303deda803}} 
-\index{distance.\+h@{distance.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06}}
-\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06}!distance.\+h@{distance.\+h}}
-\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06}{SAKI\_MATH\_DISTANCE\_2018\_12\_06}}
-{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2018\+\_\+12\+\_\+06}
+\mbox{\Hypertarget{distance_8h_a9f104f4d7c7c872b8f121fc6389c230a}\label{distance_8h_a9f104f4d7c7c872b8f121fc6389c230a}} 
+\index{distance.\+h@{distance.\+h}!S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22}}
+\index{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22@{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22}!distance.\+h@{distance.\+h}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22}{SAKI\_MATH\_DISTANCE\_2019\_01\_22}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+M\+A\+T\+H\+\_\+\+D\+I\+S\+T\+A\+N\+C\+E\+\_\+2019\+\_\+01\+\_\+22}
 

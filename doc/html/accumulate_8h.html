@@ -96,10 +96,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aeb83577f2e85117be5645c0cb499a1fc"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename BinaryOperation  = saki::addition, typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt;&gt;  = nullptr, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, typename saki::enable_if_nullptr_t&lt; std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt;&gt;  = nullptr&gt; </td></tr>
-<tr class="memitem:aeb83577f2e85117be5645c0cb499a1fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aeb83577f2e85117be5645c0cb499a1fc">saki::accumulate</a> (const Container &amp;con, T init=0, BinaryOperation &amp;&amp;binary_op=<a class="el" href="structsaki_1_1addition.html">saki::addition</a>())</td></tr>
-<tr class="memdesc:aeb83577f2e85117be5645c0cb499a1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="namespacesaki.html#aeb83577f2e85117be5645c0cb499a1fc">[詳解]</a><br /></td></tr>
-<tr class="separator:aeb83577f2e85117be5645c0cb499a1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename BinaryOperation  = saki::addition, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt; &amp;&amp;std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a6f2ea69ef5e31c8004ba36bb10384333">saki::accumulate</a> (const Container &amp;con, T init=0, BinaryOperation &amp;&amp;binary_op=<a class="el" href="structsaki_1_1addition.html">saki::addition</a>())</td></tr>
+<tr class="memdesc:a6f2ea69ef5e31c8004ba36bb10384333"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="namespacesaki.html#a6f2ea69ef5e31c8004ba36bb10384333">[詳解]</a><br /></td></tr>
+<tr class="separator:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>既存のaccumulate関数の簡略化 </p>

@@ -77,7 +77,7 @@ $(function() {
 <p>複数の比較を一度に行う(==)  
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;<a class="el" href="can__equal_8h_source.html">saki/type_traits/can_compare/can_equal.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="can__equal__equal_8h_source.html">saki/type_traits/can_compare/can_equal_equal.h</a>&gt;</code><br />
 </div>
 <p><a href="multi__equal_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -99,14 +99,14 @@ $(function() {
 <tr class="memitem:ac271639854025a923addee4879780f96"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#ac271639854025a923addee4879780f96">saki::impl::multi_equal_impl</a> (const T &amp;)</td></tr>
 <tr class="memdesc:ac271639854025a923addee4879780f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較するものがない(なくなった)場合、falseを返す  <a href="namespacesaki_1_1impl.html#ac271639854025a923addee4879780f96">[詳解]</a><br /></td></tr>
 <tr class="separator:ac271639854025a923addee4879780f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0543c20cbd7373bceba87c2af5b3de"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename ... Args&gt; </td></tr>
-<tr class="memitem:afd0543c20cbd7373bceba87c2af5b3de"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#afd0543c20cbd7373bceba87c2af5b3de">saki::impl::multi_equal_impl</a> (const First &amp;first, const Second &amp;second, const Args &amp;...args)</td></tr>
-<tr class="memdesc:afd0543c20cbd7373bceba87c2af5b3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">multi_equalの実装部  <a href="namespacesaki_1_1impl.html#afd0543c20cbd7373bceba87c2af5b3de">[詳解]</a><br /></td></tr>
-<tr class="separator:afd0543c20cbd7373bceba87c2af5b3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7f1252e3ed939885a3b4c4b09943b8"><td class="memTemplParams" colspan="2">template&lt;typename First , typename ... Args&gt; </td></tr>
-<tr class="memitem:a9f7f1252e3ed939885a3b4c4b09943b8"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9f7f1252e3ed939885a3b4c4b09943b8">saki::multi_equal</a> (const First &amp;first, const Args &amp;...args) -&gt; decltype(std::enable_if_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; <a class="el" href="structsaki_1_1can__equal.html">saki::can_equal</a>&lt; First &gt;&gt;, bool &gt;())</td></tr>
-<tr class="memdesc:a9f7f1252e3ed939885a3b4c4b09943b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える  <a href="namespacesaki.html#a9f7f1252e3ed939885a3b4c4b09943b8">[詳解]</a><br /></td></tr>
-<tr class="separator:a9f7f1252e3ed939885a3b4c4b09943b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c9f8730634f6b621bca7d8dc73e43d"><td class="memTemplParams" colspan="2">template&lt;typename First , typename Second , typename ... Args&gt; </td></tr>
+<tr class="memitem:a45c9f8730634f6b621bca7d8dc73e43d"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1impl.html#a45c9f8730634f6b621bca7d8dc73e43d">saki::impl::multi_equal_impl</a> (const First &amp;first, Second second, const Args &amp;...args)</td></tr>
+<tr class="memdesc:a45c9f8730634f6b621bca7d8dc73e43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">multi_equalの実装部  <a href="namespacesaki_1_1impl.html#a45c9f8730634f6b621bca7d8dc73e43d">[詳解]</a><br /></td></tr>
+<tr class="separator:a45c9f8730634f6b621bca7d8dc73e43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15664a63445d3539b40b774e556a45b"><td class="memTemplParams" colspan="2">template&lt;typename First , typename ... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_equal_equal&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa15664a63445d3539b40b774e556a45b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa15664a63445d3539b40b774e556a45b">saki::multi_equal</a> (const First &amp;first, const Args &amp;...args)</td></tr>
+<tr class="memdesc:aa15664a63445d3539b40b774e556a45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える  <a href="namespacesaki.html#aa15664a63445d3539b40b774e556a45b">[詳解]</a><br /></td></tr>
+<tr class="separator:aa15664a63445d3539b40b774e556a45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>複数の比較を一度に行う(==) </p>

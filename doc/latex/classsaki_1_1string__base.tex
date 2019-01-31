@@ -1,5 +1,5 @@
-\hypertarget{classsaki_1_1string__base}{}\section{saki\+:\+:string\+\_\+base$<$ T, N $>$ クラステンプレート}
-\label{classsaki_1_1string__base}\index{saki\+::string\+\_\+base$<$ T, N $>$@{saki\+::string\+\_\+base$<$ T, N $>$}}
+\hypertarget{classsaki_1_1string__base}{}\section{saki\+:\+:string\+\_\+base$<$ T, Size $>$ クラステンプレート}
+\label{classsaki_1_1string__base}\index{saki\+::string\+\_\+base$<$ T, Size $>$@{saki\+::string\+\_\+base$<$ T, Size $>$}}
 
 
 コンパイル時固定長string\+\_\+baseクラス  
@@ -7,61 +7,130 @@
 
 
 
-{\ttfamily \#include $<$string.\+h$>$}
+{\ttfamily \#include $<$string\+\_\+base.\+h$>$}
 
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
 \item 
-constexpr \mbox{\hyperlink{classsaki_1_1string__base_a5301a26e787034be1365a23964a267fd}{string\+\_\+base}} ()
+constexpr \mbox{\hyperlink{classsaki_1_1string__base_a17d98d62506a1f6eb04f210498bcaba0}{string\+\_\+base}} ()
+\begin{DoxyCompactList}\small\item\em 引数なしコンストラクタ \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1string__base_add4f032c858fa8e9f93ab0ab810488d2}{string\+\_\+base}} (const\+\_\+pointer \+\_\+str)
+\begin{DoxyCompactList}\small\item\em 文字列からの初期化 \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ T, Size $>$ \& \mbox{\hyperlink{classsaki_1_1string__base_ad6f67113019884abb525aa75f6c7d1a9}{operator=}} (const\+\_\+pointer \+\_\+str)
 \item 
-constexpr \mbox{\hyperlink{classsaki_1_1string__base_a72a95e9a65c0e1e4bcbd47fca9c78281}{string\+\_\+base}} (const \mbox{\hyperlink{classsaki_1_1array}{saki\+::array}}$<$ T, N $>$ \&arr)
+{\footnotesize template$<$size\+\_\+t N$>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1string__base_af9c199307f7a24ecef3e770cd537a715}{string\+\_\+base}} (const \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ T, N $>$ \&\+\_\+string)
 \item 
-constexpr T \& \mbox{\hyperlink{classsaki_1_1string__base_aca7367871a2c8e1722032240f4fa42fa}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+{\footnotesize template$<$size\+\_\+t N$>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ T, Size $>$ \mbox{\hyperlink{classsaki_1_1string__base_a44b85c70f7ed89e2e382861f3323f4d5}{operator=}} (const \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ T, N $>$ \&\+\_\+string)
 \item 
-constexpr const T \& \mbox{\hyperlink{classsaki_1_1string__base_abfd90384f8529e8ac5cecb910000ac3b}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+constexpr size\+\_\+type \mbox{\hyperlink{classsaki_1_1string__base_ab243475d76d7abe879972787c590578e}{size}} () const
+\begin{DoxyCompactList}\small\item\em 文字列の大きさを取得 \end{DoxyCompactList}\item 
+constexpr reference \mbox{\hyperlink{classsaki_1_1string__base_acd4fb28d0f27242ecc038bab75018f3d}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+\item 
+constexpr const\+\_\+reference \mbox{\hyperlink{classsaki_1_1string__base_a738a15596baa6e6ade3322ce5dea9bea}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) const
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TT , size\+\_\+t N$>$ }\\std\+::ostream \& \mbox{\hyperlink{classsaki_1_1string__base_af065456d5712bf52d3f09d973a6511ad}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ TT, N $>$ \&)
 \end{DoxyCompactItemize}
 
 
 \subsection{詳解}
-\subsubsection*{template$<$typename T, size\+\_\+t N$>$\newline
-class saki\+::string\+\_\+base$<$ T, N $>$}
+\subsubsection*{template$<$typename T, size\+\_\+t Size$>$\newline
+class saki\+::string\+\_\+base$<$ T, Size $>$}
 
 コンパイル時固定長string\+\_\+baseクラス 
 
 \subsection{構築子と解体子}
-\mbox{\Hypertarget{classsaki_1_1string__base_a5301a26e787034be1365a23964a267fd}\label{classsaki_1_1string__base_a5301a26e787034be1365a23964a267fd}} 
+\mbox{\Hypertarget{classsaki_1_1string__base_a17d98d62506a1f6eb04f210498bcaba0}\label{classsaki_1_1string__base_a17d98d62506a1f6eb04f210498bcaba0}} 
 \index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!string\+\_\+base@{string\+\_\+base}}
 \index{string\+\_\+base@{string\+\_\+base}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
-\subsubsection{\texorpdfstring{string\+\_\+base()}{string\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t N$>$ \\
-constexpr \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$\+::\mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection{\texorpdfstring{string\+\_\+base()}{string\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classsaki_1_1string__base_a72a95e9a65c0e1e4bcbd47fca9c78281}\label{classsaki_1_1string__base_a72a95e9a65c0e1e4bcbd47fca9c78281}} 
+
+
+引数なしコンストラクタ 
+
+\mbox{\Hypertarget{classsaki_1_1string__base_add4f032c858fa8e9f93ab0ab810488d2}\label{classsaki_1_1string__base_add4f032c858fa8e9f93ab0ab810488d2}} 
 \index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!string\+\_\+base@{string\+\_\+base}}
 \index{string\+\_\+base@{string\+\_\+base}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
-\subsubsection{\texorpdfstring{string\+\_\+base()}{string\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t N$>$ \\
-constexpr \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$\+::\mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1array}{saki\+::array}}$<$ T, N $>$ \&}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\subsubsection{\texorpdfstring{string\+\_\+base()}{string\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}} (\begin{DoxyParamCaption}\item[{const\+\_\+pointer}]{\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+文字列からの初期化 
+
+\mbox{\Hypertarget{classsaki_1_1string__base_af9c199307f7a24ecef3e770cd537a715}\label{classsaki_1_1string__base_af9c199307f7a24ecef3e770cd537a715}} 
+\index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!string\+\_\+base@{string\+\_\+base}}
+\index{string\+\_\+base@{string\+\_\+base}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
+\subsubsection{\texorpdfstring{string\+\_\+base()}{string\_base()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+template$<$size\+\_\+t N$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::\mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ T, N $>$ \&}]{\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{classsaki_1_1string__base_aca7367871a2c8e1722032240f4fa42fa}\label{classsaki_1_1string__base_aca7367871a2c8e1722032240f4fa42fa}} 
+\mbox{\Hypertarget{classsaki_1_1string__base_ad6f67113019884abb525aa75f6c7d1a9}\label{classsaki_1_1string__base_ad6f67113019884abb525aa75f6c7d1a9}} 
+\index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$T, Size$>$\& \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const\+\_\+pointer}]{\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsaki_1_1string__base_a44b85c70f7ed89e2e382861f3323f4d5}\label{classsaki_1_1string__base_a44b85c70f7ed89e2e382861f3323f4d5}} 
+\index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!operator=@{operator=}}
+\index{operator=@{operator=}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+template$<$size\+\_\+t N$>$ \\
+constexpr \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$T, Size$>$ \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ T, N $>$ \&}]{\+\_\+string }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsaki_1_1string__base_acd4fb28d0f27242ecc038bab75018f3d}\label{classsaki_1_1string__base_acd4fb28d0f27242ecc038bab75018f3d}} 
 \index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
 \subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t N$>$ \\
-constexpr T\& \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr reference \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classsaki_1_1string__base_abfd90384f8529e8ac5cecb910000ac3b}\label{classsaki_1_1string__base_abfd90384f8529e8ac5cecb910000ac3b}} 
+\mbox{\Hypertarget{classsaki_1_1string__base_a738a15596baa6e6ade3322ce5dea9bea}\label{classsaki_1_1string__base_a738a15596baa6e6ade3322ce5dea9bea}} 
 \index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
 \subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t N$>$ \\
-constexpr const T\& \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr const\+\_\+reference \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsaki_1_1string__base_ab243475d76d7abe879972787c590578e}\label{classsaki_1_1string__base_ab243475d76d7abe879972787c590578e}} 
+\index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!size@{size}}
+\index{size@{size}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+constexpr size\+\_\+type \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, Size $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+文字列の大きさを取得 
+
+\begin{DoxyReturn}{戻り値}
+文字列の大きさ 
+\end{DoxyReturn}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{classsaki_1_1string__base_af065456d5712bf52d3f09d973a6511ad}\label{classsaki_1_1string__base_af065456d5712bf52d3f09d973a6511ad}} 
+\index{saki\+::string\+\_\+base@{saki\+::string\+\_\+base}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!saki\+::string\+\_\+base@{saki\+::string\+\_\+base}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T, size\+\_\+t Size$>$ \\
+template$<$typename TT , size\+\_\+t N$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{,  }\item[{const \mbox{\hyperlink{classsaki_1_1string__base}{string\+\_\+base}}$<$ TT, N $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/string/\mbox{\hyperlink{string_2string_8h}{string.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/string/base/\mbox{\hyperlink{string__base_8h}{string\+\_\+base.\+h}}\end{DoxyCompactItemize}

@@ -6,7 +6,7 @@
 
 
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
-{\ttfamily \#include $<$saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal.\+h$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal\+\_\+equal.\+h$>$}\newline
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,9 +24,9 @@
 \item 
 {\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_ac271639854025a923addee4879780f96}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const T \&)
 \begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、falseを返す \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_afd0543c20cbd7373bceba87c2af5b3de}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const First \&first, const Second \&second, const Args \&...args)
+{\footnotesize template$<$typename First , typename Second , typename ... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a45c9f8730634f6b621bca7d8dc73e43d}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const First \&first, Second second, const Args \&...args)
 \begin{DoxyCompactList}\small\item\em multi\+\_\+equalの実装部 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename ... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a9f7f1252e3ed939885a3b4c4b09943b8}{saki\+::multi\+\_\+equal}} (const First \&first, const Args \&...args) -\/$>$ decltype(std\+::enable\+\_\+if\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ \mbox{\hyperlink{structsaki_1_1can__equal}{saki\+::can\+\_\+equal}}$<$ First $>$$>$, bool $>$())
+{\footnotesize template$<$typename First , typename ... Args, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ saki\+::can\+\_\+equal\+\_\+equal$<$ First $>$$>$ $>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_aa15664a63445d3539b40b774e556a45b}{saki\+::multi\+\_\+equal}} (const First \&first, const Args \&...args)
 \begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

@@ -15,5 +15,5 @@ var searchData=
   ['reverse_5fiterator_5fbase_2eh',['reverse_iterator_base.h',['../reverse__iterator__base_8h.html',1,'']]],
   ['reverse_5fiterator_5fbase_3c_20const_20t_20_3e',['reverse_iterator_base&lt; const T &gt;',['../classsaki_1_1details_1_1reverse__iterator__base.html',1,'saki::details']]],
   ['reverse_5fiterator_5foperator_2eh',['reverse_iterator_operator.h',['../reverse__iterator__operator_8h.html',1,'']]],
-  ['rotate',['rotate',['../classsaki_1_1_transform.html#a596353b58da1c694813ad31d1ea2bc06',1,'saki::Transform::rotate(const saki::vector3&lt; T &gt; &amp;rot)'],['../classsaki_1_1_transform.html#a9ee0019cf9fb42b2710f2ecea64ed977',1,'saki::Transform::rotate(const T &amp;x, const T &amp;y, const T &amp;z)']]]
+  ['rotate',['rotate',['../classsaki_1_1transform.html#a34a7facf52587a38a40a7ff6643568cf',1,'saki::transform::rotate(const saki::vector3&lt; T &gt; &amp;rot)'],['../classsaki_1_1transform.html#a00065f2da91bca7ac0aff6efd46ac2ae',1,'saki::transform::rotate(const T &amp;x, const T &amp;y, const T &amp;z)']]]
 ];

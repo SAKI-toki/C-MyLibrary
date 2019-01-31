@@ -7,7 +7,7 @@ var searchData=
   ['clock',['clock',['../classsaki_1_1clock.html#aec6aa6ad43fcc8f992f7ee9a25e25354',1,'saki::clock']]],
   ['const_5fiterator',['const_iterator',['../classsaki_1_1const__iterator.html#a67dcc4ecf451800f4fa59a536d672ef5',1,'saki::const_iterator']]],
   ['const_5freverse_5fiterator',['const_reverse_iterator',['../classsaki_1_1const__reverse__iterator.html#ae696e711d884b66fb36c20262446cfae',1,'saki::const_reverse_iterator']]],
-  ['copy',['copy',['../namespacesaki.html#a3a9c67bf73207dfb61db4cd53ee35863',1,'saki']]],
+  ['copy',['copy',['../namespacesaki.html#abd8c75003f2a213607842f5d82eac806',1,'saki']]],
   ['copysign',['copysign',['../namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e',1,'saki']]],
   ['cos',['cos',['../namespacesaki.html#a82551963a8cab889ca6f76ed346d6f4f',1,'saki::cos(T x)'],['../namespacesaki.html#ab1f49aa2d1182883ae8b4c01b346cc88',1,'saki::cos(T x)']]],
   ['cosh',['cosh',['../namespacesaki.html#a0f8167af6da5c9eb510d33dadae13708',1,'saki::cosh(T x)'],['../namespacesaki.html#afe248729248030bd5858469409e902d2',1,'saki::cosh(T x)']]],

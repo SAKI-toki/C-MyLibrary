@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SakiCppLibrary: saki::string_base&lt; T, N &gt; クラステンプレート</title>
+<title>SakiCppLibrary: saki::string_base&lt; T, Size &gt; クラステンプレート</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,47 +67,67 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#friends">フレンド</a> &#124;
 <a href="classsaki_1_1string__base-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
-<div class="title">saki::string_base&lt; T, N &gt; クラステンプレート</div>  </div>
+<div class="title">saki::string_base&lt; T, Size &gt; クラステンプレート</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>コンパイル時固定長string_baseクラス  
  <a href="classsaki_1_1string__base.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="string_2string_8h_source.html">string.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="string__base_8h_source.html">string_base.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
-<tr class="memitem:a5301a26e787034be1365a23964a267fd"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#a5301a26e787034be1365a23964a267fd">string_base</a> ()</td></tr>
-<tr class="separator:a5301a26e787034be1365a23964a267fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72a95e9a65c0e1e4bcbd47fca9c78281"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#a72a95e9a65c0e1e4bcbd47fca9c78281">string_base</a> (const <a class="el" href="classsaki_1_1array.html">saki::array</a>&lt; T, N &gt; &amp;arr)</td></tr>
-<tr class="separator:a72a95e9a65c0e1e4bcbd47fca9c78281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca7367871a2c8e1722032240f4fa42fa"><td class="memItemLeft" align="right" valign="top">constexpr T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#aca7367871a2c8e1722032240f4fa42fa">operator[]</a> (size_t index)</td></tr>
-<tr class="separator:aca7367871a2c8e1722032240f4fa42fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd90384f8529e8ac5cecb910000ac3b"><td class="memItemLeft" align="right" valign="top">constexpr const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#abfd90384f8529e8ac5cecb910000ac3b">operator[]</a> (size_t index) const</td></tr>
-<tr class="separator:abfd90384f8529e8ac5cecb910000ac3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d98d62506a1f6eb04f210498bcaba0"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#a17d98d62506a1f6eb04f210498bcaba0">string_base</a> ()</td></tr>
+<tr class="memdesc:a17d98d62506a1f6eb04f210498bcaba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数なしコンストラクタ  <a href="#a17d98d62506a1f6eb04f210498bcaba0">[詳解]</a><br /></td></tr>
+<tr class="separator:a17d98d62506a1f6eb04f210498bcaba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add4f032c858fa8e9f93ab0ab810488d2"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#add4f032c858fa8e9f93ab0ab810488d2">string_base</a> (const_pointer _str)</td></tr>
+<tr class="memdesc:add4f032c858fa8e9f93ab0ab810488d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列からの初期化  <a href="#add4f032c858fa8e9f93ab0ab810488d2">[詳解]</a><br /></td></tr>
+<tr class="separator:add4f032c858fa8e9f93ab0ab810488d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f67113019884abb525aa75f6c7d1a9"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; T, Size &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#ad6f67113019884abb525aa75f6c7d1a9">operator=</a> (const_pointer _str)</td></tr>
+<tr class="separator:ad6f67113019884abb525aa75f6c7d1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c199307f7a24ecef3e770cd537a715"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:af9c199307f7a24ecef3e770cd537a715"><td class="memTemplItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#af9c199307f7a24ecef3e770cd537a715">string_base</a> (const <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; T, N &gt; &amp;_string)</td></tr>
+<tr class="separator:af9c199307f7a24ecef3e770cd537a715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b85c70f7ed89e2e382861f3323f4d5"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:a44b85c70f7ed89e2e382861f3323f4d5"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; T, Size &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#a44b85c70f7ed89e2e382861f3323f4d5">operator=</a> (const <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; T, N &gt; &amp;_string)</td></tr>
+<tr class="separator:a44b85c70f7ed89e2e382861f3323f4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab243475d76d7abe879972787c590578e"><td class="memItemLeft" align="right" valign="top">constexpr size_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#ab243475d76d7abe879972787c590578e">size</a> () const</td></tr>
+<tr class="memdesc:ab243475d76d7abe879972787c590578e"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列の大きさを取得  <a href="#ab243475d76d7abe879972787c590578e">[詳解]</a><br /></td></tr>
+<tr class="separator:ab243475d76d7abe879972787c590578e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4fb28d0f27242ecc038bab75018f3d"><td class="memItemLeft" align="right" valign="top">constexpr reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#acd4fb28d0f27242ecc038bab75018f3d">operator[]</a> (size_t index)</td></tr>
+<tr class="separator:acd4fb28d0f27242ecc038bab75018f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738a15596baa6e6ade3322ce5dea9bea"><td class="memItemLeft" align="right" valign="top">constexpr const_reference&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#a738a15596baa6e6ade3322ce5dea9bea">operator[]</a> (size_t index) const</td></tr>
+<tr class="separator:a738a15596baa6e6ade3322ce5dea9bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:af065456d5712bf52d3f09d973a6511ad"><td class="memTemplParams" colspan="2">template&lt;typename TT , size_t N&gt; </td></tr>
+<tr class="memitem:af065456d5712bf52d3f09d973a6511ad"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsaki_1_1string__base.html#af065456d5712bf52d3f09d973a6511ad">operator&lt;&lt;</a> (std::ostream &amp;, const <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; TT, N &gt; &amp;)</td></tr>
+<tr class="separator:af065456d5712bf52d3f09d973a6511ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><h3>template&lt;typename T, size_t N&gt;<br />
-class saki::string_base&lt; T, N &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T, size_t Size&gt;<br />
+class saki::string_base&lt; T, Size &gt;</h3>
 
 <p>コンパイル時固定長string_baseクラス </p>
 </div><h2 class="groupheader">構築子と解体子</h2>
-<a id="a5301a26e787034be1365a23964a267fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5301a26e787034be1365a23964a267fd">&#9670;&nbsp;</a></span>string_base() <span class="overload">[1/2]</span></h2>
+<a id="a17d98d62506a1f6eb04f210498bcaba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d98d62506a1f6eb04f210498bcaba0">&#9670;&nbsp;</a></span>string_base() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T, size_t Size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, N &gt;::<a class="el" href="classsaki_1_1string__base.html">string_base</a> </td>
+          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::<a class="el" href="classsaki_1_1string__base.html">string_base</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -120,24 +140,58 @@ template&lt;typename T , size_t N&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>引数なしコンストラクタ </p>
+
 </div>
 </div>
-<a id="a72a95e9a65c0e1e4bcbd47fca9c78281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72a95e9a65c0e1e4bcbd47fca9c78281">&#9670;&nbsp;</a></span>string_base() <span class="overload">[2/2]</span></h2>
+<a id="add4f032c858fa8e9f93ab0ab810488d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add4f032c858fa8e9f93ab0ab810488d2">&#9670;&nbsp;</a></span>string_base() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T, size_t Size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, N &gt;::<a class="el" href="classsaki_1_1string__base.html">string_base</a> </td>
+          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::<a class="el" href="classsaki_1_1string__base.html">string_base</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1array.html">saki::array</a>&lt; T, N &gt; &amp;&#160;</td>
-          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td class="paramtype">const_pointer&#160;</td>
+          <td class="paramname"><em>_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列からの初期化 </p>
+
+</div>
+</div>
+<a id="af9c199307f7a24ecef3e770cd537a715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c199307f7a24ecef3e770cd537a715">&#9670;&nbsp;</a></span>string_base() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t Size&gt; </div>
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::<a class="el" href="classsaki_1_1string__base.html">string_base</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>_string</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -151,19 +205,77 @@ template&lt;typename T , size_t N&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="aca7367871a2c8e1722032240f4fa42fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca7367871a2c8e1722032240f4fa42fa">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+<a id="ad6f67113019884abb525aa75f6c7d1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f67113019884abb525aa75f6c7d1a9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T, size_t Size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr T&amp; <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, N &gt;::operator[] </td>
+          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt;T, Size&gt;&amp; <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const_pointer&#160;</td>
+          <td class="paramname"><em>_str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44b85c70f7ed89e2e382861f3323f4d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b85c70f7ed89e2e382861f3323f4d5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t Size&gt; </div>
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt;T, Size&gt; <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>_string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd4fb28d0f27242ecc038bab75018f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4fb28d0f27242ecc038bab75018f3d">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t Size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr reference <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -179,19 +291,19 @@ template&lt;typename T , size_t N&gt; </div>
 
 </div>
 </div>
-<a id="abfd90384f8529e8ac5cecb910000ac3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfd90384f8529e8ac5cecb910000ac3b">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+<a id="a738a15596baa6e6ade3322ce5dea9bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738a15596baa6e6ade3322ce5dea9bea">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
+template&lt;typename T, size_t Size&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr const T&amp; <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, N &gt;::operator[] </td>
+          <td class="memname">constexpr const_reference <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
@@ -207,8 +319,79 @@ template&lt;typename T , size_t N&gt; </div>
 
 </div>
 </div>
+<a id="ab243475d76d7abe879972787c590578e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab243475d76d7abe879972787c590578e">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t Size&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_type <a class="el" href="classsaki_1_1string__base.html">saki::string_base</a>&lt; T, Size &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>文字列の大きさを取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>文字列の大きさ </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="af065456d5712bf52d3f09d973a6511ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af065456d5712bf52d3f09d973a6511ad">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, size_t Size&gt; </div>
+<div class="memtemplate">
+template&lt;typename TT , size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1string__base.html">string_base</a>&lt; TT, N &gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>このクラス詳解は次のファイルから抽出されました:<ul>
-<li>C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/string/<a class="el" href="string_2string_8h_source.html">string.h</a></li>
+<li>C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/string/base/<a class="el" href="string__base_8h_source.html">string_base.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

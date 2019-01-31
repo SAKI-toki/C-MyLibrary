@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['transform',['Transform',['../classsaki_1_1_transform.html',1,'saki']]]
+  ['transform',['transform',['../classsaki_1_1transform.html',1,'saki']]]
 ];
