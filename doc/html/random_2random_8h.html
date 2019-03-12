@@ -75,6 +75,8 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;random&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8h_source.html">saki/type_traits/enable_if_nullptr.h</a>&gt;</code><br />
 </div>
 <p><a href="random_2random_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -90,10 +92,13 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a636caf16f2f00cb734cc867646ac233f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a636caf16f2f00cb734cc867646ac233f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a636caf16f2f00cb734cc867646ac233f">saki::random</a> (const T random_min, const T random_max)</td></tr>
-<tr class="memdesc:a636caf16f2f00cb734cc867646ac233f"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小値と最大値を引数にとり、その間からランダムな値を返す  <a href="namespacesaki.html#a636caf16f2f00cb734cc867646ac233f">[詳解]</a><br /></td></tr>
-<tr class="separator:a636caf16f2f00cb734cc867646ac233f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec39fdef417fa75fb6a6bd06b08490c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:adec39fdef417fa75fb6a6bd06b08490c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#adec39fdef417fa75fb6a6bd06b08490c">saki::random</a> (const T random_min, const T random_max)</td></tr>
+<tr class="memdesc:adec39fdef417fa75fb6a6bd06b08490c"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小値と最大値を引数にとり、その間からランダムな値を返す  <a href="namespacesaki.html#adec39fdef417fa75fb6a6bd06b08490c">[詳解]</a><br /></td></tr>
+<tr class="separator:adec39fdef417fa75fb6a6bd06b08490c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8a3d0c8d244f1f8e5c6c8310f7e7b647">saki::random</a> (const T1 random_min, const T2 random_max)</td></tr>
+<tr class="separator:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a63b3ba23e00f30bab82f1c00b41c24a4"></a>

@@ -31,7 +31,7 @@
 \begin{DoxyCompactList}\small\item\em コンパイル時atan2 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_a1f8c6dc6223b790f6d227c8d22cf8b86}{saki\+::atan2}} (T y, T x)
 \begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a5c656a9f2a0c0cfe522fb95ac37128cc}{saki\+::atan2}} (T1 y, T2 x)
+{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T1 $>$ \&\&std\+::is\+\_\+arithmetic\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a3f53502e50280167d22bef45227219f0}{saki\+::atan2}} (T1 y, T2 x)
 \begin{DoxyCompactList}\small\item\em 型をそろえる \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

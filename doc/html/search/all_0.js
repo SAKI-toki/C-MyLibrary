@@ -23,7 +23,7 @@ var searchData=
   ['asinh_2eh',['asinh.h',['../asinh_8h.html',1,'']]],
   ['atan',['atan',['../namespacesaki.html#a524b9439c745f69bd8a8b681b03b4b01',1,'saki::atan(T x)'],['../namespacesaki.html#acd8a08085fc9210a4e8d61f6c04febe2',1,'saki::atan(T x)']]],
   ['atan_2eh',['atan.h',['../atan_8h.html',1,'']]],
-  ['atan2',['atan2',['../namespacesaki.html#ac528a4ab6013623bfe6257229e302015',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a5c656a9f2a0c0cfe522fb95ac37128cc',1,'saki::atan2(T1 y, T2 x)']]],
+  ['atan2',['atan2',['../namespacesaki.html#ac528a4ab6013623bfe6257229e302015',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a3f53502e50280167d22bef45227219f0',1,'saki::atan2(T1 y, T2 x)']]],
   ['atan2_2eh',['atan2.h',['../atan2_8h.html',1,'']]],
   ['atanh',['atanh',['../namespacesaki.html#adbfceeab527c51676d00fae31e077dcf',1,'saki::atanh(T x)'],['../namespacesaki.html#a1b7d87f99b61600e1201b10de467200f',1,'saki::atanh(T x)']]],
   ['atanh_2eh',['atanh.h',['../atanh_8h.html',1,'']]]

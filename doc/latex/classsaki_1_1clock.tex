@@ -30,9 +30,9 @@ enum \mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U
 \begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classsaki_1_1clock_ad8c77a4865ba0a3840c640014887a0e3}{start}} ()
 \begin{DoxyCompactList}\small\item\em 開始時間のセット \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T  = double$>$ }\\T \mbox{\hyperlink{classsaki_1_1clock_a0ef6cf0641f5a3c0649574afd70def14}{end}} (\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U\+R\+A\+T\+I\+ON}} duration=\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671}{D\+U\+R\+A\+T\+I\+O\+N\+::\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}})
+{\footnotesize template$<$typename T  = double, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\T \mbox{\hyperlink{classsaki_1_1clock_a9d74b8b909a93d819452f175b41d57e4}{end}} (\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U\+R\+A\+T\+I\+ON}} duration=\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671}{D\+U\+R\+A\+T\+I\+O\+N\+::\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}})
 \begin{DoxyCompactList}\small\item\em 開始時間をセットしてからの時間を返す \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T  = double$>$ }\\T \mbox{\hyperlink{classsaki_1_1clock_acef0a0c3d42f803192a815a4b8f6f391}{end\+\_\+and\+\_\+start}} (\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U\+R\+A\+T\+I\+ON}} duration=\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671}{D\+U\+R\+A\+T\+I\+O\+N\+::\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}})
+{\footnotesize template$<$typename T  = double, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\T \mbox{\hyperlink{classsaki_1_1clock_a593da66eb6ce690e20e6602eecfa2b1e}{end\+\_\+and\+\_\+start}} (\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U\+R\+A\+T\+I\+ON}} duration=\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671}{D\+U\+R\+A\+T\+I\+O\+N\+::\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}})
 \begin{DoxyCompactList}\small\item\em 開始時間をセットしてからの時間を返し、そこからまた時間をスタートする \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -92,11 +92,11 @@ N\+O\+NE&\\
 
 
 \subsection{関数詳解}
-\mbox{\Hypertarget{classsaki_1_1clock_a0ef6cf0641f5a3c0649574afd70def14}\label{classsaki_1_1clock_a0ef6cf0641f5a3c0649574afd70def14}} 
+\mbox{\Hypertarget{classsaki_1_1clock_a9d74b8b909a93d819452f175b41d57e4}\label{classsaki_1_1clock_a9d74b8b909a93d819452f175b41d57e4}} 
 \index{saki\+::clock@{saki\+::clock}!end@{end}}
 \index{end@{end}!saki\+::clock@{saki\+::clock}}
 \subsubsection{\texorpdfstring{end()}{end()}}
-{\footnotesize\ttfamily template$<$typename T  = double$>$ \\
+{\footnotesize\ttfamily template$<$typename T  = double, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ \\
 T saki\+::clock\+::end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U\+R\+A\+T\+I\+ON}}}]{duration = {\ttfamily \mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671}{D\+U\+R\+A\+T\+I\+O\+N\+::\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -108,11 +108,11 @@ T saki\+::clock\+::end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsak
 {\em duration} & どの単位で返すか return 時間 \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classsaki_1_1clock_acef0a0c3d42f803192a815a4b8f6f391}\label{classsaki_1_1clock_acef0a0c3d42f803192a815a4b8f6f391}} 
+\mbox{\Hypertarget{classsaki_1_1clock_a593da66eb6ce690e20e6602eecfa2b1e}\label{classsaki_1_1clock_a593da66eb6ce690e20e6602eecfa2b1e}} 
 \index{saki\+::clock@{saki\+::clock}!end\+\_\+and\+\_\+start@{end\+\_\+and\+\_\+start}}
 \index{end\+\_\+and\+\_\+start@{end\+\_\+and\+\_\+start}!saki\+::clock@{saki\+::clock}}
 \subsubsection{\texorpdfstring{end\+\_\+and\+\_\+start()}{end\_and\_start()}}
-{\footnotesize\ttfamily template$<$typename T  = double$>$ \\
+{\footnotesize\ttfamily template$<$typename T  = double, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ \\
 T saki\+::clock\+::end\+\_\+and\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdf}{D\+U\+R\+A\+T\+I\+ON}}}]{duration = {\ttfamily \mbox{\hyperlink{classsaki_1_1clock_a33900ca0b3320bafb061928ad6827bdfa241d7907de05ad50c011812e927cd671}{D\+U\+R\+A\+T\+I\+O\+N\+::\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 

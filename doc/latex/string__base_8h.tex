@@ -7,6 +7,7 @@
 
 {\ttfamily \#include $<$cstddef$>$}\newline
 {\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
 {\ttfamily \#include $<$saki/macro/type\+\_\+macro.\+h$>$}\newline
 {\ttfamily \#include $<$saki/array/array.\+h$>$}\newline
 {\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+h$>$}\newline
@@ -14,9 +15,7 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base$<$ T, Size $>$}}
-\begin{DoxyCompactList}\small\item\em コンパイル時固定長string\+\_\+baseクラス \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{classsaki_1_1string__base_3_01_t_00_010_01_4}{saki\+::string\+\_\+base$<$ T, 0 $>$}}
-\begin{DoxyCompactList}\small\item\em 要素数0 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em コンパイル時固定長string\+\_\+baseクラス \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{名前空間}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,7 +30,19 @@ class \mbox{\hyperlink{classsaki_1_1string__base_3_01_t_00_010_01_4}{saki\+::str
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\std\+::ostream \& \mbox{\hyperlink{namespacesaki_abf390d4e6c19fdb92d3a68afb7e71032}{saki\+::operator$<$$<$}} (std\+::ostream \&os, const string\+\_\+base$<$ T, N $>$ \&str)
-\begin{DoxyCompactList}\small\item\em stringの出力 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em stringの出力 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a1f5c975d021d701e0360608eb7a872eb}{saki\+::operator==}} (const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str1, const char $\ast$str2)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a7637dfb057d475605a3564df27789e60}{saki\+::operator!=}} (const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str1, const char $\ast$str2)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_aeab22d0272e78c7d3a44ce241259c996}{saki\+::operator==}} (const char $\ast$str1, const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str2)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a155d8277bf6806453219cc8145920fbd}{saki\+::operator!=}} (const char $\ast$str1, const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str2)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a69af90ebb2b8a4f7bf399a381a8898c9}{saki\+::operator==}} (const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str1, const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str2)
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a97d9fc5d2082989be021e821379631d0}{saki\+::operator!=}} (const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str1, const \mbox{\hyperlink{classsaki_1_1string__base}{saki\+::string\+\_\+base}}$<$ T, N $>$ \&str2)
+\end{DoxyCompactItemize}
 
 
 \subsection{詳解}

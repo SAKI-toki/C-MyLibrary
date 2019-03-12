@@ -8,6 +8,6 @@ var searchData=
   ['asin',['asin',['../namespacesaki.html#a63f2b40515cd62b037dade64aa8465db',1,'saki::asin(T x)'],['../namespacesaki.html#aac285debedd1f53761a838c0e4f57af0',1,'saki::asin(T x)']]],
   ['asinh',['asinh',['../namespacesaki.html#ab097a2d600f313b6bdd3099e61a10b9e',1,'saki::asinh(T x)'],['../namespacesaki.html#aac840ca5d9b98ac0a8c5b15752f02072',1,'saki::asinh(T x)']]],
   ['atan',['atan',['../namespacesaki.html#a524b9439c745f69bd8a8b681b03b4b01',1,'saki::atan(T x)'],['../namespacesaki.html#acd8a08085fc9210a4e8d61f6c04febe2',1,'saki::atan(T x)']]],
-  ['atan2',['atan2',['../namespacesaki.html#ac528a4ab6013623bfe6257229e302015',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a5c656a9f2a0c0cfe522fb95ac37128cc',1,'saki::atan2(T1 y, T2 x)']]],
+  ['atan2',['atan2',['../namespacesaki.html#ac528a4ab6013623bfe6257229e302015',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86',1,'saki::atan2(T y, T x)'],['../namespacesaki.html#a3f53502e50280167d22bef45227219f0',1,'saki::atan2(T1 y, T2 x)']]],
   ['atanh',['atanh',['../namespacesaki.html#adbfceeab527c51676d00fae31e077dcf',1,'saki::atanh(T x)'],['../namespacesaki.html#a1b7d87f99b61600e1201b10de467200f',1,'saki::atanh(T x)']]]
 ];

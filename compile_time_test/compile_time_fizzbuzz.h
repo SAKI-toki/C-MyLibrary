@@ -1,5 +1,5 @@
 /**
-* @file fizzbuzz.h
+* @file compile_time_fizzbuzz.h
 * @brief コンパイル時fizzbuzzのテスト
 * @author 石山 悠
 * @date 2019/02/12

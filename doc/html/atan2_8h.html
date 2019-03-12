@@ -108,10 +108,10 @@ $(function() {
 <tr class="memitem:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86">saki::atan2</a> (T y, T x)</td></tr>
 <tr class="memdesc:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86">[詳解]</a><br /></td></tr>
 <tr class="separator:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c656a9f2a0c0cfe522fb95ac37128cc"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a5c656a9f2a0c0cfe522fb95ac37128cc"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5c656a9f2a0c0cfe522fb95ac37128cc">saki::atan2</a> (T1 y, T2 x)</td></tr>
-<tr class="memdesc:a5c656a9f2a0c0cfe522fb95ac37128cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="namespacesaki.html#a5c656a9f2a0c0cfe522fb95ac37128cc">[詳解]</a><br /></td></tr>
-<tr class="separator:a5c656a9f2a0c0cfe522fb95ac37128cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f53502e50280167d22bef45227219f0"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a3f53502e50280167d22bef45227219f0"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3f53502e50280167d22bef45227219f0">saki::atan2</a> (T1 y, T2 x)</td></tr>
+<tr class="memdesc:a3f53502e50280167d22bef45227219f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="namespacesaki.html#a3f53502e50280167d22bef45227219f0">[詳解]</a><br /></td></tr>
+<tr class="separator:a3f53502e50280167d22bef45227219f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コンパイル時atan2 </p>

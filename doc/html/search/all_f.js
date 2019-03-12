@@ -136,7 +136,7 @@ var searchData=
   ['set_5fscale',['set_scale',['../classsaki_1_1transform.html#ad1423bce28426ae4b739ccb22bc0fd5d',1,'saki::transform']]],
   ['sigma',['sigma',['../namespacesaki.html#ac51e06f83630682641e0d99d5c957a9c',1,'saki']]],
   ['sigma_2eh',['sigma.h',['../sigma_8h.html',1,'']]],
-  ['signbit',['signbit',['../namespacesaki.html#a5ed78463ed5808788e1b77eeecd9352a',1,'saki']]],
+  ['signbit',['signbit',['../namespacesaki.html#a2e595e3d1c68d48646e3fe481cda4fe0',1,'saki']]],
   ['signbit_2eh',['signbit.h',['../signbit_8h.html',1,'']]],
   ['sin',['sin',['../namespacesaki.html#a743f7284cdebb6406db9b37e42bcd730',1,'saki::sin(T x)'],['../namespacesaki.html#a9fd77d1e52189e28f4a5d069891501cf',1,'saki::sin(T x)']]],
   ['sin_2eh',['sin.h',['../sin_8h.html',1,'']]],
@@ -154,7 +154,6 @@ var searchData=
   ['string_2eh',['string.h',['../string_8h.html',1,'']]],
   ['string_5fbase',['string_base',['../classsaki_1_1string__base.html',1,'saki::string_base&lt; T, Size &gt;'],['../classsaki_1_1string__base.html#a17d98d62506a1f6eb04f210498bcaba0',1,'saki::string_base::string_base()'],['../classsaki_1_1string__base.html#add4f032c858fa8e9f93ab0ab810488d2',1,'saki::string_base::string_base(const_pointer _str)'],['../classsaki_1_1string__base.html#af9c199307f7a24ecef3e770cd537a715',1,'saki::string_base::string_base(const string_base&lt; T, N &gt; &amp;_string)']]],
   ['string_5fbase_2eh',['string_base.h',['../string__base_8h.html',1,'']]],
-  ['string_5fbase_3c_20t_2c_200_20_3e',['string_base&lt; T, 0 &gt;',['../classsaki_1_1string__base_3_01_t_00_010_01_4.html',1,'saki']]],
   ['subtraction',['subtraction',['../structsaki_1_1subtraction.html',1,'saki']]],
   ['subtraction_2eh',['subtraction.h',['../subtraction_8h.html',1,'']]]
 ];

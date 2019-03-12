@@ -5,7 +5,7 @@ var searchData=
   ['set_5frot',['set_rot',['../classsaki_1_1transform.html#a0920b584e25129a5b0d42dbc296abd55',1,'saki::transform']]],
   ['set_5fscale',['set_scale',['../classsaki_1_1transform.html#ad1423bce28426ae4b739ccb22bc0fd5d',1,'saki::transform']]],
   ['sigma',['sigma',['../namespacesaki.html#ac51e06f83630682641e0d99d5c957a9c',1,'saki']]],
-  ['signbit',['signbit',['../namespacesaki.html#a5ed78463ed5808788e1b77eeecd9352a',1,'saki']]],
+  ['signbit',['signbit',['../namespacesaki.html#a2e595e3d1c68d48646e3fe481cda4fe0',1,'saki']]],
   ['sin',['sin',['../namespacesaki.html#a743f7284cdebb6406db9b37e42bcd730',1,'saki::sin(T x)'],['../namespacesaki.html#a9fd77d1e52189e28f4a5d069891501cf',1,'saki::sin(T x)']]],
   ['singleton',['singleton',['../classsaki_1_1singleton.html#a511f5d5e51fdac173fa0dbea858f5ee0',1,'saki::singleton']]],
   ['sinh',['sinh',['../namespacesaki.html#abe1ef6db83d59a5eb2daac9bff09d312',1,'saki::sinh(T x)'],['../namespacesaki.html#a8199390b7650fdebe491aaeb4c3a44c3',1,'saki::sinh(T x)']]],
