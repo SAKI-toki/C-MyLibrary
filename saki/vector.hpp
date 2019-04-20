@@ -4,11 +4,11 @@
 * @author êŒéR óI
 * @date 2018/11/22
 */
-#ifndef SAKI_VECTOR_2018_11_22
-#define SAKI_VECTOR_2018_11_22
+#ifndef SAKI_VECTOR_HPP
+#define SAKI_VECTOR_HPP
 
 #include <saki/vector/vector_2d.hpp>
 #include <saki/vector/vector_3d.hpp>
 #include <saki/vector/vector_4d.hpp>
 
-#endif //SAKI_VECTOR_2018_11_22
+#endif //SAKI_VECTOR_HPP

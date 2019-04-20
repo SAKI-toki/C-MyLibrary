@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/21
 */
-#ifndef SAKI_SAKI_2019_01_21
-#define SAKI_SAKI_2019_01_21
+#ifndef SAKI_SAKI_HPP
+#define SAKI_SAKI_HPP
 
 #include <saki/algorithm.hpp>
 #include <saki/array.hpp>
@@ -25,4 +25,4 @@
 #include <saki/type_traits.hpp>
 #include <saki/vector.hpp>
 
-#endif //SAKI_SAKI_2019_01_21
+#endif //SAKI_SAKI_HPP

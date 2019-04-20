@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/06
 */
-#ifndef SAKI_MATH_ATAN2_2019_01_06
-#define SAKI_MATH_ATAN2_2019_01_06
+#ifndef SAKI_MATH_ATAN2_HPP
+#define SAKI_MATH_ATAN2_HPP
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -94,4 +94,4 @@ constexpr auto atan2(T1 y, T2 x)
 	return saki::atan2(static_cast<type>(y), static_cast<type>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_ATAN2_2019_01_06
+#endif //SAKI_MATH_ATAN2_HPP

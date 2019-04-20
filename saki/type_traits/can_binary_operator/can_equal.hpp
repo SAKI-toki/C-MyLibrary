@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/24
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_2019_01_24
-#define SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_2019_01_24
+#ifndef SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_HPP
+#define SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_HPP
 #include <type_traits>
 #include <utility>
 #include <saki/type_traits/remove_reference_const.hpp>
@@ -61,4 +61,4 @@ struct can_different_equal<T, T> : public saki::can_same_equal<T>
 template <typename T1, typename T2>
 static constexpr auto can_different_equal_v = saki::can_different_equal<T1, T2>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_2019_01_24
+#endif //SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_HPP

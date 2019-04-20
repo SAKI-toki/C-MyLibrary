@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/12
 */
-#ifndef SAKI_TYPE_TRAITS_REMOVE_REFERENCE_CONST_2019_01_12
-#define SAKI_TYPE_TRAITS_REMOVE_REFERENCE_CONST_2019_01_12
+#ifndef SAKI_TYPE_TRAITS_REMOVE_REFERENCE_CONST_HPP
+#define SAKI_TYPE_TRAITS_REMOVE_REFERENCE_CONST_HPP
 #include <type_traits>
 
 namespace saki
@@ -24,4 +24,4 @@ struct remove_reference_const
 template <typename T>
 using remove_reference_const_t = typename saki::remove_reference_const<T>::type;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_REMOVE_REFERENCE_CONST_2019_01_12
+#endif //SAKI_TYPE_TRAITS_REMOVE_REFERENCE_CONST_HPP

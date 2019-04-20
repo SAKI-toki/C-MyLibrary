@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/07
 */
-#ifndef SAKI_MATH_IS_ODD_EVEN_2019_01_07
-#define SAKI_MATH_IS_ODD_EVEN_2019_01_07
+#ifndef SAKI_MATH_IS_ODD_EVEN_HPP
+#define SAKI_MATH_IS_ODD_EVEN_HPP
 #include <limits>
 #include <saki/math/fmod.hpp>
 #include <saki/math/isinf.hpp>
@@ -36,4 +36,4 @@ constexpr bool is_even(T x)
 		   saki::fmod(((x > 0) ? x : -x), 2) == static_cast<T>(0);
 }
 } // namespace saki
-#endif //SAKI_MATH_IS_ODD_EVEN_2019_01_07
+#endif //SAKI_MATH_IS_ODD_EVEN_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/05
 */
-#ifndef SAKI_MATH_TAN_2019_01_05
-#define SAKI_MATH_TAN_2019_01_05
+#ifndef SAKI_MATH_TAN_HPP
+#define SAKI_MATH_TAN_HPP
 #include <type_traits>
 #include <limits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -46,4 +46,4 @@ constexpr double tan(T x)
 	return saki::tan(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_TAN_2019_01_05
+#endif //SAKI_MATH_TAN_HPP

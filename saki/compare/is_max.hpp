@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/21
 */
-#ifndef SAKI_COMPARE_IS_MAX_2019_01_21
-#define SAKI_COMPARE_IS_MAX_2019_01_21
+#ifndef SAKI_COMPARE_IS_MAX_HPP
+#define SAKI_COMPARE_IS_MAX_HPP
 #include <type_traits>
 #include <saki/type_traits/can_compare/can_less.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -46,4 +46,4 @@ constexpr bool is_max(const First &first, const Args &... args)
 	return saki::impl::is_max_impl(first, (args)...);
 }
 } // namespace saki
-#endif //SAKI_COMPARE_IS_MAX_2019_01_21
+#endif //SAKI_COMPARE_IS_MAX_HPP

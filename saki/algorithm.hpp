@@ -4,9 +4,9 @@
 * @author êŒéR óI
 * @date 2019/01/02
 */
-#ifndef SAKI_ALGORITHM_2019_01_02
-#define SAKI_ALGORITHM_2019_01_02
+#ifndef SAKI_ALGORITHM_HPP
+#define SAKI_ALGORITHM_HPP
 
 #include <saki/algorithm/copy.hpp>
 
-#endif //SAKI_ALGORITHM_2019_01_02
+#endif //SAKI_ALGORITHM_HPP

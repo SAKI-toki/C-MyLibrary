@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_TYPE_TRAITS_2019_01_15
-#define SAKI_TYPE_TRAITS_2019_01_15
+#ifndef SAKI_TYPE_TRAITS_HPP
+#define SAKI_TYPE_TRAITS_HPP
 
 #include <saki/type_traits/can_begin_method.hpp>
 #include <saki/type_traits/can_binary_operator.hpp>
@@ -19,4 +19,4 @@
 #include <saki/type_traits/has_variable.hpp>
 #include <saki/type_traits/remove_reference_const.hpp>
 
-#endif //SAKI_TYPE_TRAITS_2019_01_15
+#endif //SAKI_TYPE_TRAITS_HPP

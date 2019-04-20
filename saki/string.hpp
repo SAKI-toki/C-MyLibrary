@@ -4,10 +4,10 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_STRING_2019_01_16
-#define SAKI_STRING_2019_01_16
+#ifndef SAKI_STRING_HPP
+#define SAKI_STRING_HPP
 
 #include <saki/string/alias.hpp>
 #include <saki/string/to_string.hpp>
 
-#endif //SAKI_STRING_2019_01_16
+#endif //SAKI_STRING_HPP

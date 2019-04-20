@@ -4,11 +4,11 @@
 * @author êŒéR óI
 * @date 2019/01/22
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_OSTREAM_2019_01_22
-#define SAKI_TYPE_TRAITS_CAN_OSTREAM_2019_01_22
+#ifndef SAKI_TYPE_TRAITS_CAN_OSTREAM_HPP
+#define SAKI_TYPE_TRAITS_CAN_OSTREAM_HPP
 #include <type_traits>
 #include <utility>
-#include <ostream>
+#include <iostream>
 #include <saki/type_traits/remove_reference_const.hpp>
 namespace saki
 {
@@ -34,4 +34,4 @@ struct can_ostream
 template <typename T>
 static constexpr auto can_ostream_v = saki::can_ostream<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_OSTREAM_2019_01_22
+#endif //SAKI_TYPE_TRAITS_CAN_OSTREAM_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/02
 */
-#ifndef SAKI_MATH_FMOD_2019_01_02
-#define SAKI_MATH_FMOD_2019_01_02
+#ifndef SAKI_MATH_FMOD_HPP
+#define SAKI_MATH_FMOD_HPP
 #include <cstddef>
 #include <type_traits>
 #include <limits>
@@ -64,9 +64,9 @@ constexpr T fmod(T x, T y)
 	*/
 template <typename T1, typename T2>
 constexpr auto fmod(T1 x, T2 y)
-	-> decltype(x * y)
 {
-	return saki::fmod(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
+	using type = std::common_type_t<T1, T2>;
+	return saki::fmod(static_cast<type>(x), static_cast<type>(y));
 }
 } // namespace saki
-#endif //SAKI_MATH_FMOD_2019_01_02
+#endif //SAKI_MATH_FMOD_HPP

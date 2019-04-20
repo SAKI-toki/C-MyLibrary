@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/19
 */
-#ifndef SAKI_MATH_DEGREE_RADIAN_CONVERSION_2019_01_19
-#define SAKI_MATH_DEGREE_RADIAN_CONVERSION_2019_01_19
+#ifndef SAKI_MATH_DEGREE_RADIAN_CONVERSION_HPP
+#define SAKI_MATH_DEGREE_RADIAN_CONVERSION_HPP
 #include <type_traits>
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
@@ -57,4 +57,4 @@ constexpr double to_degree(T rad)
 	return saki::to_degree(static_cast<double>(rad));
 }
 } // namespace saki
-#endif //SAKI_MATH_DEGREE_RADIAN_CONVERSION_2019_01_19
+#endif //SAKI_MATH_DEGREE_RADIAN_CONVERSION_HPP

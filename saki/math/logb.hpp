@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_MATH_LOGB_2019_01_15
-#define SAKI_MATH_LOGB_2019_01_15
+#ifndef SAKI_MATH_LOGB_HPP
+#define SAKI_MATH_LOGB_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
@@ -35,4 +35,4 @@ constexpr double logb(T x)
 	return saki::logb(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_LOGB_2019_01_15
+#endif //SAKI_MATH_LOGB_HPP

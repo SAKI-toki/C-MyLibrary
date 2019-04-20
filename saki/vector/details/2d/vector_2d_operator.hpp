@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/13
 */
-#ifndef SAKI_VECTOR_DETAILS_2D_VECTOR_2D_OPERATOR_2018_12_13
-#define SAKI_VECTOR_DETAILS_2D_VECTOR_2D_OPERATOR_2018_12_13
+#ifndef SAKI_VECTOR_DETAILS_2D_VECTOR_2D_OPERATOR_HPP
+#define SAKI_VECTOR_DETAILS_2D_VECTOR_2D_OPERATOR_HPP
 #include <utility>
 #include <saki/function_object.hpp>
 #include <type_traits>
@@ -125,4 +125,4 @@ template <typename T1, typename T2>
 	return !(v1 == v2);
 }
 } // namespace saki
-#endif //SAKI_VECTOR_DETAILS_2D_VECTOR_2D_OPERATOR_2018_12_13
+#endif //SAKI_VECTOR_DETAILS_2D_VECTOR_2D_OPERATOR_HPP

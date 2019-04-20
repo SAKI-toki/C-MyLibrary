@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/07
 */
-#ifndef SAKI_MATH_POW_2019_01_07
-#define SAKI_MATH_POW_2019_01_07
+#ifndef SAKI_MATH_POW_HPP
+#define SAKI_MATH_POW_HPP
 #include <cstddef>
 #include <limits>
 #include <type_traits>
@@ -145,4 +145,4 @@ constexpr auto pow(T1 x, T2 y)
 	return saki::pow(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
 }
 } // namespace saki
-#endif //SAKI_MATH_POW_2019_01_07
+#endif //SAKI_MATH_POW_HPP

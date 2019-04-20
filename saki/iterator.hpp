@@ -4,10 +4,10 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_ITERATOR_2019_01_16
-#define SAKI_ITERATOR_2019_01_16
+#ifndef SAKI_ITERATOR_HPP
+#define SAKI_ITERATOR_HPP
 
 #include <saki/iterator/iterator.hpp>
 #include <saki/iterator/reverse/reverse_iterator.hpp>
 
-#endif //SAKI_ITERATOR_2019_01_16
+#endif //SAKI_ITERATOR_HPP

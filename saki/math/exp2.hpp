@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/10
 */
-#ifndef SAKI_MATH_EXP2_2019_01_10
-#define SAKI_MATH_EXP2_2019_01_10
+#ifndef SAKI_MATH_EXP2_HPP
+#define SAKI_MATH_EXP2_HPP
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -41,4 +41,4 @@ constexpr double exp2(T x)
 	return saki::exp2(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_EXP2_2019_01_10
+#endif //SAKI_MATH_EXP2_HPP

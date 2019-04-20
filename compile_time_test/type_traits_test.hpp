@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/02/19
 */
-#ifndef SAKI_TYPE_TRAITS_TEST_2019_02_19
-#define SAKI_TYPE_TRAITS_TEST_2019_02_19
+#ifndef SAKI_TYPE_TRAITS_TEST_HPP
+#define SAKI_TYPE_TRAITS_TEST_HPP
 #include <type_traits>
 #include <saki/type_traits.hpp>
 #include <vector>
@@ -27,4 +27,4 @@ static_assert(saki::can_range_based_for_v<std::queue<int>> == false);
 static_assert(saki::can_equal_equal_v<double>);
 static_assert(std::is_same_v<saki::remove_reference_const_t<const int &>, int>);
 
-#endif //SAKI_TYPE_TRAITS_TEST_2019_02_19
+#endif //SAKI_TYPE_TRAITS_TEST_HPP

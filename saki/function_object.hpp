@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/08
 */
-#ifndef SAKI_FUNCTION_OBJECT_2018_11_08
-#define SAKI_FUNCTION_OBJECT_2018_11_08
+#ifndef SAKI_FUNCTION_OBJECT_HPP
+#define SAKI_FUNCTION_OBJECT_HPP
 
 #include <saki/function_object/addition.hpp>
 #include <saki/function_object/division.hpp>
@@ -13,4 +13,4 @@
 #include <saki/function_object/return_param.hpp>
 #include <saki/function_object/subtraction.hpp>
 
-#endif //SAKI_FUNCTION_OBJECT_2018_11_08
+#endif //SAKI_FUNCTION_OBJECT_HPP

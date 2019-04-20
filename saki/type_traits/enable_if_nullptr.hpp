@@ -4,9 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/19
 */
-#pragma once
-#ifndef SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_2019_01_19
-#define SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_2019_01_19
+#ifndef SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_HPP
+#define SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_HPP
 #include <cstddef>
 
 namespace saki
@@ -32,4 +31,4 @@ struct enable_if_nullptr<true>
 template <bool Con>
 using enable_if_nullptr_t = typename enable_if_nullptr<Con>::type;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_2019_01_19
+#endif //SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/19
 */
-#ifndef SAKI_MATH_ABS_2019_01_19
-#define SAKI_MATH_ABS_2019_01_19
+#ifndef SAKI_MATH_ABS_HPP
+#define SAKI_MATH_ABS_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
@@ -37,4 +37,4 @@ constexpr T abs(T x)
 	return x;
 }
 } // namespace saki
-#endif //SAKI_MATH_ABS_2019_01_19
+#endif //SAKI_MATH_ABS_HPP

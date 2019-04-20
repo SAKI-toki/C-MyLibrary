@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_TYPE_TRAITS_FLOAT_CONSTANT_2019_01_15
-#define SAKI_TYPE_TRAITS_FLOAT_CONSTANT_2019_01_15
+#ifndef SAKI_TYPE_TRAITS_FLOAT_CONSTANT_HPP
+#define SAKI_TYPE_TRAITS_FLOAT_CONSTANT_HPP
 #include <cstddef>
 #include <saki/math/digit_count.hpp>
 #include <saki/math/details/pow_n.hpp>
@@ -62,4 +62,4 @@ struct double_constant : public saki::details::float_constant_base<double, Integ
 template <int Integer, size_t Dec, size_t ZeroNum = 0>
 static constexpr double double_constant_v = saki::double_constant<Integer, Dec, ZeroNum>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_FLOAT_CONSTANT_2019_01_15
+#endif //SAKI_TYPE_TRAITS_FLOAT_CONSTANT_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/08
 */
-#ifndef SAKI_MATH_CBRT_2019_01_08
-#define SAKI_MATH_CBRT_2019_01_08
+#ifndef SAKI_MATH_CBRT_HPP
+#define SAKI_MATH_CBRT_HPP
 #include <type_traits>
 #include <limits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -37,4 +37,4 @@ constexpr double cbrt(T x)
 	return saki::cbrt(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_CBRT_2019_01_08
+#endif //SAKI_MATH_CBRT_HPP

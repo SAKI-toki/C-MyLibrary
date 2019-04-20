@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/22
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_2019_01_22
-#define SAKI_TYPE_TRAITS_CAN_COMPARE_2019_01_22
+#ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_HPP
+#define SAKI_TYPE_TRAITS_CAN_COMPARE_HPP
 
 #include <saki/type_traits/can_compare/can_equal_equal.hpp>
 #include <saki/type_traits/can_compare/can_greater.hpp>
@@ -14,4 +14,4 @@
 #include <saki/type_traits/can_compare/can_less_or_equal.hpp>
 #include <saki/type_traits/can_compare/can_not_equal.hpp>
 
-#endif //SAKI_TYPE_TRAITS_CAN_COMPARE_2019_01_22
+#endif //SAKI_TYPE_TRAITS_CAN_COMPARE_HPP

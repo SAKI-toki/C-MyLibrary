@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/18
 */
-#ifndef SAKI_COMPARE_MULTI_EQUAL_2019_01_18
-#define SAKI_COMPARE_MULTI_EQUAL_2019_01_18
+#ifndef SAKI_COMPARE_MULTI_EQUAL_HPP
+#define SAKI_COMPARE_MULTI_EQUAL_HPP
 #include <type_traits>
 #include <saki/type_traits/can_compare/can_equal_equal.hpp>
 
@@ -45,4 +45,4 @@ constexpr bool multi_equal(const First &first, const Args &... args)
 	return saki::impl::multi_equal_impl(first, (args)...);
 }
 } // namespace saki
-#endif //SAKI_COMPARE_MULTI_EQUAL_2019_01_18
+#endif //SAKI_COMPARE_MULTI_EQUAL_HPP

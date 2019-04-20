@@ -4,8 +4,8 @@
 * @author 石山 悠
 * @date 2019/01/13
 */
-#ifndef SAKI_ITERATOR_DETAILS_ITERATOR_BASE_2019_01_13
-#define SAKI_ITERATOR_DETAILS_ITERATOR_BASE_2019_01_13
+#ifndef SAKI_ITERATOR_DETAILS_ITERATOR_BASE_HPP
+#define SAKI_ITERATOR_DETAILS_ITERATOR_BASE_HPP
 #include <saki/iterator/details/iterator_operator.hpp>
 
 namespace saki::details
@@ -22,12 +22,12 @@ class iterator_base
 	template <typename TT>
 	friend constexpr bool operator!=(const iterator_base<TT> &itr1, const iterator_base<TT> &itr2);
 
-  public:
+public:
 	SAKI_TYPE_MACRO(T)
-  protected:
+protected:
 	T *itr;
 
-  public:
+public:
 	/**
 		* @brief ポインタで初期化するコンストラクタ
 		*/
@@ -82,4 +82,4 @@ class iterator_base
 	}
 };
 } // namespace saki::details
-#endif //SAKI_ITERATOR_DETAILS_ITERATOR_BASE_2019_01_13
+#endif //SAKI_ITERATOR_DETAILS_ITERATOR_BASE_HPP

@@ -7,8 +7,8 @@
 /*
 Œˆ‚ß‚ç‚ê‚½”ÍˆÍ‚Åƒ‰ƒ“ƒ_ƒ€‚È’l‚ğæ“¾‚·‚éŠÖ”‚Å‚·
 */
-#ifndef SAKI_RANDOM_RANDOM_2018_11_26
-#define SAKI_RANDOM_RANDOM_2018_11_26
+#ifndef SAKI_RANDOM_RANDOM_HPP
+#define SAKI_RANDOM_RANDOM_HPP
 #include <random>
 #include <cassert> //for assert
 #include <type_traits>
@@ -49,4 +49,4 @@ auto random(const T1 random_min, const T2 random_max)
 	return random(static_cast<type>(random_min), static_cast<type>(random_max));
 }
 } // namespace saki
-#endif //SAKI_RANDOM_RANDOM_2018_11_26
+#endif //SAKI_RANDOM_RANDOM_HPP

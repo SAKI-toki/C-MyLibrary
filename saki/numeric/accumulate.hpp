@@ -8,8 +8,8 @@
 全ての要素を合計（又は指定した演算子）をコンテナクラスと初期値を渡すだけで可能にした
 標準ライブラリではIteratorを渡すので、全てならこっちを使ったほうが良い
 */
-#ifndef SAKI_NUMERIC_ACCUMULATE_2019_01_15
-#define SAKI_NUMERIC_ACCUMULATE_2019_01_15
+#ifndef SAKI_NUMERIC_ACCUMULATE_HPP
+#define SAKI_NUMERIC_ACCUMULATE_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/type_traits/can_range_based_for.hpp>
@@ -39,4 +39,4 @@ constexpr T accumulate(const Container &con, T init = 0, BinaryOperation &&binar
 	return init;
 }
 } // namespace saki
-#endif //SAKI_NUMERIC_ACCUMULATE_2019_01_15
+#endif //SAKI_NUMERIC_ACCUMULATE_HPP

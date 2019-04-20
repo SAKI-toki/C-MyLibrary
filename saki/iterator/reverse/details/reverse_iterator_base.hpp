@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/14
 */
-#ifndef SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_2019_01_14
-#define SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_2019_01_14
+#ifndef SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_HPP
+#define SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_HPP
 #include <saki/iterator/reverse/details/reverse_iterator_operator.hpp>
 
 namespace saki::details
@@ -30,12 +30,12 @@ class reverse_iterator_base
 	template <typename TT>
 	friend constexpr bool operator!=(const reverse_iterator_base<TT> &itr1, const reverse_iterator_base<TT> &itr2);
 
-  public:
+public:
 	//SAKI_TYPE_MACRO(T)
-  protected:
+protected:
 	T itr;
 
-  public:
+public:
 	explicit constexpr reverse_iterator_base(T _itr) : itr(_itr) {}
 	/**
 		* @brief ä‘ê⁄éQè∆ââéZéq
@@ -87,4 +87,4 @@ class reverse_iterator_base
 	}
 };
 } // namespace saki::details
-#endif //SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_2019_01_14
+#endif //SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_BASE_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_MATH_FLOOR_2019_01_15
-#define SAKI_MATH_FLOOR_2019_01_15
+#ifndef SAKI_MATH_FLOOR_HPP
+#define SAKI_MATH_FLOOR_HPP
 #include <cstddef>
 #include <type_traits>
 #include <limits>
@@ -49,4 +49,4 @@ constexpr double floor(T x)
 	return saki::floor(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_FLOOR_2019_01_15
+#endif //SAKI_MATH_FLOOR_HPP

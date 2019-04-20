@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/02
 */
-#ifndef SAKI_MATH_ISNAN_2019_01_02
-#define SAKI_MATH_ISNAN_2019_01_02
+#ifndef SAKI_MATH_ISNAN_HPP
+#define SAKI_MATH_ISNAN_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 
@@ -34,4 +34,4 @@ constexpr bool isnan(T)
 	return false;
 }
 } // namespace saki
-#endif //SAKI_MATH_ISNAN_2019_01_02
+#endif //SAKI_MATH_ISNAN_HPP

@@ -4,9 +4,9 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_NUMERIC_2019_01_16
-#define SAKI_NUMERIC_2019_01_16
+#ifndef SAKI_NUMERIC_HPP
+#define SAKI_NUMERIC_HPP
 
 #include <saki/numeric/accumulate.hpp>
 
-#endif //SAKI_NUMERIC_2019_01_16
+#endif //SAKI_NUMERIC_HPP

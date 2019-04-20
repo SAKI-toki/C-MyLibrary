@@ -30,8 +30,5 @@ void Comment(const Args &... args)
 //main process
 void App()
 {
-	Comment(saki::pow(-1.4, -6));
-	Comment(std::pow(-1.4, -6));
-	Comment(saki::details::pow_n(11.2, 5));
-	Comment(std::pow(11.2, 5));
+	
 }

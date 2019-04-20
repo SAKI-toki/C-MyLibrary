@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/13
 */
-#ifndef SAKI_VECTOR_VECTOR_4D_2018_12_13
-#define SAKI_VECTOR_VECTOR_4D_2018_12_13
+#ifndef SAKI_VECTOR_VECTOR_4D_HPP
+#define SAKI_VECTOR_VECTOR_4D_HPP
 #include <limits>			  //for numeric_limits
 #include <saki/math/sqrt.hpp> //for constexpr_sqrt
 #include <saki/vector/details/4d/vector_4d_operator.hpp>
@@ -274,4 +274,4 @@ constexpr saki::vector4<U> lerp(const saki::vector4<T1> &v1, const saki::vector4
 }
 } // namespace saki
 
-#endif //SAKI_VECTOR_VECTOR_4D_2018_12_13
+#endif //SAKI_VECTOR_VECTOR_4D_HPP

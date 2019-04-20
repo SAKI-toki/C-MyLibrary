@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/23
 */
-#ifndef SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_2018_12_23
-#define SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_2018_12_23
+#ifndef SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_HPP
+#define SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_HPP
 #include <type_traits>
 #include <utility>
 
@@ -32,4 +32,4 @@ struct has_check
 template <typename T>
 static constexpr auto has_check_v = saki::has_check<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_2018_12_23
+#endif //SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_HPP

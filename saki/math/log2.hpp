@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/13
 */
-#ifndef SAKI_MATH_LOG2_2019_01_13
-#define SAKI_MATH_LOG2_2019_01_13
+#ifndef SAKI_MATH_LOG2_HPP
+#define SAKI_MATH_LOG2_HPP
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -42,4 +42,4 @@ constexpr double log2(T x)
 	return saki::log2(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_LOG2_2019_01_13
+#endif //SAKI_MATH_LOG2_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/22
 */
-#ifndef SAKI_STRING_BASE_STRING_BASE_2019_01_22
-#define SAKI_STRING_BASE_STRING_BASE_2019_01_22
+#ifndef SAKI_STRING_BASE_STRING_BASE_HPP
+#define SAKI_STRING_BASE_STRING_BASE_HPP
 #include <cstddef>
 #include <ostream>
 #include <utility>
@@ -178,4 +178,4 @@ constexpr bool operator!=(const saki::string_base<T, N> &str1, const saki::strin
 	return !(str1 == str2);
 }
 } // namespace saki
-#endif //SAKI_STRING_BASE_STRING_BASE_2019_01_22
+#endif //SAKI_STRING_BASE_STRING_BASE_HPP

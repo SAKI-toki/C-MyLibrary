@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/09
 */
-#ifndef SAKI_REVERSE_ITERATOR_OPERATOR_2019_01_09
-#define SAKI_REVERSE_ITERATOR_OPERATOR_2019_01_09
+#ifndef SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_OPERATOR_HPP
+#define SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_OPERATOR_HPP
 
 namespace saki::details
 {
@@ -29,4 +29,4 @@ constexpr bool operator!=(const reverse_iterator_base<T> &itr1, const reverse_it
 	return !(itr1 == itr2);
 }
 } // namespace saki::details
-#endif //SAKI_REVERSE_ITERATOR_OPERATOR_2019_01_09
+#endif //SAKI_ITERATOR_REVERSE_DETAILS_REVERSE_ITERATOR_OPERATOR_HPP

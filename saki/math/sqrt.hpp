@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/11/21
 */
-#ifndef SAKI_MATH_SQRT_2018_11_21
-#define SAKI_MATH_SQRT_2018_11_21
+#ifndef SAKI_MATH_SQRT_HPP
+#define SAKI_MATH_SQRT_HPP
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -55,4 +55,4 @@ template <int N, typename T = double>
 static constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
 }
 } // namespace saki
-#endif //SAKI_MATH_SQRT_2018_11_21
+#endif //SAKI_MATH_SQRT_HPP

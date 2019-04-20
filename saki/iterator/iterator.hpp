@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/09
 */
-#ifndef SAKI_ITERATOR_ITERATOR_2019_01_09
-#define SAKI_ITERATOR_ITERATOR_2019_01_09
+#ifndef SAKI_ITERATOR_ITERATOR_HPP
+#define SAKI_ITERATOR_ITERATOR_HPP
 #include <saki/macro/type_macro.hpp>
 #include <saki/iterator/details/iterator_base.hpp>
 
@@ -17,7 +17,7 @@ namespace saki
 template <typename T>
 class iterator : public saki::details::iterator_base<T>
 {
-  public:
+public:
 	explicit constexpr iterator(T *pointer) : saki::details::iterator_base<T>(pointer) {}
 };
 /**
@@ -26,8 +26,8 @@ class iterator : public saki::details::iterator_base<T>
 template <typename T>
 class const_iterator : public saki::details::iterator_base<const T>
 {
-  public:
+public:
 	explicit constexpr const_iterator(const T *pointer) : saki::details::iterator_base<const T>(pointer) {}
 };
 } // namespace saki
-#endif //SAKI_ITERATOR_ITERATOR_2019_01_09
+#endif //SAKI_ITERATOR_ITERATOR_HPP

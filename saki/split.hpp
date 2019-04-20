@@ -4,9 +4,9 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_SPLIT_2019_01_16
-#define SAKI_SPLIT_2019_01_16
+#ifndef SAKI_SPLIT_HPP
+#define SAKI_SPLIT_HPP
 
 #include <saki/split/split.hpp>
 
-#endif //SAKI_SPLIT_2019_01_16
+#endif //SAKI_SPLIT_HPP

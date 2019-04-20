@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/18
 */
-#ifndef SAKI_MATH_SIGMA_2019_01_18
-#define SAKI_MATH_SIGMA_2019_01_18
+#ifndef SAKI_MATH_SIGMA_HPP
+#define SAKI_MATH_SIGMA_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/function_object/return_param.hpp>
@@ -33,4 +33,4 @@ constexpr T sigma(T start, const T &end, Func &&f = Func())
 	return sum;
 }
 } // namespace saki
-#endif //SAKI_MATH_SIGMA_2019_01_18
+#endif //SAKI_MATH_SIGMA_HPP

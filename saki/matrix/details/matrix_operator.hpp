@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/13
 */
-#ifndef SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_2018_12_13
-#define SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_2018_12_13
+#ifndef SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_HPP
+#define SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_HPP
 #include <utility>
 #include <saki/function_object.hpp>
 
@@ -166,4 +166,4 @@ template <typename T1, typename T2>
 	return !(m1 == m2);
 }
 } // namespace saki
-#endif //SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_2018_12_13
+#endif //SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_HPP

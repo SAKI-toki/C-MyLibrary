@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/28
 */
-#ifndef SAKI_MATH_FIBONACCI_2018_12_28
-#define SAKI_MATH_FIBONACCI_2018_12_28
+#ifndef SAKI_MATH_FIBONACCI_HPP
+#define SAKI_MATH_FIBONACCI_HPP
 #include <cstdint>
 #include <cstddef>
 #include <saki/math/exchange.hpp>
@@ -44,87 +44,87 @@ constexpr T fibonacci()
 template <typename T>
 struct fibonacci_limits
 {
-	static constexpr size_t limit = 0;
+	static constexpr std::size_t limit = 0;
 };
 template <>
 struct fibonacci_limits<float>
 {
-	static constexpr size_t limit = 186;
+	static constexpr std::size_t limit = 186;
 };
 template <>
 struct fibonacci_limits<double>
 {
-	static constexpr size_t limit = 1476;
+	static constexpr std::size_t limit = 1476;
 };
 template <>
 struct fibonacci_limits<long double>
 {
-	static constexpr size_t limit = 1476;
+	static constexpr std::size_t limit = 1476;
 };
 template <>
 struct fibonacci_limits<char>
 {
-	static constexpr size_t limit = 11;
+	static constexpr std::size_t limit = 11;
 };
 template <>
 struct fibonacci_limits<unsigned char>
 {
-	static constexpr size_t limit = 13;
+	static constexpr std::size_t limit = 13;
 };
 template <>
 struct fibonacci_limits<wchar_t>
 {
-	static constexpr size_t limit = 24;
+	static constexpr std::size_t limit = 24;
 };
 template <>
 struct fibonacci_limits<char16_t>
 {
-	static constexpr size_t limit = 24;
+	static constexpr std::size_t limit = 24;
 };
 template <>
 struct fibonacci_limits<char32_t>
 {
-	static constexpr size_t limit = 47;
+	static constexpr std::size_t limit = 47;
 };
 template <>
 struct fibonacci_limits<short>
 {
-	static constexpr size_t limit = 23;
+	static constexpr std::size_t limit = 23;
 };
 template <>
 struct fibonacci_limits<unsigned short>
 {
-	static constexpr size_t limit = 24;
+	static constexpr std::size_t limit = 24;
 };
 template <>
 struct fibonacci_limits<int>
 {
-	static constexpr size_t limit = 46;
+	static constexpr std::size_t limit = 46;
 };
 template <>
 struct fibonacci_limits<unsigned int>
 {
-	static constexpr size_t limit = 47;
+	static constexpr std::size_t limit = 47;
 };
 template <>
 struct fibonacci_limits<long>
 {
-	static constexpr size_t limit = 46;
+	static constexpr std::size_t limit = 46;
 };
 template <>
 struct fibonacci_limits<unsigned long>
 {
-	static constexpr size_t limit = 47;
+	static constexpr std::size_t limit = 47;
 };
 template <>
 struct fibonacci_limits<long long>
 {
-	static constexpr size_t limit = 92;
+	static constexpr std::size_t limit = 92;
 };
 template <>
 struct fibonacci_limits<unsigned long long>
 {
-	static constexpr size_t limit = 93;
+	static constexpr std::size_t limit = 93;
 };
 } // namespace saki
-#endif //SAKI_MATH_FIBONACCI_2018_12_28
+#endif //SAKI_MATH_FIBONACCI_HPP

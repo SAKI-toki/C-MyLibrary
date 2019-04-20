@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_MATH_FREXP_2019_01_15
-#define SAKI_MATH_FREXP_2019_01_15
+#ifndef SAKI_MATH_FREXP_HPP
+#define SAKI_MATH_FREXP_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
@@ -47,4 +47,4 @@ constexpr double frexp(T value, int *exp)
 	return saki::frexp(static_cast<double>(value), exp);
 }
 } // namespace saki
-#endif //SAKI_MATH_FREXP_2019_01_15
+#endif //SAKI_MATH_FREXP_HPP

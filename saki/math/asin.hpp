@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/06
 */
-#ifndef SAKI_MATH_ASIN_2019_01_06
-#define SAKI_MATH_ASIN_2019_01_06
+#ifndef SAKI_MATH_ASIN_HPP
+#define SAKI_MATH_ASIN_HPP
 #include <cstddef>
 #include <limits>
 #include <type_traits>
@@ -68,4 +68,4 @@ constexpr double asin(T x)
 	return saki::asin(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_ASIN_2019_01_06
+#endif //SAKI_MATH_ASIN_HPP

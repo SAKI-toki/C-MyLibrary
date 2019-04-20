@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/06
 */
-#ifndef SAKI_MATH_ACOS_2019_01_06
-#define SAKI_MATH_ACOS_2019_01_06
+#ifndef SAKI_MATH_ACOS_HPP
+#define SAKI_MATH_ACOS_HPP
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -42,4 +42,4 @@ constexpr double acos(T x)
 	return saki::acos(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_ACOS_2019_01_06
+#endif //SAKI_MATH_ACOS_HPP

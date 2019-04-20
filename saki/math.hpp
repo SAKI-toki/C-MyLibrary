@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/02
 */
-#ifndef SAKI_MATH_2019_01_02
-#define SAKI_MATH_2019_01_02
+#ifndef SAKI_MATH_HPP
+#define SAKI_MATH_HPP
 
 #include <saki/math/abs.hpp>
 #include <saki/math/acos.hpp>
@@ -52,4 +52,4 @@
 #include <saki/math/tan.hpp>
 #include <saki/math/tanh.hpp>
 
-#endif //SAKI_MATH_2019_01_02
+#endif //SAKI_MATH_HPP

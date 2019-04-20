@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/06
 */
-#ifndef SAKI_VECTOR_VECTOR_3D_2018_12_06
-#define SAKI_VECTOR_VECTOR_3D_2018_12_06
+#ifndef SAKI_VECTOR_VECTOR_3D_HPP
+#define SAKI_VECTOR_VECTOR_3D_HPP
 #include <limits>			  //for numeric_limits
 #include <saki/math/sqrt.hpp> //for constexpr_sqrt
 #include <saki/vector/details/3d/vector_3d_operator.hpp>
@@ -273,4 +273,4 @@ constexpr saki::vector3<U> lerp(const saki::vector3<T1> &v1, const saki::vector3
 }
 } // namespace saki
 
-#endif //SAKI_VECTOR_VECTOR_3D_2018_12_06
+#endif //SAKI_VECTOR_VECTOR_3D_HPP

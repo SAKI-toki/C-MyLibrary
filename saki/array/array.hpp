@@ -4,8 +4,8 @@
 * @author 石山 悠
 * @date 2019/01/15
 */
-#ifndef SAKI_ARRAY_ARRAY_2019_01_15
-#define SAKI_ARRAY_ARRAY_2019_01_15
+#ifndef SAKI_ARRAY_ARRAY_HPP
+#define SAKI_ARRAY_ARRAY_HPP
 #include <cstddef>
 #include <saki/macro/type_macro.hpp>
 #include <saki/array/details/array_operator.hpp>
@@ -21,12 +21,12 @@ namespace saki
 template <typename T, size_t Size>
 class array
 {
-  public:
+public:
 	SAKI_TYPE_MACRO(T)
-  private:
+private:
 	value_type arr[Size]{};
 
-  public:
+public:
 	/**
 		* @brief 引数なしコンストラクタ
 		* @details 全て0で初期化
@@ -128,9 +128,9 @@ class array
 template <typename T>
 class array<T, 0>
 {
-  public:
+public:
 	SAKI_TYPE_MACRO(T)
-  public:
+public:
 	/**
 		* @brief 引数なしコンストラクタ
 		*/
@@ -139,4 +139,4 @@ class array<T, 0>
 	}
 };
 } // namespace saki
-#endif //SAKI_ARRAY_ARRAY_2019_01_15
+#endif //SAKI_ARRAY_ARRAY_HPP

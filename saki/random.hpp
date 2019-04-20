@@ -4,9 +4,9 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_RANDOM_2019_01_16
-#define SAKI_RANDOM_2019_01_16
+#ifndef SAKI_RANDOM_HPP
+#define SAKI_RANDOM_HPP
 
 #include <saki/random/random.hpp>
 
-#endif //SAKI_RANDOM_2019_01_16
+#endif //SAKI_RANDOM_HPP

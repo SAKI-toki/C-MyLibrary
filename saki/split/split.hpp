@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/23
 */
-#ifndef SAKI_SPLIT_SPLIT_2018_12_23
-#define SAKI_SPLIT_SPLIT_2018_12_23
+#ifndef SAKI_SPLIT_SPLIT_HPP
+#define SAKI_SPLIT_SPLIT_HPP
 #include <string>
 #include <vector>
 #include <type_traits>
@@ -69,4 +69,4 @@ Container<std::string, std::allocator<std::string>> split(const std::string &str
 	return saki::split<Container>(str, saki::MultipleSeparation(first_separation, t...));
 }
 } // namespace saki
-#endif //SAKI_SPLIT_SPLIT_2018_12_23
+#endif //SAKI_SPLIT_SPLIT_HPP

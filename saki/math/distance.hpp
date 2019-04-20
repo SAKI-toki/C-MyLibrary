@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/22
 */
-#ifndef SAKI_MATH_DISTANCE_2019_01_22
-#define SAKI_MATH_DISTANCE_2019_01_22
+#ifndef SAKI_MATH_DISTANCE_HPP
+#define SAKI_MATH_DISTANCE_HPP
 #include <type_traits>
 #include <saki/math/hypot.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -70,4 +70,4 @@ constexpr auto distanceXYZ(const T1 &v1, const T2 &v2)
 		(v1.z - v2.z));
 }
 } // namespace saki
-#endif //SAKI_MATH_DISTANCE_2019_01_22
+#endif //SAKI_MATH_DISTANCE_HPP

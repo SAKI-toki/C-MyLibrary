@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/22
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_2019_01_22
-#define SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_2019_01_22
+#ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_HPP
+#define SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_HPP
 #include <type_traits>
 #include <utility>
 #include <saki/type_traits/remove_reference_const.hpp>
@@ -34,4 +34,4 @@ struct can_not_equal
 template <typename T>
 static constexpr auto can_not_equal_v = saki::can_not_equal<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_2019_01_22
+#endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_HPP

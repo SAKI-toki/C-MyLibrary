@@ -4,8 +4,8 @@
 * @author 石山 悠
 * @date 2018/12/04
 */
-#ifndef SAKI_CLOCK_CLOCK_2018_12_04
-#define SAKI_CLOCK_CLOCK_2018_12_04
+#ifndef SAKI_CLOCK_CLOCK_HPP
+#define SAKI_CLOCK_CLOCK_HPP
 #include <chrono>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -18,13 +18,13 @@ namespace saki
 class clock
 {
 	std::chrono::system_clock::time_point start_time; //開始時間
-  public:
+public:
 	/**
 		* @brief コンストラクタ
 		*/
 	clock() : start_time(std::chrono::system_clock::now()) {}
 
-  public:
+public:
 	enum class DURATION
 	{
 		HOUR,
@@ -95,4 +95,4 @@ class clock
 	}
 };
 } // namespace saki
-#endif //SAKI_CLOCK_CLOCK_2018_12_04
+#endif //SAKI_CLOCK_CLOCK_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/12
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_END_METHOD_2019_01_12
-#define SAKI_TYPE_TRAITS_CAN_END_METHOD_2019_01_12
+#ifndef SAKI_TYPE_TRAITS_CAN_END_METHOD_HPP
+#define SAKI_TYPE_TRAITS_CAN_END_METHOD_HPP
 #include <type_traits>
 #include <utility>
 #include <iterator>
@@ -32,4 +32,4 @@ struct can_end
 template <typename T>
 static constexpr auto can_end_v = saki::can_end<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_END_METHOD_2019_01_12
+#endif //SAKI_TYPE_TRAITS_CAN_END_METHOD_HPP

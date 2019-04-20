@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/13
 */
-#ifndef SAKI_TYPE_TRAITS_BEGIN_METHOD_2018_12_13
-#define SAKI_TYPE_TRAITS_BEGIN_METHOD_2018_12_13
+#ifndef SAKI_TYPE_TRAITS_BEGIN_METHOD_HPP
+#define SAKI_TYPE_TRAITS_BEGIN_METHOD_HPP
 #include <type_traits>
 #include <utility>
 #include <iterator>
@@ -32,4 +32,4 @@ struct can_begin
 template <typename T>
 static constexpr auto can_begin_v = saki::can_begin<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_BEGIN_METHOD_2018_12_13
+#endif //SAKI_TYPE_TRAITS_CAN_BEGIN_METHOD_HPP

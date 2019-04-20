@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/13
 */
-#ifndef SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_2019_01_13
-#define SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_2019_01_13
+#ifndef SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_HPP
+#define SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_HPP
 #include <saki/iterator/reverse/details/reverse_iterator_base.hpp>
 
 namespace saki
@@ -16,7 +16,7 @@ namespace saki
 template <typename T>
 class reverse_iterator : public saki::details::reverse_iterator_base<T>
 {
-  public:
+public:
 	explicit constexpr reverse_iterator(T pointer) : saki::details::reverse_iterator_base<T>(pointer) {}
 };
 /**
@@ -25,8 +25,8 @@ class reverse_iterator : public saki::details::reverse_iterator_base<T>
 template <typename T>
 class const_reverse_iterator : public saki::details::reverse_iterator_base<const T>
 {
-  public:
+public:
 	explicit constexpr const_reverse_iterator(const T pointer) : saki::details::reverse_iterator_base<const T>(pointer) {}
 };
 } // namespace saki
-#endif //SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_2019_01_13
+#endif //SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_HPP

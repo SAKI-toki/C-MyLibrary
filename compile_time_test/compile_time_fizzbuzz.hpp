@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/02/12
 */
-#ifndef SAKI_TEST_FIZZBUZZ_2019_02_12
-#define SAKI_TEST_FIZZBUZZ_2019_02_12
+#ifndef SAKI_TEST_FIZZBUZZ_HPP
+#define SAKI_TEST_FIZZBUZZ_HPP
 #include <cstddef>
 #include <limits>
 #include <saki/string.hpp>
@@ -46,4 +46,4 @@ static_assert(fizzbuzz<12>() == "Fizz");
 static_assert(fizzbuzz<13>() == "13");
 static_assert(fizzbuzz<14>() == "14");
 static_assert(fizzbuzz<15>() == "FizzBuzz");
-#endif //SAKI_TEST_FIZZBUZZ_2019_02_12
+#endif //SAKI_TEST_FIZZBUZZ_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/24
 */
-#ifndef SAKI_ALGORITHM_COPY_2019_01_24
-#define SAKI_ALGORITHM_COPY_2019_01_24
+#ifndef SAKI_ALGORITHM_COPY_HPP
+#define SAKI_ALGORITHM_COPY_HPP
 #include <iterator>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/type_traits/can_range_based_for.hpp>
@@ -39,4 +39,4 @@ constexpr auto copy(const Container1 &con1, Container2 &con2)
 	return con2itr;
 }
 } // namespace saki
-#endif //SAKI_ALGORITHM_COPY_2019_01_24
+#endif //SAKI_ALGORITHM_COPY_HPP

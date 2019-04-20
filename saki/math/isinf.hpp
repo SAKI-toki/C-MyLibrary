@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/08
 */
-#ifndef SAKI_MATH_ISINF_2019_01_08
-#define SAKI_MATH_ISINF_2019_01_08
+#ifndef SAKI_MATH_ISINF_HPP
+#define SAKI_MATH_ISINF_HPP
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -33,4 +33,4 @@ constexpr bool isinf(T)
 	return false;
 }
 } // namespace saki
-#endif //SAKI_MATH_ISINF_2019_01_08
+#endif //SAKI_MATH_ISINF_HPP

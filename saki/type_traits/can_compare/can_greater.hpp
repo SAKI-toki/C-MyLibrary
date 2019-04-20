@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/22
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_2019_01_22
-#define SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_2019_01_22
+#ifndef SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_HPP
+#define SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_HPP
 #include <type_traits>
 #include <utility>
 #include <saki/type_traits/remove_reference_const.hpp>
@@ -34,4 +34,4 @@ struct can_greater
 template <typename T>
 static constexpr auto can_greater_v = saki::can_greater<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_2019_01_22
+#endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_HPP

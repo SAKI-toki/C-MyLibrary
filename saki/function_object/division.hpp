@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/08
 */
-#ifndef SAKI_FUNCTION_OBJECT_DIVISION_2018_12_08
-#define SAKI_FUNCTION_OBJECT_DIVISION_2018_12_08
+#ifndef SAKI_FUNCTION_OBJECT_DIVISION_HPP
+#define SAKI_FUNCTION_OBJECT_DIVISION_HPP
 namespace saki
 {
 /**
@@ -21,4 +21,4 @@ struct division
 	}
 };
 } // namespace saki
-#endif //SAKI_FUNCTION_OBJECT_DIVISION_2018_12_08
+#endif //SAKI_FUNCTION_OBJECT_DIVISION_HPP

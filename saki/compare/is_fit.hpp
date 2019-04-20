@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/21
 */
-#ifndef SAKI_COMPARE_IS_FIT_2019_01_21
-#define SAKI_COMPARE_IS_FIT_2019_01_21
+#ifndef SAKI_COMPARE_IS_FIT_HPP
+#define SAKI_COMPARE_IS_FIT_HPP
 #include <type_traits>
 #include <saki/type_traits/can_compare/can_less_or_equal.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -38,4 +38,4 @@ constexpr bool is_fit(First x, MinType min_n, MaxType max_n)
 	return is_fit(x, static_cast<First>(min_n), static_cast<First>(max_n));
 }
 } // namespace saki
-#endif //SAKI_COMPARE_IS_MAX_2019_01_21
+#endif //SAKI_COMPARE_IS_FIT_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_MATH_LDEXP_2019_01_15
-#define SAKI_MATH_LDEXP_2019_01_15
+#ifndef SAKI_MATH_LDEXP_HPP
+#define SAKI_MATH_LDEXP_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
@@ -36,4 +36,4 @@ constexpr T ldexp(T x, IntegerT exp)
 	return saki::ldexp(x, static_cast<int>(exp));
 }
 } // namespace saki
-#endif //SAKI_MATH_LDEXP_2019_01_15
+#endif //SAKI_MATH_LDEXP_HPP

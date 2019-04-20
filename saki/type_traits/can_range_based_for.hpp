@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/12
 */
-#ifndef SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_2019_01_12
-#define SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_2019_01_12
+#ifndef SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_HPP
+#define SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_HPP
 #include <type_traits>
 #include <utility>
 #include <saki/type_traits/can_begin_method.hpp>
@@ -36,4 +36,4 @@ class can_range_based_for
 template <typename T>
 static constexpr auto can_range_based_for_v = can_range_based_for<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_2019_01_12
+#endif //SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_HPP

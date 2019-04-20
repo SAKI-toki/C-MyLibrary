@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/11/21
 */
-#ifndef SAKI_MATH_EXCHANGE_2018_11_21
-#define SAKI_MATH_EXCHANGE_2018_11_21
+#ifndef SAKI_MATH_EXCHANGE_HPP
+#define SAKI_MATH_EXCHANGE_HPP
 #include <type_traits>
 #include <utility>
 
@@ -24,4 +24,4 @@ constexpr T exchange(T &obj, U &&new_val)
 	return t1;
 }
 } // namespace saki
-#endif //SAKI_MATH_EXCHANGE_2018_11_21
+#endif //SAKI_MATH_EXCHANGE_HPP

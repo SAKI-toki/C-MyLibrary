@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/05
 */
-#ifndef SAKI_MATH_COS_2019_01_05
-#define SAKI_MATH_COS_2019_01_05
+#ifndef SAKI_MATH_COS_HPP
+#define SAKI_MATH_COS_HPP
 #include <cstddef>
 #include <type_traits>
 #include <limits>
@@ -62,4 +62,4 @@ constexpr double cos(T x)
 	return saki::cos(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_COS_2019_01_05
+#endif //SAKI_MATH_COS_HPP

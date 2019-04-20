@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/08
 */
-#ifndef SAKI_MATH_SINH_2019_01_08
-#define SAKI_MATH_SINH_2019_01_08
+#ifndef SAKI_MATH_SINH_HPP
+#define SAKI_MATH_SINH_HPP
 #include <cstddef>
 #include <type_traits>
 #include <limits>
@@ -46,4 +46,4 @@ constexpr double sinh(T x)
 	return saki::sinh(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_SINH_2019_01_08
+#endif //SAKI_MATH_SINH_HPP

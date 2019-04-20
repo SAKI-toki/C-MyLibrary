@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/15
 */
-#ifndef SAKI_MATH_DIGIT_COUNT_2019_01_15
-#define SAKI_MATH_DIGIT_COUNT_2019_01_15
+#ifndef SAKI_MATH_DIGIT_COUNT_HPP
+#define SAKI_MATH_DIGIT_COUNT_HPP
 #include <cstddef>
 #include <type_traits>
 #include <limits>
@@ -34,7 +34,9 @@ constexpr size_t digit_count(T x)
 		x = saki::abs(x);
 	}
 	if (x < 1)
+	{
 		return 1;
+	}
 	size_t count = 0;
 	while (x >= 1)
 	{
@@ -44,4 +46,4 @@ constexpr size_t digit_count(T x)
 	return count;
 }
 } // namespace saki
-#endif //SAKI_MATH_DIGIT_COUNT_2019_01_15
+#endif //SAKI_MATH_DIGIT_COUNT_HPP

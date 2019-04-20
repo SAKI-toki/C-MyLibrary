@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/21
 */
-#ifndef SAKI_COMPARE_IS_MIN_2019_01_21
-#define SAKI_COMPARE_IS_MIN_2019_01_21
+#ifndef SAKI_COMPARE_IS_MIN_HPP
+#define SAKI_COMPARE_IS_MIN_HPP
 #include <type_traits>
 #include <saki/type_traits/can_compare/can_greater.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -46,4 +46,4 @@ constexpr bool is_min(const First &first, const Args &... args)
 	return saki::impl::is_min_impl(first, (args)...);
 }
 } // namespace saki
-#endif //SAKI_COMPARE_IS_MIN_2019_01_21
+#endif //SAKI_COMPARE_IS_MIN_HPP

@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/10/15
 */
-#ifndef SAKI_MATH_PI_2018_10_15
-#define SAKI_MATH_PI_2018_10_15
+#ifndef SAKI_MATH_PI_HPP
+#define SAKI_MATH_PI_HPP
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 
@@ -31,4 +31,4 @@ template <typename T = double,
 		  typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 static constexpr auto PI_QUARTER = static_cast<T>(PI<double> / 4);
 } // namespace saki
-#endif //SAKI_MATH_PI_2018_10_15
+#endif //SAKI_MATH_PI_HPP

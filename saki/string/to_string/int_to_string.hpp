@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/26
 */
-#ifndef SAKI_STRING_TO_STRING_INT_TO_STRING_2019_01_26
-#define SAKI_STRING_TO_STRING_INT_TO_STRING_2019_01_26
+#ifndef SAKI_STRING_TO_STRING_INT_TO_STRING_HPP
+#define SAKI_STRING_TO_STRING_INT_TO_STRING_HPP
 #include <cstddef>
 #include <limits>
 #include <type_traits>
@@ -54,4 +54,4 @@ constexpr StringType int_to_string(Integer x)
 
 } // namespace saki
 
-#endif //SAKI_STRING_TO_STRING_INT_TO_STRING_2019_01_26
+#endif //SAKI_STRING_TO_STRING_INT_TO_STRING_HPP

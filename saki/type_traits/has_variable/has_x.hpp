@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/29
 */
-#ifndef SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_2018_12_23
-#define SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_2018_12_23
+#ifndef SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_HPP
+#define SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_HPP
 #include <type_traits>
 #include <utility>
 #include <saki/type_traits/remove_reference_const.hpp>
@@ -33,4 +33,4 @@ struct has_x
 template <typename T>
 static constexpr auto has_x_v = saki::has_x<T>::value;
 } // namespace saki
-#endif //SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_2018_12_23
+#endif //SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_HPP

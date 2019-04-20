@@ -4,9 +4,9 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_SINGLETON_2019_01_16
-#define SAKI_SINGLETON_2019_01_16
+#ifndef SAKI_SINGLETON_HPP
+#define SAKI_SINGLETON_HPP
 
 #include <saki/singleton/singleton.hpp>
 
-#endif //SAKI_SINGLETON_2019_01_16
+#endif //SAKI_SINGLETON_HPP

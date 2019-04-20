@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/29
 */
-#ifndef SAKI_MATRIX_DETAILS_MATRIX_MATH_2018_12_29
-#define SAKI_MATRIX_DETAILS_MATRIX_MATH_2018_12_29
+#ifndef SAKI_MATRIX_DETAILS_MATRIX_MATH_HPP
+#define SAKI_MATRIX_DETAILS_MATRIX_MATH_HPP
 #include <type_traits>
 #include <saki/vector/vector_2d.hpp>
 #include <saki/vector/vector_3d.hpp>
@@ -159,4 +159,4 @@ constexpr auto rotate_roll_pitch_yaw(T1 roll, T2 pitch, T3 yaw)
 		   saki::rotate_y<type>(pitch);
 }
 } // namespace saki
-#endif //SAKI_MATRIX_DETAILS_MATRIX_MATH_2018_12_29
+#endif //SAKI_MATRIX_DETAILS_MATRIX_MATH_HPP

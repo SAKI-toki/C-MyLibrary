@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2019/01/03
 */
-#ifndef SAKI_MATH_SIN_2019_01_03
-#define SAKI_MATH_SIN_2019_01_03
+#ifndef SAKI_MATH_SIN_HPP
+#define SAKI_MATH_SIN_HPP
 #include <type_traits>
 #include <limits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
@@ -46,4 +46,4 @@ constexpr double sin(T x)
 	return saki::sin(static_cast<double>(x));
 }
 } // namespace saki
-#endif //SAKI_MATH_SIN_2019_01_03
+#endif //SAKI_MATH_SIN_HPP

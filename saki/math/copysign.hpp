@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/09
 */
-#ifndef SAKI_MATH_COPYSIGN_2018_12_09
-#define SAKI_MATH_COPYSIGN_2018_12_09
+#ifndef SAKI_MATH_COPYSIGN_HPP
+#define SAKI_MATH_COPYSIGN_HPP
 #include <limits>
 #include <saki/math/abs.hpp>
 #include <saki/math/isnan.hpp>
@@ -24,4 +24,4 @@ constexpr T copysign(const T &x, const SignType &y)
 	return (y >= 0) ? abs_n : -abs_n;
 }
 } // namespace saki
-#endif //SAKI_MATH_COPYSIGN_2018_12_09
+#endif //SAKI_MATH_COPYSIGN_HPP

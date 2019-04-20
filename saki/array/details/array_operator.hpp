@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/24
 */
-#ifndef SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_2018_12_24
-#define SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_2018_12_24
+#ifndef SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_HPP
+#define SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_HPP
 #include <cstddef>
 
 namespace saki
@@ -35,4 +35,4 @@ constexpr bool operator!=(const array<T, Size> &arr1, const array<T, Size> &arr2
 	return !(arr1 == arr2);
 }
 } // namespace saki
-#endif //SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_2018_12_24
+#endif //SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_HPP

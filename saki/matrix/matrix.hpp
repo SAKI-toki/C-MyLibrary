@@ -4,8 +4,8 @@
 * @author êŒéR óI
 * @date 2018/12/13
 */
-#ifndef SAKI_MATRIX_MATRIX_2018_12_13
-#define SAKI_MATRIX_MATRIX_2018_12_13
+#ifndef SAKI_MATRIX_MATRIX_HPP
+#define SAKI_MATRIX_MATRIX_HPP
 #include <cstddef>
 #include <type_traits>
 #include <saki/matrix/details/matrix_operator.hpp>
@@ -231,4 +231,4 @@ static constexpr saki::matrix<T> matrix_identity{
 	static_cast<T>(0), static_cast<T>(0), static_cast<T>(1), static_cast<T>(0),
 	static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1)};
 } // namespace saki
-#endif //SAKI_MATRIX_MATRIX_2018_12_13
+#endif //SAKI_MATRIX_MATRIX_HPP

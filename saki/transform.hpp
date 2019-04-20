@@ -4,9 +4,9 @@
 * @author êŒéR óI
 * @date 2019/01/16
 */
-#ifndef SAKI_TRANSFORM_2019_01_16
-#define SAKI_TRANSFORM_2019_01_16
+#ifndef SAKI_TRANSFORM_HPP
+#define SAKI_TRANSFORM_HPP
 
 #include <saki/transform/transform.hpp>
 
-#endif //SAKI_TRANSFORM_2019_01_16
+#endif //SAKI_TRANSFORM_HPP
