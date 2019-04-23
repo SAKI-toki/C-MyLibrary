@@ -4,7 +4,7 @@ var searchData=
   ['matrix_5fmatrix_5fsome_5foperator',['matrix_matrix_some_operator',['../namespacesaki_1_1details.html#a95cd387e134b1b940cde0b171926e01e',1,'saki::details']]],
   ['matrix_5fscalar_5fsome_5foperator',['matrix_scalar_some_operator',['../namespacesaki_1_1details.html#aa3d3214e16ce99b6f4aca7d61d41077f',1,'saki::details']]],
   ['move',['move',['../classsaki_1_1transform.html#a24a42ef2114b77f0e4520b693d677d60',1,'saki::transform::move(const saki::vector3&lt; T &gt; &amp;pos)'],['../classsaki_1_1transform.html#aad46d5a8b608aa9d94fd29a1fe4d5609',1,'saki::transform::move(const T &amp;x, const T &amp;y, const T &amp;z)']]],
-  ['multi_5fequal',['multi_equal',['../namespacesaki.html#aa15664a63445d3539b40b774e556a45b',1,'saki']]],
-  ['multi_5fequal_5fimpl',['multi_equal_impl',['../namespacesaki_1_1impl.html#ac271639854025a923addee4879780f96',1,'saki::impl::multi_equal_impl(const T &amp;)'],['../namespacesaki_1_1impl.html#a45c9f8730634f6b621bca7d8dc73e43d',1,'saki::impl::multi_equal_impl(const First &amp;first, Second second, const Args &amp;...args)']]],
-  ['multipleseparation',['MultipleSeparation',['../classsaki_1_1_multiple_separation.html#a5dd228278057afbf2f1779891de59c63',1,'saki::MultipleSeparation']]]
+  ['multi_5fequal',['multi_equal',['../namespacesaki.html#a098cd355949dd93ffdaf620f0fc7e236',1,'saki']]],
+  ['multi_5fequal_5fimpl',['multi_equal_impl',['../namespacesaki_1_1impl.html#ac271639854025a923addee4879780f96',1,'saki::impl::multi_equal_impl(const T &amp;)'],['../namespacesaki_1_1impl.html#a45ac6c0cbcb74e4c612f3b66352defff',1,'saki::impl::multi_equal_impl(const First &amp;first, Second second, const Args &amp;... args)']]],
+  ['multipleseparation',['MultipleSeparation',['../classsaki_1_1_multiple_separation.html#a675790ff761017d604ecf0e56edb79aa',1,'saki::MultipleSeparation']]]
 ];

@@ -1,0 +1,37 @@
+\hypertarget{fmod_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/fmod.hpp ファイル}
+\label{fmod_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/fmod.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/fmod.\+hpp}}
+
+
+コンパイル時float,double剰余  
+
+
+{\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/signbit.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+hpp$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a8a7b926b9d370e4a9aed84579675222c}{saki\+::fmod}} (T x, T y)
+\begin{DoxyCompactList}\small\item\em コンパイル時float,double剰余 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a258bf6b0db67891f24b056905ac93591}{saki\+::fmod}} (T1 x, T2 y)
+\begin{DoxyCompactList}\small\item\em 型が違う場合はそろえる \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+コンパイル時float,double剰余 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/02 
+\end{DoxyDate}

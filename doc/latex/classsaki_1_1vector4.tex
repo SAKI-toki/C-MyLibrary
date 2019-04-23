@@ -7,7 +7,7 @@
 
 
 
-{\ttfamily \#include $<$vector\+\_\+4d\+\_\+operator.\+h$>$}
+{\ttfamily \#include $<$vector\+\_\+4d\+\_\+operator.\+hpp$>$}
 
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
@@ -16,8 +16,6 @@ constexpr \mbox{\hyperlink{classsaki_1_1vector4_a79dd4b2f31976d739dd7c6a3a799cd5
 \begin{DoxyCompactList}\small\item\em 引数なしコンストラクタ \end{DoxyCompactList}\item 
 constexpr \mbox{\hyperlink{classsaki_1_1vector4_a49fe2f8b17fc93ffb433fcceec620ae0}{vector4}} (const\+\_\+reference \+\_\+x, const\+\_\+reference \+\_\+y, const\+\_\+reference \+\_\+z, const\+\_\+reference \+\_\+w)
 \begin{DoxyCompactList}\small\item\em 引数ありコンストラクタ \end{DoxyCompactList}\item 
-constexpr \mbox{\hyperlink{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa13}{vector4}} (const\+\_\+pointer const pointer)
-\begin{DoxyCompactList}\small\item\em 生配列からの初期化 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classsaki_1_1vector4_a48d6b2d19c4bdf4a909d5017e7fb9aaa}{vector4}} (const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&)=default
 \item 
 \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1vector4_a0fba7bd5e55de03aca8c11a952e7217f}{operator=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&)=default
@@ -25,6 +23,8 @@ constexpr \mbox{\hyperlink{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa1
 \mbox{\hyperlink{classsaki_1_1vector4_ab122c461e9e6e775f981d6c197c43fe1}{vector4}} (\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&) noexcept=default
 \item 
 \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1vector4_a6e841a2c8d0467586902a4fc0fa6b9a4}{operator=}} (\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{classsaki_1_1vector4_ad73b902c393f8a7271b491734369ba97}{$\sim$vector4}} () noexcept=default
 \item 
 {\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\constexpr auto \mbox{\hyperlink{classsaki_1_1vector4_a2109bee349eec6cba816718ecae33070}{operator+=}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ U $>$ \&other)
 \begin{DoxyCompactList}\small\item\em +=演算子 \end{DoxyCompactList}\item 
@@ -79,7 +79,7 @@ class saki\+::vector4$<$ T $>$}
 \mbox{\Hypertarget{classsaki_1_1vector4_a79dd4b2f31976d739dd7c6a3a799cd5b}\label{classsaki_1_1vector4_a79dd4b2f31976d739dd7c6a3a799cd5b}} 
 \index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
 \index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
-\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -90,7 +90,7 @@ constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\
 全て0で初期化 \mbox{\Hypertarget{classsaki_1_1vector4_a49fe2f8b17fc93ffb433fcceec620ae0}\label{classsaki_1_1vector4_a49fe2f8b17fc93ffb433fcceec620ae0}} 
 \index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
 \index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
-\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{const\+\_\+reference}]{\+\_\+x,  }\item[{const\+\_\+reference}]{\+\_\+y,  }\item[{const\+\_\+reference}]{\+\_\+z,  }\item[{const\+\_\+reference}]{\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
@@ -109,35 +109,26 @@ constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\
 {\em \+\_\+w} & wの初期値 \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa13}\label{classsaki_1_1vector4_aa69cd330294e32dc53466b100532aa13}} 
-\index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
-\index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
-\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
-{\footnotesize\ttfamily template$<$typename T$>$ \\
-constexpr \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{const\+\_\+pointer const}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
-
-
-
-生配列からの初期化 
-
-
-\begin{DoxyParams}{引数}
-{\em pointer} & 配列のポインタ \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{classsaki_1_1vector4_a48d6b2d19c4bdf4a909d5017e7fb9aaa}\label{classsaki_1_1vector4_a48d6b2d19c4bdf4a909d5017e7fb9aaa}} 
 \index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
 \index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
-\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classsaki_1_1vector4_ab122c461e9e6e775f981d6c197c43fe1}\label{classsaki_1_1vector4_ab122c461e9e6e775f981d6c197c43fe1}} 
 \index{saki\+::vector4@{saki\+::vector4}!vector4@{vector4}}
 \index{vector4@{vector4}!saki\+::vector4@{saki\+::vector4}}
-\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+\subsubsection{\texorpdfstring{vector4()}{vector4()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1vector4}{vector4}}$<$ value\+\_\+type $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classsaki_1_1vector4_ad73b902c393f8a7271b491734369ba97}\label{classsaki_1_1vector4_ad73b902c393f8a7271b491734369ba97}} 
+\index{saki\+::vector4@{saki\+::vector4}!````~vector4@{$\sim$vector4}}
+\index{````~vector4@{$\sim$vector4}!saki\+::vector4@{saki\+::vector4}}
+\subsubsection{\texorpdfstring{$\sim$vector4()}{~vector4()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classsaki_1_1vector4}{vector4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
 
 
 
@@ -362,5 +353,5 @@ value\+\_\+type \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/details/4d/\mbox{\hyperlink{vector__4d__operator_8h}{vector\+\_\+4d\+\_\+operator.\+h}}\item 
-C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/\mbox{\hyperlink{vector__4d_8h}{vector\+\_\+4d.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/details/4d/\mbox{\hyperlink{vector__4d__operator_8hpp}{vector\+\_\+4d\+\_\+operator.\+hpp}}\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/\mbox{\hyperlink{vector__4d_8hpp}{vector\+\_\+4d.\+hpp}}\end{DoxyCompactItemize}

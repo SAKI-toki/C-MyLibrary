@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/type_traits.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">type_traits.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="type__traits_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SAKI_TYPE_TRAITS_HPP</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SAKI_TYPE_TRAITS_HPP</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="can__begin__method_8hpp.html">saki/type_traits/can_begin_method.hpp</a>&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="can__binary__operator_8hpp.html">saki/type_traits/can_binary_operator.hpp</a>&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="can__compare_8hpp.html">saki/type_traits/can_compare.hpp</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="can__end__method_8hpp.html">saki/type_traits/can_end_method.hpp</a>&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="can__ostream_8hpp.html">saki/type_traits/can_ostream.hpp</a>&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="can__range__based__for_8hpp.html">saki/type_traits/can_range_based_for.hpp</a>&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="enable__if__nullptr_8hpp.html">saki/type_traits/enable_if_nullptr.hpp</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="float__constant_8hpp.html">saki/type_traits/float_constant.hpp</a>&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="has__check__method_8hpp.html">saki/type_traits/has_check_method.hpp</a>&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="has__variable_8hpp.html">saki/type_traits/has_variable.hpp</a>&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="remove__reference__const_8hpp.html">saki/type_traits/remove_reference_const.hpp</a>&gt;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif //SAKI_TYPE_TRAITS_HPP</span></div><div class="ttc" id="has__variable_8hpp_html"><div class="ttname"><a href="has__variable_8hpp.html">has_variable.hpp</a></div><div class="ttdoc">指定した型が特定の変数を持っているかどうか判定するメタ関数の簡易インクルード </div></div>
+<div class="ttc" id="remove__reference__const_8hpp_html"><div class="ttname"><a href="remove__reference__const_8hpp.html">remove_reference_const.hpp</a></div><div class="ttdoc">参照とconst修飾を削除した型を返す </div></div>
+<div class="ttc" id="can__end__method_8hpp_html"><div class="ttname"><a href="can__end__method_8hpp.html">can_end_method.hpp</a></div><div class="ttdoc">指定した型がstd::endできるかどうか判定するメタ関数 </div></div>
+<div class="ttc" id="has__check__method_8hpp_html"><div class="ttname"><a href="has__check__method_8hpp.html">has_check_method.hpp</a></div><div class="ttdoc">指定した型がcheck関数を持っているかどうか判定するメタ関数 </div></div>
+<div class="ttc" id="can__binary__operator_8hpp_html"><div class="ttname"><a href="can__binary__operator_8hpp.html">can_binary_operator.hpp</a></div><div class="ttdoc">指定した型が二項演算子のオーバーロードをしているかどうか判定するメタ関数の簡易インクルード ...</div></div>
+<div class="ttc" id="can__range__based__for_8hpp_html"><div class="ttname"><a href="can__range__based__for_8hpp.html">can_range_based_for.hpp</a></div><div class="ttdoc">範囲ベースfor文に利用できる型がどうか判定するメタ関数 </div></div>
+<div class="ttc" id="can__begin__method_8hpp_html"><div class="ttname"><a href="can__begin__method_8hpp.html">can_begin_method.hpp</a></div><div class="ttdoc">指定した型がstd::beginできるかどうか判定するメタ関数 </div></div>
+<div class="ttc" id="can__ostream_8hpp_html"><div class="ttname"><a href="can__ostream_8hpp.html">can_ostream.hpp</a></div><div class="ttdoc">指定した型がostream演算子をオーバーロードしているかどうか判定する(正確にはcout) </div></div>
+<div class="ttc" id="can__compare_8hpp_html"><div class="ttname"><a href="can__compare_8hpp.html">can_compare.hpp</a></div><div class="ttdoc">指定した型が比較演算子のオーバーロードをしているかどうか判定するメタ関数の簡易インクルード ...</div></div>
+<div class="ttc" id="enable__if__nullptr_8hpp_html"><div class="ttname"><a href="enable__if__nullptr_8hpp.html">enable_if_nullptr.hpp</a></div><div class="ttdoc">nullptr_tを返すenabled_if </div></div>
+<div class="ttc" id="float__constant_8hpp_html"><div class="ttname"><a href="float__constant_8hpp.html">float_constant.hpp</a></div><div class="ttdoc">浮動小数点型の定数を表す型 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

@@ -1,0 +1,59 @@
+\hypertarget{matrix__operator_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+operator.hpp ファイル}
+\label{matrix__operator_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+operator.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+operator.\+hpp}}
+
+
+matrixクラスの演算子  
+
+
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$saki/function\+\_\+object.\+hpp$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\item 
+ \mbox{\hyperlink{namespacesaki_1_1details}{saki\+::details}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_a95cd387e134b1b940cde0b171926e01e}{saki\+::details\+::matrix\+\_\+matrix\+\_\+some\+\_\+operator}} (const matrix$<$ T1 $>$ \&m1, const matrix$<$ T2 $>$ \&m2, const Func \&f)
+\begin{DoxyCompactList}\small\item\em 行列同士の演算(+と-\/) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename Func $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_1_1details_aa3d3214e16ce99b6f4aca7d61d41077f}{saki\+::details\+::matrix\+\_\+scalar\+\_\+some\+\_\+operator}} (const matrix$<$ T1 $>$ \&m, const T2 \&scalar, const Func \&f)
+\begin{DoxyCompactList}\small\item\em 行列とスカラの演算 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a10eb3090250dfcb43dd1c7579b6b473c}{saki\+::operator+}} (const matrix$<$ T1 $>$ \&m1, const matrix$<$ T2 $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em +演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_aa7474901f1f0d3a80142ed713b75ed5e}{saki\+::operator-\/}} (const matrix$<$ T1 $>$ \&m1, const matrix$<$ T2 $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em -\/演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a8ec94b07795582554759e6f844b6055f}{saki\+::operator$\ast$}} (const matrix$<$ T1 $>$ \&m, const T2 \&scalar)
+\begin{DoxyCompactList}\small\item\em $\ast$演算子(行列$\ast$スカラ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_acc7d16324180fd378c3636f9bd961d20}{saki\+::operator$\ast$}} (const T1 \&scalar, const matrix$<$ T2 $>$ \&m)
+\begin{DoxyCompactList}\small\item\em $\ast$演算子(スカラ$\ast$行列) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae7d9d53f473cbaa176e97500ea9ee491}{saki\+::operator$\ast$}} (const matrix$<$ T1 $>$ \&m1, const matrix$<$ T2 $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em $\ast$演算子(行列$\ast$行列) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ac69ad44a115a64e5874921344c34d62e}{saki\+::operator/}} (const matrix$<$ T1 $>$ \&m, const T2 \&scalar)
+\begin{DoxyCompactList}\small\item\em /演算子(スカラ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a67e5e15cae6e9152e0bd5ac2e1705da4}{saki\+::operator==}} (const matrix$<$ T $>$ \&m1, const matrix$<$ T $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em ==演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a76722addb100e11d9eb9370ced3b027c}{saki\+::operator!=}} (const matrix$<$ T $>$ \&m1, const matrix$<$ T $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em !=演算子 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a1ffbf8122dda5209dc384e64747bec32}{saki\+::operator==}} (const matrix$<$ T1 $>$ \&m1, const matrix$<$ T2 $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em ==演算子(型不一致) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a4bef07cf55a40a115c89e6e20406b124}{saki\+::operator!=}} (const matrix$<$ T1 $>$ \&m1, const matrix$<$ T2 $>$ \&m2)
+\begin{DoxyCompactList}\small\item\em !=演算子(型不一致) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+matrixクラスの演算子 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2018/12/13 
+\end{DoxyDate}

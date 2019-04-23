@@ -1,0 +1,57 @@
+\hypertarget{matrix__math_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+math.hpp ファイル}
+\label{matrix__math_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+math.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/matrix\+\_\+math.\+hpp}}
+
+
+行列関係の計算関数  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/vector/vector\+\_\+2d.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/vector/vector\+\_\+3d.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/vector/vector\+\_\+4d.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/sin.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/cos.\+hpp$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a2311e77a2bed9d914a6b3e8056d6023a}{saki\+::translate}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 平行移動 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a492418470fa4dedb2065e7916460f0e0}{saki\+::translate}} (const \mbox{\hyperlink{classsaki_1_1vector3}{saki\+::vector3}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 平行移動 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_abdd23c2e56d1500ae2e8b662c5ddcf7c}{saki\+::translate}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 平行移動 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_abda5ab30bf4dc9240857d62d56e590f9}{saki\+::scaling}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_affcd920fe27abc17e5fa50f04bfabe05}{saki\+::scaling}} (const \mbox{\hyperlink{classsaki_1_1vector3}{saki\+::vector3}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_aededd0f357c48d1e96af77b06cb3e786}{saki\+::scaling}} (const \mbox{\hyperlink{classsaki_1_1vector4}{saki\+::vector4}}$<$ T $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em 拡縮 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a1a0f91a98432f3bbfe95892d3b547c1a}{saki\+::rotate\+\_\+x}} (T angle)
+\begin{DoxyCompactList}\small\item\em X軸の回転 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a0d794fa366b6fdf189b5b242730d020e}{saki\+::rotate\+\_\+y}} (T angle)
+\begin{DoxyCompactList}\small\item\em Y軸の回転 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr matrix$<$ T $>$ \mbox{\hyperlink{namespacesaki_a0dcbd0c8e630d947ba6f0c6e0875d552}{saki\+::rotate\+\_\+z}} (T angle)
+\begin{DoxyCompactList}\small\item\em Z軸の回転 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a1e89f783c61c36d9885c70d966218dc0}{saki\+::rotate\+\_\+roll\+\_\+pitch\+\_\+yaw}} (T1 roll, T2 pitch, T3 yaw)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+行列関係の計算関数 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2018/12/29 
+\end{DoxyDate}

@@ -1,0 +1,44 @@
+\hypertarget{vector__2d_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/vector\+\_\+2d.hpp ファイル}
+\label{vector__2d_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/vector\+\_\+2d.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/vector/vector\+\_\+2d.\+hpp}}
+
+
+2次元でのベクトル  
+
+
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$saki/math/sqrt.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/vector/details/2d/vector\+\_\+2d\+\_\+operator.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/macro/type\+\_\+macro.\+hpp$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 2次元でのベクトル \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U  = double, typename T $>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ U $>$ \mbox{\hyperlink{namespacesaki_a0ca208fb45c585d9cd23276fb91e40ee}{saki\+::normalize}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T $>$ \&v)
+\begin{DoxyCompactList}\small\item\em 正規化 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a820a45ae402c8447bce4fee36a1f7d62}{saki\+::dot}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 内積 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 $>$ }\\constexpr U \mbox{\hyperlink{namespacesaki_a457d78ffe360e1d8a78d14ec5dab38f2}{saki\+::cross}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T2 $>$ \&v2)
+\begin{DoxyCompactList}\small\item\em 外積 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U  = double, typename T1 , typename T2 , typename T  = double$>$ }\\constexpr \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ U $>$ \mbox{\hyperlink{namespacesaki_aca2e4449261f40ee6f47abc49844e66c}{saki\+::lerp}} (const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T1 $>$ \&v1, const \mbox{\hyperlink{classsaki_1_1vector2}{saki\+::vector2}}$<$ T2 $>$ \&v2, const T \&t, const T \&base=1)
+\begin{DoxyCompactList}\small\item\em 線形補間 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+2次元でのベクトル 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2018/12/13 
+\end{DoxyDate}

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/math/tanh.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_ae4a5735452271545d05003c488c30f4.html">math</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">tanh.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="tanh_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SAKI_MATH_TANH_HPP</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SAKI_MATH_TANH_HPP</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="enable__if__nullptr_8hpp.html">saki/type_traits/enable_if_nullptr.hpp</a>&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="isnan_8hpp.html">saki/math/isnan.hpp</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="isinf_8hpp.html">saki/math/isinf.hpp</a>&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="copysign_8hpp.html">saki/math/copysign.hpp</a>&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="sinh_8hpp.html">saki/math/sinh.hpp</a>&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="cosh_8hpp.html">saki/math/cosh.hpp</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki.html">saki</a></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          <span class="keyword">typename</span> <a class="code" href="namespacesaki.html#a4c362f5119aac94085eab0bf794facf7">saki::enable_if_nullptr_t&lt;std::is_floating_point_v&lt;T&gt;</a>&gt; = <span class="keyword">nullptr</span>&gt;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacesaki.html#af2674216630169ce211f8076492ce14e">   25</a></span>&#160;constexpr T <a class="code" href="namespacesaki.html#af2674216630169ce211f8076492ce14e">tanh</a>(T x)</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacesaki.html#a446ca3f39e4dc8e57db4aafa03a4e232">saki::isnan</a>(x) || x == 0)</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> x;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacesaki.html#a2168418bb30a857d2d018d0d05c7ace0">saki::isinf</a>(x))</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>T<span class="keyword">&gt;</span>(<a class="code" href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">saki::copysign</a>(1, x));</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacesaki.html#abe1ef6db83d59a5eb2daac9bff09d312">saki::sinh</a>(x) / <a class="code" href="namespacesaki.html#a0f8167af6da5c9eb510d33dadae13708">saki::cosh</a>(x);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T,</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keyword">typename</span> <a class="code" href="namespacesaki.html#a4c362f5119aac94085eab0bf794facf7">saki::enable_if_nullptr_t&lt;std::is_integral_v&lt;T&gt;</a>&gt; = <span class="keyword">nullptr</span>&gt;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="namespacesaki.html#a5faf83bc9a4a7e981275deba551d2f3f">   39</a></span>&#160;constexpr <span class="keywordtype">double</span> <a class="code" href="namespacesaki.html#af2674216630169ce211f8076492ce14e">tanh</a>(T x)</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacesaki.html#af2674216630169ce211f8076492ce14e">saki::tanh</a>(static_cast&lt;double&gt;(x));</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// namespace saki</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif //SAKI_MATH_TANH_HPP</span></div><div class="ttc" id="namespacesaki_html_a0f8167af6da5c9eb510d33dadae13708"><div class="ttname"><a href="namespacesaki.html#a0f8167af6da5c9eb510d33dadae13708">saki::cosh</a></div><div class="ttdeci">constexpr T cosh(T x)</div><div class="ttdoc">コンパイル時cosh </div><div class="ttdef"><b>Definition:</b> cosh.hpp:25</div></div>
+<div class="ttc" id="namespacesaki_html_a2168418bb30a857d2d018d0d05c7ace0"><div class="ttname"><a href="namespacesaki.html#a2168418bb30a857d2d018d0d05c7ace0">saki::isinf</a></div><div class="ttdeci">constexpr bool isinf(T x)</div><div class="ttdoc">コンパイル時isinf </div><div class="ttdef"><b>Definition:</b> isinf.hpp:20</div></div>
+<div class="ttc" id="namespacesaki_html_a8bab6303ac2144b883080f04ebe26a0e"><div class="ttname"><a href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">saki::copysign</a></div><div class="ttdeci">constexpr T copysign(const T &amp;x, const SignType &amp;y)</div><div class="ttdoc">コンパイル時符号コピー </div><div class="ttdef"><b>Definition:</b> copysign.hpp:21</div></div>
+<div class="ttc" id="namespacesaki_html_a4c362f5119aac94085eab0bf794facf7"><div class="ttname"><a href="namespacesaki.html#a4c362f5119aac94085eab0bf794facf7">saki::enable_if_nullptr_t</a></div><div class="ttdeci">typename enable_if_nullptr&lt; Con &gt;::type enable_if_nullptr_t</div><div class="ttdoc">enable_if_nullptrを簡単に呼び出せる変数 </div><div class="ttdef"><b>Definition:</b> enable_if_nullptr.hpp:32</div></div>
+<div class="ttc" id="cosh_8hpp_html"><div class="ttname"><a href="cosh_8hpp.html">cosh.hpp</a></div><div class="ttdoc">コンパイル時cosh </div></div>
+<div class="ttc" id="isnan_8hpp_html"><div class="ttname"><a href="isnan_8hpp.html">isnan.hpp</a></div><div class="ttdoc">Not a Numberかどうか判定する関数 </div></div>
+<div class="ttc" id="namespacesaki_html_abe1ef6db83d59a5eb2daac9bff09d312"><div class="ttname"><a href="namespacesaki.html#abe1ef6db83d59a5eb2daac9bff09d312">saki::sinh</a></div><div class="ttdeci">constexpr T sinh(T x)</div><div class="ttdoc">コンパイル時sinh </div><div class="ttdef"><b>Definition:</b> sinh.hpp:25</div></div>
+<div class="ttc" id="copysign_8hpp_html"><div class="ttname"><a href="copysign_8hpp.html">copysign.hpp</a></div><div class="ttdoc">コンパイル時符号コピー </div></div>
+<div class="ttc" id="isinf_8hpp_html"><div class="ttname"><a href="isinf_8hpp.html">isinf.hpp</a></div><div class="ttdoc">コンパイル時isinf </div></div>
+<div class="ttc" id="namespacesaki_html_af2674216630169ce211f8076492ce14e"><div class="ttname"><a href="namespacesaki.html#af2674216630169ce211f8076492ce14e">saki::tanh</a></div><div class="ttdeci">constexpr T tanh(T x)</div><div class="ttdoc">コンパイル時tanh </div><div class="ttdef"><b>Definition:</b> tanh.hpp:25</div></div>
+<div class="ttc" id="namespacesaki_html"><div class="ttname"><a href="namespacesaki.html">saki</a></div><div class="ttdef"><b>Definition:</b> copy.hpp:13</div></div>
+<div class="ttc" id="namespacesaki_html_a446ca3f39e4dc8e57db4aafa03a4e232"><div class="ttname"><a href="namespacesaki.html#a446ca3f39e4dc8e57db4aafa03a4e232">saki::isnan</a></div><div class="ttdeci">constexpr bool isnan(T x)</div><div class="ttdoc">Not a Numberかどうか判定 </div><div class="ttdef"><b>Definition:</b> isnan.hpp:21</div></div>
+<div class="ttc" id="sinh_8hpp_html"><div class="ttname"><a href="sinh_8hpp.html">sinh.hpp</a></div><div class="ttdoc">コンパイル時sinh </div></div>
+<div class="ttc" id="enable__if__nullptr_8hpp_html"><div class="ttname"><a href="enable__if__nullptr_8hpp.html">enable_if_nullptr.hpp</a></div><div class="ttdoc">nullptr_tを返すenabled_if </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

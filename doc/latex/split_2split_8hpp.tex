@@ -1,0 +1,21 @@
+\hypertarget{split_2split_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/split/split.hpp ファイル}
+\label{split_2split_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/split/split.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/split/split.\+hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/split/details/multiple\+\_\+separation.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/split/details/not\+\_\+equal\+\_\+separation.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/has\+\_\+check\+\_\+method.\+hpp$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$template$<$ typename, typename $>$ typename Container = std\+::vector, typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ saki\+::has\+\_\+check\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\Container$<$ std\+::string, std\+::allocator$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacesaki_ad15185db28f6e77d65411ca83f64f5bb}{saki\+::split}} (const std\+::string \&str, T \&\&split\+\_\+separation)
+\begin{DoxyCompactList}\small\item\em string型を指定された文字で区切ったものをvectorで返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename $>$ typename Container = std\+::vector, typename First , typename... T$>$ }\\Container$<$ std\+::string, std\+::allocator$<$ std\+::string $>$ $>$ \mbox{\hyperlink{namespacesaki_a937a85e91730e4bb6fb84a9f1027d205}{saki\+::split}} (const std\+::string \&str, First first\+\_\+separation, T... t)
+\begin{DoxyCompactList}\small\item\em string型を指定された文字で区切ったものをvectorで返す \end{DoxyCompactList}\end{DoxyCompactItemize}

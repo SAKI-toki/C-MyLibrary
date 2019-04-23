@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/iterator/reverse/reverse_iterator.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_e73a7dbaa2a9dbf7e876af5c85427847.html">iterator</a></li><li class="navelem"><a class="el" href="dir_d209234ba21a3030c6a0878cf7565732.html">reverse</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">reverse_iterator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="reverse__iterator_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_HPP</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_HPP</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="reverse__iterator__base_8hpp.html">saki/iterator/reverse/details/reverse_iterator_base.hpp</a>&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki.html">saki</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classsaki_1_1reverse__iterator.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsaki_1_1reverse__iterator.html">reverse_iterator</a> : <span class="keyword">public</span> <a class="code" href="classsaki_1_1details_1_1reverse__iterator__base.html">saki::details::reverse_iterator_base</a>&lt;T&gt;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classsaki_1_1reverse__iterator.html#aed4bbf5a55d71b1f95e2a24d5dc88158">   20</a></span>&#160;    <span class="keyword">explicit</span> constexpr <a class="code" href="classsaki_1_1reverse__iterator.html#aed4bbf5a55d71b1f95e2a24d5dc88158">reverse_iterator</a>(T pointer) : <a class="code" href="namespacesaki.html">saki</a>::details::<a class="code" href="classsaki_1_1details_1_1reverse__iterator__base.html#accf1bbae68adfab1bf6e88927e3bc453">reverse_iterator_base</a>&lt;T&gt;(pointer) {}</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsaki_1_1const__reverse__iterator.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsaki_1_1const__reverse__iterator.html">const_reverse_iterator</a> : <span class="keyword">public</span> <a class="code" href="classsaki_1_1details_1_1reverse__iterator__base.html">saki::details::reverse_iterator_base</a>&lt;const T&gt;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classsaki_1_1const__reverse__iterator.html#ae696e711d884b66fb36c20262446cfae">   29</a></span>&#160;    <span class="keyword">explicit</span> constexpr <a class="code" href="classsaki_1_1const__reverse__iterator.html#ae696e711d884b66fb36c20262446cfae">const_reverse_iterator</a>(<span class="keyword">const</span> T pointer) : <a class="code" href="namespacesaki.html">saki</a>::details::<a class="code" href="classsaki_1_1details_1_1reverse__iterator__base.html#accf1bbae68adfab1bf6e88927e3bc453">reverse_iterator_base</a>&lt;const T&gt;(pointer) {}</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;} <span class="comment">// namespace saki</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif //SAKI_ITERATOR_REVERSE_REVERSE_ITERATOR_HPP</span></div><div class="ttc" id="classsaki_1_1const__reverse__iterator_html"><div class="ttname"><a href="classsaki_1_1const__reverse__iterator.html">saki::const_reverse_iterator</a></div><div class="ttdoc">constなリバースイテレーター </div><div class="ttdef"><b>Definition:</b> reverse_iterator.hpp:26</div></div>
+<div class="ttc" id="reverse__iterator__base_8hpp_html"><div class="ttname"><a href="reverse__iterator__base_8hpp.html">reverse_iterator_base.hpp</a></div><div class="ttdoc">リバースイテレーターのベースクラス </div></div>
+<div class="ttc" id="classsaki_1_1reverse__iterator_html_aed4bbf5a55d71b1f95e2a24d5dc88158"><div class="ttname"><a href="classsaki_1_1reverse__iterator.html#aed4bbf5a55d71b1f95e2a24d5dc88158">saki::reverse_iterator::reverse_iterator</a></div><div class="ttdeci">constexpr reverse_iterator(T pointer)</div><div class="ttdef"><b>Definition:</b> reverse_iterator.hpp:20</div></div>
+<div class="ttc" id="namespacesaki_html"><div class="ttname"><a href="namespacesaki.html">saki</a></div><div class="ttdef"><b>Definition:</b> copy.hpp:13</div></div>
+<div class="ttc" id="classsaki_1_1details_1_1reverse__iterator__base_html_accf1bbae68adfab1bf6e88927e3bc453"><div class="ttname"><a href="classsaki_1_1details_1_1reverse__iterator__base.html#accf1bbae68adfab1bf6e88927e3bc453">saki::details::reverse_iterator_base::reverse_iterator_base</a></div><div class="ttdeci">constexpr reverse_iterator_base(T _itr)</div><div class="ttdef"><b>Definition:</b> reverse_iterator_base.hpp:39</div></div>
+<div class="ttc" id="classsaki_1_1reverse__iterator_html"><div class="ttname"><a href="classsaki_1_1reverse__iterator.html">saki::reverse_iterator</a></div><div class="ttdoc">ノーマルなリバースイテレーター </div><div class="ttdef"><b>Definition:</b> reverse_iterator.hpp:17</div></div>
+<div class="ttc" id="classsaki_1_1details_1_1reverse__iterator__base_html"><div class="ttname"><a href="classsaki_1_1details_1_1reverse__iterator__base.html">saki::details::reverse_iterator_base</a></div><div class="ttdoc">リバースイテレーターのベースクラス </div><div class="ttdef"><b>Definition:</b> reverse_iterator_base.hpp:25</div></div>
+<div class="ttc" id="classsaki_1_1const__reverse__iterator_html_ae696e711d884b66fb36c20262446cfae"><div class="ttname"><a href="classsaki_1_1const__reverse__iterator.html#ae696e711d884b66fb36c20262446cfae">saki::const_reverse_iterator::const_reverse_iterator</a></div><div class="ttdeci">constexpr const_reverse_iterator(const T pointer)</div><div class="ttdef"><b>Definition:</b> reverse_iterator.hpp:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

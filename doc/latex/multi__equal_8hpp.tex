@@ -1,0 +1,36 @@
+\hypertarget{multi__equal_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/multi\+\_\+equal.hpp ファイル}
+\label{multi__equal_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/multi\+\_\+equal.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/compare/multi\+\_\+equal.\+hpp}}
+
+
+複数の比較を一度に行う(==)  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/can\+\_\+compare/can\+\_\+equal\+\_\+equal.\+hpp$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\item 
+ \mbox{\hyperlink{namespacesaki_1_1impl}{saki\+::impl}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_ac271639854025a923addee4879780f96}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const T \&)
+\begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、falseを返す \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename Second , typename... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_a45ac6c0cbcb74e4c612f3b66352defff}{saki\+::impl\+::multi\+\_\+equal\+\_\+impl}} (const First \&first, Second second, const Args \&... args)
+\begin{DoxyCompactList}\small\item\em multi\+\_\+equalの実装部 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename First , typename... Args, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ First, Args $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ saki\+::can\+\_\+equal\+\_\+equal$<$ First $>$$>$ $>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_a098cd355949dd93ffdaf620f0fc7e236}{saki\+::multi\+\_\+equal}} (const First \&first, const Args \&... args)
+\begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+複数の比較を一度に行う(==) 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/18 
+\end{DoxyDate}

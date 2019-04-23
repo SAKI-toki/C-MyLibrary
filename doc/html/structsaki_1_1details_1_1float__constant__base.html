@@ -77,7 +77,7 @@ $(function() {
 <p>浮動小数点型の定数を表すベースクラス  
  <a href="structsaki_1_1details_1_1float__constant__base.html#details">[詳解]</a></p>
 
-<p><code>#include &lt;<a class="el" href="float__constant_8h_source.html">float_constant.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="float__constant_8hpp_source.html">float_constant.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
@@ -173,11 +173,11 @@ template&lt;typename T, int Integer, size_t Dec, size_t ZeroNum = 0&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>初期値:</b><div class="fragment"><div class="line">= Integer +</div><div class="line">                <a class="code" href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">saki::copysign</a>(static_cast&lt;T&gt;(Dec) / </div><div class="line">                    <a class="code" href="namespacesaki_1_1details.html#a30b4cd78c970618ee2886123c28e4041">saki::details::pow_n</a>(static_cast&lt;T&gt;(10), ZeroNum + <a class="code" href="namespacesaki.html#a467dee57b7bbe101146713a82acfe95e">saki::digit_count</a>(Dec)),</div><div class="line">                    Integer)</div></div><!-- fragment -->
+<b>初期値:</b><div class="fragment"><div class="line">= Integer +</div><div class="line">                               <a class="code" href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">saki::copysign</a>(static_cast&lt;T&gt;(Dec) /</div><div class="line">                                                  <a class="code" href="namespacesaki_1_1details.html#a30b4cd78c970618ee2886123c28e4041">saki::details::pow_n</a>(static_cast&lt;T&gt;(10),</div><div class="line">                                                                       ZeroNum + <a class="code" href="namespacesaki.html#a467dee57b7bbe101146713a82acfe95e">saki::digit_count</a>(Dec)),</div><div class="line">                                              Integer)</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>この構造体詳解は次のファイルから抽出されました:<ul>
-<li>C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/type_traits/<a class="el" href="float__constant_8h_source.html">float_constant.h</a></li>
+<li>C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/type_traits/<a class="el" href="float__constant_8hpp_source.html">float_constant.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

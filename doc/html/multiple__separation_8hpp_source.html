@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SakiCppLibrary: C:/Users/tokir/Documents/GitHub/SakiCppLibrary/saki/split/details/multiple_separation.hpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SakiCppLibrary
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13191a513d6dad6a22d6500612402f2b.html">saki</a></li><li class="navelem"><a class="el" href="dir_f96a880b4e43bd5ad643d6e2507380b4.html">split</a></li><li class="navelem"><a class="el" href="dir_1087e96591c514176a863350dc27c069.html">details</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">multiple_separation.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="multiple__separation_8hpp.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SAKI_SPLIT_DETAILS_MULTIPLE_SEPARATION_HPP</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SAKI_SPLIT_DETAILS_MULTIPLE_SEPARATION_HPP</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesaki.html">saki</a></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classsaki_1_1_multiple_separation.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsaki_1_1_multiple_separation.html">MultipleSeparation</a></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//区切り文字を格納</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::vector&lt;char&gt; separation_list;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... T&gt;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classsaki_1_1_multiple_separation.html#a675790ff761017d604ecf0e56edb79aa">   27</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classsaki_1_1_multiple_separation.html#a675790ff761017d604ecf0e56edb79aa">MultipleSeparation</a>(<span class="keyword">const</span> T &amp;... t) : separation_list({t...})</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsaki_1_1_multiple_separation.html#a27725149daca02b021edf69c58bbe140">   36</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classsaki_1_1_multiple_separation.html#a27725149daca02b021edf69c58bbe140">check</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> c)</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> separation : separation_list)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (separation == c)</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">// namespace saki</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif //SAKI_SPLIT_DETAILS_MULTIPLE_SEPARATION_HPP</span></div><div class="ttc" id="classsaki_1_1_multiple_separation_html"><div class="ttname"><a href="classsaki_1_1_multiple_separation.html">saki::MultipleSeparation</a></div><div class="ttdoc">split関数で利用する、区切り文字を複数指定できるクラス </div><div class="ttdef"><b>Definition:</b> multiple_separation.hpp:16</div></div>
+<div class="ttc" id="namespacesaki_html"><div class="ttname"><a href="namespacesaki.html">saki</a></div><div class="ttdef"><b>Definition:</b> copy.hpp:13</div></div>
+<div class="ttc" id="classsaki_1_1_multiple_separation_html_a675790ff761017d604ecf0e56edb79aa"><div class="ttname"><a href="classsaki_1_1_multiple_separation.html#a675790ff761017d604ecf0e56edb79aa">saki::MultipleSeparation::MultipleSeparation</a></div><div class="ttdeci">MultipleSeparation(const T &amp;... t)</div><div class="ttdoc">コンストラクタ </div><div class="ttdef"><b>Definition:</b> multiple_separation.hpp:27</div></div>
+<div class="ttc" id="classsaki_1_1_multiple_separation_html_a27725149daca02b021edf69c58bbe140"><div class="ttname"><a href="classsaki_1_1_multiple_separation.html#a27725149daca02b021edf69c58bbe140">saki::MultipleSeparation::check</a></div><div class="ttdeci">bool check(const char c)</div><div class="ttdoc">渡された引数が区切り文字かチェックする </div><div class="ttdef"><b>Definition:</b> multiple_separation.hpp:36</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

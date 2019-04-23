@@ -1,0 +1,43 @@
+\hypertarget{type__macro_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/macro/type\+\_\+macro.hpp ファイル}
+\label{type__macro_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/macro/type\+\_\+macro.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/macro/type\+\_\+macro.\+hpp}}
+
+
+value\+\_\+type,pointer,reference等を自動定義  
+
+
+{\ttfamily \#include $<$cstddef$>$}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{type__macro_8hpp_a887a945f39183a6c615ed78abe5ab967}{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO}}(T)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+value\+\_\+type,pointer,reference等を自動定義 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2018/12/13 
+\end{DoxyDate}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{type__macro_8hpp_a887a945f39183a6c615ed78abe5ab967}\label{type__macro_8hpp_a887a945f39183a6c615ed78abe5ab967}} 
+\index{type\+\_\+macro.\+hpp@{type\+\_\+macro.\+hpp}!S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO}}
+\index{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO@{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO}!type\+\_\+macro.\+hpp@{type\+\_\+macro.\+hpp}}
+\subsubsection{\texorpdfstring{S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO}{SAKI\_TYPE\_MACRO}}
+{\footnotesize\ttfamily \#define S\+A\+K\+I\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+RO(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{using} value\_type = T;              \(\backslash\)
+    using size\_type = size\_t;          \(\backslash\)
+    using difference\_type = ptrdiff\_t; \(\backslash\)
+    using pointer = T *;               \(\backslash\)
+    using const\_pointer = \textcolor{keyword}{const} T *;   \(\backslash\)
+    using reference = T &;             \(\backslash\)
+    using const\_reference = \textcolor{keyword}{const} T &;
+\end{DoxyCode}

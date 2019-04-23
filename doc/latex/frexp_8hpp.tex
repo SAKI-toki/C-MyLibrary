@@ -1,0 +1,37 @@
+\hypertarget{frexp_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/frexp.hpp ファイル}
+\label{frexp_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/frexp.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/frexp.\+hpp}}
+
+
+コンパイル時frexp  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/log2.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/abs.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/details/pow\+\_\+n.\+hpp$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a00438d1cd099cfd0e2938f9e3defd283}{saki\+::frexp}} (T value, int $\ast$exp)
+\begin{DoxyCompactList}\small\item\em コンパイル時frexp \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_a915bdd850c89e1ed06c5087790109f11}{saki\+::frexp}} (T value, int $\ast$exp)
+\begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+コンパイル時frexp 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/15 
+\end{DoxyDate}

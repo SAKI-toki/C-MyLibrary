@@ -5,5 +5,9 @@ var searchData=
   ['rend',['rend',['../classsaki_1_1array.html#a5d90bcfe2a449d94d9aa7e7b6e77858f',1,'saki::array::rend()'],['../classsaki_1_1array.html#a6816a951bfc1e6b13aec4fd54ec0bf63',1,'saki::array::rend() const']]],
   ['reverse_5fiterator',['reverse_iterator',['../classsaki_1_1reverse__iterator.html#aed4bbf5a55d71b1f95e2a24d5dc88158',1,'saki::reverse_iterator']]],
   ['reverse_5fiterator_5fbase',['reverse_iterator_base',['../classsaki_1_1details_1_1reverse__iterator__base.html#accf1bbae68adfab1bf6e88927e3bc453',1,'saki::details::reverse_iterator_base']]],
-  ['rotate',['rotate',['../classsaki_1_1transform.html#a34a7facf52587a38a40a7ff6643568cf',1,'saki::transform::rotate(const saki::vector3&lt; T &gt; &amp;rot)'],['../classsaki_1_1transform.html#a00065f2da91bca7ac0aff6efd46ac2ae',1,'saki::transform::rotate(const T &amp;x, const T &amp;y, const T &amp;z)']]]
+  ['rotate',['rotate',['../classsaki_1_1transform.html#a34a7facf52587a38a40a7ff6643568cf',1,'saki::transform::rotate(const saki::vector3&lt; T &gt; &amp;rot)'],['../classsaki_1_1transform.html#a00065f2da91bca7ac0aff6efd46ac2ae',1,'saki::transform::rotate(const T &amp;x, const T &amp;y, const T &amp;z)']]],
+  ['rotate_5froll_5fpitch_5fyaw',['rotate_roll_pitch_yaw',['../namespacesaki.html#a1e89f783c61c36d9885c70d966218dc0',1,'saki']]],
+  ['rotate_5fx',['rotate_x',['../namespacesaki.html#a1a0f91a98432f3bbfe95892d3b547c1a',1,'saki']]],
+  ['rotate_5fy',['rotate_y',['../namespacesaki.html#a0d794fa366b6fdf189b5b242730d020e',1,'saki']]],
+  ['rotate_5fz',['rotate_z',['../namespacesaki.html#a0dcbd0c8e630d947ba6f0c6e0875d552',1,'saki']]]
 ];

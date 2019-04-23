@@ -7,7 +7,7 @@
 
 
 
-{\ttfamily \#include $<$matrix\+\_\+math.\+h$>$}
+{\ttfamily \#include $<$matrix\+\_\+math.\+hpp$>$}
 
 \subsection*{公開メンバ関数}
 \begin{DoxyCompactItemize}
@@ -27,6 +27,8 @@ constexpr \mbox{\hyperlink{classsaki_1_1matrix_a55edebaa14a4a0ea6b6f263ebe9950f4
 \mbox{\hyperlink{classsaki_1_1matrix_a16b927b776bc7454ebbf984b7f93c23e}{matrix}} (\mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ value\+\_\+type $>$ \&\&) noexcept=default
 \item 
 \mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ value\+\_\+type $>$ \& \mbox{\hyperlink{classsaki_1_1matrix_a06a7330daf074554dada53978e3ccd55}{operator=}} (\mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ value\+\_\+type $>$ \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{classsaki_1_1matrix_a6fe9a4d52c93051ecdb1075abe5a272b}{$\sim$matrix}} () noexcept=default
 \item 
 {\footnotesize template$<$typename U  = value\+\_\+type$>$ }\\auto \mbox{\hyperlink{classsaki_1_1matrix_ad004cb2830b0c22778b99b57fcbde8df}{operator+=}} (const \mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix}}$<$ U $>$ \&other)
 \begin{DoxyCompactList}\small\item\em +=演算子 \end{DoxyCompactList}\item 
@@ -134,6 +136,13 @@ vector4での初期化
 \subsubsection{\texorpdfstring{matrix()}{matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 \mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix}}$<$ T $>$\+::\mbox{\hyperlink{classsaki_1_1matrix}{matrix}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsaki_1_1matrix}{matrix}}$<$ value\+\_\+type $>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{classsaki_1_1matrix_a6fe9a4d52c93051ecdb1075abe5a272b}\label{classsaki_1_1matrix_a6fe9a4d52c93051ecdb1075abe5a272b}} 
+\index{saki\+::matrix@{saki\+::matrix}!````~matrix@{$\sim$matrix}}
+\index{````~matrix@{$\sim$matrix}!saki\+::matrix@{saki\+::matrix}}
+\subsubsection{\texorpdfstring{$\sim$matrix()}{~matrix()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classsaki_1_1matrix}{matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
 
 
 
@@ -282,5 +291,5 @@ void \mbox{\hyperlink{classsaki_1_1matrix}{saki\+::matrix}}$<$ T $>$\+::transpos
 
 このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/\mbox{\hyperlink{matrix__math_8h}{matrix\+\_\+math.\+h}}\item 
-C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/\mbox{\hyperlink{matrix_2matrix_8h}{matrix.\+h}}\end{DoxyCompactItemize}
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/details/\mbox{\hyperlink{matrix__math_8hpp}{matrix\+\_\+math.\+hpp}}\item 
+C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/matrix/\mbox{\hyperlink{matrix_2matrix_8hpp}{matrix.\+hpp}}\end{DoxyCompactItemize}

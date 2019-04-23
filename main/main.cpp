@@ -30,5 +30,4 @@ void Comment(const Args &... args)
 //main process
 void App()
 {
-	
 }

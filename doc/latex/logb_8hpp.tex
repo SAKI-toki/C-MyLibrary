@@ -1,0 +1,37 @@
+\hypertarget{logb_8hpp}{}\section{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/logb.hpp ファイル}
+\label{logb_8hpp}\index{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/logb.\+hpp@{C\+:/\+Users/tokir/\+Documents/\+Git\+Hub/\+Saki\+Cpp\+Library/saki/math/logb.\+hpp}}
+
+
+コンパイル時logb  
+
+
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/isnan.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/isinf.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/log2.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/abs.\+hpp$>$}\newline
+{\ttfamily \#include $<$saki/math/floor.\+hpp$>$}\newline
+\subsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacesaki}{saki}}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_ab7e81af48b13fbf88f135d296471bac1}{saki\+::logb}} (T x)
+\begin{DoxyCompactList}\small\item\em コンパイル時logb \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_adf4ba562bb9897e98b75eb95027bfad5}{saki\+::logb}} (T x)
+\begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+コンパイル時logb 
+
+\begin{DoxyAuthor}{著者}
+石山 悠 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日付}
+2019/01/15 
+\end{DoxyDate}
