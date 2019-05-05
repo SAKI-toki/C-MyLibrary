@@ -49,7 +49,7 @@ public:
 		*/
 	template <typename T = double,
 			  typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-	T end(DURATION duration = DURATION::MILLISECOND)
+	T end(const DURATION duration = DURATION::MILLISECOND)
 	{
 		auto elapsed_time = std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now() - start_time).count();
 		switch (duration)
@@ -87,7 +87,7 @@ public:
 		*/
 	template <typename T = double,
 			  typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-	T end_and_start(DURATION duration = DURATION::MILLISECOND)
+	T end_and_start(const DURATION duration = DURATION::MILLISECOND)
 	{
 		auto t = end<T>(duration);
 		start();
