@@ -7,6 +7,8 @@
 
 {\ttfamily \#include $<$cstdint$>$}\newline
 {\ttfamily \#include $<$cstddef$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+hpp$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,9 +54,9 @@ struct \mbox{\hyperlink{structsaki_1_1factorial__limits_3_01unsigned_01long_01lo
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T  = double$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a224c4843b72acf995e13809a5caaafd8}{saki\+::factorial}} (size\+\_\+t N)
+{\footnotesize template$<$typename T  = double, saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_abc9efa0d579d2d20a9d63ea60b5c6739}{saki\+::factorial}} (size\+\_\+t N)
 \begin{DoxyCompactList}\small\item\em 階乗(引数バージョン) \end{DoxyCompactList}\item 
-{\footnotesize template$<$size\+\_\+t N, typename T  = double$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a9dead910b791cee99cf82d1bd2a5d90c}{saki\+::factorial}} ()
+{\footnotesize template$<$size\+\_\+t N, typename T  = double, saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a07ba6ea3370958e478c11116a22fa3b8}{saki\+::factorial}} ()
 \begin{DoxyCompactList}\small\item\em 階乗(仮引数バージョン) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

@@ -92,14 +92,14 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a8a7b926b9d370e4a9aed84579675222c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8a7b926b9d370e4a9aed84579675222c"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8a7b926b9d370e4a9aed84579675222c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8a7b926b9d370e4a9aed84579675222c">saki::fmod</a> (T x, T y)</td></tr>
 <tr class="memdesc:a8a7b926b9d370e4a9aed84579675222c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時float,double剰余  <a href="namespacesaki.html#a8a7b926b9d370e4a9aed84579675222c">[詳解]</a><br /></td></tr>
 <tr class="separator:a8a7b926b9d370e4a9aed84579675222c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a258bf6b0db67891f24b056905ac93591"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a258bf6b0db67891f24b056905ac93591"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a258bf6b0db67891f24b056905ac93591">saki::fmod</a> (T1 x, T2 y)</td></tr>
-<tr class="memdesc:a258bf6b0db67891f24b056905ac93591"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が違う場合はそろえる  <a href="namespacesaki.html#a258bf6b0db67891f24b056905ac93591">[詳解]</a><br /></td></tr>
-<tr class="separator:a258bf6b0db67891f24b056905ac93591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae310926c3d50042c53a68ac85b5d6090"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae310926c3d50042c53a68ac85b5d6090"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae310926c3d50042c53a68ac85b5d6090">saki::fmod</a> (T1 x, T2 y)</td></tr>
+<tr class="memdesc:ae310926c3d50042c53a68ac85b5d6090"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が違う場合はそろえる  <a href="namespacesaki.html#ae310926c3d50042c53a68ac85b5d6090">[詳解]</a><br /></td></tr>
+<tr class="separator:ae310926c3d50042c53a68ac85b5d6090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コンパイル時float,double剰余 </p>

@@ -20,9 +20,9 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a8a7b926b9d370e4a9aed84579675222c}{saki\+::fmod}} (T x, T y)
+{\footnotesize template$<$typename T , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a8a7b926b9d370e4a9aed84579675222c}{saki\+::fmod}} (T x, T y)
 \begin{DoxyCompactList}\small\item\em コンパイル時float,double剰余 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 $>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a258bf6b0db67891f24b056905ac93591}{saki\+::fmod}} (T1 x, T2 y)
+{\footnotesize template$<$typename T1 , typename T2 , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ std\+::common\+\_\+type\+\_\+t$<$ T1, T2 $>$$>$$>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae310926c3d50042c53a68ac85b5d6090}{saki\+::fmod}} (T1 x, T2 y)
 \begin{DoxyCompactList}\small\item\em 型が違う場合はそろえる \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

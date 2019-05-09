@@ -77,6 +77,8 @@ $(function() {
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="copysign_8hpp_source.html">saki/math/copysign.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="isnan_8hpp_source.html">saki/math/isnan.hpp</a>&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8hpp_source.html">saki/type_traits/enable_if_nullptr.hpp</a>&gt;</code><br />
 </div>
 <p><a href="signbit_8hpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -87,10 +89,10 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2e595e3d1c68d48646e3fe481cda4fe0">saki::signbit</a> (T x)</td></tr>
-<tr class="memdesc:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数かどうか判定する  <a href="namespacesaki.html#a2e595e3d1c68d48646e3fe481cda4fe0">[詳解]</a><br /></td></tr>
-<tr class="separator:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230838749b1e19afc5f9265bd161d4d8"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_signed_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a230838749b1e19afc5f9265bd161d4d8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a230838749b1e19afc5f9265bd161d4d8">saki::signbit</a> (T x)</td></tr>
+<tr class="memdesc:a230838749b1e19afc5f9265bd161d4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数かどうか判定する  <a href="namespacesaki.html#a230838749b1e19afc5f9265bd161d4d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a230838749b1e19afc5f9265bd161d4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>負数かどうか判定する関数 </p>

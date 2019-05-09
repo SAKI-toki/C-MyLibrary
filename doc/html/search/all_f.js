@@ -12,7 +12,7 @@ var searchData=
   ['set_5fscale',['set_scale',['../classsaki_1_1transform.html#ad1423bce28426ae4b739ccb22bc0fd5d',1,'saki::transform']]],
   ['sigma',['sigma',['../namespacesaki.html#ac51e06f83630682641e0d99d5c957a9c',1,'saki']]],
   ['sigma_2ehpp',['sigma.hpp',['../sigma_8hpp.html',1,'']]],
-  ['signbit',['signbit',['../namespacesaki.html#a2e595e3d1c68d48646e3fe481cda4fe0',1,'saki']]],
+  ['signbit',['signbit',['../namespacesaki.html#a230838749b1e19afc5f9265bd161d4d8',1,'saki']]],
   ['signbit_2ehpp',['signbit.hpp',['../signbit_8hpp.html',1,'']]],
   ['sin',['sin',['../namespacesaki.html#a743f7284cdebb6406db9b37e42bcd730',1,'saki::sin(T x)'],['../namespacesaki.html#a9fd77d1e52189e28f4a5d069891501cf',1,'saki::sin(T x)']]],
   ['sin_2ehpp',['sin.hpp',['../sin_8hpp.html',1,'']]],

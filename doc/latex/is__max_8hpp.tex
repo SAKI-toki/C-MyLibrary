@@ -22,7 +22,7 @@
 \begin{DoxyCompactList}\small\item\em 比較するものがない(なくなった)場合、trueを返す \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename First , typename Second , typename... Args$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_1_1impl_aa2d9e924789f49e245eca3d8fa7a57ed}{saki\+::impl\+::is\+\_\+max\+\_\+impl}} (const First \&first, Second second, const Args \&... args)
 \begin{DoxyCompactList}\small\item\em is\+\_\+maxの実装部 \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename First , typename... Args, typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ Args, First $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ saki\+::can\+\_\+less$<$ First $>$$>$ $>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_af73b5897b021844313675413b6c8aac2}{saki\+::is\+\_\+max}} (const First \&first, const Args \&... args)
+{\footnotesize template$<$typename First , typename... Args, saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::conjunction\+\_\+v$<$ std\+::is\+\_\+convertible$<$ Args, First $>$... $>$ \&\&std\+::conjunction\+\_\+v$<$ saki\+::can\+\_\+less$<$ First $>$$>$ $>$  = nullptr$>$ }\\constexpr bool \mbox{\hyperlink{namespacesaki_af73b5897b021844313675413b6c8aac2}{saki\+::is\+\_\+max}} (const First \&first, const Args \&... args)
 \begin{DoxyCompactList}\small\item\em 複数の比較を一度に行える($>$=) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

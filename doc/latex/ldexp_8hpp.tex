@@ -18,8 +18,10 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename IntegerT , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ Integer\+T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a03b7a22945dcbce6e2bb0593025c90c4}{saki\+::ldexp}} (T x, IntegerT exp)
-\begin{DoxyCompactList}\small\item\em コンパイル時ldexp \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T , typename IntegerT , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+integral\+\_\+v$<$ Integer\+T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a03b7a22945dcbce6e2bb0593025c90c4}{saki\+::ldexp}} (T x, IntegerT exp)
+\begin{DoxyCompactList}\small\item\em コンパイル時ldexp \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename IntegerT , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$ \&\&std\+::is\+\_\+integral\+\_\+v$<$ Integer\+T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_ad9202fb752e29a81d507ef9a0f8e8bd5}{saki\+::ldexp}} (T x, IntegerT exp)
+\begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{詳解}

@@ -78,6 +78,8 @@ $(function() {
 <a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8hpp_source.html">saki/type_traits/enable_if_nullptr.hpp</a>&gt;</code><br />
 </div>
 <p><a href="factorial_8hpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -126,14 +128,14 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a224c4843b72acf995e13809a5caaafd8"><td class="memTemplParams" colspan="2">template&lt;typename T  = double&gt; </td></tr>
-<tr class="memitem:a224c4843b72acf995e13809a5caaafd8"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a224c4843b72acf995e13809a5caaafd8">saki::factorial</a> (size_t N)</td></tr>
-<tr class="memdesc:a224c4843b72acf995e13809a5caaafd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(引数バージョン)  <a href="namespacesaki.html#a224c4843b72acf995e13809a5caaafd8">[詳解]</a><br /></td></tr>
-<tr class="separator:a224c4843b72acf995e13809a5caaafd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dead910b791cee99cf82d1bd2a5d90c"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T  = double&gt; </td></tr>
-<tr class="memitem:a9dead910b791cee99cf82d1bd2a5d90c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9dead910b791cee99cf82d1bd2a5d90c">saki::factorial</a> ()</td></tr>
-<tr class="memdesc:a9dead910b791cee99cf82d1bd2a5d90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(仮引数バージョン)  <a href="namespacesaki.html#a9dead910b791cee99cf82d1bd2a5d90c">[詳解]</a><br /></td></tr>
-<tr class="separator:a9dead910b791cee99cf82d1bd2a5d90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="memTemplParams" colspan="2">template&lt;typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#abc9efa0d579d2d20a9d63ea60b5c6739">saki::factorial</a> (size_t N)</td></tr>
+<tr class="memdesc:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(引数バージョン)  <a href="namespacesaki.html#abc9efa0d579d2d20a9d63ea60b5c6739">[詳解]</a><br /></td></tr>
+<tr class="separator:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ba6ea3370958e478c11116a22fa3b8"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a07ba6ea3370958e478c11116a22fa3b8"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a07ba6ea3370958e478c11116a22fa3b8">saki::factorial</a> ()</td></tr>
+<tr class="memdesc:a07ba6ea3370958e478c11116a22fa3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(仮引数バージョン)  <a href="namespacesaki.html#a07ba6ea3370958e478c11116a22fa3b8">[詳解]</a><br /></td></tr>
+<tr class="separator:a07ba6ea3370958e478c11116a22fa3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>階乗 </p>

@@ -8,6 +8,8 @@
 {\ttfamily \#include $<$cstdint$>$}\newline
 {\ttfamily \#include $<$cstddef$>$}\newline
 {\ttfamily \#include $<$saki/math/exchange.\+hpp$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$saki/type\+\_\+traits/enable\+\_\+if\+\_\+nullptr.\+hpp$>$}\newline
 \subsection*{クラス}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,9 +55,9 @@ struct \mbox{\hyperlink{structsaki_1_1fibonacci__limits_3_01unsigned_01long_01lo
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T  = double$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a93bb6ae29766c4204c1cf8dc5bab007c}{saki\+::fibonacci}} (size\+\_\+t N)
+{\footnotesize template$<$typename T  = double, saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a2cf00e678b37e53b924241bc7ece7b24}{saki\+::fibonacci}} (size\+\_\+t N)
 \begin{DoxyCompactList}\small\item\em フィボナッチ数列求める関数 \end{DoxyCompactList}\item 
-{\footnotesize template$<$size\+\_\+t N, typename T  = double$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a7bbb434ee3c6d77eeb32b85bb9e316f0}{saki\+::fibonacci}} ()
+{\footnotesize template$<$size\+\_\+t N, typename T  = double, saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_ac830e7b8acb5cda194f6ba9f340e5bc0}{saki\+::fibonacci}} ()
 \begin{DoxyCompactList}\small\item\em フィボナッチ数列を求める関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

@@ -294,7 +294,7 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:abd8c75003f2a213607842f5d82eac806"><td class="memTemplParams" colspan="2">template&lt;typename Container1 , typename Container2 , typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:abd8c75003f2a213607842f5d82eac806"><td class="memTemplParams" colspan="2">template&lt;typename Container1 , typename Container2 , saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:abd8c75003f2a213607842f5d82eac806"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#abd8c75003f2a213607842f5d82eac806">copy</a> (const Container1 &amp;con1, Container2 &amp;con2) -&gt; decltype(*std::begin(con2)= *std::begin(con1), std::begin(con2))</td></tr>
 <tr class="memdesc:abd8c75003f2a213607842f5d82eac806"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンテナとコンテナを渡すcopy  <a href="#abd8c75003f2a213607842f5d82eac806">[詳解]</a><br /></td></tr>
 <tr class="separator:abd8c75003f2a213607842f5d82eac806"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,95 +306,95 @@ $(function() {
 <tr class="memitem:aed742cc915a830fea9f4993c0a031c45"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aed742cc915a830fea9f4993c0a031c45">operator!=</a> (const <a class="el" href="classsaki_1_1array.html">array</a>&lt; T, Size &gt; &amp;arr1, const <a class="el" href="classsaki_1_1array.html">array</a>&lt; T, Size &gt; &amp;arr2)</td></tr>
 <tr class="memdesc:aed742cc915a830fea9f4993c0a031c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子  <a href="#aed742cc915a830fea9f4993c0a031c45">[詳解]</a><br /></td></tr>
 <tr class="separator:aed742cc915a830fea9f4993c0a031c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45597d7382905409bada2316f78502fc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; saki::can_less_or_equal_v&lt; T &gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a45597d7382905409bada2316f78502fc"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; saki::can_less_or_equal_v&lt; T &gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a45597d7382905409bada2316f78502fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a45597d7382905409bada2316f78502fc">is_fit</a> (const T &amp;x, const T &amp;min_n, const T &amp;max_n)</td></tr>
 <tr class="memdesc:a45597d7382905409bada2316f78502fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲内かどうかの判定を行う  <a href="#a45597d7382905409bada2316f78502fc">[詳解]</a><br /></td></tr>
 <tr class="separator:a45597d7382905409bada2316f78502fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09478d8cb01d75e93d34f884d7133dc9"><td class="memTemplParams" colspan="2">template&lt;typename First , typename MinType , typename MaxType , typename saki::enable_if_nullptr_t&lt; std::is_convertible_v&lt; MinType, First &gt; &amp;&amp;std::is_convertible_v&lt; MaxType, First &gt; &amp;&amp;saki::can_less_or_equal_v&lt; First &gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a09478d8cb01d75e93d34f884d7133dc9"><td class="memTemplParams" colspan="2">template&lt;typename First , typename MinType , typename MaxType , saki::enable_if_nullptr_t&lt; std::is_convertible_v&lt; MinType, First &gt; &amp;&amp;std::is_convertible_v&lt; MaxType, First &gt; &amp;&amp;saki::can_less_or_equal_v&lt; First &gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a09478d8cb01d75e93d34f884d7133dc9"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a09478d8cb01d75e93d34f884d7133dc9">is_fit</a> (First x, MinType min_n, MaxType max_n)</td></tr>
 <tr class="memdesc:a09478d8cb01d75e93d34f884d7133dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="#a09478d8cb01d75e93d34f884d7133dc9">[詳解]</a><br /></td></tr>
 <tr class="separator:a09478d8cb01d75e93d34f884d7133dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af73b5897b021844313675413b6c8aac2"><td class="memTemplParams" colspan="2">template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; Args, First &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_less&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:af73b5897b021844313675413b6c8aac2"><td class="memTemplParams" colspan="2">template&lt;typename First , typename... Args, saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; Args, First &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_less&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:af73b5897b021844313675413b6c8aac2"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af73b5897b021844313675413b6c8aac2">is_max</a> (const First &amp;first, const Args &amp;... args)</td></tr>
 <tr class="memdesc:af73b5897b021844313675413b6c8aac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える(&gt;=)  <a href="#af73b5897b021844313675413b6c8aac2">[詳解]</a><br /></td></tr>
 <tr class="separator:af73b5897b021844313675413b6c8aac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a761604ec865e518ea0ba335b709be060"><td class="memTemplParams" colspan="2">template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_greater&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a761604ec865e518ea0ba335b709be060"><td class="memTemplParams" colspan="2">template&lt;typename First , typename... Args, saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_greater&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a761604ec865e518ea0ba335b709be060"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a761604ec865e518ea0ba335b709be060">is_min</a> (const First &amp;first, const Args &amp;... args)</td></tr>
 <tr class="memdesc:a761604ec865e518ea0ba335b709be060"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える(&lt;=)  <a href="#a761604ec865e518ea0ba335b709be060">[詳解]</a><br /></td></tr>
 <tr class="separator:a761604ec865e518ea0ba335b709be060"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a098cd355949dd93ffdaf620f0fc7e236"><td class="memTemplParams" colspan="2">template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_equal_equal&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a098cd355949dd93ffdaf620f0fc7e236"><td class="memTemplParams" colspan="2">template&lt;typename First , typename... Args, saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_equal_equal&lt; First &gt;&gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a098cd355949dd93ffdaf620f0fc7e236"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a098cd355949dd93ffdaf620f0fc7e236">multi_equal</a> (const First &amp;first, const Args &amp;... args)</td></tr>
 <tr class="memdesc:a098cd355949dd93ffdaf620f0fc7e236"><td class="mdescLeft">&#160;</td><td class="mdescRight">複数の比較を一度に行える  <a href="#a098cd355949dd93ffdaf620f0fc7e236">[詳解]</a><br /></td></tr>
 <tr class="separator:a098cd355949dd93ffdaf620f0fc7e236"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37cd607ad87b208aa6105b5d8287dc9e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt;!std::is_unsigned_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a37cd607ad87b208aa6105b5d8287dc9e"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt;!std::is_unsigned_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a37cd607ad87b208aa6105b5d8287dc9e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a37cd607ad87b208aa6105b5d8287dc9e">abs</a> (T x)</td></tr>
 <tr class="memdesc:a37cd607ad87b208aa6105b5d8287dc9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時絶対値  <a href="#a37cd607ad87b208aa6105b5d8287dc9e">[詳解]</a><br /></td></tr>
 <tr class="separator:a37cd607ad87b208aa6105b5d8287dc9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3189b75c5c7ecbf6d2204142da5fa813"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a3189b75c5c7ecbf6d2204142da5fa813"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a3189b75c5c7ecbf6d2204142da5fa813"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3189b75c5c7ecbf6d2204142da5fa813">acos</a> (T x)</td></tr>
 <tr class="memdesc:a3189b75c5c7ecbf6d2204142da5fa813"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時acos  <a href="#a3189b75c5c7ecbf6d2204142da5fa813">[詳解]</a><br /></td></tr>
 <tr class="separator:a3189b75c5c7ecbf6d2204142da5fa813"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cad65bf92f361b4b564268af96a7844"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a2cad65bf92f361b4b564268af96a7844"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a2cad65bf92f361b4b564268af96a7844"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2cad65bf92f361b4b564268af96a7844">acos</a> (T x)</td></tr>
 <tr class="memdesc:a2cad65bf92f361b4b564268af96a7844"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a2cad65bf92f361b4b564268af96a7844">[詳解]</a><br /></td></tr>
 <tr class="separator:a2cad65bf92f361b4b564268af96a7844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1c85a4defc25dc9eb6b380f29946f83"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ac1c85a4defc25dc9eb6b380f29946f83"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ac1c85a4defc25dc9eb6b380f29946f83"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ac1c85a4defc25dc9eb6b380f29946f83">acosh</a> (T x)</td></tr>
 <tr class="memdesc:ac1c85a4defc25dc9eb6b380f29946f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時sinh  <a href="#ac1c85a4defc25dc9eb6b380f29946f83">[詳解]</a><br /></td></tr>
 <tr class="separator:ac1c85a4defc25dc9eb6b380f29946f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d3766d425082661e966b04504b90002"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8d3766d425082661e966b04504b90002"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8d3766d425082661e966b04504b90002"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8d3766d425082661e966b04504b90002">acosh</a> (T x)</td></tr>
 <tr class="memdesc:a8d3766d425082661e966b04504b90002"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a8d3766d425082661e966b04504b90002">[詳解]</a><br /></td></tr>
 <tr class="separator:a8d3766d425082661e966b04504b90002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f2b40515cd62b037dade64aa8465db"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a63f2b40515cd62b037dade64aa8465db"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a63f2b40515cd62b037dade64aa8465db"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a63f2b40515cd62b037dade64aa8465db">asin</a> (T x)</td></tr>
 <tr class="memdesc:a63f2b40515cd62b037dade64aa8465db"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時asin  <a href="#a63f2b40515cd62b037dade64aa8465db">[詳解]</a><br /></td></tr>
 <tr class="separator:a63f2b40515cd62b037dade64aa8465db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac285debedd1f53761a838c0e4f57af0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aac285debedd1f53761a838c0e4f57af0"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aac285debedd1f53761a838c0e4f57af0"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aac285debedd1f53761a838c0e4f57af0">asin</a> (T x)</td></tr>
 <tr class="memdesc:aac285debedd1f53761a838c0e4f57af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#aac285debedd1f53761a838c0e4f57af0">[詳解]</a><br /></td></tr>
 <tr class="separator:aac285debedd1f53761a838c0e4f57af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab097a2d600f313b6bdd3099e61a10b9e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ab097a2d600f313b6bdd3099e61a10b9e"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ab097a2d600f313b6bdd3099e61a10b9e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ab097a2d600f313b6bdd3099e61a10b9e">asinh</a> (T x)</td></tr>
 <tr class="memdesc:ab097a2d600f313b6bdd3099e61a10b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時asinh  <a href="#ab097a2d600f313b6bdd3099e61a10b9e">[詳解]</a><br /></td></tr>
 <tr class="separator:ab097a2d600f313b6bdd3099e61a10b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac840ca5d9b98ac0a8c5b15752f02072"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aac840ca5d9b98ac0a8c5b15752f02072"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aac840ca5d9b98ac0a8c5b15752f02072"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aac840ca5d9b98ac0a8c5b15752f02072">asinh</a> (T x)</td></tr>
 <tr class="memdesc:aac840ca5d9b98ac0a8c5b15752f02072"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#aac840ca5d9b98ac0a8c5b15752f02072">[詳解]</a><br /></td></tr>
 <tr class="separator:aac840ca5d9b98ac0a8c5b15752f02072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a524b9439c745f69bd8a8b681b03b4b01"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a524b9439c745f69bd8a8b681b03b4b01"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a524b9439c745f69bd8a8b681b03b4b01"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a524b9439c745f69bd8a8b681b03b4b01">atan</a> (T x)</td></tr>
 <tr class="memdesc:a524b9439c745f69bd8a8b681b03b4b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時atan  <a href="#a524b9439c745f69bd8a8b681b03b4b01">[詳解]</a><br /></td></tr>
 <tr class="separator:a524b9439c745f69bd8a8b681b03b4b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd8a08085fc9210a4e8d61f6c04febe2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:acd8a08085fc9210a4e8d61f6c04febe2"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:acd8a08085fc9210a4e8d61f6c04febe2"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#acd8a08085fc9210a4e8d61f6c04febe2">atan</a> (T x)</td></tr>
 <tr class="memdesc:acd8a08085fc9210a4e8d61f6c04febe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#acd8a08085fc9210a4e8d61f6c04febe2">[詳解]</a><br /></td></tr>
 <tr class="separator:acd8a08085fc9210a4e8d61f6c04febe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac528a4ab6013623bfe6257229e302015"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ac528a4ab6013623bfe6257229e302015"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ac528a4ab6013623bfe6257229e302015"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ac528a4ab6013623bfe6257229e302015">atan2</a> (T y, T x)</td></tr>
 <tr class="memdesc:ac528a4ab6013623bfe6257229e302015"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時atan2  <a href="#ac528a4ab6013623bfe6257229e302015">[詳解]</a><br /></td></tr>
 <tr class="separator:ac528a4ab6013623bfe6257229e302015"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a1f8c6dc6223b790f6d227c8d22cf8b86">atan2</a> (T y, T x)</td></tr>
 <tr class="memdesc:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a1f8c6dc6223b790f6d227c8d22cf8b86">[詳解]</a><br /></td></tr>
 <tr class="separator:a1f8c6dc6223b790f6d227c8d22cf8b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f53502e50280167d22bef45227219f0"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a3f53502e50280167d22bef45227219f0"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a3f53502e50280167d22bef45227219f0"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a3f53502e50280167d22bef45227219f0">atan2</a> (T1 y, T2 x)</td></tr>
 <tr class="memdesc:a3f53502e50280167d22bef45227219f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="#a3f53502e50280167d22bef45227219f0">[詳解]</a><br /></td></tr>
 <tr class="separator:a3f53502e50280167d22bef45227219f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbfceeab527c51676d00fae31e077dcf"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:adbfceeab527c51676d00fae31e077dcf"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:adbfceeab527c51676d00fae31e077dcf"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#adbfceeab527c51676d00fae31e077dcf">atanh</a> (T x)</td></tr>
 <tr class="memdesc:adbfceeab527c51676d00fae31e077dcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時atanh  <a href="#adbfceeab527c51676d00fae31e077dcf">[詳解]</a><br /></td></tr>
 <tr class="separator:adbfceeab527c51676d00fae31e077dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b7d87f99b61600e1201b10de467200f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a1b7d87f99b61600e1201b10de467200f"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a1b7d87f99b61600e1201b10de467200f"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a1b7d87f99b61600e1201b10de467200f">atanh</a> (T x)</td></tr>
 <tr class="memdesc:a1b7d87f99b61600e1201b10de467200f"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a1b7d87f99b61600e1201b10de467200f">[詳解]</a><br /></td></tr>
 <tr class="separator:a1b7d87f99b61600e1201b10de467200f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8836c929b71a61cf0151d3b76eb7af15"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8836c929b71a61cf0151d3b76eb7af15"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8836c929b71a61cf0151d3b76eb7af15"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8836c929b71a61cf0151d3b76eb7af15">cbrt</a> (T x)</td></tr>
 <tr class="memdesc:a8836c929b71a61cf0151d3b76eb7af15"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時cbrt  <a href="#a8836c929b71a61cf0151d3b76eb7af15">[詳解]</a><br /></td></tr>
 <tr class="separator:a8836c929b71a61cf0151d3b76eb7af15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a3d1ab0508dcff1fb2e17a4ef8a855d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a5a3d1ab0508dcff1fb2e17a4ef8a855d"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a5a3d1ab0508dcff1fb2e17a4ef8a855d"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5a3d1ab0508dcff1fb2e17a4ef8a855d">cbrt</a> (T x)</td></tr>
 <tr class="memdesc:a5a3d1ab0508dcff1fb2e17a4ef8a855d"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a5a3d1ab0508dcff1fb2e17a4ef8a855d">[詳解]</a><br /></td></tr>
 <tr class="separator:a5a3d1ab0508dcff1fb2e17a4ef8a855d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -402,55 +402,55 @@ $(function() {
 <tr class="memitem:a8bab6303ac2144b883080f04ebe26a0e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8bab6303ac2144b883080f04ebe26a0e">copysign</a> (const T &amp;x, const SignType &amp;y)</td></tr>
 <tr class="memdesc:a8bab6303ac2144b883080f04ebe26a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時符号コピー  <a href="#a8bab6303ac2144b883080f04ebe26a0e">[詳解]</a><br /></td></tr>
 <tr class="separator:a8bab6303ac2144b883080f04ebe26a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82551963a8cab889ca6f76ed346d6f4f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a82551963a8cab889ca6f76ed346d6f4f"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a82551963a8cab889ca6f76ed346d6f4f"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a82551963a8cab889ca6f76ed346d6f4f">cos</a> (T x)</td></tr>
 <tr class="memdesc:a82551963a8cab889ca6f76ed346d6f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時cos  <a href="#a82551963a8cab889ca6f76ed346d6f4f">[詳解]</a><br /></td></tr>
 <tr class="separator:a82551963a8cab889ca6f76ed346d6f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1f49aa2d1182883ae8b4c01b346cc88"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ab1f49aa2d1182883ae8b4c01b346cc88"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ab1f49aa2d1182883ae8b4c01b346cc88"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ab1f49aa2d1182883ae8b4c01b346cc88">cos</a> (T x)</td></tr>
 <tr class="memdesc:ab1f49aa2d1182883ae8b4c01b346cc88"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#ab1f49aa2d1182883ae8b4c01b346cc88">[詳解]</a><br /></td></tr>
 <tr class="separator:ab1f49aa2d1182883ae8b4c01b346cc88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f8167af6da5c9eb510d33dadae13708"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a0f8167af6da5c9eb510d33dadae13708"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a0f8167af6da5c9eb510d33dadae13708"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0f8167af6da5c9eb510d33dadae13708">cosh</a> (T x)</td></tr>
 <tr class="memdesc:a0f8167af6da5c9eb510d33dadae13708"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時cosh  <a href="#a0f8167af6da5c9eb510d33dadae13708">[詳解]</a><br /></td></tr>
 <tr class="separator:a0f8167af6da5c9eb510d33dadae13708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe248729248030bd5858469409e902d2"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:afe248729248030bd5858469409e902d2"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:afe248729248030bd5858469409e902d2"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#afe248729248030bd5858469409e902d2">cosh</a> (T x)</td></tr>
 <tr class="memdesc:afe248729248030bd5858469409e902d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#afe248729248030bd5858469409e902d2">[詳解]</a><br /></td></tr>
 <tr class="separator:afe248729248030bd5858469409e902d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27595b1e53058ce792db7f8d29e2e9af"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a27595b1e53058ce792db7f8d29e2e9af"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a27595b1e53058ce792db7f8d29e2e9af"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a27595b1e53058ce792db7f8d29e2e9af">to_radian</a> (T deg)</td></tr>
 <tr class="memdesc:a27595b1e53058ce792db7f8d29e2e9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">DegreeからRadianに変換  <a href="#a27595b1e53058ce792db7f8d29e2e9af">[詳解]</a><br /></td></tr>
 <tr class="separator:a27595b1e53058ce792db7f8d29e2e9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa671d122197cf10439eee0d271f51fe6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa671d122197cf10439eee0d271f51fe6"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa671d122197cf10439eee0d271f51fe6"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa671d122197cf10439eee0d271f51fe6">to_radian</a> (T deg)</td></tr>
 <tr class="memdesc:aa671d122197cf10439eee0d271f51fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#aa671d122197cf10439eee0d271f51fe6">[詳解]</a><br /></td></tr>
 <tr class="separator:aa671d122197cf10439eee0d271f51fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af9f6d8f2c0663a0452c7edd17bf5daf0">to_degree</a> (T rad)</td></tr>
 <tr class="memdesc:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">RadianからDegreeに変換  <a href="#af9f6d8f2c0663a0452c7edd17bf5daf0">[詳解]</a><br /></td></tr>
 <tr class="separator:af9f6d8f2c0663a0452c7edd17bf5daf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7cb33956f8d7354b485aee878d7805d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa7cb33956f8d7354b485aee878d7805d"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa7cb33956f8d7354b485aee878d7805d"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa7cb33956f8d7354b485aee878d7805d">to_degree</a> (T rad)</td></tr>
 <tr class="memdesc:aa7cb33956f8d7354b485aee878d7805d"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#aa7cb33956f8d7354b485aee878d7805d">[詳解]</a><br /></td></tr>
 <tr class="separator:aa7cb33956f8d7354b485aee878d7805d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a467dee57b7bbe101146713a82acfe95e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a467dee57b7bbe101146713a82acfe95e"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a467dee57b7bbe101146713a82acfe95e"><td class="memTemplItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a467dee57b7bbe101146713a82acfe95e">digit_count</a> (T x)</td></tr>
 <tr class="memdesc:a467dee57b7bbe101146713a82acfe95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">整数部の桁数を数える関数  <a href="#a467dee57b7bbe101146713a82acfe95e">[詳解]</a><br /></td></tr>
 <tr class="separator:a467dee57b7bbe101146713a82acfe95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6eddecfb6a747238185b21c8ee1cd60"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae6eddecfb6a747238185b21c8ee1cd60"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ae6eddecfb6a747238185b21c8ee1cd60"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae6eddecfb6a747238185b21c8ee1cd60">distanceXY</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
 <tr class="memdesc:ae6eddecfb6a747238185b21c8ee1cd60"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XY)  <a href="#ae6eddecfb6a747238185b21c8ee1cd60">[詳解]</a><br /></td></tr>
 <tr class="separator:ae6eddecfb6a747238185b21c8ee1cd60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bd1999d77d0ba6f6101747d82593c66"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a6bd1999d77d0ba6f6101747d82593c66"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a6bd1999d77d0ba6f6101747d82593c66"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a6bd1999d77d0ba6f6101747d82593c66">distanceXZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
 <tr class="memdesc:a6bd1999d77d0ba6f6101747d82593c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XZ)  <a href="#a6bd1999d77d0ba6f6101747d82593c66">[詳解]</a><br /></td></tr>
 <tr class="separator:a6bd1999d77d0ba6f6101747d82593c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a708a45bd2134a3a276e7acb2566eb8c1"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a708a45bd2134a3a276e7acb2566eb8c1"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a708a45bd2134a3a276e7acb2566eb8c1"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a708a45bd2134a3a276e7acb2566eb8c1">distanceYZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
 <tr class="memdesc:a708a45bd2134a3a276e7acb2566eb8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(YZ)  <a href="#a708a45bd2134a3a276e7acb2566eb8c1">[詳解]</a><br /></td></tr>
 <tr class="separator:a708a45bd2134a3a276e7acb2566eb8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af202425b916b22c2b3a26731689d5c21"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:af202425b916b22c2b3a26731689d5c21"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:af202425b916b22c2b3a26731689d5c21"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af202425b916b22c2b3a26731689d5c21">distanceXYZ</a> (const T1 &amp;v1, const T2 &amp;v2)</td></tr>
 <tr class="memdesc:af202425b916b22c2b3a26731689d5c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">二点間の距離(XYZ)  <a href="#af202425b916b22c2b3a26731689d5c21">[詳解]</a><br /></td></tr>
 <tr class="separator:af202425b916b22c2b3a26731689d5c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -458,215 +458,219 @@ $(function() {
 <tr class="memitem:ace0188c33098d6ac615fc71e64ab6dda"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ace0188c33098d6ac615fc71e64ab6dda">exchange</a> (T &amp;obj, U &amp;&amp;new_val)</td></tr>
 <tr class="memdesc:ace0188c33098d6ac615fc71e64ab6dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時exchange  <a href="#ace0188c33098d6ac615fc71e64ab6dda">[詳解]</a><br /></td></tr>
 <tr class="separator:ace0188c33098d6ac615fc71e64ab6dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1268e543a60d43b04f1418f5ef3e41"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:abc1268e543a60d43b04f1418f5ef3e41"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:abc1268e543a60d43b04f1418f5ef3e41"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#abc1268e543a60d43b04f1418f5ef3e41">exp</a> (T x)</td></tr>
 <tr class="memdesc:abc1268e543a60d43b04f1418f5ef3e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時exp  <a href="#abc1268e543a60d43b04f1418f5ef3e41">[詳解]</a><br /></td></tr>
 <tr class="separator:abc1268e543a60d43b04f1418f5ef3e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7883c6dfd2cf3ae04993f64d98345fc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ab7883c6dfd2cf3ae04993f64d98345fc"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ab7883c6dfd2cf3ae04993f64d98345fc"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ab7883c6dfd2cf3ae04993f64d98345fc">exp</a> (T x)</td></tr>
 <tr class="memdesc:ab7883c6dfd2cf3ae04993f64d98345fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#ab7883c6dfd2cf3ae04993f64d98345fc">[詳解]</a><br /></td></tr>
 <tr class="separator:ab7883c6dfd2cf3ae04993f64d98345fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e2d4ba08357bbab05c97ae261c80343"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a2e2d4ba08357bbab05c97ae261c80343"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a2e2d4ba08357bbab05c97ae261c80343"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2e2d4ba08357bbab05c97ae261c80343">exp2</a> (T x)</td></tr>
 <tr class="memdesc:a2e2d4ba08357bbab05c97ae261c80343"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時exp2  <a href="#a2e2d4ba08357bbab05c97ae261c80343">[詳解]</a><br /></td></tr>
 <tr class="separator:a2e2d4ba08357bbab05c97ae261c80343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e9ce74a5f65c8d38a4901bf513ac1e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a35e9ce74a5f65c8d38a4901bf513ac1e"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a35e9ce74a5f65c8d38a4901bf513ac1e"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a35e9ce74a5f65c8d38a4901bf513ac1e">exp2</a> (T x)</td></tr>
 <tr class="memdesc:a35e9ce74a5f65c8d38a4901bf513ac1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a35e9ce74a5f65c8d38a4901bf513ac1e">[詳解]</a><br /></td></tr>
 <tr class="separator:a35e9ce74a5f65c8d38a4901bf513ac1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb63a6251c75f6f1e76a58f5438de69"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aabb63a6251c75f6f1e76a58f5438de69"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aabb63a6251c75f6f1e76a58f5438de69"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aabb63a6251c75f6f1e76a58f5438de69">expm1</a> (T x)</td></tr>
 <tr class="memdesc:aabb63a6251c75f6f1e76a58f5438de69"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時expm1  <a href="#aabb63a6251c75f6f1e76a58f5438de69">[詳解]</a><br /></td></tr>
 <tr class="separator:aabb63a6251c75f6f1e76a58f5438de69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4490f448ed3d82712306c54d6821788"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae4490f448ed3d82712306c54d6821788"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ae4490f448ed3d82712306c54d6821788"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae4490f448ed3d82712306c54d6821788">expm1</a> (T x)</td></tr>
 <tr class="memdesc:ae4490f448ed3d82712306c54d6821788"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#ae4490f448ed3d82712306c54d6821788">[詳解]</a><br /></td></tr>
 <tr class="separator:ae4490f448ed3d82712306c54d6821788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224c4843b72acf995e13809a5caaafd8"><td class="memTemplParams" colspan="2">template&lt;typename T  = double&gt; </td></tr>
-<tr class="memitem:a224c4843b72acf995e13809a5caaafd8"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a224c4843b72acf995e13809a5caaafd8">factorial</a> (size_t N)</td></tr>
-<tr class="memdesc:a224c4843b72acf995e13809a5caaafd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(引数バージョン)  <a href="#a224c4843b72acf995e13809a5caaafd8">[詳解]</a><br /></td></tr>
-<tr class="separator:a224c4843b72acf995e13809a5caaafd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dead910b791cee99cf82d1bd2a5d90c"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T  = double&gt; </td></tr>
-<tr class="memitem:a9dead910b791cee99cf82d1bd2a5d90c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9dead910b791cee99cf82d1bd2a5d90c">factorial</a> ()</td></tr>
-<tr class="memdesc:a9dead910b791cee99cf82d1bd2a5d90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(仮引数バージョン)  <a href="#a9dead910b791cee99cf82d1bd2a5d90c">[詳解]</a><br /></td></tr>
-<tr class="separator:a9dead910b791cee99cf82d1bd2a5d90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93bb6ae29766c4204c1cf8dc5bab007c"><td class="memTemplParams" colspan="2">template&lt;typename T  = double&gt; </td></tr>
-<tr class="memitem:a93bb6ae29766c4204c1cf8dc5bab007c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a93bb6ae29766c4204c1cf8dc5bab007c">fibonacci</a> (size_t N)</td></tr>
-<tr class="memdesc:a93bb6ae29766c4204c1cf8dc5bab007c"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィボナッチ数列求める関数  <a href="#a93bb6ae29766c4204c1cf8dc5bab007c">[詳解]</a><br /></td></tr>
-<tr class="separator:a93bb6ae29766c4204c1cf8dc5bab007c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bbb434ee3c6d77eeb32b85bb9e316f0"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T  = double&gt; </td></tr>
-<tr class="memitem:a7bbb434ee3c6d77eeb32b85bb9e316f0"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7bbb434ee3c6d77eeb32b85bb9e316f0">fibonacci</a> ()</td></tr>
-<tr class="memdesc:a7bbb434ee3c6d77eeb32b85bb9e316f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィボナッチ数列を求める関数  <a href="#a7bbb434ee3c6d77eeb32b85bb9e316f0">[詳解]</a><br /></td></tr>
-<tr class="separator:a7bbb434ee3c6d77eeb32b85bb9e316f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0718c031975604811084b62bbba93f7f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="memTemplParams" colspan="2">template&lt;typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#abc9efa0d579d2d20a9d63ea60b5c6739">factorial</a> (size_t N)</td></tr>
+<tr class="memdesc:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(引数バージョン)  <a href="#abc9efa0d579d2d20a9d63ea60b5c6739">[詳解]</a><br /></td></tr>
+<tr class="separator:abc9efa0d579d2d20a9d63ea60b5c6739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ba6ea3370958e478c11116a22fa3b8"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a07ba6ea3370958e478c11116a22fa3b8"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a07ba6ea3370958e478c11116a22fa3b8">factorial</a> ()</td></tr>
+<tr class="memdesc:a07ba6ea3370958e478c11116a22fa3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">階乗(仮引数バージョン)  <a href="#a07ba6ea3370958e478c11116a22fa3b8">[詳解]</a><br /></td></tr>
+<tr class="separator:a07ba6ea3370958e478c11116a22fa3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf00e678b37e53b924241bc7ece7b24"><td class="memTemplParams" colspan="2">template&lt;typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a2cf00e678b37e53b924241bc7ece7b24"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2cf00e678b37e53b924241bc7ece7b24">fibonacci</a> (size_t N)</td></tr>
+<tr class="memdesc:a2cf00e678b37e53b924241bc7ece7b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィボナッチ数列求める関数  <a href="#a2cf00e678b37e53b924241bc7ece7b24">[詳解]</a><br /></td></tr>
+<tr class="separator:a2cf00e678b37e53b924241bc7ece7b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac830e7b8acb5cda194f6ba9f340e5bc0"><td class="memTemplParams" colspan="2">template&lt;size_t N, typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ac830e7b8acb5cda194f6ba9f340e5bc0"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ac830e7b8acb5cda194f6ba9f340e5bc0">fibonacci</a> ()</td></tr>
+<tr class="memdesc:ac830e7b8acb5cda194f6ba9f340e5bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィボナッチ数列を求める関数  <a href="#ac830e7b8acb5cda194f6ba9f340e5bc0">[詳解]</a><br /></td></tr>
+<tr class="separator:ac830e7b8acb5cda194f6ba9f340e5bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0718c031975604811084b62bbba93f7f"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a0718c031975604811084b62bbba93f7f"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0718c031975604811084b62bbba93f7f">floor</a> (T x)</td></tr>
 <tr class="memdesc:a0718c031975604811084b62bbba93f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時floor  <a href="#a0718c031975604811084b62bbba93f7f">[詳解]</a><br /></td></tr>
 <tr class="separator:a0718c031975604811084b62bbba93f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a327cd6800fef212948644f69cb31d4ff"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a327cd6800fef212948644f69cb31d4ff"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a327cd6800fef212948644f69cb31d4ff"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a327cd6800fef212948644f69cb31d4ff">floor</a> (T x)</td></tr>
 <tr class="memdesc:a327cd6800fef212948644f69cb31d4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a327cd6800fef212948644f69cb31d4ff">[詳解]</a><br /></td></tr>
 <tr class="separator:a327cd6800fef212948644f69cb31d4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a7b926b9d370e4a9aed84579675222c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8a7b926b9d370e4a9aed84579675222c"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8a7b926b9d370e4a9aed84579675222c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8a7b926b9d370e4a9aed84579675222c">fmod</a> (T x, T y)</td></tr>
 <tr class="memdesc:a8a7b926b9d370e4a9aed84579675222c"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時float,double剰余  <a href="#a8a7b926b9d370e4a9aed84579675222c">[詳解]</a><br /></td></tr>
 <tr class="separator:a8a7b926b9d370e4a9aed84579675222c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a258bf6b0db67891f24b056905ac93591"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:a258bf6b0db67891f24b056905ac93591"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a258bf6b0db67891f24b056905ac93591">fmod</a> (T1 x, T2 y)</td></tr>
-<tr class="memdesc:a258bf6b0db67891f24b056905ac93591"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が違う場合はそろえる  <a href="#a258bf6b0db67891f24b056905ac93591">[詳解]</a><br /></td></tr>
-<tr class="separator:a258bf6b0db67891f24b056905ac93591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00438d1cd099cfd0e2938f9e3defd283"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae310926c3d50042c53a68ac85b5d6090"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae310926c3d50042c53a68ac85b5d6090"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae310926c3d50042c53a68ac85b5d6090">fmod</a> (T1 x, T2 y)</td></tr>
+<tr class="memdesc:ae310926c3d50042c53a68ac85b5d6090"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が違う場合はそろえる  <a href="#ae310926c3d50042c53a68ac85b5d6090">[詳解]</a><br /></td></tr>
+<tr class="separator:ae310926c3d50042c53a68ac85b5d6090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00438d1cd099cfd0e2938f9e3defd283"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a00438d1cd099cfd0e2938f9e3defd283"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a00438d1cd099cfd0e2938f9e3defd283">frexp</a> (T value, int *<a class="el" href="namespacesaki.html#abc1268e543a60d43b04f1418f5ef3e41">exp</a>)</td></tr>
 <tr class="memdesc:a00438d1cd099cfd0e2938f9e3defd283"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時frexp  <a href="#a00438d1cd099cfd0e2938f9e3defd283">[詳解]</a><br /></td></tr>
 <tr class="separator:a00438d1cd099cfd0e2938f9e3defd283"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915bdd850c89e1ed06c5087790109f11"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a915bdd850c89e1ed06c5087790109f11"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a915bdd850c89e1ed06c5087790109f11"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a915bdd850c89e1ed06c5087790109f11">frexp</a> (T value, int *<a class="el" href="namespacesaki.html#abc1268e543a60d43b04f1418f5ef3e41">exp</a>)</td></tr>
 <tr class="memdesc:a915bdd850c89e1ed06c5087790109f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a915bdd850c89e1ed06c5087790109f11">[詳解]</a><br /></td></tr>
 <tr class="separator:a915bdd850c89e1ed06c5087790109f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dfe75bfa0e5223a0390c5e2941e69bc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a0dfe75bfa0e5223a0390c5e2941e69bc"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a0dfe75bfa0e5223a0390c5e2941e69bc"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a0dfe75bfa0e5223a0390c5e2941e69bc">hypot</a> (T x, T y)</td></tr>
 <tr class="memdesc:a0dfe75bfa0e5223a0390c5e2941e69bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">&mdash;&mdash;2引数--&mdash;&mdash;  <a href="#a0dfe75bfa0e5223a0390c5e2941e69bc">[詳解]</a><br /></td></tr>
 <tr class="separator:a0dfe75bfa0e5223a0390c5e2941e69bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad888da163ba5c006d664d564fb48f7a7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad888da163ba5c006d664d564fb48f7a7"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ad888da163ba5c006d664d564fb48f7a7"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ad888da163ba5c006d664d564fb48f7a7">hypot</a> (T x, T y)</td></tr>
 <tr class="memdesc:ad888da163ba5c006d664d564fb48f7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#ad888da163ba5c006d664d564fb48f7a7">[詳解]</a><br /></td></tr>
 <tr class="separator:ad888da163ba5c006d664d564fb48f7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b457ea76e5aedc8279d8c78a07b26b"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae2b457ea76e5aedc8279d8c78a07b26b"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ae2b457ea76e5aedc8279d8c78a07b26b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae2b457ea76e5aedc8279d8c78a07b26b">hypot</a> (T1 x, T2 y)</td></tr>
 <tr class="memdesc:ae2b457ea76e5aedc8279d8c78a07b26b"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が違う場合はそろえる  <a href="#ae2b457ea76e5aedc8279d8c78a07b26b">[詳解]</a><br /></td></tr>
 <tr class="separator:ae2b457ea76e5aedc8279d8c78a07b26b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56768ecf1270205a8c9b3ac8cdf4a590"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a56768ecf1270205a8c9b3ac8cdf4a590"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a56768ecf1270205a8c9b3ac8cdf4a590"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a56768ecf1270205a8c9b3ac8cdf4a590">hypot</a> (T x, T y, T z)</td></tr>
 <tr class="memdesc:a56768ecf1270205a8c9b3ac8cdf4a590"><td class="mdescLeft">&#160;</td><td class="mdescRight">&mdash;&mdash;3引数--&mdash;&mdash;  <a href="#a56768ecf1270205a8c9b3ac8cdf4a590">[詳解]</a><br /></td></tr>
 <tr class="separator:a56768ecf1270205a8c9b3ac8cdf4a590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad56e1232bb063b3bc0e7cf2b3f655247"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad56e1232bb063b3bc0e7cf2b3f655247"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ad56e1232bb063b3bc0e7cf2b3f655247"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ad56e1232bb063b3bc0e7cf2b3f655247">hypot</a> (T x, T y, T z)</td></tr>
 <tr class="memdesc:ad56e1232bb063b3bc0e7cf2b3f655247"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#ad56e1232bb063b3bc0e7cf2b3f655247">[詳解]</a><br /></td></tr>
 <tr class="separator:ad56e1232bb063b3bc0e7cf2b3f655247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210e4f63ae8c3ff62e53396f8ba45d91"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt; &amp;&amp;std::is_arithmetic_v&lt; T3 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a210e4f63ae8c3ff62e53396f8ba45d91"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2, T3 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a210e4f63ae8c3ff62e53396f8ba45d91"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a210e4f63ae8c3ff62e53396f8ba45d91">hypot</a> (T1 x, T2 y, T3 z)</td></tr>
 <tr class="memdesc:a210e4f63ae8c3ff62e53396f8ba45d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">型が違う場合はそろえる  <a href="#a210e4f63ae8c3ff62e53396f8ba45d91">[詳解]</a><br /></td></tr>
 <tr class="separator:a210e4f63ae8c3ff62e53396f8ba45d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a582e9de82aa8572287c01530ae2626a8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a582e9de82aa8572287c01530ae2626a8"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a582e9de82aa8572287c01530ae2626a8"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a582e9de82aa8572287c01530ae2626a8">ilogb</a> (T x)</td></tr>
 <tr class="memdesc:a582e9de82aa8572287c01530ae2626a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時ilogb  <a href="#a582e9de82aa8572287c01530ae2626a8">[詳解]</a><br /></td></tr>
 <tr class="separator:a582e9de82aa8572287c01530ae2626a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03cf21b9e2231e956f8da966f1e09d70"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a03cf21b9e2231e956f8da966f1e09d70"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a03cf21b9e2231e956f8da966f1e09d70">is_odd</a> (T x)</td></tr>
-<tr class="memdesc:a03cf21b9e2231e956f8da966f1e09d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">奇数がどうか判定する関数  <a href="#a03cf21b9e2231e956f8da966f1e09d70">[詳解]</a><br /></td></tr>
-<tr class="separator:a03cf21b9e2231e956f8da966f1e09d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7fa7e4ec89e948874e42926e91d6dd4e">is_even</a> (T x)</td></tr>
-<tr class="memdesc:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">偶数がどうか判定する関数  <a href="#a7fa7e4ec89e948874e42926e91d6dd4e">[詳解]</a><br /></td></tr>
-<tr class="separator:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2168418bb30a857d2d018d0d05c7ace0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae0752a8969900319135a2cb16bb98e2c"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae0752a8969900319135a2cb16bb98e2c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae0752a8969900319135a2cb16bb98e2c">is_odd</a> (T x)</td></tr>
+<tr class="memdesc:ae0752a8969900319135a2cb16bb98e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">奇数がどうか判定する関数  <a href="#ae0752a8969900319135a2cb16bb98e2c">[詳解]</a><br /></td></tr>
+<tr class="separator:ae0752a8969900319135a2cb16bb98e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b20d1e721a18d69e8fa1e758be27818"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a9b20d1e721a18d69e8fa1e758be27818"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9b20d1e721a18d69e8fa1e758be27818">is_even</a> (T x)</td></tr>
+<tr class="memdesc:a9b20d1e721a18d69e8fa1e758be27818"><td class="mdescLeft">&#160;</td><td class="mdescRight">偶数がどうか判定する関数  <a href="#a9b20d1e721a18d69e8fa1e758be27818">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b20d1e721a18d69e8fa1e758be27818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2168418bb30a857d2d018d0d05c7ace0"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a2168418bb30a857d2d018d0d05c7ace0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2168418bb30a857d2d018d0d05c7ace0">isinf</a> (T x)</td></tr>
 <tr class="memdesc:a2168418bb30a857d2d018d0d05c7ace0"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時isinf  <a href="#a2168418bb30a857d2d018d0d05c7ace0">[詳解]</a><br /></td></tr>
 <tr class="separator:a2168418bb30a857d2d018d0d05c7ace0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a446ca3f39e4dc8e57db4aafa03a4e232">isnan</a> (T x)</td></tr>
 <tr class="memdesc:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not a Numberかどうか判定  <a href="#a446ca3f39e4dc8e57db4aafa03a4e232">[詳解]</a><br /></td></tr>
 <tr class="separator:a446ca3f39e4dc8e57db4aafa03a4e232"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memTemplParams" colspan="2">template&lt;typename T , typename IntegerT , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memTemplParams" colspan="2">template&lt;typename T , typename IntegerT , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt; &amp;&amp;std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a03b7a22945dcbce6e2bb0593025c90c4">ldexp</a> (T x, IntegerT <a class="el" href="namespacesaki.html#abc1268e543a60d43b04f1418f5ef3e41">exp</a>)</td></tr>
 <tr class="memdesc:a03b7a22945dcbce6e2bb0593025c90c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時ldexp  <a href="#a03b7a22945dcbce6e2bb0593025c90c4">[詳解]</a><br /></td></tr>
 <tr class="separator:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64136b916afd50ceb9bfb93ae12c63fb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename IntegerT , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt; &amp;&amp;std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ad9202fb752e29a81d507ef9a0f8e8bd5">ldexp</a> (T x, IntegerT <a class="el" href="namespacesaki.html#abc1268e543a60d43b04f1418f5ef3e41">exp</a>)</td></tr>
+<tr class="memdesc:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#ad9202fb752e29a81d507ef9a0f8e8bd5">[詳解]</a><br /></td></tr>
+<tr class="separator:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64136b916afd50ceb9bfb93ae12c63fb"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a64136b916afd50ceb9bfb93ae12c63fb"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a64136b916afd50ceb9bfb93ae12c63fb">log</a> (T x)</td></tr>
 <tr class="memdesc:a64136b916afd50ceb9bfb93ae12c63fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時log  <a href="#a64136b916afd50ceb9bfb93ae12c63fb">[詳解]</a><br /></td></tr>
 <tr class="separator:a64136b916afd50ceb9bfb93ae12c63fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f260fd4311e2bd21ae770f8aed6fa81"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a7f260fd4311e2bd21ae770f8aed6fa81"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a7f260fd4311e2bd21ae770f8aed6fa81"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7f260fd4311e2bd21ae770f8aed6fa81">log</a> (T x)</td></tr>
 <tr class="memdesc:a7f260fd4311e2bd21ae770f8aed6fa81"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a7f260fd4311e2bd21ae770f8aed6fa81">[詳解]</a><br /></td></tr>
 <tr class="separator:a7f260fd4311e2bd21ae770f8aed6fa81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1a5f3dfe15009e9e985b8b0647211e6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa1a5f3dfe15009e9e985b8b0647211e6"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa1a5f3dfe15009e9e985b8b0647211e6"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa1a5f3dfe15009e9e985b8b0647211e6">log10</a> (T x)</td></tr>
 <tr class="memdesc:aa1a5f3dfe15009e9e985b8b0647211e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時log10  <a href="#aa1a5f3dfe15009e9e985b8b0647211e6">[詳解]</a><br /></td></tr>
 <tr class="separator:aa1a5f3dfe15009e9e985b8b0647211e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5fde452567de6eaae1d5c481497757"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a7e5fde452567de6eaae1d5c481497757"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a7e5fde452567de6eaae1d5c481497757"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7e5fde452567de6eaae1d5c481497757">log10</a> (T x)</td></tr>
 <tr class="memdesc:a7e5fde452567de6eaae1d5c481497757"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a7e5fde452567de6eaae1d5c481497757">[詳解]</a><br /></td></tr>
 <tr class="separator:a7e5fde452567de6eaae1d5c481497757"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae0b2550b674acc69fa1fbe407917fdc7">log1p</a> (T x)</td></tr>
 <tr class="memdesc:ae0b2550b674acc69fa1fbe407917fdc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時log1p  <a href="#ae0b2550b674acc69fa1fbe407917fdc7">[詳解]</a><br /></td></tr>
 <tr class="separator:ae0b2550b674acc69fa1fbe407917fdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aec755aa143bd9a0d03c5ebb2dc5dd3de">log1p</a> (T x)</td></tr>
 <tr class="memdesc:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#aec755aa143bd9a0d03c5ebb2dc5dd3de">[詳解]</a><br /></td></tr>
 <tr class="separator:aec755aa143bd9a0d03c5ebb2dc5dd3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac184cde6c3531e01531219e081e25452"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ac184cde6c3531e01531219e081e25452"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ac184cde6c3531e01531219e081e25452"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ac184cde6c3531e01531219e081e25452">log2</a> (T x)</td></tr>
 <tr class="memdesc:ac184cde6c3531e01531219e081e25452"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時log2  <a href="#ac184cde6c3531e01531219e081e25452">[詳解]</a><br /></td></tr>
 <tr class="separator:ac184cde6c3531e01531219e081e25452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cb2f664389aab32abc797d9a60db4dc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8cb2f664389aab32abc797d9a60db4dc"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8cb2f664389aab32abc797d9a60db4dc"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8cb2f664389aab32abc797d9a60db4dc">log2</a> (T x)</td></tr>
 <tr class="memdesc:a8cb2f664389aab32abc797d9a60db4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a8cb2f664389aab32abc797d9a60db4dc">[詳解]</a><br /></td></tr>
 <tr class="separator:a8cb2f664389aab32abc797d9a60db4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e81af48b13fbf88f135d296471bac1"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ab7e81af48b13fbf88f135d296471bac1"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ab7e81af48b13fbf88f135d296471bac1"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ab7e81af48b13fbf88f135d296471bac1">logb</a> (T x)</td></tr>
 <tr class="memdesc:ab7e81af48b13fbf88f135d296471bac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時logb  <a href="#ab7e81af48b13fbf88f135d296471bac1">[詳解]</a><br /></td></tr>
 <tr class="separator:ab7e81af48b13fbf88f135d296471bac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf4ba562bb9897e98b75eb95027bfad5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:adf4ba562bb9897e98b75eb95027bfad5"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:adf4ba562bb9897e98b75eb95027bfad5"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#adf4ba562bb9897e98b75eb95027bfad5">logb</a> (T x)</td></tr>
 <tr class="memdesc:adf4ba562bb9897e98b75eb95027bfad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#adf4ba562bb9897e98b75eb95027bfad5">[詳解]</a><br /></td></tr>
 <tr class="separator:adf4ba562bb9897e98b75eb95027bfad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa5b66f18d7c8c94b4c50731449ed3240">pow</a> (T x, T y)</td></tr>
 <tr class="memdesc:aa5b66f18d7c8c94b4c50731449ed3240"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時累乗  <a href="#aa5b66f18d7c8c94b4c50731449ed3240">[詳解]</a><br /></td></tr>
 <tr class="separator:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b0e93733e85d7c6ab17aea25072536"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a53b0e93733e85d7c6ab17aea25072536"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a53b0e93733e85d7c6ab17aea25072536"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a53b0e93733e85d7c6ab17aea25072536">pow</a> (T x, T y)</td></tr>
 <tr class="memdesc:a53b0e93733e85d7c6ab17aea25072536"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a53b0e93733e85d7c6ab17aea25072536">[詳解]</a><br /></td></tr>
 <tr class="separator:a53b0e93733e85d7c6ab17aea25072536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede1168d9c20adf475c0a27670925c34"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:aede1168d9c20adf475c0a27670925c34"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aede1168d9c20adf475c0a27670925c34">pow</a> (T1 x, T2 y)</td></tr>
-<tr class="memdesc:aede1168d9c20adf475c0a27670925c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="#aede1168d9c20adf475c0a27670925c34">[詳解]</a><br /></td></tr>
-<tr class="separator:aede1168d9c20adf475c0a27670925c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac51e06f83630682641e0d99d5c957a9c"><td class="memTemplParams" colspan="2">template&lt;typename T  = int, typename Func  = saki::return_param, typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt; &amp;&amp;std::is_invocable_v&lt; Func, T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a27bb8324ff45bceda3b301f9f3f417c7"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a27bb8324ff45bceda3b301f9f3f417c7"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a27bb8324ff45bceda3b301f9f3f417c7">pow</a> (T1 x, T2 y)</td></tr>
+<tr class="memdesc:a27bb8324ff45bceda3b301f9f3f417c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="#a27bb8324ff45bceda3b301f9f3f417c7">[詳解]</a><br /></td></tr>
+<tr class="separator:a27bb8324ff45bceda3b301f9f3f417c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51e06f83630682641e0d99d5c957a9c"><td class="memTemplParams" colspan="2">template&lt;typename T  = int, typename Func  = saki::return_param, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt; &amp;&amp;std::is_invocable_v&lt; Func, T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ac51e06f83630682641e0d99d5c957a9c"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ac51e06f83630682641e0d99d5c957a9c">sigma</a> (T start, const T &amp;end, Func &amp;&amp;f=Func())</td></tr>
 <tr class="memdesc:ac51e06f83630682641e0d99d5c957a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">数学のシグマを簡単に実装  <a href="#ac51e06f83630682641e0d99d5c957a9c">[詳解]</a><br /></td></tr>
 <tr class="separator:ac51e06f83630682641e0d99d5c957a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a2e595e3d1c68d48646e3fe481cda4fe0">signbit</a> (T x)</td></tr>
-<tr class="memdesc:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数かどうか判定する  <a href="#a2e595e3d1c68d48646e3fe481cda4fe0">[詳解]</a><br /></td></tr>
-<tr class="separator:a2e595e3d1c68d48646e3fe481cda4fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a743f7284cdebb6406db9b37e42bcd730"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a230838749b1e19afc5f9265bd161d4d8"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_signed_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a230838749b1e19afc5f9265bd161d4d8"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a230838749b1e19afc5f9265bd161d4d8">signbit</a> (T x)</td></tr>
+<tr class="memdesc:a230838749b1e19afc5f9265bd161d4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">負数かどうか判定する  <a href="#a230838749b1e19afc5f9265bd161d4d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a230838749b1e19afc5f9265bd161d4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743f7284cdebb6406db9b37e42bcd730"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a743f7284cdebb6406db9b37e42bcd730"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a743f7284cdebb6406db9b37e42bcd730">sin</a> (T x)</td></tr>
 <tr class="memdesc:a743f7284cdebb6406db9b37e42bcd730"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時sin  <a href="#a743f7284cdebb6406db9b37e42bcd730">[詳解]</a><br /></td></tr>
 <tr class="separator:a743f7284cdebb6406db9b37e42bcd730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fd77d1e52189e28f4a5d069891501cf"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a9fd77d1e52189e28f4a5d069891501cf"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a9fd77d1e52189e28f4a5d069891501cf"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9fd77d1e52189e28f4a5d069891501cf">sin</a> (T x)</td></tr>
 <tr class="memdesc:a9fd77d1e52189e28f4a5d069891501cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a9fd77d1e52189e28f4a5d069891501cf">[詳解]</a><br /></td></tr>
 <tr class="separator:a9fd77d1e52189e28f4a5d069891501cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe1ef6db83d59a5eb2daac9bff09d312"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:abe1ef6db83d59a5eb2daac9bff09d312"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:abe1ef6db83d59a5eb2daac9bff09d312"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#abe1ef6db83d59a5eb2daac9bff09d312">sinh</a> (T x)</td></tr>
 <tr class="memdesc:abe1ef6db83d59a5eb2daac9bff09d312"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時sinh  <a href="#abe1ef6db83d59a5eb2daac9bff09d312">[詳解]</a><br /></td></tr>
 <tr class="separator:abe1ef6db83d59a5eb2daac9bff09d312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8199390b7650fdebe491aaeb4c3a44c3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8199390b7650fdebe491aaeb4c3a44c3"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8199390b7650fdebe491aaeb4c3a44c3"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8199390b7650fdebe491aaeb4c3a44c3">sinh</a> (T x)</td></tr>
 <tr class="memdesc:a8199390b7650fdebe491aaeb4c3a44c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a8199390b7650fdebe491aaeb4c3a44c3">[詳解]</a><br /></td></tr>
 <tr class="separator:a8199390b7650fdebe491aaeb4c3a44c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c2f6c98a144d6ba6683c86c865fd595"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a5c2f6c98a144d6ba6683c86c865fd595"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a5c2f6c98a144d6ba6683c86c865fd595"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5c2f6c98a144d6ba6683c86c865fd595">sqrt</a> (T x)</td></tr>
 <tr class="memdesc:a5c2f6c98a144d6ba6683c86c865fd595"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時平方根  <a href="#a5c2f6c98a144d6ba6683c86c865fd595">[詳解]</a><br /></td></tr>
 <tr class="separator:a5c2f6c98a144d6ba6683c86c865fd595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66fac13294984ad19b8b7fec3b5466b5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a66fac13294984ad19b8b7fec3b5466b5"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a66fac13294984ad19b8b7fec3b5466b5"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a66fac13294984ad19b8b7fec3b5466b5">sqrt</a> (T x)</td></tr>
 <tr class="memdesc:a66fac13294984ad19b8b7fec3b5466b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a66fac13294984ad19b8b7fec3b5466b5">[詳解]</a><br /></td></tr>
 <tr class="separator:a66fac13294984ad19b8b7fec3b5466b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a491321db8475898649b625dca5401726"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a491321db8475898649b625dca5401726"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a491321db8475898649b625dca5401726"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a491321db8475898649b625dca5401726">tan</a> (T x)</td></tr>
 <tr class="memdesc:a491321db8475898649b625dca5401726"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時tan  <a href="#a491321db8475898649b625dca5401726">[詳解]</a><br /></td></tr>
 <tr class="separator:a491321db8475898649b625dca5401726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52704083849bbdf4ab635cca985c00ae"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a52704083849bbdf4ab635cca985c00ae"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a52704083849bbdf4ab635cca985c00ae"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a52704083849bbdf4ab635cca985c00ae">tan</a> (T x)</td></tr>
 <tr class="memdesc:a52704083849bbdf4ab635cca985c00ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a52704083849bbdf4ab635cca985c00ae">[詳解]</a><br /></td></tr>
 <tr class="separator:a52704083849bbdf4ab635cca985c00ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2674216630169ce211f8076492ce14e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:af2674216630169ce211f8076492ce14e"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:af2674216630169ce211f8076492ce14e"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#af2674216630169ce211f8076492ce14e">tanh</a> (T x)</td></tr>
 <tr class="memdesc:af2674216630169ce211f8076492ce14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時tanh  <a href="#af2674216630169ce211f8076492ce14e">[詳解]</a><br /></td></tr>
 <tr class="separator:af2674216630169ce211f8076492ce14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5faf83bc9a4a7e981275deba551d2f3f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a5faf83bc9a4a7e981275deba551d2f3f"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a5faf83bc9a4a7e981275deba551d2f3f"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a5faf83bc9a4a7e981275deba551d2f3f">tanh</a> (T x)</td></tr>
 <tr class="memdesc:a5faf83bc9a4a7e981275deba551d2f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="#a5faf83bc9a4a7e981275deba551d2f3f">[詳解]</a><br /></td></tr>
 <tr class="separator:a5faf83bc9a4a7e981275deba551d2f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -749,18 +753,18 @@ $(function() {
 <tr class="memitem:a4bef07cf55a40a115c89e6e20406b124"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a4bef07cf55a40a115c89e6e20406b124">operator!=</a> (const <a class="el" href="classsaki_1_1matrix.html">matrix</a>&lt; T1 &gt; &amp;m1, const <a class="el" href="classsaki_1_1matrix.html">matrix</a>&lt; T2 &gt; &amp;m2)</td></tr>
 <tr class="memdesc:a4bef07cf55a40a115c89e6e20406b124"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子(型不一致)  <a href="#a4bef07cf55a40a115c89e6e20406b124">[詳解]</a><br /></td></tr>
 <tr class="separator:a4bef07cf55a40a115c89e6e20406b124"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename BinaryOperation  = saki::addition, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt; &amp;&amp;std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt; &gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memTemplParams" colspan="2">template&lt;typename Container , typename BinaryOperation  = saki::addition, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt; &amp;&amp;std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt; &gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a6f2ea69ef5e31c8004ba36bb10384333">accumulate</a> (const Container &amp;con, T init=0, BinaryOperation &amp;&amp;binary_op=<a class="el" href="structsaki_1_1addition.html">saki::addition</a>())</td></tr>
 <tr class="memdesc:a6f2ea69ef5e31c8004ba36bb10384333"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数が2つの関数を指定し、それをすべての要素で回す  <a href="#a6f2ea69ef5e31c8004ba36bb10384333">[詳解]</a><br /></td></tr>
 <tr class="separator:a6f2ea69ef5e31c8004ba36bb10384333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adec39fdef417fa75fb6a6bd06b08490c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:adec39fdef417fa75fb6a6bd06b08490c"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:adec39fdef417fa75fb6a6bd06b08490c"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#adec39fdef417fa75fb6a6bd06b08490c">random</a> (const T random_min, const T random_max)</td></tr>
 <tr class="memdesc:adec39fdef417fa75fb6a6bd06b08490c"><td class="mdescLeft">&#160;</td><td class="mdescRight">最小値と最大値を引数にとり、その間からランダムな値を返す  <a href="#adec39fdef417fa75fb6a6bd06b08490c">[詳解]</a><br /></td></tr>
 <tr class="separator:adec39fdef417fa75fb6a6bd06b08490c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a8a3d0c8d244f1f8e5c6c8310f7e7b647">random</a> (const T1 random_min, const T2 random_max)</td></tr>
 <tr class="separator:a8a3d0c8d244f1f8e5c6c8310f7e7b647"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad15185db28f6e77d65411ca83f64f5bb"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename &gt; typename Container = std::vector, typename T , typename saki::enable_if_nullptr_t&lt; saki::has_check_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad15185db28f6e77d65411ca83f64f5bb"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename &gt; typename Container = std::vector, typename T , saki::enable_if_nullptr_t&lt; saki::has_check_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:ad15185db28f6e77d65411ca83f64f5bb"><td class="memTemplItemLeft" align="right" valign="top">Container&lt; std::string, std::allocator&lt; std::string &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ad15185db28f6e77d65411ca83f64f5bb">split</a> (const std::string &amp;str, T &amp;&amp;split_separation)</td></tr>
 <tr class="memdesc:ad15185db28f6e77d65411ca83f64f5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">string型を指定された文字で区切ったものをvectorで返す  <a href="#ad15185db28f6e77d65411ca83f64f5bb">[詳解]</a><br /></td></tr>
 <tr class="separator:ad15185db28f6e77d65411ca83f64f5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1067,7 +1071,7 @@ template&lt;size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt;!std::is_unsigned_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt;!std::is_unsigned_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::abs </td>
@@ -1103,7 +1107,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt;!std::is_unsigned
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Container , typename BinaryOperation  = saki::addition, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt; &amp;&amp;std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt; &gt;  = nullptr&gt; </div>
+template&lt;typename Container , typename BinaryOperation  = saki::addition, typename T  = saki::remove_reference_const_t&lt;typename Container::value_type&gt;, saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container &gt; &amp;&amp;std::is_invocable_r_v&lt; T, BinaryOperation, T, T &gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::accumulate </td>
@@ -1150,7 +1154,7 @@ template&lt;typename Container , typename BinaryOperation  = saki::addition, typ
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::acos </td>
@@ -1178,7 +1182,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::acos </td>
@@ -1206,7 +1210,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::acosh </td>
@@ -1228,7 +1232,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::acosh </td>
@@ -1250,7 +1254,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::asin </td>
@@ -1278,7 +1282,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::asin </td>
@@ -1306,7 +1310,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::asinh </td>
@@ -1328,7 +1332,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::asinh </td>
@@ -1350,7 +1354,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::atan </td>
@@ -1378,7 +1382,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::atan </td>
@@ -1406,7 +1410,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::atan2 </td>
@@ -1444,7 +1448,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::atan2 </td>
@@ -1476,7 +1480,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::atan2 </td>
@@ -1508,7 +1512,7 @@ template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; s
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::atanh </td>
@@ -1530,7 +1534,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::atanh </td>
@@ -1552,7 +1556,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::cbrt </td>
@@ -1574,7 +1578,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::cbrt </td>
@@ -1596,7 +1600,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Container1 , typename Container2 , typename saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt; &gt;  = nullptr&gt; </div>
+template&lt;typename Container1 , typename Container2 , saki::enable_if_nullptr_t&lt; saki::can_range_based_for_v&lt; Container1 &gt; &amp;&amp;saki::can_range_based_for_v&lt; Container2 &gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::copy </td>
@@ -1676,7 +1680,7 @@ template&lt;typename T , typename SignType &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::cos </td>
@@ -1704,7 +1708,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::cos </td>
@@ -1732,7 +1736,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::cosh </td>
@@ -1754,7 +1758,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::cosh </td>
@@ -1840,7 +1844,7 @@ template&lt;typename U  = double, typename T1 , typename T2 &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr size_t saki::digit_count </td>
@@ -1863,7 +1867,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmet
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::distanceXY </td>
@@ -1895,7 +1899,7 @@ template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; s
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::distanceXYZ </td>
@@ -1927,7 +1931,7 @@ template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; s
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_x_v&lt; T1 &gt; &amp;&amp;saki::has_x_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::distanceXZ </td>
@@ -1959,7 +1963,7 @@ template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; s
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; saki::has_y_v&lt; T1 &gt; &amp;&amp;saki::has_y_v&lt; T2 &gt; &amp;&amp;saki::has_z_v&lt; T1 &gt; &amp;&amp;saki::has_z_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::distanceYZ </td>
@@ -2126,7 +2130,7 @@ template&lt;typename T , typename U  = T&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::exp </td>
@@ -2148,7 +2152,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::exp </td>
@@ -2170,7 +2174,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::exp2 </td>
@@ -2192,7 +2196,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::exp2 </td>
@@ -2214,7 +2218,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::expm1 </td>
@@ -2236,7 +2240,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::expm1 </td>
@@ -2252,13 +2256,13 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 
 </div>
 </div>
-<a id="a224c4843b72acf995e13809a5caaafd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a224c4843b72acf995e13809a5caaafd8">&#9670;&nbsp;</a></span>factorial() <span class="overload">[1/2]</span></h2>
+<a id="abc9efa0d579d2d20a9d63ea60b5c6739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9efa0d579d2d20a9d63ea60b5c6739">&#9670;&nbsp;</a></span>factorial() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T  = double&gt; </div>
+template&lt;typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::factorial </td>
@@ -2280,13 +2284,13 @@ template&lt;typename T  = double&gt; </div>
 
 </div>
 </div>
-<a id="a9dead910b791cee99cf82d1bd2a5d90c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dead910b791cee99cf82d1bd2a5d90c">&#9670;&nbsp;</a></span>factorial() <span class="overload">[2/2]</span></h2>
+<a id="a07ba6ea3370958e478c11116a22fa3b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ba6ea3370958e478c11116a22fa3b8">&#9670;&nbsp;</a></span>factorial() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t N, typename T  = double&gt; </div>
+template&lt;size_t N, typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::factorial </td>
@@ -2301,13 +2305,13 @@ template&lt;size_t N, typename T  = double&gt; </div>
 
 </div>
 </div>
-<a id="a93bb6ae29766c4204c1cf8dc5bab007c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93bb6ae29766c4204c1cf8dc5bab007c">&#9670;&nbsp;</a></span>fibonacci() <span class="overload">[1/2]</span></h2>
+<a id="a2cf00e678b37e53b924241bc7ece7b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf00e678b37e53b924241bc7ece7b24">&#9670;&nbsp;</a></span>fibonacci() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T  = double&gt; </div>
+template&lt;typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::fibonacci </td>
@@ -2329,13 +2333,13 @@ template&lt;typename T  = double&gt; </div>
 
 </div>
 </div>
-<a id="a7bbb434ee3c6d77eeb32b85bb9e316f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bbb434ee3c6d77eeb32b85bb9e316f0">&#9670;&nbsp;</a></span>fibonacci() <span class="overload">[2/2]</span></h2>
+<a id="ac830e7b8acb5cda194f6ba9f340e5bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac830e7b8acb5cda194f6ba9f340e5bc0">&#9670;&nbsp;</a></span>fibonacci() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;size_t N, typename T  = double&gt; </div>
+template&lt;size_t N, typename T  = double, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::fibonacci </td>
@@ -2356,7 +2360,7 @@ template&lt;size_t N, typename T  = double&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::floor </td>
@@ -2379,7 +2383,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::floor </td>
@@ -2401,7 +2405,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::fmod </td>
@@ -2435,13 +2439,13 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 
 </div>
 </div>
-<a id="a258bf6b0db67891f24b056905ac93591"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a258bf6b0db67891f24b056905ac93591">&#9670;&nbsp;</a></span>fmod() <span class="overload">[2/2]</span></h2>
+<a id="ae310926c3d50042c53a68ac85b5d6090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae310926c3d50042c53a68ac85b5d6090">&#9670;&nbsp;</a></span>fmod() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::fmod </td>
@@ -2473,7 +2477,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::frexp </td>
@@ -2505,7 +2509,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::frexp </td>
@@ -2537,7 +2541,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::hypot </td>
@@ -2570,7 +2574,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::hypot </td>
@@ -2602,7 +2606,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::hypot </td>
@@ -2634,7 +2638,7 @@ template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; s
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::hypot </td>
@@ -2673,7 +2677,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::hypot </td>
@@ -2711,7 +2715,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename T3 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt; &amp;&amp;std::is_arithmetic_v&lt; T3 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , typename T3 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2, T3 &gt;&gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::hypot </td>
@@ -2749,7 +2753,7 @@ template&lt;typename T1 , typename T2 , typename T3 , typename saki::enable_if_n
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr int saki::ilogb </td>
@@ -2789,13 +2793,13 @@ template&lt;typename T , typename Integer , size_t N = saki::digit_count(std::nu
 
 </div>
 </div>
-<a id="a7fa7e4ec89e948874e42926e91d6dd4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa7e4ec89e948874e42926e91d6dd4e">&#9670;&nbsp;</a></span>is_even()</h2>
+<a id="a9b20d1e721a18d69e8fa1e758be27818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b20d1e721a18d69e8fa1e758be27818">&#9670;&nbsp;</a></span>is_even()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::is_even </td>
@@ -2817,7 +2821,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; saki::can_less_or_equal_v&lt; T &gt; &gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; saki::can_less_or_equal_v&lt; T &gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::is_fit </td>
@@ -2856,7 +2860,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; saki::can_less_o
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename First , typename MinType , typename MaxType , typename saki::enable_if_nullptr_t&lt; std::is_convertible_v&lt; MinType, First &gt; &amp;&amp;std::is_convertible_v&lt; MaxType, First &gt; &amp;&amp;saki::can_less_or_equal_v&lt; First &gt; &gt;  = nullptr&gt; </div>
+template&lt;typename First , typename MinType , typename MaxType , saki::enable_if_nullptr_t&lt; std::is_convertible_v&lt; MinType, First &gt; &amp;&amp;std::is_convertible_v&lt; MaxType, First &gt; &amp;&amp;saki::can_less_or_equal_v&lt; First &gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::is_fit </td>
@@ -2894,7 +2898,7 @@ template&lt;typename First , typename MinType , typename MaxType , typename saki
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; Args, First &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_less&lt; First &gt;&gt; &gt;  = nullptr&gt; </div>
+template&lt;typename First , typename... Args, saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; Args, First &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_less&lt; First &gt;&gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::is_max </td>
@@ -2927,7 +2931,7 @@ template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_greater&lt; First &gt;&gt; &gt;  = nullptr&gt; </div>
+template&lt;typename First , typename... Args, saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_greater&lt; First &gt;&gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::is_min </td>
@@ -2954,13 +2958,13 @@ template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_
 
 </div>
 </div>
-<a id="a03cf21b9e2231e956f8da966f1e09d70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03cf21b9e2231e956f8da966f1e09d70">&#9670;&nbsp;</a></span>is_odd()</h2>
+<a id="ae0752a8969900319135a2cb16bb98e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0752a8969900319135a2cb16bb98e2c">&#9670;&nbsp;</a></span>is_odd()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::is_odd </td>
@@ -2982,7 +2986,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::isinf </td>
@@ -3005,7 +3009,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::isnan </td>
@@ -3036,12 +3040,12 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 </div>
 </div>
 <a id="a03b7a22945dcbce6e2bb0593025c90c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03b7a22945dcbce6e2bb0593025c90c4">&#9670;&nbsp;</a></span>ldexp()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b7a22945dcbce6e2bb0593025c90c4">&#9670;&nbsp;</a></span>ldexp() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename IntegerT , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , typename IntegerT , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt; &amp;&amp;std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::ldexp </td>
@@ -3064,7 +3068,38 @@ template&lt;typename T , typename IntegerT , typename saki::enable_if_nullptr_t&
 </div><div class="memdoc">
 
 <p>コンパイル時ldexp </p>
-<p>第二引数がint型じゃない場合に、int型にするためのもの </p>
+
+</div>
+</div>
+<a id="ad9202fb752e29a81d507ef9a0f8e8bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9202fb752e29a81d507ef9a0f8e8bd5">&#9670;&nbsp;</a></span>ldexp() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename IntegerT , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt; &amp;&amp;std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr double saki::ldexp </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IntegerT&#160;</td>
+          <td class="paramname"><em>exp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>引数がint型の場合に、戻り値をdouble型にするためのもの </p>
 
 </div>
 </div>
@@ -3113,53 +3148,8 @@ template&lt;typename U  = double, typename T1 , typename T2 , typename T  = doub
 
 </div>
 </div>
-<a id="acc3cd6d8e07cbfcd2691c4d9ffe25416"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc3cd6d8e07cbfcd2691c4d9ffe25416">&#9670;&nbsp;</a></span>lerp() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename U  = double, typename T1 , typename T2 , typename T  = double&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="classsaki_1_1vector4.html">saki::vector4</a>&lt;U&gt; saki::lerp </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">saki::vector4</a>&lt; T1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">saki::vector4</a>&lt; T2 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>base</em> = <code>1</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>線形補間 </p>
-<p>Quaternionは使用していません </p>
-
-</div>
-</div>
 <a id="a1dc5233651ca71b38ed5a53ef304e480"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dc5233651ca71b38ed5a53ef304e480">&#9670;&nbsp;</a></span>lerp() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc5233651ca71b38ed5a53ef304e480">&#9670;&nbsp;</a></span>lerp() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3203,13 +3193,58 @@ template&lt;typename U  = double, typename T1 , typename T2 , typename T  = doub
 
 </div>
 </div>
+<a id="acc3cd6d8e07cbfcd2691c4d9ffe25416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc3cd6d8e07cbfcd2691c4d9ffe25416">&#9670;&nbsp;</a></span>lerp() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename U  = double, typename T1 , typename T2 , typename T  = double&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classsaki_1_1vector4.html">saki::vector4</a>&lt;U&gt; saki::lerp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">saki::vector4</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">saki::vector4</a>&lt; T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>base</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>線形補間 </p>
+<p>Quaternionは使用していません </p>
+
+</div>
+</div>
 <a id="a64136b916afd50ceb9bfb93ae12c63fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64136b916afd50ceb9bfb93ae12c63fb">&#9670;&nbsp;</a></span>log() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::log </td>
@@ -3231,7 +3266,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::log </td>
@@ -3253,7 +3288,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::log10 </td>
@@ -3275,7 +3310,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::log10 </td>
@@ -3297,7 +3332,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::log1p </td>
@@ -3319,7 +3354,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::log1p </td>
@@ -3341,7 +3376,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::log2 </td>
@@ -3363,7 +3398,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::log2 </td>
@@ -3385,7 +3420,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::logb </td>
@@ -3407,7 +3442,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::logb </td>
@@ -3429,7 +3464,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename First , typename... Args, typename saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_equal_equal&lt; First &gt;&gt; &gt;  = nullptr&gt; </div>
+template&lt;typename First , typename... Args, saki::enable_if_nullptr_t&lt; std::conjunction_v&lt; std::is_convertible&lt; First, Args &gt;... &gt; &amp;&amp;std::conjunction_v&lt; saki::can_equal_equal&lt; First &gt;&gt; &gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::multi_equal </td>
@@ -4004,8 +4039,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="abd9716c5a5ccdc1cafb975df8897acb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd9716c5a5ccdc1cafb975df8897acb3">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/14]</span></h2>
+<a id="a0fe5418c09468a2435c0a8a85a941174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe5418c09468a2435c0a8a85a941174">&#9670;&nbsp;</a></span>operator*() <span class="overload">[2/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4015,7 +4050,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="memname">constexpr auto saki::operator* </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -4036,8 +4071,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a0fe5418c09468a2435c0a8a85a941174"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fe5418c09468a2435c0a8a85a941174">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/14]</span></h2>
+<a id="abd9716c5a5ccdc1cafb975df8897acb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9716c5a5ccdc1cafb975df8897acb3">&#9670;&nbsp;</a></span>operator*() <span class="overload">[3/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4047,7 +4082,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="memname">constexpr auto saki::operator* </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -4132,40 +4167,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="ad1caaaf5b1af879f2d546a4b2e10974e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1caaaf5b1af879f2d546a4b2e10974e">&#9670;&nbsp;</a></span>operator*() <span class="overload">[6/14]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto saki::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const T1 &amp;&#160;</td>
-          <td class="paramname"><em>scalar</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>*演算子(スカラ*ベクトル) </p>
-
-</div>
-</div>
 <a id="ab3e41594237dcaac47a2a27ed97f48f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3e41594237dcaac47a2a27ed97f48f6">&#9670;&nbsp;</a></span>operator*() <span class="overload">[7/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3e41594237dcaac47a2a27ed97f48f6">&#9670;&nbsp;</a></span>operator*() <span class="overload">[6/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4182,6 +4185,38 @@ template&lt;typename T1 , typename T2 &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>*演算子(スカラ*ベクトル) </p>
+
+</div>
+</div>
+<a id="ad1caaaf5b1af879f2d546a4b2e10974e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1caaaf5b1af879f2d546a4b2e10974e">&#9670;&nbsp;</a></span>operator*() <span class="overload">[7/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto saki::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const T1 &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em>&#160;</td>
         </tr>
         <tr>
@@ -4292,40 +4327,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a8ec94b07795582554759e6f844b6055f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ec94b07795582554759e6f844b6055f">&#9670;&nbsp;</a></span>operator*() <span class="overload">[11/14]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto saki::operator* </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1matrix.html">matrix</a>&lt; T1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T2 &amp;&#160;</td>
-          <td class="paramname"><em>scalar</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>*演算子(行列*スカラ) </p>
-
-</div>
-</div>
 <a id="a1db47b2e2e0826325ae66ee6216ba5fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1db47b2e2e0826325ae66ee6216ba5fc">&#9670;&nbsp;</a></span>operator*() <span class="overload">[12/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db47b2e2e0826325ae66ee6216ba5fc">&#9670;&nbsp;</a></span>operator*() <span class="overload">[11/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4353,6 +4356,38 @@ template&lt;typename T1 , typename T2 &gt; </div>
 </div><div class="memdoc">
 
 <p>*演算子(ベクトル) </p>
+
+</div>
+</div>
+<a id="a8ec94b07795582554759e6f844b6055f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec94b07795582554759e6f844b6055f">&#9670;&nbsp;</a></span>operator*() <span class="overload">[12/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto saki::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1matrix.html">matrix</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T2 &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>*演算子(行列*スカラ) </p>
 
 </div>
 </div>
@@ -4612,40 +4647,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a9b9369c0656bd3b8b940eadf027b41f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b9369c0656bd3b8b940eadf027b41f3">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto saki::operator- </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>-演算子 </p>
-
-</div>
-</div>
 <a id="a8697755777c25ac12687ea8804f80331"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8697755777c25ac12687ea8804f80331">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8697755777c25ac12687ea8804f80331">&#9670;&nbsp;</a></span>operator-() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4662,6 +4665,38 @@ template&lt;typename T1 , typename T2 &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>-演算子 </p>
+
+</div>
+</div>
+<a id="a9b9369c0656bd3b8b940eadf027b41f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9369c0656bd3b8b940eadf027b41f3">&#9670;&nbsp;</a></span>operator-() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto saki::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
@@ -4772,8 +4807,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a5525c6da34ded0620ee6d965e687bedc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5525c6da34ded0620ee6d965e687bedc">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/8]</span></h2>
+<a id="a15270d7bd5638726debe317a16a6b26b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15270d7bd5638726debe317a16a6b26b">&#9670;&nbsp;</a></span>operator/() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4783,7 +4818,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="memname">constexpr auto saki::operator/ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -4804,8 +4839,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="a15270d7bd5638726debe317a16a6b26b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15270d7bd5638726debe317a16a6b26b">&#9670;&nbsp;</a></span>operator/() <span class="overload">[3/8]</span></h2>
+<a id="a5525c6da34ded0620ee6d965e687bedc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5525c6da34ded0620ee6d965e687bedc">&#9670;&nbsp;</a></span>operator/() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4815,7 +4850,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
         <tr>
           <td class="memname">constexpr auto saki::operator/ </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -4868,40 +4903,8 @@ template&lt;typename T1 , typename T2 &gt; </div>
 
 </div>
 </div>
-<a id="ac72c945dc5e1e8fe6065beac4a310a54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac72c945dc5e1e8fe6065beac4a310a54">&#9670;&nbsp;</a></span>operator/() <span class="overload">[5/8]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto saki::operator/ </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>/演算子(ベクトル) </p>
-
-</div>
-</div>
 <a id="aee335c88f00f71e52e37fd4bfb77b181"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee335c88f00f71e52e37fd4bfb77b181">&#9670;&nbsp;</a></span>operator/() <span class="overload">[6/8]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aee335c88f00f71e52e37fd4bfb77b181">&#9670;&nbsp;</a></span>operator/() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4918,6 +4921,38 @@ template&lt;typename T1 , typename T2 &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>/演算子(ベクトル) </p>
+
+</div>
+</div>
+<a id="ac72c945dc5e1e8fe6065beac4a310a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72c945dc5e1e8fe6065beac4a310a54">&#9670;&nbsp;</a></span>operator/() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto saki::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
@@ -5092,8 +5127,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a3ce1faca02399d52a09851a1b6e8afe3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ce1faca02399d52a09851a1b6e8afe3">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/14]</span></h2>
+<a id="abe77ceb7257097320a66f9f182d11111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe77ceb7257097320a66f9f182d11111">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5103,13 +5138,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">constexpr bool saki::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>v1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
@@ -5124,8 +5159,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="abe77ceb7257097320a66f9f182d11111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe77ceb7257097320a66f9f182d11111">&#9670;&nbsp;</a></span>operator==() <span class="overload">[4/14]</span></h2>
+<a id="a3ce1faca02399d52a09851a1b6e8afe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce1faca02399d52a09851a1b6e8afe3">&#9670;&nbsp;</a></span>operator==() <span class="overload">[4/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5135,13 +5170,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">constexpr bool saki::operator== </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>v1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
@@ -5221,41 +5256,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="af2a10e5e2974f482b6da75d9137dc143"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2a10e5e2974f482b6da75d9137dc143">&#9670;&nbsp;</a></span>operator==() <span class="overload">[7/14]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool saki::operator== </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>v2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>==演算子(型不一致) </p>
-<p>この関数の使用は推奨しない </p>
-
-</div>
-</div>
 <a id="a5f3eb3ebd6a3ee43771849069101153f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f3eb3ebd6a3ee43771849069101153f">&#9670;&nbsp;</a></span>operator==() <span class="overload">[8/14]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3eb3ebd6a3ee43771849069101153f">&#9670;&nbsp;</a></span>operator==() <span class="overload">[7/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5272,6 +5274,39 @@ template&lt;typename T1 , typename T2 &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classsaki_1_1vector3.html">vector3</a>&lt; T2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>==演算子(型不一致) </p>
+<p>この関数の使用は推奨しない </p>
+
+</div>
+</div>
+<a id="af2a10e5e2974f482b6da75d9137dc143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a10e5e2974f482b6da75d9137dc143">&#9670;&nbsp;</a></span>operator==() <span class="overload">[8/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T1 , typename T2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool saki::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classsaki_1_1vector4.html">vector4</a>&lt; T2 &gt; &amp;&#160;</td>
           <td class="paramname"><em>v2</em>&#160;</td>
         </tr>
         <tr>
@@ -5481,7 +5516,7 @@ template&lt;typename T , size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::pow </td>
@@ -5513,7 +5548,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::pow </td>
@@ -5539,13 +5574,13 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 
 </div>
 </div>
-<a id="aede1168d9c20adf475c0a27670925c34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aede1168d9c20adf475c0a27670925c34">&#9670;&nbsp;</a></span>pow() <span class="overload">[3/3]</span></h2>
+<a id="a27bb8324ff45bceda3b301f9f3f417c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27bb8324ff45bceda3b301f9f3f417c7">&#9670;&nbsp;</a></span>pow() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 &gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto saki::pow </td>
@@ -5577,7 +5612,7 @@ template&lt;typename T1 , typename T2 &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">T saki::random </td>
@@ -5617,7 +5652,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_arithmet
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_arithmetic_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">auto saki::random </td>
@@ -5851,7 +5886,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T  = int, typename Func  = saki::return_param, typename saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt; &amp;&amp;std::is_invocable_v&lt; Func, T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T  = int, typename Func  = saki::return_param, saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt; &amp;&amp;std::is_invocable_v&lt; Func, T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::sigma </td>
@@ -5893,13 +5928,13 @@ template&lt;typename T  = int, typename Func  = saki::return_param, typename sak
 
 </div>
 </div>
-<a id="a2e595e3d1c68d48646e3fe481cda4fe0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e595e3d1c68d48646e3fe481cda4fe0">&#9670;&nbsp;</a></span>signbit()</h2>
+<a id="a230838749b1e19afc5f9265bd161d4d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230838749b1e19afc5f9265bd161d4d8">&#9670;&nbsp;</a></span>signbit()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_signed_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr bool saki::signbit </td>
@@ -5928,7 +5963,7 @@ template&lt;typename T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::sin </td>
@@ -5950,7 +5985,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::sin </td>
@@ -5972,7 +6007,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::sinh </td>
@@ -5994,7 +6029,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::sinh </td>
@@ -6016,7 +6051,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;template&lt; typename, typename &gt; typename Container = std::vector, typename T , typename saki::enable_if_nullptr_t&lt; saki::has_check_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;template&lt; typename, typename &gt; typename Container = std::vector, typename T , saki::enable_if_nullptr_t&lt; saki::has_check_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">Container&lt;std::string, std::allocator&lt;std::string&gt; &gt; saki::split </td>
@@ -6104,7 +6139,7 @@ template&lt;template&lt; typename, typename &gt; typename Container = std::vecto
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::sqrt </td>
@@ -6133,7 +6168,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::sqrt </td>
@@ -6155,7 +6190,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::tan </td>
@@ -6183,7 +6218,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::tan </td>
@@ -6211,7 +6246,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::tanh </td>
@@ -6233,7 +6268,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::tanh </td>
@@ -6255,7 +6290,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::to_degree </td>
@@ -6283,7 +6318,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::to_degree </td>
@@ -6305,7 +6340,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T saki::to_radian </td>
@@ -6333,7 +6368,7 @@ template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr double saki::to_radian </td>

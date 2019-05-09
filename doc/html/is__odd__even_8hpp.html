@@ -79,6 +79,8 @@ $(function() {
 <code>#include &lt;<a class="el" href="fmod_8hpp_source.html">saki/math/fmod.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="isinf_8hpp_source.html">saki/math/isinf.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="isnan_8hpp_source.html">saki/math/isnan.hpp</a>&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;<a class="el" href="enable__if__nullptr_8hpp_source.html">saki/type_traits/enable_if_nullptr.hpp</a>&gt;</code><br />
 </div>
 <p><a href="is__odd__even_8hpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
@@ -89,14 +91,14 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a03cf21b9e2231e956f8da966f1e09d70"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a03cf21b9e2231e956f8da966f1e09d70"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a03cf21b9e2231e956f8da966f1e09d70">saki::is_odd</a> (T x)</td></tr>
-<tr class="memdesc:a03cf21b9e2231e956f8da966f1e09d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">奇数がどうか判定する関数  <a href="namespacesaki.html#a03cf21b9e2231e956f8da966f1e09d70">[詳解]</a><br /></td></tr>
-<tr class="separator:a03cf21b9e2231e956f8da966f1e09d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a7fa7e4ec89e948874e42926e91d6dd4e">saki::is_even</a> (T x)</td></tr>
-<tr class="memdesc:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">偶数がどうか判定する関数  <a href="namespacesaki.html#a7fa7e4ec89e948874e42926e91d6dd4e">[詳解]</a><br /></td></tr>
-<tr class="separator:a7fa7e4ec89e948874e42926e91d6dd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0752a8969900319135a2cb16bb98e2c"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ae0752a8969900319135a2cb16bb98e2c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ae0752a8969900319135a2cb16bb98e2c">saki::is_odd</a> (T x)</td></tr>
+<tr class="memdesc:ae0752a8969900319135a2cb16bb98e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">奇数がどうか判定する関数  <a href="namespacesaki.html#ae0752a8969900319135a2cb16bb98e2c">[詳解]</a><br /></td></tr>
+<tr class="separator:ae0752a8969900319135a2cb16bb98e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b20d1e721a18d69e8fa1e758be27818"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a9b20d1e721a18d69e8fa1e758be27818"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a9b20d1e721a18d69e8fa1e758be27818">saki::is_even</a> (T x)</td></tr>
+<tr class="memdesc:a9b20d1e721a18d69e8fa1e758be27818"><td class="mdescLeft">&#160;</td><td class="mdescRight">偶数がどうか判定する関数  <a href="namespacesaki.html#a9b20d1e721a18d69e8fa1e758be27818">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b20d1e721a18d69e8fa1e758be27818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>奇数がどうか、偶数かどうか判定する関数 </p>

@@ -98,18 +98,18 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aa5b66f18d7c8c94b4c50731449ed3240">saki::pow</a> (T x, T y)</td></tr>
 <tr class="memdesc:aa5b66f18d7c8c94b4c50731449ed3240"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時累乗  <a href="namespacesaki.html#aa5b66f18d7c8c94b4c50731449ed3240">[詳解]</a><br /></td></tr>
 <tr class="separator:aa5b66f18d7c8c94b4c50731449ed3240"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b0e93733e85d7c6ab17aea25072536"><td class="memTemplParams" colspan="2">template&lt;typename T , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a53b0e93733e85d7c6ab17aea25072536"><td class="memTemplParams" colspan="2">template&lt;typename T , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a53b0e93733e85d7c6ab17aea25072536"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a53b0e93733e85d7c6ab17aea25072536">saki::pow</a> (T x, T y)</td></tr>
 <tr class="memdesc:a53b0e93733e85d7c6ab17aea25072536"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="namespacesaki.html#a53b0e93733e85d7c6ab17aea25072536">[詳解]</a><br /></td></tr>
 <tr class="separator:a53b0e93733e85d7c6ab17aea25072536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede1168d9c20adf475c0a27670925c34"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 &gt; </td></tr>
-<tr class="memitem:aede1168d9c20adf475c0a27670925c34"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#aede1168d9c20adf475c0a27670925c34">saki::pow</a> (T1 x, T2 y)</td></tr>
-<tr class="memdesc:aede1168d9c20adf475c0a27670925c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="namespacesaki.html#aede1168d9c20adf475c0a27670925c34">[詳解]</a><br /></td></tr>
-<tr class="separator:aede1168d9c20adf475c0a27670925c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27bb8324ff45bceda3b301f9f3f417c7"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; std::common_type_t&lt; T1, T2 &gt;&gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a27bb8324ff45bceda3b301f9f3f417c7"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a27bb8324ff45bceda3b301f9f3f417c7">saki::pow</a> (T1 x, T2 y)</td></tr>
+<tr class="memdesc:a27bb8324ff45bceda3b301f9f3f417c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">型をそろえる  <a href="namespacesaki.html#a27bb8324ff45bceda3b301f9f3f417c7">[詳解]</a><br /></td></tr>
+<tr class="separator:a27bb8324ff45bceda3b301f9f3f417c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>累乗を求める関数 </p>

@@ -20,17 +20,17 @@
 \subsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a0dfe75bfa0e5223a0390c5e2941e69bc}{saki\+::hypot}} (T x, T y)
+{\footnotesize template$<$typename T , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a0dfe75bfa0e5223a0390c5e2941e69bc}{saki\+::hypot}} (T x, T y)
 \begin{DoxyCompactList}\small\item\em ------2引数-\/-\/------ \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_ad888da163ba5c006d664d564fb48f7a7}{saki\+::hypot}} (T x, T y)
+{\footnotesize template$<$typename T , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_ad888da163ba5c006d664d564fb48f7a7}{saki\+::hypot}} (T x, T y)
 \begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T1 $>$ \&\&std\+::is\+\_\+arithmetic\+\_\+v$<$ T2 $>$$>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae2b457ea76e5aedc8279d8c78a07b26b}{saki\+::hypot}} (T1 x, T2 y)
+{\footnotesize template$<$typename T1 , typename T2 , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ std\+::common\+\_\+type\+\_\+t$<$ T1, T2 $>$$>$$>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_ae2b457ea76e5aedc8279d8c78a07b26b}{saki\+::hypot}} (T1 x, T2 y)
 \begin{DoxyCompactList}\small\item\em 型が違う場合はそろえる \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a56768ecf1270205a8c9b3ac8cdf4a590}{saki\+::hypot}} (T x, T y, T z)
+{\footnotesize template$<$typename T , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr T \mbox{\hyperlink{namespacesaki_a56768ecf1270205a8c9b3ac8cdf4a590}{saki\+::hypot}} (T x, T y, T z)
 \begin{DoxyCompactList}\small\item\em ------3引数-\/-\/------ \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_ad56e1232bb063b3bc0e7cf2b3f655247}{saki\+::hypot}} (T x, T y, T z)
+{\footnotesize template$<$typename T , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+integral\+\_\+v$<$ T $>$$>$  = nullptr$>$ }\\constexpr double \mbox{\hyperlink{namespacesaki_ad56e1232bb063b3bc0e7cf2b3f655247}{saki\+::hypot}} (T x, T y, T z)
 \begin{DoxyCompactList}\small\item\em 引数がint型の場合に、戻り値をdouble型にするためのもの \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ T1 $>$ \&\&std\+::is\+\_\+arithmetic\+\_\+v$<$ T2 $>$ \&\&std\+::is\+\_\+arithmetic\+\_\+v$<$ T3 $>$$>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a210e4f63ae8c3ff62e53396f8ba45d91}{saki\+::hypot}} (T1 x, T2 y, T3 z)
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , saki\+::enable\+\_\+if\+\_\+nullptr\+\_\+t$<$ std\+::is\+\_\+arithmetic\+\_\+v$<$ std\+::common\+\_\+type\+\_\+t$<$ T1, T2, T3 $>$$>$$>$  = nullptr$>$ }\\constexpr auto \mbox{\hyperlink{namespacesaki_a210e4f63ae8c3ff62e53396f8ba45d91}{saki\+::hypot}} (T1 x, T2 y, T3 z)
 \begin{DoxyCompactList}\small\item\em 型が違う場合はそろえる \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 

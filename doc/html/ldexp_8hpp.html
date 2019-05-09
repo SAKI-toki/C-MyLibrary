@@ -90,10 +90,14 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memTemplParams" colspan="2">template&lt;typename T , typename IntegerT , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memTemplParams" colspan="2">template&lt;typename T , typename IntegerT , saki::enable_if_nullptr_t&lt; std::is_floating_point_v&lt; T &gt; &amp;&amp;std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#a03b7a22945dcbce6e2bb0593025c90c4">saki::ldexp</a> (T x, IntegerT exp)</td></tr>
 <tr class="memdesc:a03b7a22945dcbce6e2bb0593025c90c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンパイル時ldexp  <a href="namespacesaki.html#a03b7a22945dcbce6e2bb0593025c90c4">[詳解]</a><br /></td></tr>
 <tr class="separator:a03b7a22945dcbce6e2bb0593025c90c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename IntegerT , saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T &gt; &amp;&amp;std::is_integral_v&lt; IntegerT &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="memTemplItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki.html#ad9202fb752e29a81d507ef9a0f8e8bd5">saki::ldexp</a> (T x, IntegerT exp)</td></tr>
+<tr class="memdesc:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">引数がint型の場合に、戻り値をdouble型にするためのもの  <a href="namespacesaki.html#ad9202fb752e29a81d507ef9a0f8e8bd5">[詳解]</a><br /></td></tr>
+<tr class="separator:ad9202fb752e29a81d507ef9a0f8e8bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>コンパイル時ldexp </p>

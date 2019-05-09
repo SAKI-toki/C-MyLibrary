@@ -107,7 +107,7 @@ $(function() {
 <tr class="memitem:a67a43f1e216aa1da9934815a21bfe2ee"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1details.html#a67a43f1e216aa1da9934815a21bfe2ee">operator!=</a> (const <a class="el" href="classsaki_1_1details_1_1reverse__iterator__base.html">reverse_iterator_base</a>&lt; T &gt; &amp;itr1, const <a class="el" href="classsaki_1_1details_1_1reverse__iterator__base.html">reverse_iterator_base</a>&lt; T &gt; &amp;itr2)</td></tr>
 <tr class="memdesc:a67a43f1e216aa1da9934815a21bfe2ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">!=演算子  <a href="#a67a43f1e216aa1da9934815a21bfe2ee">[詳解]</a><br /></td></tr>
 <tr class="separator:a67a43f1e216aa1da9934815a21bfe2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b4cd78c970618ee2886123c28e4041"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
+<tr class="memitem:a30b4cd78c970618ee2886123c28e4041"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_integral_v&lt; T2 &gt;&gt;  = nullptr&gt; </td></tr>
 <tr class="memitem:a30b4cd78c970618ee2886123c28e4041"><td class="memTemplItemLeft" align="right" valign="top">constexpr T1&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacesaki_1_1details.html#a30b4cd78c970618ee2886123c28e4041">pow_n</a> (T1 x, T2 y)</td></tr>
 <tr class="memdesc:a30b4cd78c970618ee2886123c28e4041"><td class="mdescLeft">&#160;</td><td class="mdescRight">powから派生  <a href="#a30b4cd78c970618ee2886123c28e4041">[詳解]</a><br /></td></tr>
 <tr class="separator:a30b4cd78c970618ee2886123c28e4041"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,7 +385,7 @@ template&lt;typename Iterator &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename saki::enable_if_nullptr_t&lt; std::is_integral_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
+template&lt;typename T1 , typename T2 , saki::enable_if_nullptr_t&lt; std::is_arithmetic_v&lt; T1 &gt; &amp;&amp;std::is_integral_v&lt; T2 &gt;&gt;  = nullptr&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr T1 saki::details::pow_n </td>
