@@ -20,7 +20,7 @@ namespace saki
 	* @details アルゴリズムはバビロニアの平方根を利用
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T sqrt(T x)
 {
 	if (saki::isnan(x) ||
@@ -43,7 +43,7 @@ constexpr T sqrt(T x)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double sqrt(T x)
 {
 	return saki::sqrt(static_cast<double>(x));
@@ -51,7 +51,8 @@ constexpr double sqrt(T x)
 
 namespace details
 {
-template <int N, typename T = double>
+template <int N, typename T = double,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 static constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
 }
 } // namespace saki

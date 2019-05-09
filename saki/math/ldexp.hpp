@@ -18,7 +18,7 @@ namespace saki
 	* @brief ƒRƒ“ƒpƒCƒ‹ldexp
 	*/
 template <typename T, typename IntegerT,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<IntegerT>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T> && std::is_integral_v<IntegerT>> = nullptr>
 constexpr T ldexp(T x, IntegerT exp)
 {
 	if (saki::isnan(x) || saki::isinf(x) || x == 0 || exp == 0)
@@ -26,14 +26,15 @@ constexpr T ldexp(T x, IntegerT exp)
 
 	return x * saki::details::pow_n(static_cast<T>(2), exp);
 }
+
 /**
-	* @brief ‘æ“ñˆø”‚ªintŒ^‚¶‚á‚È‚¢ê‡‚ÉAintŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
+	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 template <typename T, typename IntegerT,
-		  typename saki::enable_if_nullptr_t<!std::is_integral_v<IntegerT>> = nullptr>
-constexpr T ldexp(T x, IntegerT exp)
+		  saki::enable_if_nullptr_t<std::is_integral_v<T> && std::is_integral_v<IntegerT>> = nullptr>
+constexpr double ldexp(T x, IntegerT exp)
 {
-	return saki::ldexp(x, static_cast<int>(exp));
+	return saki::ldexp(static_cast<double>(x), exp);
 }
 } // namespace saki
 #endif //SAKI_MATH_LDEXP_HPP

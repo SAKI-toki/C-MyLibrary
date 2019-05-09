@@ -18,14 +18,14 @@ namespace saki
 template <typename T>
 struct can_ostream
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type ostream_check(
-		saki::remove_reference_const_t<decltype(std::cout << (std::declval<U>()))> *u);
+			saki::remove_reference_const_t<decltype(std::cout << (std::declval<U>()))> *u);
 	template <typename U>
 	static constexpr std::false_type ostream_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(ostream_check<T>(nullptr))::value;
 };
 /**

@@ -22,21 +22,22 @@ namespace saki
 template <typename T>
 class matrix
 {
-  public:
+public:
 	SAKI_TYPE_MACRO(T)
-  private:
+private:
 	saki::array<saki::array<value_type, 4>, 4> m;
 
-  public:
+public:
 	/**
 		* @brief 引数なしコンストラクタ
 		* @details Identity初期化
 		*/
-	constexpr matrix() : m(
-							 saki::array<value_type, 4>(value_type(1), value_type(0), value_type(0), value_type(0)),
-							 saki::array<value_type, 4>(value_type(0), value_type(1), value_type(0), value_type(0)),
-							 saki::array<value_type, 4>(value_type(0), value_type(0), value_type(1), value_type(0)),
-							 saki::array<value_type, 4>(value_type(0), value_type(0), value_type(0), value_type(1)))
+	constexpr matrix()
+		: m(
+			  saki::array<value_type, 4>(value_type(1), value_type(0), value_type(0), value_type(0)),
+			  saki::array<value_type, 4>(value_type(0), value_type(1), value_type(0), value_type(0)),
+			  saki::array<value_type, 4>(value_type(0), value_type(0), value_type(1), value_type(0)),
+			  saki::array<value_type, 4>(value_type(0), value_type(0), value_type(0), value_type(1)))
 	{
 	}
 	/**
@@ -46,10 +47,11 @@ class matrix
 		const_reference m00, const_reference m01, const_reference m02, const_reference m03,
 		const_reference m10, const_reference m11, const_reference m12, const_reference m13,
 		const_reference m20, const_reference m21, const_reference m22, const_reference m23,
-		const_reference m30, const_reference m31, const_reference m32, const_reference m33) : m(saki::array<value_type, 4>(m00, m01, m02, m03),
-																								saki::array<value_type, 4>(m10, m11, m12, m13),
-																								saki::array<value_type, 4>(m20, m21, m22, m23),
-																								saki::array<value_type, 4>(m30, m31, m32, m33))
+		const_reference m30, const_reference m31, const_reference m32, const_reference m33)
+		: m(saki::array<value_type, 4>(m00, m01, m02, m03),
+			saki::array<value_type, 4>(m10, m11, m12, m13),
+			saki::array<value_type, 4>(m20, m21, m22, m23),
+			saki::array<value_type, 4>(m30, m31, m32, m33))
 
 	{
 	}
@@ -58,18 +60,20 @@ class matrix
 		* @param arr 4*4の配列
 		*/
 	template <typename U>
-	explicit constexpr matrix(const U arr[4][4]) : m(
-													   saki::array<value_type, 4>(static_cast<value_type>(arr[0][0]), static_cast<value_type>(arr[0][1]),
-																				  static_cast<value_type>(arr[0][2]), static_cast<value_type>(arr[0][3])),
-													   saki::array<value_type, 4>(
-														   static_cast<value_type>(arr[1][0]), static_cast<value_type>(arr[1][1]),
-														   static_cast<value_type>(arr[1][2]), static_cast<value_type>(arr[1][3])),
-													   saki::array<value_type, 4>(
-														   static_cast<value_type>(arr[2][0]), static_cast<value_type>(arr[2][1]),
-														   static_cast<value_type>(arr[2][2]), static_cast<value_type>(arr[2][3])),
-													   saki::array<value_type, 4>(
-														   static_cast<value_type>(arr[3][0]), static_cast<value_type>(arr[3][1]),
-														   static_cast<value_type>(arr[3][2]), static_cast<value_type>(arr[3][3])))
+	explicit constexpr matrix(const U arr[4][4])
+		: m(
+			  saki::array<value_type, 4>(
+				  static_cast<value_type>(arr[0][0]), static_cast<value_type>(arr[0][1]),
+				  static_cast<value_type>(arr[0][2]), static_cast<value_type>(arr[0][3])),
+			  saki::array<value_type, 4>(
+				  static_cast<value_type>(arr[1][0]), static_cast<value_type>(arr[1][1]),
+				  static_cast<value_type>(arr[1][2]), static_cast<value_type>(arr[1][3])),
+			  saki::array<value_type, 4>(
+				  static_cast<value_type>(arr[2][0]), static_cast<value_type>(arr[2][1]),
+				  static_cast<value_type>(arr[2][2]), static_cast<value_type>(arr[2][3])),
+			  saki::array<value_type, 4>(
+				  static_cast<value_type>(arr[3][0]), static_cast<value_type>(arr[3][1]),
+				  static_cast<value_type>(arr[3][2]), static_cast<value_type>(arr[3][3])))
 	{
 	}
 	/**
@@ -81,17 +85,19 @@ class matrix
 		*/
 	template <typename U1, typename U2, typename U3, typename U4>
 	constexpr matrix(const saki::vector4<U1> &v1, const saki::vector4<U2> &v2,
-					 const saki::vector4<U3> &v3, const saki::vector4<U4> &v4) : m(saki::array<value_type, 4>(static_cast<value_type>(v1.x), static_cast<value_type>(v1.y),
-																											  static_cast<value_type>(v1.z), static_cast<value_type>(v1.w)),
-																				   saki::array<value_type, 4>(
-																					   static_cast<value_type>(v2.x), static_cast<value_type>(v2.y),
-																					   static_cast<value_type>(v2.z), static_cast<value_type>(v2.w)),
-																				   saki::array<value_type, 4>(
-																					   static_cast<value_type>(v3.x), static_cast<value_type>(v3.y),
-																					   static_cast<value_type>(v3.z), static_cast<value_type>(v3.w)),
-																				   saki::array<value_type, 4>(
-																					   static_cast<value_type>(v4.x), static_cast<value_type>(v4.y),
-																					   static_cast<value_type>(v4.z), static_cast<value_type>(v4.w)))
+					 const saki::vector4<U3> &v3, const saki::vector4<U4> &v4)
+		: m(saki::array<value_type, 4>(
+				static_cast<value_type>(v1.x), static_cast<value_type>(v1.y),
+				static_cast<value_type>(v1.z), static_cast<value_type>(v1.w)),
+			saki::array<value_type, 4>(
+				static_cast<value_type>(v2.x), static_cast<value_type>(v2.y),
+				static_cast<value_type>(v2.z), static_cast<value_type>(v2.w)),
+			saki::array<value_type, 4>(
+				static_cast<value_type>(v3.x), static_cast<value_type>(v3.y),
+				static_cast<value_type>(v3.z), static_cast<value_type>(v3.w)),
+			saki::array<value_type, 4>(
+				static_cast<value_type>(v4.x), static_cast<value_type>(v4.y),
+				static_cast<value_type>(v4.z), static_cast<value_type>(v4.w)))
 	{
 	}
 	//デフォルトを使用

@@ -18,14 +18,14 @@ namespace saki
 template <typename T>
 struct can_less_or_equal
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type less_or_equal_check(
-		saki::remove_reference_const_t<decltype(std::declval<U>() <= std::declval<U>())> *);
+			saki::remove_reference_const_t<decltype(std::declval<U>() <= std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type less_or_equal_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(less_or_equal_check<T>(nullptr))::value;
 };
 /**

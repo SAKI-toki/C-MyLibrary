@@ -18,14 +18,14 @@ namespace saki
 template <typename T>
 struct can_greater
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type greater_check(
-		saki::remove_reference_const_t<decltype(std::declval<U>() > std::declval<U>())> *);
+			saki::remove_reference_const_t<decltype(std::declval<U>() > std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type greater_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(greater_check<T>(nullptr))::value;
 };
 /**

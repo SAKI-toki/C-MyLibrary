@@ -19,7 +19,7 @@ namespace saki
 	* @brief コンパイル時ilogb
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr int ilogb(T x)
 {
 	if (saki::isnan(x))
@@ -34,7 +34,7 @@ constexpr int ilogb(T x)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr int ilogb(T x)
 {
 	return saki::ilogb(static_cast<double>(x));

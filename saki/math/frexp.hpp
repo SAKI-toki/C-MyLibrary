@@ -20,7 +20,7 @@ namespace saki
 	* @brief コンパイル時frexp
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T frexp(T value, int *exp)
 {
 	if (saki::isnan(value) || saki::isinf(value))
@@ -41,7 +41,7 @@ constexpr T frexp(T value, int *exp)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double frexp(T value, int *exp)
 {
 	return saki::frexp(static_cast<double>(value), exp);

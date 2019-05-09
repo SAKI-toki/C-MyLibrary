@@ -18,15 +18,15 @@ namespace saki
 template <typename T>
 struct can_same_equal
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type same_equal_check(
-		saki::remove_reference_const_t<
-			decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U>())>>() = std::declval<U>())> *);
+			saki::remove_reference_const_t<
+					decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U>())>>() = std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type same_equal_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(same_equal_check<T>(nullptr))::value;
 };
 /**
@@ -40,15 +40,15 @@ static constexpr auto can_same_equal_v = saki::can_same_equal<T>::value;
 template <typename T1, typename T2>
 struct can_different_equal
 {
-  private:
+private:
 	template <typename U1, typename U2>
 	static constexpr std::true_type different_equal_check(
-		saki::remove_reference_const_t<
-			decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U1>())>>() = std::declval<U2>())> *);
+			saki::remove_reference_const_t<
+					decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U1>())>>() = std::declval<U2>())> *);
 	template <typename U1, typename U2>
 	static constexpr std::false_type different_equal_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(different_equal_check<T1, T2>(nullptr))::value;
 };
 template <typename T>

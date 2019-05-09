@@ -22,7 +22,7 @@ namespace saki
 	* @details Å‘å’l‚ğŠÜ‚Şƒ‰ƒ“ƒ_ƒ€‚È’l‚ğ•Ô‚·
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 T random(const T random_min, const T random_max)
 {
 	assert(random_min <= random_max);
@@ -40,7 +40,7 @@ T random(const T random_min, const T random_max)
 	}
 }
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  std::is_arithmetic_v<T1> &&
 			  std::is_arithmetic_v<T2>> = nullptr>
 auto random(const T1 random_min, const T2 random_max)

@@ -7,6 +7,7 @@
 #ifndef SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_HPP
 #define SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_HPP
 #include <utility>
+#include <type_traits>
 #include <saki/function_object.hpp>
 
 namespace saki

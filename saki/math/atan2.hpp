@@ -23,14 +23,16 @@ namespace saki
 	* @param y,x •Ó‚Ì’·‚³
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T atan2(T y, T x)
 {
 	if (saki::isnan(x))
 	{
 		if (saki::isnan(y))
 		{
-			return saki::signbit(x) && saki::signbit(y) ? -std::numeric_limits<T>::quiet_NaN() : std::numeric_limits<T>::quiet_NaN();
+			return saki::signbit(x) && saki::signbit(y)
+					   ? -std::numeric_limits<T>::quiet_NaN()
+					   : std::numeric_limits<T>::quiet_NaN();
 		}
 		else
 		{
@@ -49,7 +51,11 @@ constexpr T atan2(T y, T x)
 	}
 	if (saki::isinf(y))
 	{
-		return (x == std::numeric_limits<T>::infinity()) ? saki::copysign(saki::PI_QUARTER<T>, y) : (x == -std::numeric_limits<T>::infinity()) ? saki::copysign(saki::PI_QUARTER<T> * 3, y) : saki::copysign(saki::PI_HALF<T>, y);
+		return (x == std::numeric_limits<T>::infinity())
+				   ? saki::copysign(saki::PI_QUARTER<T>, y)
+				   : (x == -std::numeric_limits<T>::infinity())
+						 ? saki::copysign(saki::PI_QUARTER<T> * 3, y)
+						 : saki::copysign(saki::PI_HALF<T>, y);
 	}
 	if (x == std::numeric_limits<T>::infinity())
 	{
@@ -77,7 +83,7 @@ constexpr T atan2(T y, T x)
 	* @brief ˆø”‚ªintŒ^‚Ìê‡‚ÉA–ß‚è’l‚ğdoubleŒ^‚É‚·‚é‚½‚ß‚Ì‚à‚Ì
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double atan2(T y, T x)
 {
 	return saki::atan2(static_cast<double>(y), static_cast<double>(x));
@@ -86,8 +92,8 @@ constexpr double atan2(T y, T x)
 	* @brief Œ^‚ğ‚»‚ë‚¦‚é
 	*/
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
-			  std::is_arithmetic_v<T1> && std::is_arithmetic_v<T2>> = nullptr>
+		  saki::enable_if_nullptr_t<
+			  std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
 constexpr auto atan2(T1 y, T2 x)
 {
 	using type = std::common_type_t<T1, T2>;

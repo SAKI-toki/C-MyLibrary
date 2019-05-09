@@ -6,5 +6,6 @@ for /r %%A in (*.cpp) do (
 )
 
 g++ -std=c++17 -Wall -Wextra --pedantic-error -O3 -o bin\app.exe %STR% -I. 
+g++ -std=c++17 -Wall -Wextra --pedantic-error -o asm\asm.s -S %STR% -I.
 
 endlocal

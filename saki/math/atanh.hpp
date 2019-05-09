@@ -22,7 +22,7 @@ namespace saki
 	* @brief コンパイル時atanh
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T atanh(T x)
 {
 	if (saki::isnan(x) || saki::abs(x) == 0)
@@ -38,7 +38,7 @@ constexpr T atanh(T x)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double atanh(T x)
 {
 	return saki::atanh(static_cast<double>(x));

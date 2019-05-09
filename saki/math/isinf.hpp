@@ -16,7 +16,7 @@ namespace saki
 	* @brief コンパイル時isinf
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr bool isinf(T x)
 {
 	return x == std::numeric_limits<T>::infinity() ||
@@ -27,7 +27,7 @@ constexpr bool isinf(T x)
 	* @details floating_point以外はfalse
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<!std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<!std::is_floating_point_v<T>> = nullptr>
 constexpr bool isinf(T)
 {
 	return false;

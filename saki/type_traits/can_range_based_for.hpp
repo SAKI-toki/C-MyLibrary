@@ -27,7 +27,7 @@ class can_range_based_for
 	template <typename U>
 	static constexpr std::false_type check_range_based_for(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(check_range_based_for<T>(nullptr))::value;
 };
 /**

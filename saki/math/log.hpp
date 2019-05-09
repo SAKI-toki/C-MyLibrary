@@ -21,7 +21,7 @@ namespace saki
 	* @brief コンパイル時log
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T log(T x)
 {
 	if (saki::isnan(x) || x == std::numeric_limits<T>::infinity())
@@ -62,7 +62,7 @@ constexpr T log(T x)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double log(T x)
 {
 	return saki::log(static_cast<double>(x));

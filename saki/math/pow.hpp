@@ -26,7 +26,7 @@ namespace saki
 	* @brief コンパイル時累乗
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T pow(T x, T y)
 {
 	if (x == 1 || y == 0)
@@ -131,7 +131,7 @@ constexpr T pow(T x, T y)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double pow(T x, T y)
 {
 	return saki::pow(static_cast<double>(x), static_cast<double>(y));
@@ -139,10 +139,12 @@ constexpr double pow(T x, T y)
 /**
 	* @brief 型をそろえる
 	*/
-template <typename T1, typename T2>
+template <typename T1, typename T2,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
 constexpr auto pow(T1 x, T2 y)
 {
-	return saki::pow(static_cast<decltype(x * y)>(x), static_cast<decltype(x * y)>(y));
+	using type = std::common_type_t<T1, T2>;
+	return saki::pow(static_cast<type>(x), static_cast<type>(y));
 }
 } // namespace saki
 #endif //SAKI_MATH_POW_HPP

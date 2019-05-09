@@ -21,7 +21,7 @@ namespace saki
 	* @brief コンパイル時累乗
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T hypot(T x, T y)
 {
 	if (saki::isinf(x) || saki::isinf(y))
@@ -51,22 +51,23 @@ constexpr T hypot(T x, T y)
 	}
 	return saki::sqrt(x * x + y * y);
 }
+
 /**
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double hypot(T x, T y)
 {
 	return saki::hypot(static_cast<double>(x), static_cast<double>(y));
 }
+
 /**
 	* @brief 型が違う場合はそろえる
 	*/
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
-			  std::is_arithmetic_v<T1> &&
-			  std::is_arithmetic_v<T2>> = nullptr>
+		  saki::enable_if_nullptr_t<
+			  std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
 constexpr auto hypot(T1 x, T2 y)
 {
 	using type = std::common_type_t<T1, T2>;
@@ -79,7 +80,7 @@ constexpr auto hypot(T1 x, T2 y)
 	* @brief コンパイル時累乗
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T hypot(T x, T y, T z)
 {
 	if (saki::isinf(x) || saki::isinf(y) || saki::isinf(z))
@@ -136,7 +137,7 @@ constexpr T hypot(T x, T y, T z)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double hypot(T x, T y, T z)
 {
 	return saki::hypot(static_cast<double>(x), static_cast<double>(y), static_cast<double>(z));
@@ -145,10 +146,8 @@ constexpr double hypot(T x, T y, T z)
 	*@brief 型が違う場合はそろえる
 	*/
 template <typename T1, typename T2, typename T3,
-		  typename saki::enable_if_nullptr_t<
-			  std::is_arithmetic_v<T1> &&
-			  std::is_arithmetic_v<T2> &&
-			  std::is_arithmetic_v<T3>> = nullptr>
+		  saki::enable_if_nullptr_t<
+			  std::is_arithmetic_v<std::common_type_t<T1, T2, T3>>> = nullptr>
 constexpr auto hypot(T1 x, T2 y, T3 z)
 {
 	using type = std::common_type_t<T1, T2, T3>;

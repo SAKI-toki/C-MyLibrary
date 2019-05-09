@@ -6,6 +6,7 @@
 */
 #ifndef SAKI_FUNCTION_OBJECT_DIVISION_HPP
 #define SAKI_FUNCTION_OBJECT_DIVISION_HPP
+
 namespace saki
 {
 /**

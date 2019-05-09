@@ -25,7 +25,7 @@ namespace saki
 	* @param x •Ó‚Ì”ä
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T asin(T x)
 {
 	if (saki::isnan(x) || x == 0)
@@ -62,7 +62,7 @@ constexpr T asin(T x)
 	* @param x intŒ^‚Ì”ä
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double asin(T x)
 {
 	return saki::asin(static_cast<double>(x));

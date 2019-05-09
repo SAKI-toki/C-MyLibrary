@@ -18,13 +18,13 @@ namespace saki
 template <typename T>
 struct has_z
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type z_check(saki::remove_reference_const_t<decltype(std::declval<U>().z)> *);
 	template <typename U>
 	static constexpr std::false_type z_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(z_check<T>(nullptr))::value;
 };
 /**

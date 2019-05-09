@@ -9,6 +9,8 @@
 #include <cstdint>
 #include <cstddef>
 #include <saki/math/exchange.hpp>
+#include <type_traits>
+#include <saki/type_traits/enable_if_nullptr.hpp>
 
 namespace saki
 {
@@ -17,7 +19,8 @@ namespace saki
 	* @brief フィボナッチ数列求める関数
 	* @param N 求めたい番号
 	*/
-template <typename T = double>
+template <typename T = double,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T fibonacci(size_t N)
 {
 	T prev1 = 1;
@@ -32,7 +35,8 @@ constexpr T fibonacci(size_t N)
 /**
 	* @brief フィボナッチ数列を求める関数
 	*/
-template <size_t N, typename T = double>
+template <size_t N, typename T = double,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T fibonacci()
 {
 	return saki::fibonacci<T>(N);

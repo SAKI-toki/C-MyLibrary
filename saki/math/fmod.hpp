@@ -23,7 +23,7 @@ namespace saki
 	* @return è—]
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T fmod(T x, T y)
 {
 	if (saki::isnan(x))
@@ -53,16 +53,19 @@ constexpr T fmod(T x, T y)
 	//ˆ—
 	return static_cast<T>(x - static_cast<int64_t>(x / y) * y);
 }
+
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr T fmod(T x, T y)
 {
 	return (x % y);
 }
+
 /**
 	* @brief Œ^‚ªˆá‚¤ê‡‚Í‚»‚ë‚¦‚é
 	*/
-template <typename T1, typename T2>
+template <typename T1, typename T2,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
 constexpr auto fmod(T1 x, T2 y)
 {
 	using type = std::common_type_t<T1, T2>;

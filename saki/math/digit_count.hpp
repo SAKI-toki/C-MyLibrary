@@ -21,7 +21,7 @@ namespace saki
 	* @details log10‚Å‚à‰Â”\‚¾‚ªA®”•”‚¾‚¯‚È‚ç‚±‚¿‚ç‚ğg‚Á‚½‚Ù‚¤‚ª—Ç‚¢
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr size_t digit_count(T x)
 {
 	if constexpr (std::is_floating_point_v<T>)

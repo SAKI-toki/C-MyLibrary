@@ -36,7 +36,7 @@ constexpr bool multi_equal_impl(const First &first, Second second, const Args &.
 	* @details if(x == 1 || x == 2 || x == 3)をmulti_equal(x,1,2,3)と書ける
 	*/
 template <typename First, typename... Args,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  std::conjunction_v<std::is_convertible<First, Args>...> && //最初以外の型がFirstに変換可能か
 			  std::conjunction_v<saki::can_equal_equal<First>>			 //Firstが==演算子が有効かどうか
 			  > = nullptr>

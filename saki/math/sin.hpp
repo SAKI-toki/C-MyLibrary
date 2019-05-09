@@ -22,7 +22,7 @@ namespace saki
 	* @brief コンパイル時sin
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T sin(T x)
 {
 	//NaN
@@ -40,7 +40,7 @@ constexpr T sin(T x)
 	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
 	*/
 template <typename T,
-		  typename saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
+		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double sin(T x)
 {
 	return saki::sin(static_cast<double>(x));

@@ -8,6 +8,8 @@
 #define SAKI_MATH_FACTORIAL_HPP
 #include <cstdint>
 #include <cstddef>
+#include <type_traits>
+#include <saki/type_traits/enable_if_nullptr.hpp>
 
 namespace saki
 {
@@ -15,7 +17,8 @@ namespace saki
 	* @brief 階乗(引数バージョン)
 	* @param N 1からNまでの階乗を求める
 	*/
-template <typename T = double>
+template <typename T = double,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T factorial(size_t N)
 {
 	T sum = 1;
@@ -28,7 +31,8 @@ constexpr T factorial(size_t N)
 /**
 	* @brief 階乗(仮引数バージョン)
 	*/
-template <size_t N, typename T = double>
+template <size_t N, typename T = double,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T factorial()
 {
 	return factorial<T>(N);

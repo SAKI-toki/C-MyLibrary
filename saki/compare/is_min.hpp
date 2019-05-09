@@ -37,7 +37,7 @@ constexpr bool is_min_impl(const First &first, Second second, const Args &... ar
 	* @details if(x <= a && x <= b && x <= c)をis_min(x,a,b,c)と書ける
 	*/
 template <typename First, typename... Args,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  std::conjunction_v<std::is_convertible<First, Args>...> && //最初以外の型がFirstに変換可能か
 			  std::conjunction_v<saki::can_greater<First>>				 //Firstが>演算子が有効かどうか
 			  > = nullptr>

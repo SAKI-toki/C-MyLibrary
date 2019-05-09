@@ -10,13 +10,16 @@
 #include <saki/math/fmod.hpp>
 #include <saki/math/isinf.hpp>
 #include <saki/math/isnan.hpp>
+#include <type_traits>
+#include <saki/type_traits/enable_if_nullptr.hpp>
 
 namespace saki
 {
 /**
 	* @brief Šï”‚ª‚Ç‚¤‚©”»’è‚·‚éŠÖ”
 	*/
-template <typename T>
+template <typename T,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr bool is_odd(T x)
 {
 	if (saki::isnan(x))
@@ -27,7 +30,8 @@ constexpr bool is_odd(T x)
 /**
 	* @brief ‹ô”‚ª‚Ç‚¤‚©”»’è‚·‚éŠÖ”
 	*/
-template <typename T>
+template <typename T,
+		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr bool is_even(T x)
 {
 	if (saki::isnan(x))

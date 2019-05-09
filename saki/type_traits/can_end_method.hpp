@@ -17,13 +17,13 @@ namespace saki
 template <typename T>
 struct can_end
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type end_check(decltype(std::begin(std::declval<U>())) *u);
 	template <typename U>
 	static constexpr std::false_type end_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(end_check<T>(nullptr))::value;
 };
 /**

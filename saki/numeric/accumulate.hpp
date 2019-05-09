@@ -26,7 +26,7 @@ namespace saki
 	*/
 template <typename Container, typename BinaryOperation = saki::addition,
 		  typename T = saki::remove_reference_const_t<typename Container::value_type>,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  saki::can_range_based_for_v<Container> &&		  //コンテナがbegin,end有効かどうか
 			  std::is_invocable_r_v<T, BinaryOperation, T, T> //BinaryOperation(T,T)の返り値がTかどうか
 			  > = nullptr>

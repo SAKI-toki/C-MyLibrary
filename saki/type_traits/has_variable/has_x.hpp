@@ -18,13 +18,13 @@ namespace saki
 template <typename T>
 struct has_x
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type x_check(saki::remove_reference_const_t<decltype(std::declval<U>().x)> *);
 	template <typename U>
 	static constexpr std::false_type x_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(x_check<T>(nullptr))::value;
 };
 /**

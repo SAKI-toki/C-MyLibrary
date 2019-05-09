@@ -37,7 +37,7 @@ constexpr bool is_max_impl(const First &first, Second second, const Args &... ar
 	* @details if(x >= a && x >= b && x >= c)をis_max(x,a,b,c)と書ける
 	*/
 template <typename First, typename... Args,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  std::conjunction_v<std::is_convertible<Args, First>...> && //最初以外の型がFirstに変換可能か
 			  std::conjunction_v<saki::can_less<First>>					 //Firstが<演算子が有効かどうか
 			  > = nullptr>

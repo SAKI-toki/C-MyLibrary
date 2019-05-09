@@ -17,13 +17,13 @@ namespace saki
 template <typename T>
 struct can_begin
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type begin_check(decltype(std::begin(std::declval<U>())) *u);
 	template <typename U>
 	static constexpr std::false_type begin_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(begin_check<T>(nullptr))::value;
 };
 /**

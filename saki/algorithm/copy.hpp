@@ -19,7 +19,7 @@ namespace saki
 	* @details 片方がendになったらコピー終了
 	*/
 template <typename Container1, typename Container2,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  saki::can_range_based_for_v<Container1> && //コンテナ1がbegin,end有効か
 			  saki::can_range_based_for_v<Container2>	//コンテナ2がbegin,end有効か
 			  > = nullptr>

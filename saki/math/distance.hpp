@@ -19,7 +19,7 @@ namespace saki
 	* @brief 二点間の距離(XY)
 	*/
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  saki::has_x_v<T1> && saki::has_x_v<T2> &&
 			  saki::has_y_v<T1> && saki::has_y_v<T2>> = nullptr>
 constexpr auto distanceXY(const T1 &v1, const T2 &v2)
@@ -32,7 +32,7 @@ constexpr auto distanceXY(const T1 &v1, const T2 &v2)
 	* @brief 二点間の距離(XZ)
 	*/
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  saki::has_x_v<T1> && saki::has_x_v<T2> &&
 			  saki::has_z_v<T1> && saki::has_z_v<T2>> = nullptr>
 constexpr auto distanceXZ(const T1 &v1, const T2 &v2)
@@ -45,7 +45,7 @@ constexpr auto distanceXZ(const T1 &v1, const T2 &v2)
 	* @brief 二点間の距離(YZ)
 	*/
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  saki::has_y_v<T1> && saki::has_y_v<T2> &&
 			  saki::has_z_v<T1> && saki::has_z_v<T2>> = nullptr>
 constexpr auto distanceYZ(const T1 &v1, const T2 &v2)
@@ -58,7 +58,7 @@ constexpr auto distanceYZ(const T1 &v1, const T2 &v2)
 	* @brief 二点間の距離(XYZ)
 	*/
 template <typename T1, typename T2,
-		  typename saki::enable_if_nullptr_t<
+		  saki::enable_if_nullptr_t<
 			  saki::has_x_v<T1> && saki::has_x_v<T2> &&
 			  saki::has_y_v<T1> && saki::has_y_v<T2> &&
 			  saki::has_z_v<T1> && saki::has_z_v<T2>> = nullptr>
