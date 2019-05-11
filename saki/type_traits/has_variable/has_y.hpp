@@ -31,6 +31,6 @@ public:
 	* @brief has_y‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto has_y_v = saki::has_y<T>::value;
+inline constexpr auto has_y_v = saki::has_y<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_Y_HPP

@@ -21,7 +21,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-constexpr T sqrt(T x)
+inline constexpr T sqrt(T x)
 {
 	if (saki::isnan(x) ||
 		x == std::numeric_limits<T>::infinity() ||
@@ -44,7 +44,7 @@ constexpr T sqrt(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-constexpr double sqrt(T x)
+inline constexpr double sqrt(T x)
 {
 	return saki::sqrt(static_cast<double>(x));
 }
@@ -53,7 +53,7 @@ namespace details
 {
 template <int N, typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-static constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
+inline constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
 }
 } // namespace saki
 #endif //SAKI_MATH_SQRT_HPP

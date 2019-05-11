@@ -22,7 +22,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-constexpr size_t digit_count(T x)
+inline constexpr size_t digit_count(T x)
 {
 	if constexpr (std::is_floating_point_v<T>)
 	{

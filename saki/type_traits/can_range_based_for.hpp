@@ -34,6 +34,6 @@ public:
 	* @brief can_range_based_for‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto can_range_based_for_v = can_range_based_for<T>::value;
+inline constexpr auto can_range_based_for_v = can_range_based_for<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_RANGE_BASED_FOR_HPP

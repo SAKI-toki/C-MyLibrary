@@ -21,7 +21,7 @@ struct can_less
 private:
 	template <typename U>
 	static constexpr std::true_type less_check(
-			saki::remove_reference_const_t<decltype(std::declval<U>() < std::declval<U>())> *);
+		saki::remove_reference_const_t<decltype(std::declval<U>() < std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type less_check(...);
 
@@ -32,6 +32,6 @@ public:
 	* @brief can_less‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto can_less_v = saki::can_less<T>::value;
+inline constexpr auto can_less_v = saki::can_less<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_LESS_HPP

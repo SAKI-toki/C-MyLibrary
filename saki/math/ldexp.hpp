@@ -19,7 +19,7 @@ namespace saki
 	*/
 template <typename T, typename IntegerT,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T> && std::is_integral_v<IntegerT>> = nullptr>
-constexpr T ldexp(T x, IntegerT exp)
+inline constexpr T ldexp(T x, IntegerT exp)
 {
 	if (saki::isnan(x) || saki::isinf(x) || x == 0 || exp == 0)
 		return x;
@@ -32,7 +32,7 @@ constexpr T ldexp(T x, IntegerT exp)
 	*/
 template <typename T, typename IntegerT,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T> && std::is_integral_v<IntegerT>> = nullptr>
-constexpr double ldexp(T x, IntegerT exp)
+inline constexpr double ldexp(T x, IntegerT exp)
 {
 	return saki::ldexp(static_cast<double>(x), exp);
 }

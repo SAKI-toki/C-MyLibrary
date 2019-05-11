@@ -29,6 +29,6 @@ struct enable_if_nullptr<true>
 	* @brief enable_if_nullptr‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <bool Con>
-using enable_if_nullptr_t = typename enable_if_nullptr<Con>::type;
+using enable_if_nullptr_t = typename saki::enable_if_nullptr<Con>::type;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_ENABLE_IF_NULLPTR_HPP

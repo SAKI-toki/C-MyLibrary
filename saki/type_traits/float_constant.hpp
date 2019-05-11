@@ -47,7 +47,7 @@ struct float_constant : public saki::details::float_constant_base<float, Integer
 	* @brief float_constantを簡単に呼び出せる変数
 	*/
 template <int Integer, size_t Dec, size_t ZeroNum = 0>
-static constexpr float float_constant_v = saki::float_constant<Integer, Dec, ZeroNum>::value;
+inline constexpr float float_constant_v = saki::float_constant<Integer, Dec, ZeroNum>::value;
 
 /**
 	* @brief 倍精度浮動小数点型の定数を表す
@@ -60,6 +60,6 @@ struct double_constant : public saki::details::float_constant_base<double, Integ
 	* @brief double_constantを簡単に呼び出せる変数
 	*/
 template <int Integer, size_t Dec, size_t ZeroNum = 0>
-static constexpr double double_constant_v = saki::double_constant<Integer, Dec, ZeroNum>::value;
+inline constexpr double double_constant_v = saki::double_constant<Integer, Dec, ZeroNum>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_FLOAT_CONSTANT_HPP

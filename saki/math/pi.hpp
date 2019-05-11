@@ -16,19 +16,19 @@ namespace saki
 	*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-static constexpr auto PI =
+inline constexpr auto PI =
 	static_cast<T>(3.14159265358979323846);
 /**
 	* @brief 円周率の1/2のテンプレート変数
 	*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-static constexpr auto PI_HALF = static_cast<T>(PI<double> / 2);
+inline constexpr auto PI_HALF = static_cast<T>(PI<double> / 2);
 /**
 	* @brief 円周率の1/4のテンプレート変数
 	*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-static constexpr auto PI_QUARTER = static_cast<T>(PI<double> / 4);
+inline constexpr auto PI_QUARTER = static_cast<T>(PI<double> / 4);
 } // namespace saki
 #endif //SAKI_MATH_PI_HPP

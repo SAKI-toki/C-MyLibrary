@@ -19,7 +19,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<!std::is_unsigned_v<T>> = nullptr>
-constexpr T abs(T x)
+inline constexpr T abs(T x)
 {
 	if (saki::isnan(x))
 		return x;
@@ -32,7 +32,7 @@ constexpr T abs(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_unsigned_v<T>> = nullptr>
-constexpr T abs(T x)
+inline constexpr T abs(T x)
 {
 	return x;
 }

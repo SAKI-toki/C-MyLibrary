@@ -20,7 +20,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-constexpr T to_radian(T deg)
+inline constexpr T to_radian(T deg)
 {
 	if (saki::isnan(deg) || saki::isinf(deg) || deg == 0)
 		return deg;
@@ -31,7 +31,7 @@ constexpr T to_radian(T deg)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-constexpr double to_radian(T deg)
+inline constexpr double to_radian(T deg)
 {
 	return saki::to_radian(static_cast<double>(deg));
 }
@@ -41,7 +41,7 @@ constexpr double to_radian(T deg)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-constexpr T to_degree(T rad)
+inline constexpr T to_degree(T rad)
 {
 	if (saki::isnan(rad) || saki::isinf(rad) || rad == 0)
 		return rad;
@@ -52,7 +52,7 @@ constexpr T to_degree(T rad)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-constexpr double to_degree(T rad)
+inline constexpr double to_degree(T rad)
 {
 	return saki::to_degree(static_cast<double>(rad));
 }

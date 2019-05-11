@@ -19,7 +19,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-constexpr T log1p(T x)
+inline constexpr T log1p(T x)
 {
 	if (saki::isnan(x) || x == std::numeric_limits<T>::infinity() || x == 0)
 		return x;
@@ -37,7 +37,7 @@ constexpr T log1p(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-constexpr double log1p(T x)
+inline constexpr double log1p(T x)
 {
 	return saki::log1p(static_cast<double>(x));
 }

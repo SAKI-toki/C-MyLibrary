@@ -18,7 +18,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-constexpr bool isnan(T x)
+inline constexpr bool isnan(T x)
 {
 	return !(x == x);
 }
@@ -29,7 +29,7 @@ constexpr bool isnan(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<!std::is_floating_point_v<T>> = nullptr>
-constexpr bool isnan(T)
+inline constexpr bool isnan(T)
 {
 	return false;
 }

@@ -17,7 +17,7 @@ namespace saki
 	* @param new_val ’l‚É“ü‚ê‚é’l
 	*/
 template <typename T, typename U = T>
-constexpr T exchange(T &obj, U &&new_val)
+inline constexpr T exchange(T &obj, U &&new_val)
 {
 	T t1 = std::move(obj);
 	obj = std::forward<U>(new_val);

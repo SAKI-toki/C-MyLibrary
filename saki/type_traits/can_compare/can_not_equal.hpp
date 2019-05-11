@@ -21,7 +21,7 @@ struct can_not_equal
 private:
 	template <typename U>
 	static constexpr std::true_type not_equal_check(
-			saki::remove_reference_const_t<decltype(std::declval<U>() != std::declval<U>())> *);
+		saki::remove_reference_const_t<decltype(std::declval<U>() != std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type not_equal_check(...);
 
@@ -32,6 +32,6 @@ public:
 	* @brief can_not_equal‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto can_not_equal_v = saki::can_not_equal<T>::value;
+inline constexpr auto can_not_equal_v = saki::can_not_equal<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_NOT_EQUAL_HPP

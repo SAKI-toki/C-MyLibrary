@@ -19,7 +19,7 @@ namespace details
 		*/
 template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T1> && std::is_integral_v<T2>> = nullptr>
-constexpr T1 pow_n(T1 x, T2 y)
+inline constexpr T1 pow_n(T1 x, T2 y)
 {
 	T1 sum = static_cast<T1>(1);
 	if (y > 0)

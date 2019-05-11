@@ -17,19 +17,19 @@ namespace saki
 template <typename T>
 struct has_check
 {
-  private:
+private:
 	template <typename U>
 	static constexpr std::true_type check_check(decltype(std::declval<U>().check(char())) *u);
 	template <typename U>
 	static constexpr std::false_type check_check(...);
 
-  public:
+public:
 	static constexpr auto value = decltype(check_check<T>(nullptr))::value;
 };
 /**
 	* @brief has_check‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto has_check_v = saki::has_check<T>::value;
+inline constexpr auto has_check_v = saki::has_check<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_HAS_CHECK_METHOD_HPP

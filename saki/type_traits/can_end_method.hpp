@@ -30,6 +30,6 @@ public:
 	* @brief can_end‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto can_end_v = saki::can_end<T>::value;
+inline constexpr auto can_end_v = saki::can_end<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_END_METHOD_HPP

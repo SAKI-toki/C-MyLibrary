@@ -21,7 +21,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-constexpr T logb(T x)
+inline constexpr T logb(T x)
 {
 	return saki::floor(saki::log2(saki::abs(x)));
 }
@@ -30,7 +30,7 @@ constexpr T logb(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-constexpr double logb(T x)
+inline constexpr double logb(T x)
 {
 	return saki::logb(static_cast<double>(x));
 }

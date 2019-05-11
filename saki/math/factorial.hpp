@@ -19,7 +19,7 @@ namespace saki
 	*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-constexpr T factorial(size_t N)
+inline constexpr T factorial(size_t N)
 {
 	T sum = 1;
 	for (size_t i = 2; i <= N; ++i)
@@ -33,7 +33,7 @@ constexpr T factorial(size_t N)
 	*/
 template <size_t N, typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-constexpr T factorial()
+inline constexpr T factorial()
 {
 	return factorial<T>(N);
 }

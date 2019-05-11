@@ -30,6 +30,6 @@ public:
 	* @brief can_begin‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-static constexpr auto can_begin_v = saki::can_begin<T>::value;
+inline constexpr auto can_begin_v = saki::can_begin<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_BEGIN_METHOD_HPP

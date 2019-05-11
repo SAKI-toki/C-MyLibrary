@@ -18,7 +18,7 @@ namespace saki
 	* @param y •„†
 	*/
 template <typename T, typename SignType>
-constexpr T copysign(const T &x, const SignType &y)
+inline constexpr T copysign(const T &x, const SignType &y)
 {
 	T abs_n = (saki::isnan(x)) ? std::numeric_limits<T>::quiet_NaN() : saki::abs(x);
 	return (y >= 0) ? abs_n : -abs_n;
