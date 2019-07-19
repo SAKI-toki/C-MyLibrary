@@ -23,7 +23,7 @@ template <typename Container1, typename Container2,
 			  saki::can_range_based_for_v<Container1> && //コンテナ1がbegin,end有効か
 			  saki::can_range_based_for_v<Container2>	//コンテナ2がbegin,end有効か
 			  > = nullptr>
-inline constexpr auto copy(const Container1 &con1, Container2 &con2)
+constexpr auto copy(const Container1 &con1, Container2 &con2)
 	-> decltype(*std::begin(con2) = *std::begin(con1), std::begin(con2))
 {
 	auto con1itr = std::begin(con1);

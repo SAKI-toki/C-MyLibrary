@@ -23,7 +23,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-inline T random(const T random_min, const T random_max)
+T random(const T random_min, const T random_max)
 {
 	assert(random_min <= random_max);
 	std::random_device rd;
@@ -43,7 +43,7 @@ template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<
 			  std::is_arithmetic_v<T1> &&
 			  std::is_arithmetic_v<T2>> = nullptr>
-inline auto random(const T1 random_min, const T2 random_max)
+auto random(const T1 random_min, const T2 random_max)
 {
 	using type = std::common_type_t<T1, T2>;
 	return random(static_cast<type>(random_min), static_cast<type>(random_max));

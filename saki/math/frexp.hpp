@@ -21,7 +21,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T frexp(T value, int *exp)
+constexpr T frexp(T value, int *exp)
 {
 	if (saki::isnan(value) || saki::isinf(value))
 	{
@@ -42,7 +42,7 @@ inline constexpr T frexp(T value, int *exp)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double frexp(T value, int *exp)
+constexpr double frexp(T value, int *exp)
 {
 	return saki::frexp(static_cast<double>(value), exp);
 }

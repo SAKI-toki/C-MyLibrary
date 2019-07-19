@@ -31,6 +31,6 @@ public:
 	* @brief has_x‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-inline constexpr auto has_x_v = saki::has_x<T>::value;
+static constexpr auto has_x_v = saki::has_x<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_HAS_VARIABLE_HAS_X_HPP

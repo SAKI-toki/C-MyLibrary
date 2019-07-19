@@ -30,7 +30,7 @@ template <typename Container, typename BinaryOperation = saki::addition,
 			  saki::can_range_based_for_v<Container> &&		  //コンテナがbegin,end有効かどうか
 			  std::is_invocable_r_v<T, BinaryOperation, T, T> //BinaryOperation(T,T)の返り値がTかどうか
 			  > = nullptr>
-inline constexpr T accumulate(const Container &con, T init = 0, BinaryOperation &&binary_op = saki::addition())
+constexpr T accumulate(const Container &con, T init = 0, BinaryOperation &&binary_op = saki::addition())
 {
 	for (const auto &n : con)
 	{

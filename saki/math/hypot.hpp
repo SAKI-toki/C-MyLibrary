@@ -22,7 +22,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T hypot(T x, T y)
+constexpr T hypot(T x, T y)
 {
 	if (saki::isinf(x) || saki::isinf(y))
 		return std::numeric_limits<T>::infinity();
@@ -57,7 +57,7 @@ inline constexpr T hypot(T x, T y)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double hypot(T x, T y)
+constexpr double hypot(T x, T y)
 {
 	return saki::hypot(static_cast<double>(x), static_cast<double>(y));
 }
@@ -68,7 +68,7 @@ inline constexpr double hypot(T x, T y)
 template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<
 			  std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
-inline constexpr auto hypot(T1 x, T2 y)
+constexpr auto hypot(T1 x, T2 y)
 {
 	using type = std::common_type_t<T1, T2>;
 	return saki::hypot(static_cast<type>(x), static_cast<type>(y));
@@ -81,7 +81,7 @@ inline constexpr auto hypot(T1 x, T2 y)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T hypot(T x, T y, T z)
+constexpr T hypot(T x, T y, T z)
 {
 	if (saki::isinf(x) || saki::isinf(y) || saki::isinf(z))
 		return std::numeric_limits<T>::infinity();
@@ -138,7 +138,7 @@ inline constexpr T hypot(T x, T y, T z)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double hypot(T x, T y, T z)
+constexpr double hypot(T x, T y, T z)
 {
 	return saki::hypot(static_cast<double>(x), static_cast<double>(y), static_cast<double>(z));
 }
@@ -148,7 +148,7 @@ inline constexpr double hypot(T x, T y, T z)
 template <typename T1, typename T2, typename T3,
 		  saki::enable_if_nullptr_t<
 			  std::is_arithmetic_v<std::common_type_t<T1, T2, T3>>> = nullptr>
-inline constexpr auto hypot(T1 x, T2 y, T3 z)
+constexpr auto hypot(T1 x, T2 y, T3 z)
 {
 	using type = std::common_type_t<T1, T2, T3>;
 	return saki::hypot(static_cast<type>(x),

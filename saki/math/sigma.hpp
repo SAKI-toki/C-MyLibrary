@@ -23,7 +23,7 @@ namespace saki
 template <typename T = int, typename Func = saki::return_param,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T> &&
 									std::is_invocable_v<Func, T>> = nullptr>
-inline constexpr T sigma(T start, const T &end, Func &&f = Func())
+constexpr T sigma(T start, const T &end, Func &&f = Func())
 {
 	T sum = 0;
 	for (; start <= end; ++start)

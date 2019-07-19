@@ -26,7 +26,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T floor(T x)
+constexpr T floor(T x)
 {
 	if (saki::isnan(x) || saki::isinf(x) || x == 0)
 		return x;
@@ -44,7 +44,7 @@ inline constexpr T floor(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double floor(T x)
+constexpr double floor(T x)
 {
 	return saki::floor(static_cast<double>(x));
 }

@@ -21,8 +21,8 @@ struct can_same_equal
 private:
 	template <typename U>
 	static constexpr std::true_type same_equal_check(
-		saki::remove_reference_const_t<
-			decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U>())>>() = std::declval<U>())> *);
+			saki::remove_reference_const_t<
+					decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U>())>>() = std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type same_equal_check(...);
 
@@ -43,8 +43,8 @@ struct can_different_equal
 private:
 	template <typename U1, typename U2>
 	static constexpr std::true_type different_equal_check(
-		saki::remove_reference_const_t<
-			decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U1>())>>() = std::declval<U2>())> *);
+			saki::remove_reference_const_t<
+					decltype(std::declval<std::add_lvalue_reference_t<decltype(std::declval<U1>())>>() = std::declval<U2>())> *);
 	template <typename U1, typename U2>
 	static constexpr std::false_type different_equal_check(...);
 
@@ -59,6 +59,6 @@ struct can_different_equal<T, T> : public saki::can_same_equal<T>
 	* @brief can_different_equal‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T1, typename T2>
-inline constexpr auto can_different_equal_v = saki::can_different_equal<T1, T2>::value;
+static constexpr auto can_different_equal_v = saki::can_different_equal<T1, T2>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_BINARY_OPERATOR_CAN_EQUAL_HPP

@@ -20,7 +20,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T cbrt(T x)
+constexpr T cbrt(T x)
 {
 	if (saki::isnan(x) || saki::isinf(x) || x == 0)
 		return x;
@@ -32,7 +32,7 @@ inline constexpr T cbrt(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double cbrt(T x)
+constexpr double cbrt(T x)
 {
 	return saki::cbrt(static_cast<double>(x));
 }

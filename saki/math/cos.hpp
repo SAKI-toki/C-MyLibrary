@@ -24,7 +24,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T cos(T x)
+constexpr T cos(T x)
 {
 	//NaN
 	if (saki::isnan(x))
@@ -57,7 +57,7 @@ inline constexpr T cos(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double cos(T x)
+constexpr double cos(T x)
 {
 	return saki::cos(static_cast<double>(x));
 }

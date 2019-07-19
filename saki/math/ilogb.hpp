@@ -20,7 +20,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr int ilogb(T x)
+constexpr int ilogb(T x)
 {
 	if (saki::isnan(x))
 		return FP_ILOGBNAN;
@@ -35,7 +35,7 @@ inline constexpr int ilogb(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr int ilogb(T x)
+constexpr int ilogb(T x)
 {
 	return saki::ilogb(static_cast<double>(x));
 }

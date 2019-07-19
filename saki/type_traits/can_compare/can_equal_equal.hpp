@@ -21,7 +21,7 @@ struct can_equal_equal
 private:
 	template <typename U>
 	static constexpr std::true_type equal_equal_check(
-		saki::remove_reference_const_t<decltype(std::declval<U>() == std::declval<U>())> *);
+			saki::remove_reference_const_t<decltype(std::declval<U>() == std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type equal_equal_check(...);
 
@@ -32,6 +32,6 @@ public:
 	* @brief can_equal_equal‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-inline constexpr auto can_equal_equal_v = saki::can_equal_equal<T>::value;
+static constexpr auto can_equal_equal_v = saki::can_equal_equal<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_EQUAL_EQUAL_HPP

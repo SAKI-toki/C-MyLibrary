@@ -20,7 +20,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T exp2(T x)
+constexpr T exp2(T x)
 {
 	if (saki::isnan(x) || x == std::numeric_limits<T>::infinity())
 		return x;
@@ -36,7 +36,7 @@ inline constexpr T exp2(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double exp2(T x)
+constexpr double exp2(T x)
 {
 	return saki::exp2(static_cast<double>(x));
 }

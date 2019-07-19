@@ -21,7 +21,7 @@ struct can_greater
 private:
 	template <typename U>
 	static constexpr std::true_type greater_check(
-		saki::remove_reference_const_t<decltype(std::declval<U>() > std::declval<U>())> *);
+			saki::remove_reference_const_t<decltype(std::declval<U>() > std::declval<U>())> *);
 	template <typename U>
 	static constexpr std::false_type greater_check(...);
 
@@ -32,6 +32,6 @@ public:
 	* @brief can_greater‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-inline constexpr auto can_greater_v = saki::can_greater<T>::value;
+static constexpr auto can_greater_v = saki::can_greater<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_COMPARE_CAN_GREATER_HPP

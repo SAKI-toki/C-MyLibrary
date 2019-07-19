@@ -20,7 +20,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-inline constexpr bool is_odd(T x)
+constexpr bool is_odd(T x)
 {
 	if (saki::isnan(x))
 		return false;
@@ -32,7 +32,7 @@ inline constexpr bool is_odd(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-inline constexpr bool is_even(T x)
+constexpr bool is_even(T x)
 {
 	if (saki::isnan(x))
 		return false;

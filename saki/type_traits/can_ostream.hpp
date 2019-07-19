@@ -21,7 +21,7 @@ struct can_ostream
 private:
 	template <typename U>
 	static constexpr std::true_type ostream_check(
-		saki::remove_reference_const_t<decltype(std::cout << (std::declval<U>()))> *u);
+			saki::remove_reference_const_t<decltype(std::cout << (std::declval<U>()))> *u);
 	template <typename U>
 	static constexpr std::false_type ostream_check(...);
 
@@ -32,6 +32,6 @@ public:
 	* @brief can_ostream‚ğŠÈ’P‚ÉŒÄ‚Ño‚¹‚é•Ï”
 	*/
 template <typename T>
-inline constexpr auto can_ostream_v = saki::can_ostream<T>::value;
+static constexpr auto can_ostream_v = saki::can_ostream<T>::value;
 } // namespace saki
 #endif //SAKI_TYPE_TRAITS_CAN_OSTREAM_HPP

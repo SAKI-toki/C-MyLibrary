@@ -24,7 +24,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T atan2(T y, T x)
+constexpr T atan2(T y, T x)
 {
 	if (saki::isnan(x))
 	{
@@ -84,7 +84,7 @@ inline constexpr T atan2(T y, T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double atan2(T y, T x)
+constexpr double atan2(T y, T x)
 {
 	return saki::atan2(static_cast<double>(y), static_cast<double>(x));
 }
@@ -94,7 +94,7 @@ inline constexpr double atan2(T y, T x)
 template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<
 			  std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
-inline constexpr auto atan2(T1 y, T2 x)
+constexpr auto atan2(T1 y, T2 x)
 {
 	using type = std::common_type_t<T1, T2>;
 	return saki::atan2(static_cast<type>(y), static_cast<type>(x));

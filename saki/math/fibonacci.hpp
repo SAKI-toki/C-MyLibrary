@@ -21,7 +21,7 @@ namespace saki
 	*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-inline constexpr T fibonacci(size_t N)
+constexpr T fibonacci(size_t N)
 {
 	T prev1 = 1;
 	T prev2 = 1;
@@ -37,7 +37,7 @@ inline constexpr T fibonacci(size_t N)
 	*/
 template <size_t N, typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-inline constexpr T fibonacci()
+constexpr T fibonacci()
 {
 	return saki::fibonacci<T>(N);
 }

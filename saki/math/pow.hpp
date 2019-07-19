@@ -27,7 +27,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T pow(T x, T y)
+constexpr T pow(T x, T y)
 {
 	if (x == 1 || y == 0)
 		return static_cast<T>(1);
@@ -132,7 +132,7 @@ inline constexpr T pow(T x, T y)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double pow(T x, T y)
+constexpr double pow(T x, T y)
 {
 	return saki::pow(static_cast<double>(x), static_cast<double>(y));
 }
@@ -141,7 +141,7 @@ inline constexpr double pow(T x, T y)
 	*/
 template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
-inline constexpr auto pow(T1 x, T2 y)
+constexpr auto pow(T1 x, T2 y)
 {
 	using type = std::common_type_t<T1, T2>;
 	return saki::pow(static_cast<type>(x), static_cast<type>(y));

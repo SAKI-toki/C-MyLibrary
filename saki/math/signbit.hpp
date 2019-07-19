@@ -20,14 +20,14 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_signed_v<T>> = nullptr>
-inline constexpr bool signbit(T x)
+constexpr bool signbit(T x)
 {
 	return x < static_cast<T>(0);
 }
 
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_unsigned_v<T>> = nullptr>
-inline constexpr bool signbit(T x)
+constexpr bool signbit(T x)
 {
 	return false;
 }

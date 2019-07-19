@@ -25,7 +25,7 @@ namespace saki
 	*/
 template <template <typename, typename> typename Container = std::vector, typename T,
 		  saki::enable_if_nullptr_t<saki::has_check_v<T>> = nullptr>
-inline Container<std::string, std::allocator<std::string>> split(const std::string &str, T &&split_separation)
+Container<std::string, std::allocator<std::string>> split(const std::string &str, T &&split_separation)
 {
 	//‹æØ‚Á‚½•¶š—ñ‚ğ’Ç‰Á
 	std::vector<std::string> str_list;
@@ -64,7 +64,7 @@ inline Container<std::string, std::allocator<std::string>> split(const std::stri
 	*/
 template <template <typename, typename> typename Container = std::vector,
 		  typename First, typename... T>
-inline Container<std::string, std::allocator<std::string>> split(const std::string &str, First first_separation, T... t)
+Container<std::string, std::allocator<std::string>> split(const std::string &str, First first_separation, T... t)
 {
 	return saki::split<Container>(str, saki::MultipleSeparation(first_separation, t...));
 }

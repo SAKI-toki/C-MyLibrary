@@ -22,7 +22,7 @@ namespace saki
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
-inline constexpr T acos(T x)
+constexpr T acos(T x)
 {
 	if (saki::isnan(x))
 		return x;
@@ -37,7 +37,7 @@ inline constexpr T acos(T x)
 	*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
-inline constexpr double acos(T x)
+constexpr double acos(T x)
 {
 	return saki::acos(static_cast<double>(x));
 }

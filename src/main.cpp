@@ -16,28 +16,9 @@ void Comment(const Args &... args)
 #include "../compile_time_test/type_traits_test.hpp"
 #include "../compile_time_test/vector_test.hpp"
 
-#include <algorithm>
-
 int main()
 {
-	std::vector<int> vec(10);
-	for (std::size_t i = 0; i < vec.size(); ++i)
-	{
-		vec[i] = i * i;
-	}
-	for (const auto &n : vec)
-	{
-		Comment(n);
-	}
-	std::cout << std::endl;
-	vec.erase(std::remove_if(
-				  vec.begin(),
-				  vec.end(),
-				  [](int x) { return x % 2 == 0; }),
-			  vec.end());
-	for (const auto &n : vec)
-	{
-		Comment(n);
-	}
+	Comment(saki::ldexp(10, 5));
+	Comment(std::ldexp(10, 5));
 	return 0;
 }
