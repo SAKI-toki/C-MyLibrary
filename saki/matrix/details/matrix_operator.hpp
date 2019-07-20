@@ -9,17 +9,17 @@
 #include <utility>
 #include <type_traits>
 #include <saki/function_object.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 //プロトタイプ宣言
 template <typename T>
 class matrix;
 namespace details
 {
 /**
-		* @brief 行列同士の演算(+と-)
-		*/
+* @brief 行列同士の演算(+と-)
+*/
 template <typename T1, typename T2, typename Func>
 constexpr auto matrix_matrix_some_operator(const matrix<T1> &m1, const matrix<T2> &m2, const Func &f)
 {
@@ -34,8 +34,8 @@ constexpr auto matrix_matrix_some_operator(const matrix<T1> &m1, const matrix<T2
 		f(m1[3][2], m2[3][2]), f(m1[3][3], m2[3][3])};
 }
 /**
-		* @brief 行列とスカラの演算
-		*/
+* @brief 行列とスカラの演算
+*/
 template <typename T1, typename T2, typename Func>
 constexpr auto matrix_scalar_some_operator(const matrix<T1> &m, const T2 &scalar, const Func &f)
 {
@@ -51,40 +51,40 @@ constexpr auto matrix_scalar_some_operator(const matrix<T1> &m, const T2 &scalar
 }
 } // namespace details
 /**
-	* @brief +演算子
-	*/
+* @brief +演算子
+*/
 template <typename T1, typename T2>
 constexpr auto operator+(const matrix<T1> &m1, const matrix<T2> &m2)
 {
 	return details::matrix_matrix_some_operator(m1, m2, saki::addition());
 }
 /**
-	* @brief -演算子
-	*/
+* @brief -演算子
+*/
 template <typename T1, typename T2>
 constexpr auto operator-(const matrix<T1> &m1, const matrix<T2> &m2)
 {
 	return details::matrix_matrix_some_operator(m1, m2, saki::subtraction());
 }
 /**
-	* @brief *演算子(行列*スカラ)
-	*/
+* @brief *演算子(行列*スカラ)
+*/
 template <typename T1, typename T2>
 constexpr auto operator*(const matrix<T1> &m, const T2 &scalar)
 {
 	return details::matrix_scalar_some_operator(m, scalar, saki::multiplication());
 }
 /**
-	* @brief *演算子(スカラ*行列)
-	*/
+* @brief *演算子(スカラ*行列)
+*/
 template <typename T1, typename T2>
 constexpr auto operator*(const T1 &scalar, const matrix<T2> &m)
 {
 	return m * scalar;
 }
 /**
-	* @brief *演算子(行列*行列)
-	*/
+* @brief *演算子(行列*行列)
+*/
 template <typename T1, typename T2>
 constexpr auto operator*(const matrix<T1> &m1, const matrix<T2> &m2)
 {
@@ -105,16 +105,16 @@ constexpr auto operator*(const matrix<T1> &m1, const matrix<T2> &m2)
 	return mat;
 }
 /**
-	* @brief /演算子(スカラ)
-	*/
+* @brief /演算子(スカラ)
+*/
 template <typename T1, typename T2>
 constexpr auto operator/(const matrix<T1> &m, const T2 &scalar)
 {
 	return details::matrix_scalar_some_operator(m, scalar, saki::division());
 }
 /**
-	* @brief ==演算子
-	*/
+* @brief ==演算子
+*/
 template <typename T>
 constexpr bool operator==(const matrix<T> &m1, const matrix<T> &m2)
 {
@@ -131,17 +131,17 @@ constexpr bool operator==(const matrix<T> &m1, const matrix<T> &m2)
 	return true;
 }
 /**
-	* @brief !=演算子
-	*/
+* @brief !=演算子
+*/
 template <typename T>
 constexpr bool operator!=(const matrix<T> &m1, const matrix<T> &m2)
 {
 	return !(m1 == m2);
 }
 /**
-	* @brief ==演算子(型不一致)
-	* @details この関数の使用は推奨しない
-	*/
+* @brief ==演算子(型不一致)
+* @details この関数の使用は推奨しない
+*/
 template <typename T1, typename T2>
 [[deprecated("type_mismatch")]] constexpr bool operator==(const matrix<T1> &m1, const matrix<T2> &m2)
 {
@@ -158,13 +158,13 @@ template <typename T1, typename T2>
 	return true;
 }
 /**
-	* @brief !=演算子(型不一致)
-	* @details この関数の使用は推奨しない
-	*/
+* @brief !=演算子(型不一致)
+* @details この関数の使用は推奨しない
+*/
 template <typename T1, typename T2>
 [[deprecated("type_mismatch")]] constexpr bool operator!=(const matrix<T1> &m1, const matrix<T2> &m2)
 {
 	return !(m1 == m2);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATRIX_DETAILS_MATRIX_OPERATOR_HPP

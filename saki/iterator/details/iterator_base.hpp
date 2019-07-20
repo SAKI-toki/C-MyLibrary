@@ -7,12 +7,14 @@
 #ifndef SAKI_ITERATOR_DETAILS_ITERATOR_BASE_HPP
 #define SAKI_ITERATOR_DETAILS_ITERATOR_BASE_HPP
 #include <saki/iterator/details/iterator_operator.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki::details
+SAKI_NAMESPACE_BEGIN
+namespace details
 {
 /**
-	* @brief イテレーターのベースクラス 
-	*/
+* @brief イテレーターのベースクラス 
+*/
 template <typename T>
 class iterator_base
 {
@@ -29,34 +31,34 @@ protected:
 
 public:
 	/**
-		* @brief ポインタで初期化するコンストラクタ
-		*/
+	* @brief ポインタで初期化するコンストラクタ
+	*/
 	explicit constexpr iterator_base(T *pointer) : itr(pointer) {}
 	/**
-		* @brief 間接参照演算子
-		*/
+	* @brief 間接参照演算子
+	*/
 	constexpr T &operator*() const
 	{
 		return *itr;
 	}
 	/**
-		* @brief アロー演算子
-		*/
+	* @brief アロー演算子
+	*/
 	constexpr T *operator->() const
 	{
 		return itr;
 	}
 	/**
-		* @brief ++演算子(前置)
-		*/
+	* @brief ++演算子(前置)
+	*/
 	constexpr saki::details::iterator_base<T> &operator++()
 	{
 		this->itr += 1;
 		return *this;
 	}
 	/**
-		* @brief ++演算子(後置)
-		*/
+	* @brief ++演算子(後置)
+	*/
 	constexpr saki::details::iterator_base<T> operator++(int)
 	{
 		saki::details::iterator_base<T> temp = *this;
@@ -64,16 +66,16 @@ public:
 		return temp;
 	}
 	/**
-		* @brief --演算子(前置)
-		*/
+	* @brief --演算子(前置)
+	*/
 	constexpr saki::details::iterator_base<T> &operator--()
 	{
 		this->itr -= 1;
 		return *this;
 	}
 	/**
-		* @brief --演算子(後置)
-		*/
+	* @brief --演算子(後置)
+	*/
 	constexpr saki::details::iterator_base<T> operator--(int)
 	{
 		saki::details::iterator_base<T> temp = *this;
@@ -81,5 +83,6 @@ public:
 		return temp;
 	}
 };
-} // namespace saki::details
+} // namespace details
+SAKI_NAMESPACE_END
 #endif //SAKI_ITERATOR_DETAILS_ITERATOR_BASE_HPP

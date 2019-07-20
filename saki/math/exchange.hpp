@@ -8,9 +8,9 @@
 #define SAKI_MATH_EXCHANGE_HPP
 #include <type_traits>
 #include <utility>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
 	* @brief コンパイル時exchange
 	* @param obj 値を入れられる値
@@ -23,5 +23,5 @@ constexpr T exchange(T &obj, U &&new_val)
 	obj = std::forward<U>(new_val);
 	return t1;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_EXCHANGE_HPP

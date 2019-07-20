@@ -12,24 +12,24 @@
 #include <saki/macro/type_macro.hpp>
 #include <saki/array/array.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時固定長string_baseクラス
-	*/
+* @brief コンパイル時固定長string_baseクラス
+*/
 template <typename T, size_t Size>
 class string_base
 {
-  public:
+public:
 	SAKI_TYPE_MACRO(T)
-  private:
+private:
 	saki::array<T, Size> str{};
 
-  public:
+public:
 	/**
-		* @brief 引数なしコンストラクタ
-		*/
+	* @brief 引数なしコンストラクタ
+	*/
 	constexpr string_base()
 	{
 		for (size_t i = 0; i < Size; ++i)
@@ -38,8 +38,8 @@ class string_base
 		}
 	}
 	/**
-		* @brief 文字列からの初期化
-		*/
+	* @brief 文字列からの初期化
+	*/
 	constexpr string_base(const_pointer _str)
 	{
 		size_t i = 0;
@@ -82,9 +82,9 @@ class string_base
 	}
 
 	/**
-		* @brief 文字列の大きさを取得
-		* @return 文字列の大きさ
-		*/
+	* @brief 文字列の大きさを取得
+	* @return 文字列の大きさ
+	*/
 	constexpr size_type size() const
 	{
 		return Size;
@@ -104,8 +104,8 @@ class string_base
 };
 
 /**
-	* @brief stringの出力
-	*/
+* @brief stringの出力
+*/
 template <typename T, size_t N>
 std::ostream &operator<<(std::ostream &os, const string_base<T, N> &str)
 {
@@ -177,5 +177,5 @@ constexpr bool operator!=(const saki::string_base<T, N> &str1, const saki::strin
 {
 	return !(str1 == str2);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_STRING_BASE_STRING_BASE_HPP

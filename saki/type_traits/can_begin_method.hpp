@@ -9,11 +9,12 @@
 #include <type_traits>
 #include <utility>
 #include <iterator>
-namespace saki
-{
+#include <saki/macro/namespace_macro.hpp>
+
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief beginできるかどうかを判定する構造体
-	*/
+* @brief beginできるかどうかを判定する構造体
+*/
 template <typename T>
 struct can_begin
 {
@@ -27,9 +28,9 @@ public:
 	static constexpr auto value = decltype(begin_check<T>(nullptr))::value;
 };
 /**
-	* @brief can_beginを簡単に呼び出せる変数
-	*/
+* @brief can_beginを簡単に呼び出せる変数
+*/
 template <typename T>
-static constexpr auto can_begin_v = saki::can_begin<T>::value;
-} // namespace saki
+inline constexpr auto can_begin_v = saki::can_begin<T>::value;
+SAKI_NAMESPACE_END
 #endif //SAKI_TYPE_TRAITS_CAN_BEGIN_METHOD_HPP

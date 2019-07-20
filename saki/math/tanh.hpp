@@ -14,12 +14,12 @@
 #include <saki/math/copysign.hpp>
 #include <saki/math/sinh.hpp>
 #include <saki/math/cosh.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時tanh
-	*/
+* @brief コンパイル時tanh
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T tanh(T x)
@@ -32,13 +32,13 @@ constexpr T tanh(T x)
 	return saki::sinh(x) / saki::cosh(x);
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double tanh(T x)
 {
 	return saki::tanh(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_TANH_HPP

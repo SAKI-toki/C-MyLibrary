@@ -17,13 +17,13 @@
 #include <saki/math/log.hpp>
 #include <saki/math/copysign.hpp>
 #include <saki/math/details/pow_n.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時floor
-	* @details |x|>uint64_t_maxの場合は何も処理せず返す
-	*/
+* @brief コンパイル時floor
+* @details |x|>uint64_t_maxの場合は何も処理せず返す
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T floor(T x)
@@ -40,13 +40,13 @@ constexpr T floor(T x)
 	return ans;
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double floor(T x)
 {
 	return saki::floor(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_FLOOR_HPP

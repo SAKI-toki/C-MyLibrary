@@ -12,16 +12,16 @@
 #include <saki/vector/vector_4d.hpp>
 #include <saki/math/sin.hpp>
 #include <saki/math/cos.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 template <typename T>
 class matrix;
 
 /**
-	* @brief •½sˆÚ“®
-	* @param vec ˆÚ“®—Ê(vector2)
-	*/
+* @brief •½sˆÚ“®
+* @param vec ˆÚ“®—Ê(vector2)
+*/
 template <typename T>
 constexpr matrix<T> translate(const saki::vector2<T> &vec)
 {
@@ -33,9 +33,9 @@ constexpr matrix<T> translate(const saki::vector2<T> &vec)
 }
 
 /**
-	* @brief •½sˆÚ“®
-	* @param vec ˆÚ“®—Ê(vector3)
-	*/
+* @brief •½sˆÚ“®
+* @param vec ˆÚ“®—Ê(vector3)
+*/
 template <typename T>
 constexpr matrix<T> translate(const saki::vector3<T> &vec)
 {
@@ -47,9 +47,9 @@ constexpr matrix<T> translate(const saki::vector3<T> &vec)
 }
 
 /**
-	* @brief •½sˆÚ“®
-	* @param vec ˆÚ“®—Ê(vector4)
-	*/
+* @brief •½sˆÚ“®
+* @param vec ˆÚ“®—Ê(vector4)
+*/
 template <typename T>
 constexpr matrix<T> translate(const saki::vector4<T> &vec)
 {
@@ -61,9 +61,9 @@ constexpr matrix<T> translate(const saki::vector4<T> &vec)
 }
 
 /**
-	* @brief Šgk
-	* @param vec Šgk—Ê(vector2)
-	*/
+* @brief Šgk
+* @param vec Šgk—Ê(vector2)
+*/
 template <typename T>
 constexpr matrix<T> scaling(const saki::vector2<T> &vec)
 {
@@ -75,9 +75,9 @@ constexpr matrix<T> scaling(const saki::vector2<T> &vec)
 }
 
 /**
-	* @brief Šgk
-	* @param vec Šgk—Ê(vector3)
-	*/
+* @brief Šgk
+* @param vec Šgk—Ê(vector3)
+*/
 template <typename T>
 constexpr matrix<T> scaling(const saki::vector3<T> &vec)
 {
@@ -89,9 +89,9 @@ constexpr matrix<T> scaling(const saki::vector3<T> &vec)
 }
 
 /**
-	* @brief Šgk
-	* @param vec Šgk—Ê(vector4)
-	*/
+* @brief Šgk
+* @param vec Šgk—Ê(vector4)
+*/
 template <typename T>
 constexpr matrix<T> scaling(const saki::vector4<T> &vec)
 {
@@ -103,9 +103,9 @@ constexpr matrix<T> scaling(const saki::vector4<T> &vec)
 }
 
 /**
-	* @brief X²‚Ì‰ñ“]
-	* @param angle ‰ñ“]—Ê
-	*/
+* @brief X²‚Ì‰ñ“]
+* @param angle ‰ñ“]—Ê
+*/
 template <typename T>
 constexpr matrix<T> rotate_x(T angle)
 {
@@ -119,9 +119,9 @@ constexpr matrix<T> rotate_x(T angle)
 }
 
 /**
-	* @brief Y²‚Ì‰ñ“]
-	* @param angle ‰ñ“]—Ê
-	*/
+* @brief Y²‚Ì‰ñ“]
+* @param angle ‰ñ“]—Ê
+*/
 template <typename T>
 constexpr matrix<T> rotate_y(T angle)
 {
@@ -135,9 +135,9 @@ constexpr matrix<T> rotate_y(T angle)
 }
 
 /**
-	* @brief Z²‚Ì‰ñ“]
-	* @param angle ‰ñ“]—Ê
-	*/
+* @brief Z²‚Ì‰ñ“]
+* @param angle ‰ñ“]—Ê
+*/
 template <typename T>
 constexpr matrix<T> rotate_z(T angle)
 {
@@ -158,5 +158,5 @@ constexpr auto rotate_roll_pitch_yaw(T1 roll, T2 pitch, T3 yaw)
 		   saki::rotate_x<type>(roll) *
 		   saki::rotate_y<type>(pitch);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATRIX_DETAILS_MATRIX_MATH_HPP

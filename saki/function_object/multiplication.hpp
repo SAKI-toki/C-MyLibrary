@@ -6,12 +6,12 @@
 */
 #ifndef SAKI_FUNCTION_OBJECT_MULTIPLICATION_HPP
 #define SAKI_FUNCTION_OBJECT_MULTIPLICATION_HPP
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 掛け算のconstexpr対応した関数オブジェクト
-	*/
+* @brief 掛け算のconstexpr対応した関数オブジェクト
+*/
 struct multiplication
 {
 	template <typename T1, typename T2>
@@ -21,5 +21,5 @@ struct multiplication
 		return t1 * t2;
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_FUNCTION_OBJECT_MULTIPLICATION_HPP

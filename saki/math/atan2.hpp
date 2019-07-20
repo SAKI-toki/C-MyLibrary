@@ -15,13 +15,13 @@
 #include <saki/math/atan.hpp>
 #include <saki/math/pi.hpp>
 #include <saki/math/isinf.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時atan2
-	* @param y,x 辺の長さ
-	*/
+* @brief コンパイル時atan2
+* @param y,x 辺の長さ
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T atan2(T y, T x)
@@ -80,8 +80,8 @@ constexpr T atan2(T y, T x)
 	return saki::atan(y / x) - saki::PI<T>;
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double atan2(T y, T x)
@@ -89,8 +89,8 @@ constexpr double atan2(T y, T x)
 	return saki::atan2(static_cast<double>(y), static_cast<double>(x));
 }
 /**
-	* @brief 型をそろえる
-	*/
+* @brief 型をそろえる
+*/
 template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<
 			  std::is_arithmetic_v<std::common_type_t<T1, T2>>> = nullptr>
@@ -99,5 +99,5 @@ constexpr auto atan2(T1 y, T2 x)
 	using type = std::common_type_t<T1, T2>;
 	return saki::atan2(static_cast<type>(y), static_cast<type>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_ATAN2_HPP

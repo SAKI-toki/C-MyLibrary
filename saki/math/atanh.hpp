@@ -15,12 +15,12 @@
 #include <saki/math/log.hpp>
 #include <saki/math/sqrt.hpp>
 #include <saki/math/copysign.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時atanh
-	*/
+* @brief コンパイル時atanh
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T atanh(T x)
@@ -35,13 +35,13 @@ constexpr T atanh(T x)
 	return static_cast<T>(0.5 * saki::log((1 + x) / (1 - x)));
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double atanh(T x)
 {
 	return saki::atanh(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_ATANH_HPP

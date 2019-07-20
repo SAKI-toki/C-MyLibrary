@@ -12,12 +12,12 @@
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
 #include <saki/math/pow.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時cbrt
-	*/
+* @brief コンパイル時cbrt
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T cbrt(T x)
@@ -28,13 +28,13 @@ constexpr T cbrt(T x)
 	return static_cast<T>((x < 0) ? -saki::pow(-x, 1.0 / 3.0) : saki::pow(x, 1.0 / 3.0));
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double cbrt(T x)
 {
 	return saki::cbrt(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_CBRT_HPP

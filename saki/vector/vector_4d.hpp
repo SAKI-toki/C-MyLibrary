@@ -11,37 +11,37 @@
 #include <saki/vector/details/4d/vector_4d_operator.hpp>
 #include <saki/macro/type_macro.hpp>
 #include <cmath>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 4次元でのベクトル
-	*/
+* @brief 4次元でのベクトル
+*/
 template <typename T>
 class vector4
 {
-  public:
+public:
 	SAKI_TYPE_MACRO(T)
-  public:
+public:
 	value_type
 		x = static_cast<value_type>(0),
 		y = static_cast<value_type>(0),
 		z = static_cast<value_type>(0),
 		w = static_cast<value_type>(0);
 	/**
-		* @brief 引数なしコンストラクタ
-		* @details 全て0で初期化
-		*/
+	* @brief 引数なしコンストラクタ
+	* @details 全て0で初期化
+	*/
 	constexpr vector4()
 	{
 	}
 	/**
-		* @brief 引数ありコンストラクタ
-		* @param _x xの初期値
-		* @param _y yの初期値
-		* @param _z zの初期値
-		* @param _w wの初期値
-		*/
+	* @brief 引数ありコンストラクタ
+	* @param _x xの初期値
+	* @param _y yの初期値
+	* @param _z zの初期値
+	* @param _w wの初期値
+	*/
 	constexpr vector4(const_reference _x, const_reference _y, const_reference _z, const_reference _w) : x(_x), y(_y), z(_z), w(_w)
 	{
 	}
@@ -53,8 +53,8 @@ class vector4
 	vector4<value_type> &operator=(vector4<value_type> &&) noexcept = default;
 	~vector4() noexcept = default;
 	/**
-		* @brief +=演算子
-		*/
+	* @brief +=演算子
+	*/
 	template <typename U = value_type>
 	constexpr auto operator+=(const saki::vector4<U> &other)
 	{
@@ -62,8 +62,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief -=演算子
-		*/
+	* @brief -=演算子
+	*/
 	template <typename U = value_type>
 	constexpr auto operator-=(const saki::vector4<U> &other)
 	{
@@ -71,8 +71,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief *=演算子(スカラ)
-		*/
+	* @brief *=演算子(スカラ)
+	*/
 	template <typename U = value_type>
 	constexpr auto operator*=(const U &scalar)
 	{
@@ -80,8 +80,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief *=演算子(ベクトル)
-		*/
+	* @brief *=演算子(ベクトル)
+	*/
 	template <typename U = value_type>
 	constexpr auto operator*=(const saki::vector4<U> &other)
 	{
@@ -89,8 +89,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief /=演算子(スカラ)
-		*/
+	* @brief /=演算子(スカラ)
+	*/
 	template <typename U = value_type>
 	constexpr auto operator/=(const U &scalar)
 	{
@@ -98,8 +98,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief /=演算子(ベクトル)
-		*/
+	* @brief /=演算子(ベクトル)
+	*/
 	template <typename U = value_type>
 	constexpr auto operator/=(const saki::vector4<U> &other)
 	{
@@ -107,36 +107,36 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief 単項+演算子
-		*/
+	* @brief 単項+演算子
+	*/
 	constexpr saki::vector4<value_type> operator+() const
 	{
 		return *this;
 	}
 	/**
-		* @brief 単項-演算子
-		*/
+	* @brief 単項-演算子
+	*/
 	constexpr saki::vector4<value_type> operator-() const
 	{
 		return saki::vector4<value_type>(this->x * (-1), this->y * (-1), this->z * (-1), this->w * (-1));
 	}
 	/**
-		* @brief []演算子
-		*/
+	* @brief []演算子
+	*/
 	constexpr reference operator[](const unsigned int index)
 	{
 		return (index == 0) ? this->x : (index == 1) ? this->y : (index == 2) ? this->z : this->w;
 	}
 	/**
-		* @brief []演算子(constexpr)
-		*/
+	* @brief []演算子(constexpr)
+	*/
 	constexpr const_reference operator[](const unsigned int index) const
 	{
 		return (index == 0) ? this->x : (index == 1) ? this->y : (index == 2) ? this->z : this->w;
 	}
 	/**
-		* @brief ++演算子(前置)
-		*/
+	* @brief ++演算子(前置)
+	*/
 	constexpr saki::vector4<value_type> &operator++()
 	{
 		this->x += 1;
@@ -146,8 +146,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief ++演算子(後置)
-		*/
+	* @brief ++演算子(後置)
+	*/
 	constexpr saki::vector4<value_type> operator++(int)
 	{
 		saki::vector4<value_type> temp = *this;
@@ -158,8 +158,8 @@ class vector4
 		return temp;
 	}
 	/**
-		* @brief --演算子(前置)
-		*/
+	* @brief --演算子(前置)
+	*/
 	constexpr saki::vector4<value_type> &operator--()
 	{
 		this->x -= 1;
@@ -169,8 +169,8 @@ class vector4
 		return *this;
 	}
 	/**
-		* @brief --演算子(後置)
-		*/
+	* @brief --演算子(後置)
+	*/
 	constexpr saki::vector4<value_type> operator--(int)
 	{
 		saki::vector4<value_type> temp = *this;
@@ -181,9 +181,9 @@ class vector4
 		return temp;
 	}
 	/**
-		* @brief 正規化
-		* @details int型の場合、すべての要素が0で返ります
-		*/
+	* @brief 正規化
+	* @details int型の場合、すべての要素が0で返ります
+	*/
 	constexpr void normalize()
 	{
 		//分母
@@ -206,30 +206,30 @@ class vector4
 };
 
 /**
-	* @brief vector4のオールゼロ
-	*/
+* @brief vector4のオールゼロ
+*/
 template <typename T>
-static constexpr saki::vector4<T> vector4_zero{static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(0)};
+inline constexpr saki::vector4<T> vector4_zero{static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(0)};
 /**
-	* @brief vector4のオールワン
-	*/
+* @brief vector4のオールワン
+*/
 template <typename T>
-static constexpr saki::vector4<T> vector4_one{static_cast<T>(1), static_cast<T>(1), static_cast<T>(1), static_cast<T>(1)};
+inline constexpr saki::vector4<T> vector4_one{static_cast<T>(1), static_cast<T>(1), static_cast<T>(1), static_cast<T>(1)};
 /**
-	* @brief vector4の最小値
-	*/
+* @brief vector4の最小値
+*/
 template <typename T>
-static constexpr saki::vector4<T> vector4_min{std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min()};
+inline constexpr saki::vector4<T> vector4_min{std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min(), std::numeric_limits<T>::min()};
 /**
-	* @brief vector4の最大値
-	*/
+* @brief vector4の最大値
+*/
 template <typename T>
-static constexpr saki::vector4<T> vector4_max{std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max()};
+inline constexpr saki::vector4<T> vector4_max{std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max(), std::numeric_limits<T>::max()};
 
 /**
-	* @brief 正規化
-	* @return 正規化したもの
-	*/
+* @brief 正規化
+* @return 正規化したもの
+*/
 template <typename U = double, typename T>
 constexpr saki::vector4<U> normalize(const saki::vector4<T> &v)
 {
@@ -251,17 +251,17 @@ constexpr saki::vector4<U> normalize(const saki::vector4<T> &v)
 	}
 }
 /**
-	* @brief 内積
-	*/
+* @brief 内積
+*/
 template <typename U = double, typename T1, typename T2>
 constexpr U dot(const saki::vector4<T1> &v1, const saki::vector4<T2> &v2)
 {
 	return static_cast<U>(v1.x * v2.x + v1.y * v2.y + v1.z * v2.z + v1.w * v2.w);
 }
 /**
-	* @brief 線形補間
-	* @details Quaternionは使用していません
-	*/
+* @brief 線形補間
+* @details Quaternionは使用していません
+*/
 template <typename U = double, typename T1, typename T2, typename T = double>
 constexpr saki::vector4<U> lerp(const saki::vector4<T1> &v1, const saki::vector4<T2> &v2, const T &t, const T &base = 1)
 {
@@ -272,6 +272,6 @@ constexpr saki::vector4<U> lerp(const saki::vector4<T1> &v1, const saki::vector4
 		v1.z + (v2.z - v1.z) * ratio,
 		v1.w + (v2.w - v1.w) * ratio);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 
 #endif //SAKI_VECTOR_VECTOR_4D_HPP

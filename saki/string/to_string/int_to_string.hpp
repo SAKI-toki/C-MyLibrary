@@ -14,13 +14,13 @@
 #include <saki/math/abs.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/string/base/string_base.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief int型からstring型に変換
-	* @details 固定長のためサイズ指定しなければならない
-	*/
+* @brief int型からstring型に変換
+* @details 固定長のためサイズ指定しなければならない
+*/
 template <typename T, typename Integer,
 		  size_t N = saki::digit_count(std::numeric_limits<Integer>::max()) + 1,
 		  typename StringType = saki::string_base<T, N>,
@@ -51,7 +51,6 @@ constexpr StringType int_to_string(Integer x)
 	}
 	return str;
 }
-
-} // namespace saki
+SAKI_NAMESPACE_END
 
 #endif //SAKI_STRING_TO_STRING_INT_TO_STRING_HPP

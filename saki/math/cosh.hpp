@@ -14,9 +14,9 @@
 #include <saki/math/pow.hpp>
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
 	* @brief ƒRƒ“ƒpƒCƒ‹Žžcosh
 	*/
@@ -46,5 +46,5 @@ constexpr double cosh(T x)
 {
 	return saki::cosh(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_COSH_HPP

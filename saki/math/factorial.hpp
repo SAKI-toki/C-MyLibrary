@@ -10,13 +10,13 @@
 #include <cstddef>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief ŠKæ(ˆø”ƒo[ƒWƒ‡ƒ“)
-	* @param N 1‚©‚çN‚Ü‚Å‚ÌŠKæ‚ğ‹‚ß‚é
-	*/
+* @brief ŠKæ(ˆø”ƒo[ƒWƒ‡ƒ“)
+* @param N 1‚©‚çN‚Ü‚Å‚ÌŠKæ‚ğ‹‚ß‚é
+*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T factorial(size_t N)
@@ -29,8 +29,8 @@ constexpr T factorial(size_t N)
 	return sum;
 }
 /**
-	* @brief ŠKæ(‰¼ˆø”ƒo[ƒWƒ‡ƒ“)
-	*/
+* @brief ŠKæ(‰¼ˆø”ƒo[ƒWƒ‡ƒ“)
+*/
 template <size_t N, typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T factorial()
@@ -39,12 +39,11 @@ constexpr T factorial()
 }
 
 /**
-	* @brief Œ^‚²‚Æ‚ÌÅ‘åŠKæ”
-	*/
+* @brief Œ^‚²‚Æ‚ÌÅ‘åŠKæ”
+*/
 template <typename T>
 struct factorial_limits
 {
-	static constexpr std::size_t limit = 0;
 };
 template <>
 struct factorial_limits<float>
@@ -62,12 +61,12 @@ struct factorial_limits<long double>
 	static constexpr std::size_t limit = 170;
 };
 template <>
-struct factorial_limits<char>
+struct factorial_limits<std::int8_t>
 {
 	static constexpr std::size_t limit = 5;
 };
 template <>
-struct factorial_limits<unsigned char>
+struct factorial_limits<std::uint8_t>
 {
 	static constexpr std::size_t limit = 6;
 };
@@ -87,44 +86,34 @@ struct factorial_limits<char32_t>
 	static constexpr std::size_t limit = 13;
 };
 template <>
-struct factorial_limits<short>
+struct factorial_limits<std::int16_t>
 {
 	static constexpr std::size_t limit = 7;
 };
 template <>
-struct factorial_limits<unsigned short>
+struct factorial_limits<std::uint16_t>
 {
 	static constexpr std::size_t limit = 8;
 };
 template <>
-struct factorial_limits<int>
+struct factorial_limits<std::int32_t>
 {
 	static constexpr std::size_t limit = 13;
 };
 template <>
-struct factorial_limits<unsigned int>
+struct factorial_limits<std::uint32_t>
 {
 	static constexpr std::size_t limit = 13;
 };
 template <>
-struct factorial_limits<long>
-{
-	static constexpr std::size_t limit = 13;
-};
-template <>
-struct factorial_limits<unsigned long>
-{
-	static constexpr std::size_t limit = 13;
-};
-template <>
-struct factorial_limits<long long>
+struct factorial_limits<std::int64_t>
 {
 	static constexpr std::size_t limit = 20;
 };
 template <>
-struct factorial_limits<unsigned long long>
+struct factorial_limits<std::uint64_t>
 {
 	static constexpr std::size_t limit = 22;
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_FACTORIAL_HPP

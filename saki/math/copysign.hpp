@@ -9,19 +9,19 @@
 #include <limits>
 #include <saki/math/abs.hpp>
 #include <saki/math/isnan.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時符号コピー
-	* @param x 絶対値
-	* @param y 符号
-	*/
+* @brief コンパイル時符号コピー
+* @param x 絶対値
+* @param y 符号
+*/
 template <typename T, typename SignType>
 constexpr T copysign(const T &x, const SignType &y)
 {
 	T abs_n = (saki::isnan(x)) ? std::numeric_limits<T>::quiet_NaN() : saki::abs(x);
 	return (y >= 0) ? abs_n : -abs_n;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_COPYSIGN_HPP

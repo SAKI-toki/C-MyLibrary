@@ -9,15 +9,15 @@
 #include <iterator>
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/type_traits/can_range_based_for.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンテナとコンテナを渡すcopy
-	* @param con1 コピーするコンテナクラス
-	* @param con2 ペーストするコンテナクラス
-	* @details 片方がendになったらコピー終了
-	*/
+* @brief コンテナとコンテナを渡すcopy
+* @param con1 コピーするコンテナクラス
+* @param con2 ペーストするコンテナクラス
+* @details 片方がendになったらコピー終了
+*/
 template <typename Container1, typename Container2,
 		  saki::enable_if_nullptr_t<
 			  saki::can_range_based_for_v<Container1> && //コンテナ1がbegin,end有効か
@@ -38,5 +38,5 @@ constexpr auto copy(const Container1 &con1, Container2 &con2)
 	}
 	return con2itr;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_ALGORITHM_COPY_HPP

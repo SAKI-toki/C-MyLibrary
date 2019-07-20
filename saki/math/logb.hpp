@@ -13,12 +13,12 @@
 #include <saki/math/log2.hpp>
 #include <saki/math/abs.hpp>
 #include <saki/math/floor.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時logb
-	*/
+* @brief コンパイル時logb
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T logb(T x)
@@ -26,13 +26,13 @@ constexpr T logb(T x)
 	return saki::floor(saki::log2(saki::abs(x)));
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double logb(T x)
 {
 	return saki::logb(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_LOGB_HPP

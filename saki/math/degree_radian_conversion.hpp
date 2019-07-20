@@ -11,9 +11,9 @@
 #include <saki/math/isinf.hpp>
 #include <saki/math/pi.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
 	* @brief Degree‚©‚çRadian‚É•ÏŠ·
 	* @param deg Radian‚É•ÏŠ·‚·‚éDegree
@@ -56,5 +56,5 @@ constexpr double to_degree(T rad)
 {
 	return saki::to_degree(static_cast<double>(rad));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_DEGREE_RADIAN_CONVERSION_HPP

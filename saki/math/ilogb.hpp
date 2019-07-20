@@ -12,12 +12,12 @@
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
 #include <saki/math/logb.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時ilogb
-	*/
+* @brief コンパイル時ilogb
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr int ilogb(T x)
@@ -31,13 +31,13 @@ constexpr int ilogb(T x)
 	return static_cast<int>(saki::logb(x));
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr int ilogb(T x)
 {
 	return saki::ilogb(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_ILOGB_HPP

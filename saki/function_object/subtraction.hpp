@@ -6,12 +6,12 @@
 */
 #ifndef SAKI_FUNCTION_OBJECT_SUBTRACTION_HPP
 #define SAKI_FUNCTION_OBJECT_SUBTRACTION_HPP
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 引き算のconstexpr対応した関数オブジェクト
-	*/
+* @brief 引き算のconstexpr対応した関数オブジェクト
+*/
 struct subtraction
 {
 	template <typename T1, typename T2>
@@ -21,5 +21,5 @@ struct subtraction
 		return t1 - t2;
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_FUNCTION_OBJECT_SUBTRACTION_HPP

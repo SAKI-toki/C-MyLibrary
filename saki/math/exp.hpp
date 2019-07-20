@@ -15,12 +15,12 @@
 #include <saki/math/isnan.hpp>
 #include <saki/math/details/pow_n.hpp>
 #include <saki/math/is_odd_even.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時exp
-	*/
+* @brief コンパイル時exp
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T exp(T x)
@@ -56,13 +56,13 @@ constexpr T exp(T x)
 		ad);
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double exp(T x)
 {
 	return saki::exp(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_EXP_HPP

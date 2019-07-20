@@ -13,12 +13,12 @@
 #include <saki/math/isinf.hpp>
 #include <saki/math/log.hpp>
 #include <saki/math/sqrt.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時asinh
-	*/
+* @brief コンパイル時asinh
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T asinh(T x)
@@ -29,13 +29,13 @@ constexpr T asinh(T x)
 	return saki::log(x + saki::sqrt(x * x + 1));
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double asinh(T x)
 {
 	return saki::asinh(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_ASINH_HPP

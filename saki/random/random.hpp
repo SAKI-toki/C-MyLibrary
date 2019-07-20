@@ -4,23 +4,21 @@
 * @author 石山 悠
 * @date 2018/11/26
 */
-/*
-決められた範囲でランダムな値を取得する関数です
-*/
 #ifndef SAKI_RANDOM_RANDOM_HPP
 #define SAKI_RANDOM_RANDOM_HPP
 #include <random>
 #include <cassert> //for assert
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
-namespace saki
-{
+#include <saki/macro/namespace_macro.hpp>
+
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 最小値と最大値を引数にとり、その間からランダムな値を返す
-	* @param random_min 最小値
-	* @param random_max 最大値
-	* @details 最大値を含むランダムな値を返す
-	*/
+* @brief 最小値と最大値を引数にとり、その間からランダムな値を返す
+* @param random_min 最小値
+* @param random_max 最大値
+* @details 最大値を含むランダムな値を返す
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 T random(const T random_min, const T random_max)
@@ -48,5 +46,5 @@ auto random(const T1 random_min, const T2 random_max)
 	using type = std::common_type_t<T1, T2>;
 	return random(static_cast<type>(random_min), static_cast<type>(random_max));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_RANDOM_RANDOM_HPP

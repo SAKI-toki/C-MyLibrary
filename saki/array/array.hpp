@@ -12,12 +12,12 @@
 
 #include <saki/iterator/iterator.hpp>
 #include <saki/iterator/reverse/reverse_iterator.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時固定長配列クラス
-	*/
+* @brief コンパイル時固定長配列クラス
+*/
 template <typename T, size_t Size>
 class array
 {
@@ -28,16 +28,16 @@ private:
 
 public:
 	/**
-		* @brief 引数なしコンストラクタ
-		* @details 全て0で初期化
-		*/
+	* @brief 引数なしコンストラクタ
+	* @details 全て0で初期化
+	*/
 	constexpr array()
 	{
 	}
 	/**
-		* @brief 配列の要素だけ値を受け取るコンストラクタ
-		* @param u 配列の初期化値
-		*/
+	* @brief 配列の要素だけ値を受け取るコンストラクタ
+	* @param u 配列の初期化値
+	*/
 	template <typename... U>
 	explicit constexpr array(const U &... u) : arr{u...}
 	{
@@ -49,23 +49,23 @@ public:
 	array(array<T, Size> &&) noexcept = default;
 	array<T, Size> &operator=(array<T, Size> &&) noexcept = default;
 	/**
-		* @brief []演算子
-		*/
+	* @brief []演算子
+	*/
 	constexpr reference operator[](size_t index)
 	{
 		return arr[index];
 	}
 	/**
-		* @brief []演算子(constexpr)
-		*/
+	* @brief []演算子(constexpr)
+	*/
 	constexpr const_reference operator[](size_t index) const
 	{
 		return arr[index];
 	}
 	/**
-		* @brief 配列の大きさを取得
-		* @return 配列の大きさ
-		*/
+	* @brief 配列の大きさを取得
+	* @return 配列の大きさ
+	*/
 	constexpr size_type size() const
 	{
 		return Size;
@@ -132,11 +132,11 @@ public:
 	SAKI_TYPE_MACRO(T)
 public:
 	/**
-		* @brief 引数なしコンストラクタ
-		*/
+	* @brief 引数なしコンストラクタ
+	*/
 	constexpr array()
 	{
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_ARRAY_ARRAY_HPP

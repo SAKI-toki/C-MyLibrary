@@ -15,15 +15,16 @@
 #include <saki/type_traits/can_range_based_for.hpp>
 #include <saki/type_traits/remove_reference_const.hpp>
 #include <saki/function_object/addition.hpp>
-namespace saki
-{
+#include <saki/macro/namespace_macro.hpp>
+
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 引数が2つの関数を指定し、それをすべての要素で回す
-	* @param con コンテナクラス
-	* @param init 初期値
-	* @param binary_op 引数が2つの関数
-	* @return 全ての要素を回した結果
-	*/
+* @brief 引数が2つの関数を指定し、それをすべての要素で回す
+* @param con コンテナクラス
+* @param init 初期値
+* @param binary_op 引数が2つの関数
+* @return 全ての要素を回した結果
+*/
 template <typename Container, typename BinaryOperation = saki::addition,
 		  typename T = saki::remove_reference_const_t<typename Container::value_type>,
 		  saki::enable_if_nullptr_t<
@@ -38,5 +39,5 @@ constexpr T accumulate(const Container &con, T init = 0, BinaryOperation &&binar
 	}
 	return init;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_NUMERIC_ACCUMULATE_HPP

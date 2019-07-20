@@ -7,10 +7,10 @@
 #ifndef SAKI_STRING_ALIAS_HPP
 #define SAKI_STRING_ALIAS_HPP
 #include <saki/string/base/string_base.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 template <size_t N>
 using string = saki::string_base<char, N>;
-}
+SAKI_NAMESPACE_END
 #endif //SAKI_STRING_ALIAS_HPP

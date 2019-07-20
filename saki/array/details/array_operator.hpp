@@ -7,15 +7,15 @@
 #ifndef SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_HPP
 #define SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_HPP
 #include <cstddef>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 //プロトタイプ宣言
 template <typename T, size_t Size>
 class array;
 /**
-	* @brief ==演算子
-	*/
+* @brief ==演算子
+*/
 template <typename T, size_t Size>
 constexpr bool operator==(const array<T, Size> &arr1, const array<T, Size> &arr2)
 {
@@ -27,12 +27,12 @@ constexpr bool operator==(const array<T, Size> &arr1, const array<T, Size> &arr2
 	return true;
 }
 /**
-	* @brief !=演算子
-	*/
+* @brief !=演算子
+*/
 template <typename T, size_t Size>
 constexpr bool operator!=(const array<T, Size> &arr1, const array<T, Size> &arr2)
 {
 	return !(arr1 == arr2);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_ARRAY_DETAILS_ARRAY_OPERATOR_HPP

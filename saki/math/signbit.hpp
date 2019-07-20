@@ -10,14 +10,14 @@
 #include <saki/math/isnan.hpp>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief •‰”‚©‚Ç‚¤‚©”»’è‚·‚é
-	* @param x ”»’è‚·‚é’l
-	* @return •‰”‚©‚Ç‚¤‚©
-	*/
+* @brief •‰”‚©‚Ç‚¤‚©”»’è‚·‚é
+* @param x ”»’è‚·‚é’l
+* @return •‰”‚©‚Ç‚¤‚©
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_signed_v<T>> = nullptr>
 constexpr bool signbit(T x)
@@ -31,5 +31,5 @@ constexpr bool signbit(T x)
 {
 	return false;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_SIGNBIT_HPP

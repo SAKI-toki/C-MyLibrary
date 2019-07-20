@@ -12,12 +12,12 @@
 #include <saki/math/isnan.hpp>
 #include <saki/math/exp.hpp>
 #include <saki/math/log.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時exp2
-	*/
+* @brief コンパイル時exp2
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T exp2(T x)
@@ -32,13 +32,13 @@ constexpr T exp2(T x)
 	return saki::exp(x * saki::log(2));
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double exp2(T x)
 {
 	return saki::exp2(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_EXP2_HPP

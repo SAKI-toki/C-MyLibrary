@@ -13,12 +13,12 @@
 #include <saki/math/log2.hpp>
 #include <saki/math/abs.hpp>
 #include <saki/math/details/pow_n.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時frexp
-	*/
+* @brief コンパイル時frexp
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T frexp(T value, int *exp)
@@ -38,13 +38,13 @@ constexpr T frexp(T value, int *exp)
 	return value / saki::details::pow_n(static_cast<T>(2), *exp);
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double frexp(T value, int *exp)
 {
 	return saki::frexp(static_cast<double>(value), exp);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_FREXP_HPP

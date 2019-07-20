@@ -9,11 +9,12 @@
 #include <type_traits>
 #include <utility>
 #include <iterator>
-namespace saki
-{
+#include <saki/macro/namespace_macro.hpp>
+
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief endできるかどうかを判定する構造体
-	*/
+* @brief endできるかどうかを判定する構造体
+*/
 template <typename T>
 struct can_end
 {
@@ -27,9 +28,9 @@ public:
 	static constexpr auto value = decltype(end_check<T>(nullptr))::value;
 };
 /**
-	* @brief can_endを簡単に呼び出せる変数
-	*/
+* @brief can_endを簡単に呼び出せる変数
+*/
 template <typename T>
-static constexpr auto can_end_v = saki::can_end<T>::value;
-} // namespace saki
+inline constexpr auto can_end_v = saki::can_end<T>::value;
+SAKI_NAMESPACE_END
 #endif //SAKI_TYPE_TRAITS_CAN_END_METHOD_HPP

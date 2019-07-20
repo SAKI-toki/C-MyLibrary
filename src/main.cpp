@@ -18,6 +18,7 @@ void Comment(const Args &... args)
 
 int main()
 {
+
 	Comment(saki::ldexp(10, 5));
 	Comment(std::ldexp(10, 5));
 	return 0;

@@ -7,32 +7,32 @@
 #ifndef SAKI_SPLIT_DETAILS_NOT_EQUAL_SEPARATION_HPP
 #define SAKI_SPLIT_DETAILS_NOT_EQUAL_SEPARATION_HPP
 #include <vector>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief split関数で利用する、区切らない文字を指定できるクラス
-	*/
+* @brief split関数で利用する、区切らない文字を指定できるクラス
+*/
 class NotEqualSeparation
 {
 	//区切らない文字を格納
 	std::vector<char> separation_list;
 
-  public:
+public:
 	/**
-		* @brief コンストラクタ
-		* @param t 区切らない文字
-		*/
+	* @brief コンストラクタ
+	* @param t 区切らない文字
+	*/
 	template <typename... T>
 	explicit NotEqualSeparation(const T &... t) : separation_list({t...})
 	{
 	}
 
 	/**
-		* @brief 渡された引数が区切らない文字かチェックする
-		* @param c 判定する文字
-		* @details bool check(char)という形にしなけらばならない
-		*/
+	* @brief 渡された引数が区切らない文字かチェックする
+	* @param c 判定する文字
+	* @details bool check(char)という形にしなけらばならない
+	*/
 	bool check(const char c)
 	{
 		for (auto separation : separation_list)
@@ -43,5 +43,5 @@ class NotEqualSeparation
 		return true;
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_SPLIT_DETAILS_NOT_EQUAL_SEPARATION_HPP

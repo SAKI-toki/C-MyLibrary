@@ -6,12 +6,12 @@
 */
 #ifndef SAKI_FUNCTION_OBJECT_ADDITION_HPP
 #define SAKI_FUNCTION_OBJECT_ADDITION_HPP
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 足し算のconstexpr対応した関数オブジェクト
-	*/
+* @brief 足し算のconstexpr対応した関数オブジェクト
+*/
 struct addition
 {
 	template <typename T1, typename T2>
@@ -21,5 +21,5 @@ struct addition
 		return t1 + t2;
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_FUNCTION_OBJECT_ADDITION_HPP

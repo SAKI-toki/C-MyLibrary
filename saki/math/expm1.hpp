@@ -11,12 +11,12 @@
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
 #include <saki/math/exp.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時expm1
-	*/
+* @brief コンパイル時expm1
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T expm1(T x)
@@ -31,13 +31,13 @@ constexpr T expm1(T x)
 	return saki::exp(x) - 1;
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double expm1(T x)
 {
 	return saki::expm1(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_EXPM1_HPP

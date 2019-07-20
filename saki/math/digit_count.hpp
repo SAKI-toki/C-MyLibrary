@@ -13,9 +13,9 @@
 #include <saki/math/abs.hpp>
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
 	* @brief ®”•”‚ÌŒ…”‚ğ”‚¦‚éŠÖ”
 	* @details log10‚Å‚à‰Â”\‚¾‚ªA®”•”‚¾‚¯‚È‚ç‚±‚¿‚ç‚ğg‚Á‚½‚Ù‚¤‚ª—Ç‚¢
@@ -45,5 +45,5 @@ constexpr size_t digit_count(T x)
 	}
 	return count;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_DIGIT_COUNT_HPP

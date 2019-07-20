@@ -11,12 +11,12 @@
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
 #include <saki/math/log.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時log1p
-	*/
+* @brief コンパイル時log1p
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T log1p(T x)
@@ -33,13 +33,13 @@ constexpr T log1p(T x)
 	return saki::log(x + 1);
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double log1p(T x)
 {
 	return saki::log1p(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_LOG1P_HPP

@@ -9,12 +9,10 @@
 #include <type_traits>
 #include <saki/math/hypot.hpp>
 #include <saki/type_traits/enable_if_nullptr.hpp>
-#include <saki/type_traits/has_variable/has_x.hpp>
-#include <saki/type_traits/has_variable/has_y.hpp>
-#include <saki/type_traits/has_variable/has_z.hpp>
+#include <saki/type_traits/has_variable.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
 	* @brief “ñ“_ŠÔ‚Ì‹——£(XY)
 	*/
@@ -69,5 +67,5 @@ constexpr auto distanceXYZ(const T1 &v1, const T2 &v2)
 		(v1.y - v2.y),
 		(v1.z - v2.z));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_DISTANCE_HPP

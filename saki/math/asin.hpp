@@ -17,13 +17,13 @@
 #include <saki/math/copysign.hpp>
 #include <saki/math/pi.hpp>
 #include <saki/math/isnan.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時asin
-	* @param x 辺の比
-	*/
+* @brief コンパイル時asin
+* @param x 辺の比
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T asin(T x)
@@ -58,14 +58,14 @@ constexpr T asin(T x)
 	}
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	* @param x int型の比
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+* @param x int型の比
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double asin(T x)
 {
 	return saki::asin(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_ASIN_HPP

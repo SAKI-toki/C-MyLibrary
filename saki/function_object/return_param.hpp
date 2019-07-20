@@ -6,12 +6,12 @@
 */
 #ifndef SAKI_FUNCTION_OBJECT_RETURN_PARAM_HPP
 #define SAKI_FUNCTION_OBJECT_RETURN_PARAM_HPP
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief そのまま引数を返す関数オブジェクト
-	*/
+* @brief そのまま引数を返す関数オブジェクト
+*/
 struct return_param
 {
 	template <typename T>
@@ -20,5 +20,5 @@ struct return_param
 		return t;
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_FUNCTION_OBJECT_RETURN_PARAM_HPP

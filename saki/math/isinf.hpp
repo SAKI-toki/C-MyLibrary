@@ -9,12 +9,12 @@
 #include <limits>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時isinf
-	*/
+* @brief コンパイル時isinf
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr bool isinf(T x)
@@ -23,14 +23,14 @@ constexpr bool isinf(T x)
 		   x == -std::numeric_limits<T>::infinity();
 }
 /**
-	* @brief コンパイル時isinf
-	* @details floating_point以外はfalse
-	*/
+* @brief コンパイル時isinf
+* @details floating_point以外はfalse
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<!std::is_floating_point_v<T>> = nullptr>
 constexpr bool isinf(T)
 {
 	return false;
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_ISINF_HPP

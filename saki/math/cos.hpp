@@ -15,9 +15,9 @@
 #include <saki/math/pow.hpp>
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
 	* @brief コンパイル時cos
 	* @param x ラジアン角
@@ -61,5 +61,5 @@ constexpr double cos(T x)
 {
 	return saki::cos(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_COS_HPP

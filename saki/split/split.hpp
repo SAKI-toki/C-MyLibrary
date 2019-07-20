@@ -13,16 +13,16 @@
 #include <saki/split/details/multiple_separation.hpp>
 #include <saki/split/details/not_equal_separation.hpp>
 #include <saki/type_traits/has_check_method.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief string型を指定された文字で区切ったものをvectorで返す
-	* @param str 区切る対象の文字列
-	* @param split_separation 区切りを複数選択できるクラス
-	* @return 区切った文字列を格納するvectorクラス
-	* @details bool check(char)の関数を持っているクラスならなんでも受け取れ、falseの間文字を格納し続けます
-	*/
+* @brief string型を指定された文字で区切ったものをvectorで返す
+* @param str 区切る対象の文字列
+* @param split_separation 区切りを複数選択できるクラス
+* @return 区切った文字列を格納するvectorクラス
+* @details bool check(char)の関数を持っているクラスならなんでも受け取れ、falseの間文字を格納し続けます
+*/
 template <template <typename, typename> typename Container = std::vector, typename T,
 		  saki::enable_if_nullptr_t<saki::has_check_v<T>> = nullptr>
 Container<std::string, std::allocator<std::string>> split(const std::string &str, T &&split_separation)
@@ -56,17 +56,17 @@ Container<std::string, std::allocator<std::string>> split(const std::string &str
 }
 
 /**
-	* @brief string型を指定された文字で区切ったものをvectorで返す
-	* @param str 区切る対象の文字列
-	* @param first_separation 1つ目の区切り文字
-	* @param t 2つ目以降の区切り文字
-	* @return 区切った文字列を格納するvectorクラス
-	*/
+* @brief string型を指定された文字で区切ったものをvectorで返す
+* @param str 区切る対象の文字列
+* @param first_separation 1つ目の区切り文字
+* @param t 2つ目以降の区切り文字
+* @return 区切った文字列を格納するvectorクラス
+*/
 template <template <typename, typename> typename Container = std::vector,
 		  typename First, typename... T>
 Container<std::string, std::allocator<std::string>> split(const std::string &str, First first_separation, T... t)
 {
 	return saki::split<Container>(str, saki::MultipleSeparation(first_separation, t...));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_SPLIT_SPLIT_HPP

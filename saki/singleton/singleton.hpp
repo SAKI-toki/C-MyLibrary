@@ -12,19 +12,20 @@ class A:public saki::singleton<A>{}
 #ifndef SAKI_SINGLETON_SINGLETON_HPP
 #define SAKI_SINGLETON_SINGLETON_HPP
 #include <memory> //for unique_ptr
-namespace saki
-{
+#include <saki/macro/namespace_macro.hpp>
+
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 継承するとシングルトンクラスになる
-	*/
+* @brief 継承するとシングルトンクラスになる
+*/
 template <typename T>
 class singleton
 {
-  public:
+public:
 	/**
-		* @brief インスタンスを取得
-		* @return std::unique_ptr<T> インスタンスを返す
-		*/
+	* @brief インスタンスを取得
+	* @return std::unique_ptr<T> インスタンスを返す
+	*/
 	static std::unique_ptr<T> &getinstance()
 	{
 		static auto instance = std::make_unique<T>();
@@ -33,14 +34,14 @@ class singleton
 
 	virtual ~singleton() {}
 
-  protected:
+protected:
 	singleton() {}
 
-  private:
+private:
 	singleton(const singleton &) = delete;
 	singleton &operator=(const singleton &) = delete;
 	singleton(singleton &&) = delete;
 	singleton &operator=(singleton &&) = delete;
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_SINGLETON_SINGLETON_HPP

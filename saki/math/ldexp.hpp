@@ -11,12 +11,12 @@
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
 #include <saki/math/details/pow_n.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時ldexp
-	*/
+* @brief コンパイル時ldexp
+*/
 template <typename T, typename IntegerT,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T> && std::is_integral_v<IntegerT>> = nullptr>
 constexpr T ldexp(T x, IntegerT exp)
@@ -28,13 +28,13 @@ constexpr T ldexp(T x, IntegerT exp)
 }
 
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T, typename IntegerT,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T> && std::is_integral_v<IntegerT>> = nullptr>
 constexpr double ldexp(T x, IntegerT exp)
 {
 	return saki::ldexp(static_cast<double>(x), exp);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_LDEXP_HPP

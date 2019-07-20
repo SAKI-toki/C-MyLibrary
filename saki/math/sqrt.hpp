@@ -11,14 +11,14 @@
 #include <saki/type_traits/enable_if_nullptr.hpp>
 #include <saki/math/isnan.hpp>
 #include <saki/math/isinf.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時平方根
-	* @param x 平方根を求める値
-	* @details アルゴリズムはバビロニアの平方根を利用
-	*/
+* @brief コンパイル時平方根
+* @param x 平方根を求める値
+* @details アルゴリズムはバビロニアの平方根を利用
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T sqrt(T x)
@@ -40,8 +40,8 @@ constexpr T sqrt(T x)
 	return prev;
 }
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double sqrt(T x)
@@ -53,7 +53,8 @@ namespace details
 {
 template <int N, typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
-static constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
-}
-} // namespace saki
+inline constexpr T sqrt_v = static_cast<T>(saki::sqrt<double>(N));
+} // namespace details
+
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_SQRT_HPP

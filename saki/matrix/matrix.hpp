@@ -13,12 +13,12 @@
 #include <saki/macro/type_macro.hpp>
 #include <saki/vector/vector_4d.hpp>
 #include <saki/array/array.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 行列
-	*/
+* @brief 行列
+*/
 template <typename T>
 class matrix
 {
@@ -29,9 +29,9 @@ private:
 
 public:
 	/**
-		* @brief 引数なしコンストラクタ
-		* @details Identity初期化
-		*/
+	* @brief 引数なしコンストラクタ
+	* @details Identity初期化
+	*/
 	constexpr matrix()
 		: m(
 			  saki::array<value_type, 4>(value_type(1), value_type(0), value_type(0), value_type(0)),
@@ -41,8 +41,8 @@ public:
 	{
 	}
 	/**
-		* @brief 引数ありコンストラクタ
-		*/
+	* @brief 引数ありコンストラクタ
+	*/
 	constexpr matrix(
 		const_reference m00, const_reference m01, const_reference m02, const_reference m03,
 		const_reference m10, const_reference m11, const_reference m12, const_reference m13,
@@ -56,9 +56,9 @@ public:
 	{
 	}
 	/**
-		* @brief 生配列からの初期化
-		* @param arr 4*4の配列
-		*/
+	* @brief 生配列からの初期化
+	* @param arr 4*4の配列
+	*/
 	template <typename U>
 	explicit constexpr matrix(const U arr[4][4])
 		: m(
@@ -77,12 +77,12 @@ public:
 	{
 	}
 	/**
-		* @brief vector4での初期化
-		* @param v1 1行目
-		* @param v2 2行目
-		* @param v3 3行目
-		* @param v4 4行目
-		*/
+	* @brief vector4での初期化
+	* @param v1 1行目
+	* @param v2 2行目
+	* @param v3 3行目
+	* @param v4 4行目
+	*/
 	template <typename U1, typename U2, typename U3, typename U4>
 	constexpr matrix(const saki::vector4<U1> &v1, const saki::vector4<U2> &v2,
 					 const saki::vector4<U3> &v3, const saki::vector4<U4> &v4)
@@ -108,8 +108,8 @@ public:
 	matrix<value_type> &operator=(matrix<value_type> &&) noexcept = default;
 	~matrix() noexcept = default;
 	/**
-		* @brief +=演算子
-		*/
+	* @brief +=演算子
+	*/
 	template <typename U = value_type>
 	auto operator+=(const saki::matrix<U> &other)
 	{
@@ -117,8 +117,8 @@ public:
 		return *this;
 	}
 	/**
-		* @brief -=演算子
-		*/
+	* @brief -=演算子
+	*/
 	template <typename U = value_type>
 	auto operator-=(const saki::matrix<U> &other)
 	{
@@ -126,8 +126,8 @@ public:
 		return *this;
 	}
 	/**
-		* @brief *=演算子(スカラ)
-		*/
+	* @brief *=演算子(スカラ)
+	*/
 	template <typename U = value_type>
 	auto operator*=(const U &scalar)
 	{
@@ -135,8 +135,8 @@ public:
 		return *this;
 	}
 	/**
-		* @brief *=演算子(行列)
-		*/
+	* @brief *=演算子(行列)
+	*/
 	template <typename U = value_type>
 	auto operator*=(const saki::matrix<U> &other)
 	{
@@ -144,8 +144,8 @@ public:
 		return *this;
 	}
 	/**
-		* @brief /=演算子(スカラ)
-		*/
+	* @brief /=演算子(スカラ)
+	*/
 	template <typename U = value_type>
 	auto operator/=(const U &scalar)
 	{
@@ -153,15 +153,15 @@ public:
 		return *this;
 	}
 	/**
-		* @brief 単項+演算子
-		*/
+	* @brief 単項+演算子
+	*/
 	constexpr saki::matrix<value_type> operator+() const
 	{
 		return *this;
 	}
 	/**
-		* @brief 単項-演算子
-		*/
+	* @brief 単項-演算子
+	*/
 	constexpr saki::matrix<value_type> operator-() const
 	{
 		return saki::matrix<value_type>{
@@ -184,22 +184,22 @@ public:
 		};
 	}
 	/**
-		* @brief []演算子
-		*/
+	* @brief []演算子
+	*/
 	constexpr saki::array<value_type, 4> &operator[](const size_t index)
 	{
 		return m[index];
 	}
 	/**
-		* @brief []演算子(constexpr)
-		*/
+	* @brief []演算子(constexpr)
+	*/
 	constexpr const saki::array<value_type, 4> &operator[](const size_t index) const
 	{
 		return m[index];
 	}
 	/**
-		* @brief 単位行列に変換
-		*/
+	* @brief 単位行列に変換
+	*/
 	void identity()
 	{
 		for (int i = 0; i < 4; ++i)
@@ -211,15 +211,16 @@ public:
 		}
 	}
 	/**
-		* @brief 転置行列に変換
-		*/
+	* @brief 転置行列に変換
+	*/
 	void transpose()
 	{
+		value_type temp;
 		for (int i = 0; i < 3; ++i)
 		{
 			for (int j = i + 1; j < 4; ++j)
 			{
-				value_type temp = m[i][j];
+				temp = m[i][j];
 				m[i][j] = m[j][i];
 				m[j][i] = temp;
 			}
@@ -228,13 +229,13 @@ public:
 };
 
 /**
-	* @brief 単位行列
-	*/
+* @brief 単位行列
+*/
 template <typename T>
-static constexpr saki::matrix<T> matrix_identity{
+inline constexpr saki::matrix<T> matrix_identity{
 	static_cast<T>(1), static_cast<T>(0), static_cast<T>(0), static_cast<T>(0),
 	static_cast<T>(0), static_cast<T>(1), static_cast<T>(0), static_cast<T>(0),
 	static_cast<T>(0), static_cast<T>(0), static_cast<T>(1), static_cast<T>(0),
 	static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1)};
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATRIX_MATRIX_HPP

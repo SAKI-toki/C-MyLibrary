@@ -11,14 +11,13 @@
 #include <saki/math/exchange.hpp>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
-
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief フィボナッチ数列求める関数
-	* @param N 求めたい番号
-	*/
+* @brief フィボナッチ数列求める関数
+* @param N 求めたい番号
+*/
 template <typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T fibonacci(size_t N)
@@ -33,8 +32,8 @@ constexpr T fibonacci(size_t N)
 }
 
 /**
-	* @brief フィボナッチ数列を求める関数
-	*/
+* @brief フィボナッチ数列を求める関数
+*/
 template <size_t N, typename T = double,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr T fibonacci()
@@ -43,12 +42,11 @@ constexpr T fibonacci()
 }
 
 /**
-	* @brief 型ごとのフィボナッチ数
-	*/
+* @brief 型ごとのフィボナッチ数
+*/
 template <typename T>
 struct fibonacci_limits
 {
-	static constexpr std::size_t limit = 0;
 };
 template <>
 struct fibonacci_limits<float>
@@ -66,12 +64,12 @@ struct fibonacci_limits<long double>
 	static constexpr std::size_t limit = 1476;
 };
 template <>
-struct fibonacci_limits<char>
+struct fibonacci_limits<std::int8_t>
 {
 	static constexpr std::size_t limit = 11;
 };
 template <>
-struct fibonacci_limits<unsigned char>
+struct fibonacci_limits<std::uint8_t>
 {
 	static constexpr std::size_t limit = 13;
 };
@@ -91,44 +89,34 @@ struct fibonacci_limits<char32_t>
 	static constexpr std::size_t limit = 47;
 };
 template <>
-struct fibonacci_limits<short>
+struct fibonacci_limits<std::int16_t>
 {
 	static constexpr std::size_t limit = 23;
 };
 template <>
-struct fibonacci_limits<unsigned short>
+struct fibonacci_limits<std::uint16_t>
 {
 	static constexpr std::size_t limit = 24;
 };
 template <>
-struct fibonacci_limits<int>
+struct fibonacci_limits<std::int32_t>
 {
 	static constexpr std::size_t limit = 46;
 };
 template <>
-struct fibonacci_limits<unsigned int>
+struct fibonacci_limits<std::uint32_t>
 {
 	static constexpr std::size_t limit = 47;
 };
 template <>
-struct fibonacci_limits<long>
-{
-	static constexpr std::size_t limit = 46;
-};
-template <>
-struct fibonacci_limits<unsigned long>
-{
-	static constexpr std::size_t limit = 47;
-};
-template <>
-struct fibonacci_limits<long long>
+struct fibonacci_limits<std::int64_t>
 {
 	static constexpr std::size_t limit = 92;
 };
 template <>
-struct fibonacci_limits<unsigned long long>
+struct fibonacci_limits<std::uint64_t>
 {
 	static constexpr std::size_t limit = 93;
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_FIBONACCI_HPP

@@ -9,19 +9,19 @@
 #include <chrono>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief 時間を測るクラス
-	*/
+* @brief 時間を測るクラス
+*/
 class clock
 {
 	std::chrono::system_clock::time_point start_time; //開始時間
 public:
 	/**
-		* @brief コンストラクタ
-		*/
+	* @brief コンストラクタ
+	*/
 	clock() : start_time(std::chrono::system_clock::now()) {}
 
 public:
@@ -36,17 +36,17 @@ public:
 		NONE
 	};
 	/**
-		* @brief 開始時間のセット
-		*/
+	* @brief 開始時間のセット
+	*/
 	void start()
 	{
 		start_time = std::chrono::system_clock::now();
 	}
 	/**
-		* @brief 開始時間をセットしてからの時間を返す
-		* @param duration どの単位で返すか
-		* return 時間
-		*/
+	* @brief 開始時間をセットしてからの時間を返す
+	* @param duration どの単位で返すか
+	* return 時間
+	*/
 	template <typename T = double,
 			  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 	T end(const DURATION duration = DURATION::MILLISECOND)
@@ -81,10 +81,10 @@ public:
 		}
 	}
 	/**
-		* @brief 開始時間をセットしてからの時間を返し、そこからまた時間をスタートする
-		* @param duration どの単位で返すか
-		* return 時間
-		*/
+	* @brief 開始時間をセットしてからの時間を返し、そこからまた時間をスタートする
+	* @param duration どの単位で返すか
+	* return 時間
+	*/
 	template <typename T = double,
 			  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 	T end_and_start(const DURATION duration = DURATION::MILLISECOND)
@@ -94,5 +94,5 @@ public:
 		return t;
 	}
 };
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_CLOCK_CLOCK_HPP

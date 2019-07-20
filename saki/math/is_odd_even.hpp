@@ -12,12 +12,12 @@
 #include <saki/math/isnan.hpp>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief Šï”‚ª‚Ç‚¤‚©”»’è‚·‚éŠÖ”
-	*/
+* @brief Šï”‚ª‚Ç‚¤‚©”»’è‚·‚éŠÖ”
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr bool is_odd(T x)
@@ -28,8 +28,8 @@ constexpr bool is_odd(T x)
 		   saki::fmod(((x > 0) ? x : -x), 2) == static_cast<T>(1);
 }
 /**
-	* @brief ‹ô”‚ª‚Ç‚¤‚©”»’è‚·‚éŠÖ”
-	*/
+* @brief ‹ô”‚ª‚Ç‚¤‚©”»’è‚·‚éŠÖ”
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T>> = nullptr>
 constexpr bool is_even(T x)
@@ -39,5 +39,5 @@ constexpr bool is_even(T x)
 	return saki::isinf(x) ||
 		   saki::fmod(((x > 0) ? x : -x), 2) == static_cast<T>(0);
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_IS_ODD_EVEN_HPP

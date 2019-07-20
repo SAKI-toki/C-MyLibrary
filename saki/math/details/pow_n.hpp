@@ -9,14 +9,14 @@
 #include <cstddef>
 #include <type_traits>
 #include <saki/type_traits/enable_if_nullptr.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 namespace details
 {
 /**
-		* @brief powÇ©ÇÁîhê∂
-		*/
+* @brief powÇ©ÇÁîhê∂
+*/
 template <typename T1, typename T2,
 		  saki::enable_if_nullptr_t<std::is_arithmetic_v<T1> && std::is_integral_v<T2>> = nullptr>
 constexpr T1 pow_n(T1 x, T2 y)
@@ -47,5 +47,5 @@ constexpr T1 pow_n(T1 x, T2 y)
 	return sum;
 }
 } // namespace details
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_DETAILS_POW_N_HPP

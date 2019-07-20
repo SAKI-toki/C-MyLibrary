@@ -13,13 +13,13 @@
 #include <saki/math/sin.hpp>
 #include <saki/math/cos.hpp>
 #include <saki/math/isinf.hpp>
+#include <saki/macro/namespace_macro.hpp>
 
-namespace saki
-{
+SAKI_NAMESPACE_BEGIN
 /**
-	* @brief コンパイル時tan
-	* @param x ラジアン角
-	*/
+* @brief コンパイル時tan
+* @param x ラジアン角
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_floating_point_v<T>> = nullptr>
 constexpr T tan(T x)
@@ -36,14 +36,14 @@ constexpr T tan(T x)
 }
 
 /**
-	* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
-	* @param x int型のラジアン角
-	*/
+* @brief 引数がint型の場合に、戻り値をdouble型にするためのもの
+* @param x int型のラジアン角
+*/
 template <typename T,
 		  saki::enable_if_nullptr_t<std::is_integral_v<T>> = nullptr>
 constexpr double tan(T x)
 {
 	return saki::tan(static_cast<double>(x));
 }
-} // namespace saki
+SAKI_NAMESPACE_END
 #endif //SAKI_MATH_TAN_HPP
