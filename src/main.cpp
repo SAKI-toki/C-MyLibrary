@@ -18,8 +18,6 @@ void Comment(const Args &... args)
 
 int main()
 {
-
-	Comment(saki::ldexp(10, 5));
-	Comment(std::ldexp(10, 5));
+	Comment(saki::is_size_64_v<int>);
 	return 0;
 }

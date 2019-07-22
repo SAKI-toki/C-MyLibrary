@@ -19,6 +19,7 @@
 #include <saki/numeric.hpp>
 #include <saki/random.hpp>
 #include <saki/singleton.hpp>
+#include <saki/size.hpp>
 #include <saki/split.hpp>
 #include <saki/string.hpp>
 #include <saki/transform.hpp>
