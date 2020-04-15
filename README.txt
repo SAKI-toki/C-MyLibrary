@@ -1,17 +1,16 @@
-šSAKIƒ‰ƒCƒuƒ‰ƒŠ
+â˜…SAKIãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 
-™SAKIƒ‰ƒCƒuƒ‰ƒŠ‚Æ‚ÍH
-	@ƒvƒƒOƒ‰ƒ~ƒ“ƒOŒ¾Œê‚Å‚ ‚éC++‚ÌŽ©ì”Ä—pƒwƒbƒ_ƒIƒ“ƒŠ[ƒ‰ƒCƒuƒ‰ƒŠ‚Å‚·B
-	–¼‘O‚Ì—R—ˆ‚Íwç`saki`x‚Æ‚¢‚¤ƒAƒjƒ‚ªD‚«‚¾‚©‚ç‚Å‚·B
+â˜†SAKIãƒ©ã‚¤ãƒ–ãƒ©ãƒªã¨ã¯ï¼Ÿ
+	ã€€ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°è¨€èªžã§ã‚ã‚‹C++ã®è‡ªä½œæ±Žç”¨ãƒ˜ãƒƒãƒ€ã‚ªãƒ³ãƒªãƒ¼ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã§ã™ã€‚
+	åå‰ã®ç”±æ¥ã¯ã€Žå’²ï½žsakiï½žã€ã¨ã„ã†ã‚¢ãƒ‹ãƒ¡ãŒå¥½ãã ã‹ã‚‰ã§ã™ã€‚
 
 
-™ŠÂ‹«
-	VC++EEE[ƒvƒƒpƒeƒB]¨[C/C++]¨[Œ¾Œê]¨[€‹’ƒ‚[ƒh]‚¢‚¢‚¦A[C++Œ¾Œê•W€]ISO C++•W€‚ÌÅI‘ˆÄ
-	GCCEEEgcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0A-std=c++17ƒRƒ}ƒ“ƒh‚ð•t—^
+â˜†ç’°å¢ƒ
+	VC++ãƒ»ãƒ»ãƒ»[ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£]â†’[C/C++]â†’[è¨€èªž]â†’[æº–æ‹ ãƒ¢ãƒ¼ãƒ‰]ã„ã„ãˆã€[C++è¨€èªžæ¨™æº–]ISO C++æ¨™æº–ã®æœ€çµ‚è‰æ¡ˆ
+	GCCãƒ»ãƒ»ãƒ»gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0ã€-std=c++17ã‚³ãƒžãƒ³ãƒ‰ã‚’ä»˜ä¸Ž
 	
 
-™’˜ìŒ 
-	@‚²Ž©—R‚É—˜—p‚µ‚Ä‚­‚¾‚³‚¢B
+â˜†è‘—ä½œæ¨©
+	ã€€ã”è‡ªç”±ã«åˆ©ç”¨ã—ã¦ãã ã•ã„ã€‚
 
-	‚à‚µ‰½‚©‚ ‚è‚Ü‚µ‚½‚ç‚±‚¿‚ç‚Ü‚Å˜A—‚ð‚¨Šè‚¢‚µ‚Ü‚·B
-	toki.ryuka.senriyama@gmail.com
+	ã‚‚ã—ä½•ã‹ã‚ã‚Šã¾ã—ãŸã‚‰ã“ã¡ã‚‰ã¾ã§é€£çµ¡ã‚’ãŠé¡˜ã„ã—ã¾ã™ã€‚
